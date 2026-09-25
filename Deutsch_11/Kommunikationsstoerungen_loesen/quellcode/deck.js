@@ -160,9 +160,9 @@ const dialog = [
     const x = 0.6 + i * (w + gap);
     box(s, x, 1.95, w, 2.0, LIGHT);
     numCircle(s, k, x + 0.25, 2.12, S[k], 0.62, 22);
-    txt(s, n, { x: x + 0.95, y: 2.12, w: w - 1.0, h: 0.62, fontFace: HEAD, fontSize: 13, bold: true, color: S[k], valign: "middle" });
-    txt(s, "→ " + z + " umschreiben", { x: x + 0.25, y: 2.95, w: w - 0.5, h: 0.4, fontSize: 16, bold: true });
-    txt(s, "4 Min.", { x: x + 0.25, y: 3.4, w: w - 0.5, h: 0.35, fontSize: 13, color: MUTED });
+    txt(s, tm, { x: x + 1.0, y: 2.12, w: w - 1.2, h: 0.62, fontSize: 13, color: MUTED, valign: "middle", align: "right" });
+    txt(s, n, { x: x + 0.2, y: 2.85, w: w - 0.3, h: 0.45, fontFace: HEAD, fontSize: 14, bold: true, color: S[k] });
+    txt(s, "→ " + z + " umschreiben", { x: x + 0.25, y: 3.3, w: w - 0.5, h: 0.45, fontSize: 15, bold: true });
   });
   txt(s, "Bei jeder Technik", { x: 0.6, y: 4.25, w: 5, h: 0.4, fontFace: HEAD, fontSize: 18, bold: true });
   [["1", "Lesen", "Formel, So geht’s, WG-Beispiel"], ["2", "Anwenden", "den Kipppunkt aus M1 umschreiben"], ["3", "Prüfen", "Mini-Checkliste abhaken"]].forEach(([n, h, d], i) => {
