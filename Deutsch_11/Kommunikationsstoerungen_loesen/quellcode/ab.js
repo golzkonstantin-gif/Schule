@@ -113,7 +113,7 @@ for (let i = 0; i < 5; i++) kRows.push(row(kW.map((w, j) => cell(p(t("")), { w, 
 const begriffe = ["Sachebene / Beziehungsebene", "Selbstkundgabe", "Appell", "Beziehungsohr", "Du-Botschaft (Vorwurf)", "Verallgemeinerung („immer“, „nie“)", "Ironie = inkongruente Botschaft", "symmetrische Eskalation", "Interpunktion", "„Man kann nicht nicht kommunizieren.“"];
 
 const ab2 = [
-  kicker("Aufgabe 2 · Partnerarbeit · 10 Min.", true),
+  kicker("Aufgabe 2 · Partnerarbeit · 8 Min.", true),
   h1("Kipppunkte benennen"),
   p([t("Ein "), t("Kipppunkt", { bold: true }), t(" ist die Stelle, an der ein Gespräch von der Sache weg und in einen Konflikt rutscht. Oft gibt es mehrere, die aufeinander aufbauen.")], { after: 80 }),
   p([t("a) ", { bold: true }), t("Tragt "), t("mindestens drei", { bold: true }), t(" Kipppunkte aus M1 in die Tabelle ein. Die letzte Spalte bleibt vorerst leer.")], { after: 40 }),
@@ -160,10 +160,10 @@ const check = [
 ];
 
 const ab3 = [
-  kicker("Aufgabe 3 · Gruppenpuzzle · 20 Min.", true),
+  kicker("Aufgabe 3 · Gruppenpuzzle · 17 Min.", true),
   h1("Das Gespräch retten"),
-  p([t("1. ", { bold: true }), t("Verteilt die Rollenkarten und die Expertenkarten "), t("A–D", { bold: true }), t(". Jede Person liest "), t("allein", { bold: true }), t(" ihre Expertenkarte (5 Min.).")], { after: 40 }),
-  p([t("2. ", { bold: true }), t("Reihum erklärt jede Person ihre Strategie in "), t("höchstens 2 Minuten", { bold: true }), t(" – mit dem Beispiel von der Karte.")], { after: 40 }),
+  p([t("1. ", { bold: true }), t("Verteilt die Rollenkarten und die Expertenkarten "), t("A–D", { bold: true }), t(". Jede Person liest "), t("allein", { bold: true }), t(" ihre Expertenkarte (4 Min.).")], { after: 40 }),
+  p([t("2. ", { bold: true }), t("Reihum erklärt jede Person ihre Strategie in "), t("höchstens 90 Sekunden", { bold: true }), t(" – mit dem Beispiel von der Karte.")], { after: 40 }),
   p([t("3. ", { bold: true }), t("Schreibt den Dialog "), t("ab Zeile 3", { bold: true }), t(" neu. Nutzt mindestens drei der vier Strategien und notiert rechts den Buchstaben.")], { after: 40 }),
   p([t("4. ", { bold: true }), t("Prüft eure Version mit der Checkliste. Tragt dann in Aufgabe 2 die letzte Spalte nach.")], { after: 100 }),
   stratLegend,
@@ -181,11 +181,12 @@ const pl = (label, h, hint) => row([
 ], h, HeightRule.ATLEAST);
 
 const ab4 = [
-  kicker("Aufgabe 4 · Gruppe · 20 Min.", true),
+  kicker("Aufgabe 4 · Gruppe · 17 Min.", true),
   h1("Eure eigene Szene"),
   p([t("Schreibt eine Alltagsszene in "), t("zwei Versionen", { bold: true }), t(". Beide beginnen gleich. "), t("Version A", { bold: true, color: RED }), t(" kippt und eskaliert. In "), t("Version B", { bold: true, color: S.B }), t(" wird genau am Kipppunkt anders reagiert.")], { after: 60 }),
-  p([t("Keine Idee? ", { bold: true }), t("Die Material-Person zieht eine Situationskarte.", { italics: true })], { after: 60 }),
-  infoBox([[t("Spielregeln: ", { bold: true, color: NAVY }), t("2–4 Rollen · jede Version höchstens 2 Minuten · Text darf auf Karteikarten mitgenommen werden · ", { size: 20 }), t("der Kipppunkt muss für das Publikum erkennbar sein.", { size: 20, bold: true })]]),
+  p([t("Denkt euch die Situation "), t("selbst", { bold: true }), t(" aus – am besten eine, die ihr so oder ähnlich schon erlebt habt: Familie, Freunde, Schule, Verein, Job, Chat …")], { after: 60 }),
+  p([t("Nach 5 Minuten noch keine Idee? ", { bold: true }), t("Material-Person holt Tippkarte 1 für Aufgabe 4. Hilft auch die nicht, hat die Lehrkraft eine Notfall-Idee.", { italics: true })], { after: 60 }),
+  infoBox([[t("Spielregeln: ", { bold: true, color: NAVY }), t("2–4 Rollen · jede Version höchstens 90 Sekunden · Stichpunkte dürfen auf Karteikarten mit auf die Bühne · ", { size: 20 }), t("der Kipppunkt muss für das Publikum erkennbar sein.", { size: 20, bold: true })]]),
   gap(100),
   table([2600, W - 2600], [
     pl("Situation", 900, "Wo? Wer? Worum geht es?"),
@@ -212,14 +213,15 @@ const ab4 = [
 ];
 
 const bW = [1100, 2700, 2700, 2506, 1200];
-const bRows = [row([hdr("Gruppe", bW[0]), hdr("Kipppunkt", bW[1], NAVY, "Wann genau? Zitat"), hdr("Ursache", bW[2], NAVY, "Fachbegriff"), hdr("Strategie in Version B", bW[3], NAVY, "A · B · C · D"), hdr("Wirkt?", bW[4], NAVY, "+  o  –")], 620)];
+const bRows = [row([hdr("Gruppe", bW[0], NAVY, "★ = Pate"), hdr("Kipppunkt", bW[1], NAVY, "Wann genau? Zitat"), hdr("Ursache", bW[2], NAVY, "Fachbegriff"), hdr("Strategie in Version B", bW[3], NAVY, "A · B · C · D"), hdr("Wirkt?", bW[4], NAVY, "+  o  –")], 620)];
 for (let i = 0; i < 7; i++) bRows.push(row(bW.map((w, j) => cell(p(t(j === 0 ? String(i + 1) : "", { bold: true, color: MUTED }), { align: AlignmentType.CENTER, after: 0 }), { w, fill: j === 0 ? LIGHT : undefined })), 1350));
 
 const ab5 = [
-  kicker("Aufgabe 5 · Bühne frei · 30 Min.", true),
+  kicker("Aufgabe 5 · Bühne frei · 25 Min. + Auswertung 13 Min.", true),
   h1("Beobachtungsbogen"),
-  p([t("So läuft es: ", { bold: true, color: NAVY }), t("Eine Gruppe spielt "), t("Version A", { bold: true, color: RED }), t(". Sobald du merkst, dass das Gespräch kippt, hältst du deine "), t("STOPP-Karte", { bold: true, color: RED }), t(" hoch. Die Moderation ruft "), t("„Freeze!“", { bold: true }), t(" – die Spielenden erstarren. Eine Person mit Karte sagt in einem Satz, was gerade passiert ist. Danach geht es weiter, direkt im Anschluss folgt "), t("Version B", { bold: true, color: S.B }), t(".")], { after: 80 }),
-  p([t("Notiere während des Spiels in Stichpunkten. Die Moderation übernimmt immer die Gruppe, die als "), t("nächste", { bold: true }), t(" spielt.")], { after: 120 }),
+  p([t("Spielen: ", { bold: true, color: NAVY }), t("Jede Gruppe spielt "), t("Version A", { bold: true, color: RED }), t(" und direkt danach "), t("Version B", { bold: true, color: S.B }), t(" – ohne Unterbrechung. Nach jeder Gruppe hast du "), t("30 Sekunden", { bold: true }), t(", um die Zeile im Bogen auszufüllen.")], { after: 60 }),
+  p([t("Patenszene: ", { bold: true, color: NAVY }), t("Die Gruppe, die "), t("nach euch", { bold: true }), t(" spielt, beobachtet ihr besonders genau (die letzte Gruppe beobachtet Gruppe 1). Zu ihr berichtet ihr in der Auswertung. Markiere sie mit ★.")], { after: 60 }),
+  p([t("Auswertung: ", { bold: true, color: NAVY }), t("erst 2 Min. still ergänzen, dann 4 Min. in der Tischgruppe eure Patenszene besprechen, dann 1 Min. Rückmeldung pro Gruppe im Plenum.")], { after: 120 }),
   table(bW, bRows),
 ];
 
@@ -306,7 +308,7 @@ const roleGrid = table(rW, [row(roles.map(([n, d], i) => cell([
 const tipps = [
   ["Tipp 1 · Aufgabe 2", "Achte auf Sätze, die mit „Du …“ beginnen, auf Wörter wie „immer“ und „nie“ und darauf, was Lena und Tom tun, ohne etwas zu sagen."],
   ["Tipp 2 · Aufgabe 2", "Schau dir die Zeilen 3, 4, 5, 7 und 8 an. Frag jeweils: Was meint die Person eigentlich – und was kommt beim anderen an?"],
-  ["Tipp 1 · Aufgabe 4", "Denkt an Situationen aus eurem Alltag: Familie, Freunde, Schule, Verein, Job, Chat. Wer will was – und was stört wen?"],
+  ["Tipp 1 · Aufgabe 4", "Jede Person erzählt kurz einen Streit, den sie erlebt oder beobachtet hat – zu Hause, mit Freunden, im Verein, im Job, im Chat. Nehmt den, bei dem ihr am meisten nicken musstet."],
   ["Tipp 2 · Aufgabe 4", "Bauplan für Version A: harmloser Anfang → ein Satz mit Du-Vorwurf, „immer“ oder Ironie → Gegenangriff → Abbruch. Version B beginnt genauso, reagiert aber am Kipppunkt anders."],
 ];
 const tW = [5103, 5103];
@@ -334,25 +336,31 @@ for (let i = 0; i < situations.length; i += 2) {
   sitRows.push(row([0, 1].map((j) => {
     const [n, d] = situations[i + j];
     return cell([
-      p(t("SITUATIONSKARTE " + (i + j + 1), { size: 14, bold: true, color: MUTED }), { after: 20 }),
+      p(t("NOTFALL-IDEE " + (i + j + 1), { size: 14, bold: true, color: MUTED }), { after: 20 }),
       p(t(n, { font: "Cambria", size: 30, bold: true, color: NAVY }), { after: 60 }),
       p(t(d, { size: 21 }), { after: 0 }),
     ], { w: sW[j], borders: allBorders(dashed), valign: VerticalAlign.TOP, m: 200 });
   }), 2500, HeightRule.ATLEAST));
 }
 
+const modLine = ([a, b]) => p([t(a + ":  ", { bold: true, color: NAVY, size: 20 }), t(b, { size: 20 })], { after: 50 });
 const modCard = cutCard([
   cardKicker("Moderationskarte", NAVY),
-  cardTitle("So moderierst du", NAVY, 30),
-  p(t("Die Gruppe, die als nächste spielt, übernimmt die Moderation. Lies deine Sätze einfach ab.", { size: 20, italics: true, color: MUTED }), { after: 80 }),
+  cardTitle("Bühne frei & Auswertung", NAVY, 30),
+  p(t("Eine Person moderiert die ganze Phase. Lies deine Sätze einfach ab und halte den Timer im Blick.", { size: 19, italics: true, color: MUTED }), { after: 60 }),
+  p(t("Beim Spielen", { bold: true, color: RED, size: 21 }), { after: 30 }),
   ...[
-    ["Ansage", "„Es spielt Gruppe …, Version A. Stopp-Karten bereit!“"],
-    ["Bei Stopp-Karte", "„Freeze!“ – dann auf eine Person mit Karte zeigen: „Was ist gerade passiert?“ (höchstens ein Satz)"],
-    ["Weiter", "„Und weiter!“ – Szene läuft bis zum Ende."],
-    ["Wechsel", "„Jetzt Version B – achtet darauf, was am Kipppunkt anders ist.“"],
-    ["Abschluss", "„Welche Strategie habt ihr erkannt?“ – zwei Meldungen, dann Applaus und nächste Gruppe."],
-  ].map(([a, b]) => p([t(a + ":  ", { bold: true, color: NAVY, size: 21 }), t(b, { size: 21 })], { after: 60 })),
-], W, 4200);
+    ["Ansage", "„Gruppe …, bitte auf die Bühne. Paten sind Gruppe …“"],
+    ["Start", "„Version A – bitte!“ Danach: „Version B – bitte!“ (keine Unterbrechung, höchstens 90 Sek. je Version)"],
+    ["Danach", "„Applaus! – 30 Sekunden Notizzeit.“ Dann nächste Gruppe aufrufen."],
+  ].map(modLine),
+  p(t("Bei der Auswertung", { bold: true, color: S.B, size: 21 }), { before: 60, after: 30 }),
+  ...[
+    ["Schritt 1", "„2 Minuten still: Ergänzt euren Beobachtungsbogen.“"],
+    ["Schritt 2", "„4 Minuten in der Tischgruppe: Einigt euch zu eurer Patenszene auf Kipppunkt, Ursache und die Strategie, die am besten gewirkt hat.“"],
+    ["Schritt 3", "Gruppen der Reihe nach aufrufen: „Gruppe …, was habt ihr bei Gruppe … beobachtet?“ – höchstens 1 Minute. Dann: „Gruppe …, möchtet ihr einen Satz ergänzen?“"],
+  ].map(modLine),
+], W, 5200);
 
 const exitW = [5103, 5103];
 const exitCell = (w) => cell([
@@ -368,14 +376,6 @@ const exitCell = (w) => cell([
 ], { w, borders: allBorders(dashed), valign: VerticalAlign.TOP, m: 180 });
 const exitGrid = table(exitW, [row([exitCell(exitW[0]), exitCell(exitW[1])], 4600, HeightRule.ATLEAST), row([exitCell(exitW[0]), exitCell(exitW[1])], 4600, HeightRule.ATLEAST)]);
 
-const stopW = [5103, 5103];
-const stopCell = (w) => cell([
-  p(t("✋", { size: 72, color: "FFFFFF" }), { align: AlignmentType.CENTER, after: 0 }),
-  p(t("STOPP", { font: "Cambria", size: 96, bold: true, color: "FFFFFF" }), { align: AlignmentType.CENTER, after: 0 }),
-  p(t("Hier kippt es!", { size: 28, bold: true, color: "FFFFFF" }), { align: AlignmentType.CENTER, after: 0 }),
-], { w, fill: RED, borders: allBorders(solid("FFFFFF", 24)) });
-const stopGrid = table(stopW, [row([stopCell(stopW[0]), stopCell(stopW[1])], 7000), row([stopCell(stopW[0]), stopCell(stopW[1])], 7000)]);
-
 const karten = [
   kicker("Kartenset · Expertenkarten · 1 Satz pro Gruppe"),
   expA, gap(160), expB,
@@ -387,71 +387,97 @@ const karten = [
   kicker("Kartenset · Tippkarten · 2–3 Sätze aufs Pult legen"),
   tippGrid,
   gap(240),
-  infoBox([[t("Regel für Hilfe: ", { bold: true, color: NAVY }), t("1. Gruppe fragen  →  2. Tippkarte holen  →  3. Material-Person fragt die Lehrkraft.", { size: 21 })]]),
-  kicker("Kartenset · Situationskarten · 1 Satz aufs Pult legen", true),
+  infoBox([[t("Regel für Hilfe: ", { bold: true, color: NAVY }), t("1. Gruppe fragen  →  2. Tippkarte holen  →  3. Material-Person fragt die Lehrkraft (dort gibt es auch Notfall-Ideen für Aufgabe 4).", { size: 21 })]]),
+  kicker("Kartenset · Notfall-Ideen · 1 Satz im Umschlag bei der Lehrkraft – nur ausgeben, wenn eine Gruppe nach Tippkarte 1 noch keine Idee hat", true),
   table(sW, sitRows),
-  kicker("Kartenset · Moderationskarte · ca. 7×", true),
+  kicker("Kartenset · Moderationskarte · 2× (Moderation + Lehrkraft)", true),
   modCard,
-  gap(200),
-  kicker("Kartenset · Exit-Tickets · je 1 pro Person"),
+  kicker("Kartenset · Exit-Tickets · je 1 pro Person (in den Gruppenumschlag)", true),
   exitGrid,
-  kicker("Kartenset · Stopp-Karten · je 1 pro Person (farbig drucken, ggf. laminieren)", true),
-  stopGrid,
 ];
 
 // ================= LEHRERMATERIAL & LÖSUNGEN =================
-const vW = [1300, 2500, 4406, 2000];
-const verlauf = [
-  ["0–5'", "Stummer Einstieg", "M1 liegt auf den Tischen, Folie 2 läuft. Allein lesen, Kipppunkte mit ↯ markieren, dann kurz mit dem Nachbarn vergleichen.", "Einzel → Partner"],
-  ["5–15'", "Kipppunkte benennen", "Aufgabe 2 (Folie 3). Selbstkontrolle mit Lösungsblatt S. 2 am Pult. Ergänzungen in anderer Farbe.", "Partner"],
-  ["15–35'", "Gruppenpuzzle Strategien", "Vierergruppen, Rollen- und Expertenkarten A–D. Lesen (5'), erklären (4 × 2'), Dialog ab Z. 3 umschreiben, Checkliste (Folie 4–5).", "Gruppe"],
-  ["35–55'", "Eigene Szene", "Planungsbogen Aufgabe 4, Situationskarten bei Bedarf. Kurz proben (Folie 6).", "Gruppe"],
-  ["55–85'", "Bühne frei", "Version A mit Stopp-Karten und Freeze, dann Version B. Schülermoderation, Beobachtungsbogen (Folie 7). Zeit knapp? Nur 3–4 Gruppen, Rest in der nächsten Stunde.", "Plenum, schülergeleitet"],
-  ["85–90'", "Exit-Ticket", "Einsammeln an der Tür (Folie 8). Auswertung für die nächste Stunde.", "Einzel"],
-];
-const vRows = [row([hdr("Zeit", vW[0]), hdr("Phase", vW[1]), hdr("Was passiert", vW[2]), hdr("Sozialform", vW[3])], 440)];
-verlauf.forEach(([a, b, c, d]) => vRows.push(row([
-  cell(p(t(a, { bold: true, color: NAVY, size: 20 }), { after: 0 }), { w: vW[0], fill: LIGHT }),
-  cell(p(t(b, { bold: true, size: 20 }), { after: 0 }), { w: vW[1], fill: LIGHT }),
-  cell(p(t(c, { size: 19 }), { after: 0 }), { w: vW[2] }),
-  cell(p(t(d, { size: 19, color: MUTED }), { after: 0 }), { w: vW[3] }),
-], 560, HeightRule.ATLEAST)));
-
+// ---------- Seite 1: Überblick & Vorbereitung ----------
 const druck = [
   ["Arbeitsblatt (5 Seiten)", "1× pro Person"],
-  ["Kartenset S. 1–3: Experten-, Rollen-, Tippkarten", "1× pro Gruppe (Tippkarten: 2–3 Sätze fürs Pult)"],
-  ["Kartenset S. 4: Situationskarten", "1× fürs Pult"],
-  ["Kartenset S. 5: Moderationskarte und Exit-Tickets", "Moderation 7×, Exit-Tickets 1 pro Person"],
-  ["Kartenset S. 6: Stopp-Karten", "1 pro Person, farbig, am besten laminiert (wiederverwendbar)"],
-  ["Lösungsblatt S. 2–3 dieses Dokuments", "2–3× fürs Pult (Selbstkontrolle)"],
+  ["Kartenset S. 1–2: Expertenkarten A–D", "1 Satz pro Gruppe (ausschneiden)"],
+  ["Kartenset S. 3: Rollen- und Tippkarten", "Rollen: 1 Satz pro Gruppe · Tipps: 2–3 Sätze fürs Pult"],
+  ["Kartenset S. 4: Notfall-Ideen", "1 Satz, in einen Umschlag – bleibt bei Ihnen"],
+  ["Kartenset S. 5: Moderationskarte", "2× (Moderation + Sie)"],
+  ["Kartenset S. 6: Exit-Tickets", "1 pro Person, in die Gruppenumschläge"],
+  ["Lösungsblätter (S. 3–4 dieses Dokuments)", "je 2–3× fürs Pult"],
 ];
 const dRows = druck.map(([a, b]) => row([
-  cell(p([t(box + "  ", { size: 22 }), t(a, { size: 20, bold: true })], { after: 0 }), { w: 5600 }),
-  cell(p(t(b, { size: 20 }), { after: 0 }), { w: W - 5600 }),
-], 340, HeightRule.ATLEAST));
+  cell(p([t(box + "  ", { size: 20 }), t(a, { size: 19, bold: true })], { after: 0 }), { w: 5000 }),
+  cell(p(t(b, { size: 19 }), { after: 0 }), { w: W - 5000 }),
+], 340));
+
+const vorher = [
+  ["Gruppen festlegen", "4er-Gruppen nach Sitzplan, Tische nummerieren (1, 2, 3 …). Die Klasse sitzt von Anfang an in diesen Gruppen – Partnerarbeit = Sitznachbar. So gibt es keinen Umbau."],
+  ["Umschlag pro Gruppentisch", "4 Rollenkarten, Expertenkarten A–D, 4 Exit-Tickets. Auf den Umschlag die Tischnummer schreiben."],
+  ["Auf jeden Platz", "das Arbeitsblatt, Seite 1 (M1) oben."],
+  ["Aufs Pult", "Tippkarten, Lösungsblatt Kipppunkte, Musterlösung Version B – in zwei beschrifteten Stapeln."],
+  ["Bei Ihnen", "Umschlag „Notfall-Ideen“, 2 Moderationskarten, Liste für Ihre Notizen (gelungene Formulierungen)."],
+  ["Technik", "Präsentation auf Folie 1, Timer griffbereit (Handy unter Dokumentenkamera oder Online-Timer)."],
+  ["Tafel", "Rechts schon anschreiben: Reihenfolge der Auftritte 1 → 2 → … und „Paten = die Gruppe nach euch“."],
+];
+const vhRows = vorher.map(([a, b]) => row([
+  cell(p([t(box + "  ", { size: 20 }), t(a, { size: 19, bold: true, color: NAVY })], { after: 0 }), { w: 2900, fill: LIGHT, valign: VerticalAlign.TOP }),
+  cell(p(t(b, { size: 19 }), { after: 0 }), { w: W - 2900 }),
+], 340));
 
 const lk1 = [
   kicker("Für die Lehrkraft"),
   h1("Kommunikationsstörungen lösen"),
-  p([t("Doppelstunde (90 Min.) · Klasse 11 · Vorwissen: Kommunikationsmodelle (Schulz von Thun, Watzlawick) und Kommunikationsstörungen", { size: 21, color: MUTED, italics: true })], { after: 80 }),
+  p([t("Doppelstunde (90 Min.) · Klasse 11 · Vorwissen: Kommunikationsmodelle (Schulz von Thun, Watzlawick) und Kommunikationsstörungen", { size: 20, color: MUTED, italics: true })], { after: 80 }),
   infoBox([
     [t("Lernziele  ", { bold: true, color: NAVY }), t("Die Schülerinnen und Schüler …", { size: 19 })],
     [t("•  benennen in einem Dialog den genauen Zeitpunkt, an dem die Kommunikation kippt, und begründen ihn mit Fachbegriffen,", { size: 19 })],
     [t("•  kennen vier Strategien zur Konfliktlösung (Ich-Botschaft, Empathie, Wunsch/Bitte, Metakommunikation) und wenden sie an,", { size: 19 })],
-    [t("•  entwickeln eigene Konfliktszenen, spielen sie und beobachten die Szenen der anderen kriteriengeleitet.", { size: 19 })],
+    [t("•  erfinden eigene Konfliktszenen, spielen sie und werten die Szenen der anderen kriteriengeleitet aus.", { size: 19 })],
   ]),
-  h2("1", "Verlaufsplan", NAVY),
-  table(vW, vRows),
-  h2("2", "Druckliste", NAVY),
-  table([5600, W - 5600], dRows),
-  h2("3", "So bleibt Ihre Sprechzeit gering", NAVY),
+  h2("1", "Druckliste · am Vortag", NAVY),
+  table([5000, W - 5000], dRows),
+  h2("2", "Vorbereitung · vor der Stunde bzw. in der Pause", NAVY),
+  table([2900, W - 2900], vhRows),
+  h2("3", "Grundregeln für Ihre Sprechzeit", NAVY),
   ...[
-    ["Aufträge stehen auf den Folien", " – mit Zeitangabe und sichtbarem Timer. Folie auflegen statt erklären."],
-    ["Rollenkarten", " – die Gruppen organisieren sich selbst. Nur die Material-Person spricht Sie an."],
-    ["Tippkarten und Lösungsblatt am Pult", " ersetzen das Nachfragen und die Besprechung im Plenum."],
-    ["Stopp-Karten und Schülermoderation", " ersetzen das Auswertungsgespräch. Sie beobachten und notieren nur."],
-    ["Ihre Rolle:", " beobachten, gezielt helfen, gelungene Formulierungen für die nächste Stunde notieren."],
+    ["Sie teilen während der Stunde nichts aus.", " Alles liegt vorher bereit. Ausnahmen: Notfall-Idee und Moderationskarte."],
+    ["Folie wechseln, Timer starten, nicht erklären.", " Die Aufträge stehen auf Folie und Arbeitsblatt."],
+    ["Fragen kommen nur von der Material-Person", " – und erst, nachdem Gruppe und Tippkarte nicht geholfen haben."],
+    ["Beim Spielen sitzen Sie im Publikum.", " Eine Schülerin oder ein Schüler moderiert. Sie notieren gelungene Formulierungen."],
   ].map(([a, b]) => p([t("•  ", { bold: true, color: MUTED }), t(a, { bold: true, size: 19 }), t(b, { size: 19 })], { after: 20 })),
+];
+
+// ---------- Seite 2: Regieplan ----------
+const rgW = [1050, 1900, 3150, 4106];
+const regie = [
+  ["0'", "Ankommen\nFolie 1 → 2", "setzt sich an den Gruppentisch, findet M1 auf dem Platz", "Einziger Satz der Einführung: „Heute steht alles auf den Folien – schaut einfach dorthin.“ Folie 2 zeigen, Timer 5 Min. starten."],
+  ["0–5'", "Stummer Einstieg\nFolie 2", "liest M1 still, markiert Kipppunkte mit ↯ (3'), vergleicht mit dem Sitznachbarn (2')", "Nichts sagen. Nach 3 Min. Handzeichen/Gong für den Partnervergleich."],
+  ["5–13'", "Kipppunkte benennen\nFolie 3", "Aufgabe 2 zu zweit, danach Selbstkontrolle mit dem Lösungsblatt vom Pult", "Folie 3, Timer 8 Min. Herumgehen und zuhören: Wer findet Zeile 3? Keine Plenumsbesprechung."],
+  ["13–30'", "Gruppenpuzzle\nFolie 4 (ab ca. 24': Folie 5)", "öffnet den Umschlag, verteilt Rollen und Expertenkarten; lesen 4', erklären 7', Dialog umschreiben 6'", "Folie 4, Timer 17 Min. Nach 1 Min. prüfen: Haben alle Gruppen Rollen verteilt? Ab ca. 24' Folie 5 (Werkzeugkasten) als Stütze stehen lassen."],
+  ["30–47'", "Eigene Szene\nFolie 6", "erfindet eine eigene Situation, füllt den Planungsbogen aus, probt in den letzten 5'", "Folie 6, Timer 17 Min. Nach 5 Min. Runde: Hat jede Gruppe eine Idee? Wenn nicht: erst Tippkarte, dann Notfall-Idee aus dem Umschlag. Um ca. 42': eine Person als Moderation gewinnen und ihr die Moderationskarte geben."],
+  ["47–72'", "Bühne frei\nFolie 7", "Gruppen spielen nacheinander Version A und B ohne Unterbrechung; Publikum füllt den Beobachtungsbogen aus (30 Sek. nach jeder Gruppe)", "Folie 7. Ins Publikum setzen, Moderation leitet. Zeit im Blick: pro Gruppe ca. 3,5 Min. Gelungene Formulierungen notieren. Wird es knapp: restliche Gruppen spielen zu Beginn der nächsten Stunde."],
+  ["72–85'", "Auswertung\nFolie 8", "2' still Bogen ergänzen → 4' Tischgruppe bespricht die Patenszene → Plenum: 1 Min. Rückmeldung pro Gruppe, Spielgruppe ergänzt einen Satz", "Folie 8. Moderation führt durch die drei Schritte (oder Sie übernehmen Schritt 3). Zum Schluss höchstens 1 Min.: zwei gelungene Formulierungen aus Ihren Notizen vorlesen."],
+  ["85–90'", "Exit-Ticket\nFolie 9", "nimmt das Exit-Ticket aus dem Umschlag, bearbeitet es, gibt es an der Tür ab", "Folie 9, Timer 4 Min. An die Tür stellen und einsammeln."],
+  ["danach", "Nachbereitung", "", "Exit-Tickets sichten: Wer kann schon eine Ich-Botschaft mit Bitte formulieren? 2–3 gute Beispiele als Einstieg für die nächste Stunde auswählen. Liegengebliebene Szenen einplanen."],
+];
+const rgRows = [row([hdr("Zeit", rgW[0]), hdr("Phase · Folie", rgW[1]), hdr("Was die Klasse tut", rgW[2]), hdr("Was Sie tun", rgW[3])], 440)];
+regie.forEach(([a, b, c, d]) => {
+  const [ph, fo] = b.split("\n");
+  rgRows.push(row([
+    cell(p(t(a, { bold: true, color: NAVY, size: 19 }), { after: 0 }), { w: rgW[0], fill: LIGHT, valign: VerticalAlign.TOP }),
+    cell([p(t(ph, { bold: true, size: 19 }), { after: 10 }), fo ? p(t(fo, { size: 16, color: MUTED }), { after: 0 }) : null].filter(Boolean), { w: rgW[1], fill: LIGHT, valign: VerticalAlign.TOP }),
+    cell(p(t(c, { size: 18 }), { after: 0 }), { w: rgW[2], valign: VerticalAlign.TOP }),
+    cell(p(t(d, { size: 18 }), { after: 0 }), { w: rgW[3], fill: LIGHT2, valign: VerticalAlign.TOP }),
+  ], 500));
+});
+
+const lkRegie = [
+  kicker("Für die Lehrkraft · Regieplan", true),
+  h1("Wann passiert was?"),
+  p(t("Minutengenauer Ablauf. Die Folien-Nummern beziehen sich auf die Präsentation.", { size: 20, italics: true, color: MUTED }), { after: 100 }),
+  table(rgW, rgRows),
 ];
 
 const lkW = [800, 2900, 4006, 2500];
@@ -519,7 +545,7 @@ const TITLE = "Kommunikationsstörungen lösen";
 
 const ab = new Document({ styles, sections: [{ properties: pageProps, headers: { default: mkHeader(TITLE) }, footers: { default: footer(TITLE) }, children: [...ab1, ...ab2, ...ab3, ...ab4, ...ab5] }] });
 const ks = new Document({ styles, sections: [{ properties: pageProps, footers: { default: footer("Kartenset · bitte an den gestrichelten Linien ausschneiden") }, children: karten }] });
-const lk = new Document({ styles, sections: [{ properties: pageProps, footers: { default: footer("Lehrermaterial & Lösungen") }, children: [...lk1, ...lk2, ...lk3] }] });
+const lk = new Document({ styles, sections: [{ properties: pageProps, footers: { default: footer("Lehrermaterial & Lösungen") }, children: [...lk1, ...lkRegie, ...lk2, ...lk3] }] });
 
 Packer.toBuffer(ab).then((b) => fs.writeFileSync("Arbeitsblatt_Kommunikationsstoerungen_loesen.docx", b));
 Packer.toBuffer(ks).then((b) => fs.writeFileSync("Kartenset_Kommunikationsstoerungen_loesen.docx", b));
