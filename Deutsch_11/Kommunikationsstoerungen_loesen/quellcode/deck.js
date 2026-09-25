@@ -79,7 +79,7 @@ const dialog = [
   [["A Ich-Botschaft", S.A], ["B Empathie", S.B], ["C Wunsch & Bitte", S.C], ["D Metakommunikation", S.D]]
     .forEach(([l, c], i) => pill(s, l, 0.9 + i * 2.55, 4.55, 2.4, c, 12));
   txt(s, "Deutsch, Klasse 11", { x: 0.9, y: 6.6, w: 5, h: 0.3, fontSize: 12, color: ICE });
-  s.addNotes("Diese Folie läuft beim Ankommen. Die Klasse sitzt normal in den drei Reihen. Alles liegt bereits: Arbeitsblatt auf jedem Platz, je ein geschlossener Umschlag auf dem ersten Tisch jeder Reihe (Rollenkarten, 2 Sätze Expertenkarten, 7 Exit-Tickets). Aufs Pult: Tippkarten und Lösungsblätter. Bei Ihnen: Notfall-Ideen und Moderationskarten. Einziger Satz: „Heute steht alles auf den Folien – schaut einfach dorthin.“ Dann Folie 2 und Timer 5 Min.");
+  s.addNotes("Diese Folie läuft beim Ankommen. Die Klasse sitzt normal in den drei Reihen. Alles liegt bereits: Arbeitsblatt auf jedem Platz, je ein geschlossener Umschlag auf dem ersten Tisch jeder Reihe (4 Rollenkarten, 7 Exit-Tickets) – geöffnet wird er erst in Minute 43. Aufs Pult: Tippkarten. Bei Ihnen: Notfall-Ideen und Moderationskarten. Einziger Satz: „Heute steht alles auf den Folien – schaut einfach dorthin.“ Dann Folie 2 und Timer 5 Min.");
 }
 
 // ============ 2 Stummer Einstieg ============
@@ -142,40 +142,43 @@ const dialog = [
     txt(s, q, { x: 1.9, y, w: 5.2, h: 0.8, fontFace: HEAD, fontSize: 15, italic: true, valign: "middle" });
     txt(s, why, { x: 7.3, y, w: 5.3, h: 0.8, fontSize: 15, bold: true, valign: "middle" });
   });
-  s.addNotes("Erst nach dem Unterrichtsgespräch zeigen. ★ Zeile 3 ist der Kipppunkt, an dem man am leichtesten hätte eingreifen können: Lena will eigentlich nur Sicherheit für morgen. Ausführlicher Erwartungshorizont: Lehrermaterial S. 3.");
+  s.addNotes("Erst nach dem Unterrichtsgespräch zeigen. ★ Zeile 3 ist der Kipppunkt, an dem man am leichtesten hätte eingreifen können. Überleitung: Genau diese Zeilen 3, 4, 5 und 7 schreibt gleich jede und jeder allein um – mit je einer Technik.");
 }
 
-// ============ 4 Gruppenpuzzle ============
+// ============ 5 Technik-Training ============
 {
-  const s = base("Aufgabe 3 · Gruppenpuzzle", "Das Gespräch retten", "Arbeitsblatt S. 3 · drei Gruppen à 7: Wandreihe · Mittelreihe · Fensterreihe");
-  timeBadge(s, 17, "+ 3 Min. Umsetzen");
-  txt(s, "Zuerst (3 Min.): als Reihe zusammenrücken, Umschlag öffnen, Rollen verteilen", { x: 0.6, y: 1.95, w: 12, h: 0.4, fontFace: HEAD, fontSize: 16, bold: true });
-  [["Zeit", "hat den Timer im Blick"], ["Protokoll", "schreibt auf"], ["Regie", "alle kommen zu Wort"], ["Material", "holt Karten · fragt als Einzige die Lehrkraft"]].forEach(([n, d], i) => {
-    const x = 0.6 + i * 3.08;
-    box(s, x, 2.45, 2.9, 1.05, LIGHT);
-    txt(s, n, { x: x + 0.2, y: 2.52, w: 2.5, h: 0.4, fontFace: HEAD, fontSize: 17, bold: true });
-    txt(s, d, { x: x + 0.2, y: 2.92, w: 2.5, h: 0.55, fontSize: 13, color: MUTED });
-  });
-  const phases = [
-    ["4'", "Lesen", "A liest eine Person allein, B, C und D je ein Tandem."],
-    ["7'", "Erklären", "Reihum: jede Strategie in höchstens 90 Sekunden – mit Beispiel."],
-    ["6'", "Umschreiben", "Dialog ab Zeile 3 gemeinsam neu schreiben, alle schreiben mit. Checkliste prüfen."],
+  const s = base("Aufgabe 3 · Einzelarbeit", "Technik-Training: Schritt für Schritt", "Arbeitsblatt S. 3–4 · jede Technik an einem Kipppunkt aus M1");
+  timeBadge(s, 18, "4 × 4' + 2' PA");
+  const tech = [
+    ["A", "Ich-Botschaft", "Zeile 3", "18'–22'"],
+    ["B", "Empathie", "Zeile 4", "22'–26'"],
+    ["C", "Wunsch & Bitte", "Zeile 5", "26'–30'"],
+    ["D", "Metakommunikation", "Zeile 7", "30'–34'"],
   ];
-  phases.forEach(([m, h, d], i) => {
-    const x = 0.6 + i * 4.1;
-    box(s, x, 3.85, 3.9, 2.0, WHITE, { line: "B9C6E8", lw: 1.2 });
-    txt(s, m, { x: x + 0.25, y: 4.0, w: 1.0, h: 0.5, fontFace: HEAD, fontSize: 24, bold: true, color: RED });
-    txt(s, h, { x: x + 1.2, y: 4.05, w: 2.5, h: 0.45, fontFace: HEAD, fontSize: 19, bold: true });
-    txt(s, d, { x: x + 0.25, y: 4.6, w: 3.45, h: 1.2, fontSize: 15 });
+  const w = 2.9, gap = 0.18;
+  tech.forEach(([k, n, z, tm], i) => {
+    const x = 0.6 + i * (w + gap);
+    box(s, x, 1.95, w, 2.0, LIGHT);
+    numCircle(s, k, x + 0.25, 2.12, S[k], 0.62, 22);
+    txt(s, n, { x: x + 0.95, y: 2.12, w: w - 1.0, h: 0.62, fontFace: HEAD, fontSize: 13, bold: true, color: S[k], valign: "middle" });
+    txt(s, "→ " + z + " umschreiben", { x: x + 0.25, y: 2.95, w: w - 0.5, h: 0.4, fontSize: 16, bold: true });
+    txt(s, "4 Min.", { x: x + 0.25, y: 3.4, w: w - 0.5, h: 0.35, fontSize: 13, color: MUTED });
   });
-  box(s, 0.6, 6.1, 12.15, 0.6, NAVY);
-  txt(s, "Danach: Die Protokoll-Person liest eure Version im Unterrichtsgespräch vor.", { x: 0.9, y: 6.1, w: 11.6, h: 0.6, fontSize: 15, bold: true, color: WHITE, valign: "middle" });
-  s.addNotes("Erst 3 Minuten Umsetzen: Wand-, Mittel- und Fensterreihe rücken zu je einer Gruppe (7 Personen) zusammen. Dann Timer auf 17 Minuten, die Zeit-Person achtet auf die Teilphasen. Tandems: B, C, D werden zu zweit gelesen, A allein. Folie 6 (Werkzeugkasten) noch nicht zeigen – sie ist der Vergleich für den Merkkasten im Unterrichtsgespräch 2.");
+  txt(s, "Bei jeder Technik", { x: 0.6, y: 4.25, w: 5, h: 0.4, fontFace: HEAD, fontSize: 18, bold: true });
+  [["1", "Lesen", "Formel, So geht’s, WG-Beispiel"], ["2", "Anwenden", "den Kipppunkt aus M1 umschreiben"], ["3", "Prüfen", "Mini-Checkliste abhaken"]].forEach(([n, h, d], i) => {
+    const x = 0.6 + i * 4.1;
+    numCircle(s, n, x, 4.8, NAVY);
+    txt(s, h, { x: x + 0.55, y: 4.78, w: 3.3, h: 0.45, fontFace: HEAD, fontSize: 18, bold: true });
+    txt(s, d, { x: x + 0.55, y: 5.2, w: 3.3, h: 0.45, fontSize: 14, color: MUTED });
+  });
+  box(s, 0.6, 6.0, 12.15, 0.65, NAVY);
+  txt(s, "Gong = nächste Technik.   Zum Schluss 2 Minuten: Vergleich mit dem Sitznachbarn.", { x: 0.9, y: 6.0, w: 11.6, h: 0.65, fontSize: 16, bold: true, color: WHITE, valign: "middle" });
+  s.addNotes("Timer 4 Minuten, bei jedem Gong neu starten (22', 26', 30', 34'), dann 2 Minuten Partnervergleich. Herumgehen und mitlesen: Wer schreibt noch Du-Botschaften oder ‚immer‘? Pro Technik ein bis zwei gelungene Lösungen für das Unterrichtsgespräch vormerken. Schnelle Schülerinnen und Schüler: eine zweite Technik am selben Kipppunkt ausprobieren.");
 }
 
 // ============ 5 Werkzeugkasten ============
 {
-  const s = base("Sicherung · Vergleich mit eurem Merkkasten", "Der Werkzeugkasten", "Vier Strategien, um ein kippendes Gespräch zu retten");
+  const s = base("Sicherung · Unterrichtsgespräch 2", "Der Werkzeugkasten", "Vergleicht mit euren eigenen Lösungen auf S. 3–4");
   timeBadge(s, 7, "Plenum");
   const tools = [
     ["A", "Ich-Botschaft", S.A, "Wenn … fühle ich mich …, weil …", "„Ich werde nervös, weil wir morgen schon dran sind.“"],
@@ -194,13 +197,13 @@ const dialog = [
   });
   box(s, 0.6, 6.2, 12.15, 0.55, "FBECEB");
   txt(s, "Tabu: Du-Vorwürfe · „immer“ und „nie“ · Ironie · Gegenangriff · „Ja, aber …“", { x: 0.9, y: 6.2, w: 11.6, h: 0.55, fontSize: 15, bold: true, color: RED, valign: "middle" });
-  s.addNotes("Unterrichtsgespräch 2 (7 Min.): Erst lesen die Protokoll-Personen der drei Gruppen ihre Version B vor, die Klasse benennt die Strategien (Impuls: „Welche Strategie erkennt ihr – und an welcher Formulierung?“). Alle füllen dabei den Merkkasten auf Arbeitsblatt S. 4 aus, Strategie für Strategie. Erst danach diese Folie zum Vergleich zeigen, zuletzt Folie 7 (Musterlösung).");
+  s.addNotes("Unterrichtsgespräch 2 (7 Min.): Technik für Technik lesen ein bis zwei Personen ihre Lösung vor (gezielt die vorgemerkten drannehmen). Impuls: „Was ist daran gelungen – was sagt die Checkliste?“ Erst danach diese Folie zum Vergleich zeigen. Folie 7 (ganzer Dialog) nur, wenn Zeit bleibt.");
 }
 
 // ============ 7 Sicherung Version B ============
 {
   const s = base("Sicherung · Unterrichtsgespräch", "So hätte es laufen können", "Eine mögliche Version B – eure darf ganz anders klingen");
-  timeBadge(s, 7, "Plenum");
+  pill(s, "OPTIONAL", 10.9, 0.75, 1.85, MUTED, 12);
   const rows = [
     ["Lena", "Heute Abend? Ehrlich gesagt macht mich das nervös, weil wir morgen schon dran sind.", "A"],
     ["Tom", "Verstehe ich. Du willst sicher sein, dass alles passt, oder? Ich hab’s unterschätzt.", "B"],
@@ -216,13 +219,13 @@ const dialog = [
     txt(s, line, { x: 1.75, y, w: 8.4, h: 0.8, fontFace: HEAD, fontSize: 15, valign: "middle" });
     pill(s, k + " " + names[k], 10.35, y + 0.19, 2.2, S[k], 12);
   });
-  s.addNotes("Erst zeigen, nachdem alle drei Gruppen ihre Version vorgelesen haben – als eine mögliche Lösung, nicht als die richtige. Vollständige Musterlösung: Lehrermaterial S. 4.");
+  s.addNotes("Optional, wenn Zeit bleibt: Hier sieht man, wie die Techniken im ganzen Gespräch zusammenspielen. Als eine mögliche Lösung zeigen, nicht als die richtige.");
 }
 
 // ============ 6 Eigene Szene ============
 {
-  const s = base("Aufgabe 4 · Reihen-Gruppe", "Eure eigene Szene", "Arbeitsblatt S. 5 · Denkt euch selbst eine Situation aus! Euer Merkkasten (S. 4) hilft.");
-  timeBadge(s, 17, "Gruppe");
+  const s = base("Aufgabe 4 · Reihen-Gruppe", "Eure eigene Szene", "Arbeitsblatt S. 5 · Zuerst: als Reihe zusammenrücken, Umschlag öffnen, Rollen verteilen");
+  timeBadge(s, 16, "+ 3 Min. Umsetzen");
   box(s, 0.6, 1.95, 5.9, 2.35, "FBECEB");
   txt(s, "Version A – es kippt", { x: 0.9, y: 2.08, w: 5.3, h: 0.45, fontFace: HEAD, fontSize: 20, bold: true, color: RED });
   txt(s, "harmloser Anfang  →  ein Satz mit Du-Vorwurf, „immer“ oder Ironie  →  Gegenangriff  →  Abbruch", { x: 0.9, y: 2.65, w: 5.3, h: 1.5, fontSize: 16 });
@@ -239,7 +242,7 @@ const dialog = [
   box(s, 8.6, 4.6, 4.15, 2.05, LIGHT2);
   txt(s, "Nach 5 Min. keine Idee?", { x: 8.85, y: 4.72, w: 3.7, h: 0.4, fontFace: HEAD, fontSize: 17, bold: true });
   txt(s, "1. Tippkarte 1 zu Aufgabe 4 vom Pult\n2. Hilft nicht? Material-Person holt eine Notfall-Idee bei der Lehrkraft.", { x: 8.85, y: 5.15, w: 3.7, h: 1.4, fontSize: 14 });
-  s.addNotes("Nach 5 Minuten eine Runde gehen: Hat jede Gruppe eine eigene Situation? Notfall-Ideen nur ausgeben, wenn Tippkarte 1 nicht geholfen hat. Mit 7 Personen: Besetzung A (2–4), Besetzung B (2–4), Rest Regie – so steht fast jede Person einmal auf der Bühne. Um ca. Minute 57 eine Person als Moderation gewinnen und ihr die Moderationskarte geben. Zum Proben dürfen Gruppen in Flur oder Ecken.");
+  s.addNotes("Erst 3 Minuten Umsetzen: Wand-, Mittel- und Fensterreihe rücken zu je einer Gruppe zusammen, öffnen den Umschlag und verteilen die Rollen. Dann Timer 16 Minuten. Nach 5 Minuten eine Runde: Hat jede Gruppe eine eigene Situation? Notfall-Ideen nur ausgeben, wenn Tippkarte 1 nicht geholfen hat. Besetzung A (2–4), Besetzung B (2–4), Rest Regie. Um ca. Minute 57 eine Person als Moderation gewinnen und ihr die Moderationskarte geben.");
 }
 
 // ============ 7 Bühne frei ============
@@ -264,11 +267,11 @@ const dialog = [
 // ============ 8 Auswertung ============
 {
   const s = base("Auswertung", "Was haben wir gesehen?", "Beobachtungsbogen · eure Patenszene");
-  timeBadge(s, 11, "still → Gruppe → Plenum");
+  timeBadge(s, 9, "still → Gruppe → Plenum");
   const st = [
     ["2'", "Still", "Ergänze deinen Beobachtungsbogen. Was ist dir bei deiner Patenszene aufgefallen?", LIGHT],
-    ["3'", "Gruppe", "Einigt euch zu eurer Patenszene: Wo genau kippt es? Warum (Fachbegriff)? Welche Strategie hat in Version B am besten gewirkt?", LIGHT],
-    ["6'", "Plenum", "Jede Gruppe: ca. 2 Minuten Rückmeldung zu ihrer Patenszene. Die Spielgruppe darf ergänzen.", LIGHT2],
+    ["2'", "Gruppe", "Einigt euch zu eurer Patenszene: Wo genau kippt es? Warum (Fachbegriff)? Welche Strategie hat in Version B am besten gewirkt?", LIGHT],
+    ["5'", "Plenum", "Jede Gruppe: ca. 1,5 Minuten Rückmeldung zu ihrer Patenszene. Die Spielgruppe darf ergänzen.", LIGHT2],
   ];
   st.forEach(([m, h, d, f], i) => {
     const x = 0.6 + i * 4.1;
@@ -282,20 +285,26 @@ const dialog = [
   s.addNotes("Die Moderation führt durch die drei Schritte; Schritt 3 können Sie auch selbst moderieren. Nur zum Schluss (höchstens 1 Minute): zwei gelungene Formulierungen aus Ihren Notizen vorlesen. Wenn eine Gruppe den Kipppunkt anders sieht als die Spielgruppe, ist das ein produktiver Moment – kurz beide Sichtweisen stehen lassen.");
 }
 
-// ============ 8 Exit-Ticket ============
+// ============ 11 Exit-Ticket: Mini-Test ============
 {
   const s = pres.addSlide();
   pageNo++;
   darkBg(s);
-  pill(s, "EXIT-TICKET · 4 MIN.", 0.9, 1.2, 3.2, RED, 12);
-  txt(s, "Bevor du gehst …", { x: 0.9, y: 1.8, w: 10, h: 0.8, fontFace: HEAD, fontSize: 36, bold: true, color: WHITE });
-  numCircle(s, 1, 0.9, 3.0, RED, 0.55, 18);
-  txt(s, "Formuliere als Ich-Botschaft mit Bitte:", { x: 1.7, y: 3.02, w: 10, h: 0.5, fontSize: 20, color: ICE });
-  txt(s, "„Nie hörst du mir zu!“", { x: 1.7, y: 3.55, w: 10, h: 0.8, fontFace: HEAD, fontSize: 32, bold: true, color: WHITE });
-  numCircle(s, 2, 0.9, 4.75, RED, 0.55, 18);
-  txt(s, "Woran erkennst du, dass ein Gespräch gerade kippt? Nenne zwei Signale.", { x: 1.7, y: 4.77, w: 10.5, h: 0.6, fontSize: 20, color: ICE });
-  txt(s, "Ticket liegt im Gruppenumschlag · Abgabe an der Tür.", { x: 0.9, y: 6.4, w: 6, h: 0.4, fontSize: 16, italic: true, color: ICE });
-  s.addNotes("Exit-Tickets an der Tür einsammeln. Erwartungshorizont: Lehrermaterial S. 4. Zwei oder drei gelungene Formulierungen können die nächste Stunde eröffnen.");
+  pill(s, "EXIT-TICKET · MINI-TEST · 6 MIN. · ALLEIN", 0.9, 0.8, 5.0, RED, 12);
+  txt(s, "Jetzt allein: Kipppunkt finden und retten", { x: 0.9, y: 1.4, w: 11, h: 0.8, fontFace: HEAD, fontSize: 32, bold: true, color: WHITE });
+  const d = [["Mia", "Papa, kann ich am Samstag auf Leons Party?"], ["Vater", "Wie lange geht die denn?"], ["Mia", "Keine Ahnung, bis eins vielleicht."], ["Vater", "Du bist doch sowieso immer die Letzte, die nach Hause kommt."], ["Mia", "Boah, du vertraust mir echt nie!"]];
+  d.forEach(([who, line], i) => {
+    const y = 2.45 + i * 0.5;
+    txt(s, String(i + 1), { x: 0.9, y, w: 0.4, h: 0.45, fontSize: 14, bold: true, color: ICE, valign: "middle" });
+    txt(s, who, { x: 1.35, y, w: 1.0, h: 0.45, fontSize: 15, bold: true, color: WHITE, valign: "middle" });
+    txt(s, line, { x: 2.4, y, w: 9.5, h: 0.45, fontFace: HEAD, fontSize: 16, color: WHITE, valign: "middle" });
+  });
+  numCircle(s, 1, 0.9, 5.15, RED, 0.5, 16);
+  txt(s, "In welcher Zeile kippt es? Warum? (Fachbegriff)", { x: 1.6, y: 5.15, w: 10.5, h: 0.5, fontSize: 18, color: ICE, valign: "middle" });
+  numCircle(s, 2, 0.9, 5.8, RED, 0.5, 16);
+  txt(s, "Schreibe diese Zeile mit zwei Techniken um und notiere die Buchstaben.", { x: 1.6, y: 5.8, w: 10.5, h: 0.5, fontSize: 18, color: ICE, valign: "middle" });
+  txt(s, "Ticket liegt im Gruppenumschlag · Abgabe an der Tür.", { x: 0.9, y: 6.7, w: 8, h: 0.4, fontSize: 14, italic: true, color: ICE });
+  s.addNotes("Einzelarbeit, 6 Minuten, ohne Hilfe – das Format entspricht der späteren Testaufgabe. An der Tür einsammeln. Erwartungshorizont und Bewertungskriterien: Lehrermaterial S. 4. Die Auswertung zeigt, welche Technik in der nächsten Stunde noch einmal geübt werden muss.");
 }
 
 pres.writeFile({ fileName: "Praesentation_Kommunikationsstoerungen_loesen.pptx" }).then(() => console.log("ok"));
