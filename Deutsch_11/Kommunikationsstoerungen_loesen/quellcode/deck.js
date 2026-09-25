@@ -170,12 +170,13 @@ const dialog = [
   });
   box(s, 0.6, 6.1, 12.15, 0.6, NAVY);
   txt(s, "Danach: Die Protokoll-Person liest eure Version im Unterrichtsgespräch vor.", { x: 0.9, y: 6.1, w: 11.6, h: 0.6, fontSize: 15, bold: true, color: WHITE, valign: "middle" });
-  s.addNotes("Erst 3 Minuten Umsetzen: Wand-, Mittel- und Fensterreihe rücken zu je einer Gruppe (7 Personen) zusammen. Dann Timer auf 17 Minuten, die Zeit-Person achtet auf die Teilphasen. Tandems: B, C, D werden zu zweit gelesen, A allein. Ab ca. Minute 31 Folie 6 (Werkzeugkasten) einblenden und stehen lassen.");
+  s.addNotes("Erst 3 Minuten Umsetzen: Wand-, Mittel- und Fensterreihe rücken zu je einer Gruppe (7 Personen) zusammen. Dann Timer auf 17 Minuten, die Zeit-Person achtet auf die Teilphasen. Tandems: B, C, D werden zu zweit gelesen, A allein. Folie 6 (Werkzeugkasten) noch nicht zeigen – sie ist der Vergleich für den Merkkasten im Unterrichtsgespräch 2.");
 }
 
 // ============ 5 Werkzeugkasten ============
 {
-  const s = base("Überblick", "Der Werkzeugkasten", "Vier Strategien, um ein kippendes Gespräch zu retten");
+  const s = base("Sicherung · Vergleich mit eurem Merkkasten", "Der Werkzeugkasten", "Vier Strategien, um ein kippendes Gespräch zu retten");
+  timeBadge(s, 7, "Plenum");
   const tools = [
     ["A", "Ich-Botschaft", S.A, "Wenn … fühle ich mich …, weil …", "„Ich werde nervös, weil wir morgen schon dran sind.“"],
     ["B", "Empathie", S.B, "Du meinst also … ? · Das klingt, als ob du … bist.", "„Du bist gestresst, weil alles klappen soll, oder?“"],
@@ -193,13 +194,13 @@ const dialog = [
   });
   box(s, 0.6, 6.2, 12.15, 0.55, "FBECEB");
   txt(s, "Tabu: Du-Vorwürfe · „immer“ und „nie“ · Ironie · Gegenangriff · „Ja, aber …“", { x: 0.9, y: 6.2, w: 11.6, h: 0.55, fontSize: 15, bold: true, color: RED, valign: "middle" });
-  s.addNotes("Überblicksfolie, kein Vortrag. Sie steht ab ca. Minute 31 und dient im Unterrichtsgespräch 2 als Stütze: „Welche Strategie erkennt ihr – und an welcher Formulierung?“");
+  s.addNotes("Unterrichtsgespräch 2 (7 Min.): Erst lesen die Protokoll-Personen der drei Gruppen ihre Version B vor, die Klasse benennt die Strategien (Impuls: „Welche Strategie erkennt ihr – und an welcher Formulierung?“). Alle füllen dabei den Merkkasten auf Arbeitsblatt S. 4 aus, Strategie für Strategie. Erst danach diese Folie zum Vergleich zeigen, zuletzt Folie 7 (Musterlösung).");
 }
 
 // ============ 7 Sicherung Version B ============
 {
   const s = base("Sicherung · Unterrichtsgespräch", "So hätte es laufen können", "Eine mögliche Version B – eure darf ganz anders klingen");
-  timeBadge(s, 5, "Plenum");
+  timeBadge(s, 7, "Plenum");
   const rows = [
     ["Lena", "Heute Abend? Ehrlich gesagt macht mich das nervös, weil wir morgen schon dran sind.", "A"],
     ["Tom", "Verstehe ich. Du willst sicher sein, dass alles passt, oder? Ich hab’s unterschätzt.", "B"],
@@ -220,7 +221,7 @@ const dialog = [
 
 // ============ 6 Eigene Szene ============
 {
-  const s = base("Aufgabe 4 · Reihen-Gruppe", "Eure eigene Szene", "Arbeitsblatt S. 4 · Denkt euch selbst eine Situation aus!");
+  const s = base("Aufgabe 4 · Reihen-Gruppe", "Eure eigene Szene", "Arbeitsblatt S. 5 · Denkt euch selbst eine Situation aus! Euer Merkkasten (S. 4) hilft.");
   timeBadge(s, 17, "Gruppe");
   box(s, 0.6, 1.95, 5.9, 2.35, "FBECEB");
   txt(s, "Version A – es kippt", { x: 0.9, y: 2.08, w: 5.3, h: 0.45, fontFace: HEAD, fontSize: 20, bold: true, color: RED });
@@ -238,12 +239,12 @@ const dialog = [
   box(s, 8.6, 4.6, 4.15, 2.05, LIGHT2);
   txt(s, "Nach 5 Min. keine Idee?", { x: 8.85, y: 4.72, w: 3.7, h: 0.4, fontFace: HEAD, fontSize: 17, bold: true });
   txt(s, "1. Tippkarte 1 zu Aufgabe 4 vom Pult\n2. Hilft nicht? Material-Person holt eine Notfall-Idee bei der Lehrkraft.", { x: 8.85, y: 5.15, w: 3.7, h: 1.4, fontSize: 14 });
-  s.addNotes("Nach 5 Minuten eine Runde gehen: Hat jede Gruppe eine eigene Situation? Notfall-Ideen nur ausgeben, wenn Tippkarte 1 nicht geholfen hat. Mit 7 Personen: Besetzung A (2–4), Besetzung B (2–4), Rest Regie – so steht fast jede Person einmal auf der Bühne. Um ca. Minute 55 eine Person als Moderation gewinnen und ihr die Moderationskarte geben. Zum Proben dürfen Gruppen in Flur oder Ecken.");
+  s.addNotes("Nach 5 Minuten eine Runde gehen: Hat jede Gruppe eine eigene Situation? Notfall-Ideen nur ausgeben, wenn Tippkarte 1 nicht geholfen hat. Mit 7 Personen: Besetzung A (2–4), Besetzung B (2–4), Rest Regie – so steht fast jede Person einmal auf der Bühne. Um ca. Minute 57 eine Person als Moderation gewinnen und ihr die Moderationskarte geben. Zum Proben dürfen Gruppen in Flur oder Ecken.");
 }
 
 // ============ 7 Bühne frei ============
 {
-  const s = base("Aufgabe 5 · Bühne frei", "Spielen – ohne Unterbrechung", "Arbeitsblatt S. 5 · Beobachtungsbogen");
+  const s = base("Aufgabe 5 · Bühne frei", "Spielen – ohne Unterbrechung", "Arbeitsblatt S. 6 · Beobachtungsbogen");
   timeBadge(s, 13, "Plenum");
   steps(s, [
     [{ text: "Reihenfolge: " }, b("Wandreihe → Mittelreihe → Fensterreihe"), { text: "." }],
@@ -263,11 +264,11 @@ const dialog = [
 // ============ 8 Auswertung ============
 {
   const s = base("Auswertung", "Was haben wir gesehen?", "Beobachtungsbogen · eure Patenszene");
-  timeBadge(s, 13, "still → Gruppe → Plenum");
+  timeBadge(s, 11, "still → Gruppe → Plenum");
   const st = [
     ["2'", "Still", "Ergänze deinen Beobachtungsbogen. Was ist dir bei deiner Patenszene aufgefallen?", LIGHT],
-    ["4'", "Gruppe", "Einigt euch zu eurer Patenszene: Wo genau kippt es? Warum (Fachbegriff)? Welche Strategie hat in Version B am besten gewirkt?", LIGHT],
-    ["7'", "Plenum", "Jede Gruppe: ca. 2 Minuten Rückmeldung zu ihrer Patenszene. Die Spielgruppe darf ergänzen.", LIGHT2],
+    ["3'", "Gruppe", "Einigt euch zu eurer Patenszene: Wo genau kippt es? Warum (Fachbegriff)? Welche Strategie hat in Version B am besten gewirkt?", LIGHT],
+    ["6'", "Plenum", "Jede Gruppe: ca. 2 Minuten Rückmeldung zu ihrer Patenszene. Die Spielgruppe darf ergänzen.", LIGHT2],
   ];
   st.forEach(([m, h, d, f], i) => {
     const x = 0.6 + i * 4.1;

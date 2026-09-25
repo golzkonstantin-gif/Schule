@@ -160,19 +160,40 @@ const check = [
 ];
 
 const ab3 = [
-  kicker("Aufgabe 3 · Gruppenpuzzle · 3 Gruppen à 7 · 17 Min. + Unterrichtsgespräch 5 Min.", true),
+  kicker("Aufgabe 3 · Gruppenpuzzle · 3 Gruppen à 7 · 17 Min.", true),
   h1("Das Gespräch retten"),
   p([t("0. ", { bold: true }), t("Setzt euch in eure "), t("Reihen-Gruppe", { bold: true }), t(" (Wandreihe, Mittelreihe, Fensterreihe) und öffnet euren Umschlag. Verteilt die vier Rollenkarten.")], { after: 40 }),
   p([t("1. ", { bold: true }), t("Verteilt die Expertenkarten: "), t("A", { bold: true, color: S.A }), t(" liest eine Person allein, "), t("B, C und D", { bold: true }), t(" lesen je zwei Personen im Tandem (4 Min.).")], { after: 40 }),
   p([t("2. ", { bold: true }), t("Reihum erklärt jede Expertin, jeder Experte bzw. jedes Tandem die Strategie in "), t("höchstens 90 Sekunden", { bold: true }), t(" – mit dem Beispiel von der Karte (7 Min.).")], { after: 40 }),
   p([t("3. ", { bold: true }), t("Schreibt den Dialog "), t("ab Zeile 3", { bold: true }), t(" gemeinsam neu – alle schreiben mit. Nutzt mindestens drei der vier Strategien und notiert rechts den Buchstaben (6 Min.).")], { after: 40 }),
-  p([t("4. ", { bold: true }), t("Prüft eure Version mit der Checkliste. Im Unterrichtsgespräch liest die Protokoll-Person eure Version vor. Tragt danach in Aufgabe 2 die letzte Spalte nach.")], { after: 100 }),
+  p([t("4. ", { bold: true }), t("Prüft eure Version mit der Checkliste. Im Unterrichtsgespräch liest die Protokoll-Person eure Version vor – dabei füllen alle den Merkkasten auf der nächsten Seite aus.")], { after: 100 }),
   stratLegend,
   gap(100),
   table(rwW, rwRows),
   gap(100),
   p(t("Checkliste Version B", { font: "Cambria", bold: true, size: 24, color: NAVY }), { after: 60, keepNext: true }),
   ...check.map((c) => p([t(box + "  ", { size: 24 }), t(c, { size: 21 })], { after: 30 })),
+];
+
+
+// Merkkasten Werkzeugkasten (Sicherung im Unterrichtsgespräch 2)
+const mkW = [2700, 3906, 3600];
+const mkRows = [row([hdr("Strategie", mkW[0]), hdr("Formel / So geht’s", mkW[1]), hdr("Beispiel", mkW[2], NAVY, "aus einer vorgelesenen Version")], 560)];
+strat.forEach(([k, n, c]) => mkRows.push(row([
+  cell([p(t(k, { font: "Cambria", size: 40, bold: true, color: "FFFFFF" }), { after: 0 }), p(t(n, { bold: true, color: "FFFFFF", size: 20 }), { after: 0 })], { w: mkW[0], fill: c, valign: VerticalAlign.TOP, m: 120 }),
+  cell(p(t("")), { w: mkW[1] }),
+  cell(p(t("")), { w: mkW[2] }),
+], 2000)));
+
+const abMerk = [
+  kicker("Merkkasten · Unterrichtsgespräch 2 · 7 Min.", true),
+  h1("Unser Werkzeugkasten"),
+  p([t("Die Gruppen lesen ihre Version B vor. Hört genau hin: "), t("Welche Strategie steckt in welcher Formulierung?", { bold: true }), t(" Tragt für jede Strategie die Formel und das beste Beispiel ein.")], { after: 60 }),
+  p([t("Diesen Kasten nutzt ihr gleich für eure eigene Szene.", { italics: true, color: MUTED })], { after: 120 }),
+  table(mkW, mkRows),
+  gap(160),
+  p(t("Das macht Gespräche kaputt", { font: "Cambria", bold: true, size: 24, color: RED }), { after: 60, keepNext: true }),
+  lines(3, 480),
 ];
 
 // Planungsbogen
@@ -222,11 +243,11 @@ const bRows = [row([hdr("Gruppe", bW[0], NAVY, "★ = Patenszene"), hdr("Kipppun
 ], 2900)));
 
 const ab5 = [
-  kicker("Aufgabe 5 · Bühne frei · 13 Min. + Auswertung 13 Min.", true),
+  kicker("Aufgabe 5 · Bühne frei · 13 Min. + Auswertung 11 Min.", true),
   h1("Beobachtungsbogen"),
   p([t("Spielen: ", { bold: true, color: NAVY }), t("Reihenfolge "), t("Wandreihe → Mittelreihe → Fensterreihe", { bold: true }), t(". Jede Gruppe spielt "), t("Version A", { bold: true, color: RED }), t(" und direkt danach "), t("Version B", { bold: true, color: S.B }), t(" – ohne Unterbrechung. Danach hast du "), t("30 Sekunden", { bold: true }), t(", um die Zeile auszufüllen.")], { after: 60 }),
   p([t("Patenszene: ", { bold: true, color: NAVY }), t("Die Wandreihe beobachtet besonders genau die Mittelreihe, die Mittelreihe die Fensterreihe, die Fensterreihe die Wandreihe. Markiere deine Patenszene mit ★.")], { after: 60 }),
-  p([t("Auswertung: ", { bold: true, color: NAVY }), t("2 Min. still ergänzen → 4 Min. in der Gruppe die Patenszene besprechen → im Plenum ca. 2 Min. Rückmeldung pro Gruppe.")], { after: 120 }),
+  p([t("Auswertung: ", { bold: true, color: NAVY }), t("2 Min. still ergänzen → 3 Min. in der Gruppe die Patenszene besprechen → im Plenum ca. 2 Min. Rückmeldung pro Gruppe.")], { after: 120 }),
   table(bW, bRows),
 ];
 
@@ -362,7 +383,7 @@ const modCard = cutCard([
   p(t("Bei der Auswertung", { bold: true, color: S.B, size: 21 }), { before: 60, after: 30 }),
   ...[
     ["Schritt 1", "„2 Minuten still: Ergänzt euren Beobachtungsbogen.“"],
-    ["Schritt 2", "„4 Minuten in der Gruppe: Einigt euch zu eurer Patenszene auf Kipppunkt, Ursache und die Strategie, die am besten gewirkt hat.“"],
+    ["Schritt 2", "„3 Minuten in der Gruppe: Einigt euch zu eurer Patenszene auf Kipppunkt, Ursache und die Strategie, die am besten gewirkt hat.“"],
     ["Schritt 3", "„Wandreihe, was habt ihr bei der Mittelreihe beobachtet?“ – ca. 2 Minuten, dann: „Mittelreihe, möchtet ihr etwas ergänzen?“ Danach Mittelreihe über Fensterreihe, Fensterreihe über Wandreihe."],
   ].map(modLine),
 ], W, 5200);
@@ -404,7 +425,7 @@ const karten = [
 // ================= LEHRERMATERIAL & LÖSUNGEN =================
 // ---------- Seite 1: Überblick & Vorbereitung ----------
 const druck = [
-  ["Arbeitsblatt (5 Seiten)", "21× (1 pro Person)"],
+  ["Arbeitsblatt (6 Seiten)", "21× (1 pro Person)"],
   ["Kartenset S. 1–2: Expertenkarten A–D", "6 Sätze (2 pro Gruppe; B–D werden im Tandem gelesen)"],
   ["Kartenset S. 3: Rollen- und Tippkarten", "Rollen: 3 Sätze · Tipps: 2–3 Sätze fürs Pult"],
   ["Kartenset S. 4: Notfall-Ideen", "1 Satz, in einen Umschlag – bleibt bei Ihnen"],
@@ -450,7 +471,7 @@ const lk1 = [
   ...[
     ["Sie teilen während der Stunde nichts aus.", " Alles liegt vorher bereit. Ausnahmen: Notfall-Idee und Moderationskarte."],
     ["Folie wechseln, Timer starten, nicht erklären.", " Die Aufträge stehen auf Folie und Arbeitsblatt."],
-    ["Zwei kurze Unterrichtsgespräche (je 5 Min.)", " sichern die Lösungen. Tipp: Wer geantwortet hat, nimmt die nächste Person dran."],
+    ["Zwei kurze Unterrichtsgespräche (5 und 7 Min.)", " sichern die Lösungen, im zweiten entsteht der Merkkasten. Tipp: Wer geantwortet hat, nimmt die nächste Person dran."],
     ["Fragen kommen nur von der Material-Person", " – und erst, nachdem Gruppe und Tippkarte nicht geholfen haben."],
     ["Beim Spielen sitzen Sie im Publikum.", " Eine Schülerin oder ein Schüler moderiert. Sie notieren gelungene Formulierungen."],
   ].map(([a, b]) => p([t("•  ", { bold: true, color: MUTED }), t(a, { bold: true, size: 19 }), t(b, { size: 19 })], { after: 20 })),
@@ -464,11 +485,11 @@ const regie = [
   ["5–13'", "Kipppunkte benennen\nFolie 3", "Aufgabe 2 zu zweit", "Folie 3, Timer 8 Min. Herumgehen und zuhören: Welche Paare finden Zeile 3? Die merken Sie sich fürs Gespräch."],
   ["13–18'", "UG 1: Kipppunkte\nFolie 3 → 4", "Paare nennen Zeile + Fachbegriff, ergänzen ihre Tabelle in anderer Farbe", "Impuls: „In welcher Zeile kippt es zum ersten Mal – und warum?“ Wer geantwortet hat, nimmt die nächste Person dran. Ziel: Zeile 3 ★ + 2–3 weitere Kipppunkte (Erwartungshorizont S. 3). Zum Schluss Folie 4 als Sicherung zeigen."],
   ["18–21'", "Umsetzen\nFolie 5", "Wand-, Mittel- und Fensterreihe rücken zu je einer Gruppe zusammen, öffnen ihren Umschlag, verteilen die Rollen", "Folie 5, Timer 3 Min. Nur eingreifen, wenn eine Reihe nicht 7 Personen hat."],
-  ["21–38'", "Gruppenpuzzle\nFolie 5 (ab ca. 31': Folie 6)", "Expertenkarten verteilen (A einzeln, B–D im Tandem); lesen 4', erklären 7', Dialog umschreiben 6'", "Timer 17 Min. Bei allen drei Gruppen kurz zuhören. Ab ca. 31' Folie 6 (Werkzeugkasten) stehen lassen."],
-  ["38–43'", "UG 2: Version B\nFolie 6 → 7", "Die Protokoll-Person jeder Gruppe liest ihre Version ab Zeile 3 vor; die anderen nennen die Strategien, die sie hören", "Impuls: „Welche Strategie erkennt ihr – und an welcher Formulierung?“ Danach Folie 7 (Musterlösung) als eine mögliche Version zeigen, nicht als die richtige."],
-  ["43–60'", "Eigene Szene\nFolie 8", "erfindet eine eigene Situation, verteilt Besetzung A und B, füllt den Planungsbogen aus, probt in den letzten 5'", "Folie 8, Timer 17 Min. Nach 5 Min. Runde: Hat jede Gruppe eine Idee? Wenn nicht: erst Tippkarte, dann Notfall-Idee. Um ca. 55': eine Person als Moderation gewinnen und ihr die Moderationskarte geben."],
-  ["60–73'", "Bühne frei\nFolie 9", "Wand → Mitte → Fenster spielen je Version A und B ohne Unterbrechung; das Publikum füllt den Beobachtungsbogen aus", "Folie 9. Ins Publikum setzen, die Moderation leitet. Pro Gruppe ca. 4 Min. Gelungene Formulierungen notieren."],
-  ["73–86'", "Auswertung\nFolie 10", "2' still Bogen ergänzen → 4' Gruppe bespricht die Patenszene → Plenum: je Gruppe ca. 2 Min. Rückmeldung, die Spielgruppe ergänzt", "Folie 10. Die Moderation führt durch die Schritte (oder Sie übernehmen Schritt 3). Zum Schluss höchstens 1 Min.: zwei gelungene Formulierungen aus Ihren Notizen vorlesen."],
+  ["21–38'", "Gruppenpuzzle\nFolie 5", "Expertenkarten verteilen (A einzeln, B–D im Tandem); lesen 4', erklären 7', Dialog umschreiben 6'", "Timer 17 Min. Bei allen drei Gruppen kurz zuhören. Folie 6 (Werkzeugkasten) noch nicht zeigen – die Klasse soll die Strategien gleich selbst zusammentragen."],
+  ["38–45'", "UG 2: Version B + Merkkasten\nFolie 5 → 6 → 7", "Die Protokoll-Person jeder Gruppe liest ihre Version ab Zeile 3 vor; alle füllen den Merkkasten (AB S. 4) aus: Formel und bestes Beispiel je Strategie", "Impuls: „Welche Strategie erkennt ihr – und an welcher Formulierung?“ Strategie für Strategie (A → D) sammeln, jeweils ein Beispiel aus den Versionen wählen lassen. Dann Folie 6 zum Vergleich, zuletzt Folie 7 (Musterlösung) als eine mögliche Version."],
+  ["45–62'", "Eigene Szene\nFolie 8", "erfindet eine eigene Situation, verteilt Besetzung A und B, füllt den Planungsbogen aus (Merkkasten als Hilfe), probt in den letzten 5'", "Folie 8, Timer 17 Min. Nach 5 Min. Runde: Hat jede Gruppe eine Idee? Wenn nicht: erst Tippkarte, dann Notfall-Idee. Um ca. 57': eine Person als Moderation gewinnen und ihr die Moderationskarte geben."],
+  ["62–75'", "Bühne frei\nFolie 9", "Wand → Mitte → Fenster spielen je Version A und B ohne Unterbrechung; das Publikum füllt den Beobachtungsbogen aus", "Folie 9. Ins Publikum setzen, die Moderation leitet. Pro Gruppe ca. 4 Min. Gelungene Formulierungen notieren."],
+  ["75–86'", "Auswertung\nFolie 10", "2' still Bogen ergänzen → 3' Gruppe bespricht die Patenszene → Plenum: je Gruppe ca. 2 Min. Rückmeldung, die Spielgruppe ergänzt", "Folie 10. Die Moderation führt durch die Schritte (oder Sie übernehmen Schritt 3). Zum Schluss höchstens 1 Min.: zwei gelungene Formulierungen aus Ihren Notizen vorlesen."],
   ["86–90'", "Exit-Ticket\nFolie 11", "nimmt das Exit-Ticket aus dem Umschlag, bearbeitet es, gibt es an der Tür ab", "Folie 11, Timer 4 Min. An die Tür stellen und einsammeln."],
   ["danach", "Nachbereitung", "", "Exit-Tickets sichten: Wer kann schon eine Ich-Botschaft mit Bitte formulieren? 2–3 gute Beispiele als Einstieg für die nächste Stunde auswählen."],
 ];
@@ -536,7 +557,7 @@ muster.forEach(([z, w, txt, s]) => mRows.push(row([
 ], 640, HeightRule.ATLEAST)));
 
 const lk3 = [
-  kicker("Erwartungshorizont · Unterrichtsgespräch 2 · Aufgabe 3 (auch Folie 7)", true),
+  kicker("Erwartungshorizont · Unterrichtsgespräch 2 · Aufgabe 3 (auch Folie 7; Merkkasten = Folie 6)", true),
   h1("So hätte es laufen können"),
   p(t("Eine mögliche Version B. Die Versionen der Gruppen dürfen ganz anders klingen – entscheidend ist, dass sie die Checkliste erfüllen.", { size: 20, italics: true, color: MUTED }), { after: 120 }),
   table(mW, mRows),
@@ -553,7 +574,7 @@ const pageProps = { page: { size: { width: 11906, height: 16838 }, margin: { top
 const styles = { default: { document: { run: { font: "Calibri", size: 22 } } } };
 const TITLE = "Kommunikationsstörungen lösen";
 
-const ab = new Document({ styles, sections: [{ properties: pageProps, headers: { default: mkHeader(TITLE) }, footers: { default: footer(TITLE) }, children: [...ab1, ...ab2, ...ab3, ...ab4, ...ab5] }] });
+const ab = new Document({ styles, sections: [{ properties: pageProps, headers: { default: mkHeader(TITLE) }, footers: { default: footer(TITLE) }, children: [...ab1, ...ab2, ...ab3, ...abMerk, ...ab4, ...ab5] }] });
 const ks = new Document({ styles, sections: [{ properties: pageProps, footers: { default: footer("Kartenset · bitte an den gestrichelten Linien ausschneiden") }, children: karten }] });
 const lk = new Document({ styles, sections: [{ properties: pageProps, footers: { default: footer("Lehrermaterial & Lösungen") }, children: [...lk1, ...lkRegie, ...lk2, ...lk3] }] });
 
