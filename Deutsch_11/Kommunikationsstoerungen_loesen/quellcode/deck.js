@@ -178,6 +178,7 @@ const techniques = [
     formula: "Wenn … , fühle ich mich … , weil … .",
     marks: ["Ich statt Du", "Beobachtung ohne Bewertung", "Gefühl + Grund"],
     quote: "„Heute Abend? Du hattest eine ganze Woche Zeit.“",
+    prev: ["2", "Tom", "Fast. Den Rest mach ich heute Abend."],
     checks: ["kein Satz beginnt mit „Du …“", "Gefühl + Grund genannt"],
     expect: "Ich statt Du · beschreibt nur, was passiert (keine Bewertung, kein „immer“) · nennt das eigene Gefühl (ärgere mich) · nennt den Grund." },
   { k: "B", n: "Empathie", z: "Zeile 4", who: "Tom",
@@ -186,6 +187,7 @@ const techniques = [
     formula: "Du meinst also … ?  ·  Das klingt, als ob du … bist.",
     marks: ["Gefühl des anderen benannt", "erst verstehen, dann antworten", "kein Gegenangriff"],
     quote: "„Ich hatte halt dreimal Training. Nicht jeder hat so viel Freizeit wie du.“",
+    prev: ["3", "Lena", "Heute Abend? Du hattest eine ganze Woche Zeit."],
     checks: ["Lenas Gefühl benannt", "kein Gegenangriff"],
     expect: "spricht das Gefühl des anderen an (genervt) · zeigt, dass der Grund verstanden wurde · fragt nach („oder?“) · wertet nicht ab, rechtfertigt sich nicht." },
   { k: "C", n: "Wunsch & Bitte", z: "Zeile 5", who: "Lena",
@@ -194,6 +196,7 @@ const techniques = [
     formula: "Beobachtung → Gefühl → Bedürfnis → Bitte",
     marks: ["sagt, was wichtig ist", "konkret: wer, was, bis wann", "als Frage – Nein ist erlaubt"],
     quote: "„Freizeit? Ich hab die komplette Gliederung gemacht! Immer bleibt alles an mir hängen.“",
+    prev: ["4", "Tom", "Ich hatte halt dreimal Training. Nicht jeder hat so viel Freizeit wie du."],
     checks: ["kein „immer“ / „nie“", "Bitte mit wer, was, bis wann"],
     expect: "statt Vorwurf („nie“) ein Bedürfnis („mir ist wichtig“) · konkrete, erfüllbare Bitte mit Uhrzeit · als Frage formuliert." },
   { k: "D", n: "Metakommunikation", z: "Zeile 7", who: "Lena",
@@ -202,6 +205,7 @@ const techniques = [
     formula: "Stopp – ich merke, wir … . Eigentlich wollen wir beide … .",
     marks: ["spricht über das Gespräch selbst", "gemeinsames Ziel", "Neustart statt Vorwurf"],
     quote: "„Super. Genau das hab ich von dir erwartet.“",
+    prev: ["6", "Tom", "Dann mach’s doch allein, wenn du eh alles besser kannst."],
     checks: ["benennt, was im Gespräch passiert", "gemeinsames Ziel genannt"],
     expect: "keine Ironie mehr · benennt, was im Gespräch passiert (wir zicken uns an) · erinnert an das gemeinsame Ziel · schlägt einen Neustart vor." },
 ];
@@ -219,22 +223,42 @@ techniques.forEach((T, i) => {
     txt(s, "„" + T.to + "“", { x: 0.9, y: 3.9, w: 11.6, h: 1.05, fontFace: HEAD, fontSize: 22, italic: true, valign: "middle" });
     box(s, 0.6, 5.4, 12.15, 1.2, col);
     txt(s, "Was macht den zweiten Satz besser?", { x: 0.9, y: 5.4, w: 11.6, h: 1.2, fontFace: HEAD, fontSize: 28, bold: true, color: WHITE, valign: "middle" });
-    s.addNotes("Nur diese eine Frage stellen, dann Meldungen sammeln (Drannehmekette). Erwartete Merkmale: " + T.expect + " Dann Folie b mit der Formel zeigen.");
+    s.addNotes("Nur diese eine Frage stellen, dann Meldungen sammeln (Drannehmekette). Erwartete Merkmale: " + T.expect + " Dann die nächste Folie mit der Formel zeigen.");
   }
-  // b) Formel + Auftrag
+  // b) Formel festhalten
   {
-    const s = base("Technik " + T.k + " · 2 Umformulieren · 3 Prüfen", T.n, "Formel in die Lücke auf dem Arbeitsblatt – dann allein umformulieren");
+    const s = base("Technik " + T.k + " · 1 Ansehen", T.n + ": die Formel", "Ergänze die Formel auf dem Arbeitsblatt");
+    timeBadge(s, "0,5", "gemeinsam");
+    box(s, 0.6, 1.95, 12.15, 1.3, col);
+    txt(s, T.formula, { x: 0.9, y: 1.95, w: 11.6, h: 1.3, fontFace: HEAD, fontSize: 28, bold: true, color: WHITE, valign: "middle" });
+    txt(s, "Daran erkennt man die Technik", { x: 0.6, y: 3.55, w: 8, h: 0.4, fontFace: HEAD, fontSize: 18, bold: true });
+    T.marks.forEach((m, j) => pill(s, m, 0.6 + j * 4.1, 4.05, 3.9, NAVY, 14));
+    box(s, 0.6, 5.2, 12.15, 1.4, LIGHT2);
+    txt(s, "Gleich wendest du sie an: Du schreibst " + T.z + " aus M1 um.", { x: 0.9, y: 5.2, w: 11.6, h: 1.4, fontFace: HEAD, fontSize: 20, bold: true, valign: "middle" });
+    s.addNotes("Formel einblenden, alle ergänzen die Lücke auf dem Arbeitsblatt (ca. 30 Sekunden). Dann sofort zur nächsten Folie: M1 umschreiben.");
+  }
+  // c) M1 umschreiben + Daumenprobe
+  {
+    const s = base("Technik " + T.k + " · 2 M1 umschreiben · 3 Prüfen", "✍  Jetzt du: M1, " + T.z + " umschreiben", "allein · Arbeitsblatt S. " + (i < 2 ? "3" : "4") + ", Feld " + T.k + " 2");
     timeBadge(s, 2, "allein");
-    box(s, 0.6, 1.95, 12.15, 0.9, col);
-    txt(s, T.formula, { x: 0.9, y: 1.95, w: 11.6, h: 0.9, fontFace: HEAD, fontSize: 24, bold: true, color: WHITE, valign: "middle" });
-    T.marks.forEach((m, j) => pill(s, m, 0.6 + j * 4.1, 3.05, 3.9, NAVY, 13));
-    txt(s, "Jetzt du: " + T.z + " – " + T.who + " sagt stattdessen …", { x: 0.6, y: 3.75, w: 12, h: 0.45, fontFace: HEAD, fontSize: 20, bold: true });
-    txt(s, T.quote, { x: 0.6, y: 4.2, w: 12, h: 0.7, fontFace: HEAD, fontSize: 18, italic: true, color: MUTED, valign: "middle" });
-    box(s, 0.6, 5.15, 12.15, 1.5, LIGHT);
-    txt(s, "3 Prüfen · Daumenprobe", { x: 0.9, y: 5.25, w: 6, h: 0.4, fontSize: 15, bold: true, color: col });
-    txt(s, T.checks.map((c) => "☐ " + c).join("        "), { x: 0.9, y: 5.7, w: 11.6, h: 0.5, fontSize: 18, bold: true });
-    txt(s, "Eine Person liest vor – Daumen hoch, wenn beide Punkte erfüllt sind.", { x: 0.9, y: 6.15, w: 11.6, h: 0.4, fontSize: 14, color: MUTED });
-    s.addNotes("Timer 2 Minuten. Herumgehen und mitlesen, eine gelungene Lösung vormerken. Dann diese Person vorlesen lassen, Klasse zeigt Daumen hoch/runter. Bei „runter“: „Was fehlt noch?“ – die Klasse verbessert gemeinsam. Mögliche Lösung: siehe Lehrermaterial S. 4. " + (i < 3 ? "Danach weiter mit Technik " + techniques[i + 1].k + "." : "Danach Folie 14: Werkzeugkasten."));
+    txt(s, "M1 · so war es", { x: 0.6, y: 1.95, w: 6, h: 0.35, fontSize: 14, bold: true, color: RED });
+    box(s, 0.6, 2.3, 12.15, 0.5, LIGHT, { r: 0.04 });
+    txt(s, T.prev[0], { x: 0.7, y: 2.3, w: 0.4, h: 0.5, fontSize: 14, bold: true, color: MUTED, align: "center", valign: "middle" });
+    txt(s, T.prev[1], { x: 1.15, y: 2.3, w: 0.9, h: 0.5, fontSize: 14, bold: true, color: MUTED, valign: "middle" });
+    txt(s, T.prev[2], { x: 2.05, y: 2.3, w: 10.5, h: 0.5, fontFace: HEAD, fontSize: 15, color: MUTED, valign: "middle" });
+    box(s, 0.6, 2.9, 12.15, 0.75, "FBECEB", { line: RED, lw: 2, r: 0.04 });
+    txt(s, T.z.replace("Zeile ", ""), { x: 0.7, y: 2.9, w: 0.4, h: 0.75, fontSize: 16, bold: true, color: RED, align: "center", valign: "middle" });
+    txt(s, T.who, { x: 1.15, y: 2.9, w: 0.9, h: 0.75, fontSize: 16, bold: true, color: RED, valign: "middle" });
+    txt(s, T.quote.replace(/[„“]/g, ""), { x: 2.05, y: 2.9, w: 9.9, h: 0.75, fontFace: HEAD, fontSize: 18, bold: true, valign: "middle" });
+    txt(s, "↯", { x: 12.05, y: 2.9, w: 0.6, h: 0.75, fontSize: 24, bold: true, color: RED, align: "center", valign: "middle" });
+    txt(s, "So soll es werden", { x: 0.6, y: 3.85, w: 6, h: 0.35, fontSize: 14, bold: true, color: col });
+    box(s, 0.6, 4.2, 12.15, 0.8, WHITE, { line: col, lw: 2, r: 0.04 });
+    txt(s, T.who + " sagt stattdessen …   ✍  (" + T.n + ": " + T.formula + ")", { x: 0.9, y: 4.2, w: 11.6, h: 0.8, fontSize: 16, bold: true, color: col, valign: "middle" });
+    box(s, 0.6, 5.25, 12.15, 1.4, LIGHT);
+    txt(s, "3 Prüfen · Daumenprobe", { x: 0.9, y: 5.32, w: 6, h: 0.4, fontSize: 15, bold: true, color: col });
+    txt(s, T.checks.map((c) => "☐ " + c).join("        "), { x: 0.9, y: 5.72, w: 11.6, h: 0.5, fontSize: 18, bold: true });
+    txt(s, "Eine Person liest vor – Daumen hoch, wenn beide Punkte erfüllt sind.", { x: 0.9, y: 6.17, w: 11.6, h: 0.4, fontSize: 14, color: MUTED });
+    s.addNotes("Jetzt schreibt jede und jeder allein den Originaldialog um: " + T.z + " aus M1. Timer 2 Minuten. Herumgehen und mitlesen, eine gelungene Lösung vormerken. Dann diese Person vorlesen lassen, Klasse zeigt Daumen hoch/runter. Bei „runter“: „Was fehlt noch?“ – die Klasse verbessert gemeinsam. Mögliche Lösung: Lehrermaterial S. 4. " + (i < 3 ? "Danach weiter mit Technik " + techniques[i + 1].k + "." : "Danach Folie 18: Werkzeugkasten."));
   }
 });
 
@@ -259,7 +283,7 @@ techniques.forEach((T, i) => {
   });
   box(s, 0.6, 6.2, 12.15, 0.55, "FBECEB");
   txt(s, "Tabu: Du-Vorwürfe · „immer“ und „nie“ · Ironie · Gegenangriff · „Ja, aber …“", { x: 0.9, y: 6.2, w: 11.6, h: 0.55, fontSize: 15, bold: true, color: RED, valign: "middle" });
-  s.addNotes("Kurze Zusammenfassung (ca. 2 Minuten): Alle vier Techniken auf einen Blick, die Beispiele sind mögliche Lösungen für M1. Die Klasse vergleicht mit ihren eigenen Lösungen. Folie 15 (ganzer Dialog) nur, wenn Zeit bleibt.");
+  s.addNotes("Kurze Zusammenfassung (ca. 2 Minuten): Alle vier Techniken auf einen Blick, die Beispiele sind mögliche Lösungen für M1. Die Klasse vergleicht mit ihren eigenen Lösungen. Folie 19 (ganzer Dialog) nur, wenn Zeit bleibt.");
 }
 
 // ============ 7 Sicherung Version B ============
