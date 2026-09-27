@@ -179,6 +179,7 @@ const techniques = [
     marks: ["Ich statt Du", "Beobachtung ohne Bewertung", "Gefühl + Grund"],
     quote: "„Heute Abend? Du hattest eine ganze Woche Zeit.“",
     prev: ["2", "Tom", "Fast. Den Rest mach ich heute Abend."],
+    sol: "Heute Abend? Ehrlich gesagt macht mich das nervös, weil wir morgen schon dran sind und ich die Folien vorher einmal sehen wollte.",
     checks: ["kein Satz beginnt mit „Du …“", "Gefühl + Grund genannt"],
     expect: "Ich statt Du · beschreibt nur, was passiert (keine Bewertung, kein „immer“) · nennt das eigene Gefühl (ärgere mich) · nennt den Grund." },
   { k: "B", n: "Empathie", z: "Zeile 4", who: "Tom",
@@ -188,6 +189,7 @@ const techniques = [
     marks: ["Gefühl des anderen benannt", "erst verstehen, dann antworten", "kein Gegenangriff"],
     quote: "„Ich hatte halt dreimal Training. Nicht jeder hat so viel Freizeit wie du.“",
     prev: ["3", "Lena", "Heute Abend? Du hattest eine ganze Woche Zeit."],
+    sol: "Du bist gestresst, weil morgen alles klappen soll, oder? Das verstehe ich. Ich hab’s mit dem Training unterschätzt.",
     checks: ["Lenas Gefühl benannt", "kein Gegenangriff"],
     expect: "spricht das Gefühl des anderen an (genervt) · zeigt, dass der Grund verstanden wurde · fragt nach („oder?“) · wertet nicht ab, rechtfertigt sich nicht." },
   { k: "C", n: "Wunsch & Bitte", z: "Zeile 5", who: "Lena",
@@ -197,6 +199,7 @@ const techniques = [
     marks: ["sagt, was wichtig ist", "konkret: wer, was, bis wann", "als Frage – Nein ist erlaubt"],
     quote: "„Freizeit? Ich hab die komplette Gliederung gemacht! Immer bleibt alles an mir hängen.“",
     prev: ["4", "Tom", "Ich hatte halt dreimal Training. Nicht jeder hat so viel Freizeit wie du."],
+    sol: "Mir ist wichtig, dass wir morgen sicher sind. Kannst du mir die Folien bis 19 Uhr schicken, damit ich drüberschauen kann?",
     checks: ["kein „immer“ / „nie“", "Bitte mit wer, was, bis wann"],
     expect: "statt Vorwurf („nie“) ein Bedürfnis („mir ist wichtig“) · konkrete, erfüllbare Bitte mit Uhrzeit · als Frage formuliert." },
   { k: "D", n: "Metakommunikation", z: "Zeile 7", who: "Lena",
@@ -206,6 +209,7 @@ const techniques = [
     marks: ["spricht über das Gespräch selbst", "gemeinsames Ziel", "Neustart statt Vorwurf"],
     quote: "„Super. Genau das hab ich von dir erwartet.“",
     prev: ["6", "Tom", "Dann mach’s doch allein, wenn du eh alles besser kannst."],
+    sol: "Moment. Wir werfen uns gerade nur noch Sachen an den Kopf. Eigentlich wollen wir doch beide ein gutes Referat, oder?",
     checks: ["benennt, was im Gespräch passiert", "gemeinsames Ziel genannt"],
     expect: "keine Ironie mehr · benennt, was im Gespräch passiert (wir zicken uns an) · erinnert an das gemeinsame Ziel · schlägt einen Neustart vor." },
 ];
@@ -258,14 +262,27 @@ techniques.forEach((T, i) => {
     txt(s, "3 Prüfen · Daumenprobe", { x: 0.9, y: 5.32, w: 6, h: 0.4, fontSize: 15, bold: true, color: col });
     txt(s, T.checks.map((c) => "☐ " + c).join("        "), { x: 0.9, y: 5.72, w: 11.6, h: 0.5, fontSize: 18, bold: true });
     txt(s, "Eine Person liest vor – Daumen hoch, wenn beide Punkte erfüllt sind.", { x: 0.9, y: 6.17, w: 11.6, h: 0.4, fontSize: 14, color: MUTED });
-    s.addNotes("Jetzt schreibt jede und jeder allein den Originaldialog um: " + T.z + " aus M1. Timer 2 Minuten. Herumgehen und mitlesen, eine gelungene Lösung vormerken. Dann diese Person vorlesen lassen, Klasse zeigt Daumen hoch/runter. Bei „runter“: „Was fehlt noch?“ – die Klasse verbessert gemeinsam. Mögliche Lösung: Lehrermaterial S. 4. " + (i < 3 ? "Danach weiter mit Technik " + techniques[i + 1].k + "." : "Danach Folie 18: Werkzeugkasten."));
+    s.addNotes("Jetzt schreibt jede und jeder allein den Originaldialog um: " + T.z + " aus M1. Timer 2 Minuten. Herumgehen und mitlesen, eine gelungene Lösung vormerken. Dann diese Person vorlesen lassen, Klasse zeigt Daumen hoch/runter. Bei „runter“: „Was fehlt noch?“ – die Klasse verbessert gemeinsam. Danach die nächste Folie mit einer möglichen Lösung zeigen.");
   }
+  // d) Mögliche Lösung
+  {
+    const s = base("Technik " + T.k + " · Mögliche Lösung", T.z + " – umgeschrieben", "Eure Sätze dürfen anders klingen – entscheidend sind die Merkmale");
+    txt(s, "vorher", { x: 0.6, y: 1.95, w: 3, h: 0.35, fontSize: 14, bold: true, color: RED });
+    box(s, 0.6, 2.3, 12.15, 0.8, "FBECEB", { r: 0.04 });
+    txt(s, T.who + ":  " + T.quote, { x: 0.9, y: 2.3, w: 11.6, h: 0.8, fontFace: HEAD, fontSize: 18, color: MUTED, valign: "middle" });
+    txt(s, "nachher · " + T.n, { x: 0.6, y: 3.35, w: 6, h: 0.35, fontSize: 14, bold: true, color: col });
+    box(s, 0.6, 3.7, 12.15, 1.5, LIGHT2, { line: col, lw: 2, r: 0.04 });
+    txt(s, T.who + ":  „" + T.sol + "“", { x: 0.9, y: 3.7, w: 11.6, h: 1.5, fontFace: HEAD, fontSize: 21, bold: true, valign: "middle" });
+    T.marks.forEach((m, j) => pill(s, "✓ " + m, 0.6 + j * 4.1, 5.55, 3.9, col, 13));
+    s.addNotes("Nach der Daumenprobe kurz zeigen (ca. 30 Sekunden): eine mögliche Lösung, nicht die einzig richtige. Wer möchte, ergänzt eine Formulierung auf dem Arbeitsblatt. " + (i < 3 ? "Dann weiter mit Technik " + techniques[i + 1].k + "." : "Dann zum Werkzeugkasten."));
+  }
+
 });
 
 // ============ 5 Werkzeugkasten ============
 {
-  const s = base("Zusammenfassung", "Der Werkzeugkasten", "Vergleicht mit euren Formeln und Lösungen auf S. 3–4");
-  timeBadge(s, 2, "Plenum");
+  const s = base("Zusammenfassung", "Der Werkzeugkasten", "Alle vier Techniken auf einen Blick");
+  timeBadge(s, "0,5", "Plenum");
   const tools = [
     ["A", "Ich-Botschaft", S.A, "Wenn … fühle ich mich …, weil …", "„Ich werde nervös, weil wir morgen schon dran sind.“"],
     ["B", "Empathie", S.B, "Du meinst also … ? · Das klingt, als ob du … bist.", "„Du bist gestresst, weil alles klappen soll, oder?“"],
@@ -283,29 +300,33 @@ techniques.forEach((T, i) => {
   });
   box(s, 0.6, 6.2, 12.15, 0.55, "FBECEB");
   txt(s, "Tabu: Du-Vorwürfe · „immer“ und „nie“ · Ironie · Gegenangriff · „Ja, aber …“", { x: 0.9, y: 6.2, w: 11.6, h: 0.55, fontSize: 15, bold: true, color: RED, valign: "middle" });
-  s.addNotes("Kurze Zusammenfassung (ca. 2 Minuten): Alle vier Techniken auf einen Blick, die Beispiele sind mögliche Lösungen für M1. Die Klasse vergleicht mit ihren eigenen Lösungen. Folie 19 (ganzer Dialog) nur, wenn Zeit bleibt.");
+  s.addNotes("Kurze Zusammenfassung (ca. 30 Sekunden): Alle vier Techniken auf einen Blick. Dann die nächste Folie: der neue Dialog in zwei Rollen.");
 }
 
-// ============ 7 Sicherung Version B ============
+// ============ Vorlesen in zwei Rollen ============
 {
-  const s = base("Sicherung · Unterrichtsgespräch", "So hätte es laufen können", "Eine mögliche Version B – eure darf ganz anders klingen");
-  pill(s, "OPTIONAL", 10.9, 0.75, 1.85, MUTED, 12);
-  const rows = [
-    ["Lena", "Heute Abend? Ehrlich gesagt macht mich das nervös, weil wir morgen schon dran sind.", "A"],
-    ["Tom", "Verstehe ich. Du willst sicher sein, dass alles passt, oder? Ich hab’s unterschätzt.", "B"],
-    ["Lena", "Ich hab schon die Gliederung gemacht und fühl mich gerade ein bisschen allein damit.", "A"],
-    ["Lena", "Kannst du mir die Folien bis 19 Uhr schicken? Dann proben wir morgen früh einmal.", "C"],
-    ["Tom", "19 Uhr schaffe ich. Und nächstes Mal sagen wir uns früher Bescheid, wenn’s eng wird?", "D"],
+  const s = base("Zum Schluss", "Der neue Dialog – mit euren Sätzen", "Zwei Personen lesen als Lena und Tom – mit ihren eigenen Zeilen vom Arbeitsblatt");
+  timeBadge(s, "1,5", "2 Rollen");
+  const rowsD = [
+    ["1", "Lena", "Hey, hast du die Folien fertig? Wir sind morgen dran.", null],
+    ["2", "Tom", "Fast. Den Rest mach ich heute Abend.", null],
+    ["3", "Lena", "✍ eure Ich-Botschaft", "A"],
+    ["4", "Tom", "✍ eure Antwort mit Empathie", "B"],
+    ["5", "Lena", "✍ euer Wunsch mit Bitte", "C"],
+    ["", "", "Und falls es trotzdem noch einmal kippt …", "sep"],
+    ["6", "Tom", "Dann mach’s doch allein, wenn du eh alles besser kannst.", null],
+    ["7", "Lena", "✍ eure Metakommunikation", "D"],
   ];
-  const names = { A: "Ich-Botschaft", B: "Empathie", C: "Bitte", D: "Metakomm." };
-  rows.forEach(([who, line, k], i) => {
-    const y = 1.95 + i * 0.9;
-    box(s, 0.6, y, 12.15, 0.8, i % 2 ? WHITE : LIGHT, { r: 0.05 });
-    txt(s, who, { x: 0.8, y, w: 0.9, h: 0.8, fontSize: 15, bold: true, valign: "middle" });
-    txt(s, line, { x: 1.75, y, w: 8.4, h: 0.8, fontFace: HEAD, fontSize: 15, valign: "middle" });
-    pill(s, k + " " + names[k], 10.35, y + 0.19, 2.2, S[k], 12);
+  rowsD.forEach(([z, who, line, k], j) => {
+    const y = 1.95 + j * 0.58;
+    if (k === "sep") { txt(s, line, { x: 0.6, y, w: 12, h: 0.5, fontSize: 15, italic: true, color: MUTED, valign: "middle" }); return; }
+    box(s, 0.6, y, 12.15, 0.5, k ? LIGHT2 : LIGHT, k ? { line: S[k], lw: 1.5, r: 0.04 } : { r: 0.04 });
+    txt(s, z, { x: 0.7, y, w: 0.4, h: 0.5, fontSize: 14, bold: true, color: MUTED, align: "center", valign: "middle" });
+    txt(s, who, { x: 1.15, y, w: 0.9, h: 0.5, fontSize: 14, bold: true, valign: "middle" });
+    txt(s, line, { x: 2.05, y, w: 9.2, h: 0.5, fontFace: HEAD, fontSize: 16, italic: !!k, bold: !!k, color: k ? S[k] : NAVY, valign: "middle" });
+    if (k) pill(s, k, 11.9, y + 0.07, 0.7, S[k], 12);
   });
-  s.addNotes("Optional, wenn Zeit bleibt: Hier sieht man, wie die Techniken im ganzen Gespräch zusammenspielen. Als eine mögliche Lösung zeigen, nicht als die richtige.");
+  s.addNotes("Zwei Freiwillige lesen den Dialog in verteilten Rollen, jeweils mit ihren eigenen Sätzen vom Arbeitsblatt. Impuls danach (optional, ein Satz): „Was hat sich verändert?“ – aus dem Streit ist ein Gespräch geworden. Überleitung: Genau das spielt ihr gleich in eurer eigenen Szene.");
 }
 
 // ============ 6 Eigene Szene ============

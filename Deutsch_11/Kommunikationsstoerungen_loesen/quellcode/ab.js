@@ -438,12 +438,12 @@ const regie = [
   ["0–5'", "Impuls EA → PA\nFolie 2", "liest M1 still und markiert Kipppunkte mit ↯ (3'), vergleicht dann mit dem Sitznachbarn (2')", "Nichts sagen. Nach 3 Min. Handzeichen/Gong für den Partnervergleich."],
   ["5–13'", "Kipppunkte benennen\nFolie 3", "Aufgabe 2 zu zweit", "Folie 3, Timer 8 Min. Herumgehen und zuhören: Welche Paare finden Zeile 3? Die merken Sie sich fürs Gespräch."],
   ["13–18'", "UG: Kipppunkte\nFolie 3 → 4", "Paare nennen Zeile + Fachbegriff, ergänzen ihre Tabelle in anderer Farbe", "Impuls: „In welcher Zeile kippt es zum ersten Mal – und warum?“ Wer geantwortet hat, nimmt die nächste Person dran. Ziel: Zeilen 3, 4, 5, 7 – genau die werden gleich umformuliert. Zum Schluss Folie 4."],
-  ["18–41'", "Technik für Technik\nFolie 5, dann je 3 Folien pro Technik (6–17)", "pro Technik (ca. 5,5'): 1 Ansehen – Kontrastpaar besprechen, Formel in die Lücke; 2 ✍ M1 umschreiben – allein (2'): A Z. 3 ab ca. 21', B Z. 4 ab ca. 26', C Z. 5 ab ca. 32', D Z. 7 ab ca. 37'; 3 Prüfen – Daumenprobe", "Folie 5 kurz zeigen (Takt). Dann je Technik: Folie 1 Kontrastpaar – Impuls: „Was macht den zweiten Satz besser?“ (1,5'). Folie 2 Formel – Lücke ergänzen (0,5'). Folie 3 „✍ Jetzt du: M1 umschreiben“ – Timer 2 Min., herumgehen. Eine vorher gesehene gute Lösung vorlesen lassen, Klasse zeigt Daumen hoch/runter – bei „runter“ verbessert die Klasse gemeinsam. A (Z. 3) → B (Z. 4) → C (Z. 5) → D (Z. 7)."],
-  ["41–43'", "Werkzeugkasten\nFolie 18 (→ 19)", "vergleicht die eigenen Formeln und Lösungen mit der Übersicht", "Folie 18 als Zusammenfassung zeigen. Folie 19 (ganzer Dialog) nur, wenn Zeit bleibt."],
-  ["43–62'", "Umsetzen + eigene Szene\nFolie 20", "Reihen rücken zusammen, öffnen den Umschlag, verteilen Rollen (3'); erfinden eine eigene Situation, verteilen Besetzung A und B, proben in den letzten 5'", "Folie 20, Timer 3 + 16 Min. Nach 5 Min. Runde: Hat jede Gruppe eine Idee? Wenn nicht: erst Tippkarte, dann Notfall-Idee. Um ca. 57': eine Person als Moderation gewinnen und ihr die Moderationskarte geben."],
-  ["62–75'", "Bühne frei\nFolie 21", "Wand → Mitte → Fenster spielen je Version A und B ohne Unterbrechung; das Publikum füllt den Beobachtungsbogen aus", "Folie 21. Ins Publikum setzen, die Moderation leitet. Pro Gruppe ca. 4 Min. Gelungene Formulierungen notieren."],
-  ["75–84'", "Auswertung\nFolie 22", "2' still Bogen ergänzen → 2' Gruppe bespricht die Patenszene → Plenum: je Gruppe ca. 1,5 Min. Rückmeldung", "Folie 22. Die Moderation führt durch die Schritte (oder Sie übernehmen Schritt 3)."],
-  ["84–90'", "Exit-Ticket: Mini-Test\nFolie 23", "bearbeitet allein einen neuen Kurzdialog: Kipppunkt benennen, mit zwei Techniken umschreiben", "Folie 23, Timer 6 Min. Einsammeln an der Tür. Das Format entspricht der Testaufgabe."],
+  ["18–41'", "Technik für Technik\nFolie 5, dann je 4 Folien pro Technik (6–21)", "pro Technik (ca. 5,5'): 1 Ansehen – Kontrastpaar besprechen, Formel in die Lücke; 2 ✍ M1 umschreiben – allein (2'): A Z. 3 ab ca. 21', B Z. 4 ab ca. 26', C Z. 5 ab ca. 32', D Z. 7 ab ca. 37'; 3 Prüfen – Daumenprobe, dann mögliche Lösung auf der Folie", "Folie 5 kurz zeigen (Takt). Dann je Technik: Folie 1 Kontrastpaar – Impuls: „Was macht den zweiten Satz besser?“ (1,5'). Folie 2 Formel – Lücke ergänzen (0,5'). Folie 3 „✍ Jetzt du: M1 umschreiben“ – Timer 2 Min., herumgehen. Eine vorher gesehene gute Lösung vorlesen lassen, Klasse zeigt Daumen hoch/runter – bei „runter“ verbessert die Klasse gemeinsam. Folie 4: mögliche Lösung zeigen (0,5'). A (Z. 3) → B (Z. 4) → C (Z. 5) → D (Z. 7)."],
+  ["41–43'", "Werkzeugkasten + Vorlesen\nFolie 22 → 23", "Überblick über alle vier Techniken; zwei Personen lesen den neuen Dialog als Lena und Tom – mit ihren eigenen Zeilen 3, 4, 5, 7", "Folie 22 kurz zeigen (30 Sek.). Folie 23: zwei Freiwillige lesen in verteilten Rollen. Optionaler Impuls: „Was hat sich verändert?“ Überleitung zur eigenen Szene."],
+  ["43–62'", "Umsetzen + eigene Szene\nFolie 24", "Reihen rücken zusammen, öffnen den Umschlag, verteilen Rollen (3'); erfinden eine eigene Situation, verteilen Besetzung A und B, proben in den letzten 5'", "Folie 24, Timer 3 + 16 Min. Nach 5 Min. Runde: Hat jede Gruppe eine Idee? Wenn nicht: erst Tippkarte, dann Notfall-Idee. Um ca. 57': eine Person als Moderation gewinnen und ihr die Moderationskarte geben."],
+  ["62–75'", "Bühne frei\nFolie 25", "Wand → Mitte → Fenster spielen je Version A und B ohne Unterbrechung; das Publikum füllt den Beobachtungsbogen aus", "Folie 25. Ins Publikum setzen, die Moderation leitet. Pro Gruppe ca. 4 Min. Gelungene Formulierungen notieren."],
+  ["75–84'", "Auswertung\nFolie 26", "2' still Bogen ergänzen → 2' Gruppe bespricht die Patenszene → Plenum: je Gruppe ca. 1,5 Min. Rückmeldung", "Folie 26. Die Moderation führt durch die Schritte (oder Sie übernehmen Schritt 3)."],
+  ["84–90'", "Exit-Ticket: Mini-Test\nFolie 27", "bearbeitet allein einen neuen Kurzdialog: Kipppunkt benennen, mit zwei Techniken umschreiben", "Folie 27, Timer 6 Min. Einsammeln an der Tür. Das Format entspricht der Testaufgabe."],
   ["danach", "Nachbereitung", "", "Mini-Tests sichten (Erwartungshorizont S. 4): Wer kann einen Kipppunkt allein umschreiben? Welche Technik gelingt noch nicht? Daraus die Übung für die nächste Stunde ableiten."],
 ];
 const rgRows = [row([hdr("Zeit", rgW[0]), hdr("Phase · Folie", rgW[1]), hdr("Was die Klasse tut", rgW[2]), hdr("Was Sie tun", rgW[3])], 440)];
@@ -452,15 +452,15 @@ regie.forEach(([a, b, c, d]) => {
   rgRows.push(row([
     cell(p(t(a, { bold: true, color: NAVY, size: 19 }), { after: 0 }), { w: rgW[0], fill: LIGHT, valign: VerticalAlign.TOP }),
     cell([p(t(ph, { bold: true, size: 19 }), { after: 10 }), fo ? p(t(fo, { size: 16, color: MUTED }), { after: 0 }) : null].filter(Boolean), { w: rgW[1], fill: LIGHT, valign: VerticalAlign.TOP }),
-    cell(p(t(c, { size: 18 }), { after: 0 }), { w: rgW[2], valign: VerticalAlign.TOP }),
-    cell(p(t(d, { size: 18 }), { after: 0 }), { w: rgW[3], fill: LIGHT2, valign: VerticalAlign.TOP }),
-  ], 500));
+    cell(p(t(c, { size: 17 }), { after: 0 }), { w: rgW[2], valign: VerticalAlign.TOP }),
+    cell(p(t(d, { size: 17 }), { after: 0 }), { w: rgW[3], fill: LIGHT2, valign: VerticalAlign.TOP }),
+  ], 300));
 });
 
 const lkRegie = [
   kicker("Für die Lehrkraft · Regieplan", true),
   h1("Wann passiert was?"),
-  p(t("Minutengenauer Ablauf. Die Folien-Nummern beziehen sich auf die Präsentation.", { size: 20, italics: true, color: MUTED }), { after: 100 }),
+  p(t("Minutengenauer Ablauf. Die Folien-Nummern beziehen sich auf die Präsentation.", { size: 19, italics: true, color: MUTED }), { after: 60 }),
   table(rgW, rgRows),
 ];
 
