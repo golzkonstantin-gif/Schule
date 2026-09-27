@@ -135,68 +135,59 @@ const strat = [
 const legendW = [2551, 2551, 2552, 2552];
 const stratLegend = table(legendW, [row(strat.map(([k, n, c], i) => cell(p(t(k + " = " + n, { bold: true, color: "FFFFFF", size: 19 }), { align: AlignmentType.CENTER, after: 0 }), { w: legendW[i], fill: c, borders: allBorders(solid("FFFFFF", 12)) })), 520)]);
 
-// ---------- Aufgabe 3: Technik-Training (Einzelarbeit, Technik für Technik) ----------
-function exampleBox(from, to, col) {
-  return table([W / 2 - 100], [
-    row([cell([p(t("statt", { size: 15, bold: true, color: RED }), { after: 0 }), p(t(from, { font: "Cambria", size: 19, italics: true }), { after: 0 })], { w: W / 2 - 100, fill: "FBECEB", borders: allBorders(solid("FFFFFF", 12)), valign: VerticalAlign.TOP })]),
-    row([cell([p(t("besser", { size: 15, bold: true, color: col }), { after: 0 }), p(t(to, { font: "Cambria", size: 19, italics: true }), { after: 0 })], { w: W / 2 - 100, fill: LIGHT2, borders: allBorders(solid("FFFFFF", 12)), valign: VerticalAlign.TOP })]),
-  ]);
-}
-function trainBlock(k, name, col, formula, steps, trap, from, to, task, quote, checks) {
-  const lw = W / 2 + 100, rw = W / 2 - 100;
+// ---------- Aufgabe 3: Technik für Technik (gemeinsam ansehen → allein umformulieren → prüfen) ----------
+function trainBlock(k, name, col, zeile, gapFormula, task, quote, starter, checks, trap) {
   return [
-    table([W], [row([cell(p([t(k + "  ", { font: "Cambria", size: 30, bold: true, color: "FFFFFF" }), t(name, { font: "Cambria", size: 26, bold: true, color: "FFFFFF" }), t("   ·   " + formula, { size: 19, bold: true, color: "FFFFFF" })], { after: 0 }), { w: W, fill: col, borders: allBorders(none), m: 70 })])]),
-    table([lw, rw], [row([
-      cell([
-        p(t("1  Lesen · So geht’s", { bold: true, color: col, size: 19 }), { after: 20 }),
-        ...steps.map((x) => p([t("•  ", { bold: true, color: MUTED, size: 19 }), t(x, { size: 19 })], { after: 10 })),
-        p([t("Stolperfalle: ", { bold: true, color: RED, size: 18 }), t(trap, { size: 18 })], { before: 40, after: 0 }),
-      ], { w: lw, borders: allBorders(none), valign: VerticalAlign.TOP, m: 60 }),
-      cell([p(t("Beispiel aus der WG-Küche", { bold: true, color: col, size: 19 }), { after: 20 }), exampleBox(from, to, col)], { w: rw, borders: allBorders(none), valign: VerticalAlign.TOP, m: 60 }),
-    ])]),
-    p([t("2  Anwenden · ", { bold: true, color: col, size: 20 }), t(task + " ", { bold: true, size: 20 }), t(quote, { font: "Cambria", italics: true, size: 20 })], { before: 40, after: 0, keepNext: true }),
-    lines(4, 440),
-    p([t("3  Prüfen   ", { bold: true, color: col, size: 19 }), ...checks.map((c) => t(box + " " + c + "     ", { size: 19 }))], { before: 60, after: 0 }),
+    table([W], [row([cell(p([t(k + "  ", { font: "Cambria", size: 30, bold: true, color: "FFFFFF" }), t(name, { font: "Cambria", size: 26, bold: true, color: "FFFFFF" }), t("   →   " + zeile, { size: 20, bold: true, color: "FFFFFF" })], { after: 0 }), { w: W, fill: col, borders: allBorders(none), m: 70 })])]),
+    p([t("1  Ansehen ", { bold: true, color: col, size: 20 }), t("(gemeinsam an der Folie) · Ergänze die Formel:", { size: 19, color: MUTED })], { before: 80, after: 40 }),
+    p(t(gapFormula, { font: "Cambria", size: 24, bold: true, color: NAVY }), { after: 40 }),
+    p(t("Das macht den besseren Satz aus:", { size: 19, color: MUTED }), { after: 0 }),
+    lines(1, 440),
+    p([t("2  Umformulieren ", { bold: true, color: col, size: 20 }), t("(allein, 2 Min.) · ", { size: 19, color: MUTED }), t(task + " ", { bold: true, size: 20 }), t(quote, { font: "Cambria", italics: true, size: 20 })], { before: 100, after: 0, keepNext: true }),
+    p(t("Hilfe, wenn du nicht weiterkommst: " + starter, { size: 17, italics: true, color: MUTED }), { after: 0, keepNext: true }),
+    lines(4, 480),
+    p([t("3  Prüfen ", { bold: true, color: col, size: 19 }), t("(Daumenprobe)   ", { size: 18, color: MUTED }), ...checks.map((c) => t(box + " " + c + "     ", { size: 19 }))], { before: 60, after: 20 }),
+    p([t("Stolperfalle: ", { bold: true, color: RED, size: 18 }), t(trap, { size: 18 })], { after: 0 }),
   ];
 }
 
-const tA = trainBlock("A", "Ich-Botschaft", S.A, "Wenn … fühle ich mich …, weil …",
-  ["Beschreibe, was passiert – ohne zu bewerten.", "Nenne dein Gefühl (gestresst, enttäuscht, unsicher …) und den Grund."],
-  "„Ich finde, du bist …“ ist eine verkleidete Du-Botschaft.",
-  "Du lässt immer alles stehen!", "Wenn ich abends in die Küche komme und die Spüle voll ist, ärgere ich mich, weil ich dann erst aufräumen muss.",
-  "Schreibe Zeile 3 (Lena) als Ich-Botschaft:", "„Heute Abend? Du hattest eine ganze Woche Zeit.“",
-  ["kein Satz beginnt mit „Du …“", "Gefühl + Grund genannt"]);
-const tB = trainBlock("B", "Empathie", S.B, "Du meinst also … ? · Das klingt, als ob du … bist.",
-  ["Wiederhole mit eigenen Worten, was du gehört hast.", "Sprich das Gefühl an, das du dahinter vermutest – erst dann antwortest du."],
-  "kein „Ja, aber …“, keine Rechtfertigung, kein Gegenangriff.",
-  "Chill mal, ist doch nur Geschirr.", "Du bist genervt, weil du nach der Arbeit einfach kochen willst, oder? Das verstehe ich.",
-  "Schreibe Zeile 4 (Tom antwortet auf Lena) mit Empathie:", "„Ich hatte halt dreimal Training. Nicht jeder hat so viel Freizeit wie du.“",
-  ["Lenas Gefühl benannt", "kein Gegenangriff"]);
-const tC = trainBlock("C", "Wunsch & Bitte", S.C, "Beobachtung → Gefühl → Bedürfnis → Bitte",
-  ["Sag, was dir wichtig ist (Bedürfnis) – nicht, was der andere falsch macht.", "Bitte konkret: wer, was, bis wann? Als Frage, der andere darf Nein sagen."],
-  "„Du musst endlich …“ ist eine Forderung, keine Bitte.",
-  "Nie machst du was im Haushalt!", "Mir ist wichtig, dass die Küche abends frei ist. Kannst du dein Geschirr bis 18 Uhr spülen?",
-  "Schreibe Zeile 5 (Lena) als Wunsch mit Bitte:", "„Freizeit? Ich hab die komplette Gliederung gemacht! Immer bleibt alles an mir hängen.“",
-  ["kein „immer“ / „nie“", "Bitte mit wer, was, bis wann"]);
-const tD = trainBlock("D", "Metakommunikation", S.D, "Stopp – wie reden wir gerade miteinander?",
-  ["Tritt aus dem Streit heraus und benenne, was gerade im Gespräch passiert.", "Erinnere an das gemeinsame Ziel und schlage einen Neustart vor."],
-  "kein neuer Vorwurf („Du redest immer so gemein …“).",
-  "Toll. Wirklich super. Danke auch.", "Stopp, wir zicken uns gerade nur an. Eigentlich wollen wir doch beide, dass es in der WG entspannt ist – lass uns einen Plan machen.",
-  "Schreibe Zeile 7 (Lena) als Metakommunikation:", "„Super. Genau das hab ich von dir erwartet.“",
-  ["benennt, was im Gespräch passiert", "gemeinsames Ziel genannt"]);
+const tA = trainBlock("A", "Ich-Botschaft", S.A, "Zeile 3",
+  "Wenn __________, fühle ich mich __________, weil __________.",
+  "Lena sagt stattdessen:", "„Heute Abend? Du hattest eine ganze Woche Zeit.“",
+  "„Heute Abend? Ehrlich gesagt werde ich nervös, wenn …, weil …“",
+  ["kein Satz beginnt mit „Du …“", "Gefühl + Grund genannt"],
+  "„Ich finde, du bist …“ ist eine verkleidete Du-Botschaft.");
+const tB = trainBlock("B", "Empathie", S.B, "Zeile 4",
+  "Du meinst also __________? · Das klingt, als ob du __________ bist.",
+  "Tom antwortet auf Lena stattdessen:", "„Ich hatte halt dreimal Training. Nicht jeder hat so viel Freizeit wie du.“",
+  "„Du bist gerade …, weil …, oder? Das verstehe ich.“",
+  ["Lenas Gefühl benannt", "kein Gegenangriff"],
+  "kein „Ja, aber …“, keine Rechtfertigung vor dem Verstehen.");
+const tC = trainBlock("C", "Wunsch & Bitte", S.C, "Zeile 5",
+  "Beobachtung → __________ → __________ → __________",
+  "Lena sagt stattdessen:", "„Freizeit? Ich hab die komplette Gliederung gemacht! Immer bleibt alles an mir hängen.“",
+  "„Mir ist wichtig, dass … Kannst du … bis …?“",
+  ["kein „immer“ / „nie“", "Bitte mit wer, was, bis wann"],
+  "„Du musst endlich …“ ist eine Forderung, keine Bitte.");
+const tD = trainBlock("D", "Metakommunikation", S.D, "Zeile 7",
+  "Stopp – ich merke, wir __________. Eigentlich wollen wir beide __________.",
+  "Lena sagt stattdessen:", "„Super. Genau das hab ich von dir erwartet.“",
+  "„Moment, ich merke, wir … Eigentlich wollen wir doch …“",
+  ["benennt, was im Gespräch passiert", "gemeinsames Ziel genannt"],
+  "kein neuer Vorwurf („Du redest immer so gemein …“).");
 
 const ab3 = [
-  kicker("Aufgabe 3 · Technik-Training · allein · 4 × 4 Min. + 2 Min. Vergleich", true),
-  h1("Vier Werkzeuge – Schritt für Schritt"),
-  p([t("Arbeite die Techniken "), t("nacheinander", { bold: true }), t(" durch: "), t("lesen → Kipppunkt aus M1 umschreiben → prüfen", { bold: true }), t(". Nach jedem Gong kommt die nächste Technik. Am Ende vergleichst du 2 Minuten mit deinem Sitznachbarn.")], { after: 100 }),
-  ...tA, gap(160), ...tB,
-  kicker("Aufgabe 3 · Technik-Training · Fortsetzung", true),
-  ...tC, gap(160), ...tD,
-  gap(120),
+  kicker("Aufgabe 3 · Technik für Technik · gemeinsam + allein · 25 Min.", true),
+  h1("Vier Werkzeuge – eins nach dem anderen"),
+  p([t("Wir gehen die Techniken "), t("nacheinander", { bold: true }), t(" durch, immer im gleichen Takt: "), t("1 Ansehen", { bold: true }), t(" (gemeinsam an der Folie) → "), t("2 Umformulieren", { bold: true }), t(" (allein) → "), t("3 Prüfen", { bold: true }), t(" (Daumenprobe). Erst dann kommt die nächste Technik.")], { after: 100 }),
+  ...tA, gap(200), ...tB,
+  kicker("Aufgabe 3 · Technik für Technik · Fortsetzung", true),
+  ...tC, gap(200), ...tD,
+  gap(160),
   infoBox([[t("Diese beiden Seiten sind dein Werkzeugkasten ", { bold: true, color: NAVY }), t("– für die eigene Szene gleich und für den Test.", { size: 20 })]]),
 ];
 
-// Planungsbogen// Planungsbogen
+// Planungsbogen// Planungsbogen// Planungsbogen
 const pl = (label, h, hint) => row([
   cell([p(t(label, { bold: true, color: NAVY, size: 20 }), { after: 0 }), hint ? p(t(hint, { size: 16, italics: true, color: MUTED }), { after: 0 }) : null].filter(Boolean), { w: 2600, fill: LIGHT, valign: VerticalAlign.TOP }),
   cell(p(t("")), { w: W - 2600 }),
@@ -207,7 +198,7 @@ const ab4 = [
   h1("Eure eigene Szene"),
   p([t("Zuerst: ", { bold: true }), t("Rückt als Reihe (Wand, Mitte, Fenster) zusammen, öffnet euren Umschlag und verteilt die Rollenkarten.")], { after: 60 }),
   p([t("Eure Gruppe entwickelt "), t("eine", { bold: true }), t(" Alltagsszene in "), t("zwei Versionen", { bold: true }), t(". Beide beginnen gleich. "), t("Version A", { bold: true, color: RED }), t(" kippt und eskaliert. In "), t("Version B", { bold: true, color: S.B }), t(" wird genau am Kipppunkt anders reagiert.")], { after: 60 }),
-  p([t("Denkt euch die Situation "), t("selbst", { bold: true }), t(" aus – am besten eine, die ihr so oder ähnlich schon erlebt habt. Euer Technik-Training (S. 3–4) hilft bei Version B.")], { after: 60 }),
+  p([t("Denkt euch die Situation "), t("selbst", { bold: true }), t(" aus – am besten eine, die ihr so oder ähnlich schon erlebt habt. Euer Werkzeugkasten (S. 3–4) hilft bei Version B.")], { after: 60 }),
   p([t("Nach 5 Minuten noch keine Idee? ", { bold: true }), t("Material-Person holt Tippkarte 1 für Aufgabe 4. Hilft auch die nicht, hat die Lehrkraft eine Notfall-Idee.", { italics: true })], { after: 60 }),
   infoBox([[t("Spielregeln: ", { bold: true, color: NAVY }), t("2–4 Rollen pro Version · jede Version höchstens 2 Minuten · ", { size: 20 }), t("Version A und B spielen verschiedene Personen", { size: 20, bold: true }), t(" – wer nicht spielt, führt Regie · Stichpunkte auf Karteikarten sind erlaubt · ", { size: 20 }), t("der Kipppunkt muss für das Publikum erkennbar sein.", { size: 20, bold: true })]]),
   gap(100),
@@ -418,7 +409,7 @@ const lk1 = [
   ...[
     ["Sie teilen während der Stunde nichts aus.", " Alles liegt vorher bereit. Ausnahmen: Notfall-Idee und Moderationskarte."],
     ["Folie wechseln, Timer starten, nicht erklären.", " Die Aufträge stehen auf Folie und Arbeitsblatt."],
-    ["Zwei kurze Unterrichtsgespräche (5 und 7 Min.)", " sichern die Kipppunkte und die Techniken. Tipp: Wer geantwortet hat, nimmt die nächste Person dran."],
+    ["Zwei gelenkte Phasen:", " Unterrichtsgespräch zu den Kipppunkten (5 Min.) und „Technik für Technik“ (25 Min.). Pro Technik stellen Sie nur eine Frage und blenden die Formel ein. Tipp: Wer geantwortet hat, nimmt die nächste Person dran."],
     ["Fragen kommen nur von der Material-Person", " – und erst, nachdem Gruppe und Tippkarte nicht geholfen haben."],
     ["Beim Spielen sitzen Sie im Publikum.", " Eine Schülerin oder ein Schüler moderiert. Sie notieren gelungene Formulierungen."],
   ].map(([a, b]) => p([t("•  ", { bold: true, color: MUTED }), t(a, { bold: true, size: 19 }), t(b, { size: 19 })], { after: 20 })),
@@ -430,13 +421,13 @@ const regie = [
   ["0'", "Ankommen\nFolie 1 → 2", "setzt sich wie gewohnt in die Reihen, findet das Arbeitsblatt auf dem Platz", "Einziger Satz der Einführung: „Heute steht alles auf den Folien – schaut einfach dorthin.“ Folie 2 zeigen, Timer 5 Min. starten."],
   ["0–5'", "Impuls EA → PA\nFolie 2", "liest M1 still und markiert Kipppunkte mit ↯ (3'), vergleicht dann mit dem Sitznachbarn (2')", "Nichts sagen. Nach 3 Min. Handzeichen/Gong für den Partnervergleich."],
   ["5–13'", "Kipppunkte benennen\nFolie 3", "Aufgabe 2 zu zweit", "Folie 3, Timer 8 Min. Herumgehen und zuhören: Welche Paare finden Zeile 3? Die merken Sie sich fürs Gespräch."],
-  ["13–18'", "UG 1: Kipppunkte\nFolie 3 → 4", "Paare nennen Zeile + Fachbegriff, ergänzen ihre Tabelle in anderer Farbe", "Impuls: „In welcher Zeile kippt es zum ersten Mal – und warum?“ Wer geantwortet hat, nimmt die nächste Person dran. Ziel: Zeilen 3, 4, 5, 7 – genau die werden gleich trainiert. Zum Schluss Folie 4."],
-  ["18–36'", "Technik-Training\nFolie 5", "Einzelarbeit, Technik für Technik: lesen → Kipppunkt aus M1 umschreiben → prüfen (A Z. 3, B Z. 4, C Z. 5, D Z. 7); danach 2' Vergleich mit dem Sitznachbarn", "Folie 5. Timer 4 Min., bei jedem Gong neu starten (22', 26', 30', 34'). Herumgehen und lesen: Wer schreibt noch Du-Botschaften? Zwei gelungene Lösungen pro Technik für das Gespräch vormerken."],
-  ["36–43'", "UG 2: Techniken sichern\nFolie 5 → 6 (→ 7)", "Pro Technik lesen 1–2 Personen ihre Lösung vor; die Klasse prüft mit der Mini-Checkliste", "Impuls: „Wer liest seine Ich-Botschaft vor? – Was ist daran gelungen?“ Gezielt die vorgemerkten Personen drannehmen. Dann Folie 6 zum Vergleich. Folie 7 (ganzer Dialog) nur, wenn Zeit bleibt."],
-  ["43–62'", "Umsetzen + eigene Szene\nFolie 8", "Reihen rücken zusammen, öffnen den Umschlag, verteilen Rollen (3'); erfinden eine eigene Situation, verteilen Besetzung A und B, proben in den letzten 5'", "Folie 8, Timer 3 + 16 Min. Nach 5 Min. Runde: Hat jede Gruppe eine Idee? Wenn nicht: erst Tippkarte, dann Notfall-Idee. Um ca. 57': eine Person als Moderation gewinnen und ihr die Moderationskarte geben."],
-  ["62–75'", "Bühne frei\nFolie 9", "Wand → Mitte → Fenster spielen je Version A und B ohne Unterbrechung; das Publikum füllt den Beobachtungsbogen aus", "Folie 9. Ins Publikum setzen, die Moderation leitet. Pro Gruppe ca. 4 Min. Gelungene Formulierungen notieren."],
-  ["75–84'", "Auswertung\nFolie 10", "2' still Bogen ergänzen → 2' Gruppe bespricht die Patenszene → Plenum: je Gruppe ca. 1,5 Min. Rückmeldung", "Folie 10. Die Moderation führt durch die Schritte (oder Sie übernehmen Schritt 3)."],
-  ["84–90'", "Exit-Ticket: Mini-Test\nFolie 11", "bearbeitet allein einen neuen Kurzdialog: Kipppunkt benennen, mit zwei Techniken umschreiben", "Folie 11, Timer 6 Min. Einsammeln an der Tür. Das Format entspricht der Testaufgabe."],
+  ["13–18'", "UG: Kipppunkte\nFolie 3 → 4", "Paare nennen Zeile + Fachbegriff, ergänzen ihre Tabelle in anderer Farbe", "Impuls: „In welcher Zeile kippt es zum ersten Mal – und warum?“ Wer geantwortet hat, nimmt die nächste Person dran. Ziel: Zeilen 3, 4, 5, 7 – genau die werden gleich umformuliert. Zum Schluss Folie 4."],
+  ["18–41'", "Technik für Technik\nFolie 5, dann je 2 Folien pro Technik (6–13)", "pro Technik (ca. 5,5'): 1 Ansehen – Kontrastpaar besprechen, Formel in die Lücke; 2 Umformulieren – Zeile aus M1 allein (2'); 3 Prüfen – eine Person liest vor, Daumenprobe", "Folie 5 kurz zeigen (Takt). Dann je Technik: Folie a mit Kontrastpaar – Impuls: „Was macht den zweiten Satz besser?“ (1,5'). Folie b mit Formel und Auftrag, Timer 2 Min., herumgehen. Eine vorher gesehene gute Lösung vorlesen lassen, Klasse zeigt Daumen hoch/runter – bei „runter“ verbessert die Klasse gemeinsam. A (Z. 3) → B (Z. 4) → C (Z. 5) → D (Z. 7)."],
+  ["41–43'", "Werkzeugkasten\nFolie 14 (→ 15)", "vergleicht die eigenen Formeln und Lösungen mit der Übersicht", "Folie 14 als Zusammenfassung zeigen. Folie 15 (ganzer Dialog) nur, wenn Zeit bleibt."],
+  ["43–62'", "Umsetzen + eigene Szene\nFolie 16", "Reihen rücken zusammen, öffnen den Umschlag, verteilen Rollen (3'); erfinden eine eigene Situation, verteilen Besetzung A und B, proben in den letzten 5'", "Folie 16, Timer 3 + 16 Min. Nach 5 Min. Runde: Hat jede Gruppe eine Idee? Wenn nicht: erst Tippkarte, dann Notfall-Idee. Um ca. 57': eine Person als Moderation gewinnen und ihr die Moderationskarte geben."],
+  ["62–75'", "Bühne frei\nFolie 17", "Wand → Mitte → Fenster spielen je Version A und B ohne Unterbrechung; das Publikum füllt den Beobachtungsbogen aus", "Folie 17. Ins Publikum setzen, die Moderation leitet. Pro Gruppe ca. 4 Min. Gelungene Formulierungen notieren."],
+  ["75–84'", "Auswertung\nFolie 18", "2' still Bogen ergänzen → 2' Gruppe bespricht die Patenszene → Plenum: je Gruppe ca. 1,5 Min. Rückmeldung", "Folie 18. Die Moderation führt durch die Schritte (oder Sie übernehmen Schritt 3)."],
+  ["84–90'", "Exit-Ticket: Mini-Test\nFolie 19", "bearbeitet allein einen neuen Kurzdialog: Kipppunkt benennen, mit zwei Techniken umschreiben", "Folie 19, Timer 6 Min. Einsammeln an der Tür. Das Format entspricht der Testaufgabe."],
   ["danach", "Nachbereitung", "", "Mini-Tests sichten (Erwartungshorizont S. 4): Wer kann einen Kipppunkt allein umschreiben? Welche Technik gelingt noch nicht? Daraus die Übung für die nächste Stunde ableiten."],
 ];
 const rgRows = [row([hdr("Zeit", rgW[0]), hdr("Phase · Folie", rgW[1]), hdr("Was die Klasse tut", rgW[2]), hdr("Was Sie tun", rgW[3])], 440)];
@@ -474,7 +465,7 @@ kipp.forEach(([a, b, c, d]) => lkRows.push(row([
 ], 1100, HeightRule.ATLEAST)));
 
 const lk2 = [
-  kicker("Erwartungshorizont · Unterrichtsgespräch 1 · Aufgabe 2 (auch Folie 4)", true),
+  kicker("Erwartungshorizont · Unterrichtsgespräch · Aufgabe 2 (auch Folie 4)", true),
   h1("Kipppunkte in „Das Referat“"),
   p([t("Erwartung: mindestens drei Kipppunkte, darunter Zeile 3. Andere Begründungen sind richtig, wenn sie mit dem Text und einem Modell belegt sind.", { size: 20, italics: true, color: MUTED })], { after: 120 }),
   table(lkW, lkRows),
@@ -499,7 +490,7 @@ const eRows = [row([hdr("Zeile", eW[0]), hdr("Technik", eW[1]), hdr("Mögliche L
 ], 1000)));
 
 const lk3 = [
-  kicker("Erwartungshorizont · Technik-Training (Aufgabe 3) und Mini-Test", true),
+  kicker("Erwartungshorizont · Technik für Technik (Aufgabe 3) und Mini-Test", true),
   h1("So können die Kipppunkte klingen"),
   p(t("Mögliche Lösungen – Schülerlösungen dürfen ganz anders klingen. Entscheidend ist, dass die Merkmale der Technik erkennbar sind.", { size: 20, italics: true, color: MUTED }), { after: 120 }),
   table(eW, eRows),
