@@ -107,7 +107,7 @@ doc.push(box([
 doc.push(p(t(""), { after: 30 }));
 {
   const w = [3402, 3402, 3402];
-  const r = () => row(w.map((x) => cell(p([S("___________ → ___________", { size: 20, color: "9AA3B5" })], { after: 0 }), { w: x, borders: allBorders(none), m: 40 })));
+  const r = () => row(w.map((x) => cell(p([S("___________ → ___________", { size: 20, color: "9AA3B5" })], { after: 0 }), { w: x, borders: allBorders(none), m: 70 })));
   doc.push(table(w, [r(), r()]));
 }
 
@@ -120,7 +120,7 @@ doc.push(...aufgabe("Z2", "Ab ins Perfekt", ["Setze jeden Satz ins Perfekt.", "E
   "Mein Bruder wacht mitten in der Nacht auf.",
 ].forEach((sentence, i) => {
   doc.push(p([S(`${i + 1}  `, { bold: true, color: C.hv, size: 20 }), N(sentence, { size: 21 })], { after: 20, keepNext: true }));
-  doc.push(p(S("     ______________________________________________________________________", { size: 20, color: "9AA3B5" }), { after: 60 }));
+  doc.push(p(S("     ______________________________________________________________________", { size: 20, color: "9AA3B5" }), { after: 130 }));
 });
 
 // ---------- Z3 Eigene Sätze ----------
@@ -128,7 +128,7 @@ doc.push(...aufgabe("Z3", "Hilfsverb oder Vollverb – selbst gemacht", ["Schrei
 {
   const w = [2600, 7606];
   doc.push(table(w, [["haben · Hilfsverb", "haben · Vollverb", "sein · Hilfsverb", "sein · Vollverb"].map((h) =>
-    row([tc(h, w[0], { bold: true, size: 19, color: NAVY, fill: LIGHT }), tc("", w[1])], 380))].flat()));
+    row([tc(h, w[0], { bold: true, size: 19, color: NAVY, fill: LIGHT }), tc("", w[1])], 520))].flat()));
 }
 
 // ---------- Z4 ★ Regel entdecken ----------
@@ -138,18 +138,9 @@ doc.push(p([S("Verben: ", { bold: true, size: 20 }), N("verstehen · aufräumen 
   const w = [5103, 5103];
   doc.push(table(w, [
     row([hdr("kein ge-", w[0], C.p2, 19), hdr("ge- in der Mitte", w[1], C.p2, 19)], 340),
-    row(w.map((x) => tc("", x)), 640),
+    row(w.map((x) => tc("", x)), 1000),
   ]));
   doc.push(p([S("Regel: ", { bold: true, size: 20 }), S(LINE + "__________________________", { size: 20, color: "9AA3B5" })], { before: 80, after: 0 }));
-}
-
-// ---------- Z5 ★★ Englisch ----------
-doc.push(...aufgabe("Z5", "Deutsch trifft Englisch", ["Übersetze ins Perfekt.", "Beantworte: Wann steht im Deutschen sein, obwohl im Englischen have steht?"], "★★"));
-{
-  const items = ["I have played.", "I have gone home.", "I have eaten.", "I have fallen asleep."];
-  const w = [5103, 5103];
-  doc.push(table(w, [0, 2].map((i) => row([i, i + 1].map((k, j) => cell(p([N(items[k] + "  →  ", { size: 21 }), S("__________________", { size: 20, color: "9AA3B5" })], { after: 0 }), { w: w[j], borders: allBorders(none), m: 40 }))))));
-  doc.push(p(S(LINE + LINE, { size: 20, color: "9AA3B5" }), { before: 80, after: 0 }));
 }
 
 // ================= Rückseite: Lösungen =================
@@ -181,11 +172,6 @@ doc.push(...sol("Z4", "Regel-Detektiv", [
   "Regel: Verben auf be-, ver-, er- und -ieren bekommen kein ge-. Bei trennbaren Verben (auf-, ein-, mit-) steht ge- zwischen Vorsilbe und Stamm.",
   "Knifflig: ausprobiert hat beides – aus- ist trennbar, probieren endet auf -ieren, deshalb kein ge-.",
 ]));
-doc.push(...sol("Z5", "Deutsch trifft Englisch", [
-  "Ich habe gespielt. · Ich bin nach Hause gegangen. · Ich habe gegessen. · Ich bin eingeschlafen.",
-  "Im Deutschen steht sein bei Bewegung von A nach B (gehen) und bei Veränderung (einschlafen). Im Englischen steht fast immer have.",
-]));
-
 const pageProps = { page: { size: { width: 11906, height: 16838 }, margin: { top: 700, bottom: 500, left: 850, right: 850, header: 340, footer: 280 } } };
 const styles = { default: { document: { run: { font: "Calibri", size: 22 } } } };
 const d = new Document({ styles, sections: [{ properties: pageProps, headers: { default: header }, children: doc }] });
