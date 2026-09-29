@@ -76,9 +76,27 @@ const gapSent = (a, b, hint) => [{ text: a, options: {} }, { text: "_____", opti
   s.addNotes("Diese Präsentation enthält nur die Übungen. Merksätze und Tafelbilder entstehen an der Tafel (siehe Tafelskript). Lösungen stehen jeweils in den Notizen.");
 }
 
+// Chat-Verlauf als Sprechblasen
+const CHAT = [["Mo", "Hast du gestern das Spiel gesehen?"], ["Jona", "Nee, ich habe erst um zehn nach Hause gegangen."], ["Mo", "Schade. Wir sind echt stark gespielt."], ["Jona", "Wer hat die Tore geschießt?"], ["Mo", "Ich hatte zwei Treffer. Das dritte hat Ali gemacht."]];
+function chatBubbles(s, top) {
+  const rh = Math.min(0.72, (6.3 - top) / CHAT.length);
+  CHAT.forEach(([who, msg], i) => {
+    const left = who === "Mo", w = 10.2, x = left ? 0.6 : 12.75 - w, y = top + i * rh;
+    box(s, x, y, w, rh - 0.1, left ? LIGHT : LIGHT2, { r: 0.15 });
+    s.addText([{ text: who + ":  ", options: { bold: true, color: MUTED, fontFace: BODY, fontSize: 18 } }, { text: msg, options: {} }], { isTextBox: true, x: x + 0.25, y, w: w - 0.4, h: rh - 0.1, fontFace: HEAD, fontSize: 20, color: NAVY, valign: "middle", margin: 0 });
+  });
+}
+
+// ============ Einstieg ============
+{
+  const { s, top } = taskSlide("Einstieg · ohne Heft", "Was stimmt in diesem Chat nicht?", ["Lies den Chat.", "Finde die drei Fehler bei den Verben. Melde dich."], "3 Minuten · gemeinsam · mündlich",
+    "Lösung: habe … gegangen → bin gegangen · sind … gespielt → haben gespielt · geschießt → geschossen. Satz 5 ist richtig (hatte = Vollverb). Noch nicht erklären lassen – das passiert am Ende der Stunde.", "Noch nicht erklären – das machen wir am Ende.");
+  chatBubbles(s, top);
+}
+
 // ============ Ü1 ============
 {
-  const { s, top } = taskSlide("Übung 1", "Wörterbuch-Detektiv", ["Schreibe Ü1 an den Rand.", "Schreibe jedes Wort ab und ergänze die Grundform."], "3 Minuten · allein · leise",
+  const { s, top } = taskSlide("Übung 1", "Zurück zur Grundform", ["Schreibe Ü1 an den Rand.", "Schreibe jedes Wort ab und ergänze den Infinitiv."], "3 Minuten · allein · leise",
     "Lösung: konnte → können · liest → lesen · bin → sein · fuhr → fahren · wusste → wissen · schläft → schlafen");
   const words = ["konnte", "liest", "bin", "fuhr", "wusste", "schläft"];
   const cw = 3.85, ch = 1.15;
@@ -91,53 +109,51 @@ const gapSent = (a, b, hint) => [{ text: a, options: {} }, { text: "_____", opti
 
 // ============ Ü2 ============
 {
-  const { s, top } = taskSlide("Übung 2", "Wer gehört zu welcher Familie?", ["Schreibe Ü2 an den Rand.", "Zeichne zwei Spalten: Familie haben | Familie sein.", "Sortiere die Wörter ein. Drei Wörter gehören zu keiner Familie – lass sie weg."], "4 Minuten · allein · leise",
-    "Lösung: haben: habe, hat, habt · sein: ist, sind, bist, bin · keine Familie: Hand, seit, hart (keine Verben)");
-  const words = ["habe", "Hand", "ist", "hat", "seit", "sind", "bist", "hart", "habt", "bin"];
-  const cw = 2.23, ch = 0.85;
-  words.forEach((w, i) => {
-    const x = 0.6 + (i % 5) * (cw + 0.25), y = top + 0.1 + Math.floor(i / 5) * (ch + 0.3);
-    box(s, x, y, cw, ch, WHITE, { line: NAVY, lw: 1.5 });
-    txt(s, w, { x, y, w: cw, h: ch, fontFace: HEAD, fontSize: 28, bold: true, align: "center", valign: "middle" });
-  });
+  const { s, top } = taskSlide("Übung 2", "Finite Form finden", ["Schreibe Ü2 an den Rand.", "Finde in jedem Satz die finite Verbform.", "Schreibe nur Nummer, finite Form und Infinitiv: 1 … → …"], "4 Minuten · allein · leise",
+    "Lösung: 1 Bist → sein · 2 hat → haben · 3 sind → sein · 4 Habt → haben · 5 ist → sein · 6 schaut → schauen (bewusst kein haben/sein). Bei 4 nachfragen: gesehen ist infinit.");
+  sentences(s, ["Bist du morgen beim Training?", "Meine Schwester hat ein neues Handy.", "Wir sind am Freitag im Kino.", "Habt ihr die neue Staffel schon gesehen?", "Mein Akku ist fast leer.", "Leon schaut jeden Abend Videos."], top, { size: 21 });
 }
 
-// ============ Fingerspiel ============
+// ============ Speed-Duell ============
 {
-  const { s, top } = taskSlide("Partnerarbeit · ohne Heft", "Fingerspiel zu zweit", ["Zeige mit den Fingern eine Person.", "Sage dazu: haben oder sein – jetzt oder früher.", "Dein Partner nennt die Form. Nach 5 Runden wechselt ihr."], "3 Minuten · zu zweit · Flüsterstimme",
-    "Einmal mit einem Schüler vormachen. Beispiel: 4 Finger + „sein, früher“ → wir waren.", "Danach: Blick nach vorn.");
-  const P = ["ich", "du", "er / sie / es", "wir", "ihr", "sie"];
-  const cw = 1.85;
-  P.forEach((ps, i) => {
-    const x = 0.6 + i * (cw + 0.21);
-    box(s, x, top, cw, 1.2, LIGHT);
-    txt(s, String(i + 1), { x, y: top + 0.05, w: cw, h: 0.6, fontFace: HEAD, fontSize: 32, bold: true, color: RED, align: "center", valign: "middle" });
-    txt(s, ps, { x, y: top + 0.65, w: cw, h: 0.45, fontSize: 18, bold: true, align: "center", valign: "middle" });
+  const { s, top } = taskSlide("Partnerarbeit · ohne Heft", "Speed-Duell zu zweit", ["Nenne Person, Verb und Zeitform: „wir – sein – Präteritum“.", "Dein Partner antwortet in drei Sekunden. Richtig = 1 Punkt.", "Nach 2 Minuten wechselt ihr. Wer hat mehr Punkte?"], "4 Minuten · zu zweit · Flüsterstimme",
+    "Einmal mit einem Schüler vormachen. Tabelle im Heft abdecken lassen. Am Ende fragen: Welche Form war am schwierigsten? (meist wart, hattet)", "Tabelle im Heft abdecken!");
+  const cols = [["Person", ["ich", "du", "er/sie/es", "wir", "ihr", "sie"], NAVY], ["Verb", ["haben", "sein"], RED], ["Zeitform", ["Präsens", "Präteritum"], MUTED]];
+  const cw = [5.0, 2.9, 3.85];
+  let x = 0.6;
+  cols.forEach(([h, items, col], i) => {
+    box(s, x, top, cw[i], 0.5, col, { r: 0.05 });
+    txt(s, h, { x, y: top, w: cw[i], h: 0.5, fontSize: 18, bold: true, color: WHITE, align: "center", valign: "middle" });
+    txt(s, items.join(" · "), { x, y: top + 0.6, w: cw[i], h: 0.55, fontFace: HEAD, fontSize: 19, align: "center", valign: "middle" });
+    x += cw[i] + 0.2;
   });
-  const y2 = top + 1.5;
+  const y2 = top + 1.45;
   box(s, 0.6, y2, 12.15, 0.9, LIGHT2);
   s.addText([
     { text: "Beispiel:  ", options: { bold: true, color: MUTED, fontFace: BODY } },
-    { text: "4 Finger + „sein, früher“  →  ", options: {} },
-    { text: "wir waren", options: { bold: true, color: RED } },
+    { text: "„ihr – haben – Präteritum“  →  ", options: {} },
+    { text: "ihr hattet", options: { bold: true, color: RED } },
   ], { isTextBox: true, x: 0.9, y: y2, w: 11.6, h: 0.9, fontFace: HEAD, fontSize: 26, color: NAVY, valign: "middle", margin: 0 });
 }
 
 // ============ Ü3 ============
 {
-  const { s, top } = taskSlide("Übung 3", "Gestern war alles anders", ["Schreibe Ü3 an den Rand.", "Schreibe untereinander nur die Nummer und das fehlende Wort."], "3 Minuten · allein · leise",
+  const { s, top } = taskSlide("Übung 3", "Letzte Woche", ["Schreibe Ü3 an den Rand.", "Schreibe untereinander nur die Nummer und das fehlende Wort."], "3 Minuten · allein · leise",
     "Lösung: 1 war · 2 hattest · 3 waren · 4 hattet · 5 Warst");
-  sentences(s, [gapSent("Gestern ", " ich krank.", "sein"), gapSent("Du ", " hohes Fieber.", "haben"), gapSent("Wir ", " im Schwimmbad.", "sein"), gapSent("Ihr ", " keine Zeit.", "haben"), gapSent("", " du schon einmal in Berlin?", "sein")], top);
+  sentences(s, [gapSent("Gestern ", " ich beim Zahnarzt.", "sein"), gapSent("Du ", " am Wochenende Geburtstag, oder?", "haben"), gapSent("Wir ", " letzte Woche auf Klassenfahrt.", "sein"), gapSent("Ihr ", " gestern kein WLAN.", "haben"), gapSent("", " du schon einmal in einem Escape Room?", "sein")], top, { size: 22 });
 }
 
 // ============ Ü4 ============
 {
   const { s, top } = taskSlide("Übung 4", "Das Partizip II", ["Schreibe Ü4 an den Rand.", "Schreibe ab: Verb → Partizip II. Die ersten zwei stehen schon da.", "Markiere ge- und die Endung gelb."], "3 Minuten · allein · leise",
-    "Lösung: gekauft · geschrieben · gegessen · gefahren");
+    "Lösung: gekauft · geschrieben · gegessen · gefahren · ★ verstanden · telefoniert · aufgeräumt (ge- in der Mitte)");
   const items = [["spielen", "gespielt"], ["gehen", "gegangen"], ["kaufen", null], ["schreiben", null], ["essen", null], ["fahren", null]];
-  const cw = 3.85, ch = 1.05;
+  const cw = 3.85, ch = 0.8;
+  const ys = top + 2 * (ch + 0.15) + 0.05;
+  box(s, 0.6, ys, 12.15, 0.6, WHITE, { line: GOLD, lw: 1.5 });
+  s.addText([{ text: "★ Für Schnelle:   ", options: { bold: true, color: GOLD, fontFace: BODY, fontSize: 18 } }, { text: "verstehen → _____    telefonieren → _____    aufräumen → _____", options: {} }], { isTextBox: true, x: 0.85, y: ys, w: 11.7, h: 0.6, fontFace: HEAD, fontSize: 18, color: NAVY, valign: "middle", margin: 0 });
   items.forEach(([inf, p2], i) => {
-    const x = 0.6 + (i % 3) * (cw + 0.3), y = top + Math.floor(i / 3) * (ch + 0.25);
+    const x = 0.6 + (i % 3) * (cw + 0.3), y = top + Math.floor(i / 3) * (ch + 0.15);
     box(s, x, y, cw, ch, p2 ? LIGHT2 : LIGHT);
     const right = p2 ? [{ text: "ge", options: { color: GOLD, bold: true } }, { text: p2.slice(2, p2.length - (p2.endsWith("en") ? 2 : 1)), options: {} }, { text: p2.endsWith("en") ? "en" : "t", options: { color: GOLD, bold: true } }] : [{ text: "______", options: { color: GOLD, bold: true } }];
     s.addText([{ text: inf + "  →  ", options: {} }, ...right], { isTextBox: true, x: x + 0.3, y, w: cw - 0.4, h: ch, fontFace: HEAD, fontSize: 23, color: NAVY, valign: "middle", margin: 0 });
@@ -146,14 +162,28 @@ const gapSent = (a, b, hint) => [{ text: a, options: {} }, { text: "_____", opti
 
 // ============ Ü5 ============
 {
-  const { s, top } = taskSlide("Übung 5", "haben oder sein?", ["Schreibe Ü5 an den Rand.", "Schreibe nur Nummer + Wort: habe, hat, bin, ist oder sind."], "4 Minuten · allein · leise",
-    "Lösung: 1 bin · 2 habe · 3 sind · 4 hat · 5 sind · 6 bin. Beim Vergleich jeweils fragen: Bewegung, Veränderung oder keins von beidem?");
-  sentences(s, [gapSent("Am Samstag ", " ich früh aufgewacht."), gapSent("Dann ", " ich Pfannkuchen gebacken."), gapSent("Am Nachmittag ", " wir zum See gefahren."), gapSent("Mein Bruder ", " Fußball gespielt."), gapSent("Abends ", " wir nach Hause gelaufen."), gapSent("Um neun ", " ich eingeschlafen.")], top, { size: 21 });
+  const { s, top } = taskSlide("Übung 5", "haben oder sein?", ["Schreibe Ü5 an den Rand.", "Schreibe nur Nummer + Wort: habe, hat, bin, ist oder sind.", "Begründe bei Nr. 3 und 6 in einem Satz, warum dort sein steht."], "5 Minuten · allein · leise",
+    "Lösung: 1 bin · 2 habe · 3 sind · 4 hat · 5 sind · 6 bin. Begründung 3: fahren = Bewegung von A nach B. Begründung 6: einschlafen = Veränderung.");
+  sentences(s, [gapSent("Am Samstag ", " ich erst um elf aufgewacht."), gapSent("Dann ", " ich mit meinem Bruder gezockt."), gapSent("Am Nachmittag ", " wir mit dem Rad zum See gefahren."), gapSent("Meine Freundin ", " mir ein Video geschickt."), gapSent("Abends ", " wir noch ins Kino gegangen."), gapSent("Um Mitternacht ", " ich endlich eingeschlafen.")], top, { size: 20 });
+}
+
+// ============ Hilfsverb oder Vollverb ============
+{
+  const { s, top } = taskSlide("Gemeinsam · ohne Heft", "Hilfsverb oder Vollverb?", ["Melde dich.", "Sage: Hilfsverb oder Vollverb – und begründe mit dem Test: Steht am Satzende ein Partizip II?"], "gemeinsam · mündlich",
+    "Lösung: 1 Vollverb · 2 Hilfsverb (runtergefallen) · 3 Vollverb · 4 Hilfsverb (vergessen)", "Wer begründet, bekommt das Wort.");
+  sentences(s, ["Mein Handy ist kaputt.", "Mein Handy ist runtergefallen.", "Wir hatten keine Hausaufgaben.", "Ihr habt die Hausaufgaben vergessen."], top, { size: 24 });
+}
+
+// ============ Chat korrigieren ============
+{
+  const { s, top } = taskSlide("Abschluss", "Jetzt könnt ihr es erklären", ["Erkläre einen Fehler im Chat – mit den Fachbegriffen.", "Schreibe die drei korrigierten Sätze ab: Hilfsverb rot, Partizip II gelb."], "gemeinsam, dann abschreiben",
+    "Erwartung: gegangen = Bewegung → bin · spielen = keine Bewegung → haben · Partizip II von schießen = geschossen. Satz 5: hatte ist Vollverb (kein Partizip II am Ende). Die korrigierten Sätze an die Tafel schreiben.");
+  chatBubbles(s, top);
 }
 
 // ============ Exit-Ticket ============
 {
-  const { s, top } = taskSlide("Zum Schluss · ohne Heft", "Exit-Ticket", ["Nimm einen Zettel und schreibe deinen Namen oben hin.", "Schreibe zu jedem Satz: Familie (haben/sein) · Präsens oder Präteritum · Hilfsverb ja oder nein."], "4 Minuten · allein · ohne Heft",
+  const { s, top } = taskSlide("Zum Schluss · ohne Heft", "Exit-Ticket", ["Nimm einen Zettel und schreibe deinen Namen oben hin.", "Schreibe zu jedem Satz: Infinitiv (haben/sein) · Präsens oder Präteritum · Hilfsverb ja oder nein."], "4 Minuten · allein · ohne Heft",
     "Lösung: 1 sein, Präteritum, nein · 2 haben, Präsens, ja · 3 haben, Präteritum, nein · 4 sein, Präsens, ja. Auswertung: „ja“ bei 1 oder 3 → Hilfsverb/Vollverb verwechselt; „Präteritum“ bei 2 oder 4 → Form des Hilfsverbs mit der Zeit des Geschehens verwechselt.");
   sentences(s, ["Wir waren im Zoo.", "Du hast gewonnen.", "Sie hatten keine Zeit.", "Ich bin nach Hause gerannt."], top, { cols: 2, size: 24 });
   const y = top + 2 * Math.min(0.72, (6.25 - top) / 2) + 0.05;

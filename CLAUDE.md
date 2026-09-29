@@ -12,6 +12,12 @@ Dieses Repo enthält Unterrichtsmaterial (Deutsch). Die Lehrkraft plant hier gem
 
 - **Erst fragen, was gewünscht ist:** Wenn die Lehrkraft „erst mal Ideen sammeln“ sagt, nur Ideen im Chat – kein Material erstellen.
 - **Kleinschrittig und Vorwissen nicht überschätzen.** Lieber einen Schritt zurückgehen und Grundlagen sichern (die Bastelstunde zu Zeitformen ist genau daran gescheitert).
+- **Inhalt darf elementar sein, der Ton muss zur Altersstufe passen (7. Klasse, keine Grundschulanmutung).** Also:
+  - Fachbegriffe konsequent verwenden (finit/infinit, Hilfsverb/Vollverb) statt kindlicher Metaphern („Verbfamilie“, „Familienname“),
+  - Begründungen einfordern („Begründe, warum …“), Fehleranalyse statt Rätsel (z. B. Chatverlauf mit echten Fehlern),
+  - Beispielsätze aus der Lebenswelt der Klasse (Sport, Serien, Handy, Klassenfahrt), keine Kinderbeispiele,
+  - keine Finger- oder Handzeichenspiele; stattdessen z. B. Speed-Duell zu zweit mit Punkten,
+  - Relevanz zeigen (wofür man es braucht, Bezug zum Englischen).
 - **Wenige Arbeitsblätter.** Übungen laufen an der Tafel, die Klasse schreibt ins Heft ab und löst dort.
 - **Transparenz durch die Lehrkraft, nicht durch Hilfsmittel.** Keine Modus- oder Symbolkarten (ausdrücklich abgelehnt). Stattdessen:
   - feste, wörtliche Ansagen bei jedem Wechsel („Stifte liegen. Ihr hört nur zu.“ / „Jetzt schreibt ihr ab: …“ / „Jetzt arbeitet ihr allein. Die Aufgabe steht rechts.“ / „Wer drankommt, schreibt an die Tafel. Alle prüfen mit.“ / „Vergleicht und verbessert mit Grün.“),

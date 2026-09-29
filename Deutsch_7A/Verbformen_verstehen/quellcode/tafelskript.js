@@ -164,18 +164,18 @@ doc.push(p([S("Gleicher Ablauf in jeder Phase: ", { bold: true }), S("gemeinsam 
 
 doc.push(h3("2  Übungen immer im gleichen Format"));
 doc.push(p(t("Jede Übung steht rechts an der Tafel mit Nummer und Titel, nummerierten Arbeitsschritten (Verb am Anfang), der Zeit und der Arbeitsform. Beispiel:", { size: 21 }), { after: 80 }));
-doc.push(table([W], [row([cell([auftrag("Ü1 Wörterbuch-Detektiv", ["Schreibe Ü1 an den Rand.", "Schreibe jedes Wort ab und ergänze die Grundform."], [bl("konnte → ______     liest → ______     bin → ______", { after: 0 })], "3 Minuten · allein · leise")], { w: W, borders: allBorders(none), m: 0, ml: 0 })])]));
+doc.push(table([W], [row([cell([auftrag("Ü1 Zurück zur Grundform", ["Schreibe Ü1 an den Rand.", "Schreibe jedes Wort ab und ergänze den Infinitiv."], [bl("konnte → ______     liest → ______     bin → ______", { after: 0 })], "3 Minuten · allein · leise")], { w: W, borders: allBorders(none), m: 0, ml: 0 })])]));
 
 doc.push(br(), h3("Tafelaufteilung"));
 doc.push(table([2600, 5006, 2600], [
   row([hdr("links", 2600, "3D4A3F", 18), hdr("Mitte", 5006, "3D4A3F", 18), hdr("rechts", 2600, "3D4A3F", 18)], 340),
   row([
-    cell([p(S("Ablaufplan (vorher anschreiben, abhaken):", { bold: true, size: 19 }), { after: 40 }), ...["1 Grundform", "2 Familien haben & sein", "3 Früher: hatte & war", "4 Partizip II & Perfekt", "5 Exit-Ticket"].map((x) => p(S("☐ " + x, { size: 19 }), { after: 20 }))], { w: 2600, fill: BOARD, valign: VerticalAlign.TOP }),
+    cell([p(S("Ablaufplan (vorher anschreiben, abhaken):", { bold: true, size: 19 }), { after: 40 }), ...["0 Chat: Was stimmt nicht?", "1 Infinitiv & finite Form", "2 haben & sein erkennen", "3 Präteritum: hatte & war", "4 Partizip II & Perfekt", "5 Chat korrigieren, Exit-Ticket"].map((x) => p(S("☐ " + x, { size: 19 }), { after: 20 }))], { w: 2600, fill: BOARD, valign: VerticalAlign.TOP }),
     cell([p(S("Tafelbild und Merksätze der aktuellen Phase", { size: 19 }), { after: 40 }), p(S("wird nach jeder Phase gewischt – erst wenn alle „fertig“ sind", { size: 19, italics: true, color: MUTED }), { after: 0 })], { w: 5006, fill: BOARD, valign: VerticalAlign.TOP }),
     cell([p(S("Übungsfläche", { size: 19 }), { after: 40 }), p(S("Hier stehen die Übungen, hier schreiben die Schüler ihre Lösungen an", { size: 19, italics: true, color: MUTED }), { after: 0 })], { w: 2600, fill: BOARD, valign: VerticalAlign.TOP }),
   ]),
 ]));
-doc.push(p([S("Material: ", { bold: true }), S("Kreide/Stifte in Rot, Gelb, Blau, Grün · Schüler: Heft, Lineal, Buntstifte Rot, Gelb, Blau, Grün, kleiner Zettel für das Exit-Ticket")], { before: 100, after: 40 }));
+doc.push(p([S("Material: ", { bold: true }), S("Kreide/Stifte in Rot, Gelb, Blau, Grün · Schüler: Heft, Lineal, Buntstifte Rot, Gelb, Blau, Grün, kleiner Zettel für das Exit-Ticket · Beamer für die Aufgaben-Präsentation")], { before: 100, after: 40 }));
 doc.push(p([S("Farben im Heft: ", { bold: true }), t("haben/sein rot", { bold: true, color: C.hv, size: 21 }), S(" · "), t("Partizip II gelb", { bold: true, color: "C98A1E", size: 21 }), S(" · "), t("Infinitiv blau", { bold: true, color: C.inf, size: 21 }), S(" · "), t("Verbesserungen grün", { bold: true, color: C.mv, size: 21 })], { after: 0 }));
 
 // ---------- Hefteintrag ----------
@@ -184,113 +184,129 @@ doc.push(p(t("Tipp: Diese Übersicht zu Beginn kurz zeigen oder selbst im Kopf b
 {
   const H = [
     ["Überschrift", "Verbformen verstehen (mit Lineal unterstrichen) · Datum rechts"],
-    ["Merksatz 1 + 2", "Infinitiv · Personalform (rot umrahmt)"],
+    ["Merksatz 1 + 2", "Infinitiv · finite Verbform (Personalform) – rot umrahmt"],
     ["Ü1", "konnte → können … (6 Formen)"],
-    ["Merksatz 3", "Verbfamilie + Familien-Tabelle mit 5 Spalten (die „früher“-Spalten zunächst leer)"],
-    ["Ü2", "zwei Spalten: Familie haben | Familie sein"],
-    ["Merksatz 4", "haben und sein im Präteritum – „früher“-Spalten der Tabelle werden jetzt ausgefüllt"],
+    ["Merksatz 3", "Formen zurückführen + Tabelle haben/sein mit 5 Spalten (Präteritum-Spalten zunächst leer)"],
+    ["Ü2", "nur Nummer + finite Form + Infinitiv: 1 bist → sein …"],
+    ["Merksatz 4", "haben und sein im Präteritum – Präteritum-Spalten der Tabelle werden jetzt ausgefüllt"],
     ["Ü3", "nur Nummer + Lösungswort: 1 war, 2 hattest …"],
     ["Merksatz 5", "Partizip II: Bildung, wofür man es braucht, Test"],
-    ["Ü4", "spielen → gespielt … (6 Verben)"],
+    ["Ü4", "spielen → gespielt … (6 Verben, ★ 3 Zusatzverben)"],
     ["Merksatz 6", "Perfekt mit haben oder sein + je ein Beispielsatz"],
-    ["Ü5", "nur Nummer + Lösungswort: 1 bin, 2 habe …"],
-    ["Merksatz 7", "Hilfsverb oder nicht? + Beispielpaar"],
+    ["Ü5", "nur Nummer + Lösungswort, dazu zwei Begründungssätze"],
+    ["Merksatz 7", "Hilfsverb oder Vollverb + Beispielpaar"],
+    ["Chat", "die drei korrigierten Sätze aus dem Einstieg"],
   ];
-  doc.push(table([2300, 7906], H.map(([a, b]) => row([tc(a, 2300, { bold: true, color: a.startsWith("Merk") ? C.hv : a === "Überschrift" ? NAVY : "C77C12", fill: LIGHT, size: 20 }), tc(b, 7906, { size: 20 })], 360))));
+  doc.push(table([2300, 7906], H.map(([a, b]) => row([tc(a, 2300, { bold: true, color: a.startsWith("Merk") ? C.hv : a === "Überschrift" || a === "Chat" ? NAVY : "C77C12", fill: LIGHT, size: 20 }), tc(b, 7906, { size: 20 })], 360))));
 }
+doc.push(p([S("Ton für die 7. Klasse: ", { bold: true }), S("Der Inhalt ist elementar – deshalb Fachbegriffe konsequent verwenden (finit, infinit, Hilfsverb, Vollverb), Begründungen einfordern und Beispiele aus der Lebenswelt der Klasse nehmen. Die Klasse arbeitet als Sprachexperten, die Fehler erklären, nicht als Anfänger, die belehrt werden.")], { before: 120, after: 0 }));
+
+// Chat aus dem Einstieg (Tafel/Folie)
+const CHAT = [
+  ["M", "Hast du gestern das Spiel gesehen?"],
+  ["J", "Nee, ich habe erst um zehn nach Hause gegangen."],
+  ["M", "Schade. Wir sind echt stark gespielt."],
+  ["J", "Wer hat die Tore geschießt?"],
+  ["M", "Ich hatte zwei Treffer. Das dritte hat Ali gemacht."],
+];
+const chatBoard = (title) => board(title, CHAT.map(([who, msg], i) => bl([N(who === "M" ? "Mo:  " : "Jona:  ", { bold: true, color: MUTED }), N(msg)], { after: i === CHAT.length - 1 ? 0 : 30 })));
 
 // ---------- Phase 0 ----------
-doc.push(br(), phase("0", "Start: Ablauf klären, Heft vorbereiten", 5));
+doc.push(br(), phase("0", "Einstieg: Was stimmt in diesem Chat nicht?", 7));
 doc.push(...steps([
-  ["zuhoeren", { say: "Stifte liegen. Heute arbeiten wir ohne Arbeitsblatt. Ich sage euch immer genau, was ihr gerade tut: zuhören, abschreiben, allein üben oder vergleichen. Die Übungen stehen immer rechts an der Tafel – mit genauer Anleitung. Wer fertig ist, legt den Stift hin.", do: ["Ablaufplan links an der Tafel zeigen: Das machen wir heute."] }],
+  ["zuhoeren", { say: "Stifte liegen. Ihr hört nur zu. Heute arbeiten wir ohne Arbeitsblatt. Ich sage euch immer genau, was ihr gerade tut: zuhören, abschreiben, allein üben oder vergleichen. Die Übungen stehen immer rechts an der Tafel und auf der Folie. Wer fertig ist, legt den Stift hin.", do: ["Ablaufplan links an der Tafel zeigen."] }],
+  ["gemeinsam", { say: "Meldet euch. Ihr schreibt noch nichts auf. In diesem Chat stecken drei Fehler bei den Verben. Findet sie.", board: chatBoard("Mitte / Folie"), do: ["Fehler nur finden und unterstreichen – noch nicht erklären lassen.", "Impuls: „Ihr hört, dass es falsch ist. Aber könnt ihr erklären, warum? Genau dafür holen wir uns heute das Werkzeug. Am Ende der Stunde korrigiert ihr den Chat und begründet.“"], sol: "habe … gegangen → bin gegangen · sind … gespielt → haben gespielt · geschießt → geschossen (Satz 5 ist richtig: hatte = Vollverb, gemacht = Partizip II)" }],
   ["abschreiben", { say: "Heft auf. Datum nach rechts. Überschrift: Verbformen verstehen. Mit Lineal unterstreichen. Wer fertig ist, legt den Stift hin.", board: board("Mitte", [bl([N("Verbformen verstehen", { bold: true, u: true })])]) }],
 ]));
 
 // ---------- Phase 1 ----------
-doc.push(phase("1", "Grundform und Personalform", 15));
+doc.push(phase("1", "Infinitiv und finite Verbform", 13));
 doc.push(...steps([
-  ["zuhoeren", { say: "Stifte liegen. Ihr hört nur zu. Tim sucht im Wörterbuch das Wort ‚ging‘. Er findet es nicht. Warum nicht?", do: ["Zwei, drei Antworten mündlich sammeln. Ziel: Im Wörterbuch steht die Grundform gehen."] }],
-  ["gemeinsam", { say: "Meldet euch. Ihr schreibt noch nichts auf. Wie steht das Wort im Wörterbuch?", do: ["Die Grundformen nennen lassen und selbst blau an die Tafel schreiben.", "Danach „ich spiel_ / du spiel_ / er spiel_“ anschreiben, Endungen nennen lassen und unterstreichen."],
-    board: board("Mitte", [bl([N("ging → "), B("gehen"), N("     isst → "), B("essen"), N("     hat → "), B("haben"), N("     war → "), B("sein")]), bl([N("ich spiel"), N("e", { bold: true, u: true }), N("   du spiel"), N("st", { bold: true, u: true }), N("   er spiel"), N("t", { bold: true, u: true })], { after: 0 })]) }],
-  ["abschreiben", { say: "Jetzt schreibt ihr ab: Merksatz 1 und Merksatz 2. Rahmt jeden Merksatz mit Rot ein.", board: [merkBoard(1, "Infinitiv", [S("Der Infinitiv ist die "), S("Grundform", { bold: true }), S(" eines Verbs. So steht das Verb im "), S("Wörterbuch", { bold: true }), S(". Er endet auf -en oder -n: spielen, basteln.")]), p(t(""), { after: 40 }), merkBoard(2, "Personalform", [S("Die Personalform (gebeugte Form) passt sich der "), S("Person", { bold: true }), S(" an: ich spiele, du spielst, er spielt.")])] }],
-  ["luecken", { say: "Jetzt arbeitet ihr allein. Die Aufgabe steht rechts: Ü1. Lest die Schritte mit mir: … Drei Minuten. Wer fertig ist: Stift hinlegen.", board: auftrag("Ü1 Wörterbuch-Detektiv", ["Schreibe Ü1 an den Rand.", "Schreibe jedes Wort ab und ergänze die Grundform."], [bl("konnte → ______     liest → ______     bin → ______"), bl("fuhr → ______     wusste → ______     schläft → ______", { after: 0 })], "3 Minuten · allein · leise"), sol: "können · lesen · sein · fahren · wissen · schlafen" }],
-  ["tafel", { say: "Sechs von euch schreiben je eine Lösung an die Tafel. Alle anderen prüfen mit: Daumen hoch oder Daumen runter?", do: ["Schwächere Schüler zuerst drannehmen (leichtere Formen: liest, fuhr)."] }],
-  ["kontrolle", { say: "Vergleicht euer Heft mit der Tafel. Fehler verbessert ihr mit Grün." }],
+  ["zuhoeren", { say: "Stifte liegen. Ihr hört nur zu. „Geschießt“ gibt es nicht. Wie findet man heraus, wie die richtige Form heißt?", do: ["Ziel: im Wörterbuch nachschlagen – dort steht aber nur die Grundform schießen. Man muss also jede Form auf ihre Grundform zurückführen können."] }],
+  ["gemeinsam", { say: "Meldet euch. Ihr schreibt noch nichts auf. Wie steht das Wort im Wörterbuch?", do: ["Die Grundformen nennen lassen und selbst blau an die Tafel schreiben.", "Dann: „Was passiert, wenn ich statt ‚ich‘ ‚wir‘ sage?“ – ich spiele / wir spielen. Die Form, die sich verändert, heißt finit. Infinitiv und Partizip II verändern sich nicht: infinit."],
+    board: board("Mitte", [bl([N("ging → "), B("gehen"), N("     isst → "), B("essen"), N("     hat → "), B("haben"), N("     war → "), B("sein")]), bl([N("ich spiel"), N("e", { bold: true, u: true }), N("   du spiel"), N("st", { bold: true, u: true }), N("   wir spiel"), N("en", { bold: true, u: true }), N("   → finit (verändert sich)", { italics: true, color: MUTED })], { after: 0 })]) }],
+  ["abschreiben", { say: "Jetzt schreibt ihr ab: Merksatz 1 und Merksatz 2. Rahmt jeden Merksatz mit Rot ein.", board: [
+    merkBoard(1, "Infinitiv", [S("Der Infinitiv ist die "), S("Grundform", { bold: true }), S(" eines Verbs. Er endet auf -en oder -n: spielen, basteln. "), S("Wofür? ", { bold: true }), S("So steht das Verb im Wörterbuch; aus ihm werden alle anderen Formen gebildet. "), S("Test: ", { bold: true }), S("Lässt sich die Form so im Wörterbuch finden?")]),
+    p(t(""), { after: 40 }),
+    merkBoard(2, "Finite Verbform (Personalform)", [S("Die "), S("finite", { bold: true }), S(" Verbform passt sich der Person und der Zahl an: ich spiele, wir spielen. Infinitiv und Partizip II sind "), S("infinit", { bold: true }), S(" – sie verändern sich nicht. "), S("Wofür? ", { bold: true }), S("Die finite Form zeigt, wer etwas tut. "), S("Test: ", { bold: true }), S("Ersetze ich durch wir – die Form, die sich ändert, ist finit.")]),
+  ] }],
+  ["luecken", { say: "Jetzt arbeitet ihr allein. Die Aufgabe steht rechts: Ü1. Drei Minuten. Wer fertig ist: Stift hinlegen.", board: auftrag("Ü1 Zurück zur Grundform", ["Schreibe Ü1 an den Rand.", "Schreibe jedes Wort ab und ergänze den Infinitiv."], [bl("konnte → ______     liest → ______     bin → ______"), bl("fuhr → ______     wusste → ______     schläft → ______", { after: 0 })], "3 Minuten · allein · leise"), sol: "können · lesen · sein · fahren · wissen · schlafen" }],
+  ["tafel", { say: "Wer drankommt, schreibt an die Tafel. Alle prüfen mit.", do: ["Schwächere Schüler zuerst drannehmen (leichtere Formen: liest, fuhr). Bei bin nachfragen: „Warum ist das schwierig?“ → Der Stamm verändert sich komplett."] }],
+  ["kontrolle", { say: "Vergleicht und verbessert mit Grün." }],
 ]));
 
 // ---------- Phase 2 ----------
-doc.push(phase("2", "Die Familien haben und sein", 15));
+doc.push(phase("2", "haben und sein erkennen", 15));
 const famBoard = (past) => {
-  const w = [1400, 1500, 1500, 1500, 1500];
+  const w = [1200, 1550, 1750, 1550, 1750];
   const P = ["ich", "du", "er/sie/es", "wir", "ihr", "sie/Sie"];
   const K = { hp: ["habe", "hast", "hat", "haben", "habt", "haben"], hv: ["hatte", "hattest", "hatte", "hatten", "hattet", "hatten"], sp: ["bin", "bist", "ist", "sind", "seid", "sind"], sv: ["war", "warst", "war", "waren", "wart", "waren"] };
   const nb = allBorders(solid("9AA59C", 4));
   const c = (x, i, o = {}) => cell(p(x, { after: 0, align: AlignmentType.CENTER }), { w: w[i], borders: nb, m: 20, fill: o.fill });
   return table(w, [
-    row([c(N(""), 0), c(R("haben · jetzt"), 1), c(R("haben · früher"), 2), c(R("sein · jetzt"), 3), c(R("sein · früher"), 4)]),
+    row([c(N(""), 0), c(R("haben · Präsens"), 1), c(R("haben · Präteritum"), 2), c(R("sein · Präsens"), 3), c(R("sein · Präteritum"), 4)]),
     ...P.map((ps, i) => row([c(N(ps, { color: MUTED }), 0), c(N(K.hp[i]), 1), c(N(past ? K.hv[i] : ""), 2), c(N(K.sp[i]), 3), c(N(past ? K.sv[i] : ""), 4)])),
   ]);
 };
 doc.push(...steps([
-  ["tafel", { say: "Wer gehört zur Familie haben? Wer drankommt, kommt nach vorne und schreibt ein Familienmitglied in die Tabelle.", do: ["Tabelle mit fünf Spalten vorbereitet anschreiben. Nacheinander Schüler die Präsensformen von haben und sein eintragen lassen. Die „früher“-Spalten bleiben leer."], board: board("Mitte", [famBoard(false)]) }],
-  ["zuhoeren", { say: "Stifte liegen. Schaut auf ‚bin‘. Sieht das aus wie ‚sein‘? Woher weiß ich trotzdem, dass es dazugehört?", do: ["Ziel: nur über die Frage „Wie heißt die Grundform?“ – das ist der Familienname."] }],
-  ["abschreiben", { say: "Schreibt Merksatz 3 ab. Dann zeichnet ihr die Tabelle mit Lineal ab – auch die leeren Spalten! Die füllen wir später.", board: merkBoard(3, "Verbfamilie", [S("Jede gebeugte Form gehört zu einer Verbfamilie. Den Familiennamen finde ich mit der Frage: "), S("Wie heißt die Grundform?", { bold: true }), S("  habe → haben, bist → sein")]) }],
-  ["luecken", { say: "Jetzt arbeitet ihr allein: Ü2. Lest die drei Schritte mit. Achtung bei Schritt 3: Drei Wörter gehören zu keiner Familie. Vier Minuten.", board: auftrag("Ü2 Wer gehört zu welcher Familie?", ["Schreibe Ü2 an den Rand.", "Zeichne zwei Spalten: Familie haben | Familie sein.", "Sortiere die Wörter ein. Drei Wörter gehören zu keiner Familie – lass sie weg."], [bl("habe   Hand   ist   hat   seit   sind   bist   hart   habt   bin", { after: 0 })], "4 Minuten · allein · leise"), sol: "haben: habe, hat, habt · sein: ist, sind, bist, bin · keine Familie: Hand, seit, hart" }],
-  ["tafel", { say: "Kommt nach vorne und schreibt je ein Wort in die richtige Spalte. Alle prüfen mit.", do: ["Bei Hand, seit, hart fragen: „Welche Grundform hat das?“ – es gibt keine, denn das sind gar keine Verben."] }],
-  ["kontrolle", { say: "Vergleichen und mit Grün verbessern." }],
+  ["tafel", { say: "Wer drankommt, schreibt an die Tafel. Alle prüfen mit. Wir tragen die finiten Formen von haben und sein im Präsens ein.", do: ["Tabelle mit fünf Spalten vorbereitet anschreiben. Nacheinander Schüler die Präsensformen eintragen lassen. Die Präteritum-Spalten bleiben leer."], board: board("Mitte", [famBoard(false)]) }],
+  ["zuhoeren", { say: "Stifte liegen. Ihr hört nur zu. Schaut auf bin und ist. Sieht man ihnen an, dass sie zu sein gehören?", do: ["Ziel: Nein – sein ist ein unregelmäßiges Verb, der Stamm ändert sich komplett. Erkennen kann man die Form nur, wenn man sie kennt und auf den Infinitiv zurückführt. Genau deshalb wurde „habe“ bisher oft nicht erkannt."] }],
+  ["abschreiben", { say: "Jetzt schreibt ihr ab: Merksatz 3. Dann zeichnet ihr die Tabelle mit Lineal ab – auch die leeren Spalten! Die füllen wir später.", board: merkBoard(3, "Formen zurückführen", [S("Jede finite Form gehört zu einem Infinitiv. Bei unregelmäßigen Verben ändert sich der Stamm stark: bin, ist, war → sein. "), S("Wofür? ", { bold: true }), S("Nur wer die Grundform kennt, erkennt das Verb, kann es nachschlagen und seine Zeitform bestimmen. "), S("Test: ", { bold: true }), S("Frage: Wie heißt der Infinitiv?")]) }],
+  ["luecken", { say: "Jetzt arbeitet ihr allein. Die Aufgabe steht rechts: Ü2. Ihr schreibt die Sätze nicht ab. Vier Minuten.", board: auftrag("Ü2 Finite Form finden", ["Schreibe Ü2 an den Rand.", "Finde in jedem Satz die finite Verbform.", "Schreibe nur Nummer, finite Form und Infinitiv: 1 … → …"], [bl("1  Bist du morgen beim Training?"), bl("2  Meine Schwester hat ein neues Handy."), bl("3  Wir sind am Freitag im Kino."), bl("4  Habt ihr die neue Staffel schon gesehen?"), bl("5  Mein Akku ist fast leer."), bl("6  Leon schaut jeden Abend Videos.", { after: 0 })], "4 Minuten · allein · leise"), sol: "1 Bist → sein · 2 hat → haben · 3 sind → sein · 4 Habt → haben · 5 ist → sein · 6 schaut → schauen (Satz 6 ist bewusst kein haben/sein)" }],
+  ["tafel", { say: "Wer drankommt, schreibt an die Tafel. Alle prüfen mit.", do: ["Bei Satz 4 nachfragen: „Welches Wort verändert sich nicht, wenn ich ‚du‘ statt ‚ihr‘ sage?“ → gesehen ist infinit (Partizip II – kommt gleich)."] }],
+  ["kontrolle", { say: "Vergleicht und verbessert mit Grün." }],
 ]));
 
 // ---------- Phase 3 ----------
-doc.push(phase("3", "Früher: hatte und war", 15));
+doc.push(phase("3", "haben und sein im Präteritum", 15));
 doc.push(...steps([
-  ["gemeinsam", { say: "Heute bin ich müde. Gestern …? Heute habe ich Zeit. Gestern …? Meldet euch.", do: ["Die Antworten war und hatte in die „früher“-Spalten schreiben."] }],
-  ["tafel", { say: "Wir füllen die leeren Spalten. Wer drankommt, schreibt eine Form an die Tafel.", board: board("Mitte", [famBoard(true)]), do: ["Hervorheben: war sieht noch weniger nach sein aus als ist – trotzdem gleiche Familie."] }],
-  ["abschreiben", { say: "Füllt jetzt in eurem Heft die leeren Spalten der Tabelle aus. Dann schreibt ihr Merksatz 4 ab.", board: merkBoard(4, "haben und sein im Präteritum", [S("Im Präteritum heißt es: ich "), S("hatte", { bold: true }), S(" (haben) und ich "), S("war", { bold: true }), S(" (sein). Auch „war“ gehört zur Familie sein!")]) }],
-  ["partner", { say: "Jetzt arbeitet ihr zu zweit, ohne Heft. Ich mache es einmal vor.", board: auftrag("Fingerspiel zu zweit", ["Zeige mit den Fingern eine Person: 1 = ich … 6 = sie.", "Sage dazu: haben oder sein – jetzt oder früher.", "Dein Partner nennt die Form. Nach 5 Runden wechselt ihr."], [bl([N("Beispiel: 4 Finger + „sein, früher“ → "), N("wir waren", { bold: true })], { after: 0 })], "3 Minuten · zu zweit · Flüsterstimme"), do: ["Einmal mit einem Schüler vormachen, dann starten."] }],
-  ["luecken", { say: "Jetzt arbeitet ihr allein: Ü3. Wichtig: Ihr schreibt die Sätze nicht ab – nur die Nummer und das fehlende Wort. Drei Minuten.", board: auftrag("Ü3 Gestern war alles anders", ["Schreibe Ü3 an den Rand.", "Schreibe untereinander nur die Nummer und das fehlende Wort."], [bl("1  Gestern ___ ich krank. (sein)"), bl("2  Du ___ hohes Fieber. (haben)"), bl("3  Wir ___ im Schwimmbad. (sein)"), bl("4  Ihr ___ keine Zeit. (haben)"), bl("5  ___ du schon einmal in Berlin? (sein)", { after: 0 })], "3 Minuten · allein · leise"), sol: "1 war · 2 hattest · 3 waren · 4 hattet · 5 Warst" }],
-  ["kontrolle", { say: "Ich nehme fünf von euch dran, ihr sagt eure Lösung. Alle vergleichen und verbessern mit Grün.", do: ["Lösungswort jeweils in die Lücke an der Tafel schreiben."] }],
+  ["gemeinsam", { say: "Meldet euch. Ihr schreibt noch nichts auf. Heute bin ich müde. Gestern …? Heute habe ich Zeit. Gestern …?", do: ["Die Antworten war und hatte in die Präteritum-Spalten schreiben."] }],
+  ["tafel", { say: "Wer drankommt, schreibt an die Tafel. Alle prüfen mit. Wir füllen die Präteritum-Spalten.", board: board("Mitte", [famBoard(true)]), do: ["Hervorheben: war sieht noch weniger nach sein aus als ist – trotzdem derselbe Infinitiv."] }],
+  ["abschreiben", { say: "Jetzt schreibt ihr ab: Füllt in eurem Heft die leeren Spalten der Tabelle aus. Dann Merksatz 4.", board: merkBoard(4, "haben und sein im Präteritum", [S("Im Präteritum heißt es: ich "), S("hatte", { bold: true }), S(" (haben) und ich "), S("war", { bold: true }), S(" (sein). "), S("Wofür? ", { bold: true }), S("Im Präteritum erzählt man schriftlich von Vergangenem – in Erzählungen und Berichten. "), S("Test: ", { bold: true }), S("Setze „gestern“ davor.")]) }],
+  ["partner", { say: "Jetzt arbeitet ihr zu zweit, ohne Heft. Deckt die Tabelle ab. Ich mache es einmal vor.", board: auftrag("Speed-Duell zu zweit", ["Nenne Person, Verb und Zeitform: „wir – sein – Präteritum“.", "Dein Partner antwortet in drei Sekunden. Richtig = 1 Punkt.", "Nach 2 Minuten wechselt ihr. Wer hat mehr Punkte?"], [bl([N("Beispiel: „ihr – haben – Präteritum“ → "), N("ihr hattet", { bold: true })], { after: 0 })], "4 Minuten · zu zweit · Flüsterstimme"), do: ["Einmal mit einem Schüler vormachen. Am Ende kurz fragen: Welche Form war am schwierigsten? (meist wart, hattet)"] }],
+  ["luecken", { say: "Jetzt arbeitet ihr allein. Die Aufgabe steht rechts: Ü3. Wichtig: Ihr schreibt die Sätze nicht ab – nur die Nummer und das fehlende Wort. Drei Minuten.", board: auftrag("Ü3 Letzte Woche", ["Schreibe Ü3 an den Rand.", "Schreibe untereinander nur die Nummer und das fehlende Wort."], [bl("1  Gestern ___ ich beim Zahnarzt. (sein)"), bl("2  Du ___ am Wochenende Geburtstag, oder? (haben)"), bl("3  Wir ___ letzte Woche auf Klassenfahrt. (sein)"), bl("4  Ihr ___ gestern kein WLAN. (haben)"), bl("5  ___ du schon einmal in einem Escape Room? (sein)", { after: 0 })], "3 Minuten · allein · leise"), sol: "1 war · 2 hattest · 3 waren · 4 hattet · 5 Warst" }],
+  ["kontrolle", { say: "Vergleicht und verbessert mit Grün. Ich nehme fünf von euch dran, ihr sagt eure Lösung.", do: ["Lösungswort jeweils in die Lücke an der Tafel schreiben."] }],
 ]));
-doc.push(p([S("Bewegungspause (3 Min.): ", { bold: true }), S("Ansage: „Alle stehen auf. Ich rufe ein Wort – ihr zeigt die Familie.“ Sie rufen Formen, die Klasse zeigt: Hand links = haben, Hand rechts = sein. Wortliste: habe · war · bist · hatten · seid · hattest · ist · hat · waren · bin · habt · wart")], { before: 60, after: 0 }));
+doc.push(p([S("Kurzer Schnelltest (3 Min.): ", { bold: true }), S("Ansage: „Alle stehen auf. Ich sage eine Form: Ist sie Präteritum, bleibt ihr stehen. Ist sie Präsens, setzt ihr euch – und steht wieder auf.“ Formen: war · bist · hatten · seid · hattest · ist · hat · waren · bin · habt · wart")], { before: 60, after: 0 }));
 
 // ---------- Phase 4 ----------
 doc.push(phase("4", "Partizip II, Perfekt mit haben oder sein, Hilfsverb", 28));
 doc.push(h3("4a  Partizip II (10 Min.)", C.hv));
 doc.push(...steps([
-  ["gemeinsam", { say: "Was habt ihr am Wochenende gemacht? Erzählt in einem Satz. Ihr schreibt noch nichts.", do: ["Sechs Sätze anschreiben – schon heimlich sortiert: haben-Sätze links, sein-Sätze rechts, noch ohne Überschrift. Die Form von haben/sein rot, das Partizip II gelb markieren."],
-    board: board("Mitte (Beispiel)", [table([3500, 3500], [
-      ...[[["Ich ", "habe", " Fußball ", "gespielt", "."], ["Ich ", "bin", " ins Kino ", "gegangen", "."]], [["Wir ", "haben", " Pizza ", "gegessen", "."], ["Wir ", "sind", " zu Oma ", "gefahren", "."]], [["Sie ", "hat", " ein Buch ", "gelesen", "."], ["Er ", "ist", " spät ", "eingeschlafen", "."]]].map(([a, b]) => row([a, b].map((s) => cell(p([N(s[0]), R(s[1]), N(s[2]), Y(s[3]), N(s[4])], { after: 0 }), { w: 3500, borders: noBorders, m: 15 })))),
+  ["gemeinsam", { say: "Meldet euch. Ihr schreibt noch nichts auf. Was habt ihr am Wochenende gemacht? Erzählt in einem Satz.", do: ["Sechs Sätze anschreiben – schon heimlich sortiert: haben-Sätze links, sein-Sätze rechts, noch ohne Überschrift. Die finite Form von haben/sein rot, das Partizip II gelb markieren. Falls wenig kommt: Beispiele unten."],
+    board: board("Mitte (Beispiel)", [table([3950, 3950], [
+      ...[[["Ich ", "habe", " bis mittags ", "geschlafen", "."], ["Ich ", "bin", " in die Stadt ", "gegangen", "."]], [["Wir ", "haben", " Pizza ", "bestellt", "."], ["Wir ", "sind", " zum Spiel ", "gefahren", "."]], [["Sie ", "hat", " eine Serie ", "geschaut", "."], ["Er ", "ist", " erst um zwei ", "eingeschlafen", "."]]].map(([a, b]) => row([a, b].map((s) => cell(p([N(s[0]), R(s[1]), N(s[2]), Y(s[3]), N(s[4])], { after: 0 }), { w: 3950, borders: noBorders, m: 15 })))),
     ])]) }],
-  ["zuhoeren", { say: "Schaut auf die gelben Wörter. Was haben sie gemeinsam?", do: ["ge-…-t und ge-…-en herausarbeiten. Test zeigen: Passt „ich habe …“ oder „ich bin …“ davor?", "Dann fragen: „Wofür brauchen wir diese Form?“ → Damit haben wir gerade vom Wochenende erzählt, also von etwas, das schon passiert ist."] }],
-  ["abschreiben", { say: "Merksatz 5 abschreiben, rot umrahmen.", board: merkBoard(5, "Partizip II", [S("Das Partizip II verändert sich "), S("nie", { bold: true }), S(". Man bildet es meist mit ge-…-t (gespielt) oder ge-…-en (gelaufen). "), S("Wofür? ", { bold: true }), S("Mit haben oder sein erzähle ich, was schon passiert ist (Perfekt): Ich habe gespielt. Ich bin gelaufen. "), S("Test: ", { bold: true }), S("Passt „ich habe …“ oder „ich bin …“ davor?")]) }],
-  ["gemeinsam", { say: "Die ersten zwei machen wir zusammen.", do: ["spielen → gespielt, gehen → gegangen gemeinsam an der Tafel lösen."] }],
-  ["luecken", { say: "Jetzt arbeitet ihr allein: Ü4. Die ersten zwei schreibt ihr einfach ab, dann macht ihr allein weiter. Drei Minuten.", board: auftrag("Ü4 Das Partizip II", ["Schreibe Ü4 an den Rand.", "Schreibe ab: Verb → Partizip II. Die ersten zwei stehen schon da.", "Markiere ge- und die Endung gelb."], [bl("spielen → gespielt     gehen → gegangen"), bl("kaufen → ______     schreiben → ______     essen → ______     fahren → ______", { after: 0 })], "3 Minuten · allein · leise"), sol: "gekauft · geschrieben · gegessen · gefahren" }],
-  ["tafel", { say: "Vier von euch schreiben die Lösung an. Markiert ge- und die Endung gelb.", do: ["Anschließend: „Vergleicht und verbessert mit Grün.“"] }],
+  ["zuhoeren", { say: "Stifte liegen. Ihr hört nur zu. Schaut auf die gelben Wörter. Was haben sie gemeinsam?", do: ["ge-…-t und ge-…-en herausarbeiten. Test zeigen: Passt „ich habe …“ oder „ich bin …“ davor?", "Hinweis auf bestellt: kein ge-, weil das Verb mit be- beginnt (wie verstanden, telefoniert) – Vorbereitung auf die ★-Aufgabe.", "Dann fragen: „Wofür brauchen wir diese Form?“ → Damit haben wir gerade vom Wochenende erzählt, also von etwas, das schon passiert ist."] }],
+  ["abschreiben", { say: "Jetzt schreibt ihr ab: Merksatz 5. Rot umrahmen.", board: merkBoard(5, "Partizip II", [S("Das Partizip II ist infinit und verändert sich "), S("nie", { bold: true }), S(". Man bildet es meist mit ge-…-t (gespielt) oder ge-…-en (gelaufen). Verben auf be-, ver-, -ieren bekommen kein ge- (bestellt, verstanden, telefoniert). "), S("Wofür? ", { bold: true }), S("Mit haben oder sein erzähle ich, was schon passiert ist (Perfekt): Ich habe gespielt. Ich bin gelaufen. "), S("Test: ", { bold: true }), S("Passt „ich habe …“ oder „ich bin …“ davor?")]) }],
+  ["luecken", { say: "Jetzt arbeitet ihr allein. Die Aufgabe steht rechts: Ü4. Die ersten zwei schreibt ihr einfach ab, dann macht ihr allein weiter. Wer schnell ist, macht die Sternchen-Verben. Drei Minuten.", board: auftrag("Ü4 Das Partizip II", ["Schreibe Ü4 an den Rand.", "Schreibe ab: Verb → Partizip II. Die ersten zwei stehen schon da.", "Markiere ge- und die Endung gelb."], [bl("spielen → gespielt     gehen → gegangen"), bl("kaufen → ______     schreiben → ______     essen → ______     fahren → ______"), bl("★  verstehen → ______     telefonieren → ______     aufräumen → ______", { after: 0 })], "3 Minuten · allein · leise"), sol: "gekauft · geschrieben · gegessen · gefahren · ★ verstanden · telefoniert · aufgeräumt (ge- in der Mitte)" }],
+  ["tafel", { say: "Wer drankommt, schreibt an die Tafel. Alle prüfen mit. Markiert ge- und die Endung gelb.", do: ["Anschließend: „Vergleicht und verbessert mit Grün.“"] }],
 ]));
 doc.push(h3("4b  Perfekt mit haben oder sein (12 Min.)", C.hv));
 doc.push(...steps([
-  ["gemeinsam", { say: "Schaut noch einmal auf die Wochenend-Sätze. Warum stehen die rechten Sätze zusammen? Was haben sie gemeinsam?", do: ["Kurz vorführen: Ein Kind geht von der Tür zum Fenster („Sie ist gegangen.“), ein anderes bleibt sitzen und liest („Er hat gelesen.“).", "Dann Überschriften „mit haben“ / „mit sein“ über die Spalten schreiben."] }],
-  ["abschreiben", { say: "Merksatz 6 abschreiben. Darunter je einen Beispielsatz: einen mit haben, einen mit sein – in Farbe.", board: merkBoard(6, "Perfekt mit haben oder sein", [S("Perfekt = "), S("haben oder sein im Präsens + Partizip II", { bold: true }), S(". Mit sein: Verben der "), S("Bewegung", { bold: true }), S(" von A nach B (gehen, fahren) und der "), S("Veränderung", { bold: true }), S(" (einschlafen, aufwachen). Die meisten anderen Verben: "), S("haben", { bold: true }), S(".")]) }],
-  ["luecken", { say: "Jetzt arbeitet ihr allein: Ü5. Wieder nur Nummer und fehlendes Wort. Denkt an den Merksatz: Bewegung oder Veränderung? Vier Minuten.", board: auftrag("Ü5 haben oder sein?", ["Schreibe Ü5 an den Rand.", "Schreibe nur Nummer + Wort: habe, hat, bin, ist oder sind."], [bl("1  Am Samstag ___ ich früh aufgewacht."), bl("2  Dann ___ ich Pfannkuchen gebacken."), bl("3  Am Nachmittag ___ wir zum See gefahren."), bl("4  Mein Bruder ___ Fußball gespielt."), bl("5  Abends ___ wir nach Hause gelaufen."), bl("6  Um neun ___ ich eingeschlafen.", { after: 0 })], "4 Minuten · allein · leise"), sol: "1 bin · 2 habe · 3 sind · 4 hat · 5 sind · 6 bin" }],
-  ["tafel", { say: "Sechs von euch schreiben das Wort in die Lücke an der Tafel. Wer drankommt, sagt dazu: Bewegung, Veränderung oder keins von beidem." }],
-  ["kontrolle", { say: "Vergleichen und mit Grün verbessern." }],
+  ["gemeinsam", { say: "Meldet euch. Ihr schreibt noch nichts auf. Schaut noch einmal auf die Wochenend-Sätze. Warum stehen die rechten Sätze zusammen? Was haben sie gemeinsam?", do: ["Kurz vorführen: Ein Kind geht von der Tür zum Fenster („Sie ist gegangen.“), ein anderes bleibt sitzen und liest („Er hat gelesen.“).", "Dann Überschriften „mit haben“ / „mit sein“ über die Spalten schreiben.", "Brücke zum Englischen: „I have played“ – im Englischen fast immer have, im Deutschen manchmal sein."] }],
+  ["abschreiben", { say: "Jetzt schreibt ihr ab: Merksatz 6. Darunter je einen Beispielsatz: einen mit haben, einen mit sein – in Farbe.", board: merkBoard(6, "Perfekt mit haben oder sein", [S("Perfekt = "), S("haben oder sein im Präsens + Partizip II", { bold: true }), S(". Mit sein: Verben der "), S("Bewegung", { bold: true }), S(" von A nach B (gehen, fahren) und der "), S("Veränderung", { bold: true }), S(" (einschlafen, aufwachen). Die meisten anderen Verben: "), S("haben", { bold: true }), S(". "), S("Wofür? ", { bold: true }), S("Mit dem Perfekt erzählt man mündlich von Vergangenem – im Gespräch, im Chat. "), S("Test: ", { bold: true }), S("Bewegung von A nach B oder Veränderung? → sein.")]) }],
+  ["luecken", { say: "Jetzt arbeitet ihr allein. Die Aufgabe steht rechts: Ü5. Wieder nur Nummer und fehlendes Wort – dazu zwei Begründungen. Fünf Minuten.", board: auftrag("Ü5 haben oder sein?", ["Schreibe Ü5 an den Rand.", "Schreibe nur Nummer + Wort: habe, hat, bin, ist oder sind.", "Begründe bei Nr. 3 und 6 in einem Satz, warum dort sein steht."], [bl("1  Am Samstag ___ ich erst um elf aufgewacht."), bl("2  Dann ___ ich mit meinem Bruder gezockt."), bl("3  Am Nachmittag ___ wir mit dem Rad zum See gefahren."), bl("4  Meine Freundin ___ mir ein Video geschickt."), bl("5  Abends ___ wir noch ins Kino gegangen."), bl("6  Um Mitternacht ___ ich endlich eingeschlafen.", { after: 0 })], "5 Minuten · allein · leise"), sol: "1 bin · 2 habe · 3 sind · 4 hat · 5 sind · 6 bin. Begründung 3: fahren = Bewegung von A nach B. Begründung 6: einschlafen = Veränderung (wach → schlafend)." }],
+  ["tafel", { say: "Wer drankommt, schreibt an die Tafel. Alle prüfen mit. Sagt dazu: Bewegung, Veränderung oder keins von beidem." }],
+  ["kontrolle", { say: "Vergleicht und verbessert mit Grün." }],
 ]));
-doc.push(h3("4c  Hilfsverb oder nicht? (6 Min.)", C.hv));
+doc.push(h3("4c  Hilfsverb oder Vollverb? (6 Min.)", C.hv));
 doc.push(...steps([
-  ["zuhoeren", { say: "Stifte liegen. Zwei Sätze. Was ist der Unterschied?", board: board("Mitte", [bl([N("Ich "), N("habe", { bold: true }), N(" Hunger.          Ich "), R("habe"), N(" gegessen", { color: "C98A1E", bold: true }), N(".")], { after: 0 })]), do: ["Ziel: Im zweiten Satz steht am Ende ein Partizip II – nur dann ist habe ein Hilfsverb. Im ersten Satz ist habe ein ganz normales Verb (besitzen/fühlen)."] }],
-  ["abschreiben", { say: "Merksatz 7 und die beiden Beispielsätze abschreiben.", board: merkBoard(7, "Hilfsverb oder nicht?", [S("haben und sein sind nur dann "), S("Hilfsverben", { bold: true }), S(", wenn am Satzende ein "), S("Partizip II", { bold: true }), S(" steht.")]) }],
-  ["gemeinsam", { say: "Ich lese einen Satz vor. Daumen hoch heißt Hilfsverb, Daumen runter heißt kein Hilfsverb. Ihr schreibt nichts.", do: ["Lisa ist sehr müde. (runter) · Lisa ist eingeschlafen. (hoch) · Wir hatten viel Spaß. (runter) · Ihr seid mit dem Bus gekommen. (hoch)"] }],
+  ["zuhoeren", { say: "Stifte liegen. Ihr hört nur zu. Zwei Sätze. Was ist der Unterschied?", board: board("Mitte", [bl([N("Ich "), N("habe", { bold: true }), N(" Hunger.          Ich "), R("habe"), N(" gegessen", { color: "C98A1E", bold: true }), N(".")], { after: 0 })]), do: ["Ziel: Im zweiten Satz steht am Ende ein Partizip II – nur dann ist habe ein Hilfsverb. Im ersten Satz trägt habe selbst die Bedeutung: Vollverb."] }],
+  ["abschreiben", { say: "Jetzt schreibt ihr ab: Merksatz 7 und die beiden Beispielsätze.", board: merkBoard(7, "Hilfsverb oder Vollverb?", [S("haben und sein sind nur dann "), S("Hilfsverben", { bold: true }), S(", wenn am Satzende ein "), S("Partizip II", { bold: true }), S(" steht. Sonst sind sie "), S("Vollverben", { bold: true }), S(" und tragen selbst die Bedeutung. "), S("Wofür? ", { bold: true }), S("Hilfsverben bilden Zeitformen – wer sie erkennt, kann die Zeitform bestimmen. "), S("Test: ", { bold: true }), S("Steht am Satzende ein Partizip II?")]) }],
+  ["gemeinsam", { say: "Meldet euch. Ihr schreibt nichts auf. Hilfsverb oder Vollverb – und begründet mit dem Test.", board: board("Folie", [bl("1  Mein Handy ist kaputt."), bl("2  Mein Handy ist runtergefallen."), bl("3  Wir hatten keine Hausaufgaben."), bl("4  Ihr habt die Hausaufgaben vergessen.", { after: 0 })]), sol: "1 Vollverb · 2 Hilfsverb (runtergefallen) · 3 Vollverb · 4 Hilfsverb (vergessen)" }],
 ]));
 
 // ---------- Phase 5 ----------
-doc.push(phase("5", "Abschluss und Exit-Ticket", 7));
+doc.push(phase("5", "Abschluss: Chat korrigieren und Exit-Ticket", 9));
 doc.push(...steps([
-  ["zuhoeren", { say: "Wir schauen auf den Ablaufplan. Was haben wir heute gelernt?", do: ["Punkte im Ablaufplan abhaken; zu jedem Punkt einen Schüler den Merksatz in eigenen Worten sagen lassen."] }],
-  ["luecken", { say: "Heft zu. Jetzt arbeitet ihr allein auf einem Zettel. Die Aufgabe steht rechts. Vier Minuten.", board: auftrag("Exit-Ticket", ["Nimm einen Zettel und schreibe deinen Namen oben hin.", "Schreibe zu jedem Satz: Familie (haben/sein) · Präsens oder Präteritum · Hilfsverb ja oder nein."], [bl("1  Wir waren im Zoo."), bl("2  Du hast gewonnen."), bl("3  Sie hatten keine Zeit."), bl("4  Ich bin nach Hause gerannt.", { after: 0 })], "4 Minuten · allein · ohne Heft"), sol: "1 sein, Präteritum, nein · 2 haben, Präsens, ja · 3 haben, Präteritum, nein · 4 sein, Präsens, ja" }],
+  ["gemeinsam", { say: "Meldet euch. Zurück zum Chat vom Anfang. Wer kann jetzt einen Fehler erklären? Benutzt die Fachbegriffe.", board: chatBoard("Mitte / Folie"), do: ["Erwartung: „gegangen ist eine Bewegung, deshalb bin statt habe.“ · „spielen ist keine Bewegung, deshalb haben.“ · „Das Partizip II von schießen heißt geschossen.“ Zu Satz 5: „hatte ist hier ein Vollverb – kein Partizip II am Ende.“"] }],
+  ["abschreiben", { say: "Jetzt schreibt ihr ab: die drei korrigierten Sätze. Das Hilfsverb rot, das Partizip II gelb.", board: board("Mitte", [bl([N("Ich "), R("bin"), N(" erst um zehn nach Hause "), Y("gegangen"), N(".")]), bl([N("Wir "), R("haben"), N(" echt stark "), Y("gespielt"), N(".")]), bl([N("Wer "), R("hat"), N(" die Tore "), Y("geschossen"), N("?")], { after: 0 })]) }],
+  ["luecken", { say: "Heft zu. Jetzt arbeitet ihr allein auf einem Zettel. Die Aufgabe steht rechts. Vier Minuten.", board: auftrag("Exit-Ticket", ["Nimm einen Zettel und schreibe deinen Namen oben hin.", "Schreibe zu jedem Satz: Infinitiv (haben/sein) · Präsens oder Präteritum · Hilfsverb ja oder nein."], [bl("1  Wir waren im Zoo."), bl("2  Du hast gewonnen."), bl("3  Sie hatten keine Zeit."), bl("4  Ich bin nach Hause gerannt.", { after: 0 })], "4 Minuten · allein · ohne Heft"), sol: "1 sein, Präteritum, nein · 2 haben, Präsens, ja · 3 haben, Präteritum, nein · 4 sein, Präsens, ja" }],
   ["fertig", { say: "Stift hinlegen. Ich sammle ein.", do: ["Auswertung: „ja“ bei 1 oder 3 → Hilfsverb und Vollverb noch verwechselt (Merksatz 7 wiederholen). „Präteritum“ bei 2 oder 4 → Form des Hilfsverbs mit der Zeit des Geschehens verwechselt."] }],
 ]));
-doc.push(p([S("Ausblick nächste Stunde: ", { bold: true }), S("Modalverben + Infinitiv, werden als dritte Hilfsverb-Familie (Futur). Der Ablauf (Ansage – Merksatz – Übung – Vergleich) bleibt gleich und ist dann schon vertraut.")], { before: 120, after: 0 }));
+doc.push(p([S("Ausblick nächste Stunde: ", { bold: true }), S("Modalverben + Infinitiv, werden als drittes Hilfsverb (Futur). Der Ablauf (Ansage – Merksatz – Übung – Vergleich) bleibt gleich und ist dann schon vertraut.")], { before: 120, after: 0 }));
 
-// ================================================================
 const pageProps = { page: { size: { width: 11906, height: 16838 }, margin: { top: 900, bottom: 800, left: 850, right: 850, header: 400, footer: 400 } } };
 const styles = { default: { document: { run: { font: "Calibri", size: 22 } } } };
 const dScript = new Document({ styles, sections: [{ properties: pageProps, headers: { default: header("Verbformen verstehen") }, footers: { default: footer("Tafelskript") }, children: doc }] });
