@@ -33,7 +33,7 @@
 - **Konsequenz:** Einen Schritt zurückgehen. Die Grundlagen werden kleinschrittig an der Tafel wiederholt, und die Klasse schreibt Merksätze ins Heft.
 
 ### Doppelstunde „Verbformen verstehen“ (geplant)
-- **Material:** `Verbformen_verstehen/` (Tafelskript, Aufgaben-Präsentation)
+- **Material:** `Verbformen_verstehen/` (Tafelskript, Präsentation mit Merksätzen und Aufgaben, Zusatzblatt „Schon fertig?“ für Schnelle mit Lösungen auf der Rückseite)
 - **Inhalt:** Chat-Fehleranalyse als Einstieg, Infinitiv und finite Verbform, *haben* und *sein* erkennen (Präsens und Präteritum), Partizip II, Perfekt mit *haben* oder *sein*, Hilfsverb oder Vollverb. Dazu 7 Merksätze (jeweils mit „Wofür?“ und Test), 5 Übungen, ein Speed-Duell, am Ende die Chat-Korrektur mit Begründung und ein Exit-Ticket.
 - **Planungsentscheidungen:**
   - Überarbeitet, weil die erste Fassung zu sehr nach Grundschule wirkte. Der Inhalt bleibt elementar, weil dort die Lücke liegt. Geändert wurde der Ton: Fachbegriffe finit/infinit statt „Verbfamilie“, ein Chat mit Fehlern als Einstieg (am Ende wird er korrigiert und begründet), Begründungsaufgaben, Beispielsätze aus der Lebenswelt der Klasse, ein Speed-Duell statt Fingerspiel.

@@ -166,7 +166,7 @@ doc.push(p(t("Bei jedem Wechsel sagen Sie zuerst, was die Klasse tut – erst da
   ];
   doc.push(table([4700, 5506], A.map(([a, b]) => row([tc([t(a, { italics: true, bold: true, size: 20, color: NAVY })], 4700, { fill: LIGHT }), tc(b, 5506, { size: 20 })], 380))));
 }
-doc.push(p([S("Fertig-Signal: ", { bold: true }), S("Wer fertig ist, legt den Stift hin. So sehen Sie, wann alle so weit sind – erst dann wird gewischt oder weitergemacht.")], { before: 100, after: 40 }));
+doc.push(p([S("Fertig-Signal: ", { bold: true }), S("Wer fertig ist, legt den Stift hin. Wer immer wieder deutlich früher fertig ist, nimmt sich das Zusatzblatt „Schon fertig?“ und arbeitet daran still weiter. So sehen Sie, wann alle so weit sind – erst dann wird gewischt oder weitergemacht.")], { before: 100, after: 40 }));
 doc.push(p([S("Gleicher Ablauf in jeder Phase: ", { bold: true }), S("gemeinsam entdecken → Merksatz abschreiben → allein üben → an der Tafel vergleichen → verbessern.")], { after: 60 }));
 
 doc.push(h3("2  Übungen immer im gleichen Format"));
@@ -182,7 +182,7 @@ doc.push(table([2600, 5006, 2600], [
     cell([p(S("Übungsfläche", { size: 19 }), { after: 40 }), p(S("Hier stehen die Übungen, hier schreiben die Schüler ihre Lösungen an", { size: 19, italics: true, color: MUTED }), { after: 0 })], { w: 2600, fill: BOARD, valign: VerticalAlign.TOP }),
   ]),
 ]));
-doc.push(p([S("Material: ", { bold: true }), S("Kreide/Stifte in Rot, Gelb, Blau, Grün · Schüler: Heft, Lineal, Buntstifte Rot, Gelb, Blau, Grün, kleiner Zettel für das Exit-Ticket · Beamer für die Aufgaben-Präsentation")], { before: 100, after: 40 }));
+doc.push(p([S("Material: ", { bold: true }), S("Kreide/Stifte in Rot, Gelb, Blau, Grün · Schüler: Heft, Lineal, Buntstifte Rot, Gelb, Blau, Grün, kleiner Zettel für das Exit-Ticket · Beamer für die Präsentation · Zusatzblatt „Schon fertig?“ für Schnelle (doppelseitig: vorne Aufgaben, hinten Lösungen)")], { before: 100, after: 40 }));
 doc.push(p([S("Farben im Heft: ", { bold: true }), t("haben/sein rot", { bold: true, color: C.hv, size: 21 }), S(" · "), t("Partizip II gelb", { bold: true, color: "C98A1E", size: 21 }), S(" · "), t("Infinitiv blau", { bold: true, color: C.inf, size: 21 }), S(" · "), t("Verbesserungen grün", { bold: true, color: C.mv, size: 21 })], { after: 0 }));
 
 // ---------- Hefteintrag ----------
