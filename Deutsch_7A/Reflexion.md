@@ -39,6 +39,7 @@
   - Überarbeitet, weil die erste Fassung zu sehr nach Grundschule wirkte. Der Inhalt bleibt elementar, weil dort die Lücke liegt. Geändert wurde der Ton: Fachbegriffe finit/infinit statt „Verbfamilie“, ein Chat mit Fehlern als Einstieg (am Ende wird er korrigiert und begründet), Begründungsaufgaben, Beispielsätze aus der Lebenswelt der Klasse, ein Speed-Duell statt Fingerspiel.
   - Kein Arbeitsblatt, keine Modus-Karten.
   - Zurzeit keine Klassenlektüre, deshalb eigene Beispielsätze.
+  - Die Merksätze stehen auf den Folien, die Klasse schreibt sie von dort ab. An der Tafel entstehen nur die Tafelbilder und die Tabelle zu haben/sein.
   - Transparenz über feste Ansagen und ein einheitliches Aufgabenformat.
   - Modalverben und *werden* sind auf die Folgestunde verschoben.
 - **Rückmeldung der Lehrkraft:** *(steht noch aus)*

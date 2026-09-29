@@ -1,7 +1,7 @@
 const pptxgen = require("pptxgenjs");
 const pres = new pptxgen();
 pres.layout = "LAYOUT_WIDE"; // 13.333 x 7.5
-pres.title = "Verbformen verstehen – Übungen";
+pres.title = "Verbformen verstehen – Merksätze und Übungen";
 
 const NAVY = "1E2761", NAVY2 = "24306E", MUTED = "5B6B8C", LIGHT = "F4F7FD", LIGHT2 = "EAF0FA", ICE = "CADCFC", WHITE = "FFFFFF";
 const RED = "D9534F", GOLD = "C98A1E", BLUE = "3F7CC4";
@@ -64,6 +64,44 @@ function sentences(s, list, top, o = {}) {
 }
 const gapSent = (a, b, hint) => [{ text: a, options: {} }, { text: "_____", options: { bold: true, color: RED } }, { text: b, options: {} }].concat(hint ? [{ text: "  (" + hint + ")", options: { color: MUTED, italic: true, fontSize: 20 } }] : []);
 
+
+// ---------- Merksatz-Folien ----------
+// Kurzsyntax: **fett**, [r:rot] Hilfsverb, [y:gelb] Partizip II, [b:blau] Infinitiv, [g:grün] Modalverb
+function rich(str, base = {}) {
+  const out = [];
+  str.split(/(\*\*[^*]+\*\*|\[[rybg]:[^\]]+\])/).filter(Boolean).forEach((tok) => {
+    let m;
+    if ((m = tok.match(/^\*\*([^*]+)\*\*$/))) out.push({ text: m[1], options: Object.assign({}, base, { bold: true }) });
+    else if ((m = tok.match(/^\[([rybg]):([^\]]+)\]$/))) out.push({ text: m[2], options: Object.assign({}, base, { bold: true, color: { r: RED, y: GOLD, b: BLUE, g: "2E9E6B" }[m[1]] }) });
+    else out.push({ text: tok, options: Object.assign({}, base) });
+  });
+  return out;
+}
+function merkSlide(nr, title, kern, beispiel, wofuer, test, notes) {
+  const s = pres.addSlide();
+  pageNo++;
+  s.background = { color: WHITE };
+  txt(s, `MERKSATZ ${nr} · ABSCHREIBEN UND ROT UMRAHMEN`, { x: 0.6, y: 0.35, w: 10, h: 0.3, fontSize: 13, color: RED, charSpacing: 2, bold: true });
+  txt(s, title, { x: 0.6, y: 0.65, w: 12.1, h: 0.75, fontFace: HEAD, fontSize: 34, bold: true });
+  // Kernsatz im roten Rahmen
+  s.addShape(pres.shapes.ROUNDED_RECTANGLE, { x: 0.6, y: 1.55, w: 12.15, h: 2.0, rectRadius: 0.08, fill: { color: WHITE }, line: { color: RED, width: 3 } });
+  s.addText(rich(kern), { isTextBox: true, x: 0.95, y: 1.65, w: 11.45, h: 1.8, fontFace: HEAD, fontSize: 22, color: NAVY, valign: "middle", margin: 0 });
+  // Beispiel
+  box(s, 0.6, 3.7, 12.15, 0.6, LIGHT2);
+  s.addText([{ text: "Beispiel:   ", options: { bold: true, color: MUTED, fontFace: BODY, fontSize: 17 } }, ...rich(beispiel)], { isTextBox: true, x: 0.9, y: 3.7, w: 11.6, h: 0.6, fontFace: HEAD, fontSize: 20, color: NAVY, valign: "middle", margin: 0 });
+  // Wofür? / Test
+  [["Wofür brauche ich das?", wofuer, 0.6], ["Test", test, 6.8]].forEach(([h, body, x]) => {
+    box(s, x, 4.45, 5.95, 1.8, LIGHT);
+    txt(s, h, { x: x + 0.25, y: 4.58, w: 5.45, h: 0.4, fontFace: HEAD, fontSize: 19, bold: true, color: RED });
+    s.addText(rich(body), { isTextBox: true, x: x + 0.25, y: 5.0, w: 5.45, h: 1.15, fontFace: BODY, fontSize: 19, color: NAVY, valign: "top", margin: 0 });
+  });
+  box(s, 0.6, 6.45, 12.15, 0.6, NAVY);
+  s.addText([{ text: "Jetzt: ", options: { bold: true } }, { text: "Schreibe den Merksatz mit Beispiel ab und rahme ihn rot ein.      ", options: {} }, { text: "Fertig? Stift hinlegen.", options: { italic: true, color: ICE } }], { isTextBox: true, x: 0.9, y: 6.45, w: 11.6, h: 0.6, fontFace: BODY, fontSize: 17, color: WHITE, valign: "middle", margin: 0 });
+  txt(s, FOOT, { x: 0.6, y: 7.12, w: 6, h: 0.25, fontSize: 10, color: MUTED });
+  txt(s, String(pageNo), { x: 12.2, y: 7.12, w: 0.5, h: 0.25, fontSize: 10, color: MUTED, align: "right" });
+  s.addNotes(notes || "Ansage: „Jetzt schreibt ihr von der Folie ab: Merksatz " + nr + ". Rahmt ihn rot ein.“ Warten, bis alle den Stift hingelegt haben.");
+}
+
 // ============ Titel ============
 {
   const s = pres.addSlide();
@@ -71,9 +109,9 @@ const gapSent = (a, b, hint) => [{ text: a, options: {} }, { text: "_____", opti
   s.addShape(pres.shapes.OVAL, { x: 10.6, y: -1.6, w: 4.6, h: 4.6, fill: { color: NAVY2 }, line: { type: "none" } });
   s.addShape(pres.shapes.OVAL, { x: -1.5, y: 4.6, w: 4.0, h: 4.0, fill: { color: NAVY2 }, line: { type: "none" } });
   txt(s, "Verbformen verstehen", { x: 0.9, y: 2.5, w: 11, h: 1.0, fontFace: HEAD, fontSize: 48, bold: true, color: WHITE });
-  txt(s, "Die Übungen der Stunde", { x: 0.9, y: 3.55, w: 11, h: 0.5, fontSize: 22, italic: true, color: ICE });
+  txt(s, "Merksätze und Übungen der Stunde", { x: 0.9, y: 3.55, w: 11, h: 0.5, fontSize: 22, italic: true, color: ICE });
   txt(s, "Deutsch, Klasse 7A", { x: 0.9, y: 6.6, w: 5, h: 0.3, fontSize: 13, color: ICE });
-  s.addNotes("Diese Präsentation enthält nur die Übungen. Merksätze und Tafelbilder entstehen an der Tafel (siehe Tafelskript). Lösungen stehen jeweils in den Notizen.");
+  s.addNotes("Diese Präsentation enthält die Merksätze (zum Abschreiben) und die Übungen. Tafelbilder und Tabellen entstehen weiterhin an der Tafel (siehe Tafelskript). Lösungen stehen jeweils in den Notizen.");
 }
 
 // Chat-Verlauf als Sprechblasen
@@ -94,6 +132,9 @@ function chatBubbles(s, top) {
   chatBubbles(s, top);
 }
 
+merkSlide(1, "Infinitiv", "Der **Infinitiv** ist die **Grundform** eines Verbs. Er endet auf -en oder -n.", "ging → [b:gehen]   ·   isst → [b:essen]   ·   basteln", "So steht das Verb im Wörterbuch. Aus dem Infinitiv werden alle anderen Formen gebildet.", "Lässt sich die Form so im Wörterbuch finden?");
+merkSlide(2, "Finite Verbform (Personalform)", "Die **finite** Verbform passt sich der Person und der Zahl an. Infinitiv und Partizip II sind **infinit** – sie verändern sich nicht.", "ich spiel**e**  →  wir spiel**en**", "Die finite Form zeigt, **wer** etwas tut.", "Ersetze **ich** durch **wir** – die Form, die sich ändert, ist finit.");
+
 // ============ Ü1 ============
 {
   const { s, top } = taskSlide("Übung 1", "Zurück zur Grundform", ["Schreibe Ü1 an den Rand.", "Schreibe jedes Wort ab und ergänze den Infinitiv."], "3 Minuten · allein · leise",
@@ -107,12 +148,16 @@ function chatBubbles(s, top) {
   });
 }
 
+merkSlide(3, "Formen zurückführen", "Jede finite Form gehört zu einem **Infinitiv**. Bei unregelmäßigen Verben ändert sich der Stamm stark.", "bin, ist, war → [b:sein]   ·   habe, hat, hatte → [b:haben]", "Nur wer den Infinitiv kennt, erkennt das Verb, kann es nachschlagen und seine Zeitform bestimmen.", "Frage: **Wie heißt der Infinitiv?**", "Vorher an der Tafel: Tabelle haben/sein im Präsens gemeinsam entwickeln (Präteritum-Spalten leer). Ansage: „Jetzt schreibt ihr von der Folie ab: Merksatz 3. Dann zeichnet ihr die Tabelle von der Tafel mit Lineal ab – auch die leeren Spalten!“");
+
 // ============ Ü2 ============
 {
   const { s, top } = taskSlide("Übung 2", "Finite Form finden", ["Schreibe Ü2 an den Rand.", "Finde in jedem Satz die finite Verbform.", "Schreibe nur Nummer, finite Form und Infinitiv: 1 … → …"], "4 Minuten · allein · leise",
     "Lösung: 1 Bist → sein · 2 hat → haben · 3 sind → sein · 4 Habt → haben · 5 ist → sein · 6 schaut → schauen (bewusst kein haben/sein). Bei 4 nachfragen: gesehen ist infinit.");
   sentences(s, ["Bist du morgen beim Training?", "Meine Schwester hat ein neues Handy.", "Wir sind am Freitag im Kino.", "Habt ihr die neue Staffel schon gesehen?", "Mein Akku ist fast leer.", "Leon schaut jeden Abend Videos."], top, { size: 21 });
 }
+
+merkSlide(4, "haben und sein im Präteritum", "Im Präteritum heißt es: ich **hatte** (haben) und ich **war** (sein). Auch „war“ gehört zum Infinitiv sein.", "Gestern [r:war] ich müde.   ·   Gestern [r:hatte] ich keine Zeit.", "Im Präteritum erzählt man **schriftlich** von Vergangenem – in Erzählungen und Berichten.", "Setze **„gestern“** davor.", "Vorher an der Tafel: Präteritum-Spalten der Tabelle gemeinsam füllen. Ansage: „Füllt in eurem Heft die leeren Spalten aus. Dann schreibt ihr von der Folie ab: Merksatz 4.“");
 
 // ============ Speed-Duell ============
 {
@@ -143,6 +188,8 @@ function chatBubbles(s, top) {
   sentences(s, [gapSent("Gestern ", " ich beim Zahnarzt.", "sein"), gapSent("Du ", " am Wochenende Geburtstag, oder?", "haben"), gapSent("Wir ", " letzte Woche auf Klassenfahrt.", "sein"), gapSent("Ihr ", " gestern kein WLAN.", "haben"), gapSent("", " du schon einmal in einem Escape Room?", "sein")], top, { size: 22 });
 }
 
+merkSlide(5, "Partizip II", "Das **Partizip II** ist infinit und verändert sich **nie**. Man bildet es meist mit **ge-…-t** oder **ge-…-en**. Verben auf be-, ver-, -ieren bekommen kein ge-.", "[y:gespielt]  ·  [y:gelaufen]  ·  [y:bestellt]  ·  [y:verstanden]  ·  [y:telefoniert]", "Mit haben oder sein erzähle ich, was schon passiert ist (Perfekt): Ich [r:habe] [y:gespielt]. Ich [r:bin] [y:gelaufen].", "Passt **„ich habe …“** oder **„ich bin …“** davor?");
+
 // ============ Ü4 ============
 {
   const { s, top } = taskSlide("Übung 4", "Das Partizip II", ["Schreibe Ü4 an den Rand.", "Schreibe ab: Verb → Partizip II. Die ersten zwei stehen schon da.", "Markiere ge- und die Endung gelb."], "3 Minuten · allein · leise",
@@ -160,12 +207,16 @@ function chatBubbles(s, top) {
   });
 }
 
+merkSlide(6, "Perfekt mit haben oder sein", "**Perfekt = haben oder sein im Präsens + Partizip II.** Mit sein: Verben der **Bewegung** von A nach B (gehen, fahren) und der **Veränderung** (einschlafen, aufwachen). Die meisten anderen Verben: **haben**.", "Ich [r:habe] Fußball [y:gespielt].   ·   Ich [r:bin] zum Spiel [y:gefahren].", "Mit dem Perfekt erzählt man **mündlich** von Vergangenem – im Gespräch, im Chat. Wie im Englischen: I have played.", "Bewegung von A nach B oder Veränderung? → **sein**", "Ansage: „Jetzt schreibt ihr von der Folie ab: Merksatz 6 mit den beiden Beispielsätzen – in Farbe.“");
+
 // ============ Ü5 ============
 {
   const { s, top } = taskSlide("Übung 5", "haben oder sein?", ["Schreibe Ü5 an den Rand.", "Schreibe nur Nummer + Wort: habe, hat, bin, ist oder sind.", "Begründe bei Nr. 3 und 6 in einem Satz, warum dort sein steht."], "5 Minuten · allein · leise",
     "Lösung: 1 bin · 2 habe · 3 sind · 4 hat · 5 sind · 6 bin. Begründung 3: fahren = Bewegung von A nach B. Begründung 6: einschlafen = Veränderung.");
   sentences(s, [gapSent("Am Samstag ", " ich erst um elf aufgewacht."), gapSent("Dann ", " ich mit meinem Bruder gezockt."), gapSent("Am Nachmittag ", " wir mit dem Rad zum See gefahren."), gapSent("Meine Freundin ", " mir ein Video geschickt."), gapSent("Abends ", " wir noch ins Kino gegangen."), gapSent("Um Mitternacht ", " ich endlich eingeschlafen.")], top, { size: 20 });
 }
+
+merkSlide(7, "Hilfsverb oder Vollverb?", "haben und sein sind nur dann **Hilfsverben**, wenn am Satzende ein **Partizip II** steht. Sonst sind sie **Vollverben** und tragen selbst die Bedeutung.", "Ich **habe** Hunger. (Vollverb)   ·   Ich [r:habe] [y:gegessen]. (Hilfsverb)", "Hilfsverben bilden Zeitformen – wer sie erkennt, kann die Zeitform bestimmen.", "Steht am Satzende ein **Partizip II**?");
 
 // ============ Hilfsverb oder Vollverb ============
 {

@@ -25,7 +25,7 @@ Dieses Repo enthält Unterrichtsmaterial (Deutsch). Die Lehrkraft plant hier gem
 - **Gleicher Ablauf je Phase:** gemeinsam entdecken → Merksatz abschreiben → allein üben → an der Tafel vergleichen → mit Grün verbessern.
 - **Merksätze** immer mit „Wofür brauche ich das?“, dazu ein Erkennungstrick/Test.
 - **Tafelskript** für die Lehrkraft: pro Schritt, was die Klasse tut, die wörtliche Ansage, der Tafelanschrieb, die Lösung. Dazu eine Übersicht, wie das Heft am Ende aussieht.
-- **Parallel zur Tafel eine PowerPoint nur mit den Aufgaben** (gleicher Wortlaut wie an der Tafel, Lösungen nur in den Notizen).
+- **Parallel zur Tafel eine PowerPoint mit Merksätzen und Aufgaben** (gleicher Wortlaut wie im Tafelskript, Lösungen nur in den Notizen). Die **Merksätze kommen auf die Folie**, nicht an die Tafel. Je Merksatz eine Folie: Kernsatz im roten Rahmen, Beispiel in Farbe, „Wofür?“ und „Test“, jeweils direkt vor der passenden Übung. An der Tafel entstehen nur Tafelbilder und Tabellen, die gemeinsam entwickelt werden.
 
 ## Gestaltung
 
