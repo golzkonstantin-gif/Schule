@@ -17,7 +17,7 @@ const GAPS = {
   1: "absoluter", 2: "Beamte", 3: "Intendanten", 4: "Steuerfreiheit", 5: "Versailles", 6: "Merkantilismus",
   7: "Zölle", 8: "Gottesgnadentum", 9: "Glaube", 10: "stehendes", 11: "400.000", 12: "Drittel",
 };
-const WORDS = ["Beamte", "Glaube", "Söldner", "Merkantilismus", "Gottesgnadentum", "Versailles", "Steuerfreiheit", "Zölle", "stehendes", "400.000", "Drittel", "absoluter", "Intendanten", "Parlament"];
+const WORDS = ["Beamte", "Glaube", "Merkantilismus", "Gottesgnadentum", "Versailles", "Steuerfreiheit", "Zölle", "stehendes", "400.000", "Drittel", "absoluter", "Intendanten"];
 const SECTIONS = [
   ["Einleitung", "Ludwig XIV. regierte Frankreich als {1} Monarch. Er konzentrierte möglichst viel Macht bei sich und stützte sie auf fünf Säulen."],
   ["Säule 1 · Verwaltung und Justiz", "Der König setzte {2} ein, die in seinem Namen handelten. In den Provinzen vertraten ihn die {3}. Als oberster Richter konnte er Personen mit „lettres de cachet“ ohne Gerichtsverfahren verhaften lassen."],
@@ -44,7 +44,7 @@ function build(solution) {
   c.push(p(t("GESCHICHTE · KLASSE 8 · ABSOLUTISMUS", { size: 18, bold: true, color: MUTED }), { after: 20 }));
   c.push(p(t(solution ? "Lösung: Die fünf Säulen der Herrschaft Ludwigs XIV." : "Die fünf Säulen der Herrschaft Ludwigs XIV.", { font: "Cambria", size: 38, bold: true, color: NAVY }), { after: 60 }));
   if (!solution) {
-    c.push(p([t("Aufgabe 1  ", { bold: true, color: RED, size: 22 }), t("Lies den Text einmal ganz. Ergänze dann die Lücken mit dem Wortspeicher und streiche jedes benutzte Wort durch. ", { size: 22 }), t("Zwei Wörter passen nicht.", { bold: true, size: 22 })], { after: 80 }));
+    c.push(p([t("Aufgabe 1  ", { bold: true, color: RED, size: 22 }), t("Lies den Text einmal ganz. Ergänze dann die Lücken mit dem Wortspeicher und streiche jedes benutzte Wort durch.", { size: 22 })], { after: 80 }));
     c.push(box([p(t("Wortspeicher", { bold: true, color: NAVY, size: 20 }), { after: 40 }), p(t(WORDS.join("   ·   "), { font: "Cambria", size: 23, color: NAVY }), { after: 0 })], LIGHT2));
     c.push(p(t(""), { after: 60 }));
   }
@@ -56,7 +56,6 @@ function build(solution) {
     c.push(box([p([t("★ Schon fertig?  ", { bold: true, color: "C98A1E", size: 22 }), t("Welche Säule ist für Ludwig XIV. die wichtigste? Begründe in einem Satz. Schreibe ins Heft.", { size: 22 })], { after: 0 })], "FFFFFF", all(solid("E8A33D", 8))));
   } else {
     c.push(p([t("Zusatz ★: ", { bold: true, color: MUTED, size: 21 }), t("Es gibt keine einzig richtige Antwort. Erwartet wird eine Begründung, die zur gewählten Säule passt (z. B. Heer: Es setzt die Macht notfalls mit Gewalt durch; Wirtschaft: ohne Geld kann der König Heer und Beamte nicht bezahlen).", { size: 21, color: MUTED })], { before: 100, after: 40 }));
-    c.push(p([t("Nicht passende Wörter: ", { bold: true, color: MUTED, size: 21 }), t("Söldner (Ludwig verzichtete auf Söldner), Parlament (im Absolutismus kann niemand den König stoppen).", { size: 21, color: MUTED })], { after: 0 }));
   }
   return new Document({
     styles: { default: { document: { run: { font: "Calibri", size: 23 } } } },
