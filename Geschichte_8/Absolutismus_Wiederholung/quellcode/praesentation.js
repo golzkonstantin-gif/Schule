@@ -153,17 +153,17 @@ merkSlide(2, "Die fünf Säulen des Absolutismus",
 
 {
   const { s, top } = taskSlide("Übung 2 · Arbeitsblatt", "Lückentext: Die fünf Säulen", ["Schreibe Ü2 oben auf das Arbeitsblatt.", "Lies den Text einmal ganz. Ergänze dann die 12 Lücken mit dem Wortspeicher.", "Streiche jedes benutzte Wort durch. Zwei Wörter passen nicht."], "6 Minuten · allein · leise",
-    "Lösung: 1 absoluter · 2 Beamte · 3 Intendanten · 4 Steuerfreiheit · 5 Versailles · 6 Merkantilismus · 7 Zölle · 8 Gottesgnadentum · 9 Glaube · 10 stehendes · 11 400.000 · 12 Drittel. Nicht passend: Söldner, Generalstände. Kontrolle: „Wer drankommt, liest einen Absatz vor. Alle prüfen mit.“ Dann „Vergleicht und verbessert mit Grün.“ Schnelle machen die ★-Aufgabe (wichtigste Säule begründen).",
+    "Lösung: 1 absoluter · 2 Beamte · 3 Intendanten · 4 Steuerfreiheit · 5 Versailles · 6 Merkantilismus · 7 Zölle · 8 Gottesgnadentum · 9 Glaube · 10 stehendes · 11 400.000 · 12 Drittel. Nicht passend: Söldner, Parlament. Kontrolle: „Wer drankommt, liest einen Absatz vor. Alle prüfen mit.“ Dann „Vergleicht und verbessert mit Grün.“ Schnelle machen die ★-Aufgabe (wichtigste Säule begründen).",
     "Fertig? Stift hinlegen. Schnelle: ★-Aufgabe.");
   box(s, 0.6, top + 0.1, 12.15, 1.6, LIGHT);
   txt(s, "Wortspeicher", { x: 0.9, y: top + 0.22, w: 4, h: 0.35, fontFace: HEAD, fontSize: 17, bold: true, color: RED });
-  txt(s, "Beamte · Glaube · Söldner · Merkantilismus · Gottesgnadentum · Versailles · Steuerfreiheit · Zölle · stehendes · 400.000 · Drittel · absoluter · Intendanten · Generalstände", { x: 0.9, y: top + 0.62, w: 11.6, h: 1.0, fontFace: HEAD, fontSize: 20 });
+  txt(s, "Beamte · Glaube · Söldner · Merkantilismus · Gottesgnadentum · Versailles · Steuerfreiheit · Zölle · stehendes · 400.000 · Drittel · absoluter · Intendanten · Parlament", { x: 0.9, y: top + 0.62, w: 11.6, h: 1.0, fontFace: HEAD, fontSize: 20 });
 }
 
 // ============ Ständegesellschaft ============
 {
   const { s, top } = taskSlide("Übung 3 · Tafel", "Die Ständegesellschaft aus dem Kopf", ["Klappe das Heft zu. Ihr meldet euch und nennt, was ihr wisst.", "Wir füllen die Tabelle an der Tafel gemeinsam aus.", "Jetzt schreibst du die fertige Tabelle mit Lineal ab."], "8 Minuten · gemeinsam, dann abschreiben",
-    "Ansage: „Hefte zu. Ihr schreibt noch nichts auf. Meldet euch.“ Raster aus dem Gruppenpuzzle (Stand | Anzahl | Bildung | Vorrechte | Pflichten) plus Spalte Mitbestimmung bereits leer an der Tafel. Nach dem gemeinsamen Ausfüllen: „Jetzt schreibt ihr ab: die Tabelle. Mit Lineal.“ Lösungen siehe Tafelskript. Hinweis zur Mitbestimmung: Die Generalstände (je 1 Stimme pro Stand) wurden von 1614 bis 1789 nicht einberufen – unter Ludwig XIV. gab es praktisch keine Mitbestimmung.",
+    "Ansage: „Hefte zu. Ihr schreibt noch nichts auf. Meldet euch.“ Raster aus dem Gruppenpuzzle (Stand | Anzahl | Bildung | Vorrechte | Pflichten) plus Spalte Mitbestimmung bereits leer an der Tafel. Inhalte siehe Tafelskript (aus den Gruppenpuzzle-Texten). Nach dem gemeinsamen Ausfüllen: „Jetzt schreibt ihr ab: die Tabelle. Mit Lineal.“ Lösungen siehe Tafelskript. Hinweis: Der Text nennt zur Mitbestimmung des Klerus nichts.  Der Dritte Stand ist ausgeschlossen, der Adel bestimmt das politische Geschehen.",
     "Fertig? Stift hinlegen.");
   const cols = ["Stand", "Anzahl", "Bildung", "Vorrechte", "Pflichten", "Mitbestimmung"];
   const cw = [1.8, 1.3, 1.9, 2.4, 2.4, 2.35];
@@ -184,26 +184,26 @@ merkSlide(2, "Die fünf Säulen des Absolutismus",
 }
 
 merkSlide(3, "Die Ständegesellschaft",
-  "In der Ständegesellschaft gehört jeder Mensch **durch Geburt** zu einem von **drei Ständen**: **Klerus (ca. 1 %)**, **Adel (ca. 2 %)** und **Dritter Stand (ca. 97 %)**. Rechte und Pflichten sind **ungleich** verteilt. Im Absolutismus hatten die Stände **keine Mitbestimmung**.",
-  "Klerus, Adel: **Privilegien** · Dritter Stand: **Steuern, Abgaben**",
+  "In der Ständegesellschaft gehört jeder Mensch **durch Geburt** zu einem von **drei Ständen**: **Klerus (ca. 150 000)**, **Adel (ca. 500 000)** und **Dritter Stand (ca. 20 000 000)**. Klerus und Adel haben **Vorrechte**. Der Dritte Stand zahlt **Steuern und Abgaben** und ist von der **politischen Mitbestimmung ausgeschlossen**.",
+  "Adel: **Jagdrecht** · Klerus: **Kirchenzehnt** · 3. Stand: **Abgaben**",
   "Du erklärst, warum Ludwig den Adel bei Laune hält und warum der Dritte Stand die Last trägt.",
-  "Wer zahlt Steuern, wer hat Privilegien? **Anzahl und Lasten passen nicht zusammen.**",
-  "Ansage: „Jetzt schreibt ihr von der Folie ab: Merksatz 3. Rahmt ihn rot ein.“ Zahlen beziehen sich auf Frankreich vor 1789. Falls im Unterricht andere Werte genannt wurden, Folie anpassen.", 20);
+  "Wer zahlt, wer ist ausgeschlossen? **Wenige Menschen haben die Vorrechte, viele tragen die Last.**",
+  "Ansage: „Jetzt schreibt ihr von der Folie ab: Merksatz 3. Rahmt ihn rot ein.“ Alle Zahlen stammen aus den Gruppenpuzzle-Texten. Der Text nennt zur Mitbestimmung des Klerus nichts.", 20);
 
 {
   const { s, top } = taskSlide("Übung 4", "Im Absolutismus fühle ich mich …", ["Schreibe Ü4 an den Rand und wähle einen Stand: Klerus, Adel oder Dritter Stand.", "Schreibe den Satz ab und beende ihn: „Im Absolutismus fühle ich mich … , weil …“", "Nenne in deiner Begründung mindestens ein Recht und eine Pflicht deines Standes."], "6 Minuten · allein · leise",
-    "Ansage: „Jetzt arbeitet ihr allein. Die Aufgabe steht rechts.“ Danach 3 Schüler vorlesen lassen (verschiedene Stände): „Wer drankommt, liest vor. Alle prüfen mit.“ Kriterien stehen auf der nächsten Folie. Mögliche Antwort: „Im Absolutismus fühle ich mich als Adeliger privilegiert, weil ich keine Steuern zahlen muss und jagen darf. Dafür muss ich dem König im Krieg dienen und am Hof erscheinen.“ / „… als Bauer ausgenutzt, weil ich Steuern und Abgaben zahlen muss, aber keine Privilegien und keine Mitbestimmung habe.“");
+    "Ansage: „Jetzt arbeitet ihr allein. Die Aufgabe steht rechts.“ Danach 3 Schüler vorlesen lassen (verschiedene Stände): „Wer drankommt, liest vor. Alle prüfen mit.“ Kriterien stehen auf der nächsten Folie. Mögliche Antwort: „Im Absolutismus fühle ich mich als Adeliger privilegiert, weil ich keine Steuern zahlen muss und allein jagen darf. Dafür muss ich mich ehrenhaft verhalten und Verwaltungsaufgaben übernehmen.“ / „… als Bauer ausgenutzt, weil ich Steuern, hohe Abgaben und Pachtgebühren zahlen muss und von der Mitbestimmung ausgeschlossen bin.“");
   box(s, 0.6, top - 0.1, 5.95, 1.5, LIGHT);
   txt(s, "Gefühle", { x: 0.85, y: top, w: 5.4, h: 0.35, fontFace: HEAD, fontSize: 18, bold: true, color: RED });
   txt(s, "privilegiert · sicher · zufrieden · ausgenutzt · benachteiligt · machtlos · überlastet", { x: 0.85, y: top + 0.4, w: 5.45, h: 1.0, fontFace: HEAD, fontSize: 18 });
   box(s, 6.8, top - 0.1, 5.95, 1.5, LIGHT);
   txt(s, "Fachbegriffe für die Begründung", { x: 7.05, y: top, w: 5.4, h: 0.35, fontFace: HEAD, fontSize: 18, bold: true, color: RED });
-  txt(s, "Privilegien · Steuerfreiheit · Jagdrecht · Abgaben · Frondienst · Kriegsdienst · Mitbestimmung", { x: 7.05, y: top + 0.4, w: 5.45, h: 1.0, fontFace: HEAD, fontSize: 18 });
+  txt(s, "Vorrechte · Steuerfreiheit · Jagdrecht · Kirchenzehnt · Pachtgebühren · Mitbestimmung", { x: 7.05, y: top + 0.4, w: 5.45, h: 1.0, fontFace: HEAD, fontSize: 18 });
 }
 
 {
   const { s, top } = taskSlide("Kontrolle zu Ü4", "Prüft die Sätze der anderen", ["Hört zu: Welcher Stand wurde gewählt?", "Prüft: Wird ein Recht und eine Pflicht genannt? Passen sie zum Stand?", "Prüft: Passt das Gefühl zur Begründung?"], "4 Minuten · gemeinsam · mündlich",
-    "Ansage: „Wer drankommt, liest vor. Alle prüfen mit.“ Typische Fehler: Adel als Steuerzahler, Klerus mit Kriegsdienst, Dritter Stand mit Privilegien. Dann: „Verbessert mit Grün.“", "Wer korrigiert, nennt die Begründung mit Fachbegriff.");
+    "Ansage: „Wer drankommt, liest vor. Alle prüfen mit.“ Typische Fehler: Adel als Steuerzahler, Klerus mit Wehrdienst (befreit), Dritter Stand mit Vorrechten. Dann: „Verbessert mit Grün.“", "Wer korrigiert, nennt die Begründung mit Fachbegriff.");
 }
 
 // ============ Schluss ============

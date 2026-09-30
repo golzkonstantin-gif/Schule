@@ -17,7 +17,7 @@ const GAPS = {
   1: "absoluter", 2: "Beamte", 3: "Intendanten", 4: "Steuerfreiheit", 5: "Versailles", 6: "Merkantilismus",
   7: "Zölle", 8: "Gottesgnadentum", 9: "Glaube", 10: "stehendes", 11: "400.000", 12: "Drittel",
 };
-const WORDS = ["Beamte", "Glaube", "Söldner", "Merkantilismus", "Gottesgnadentum", "Versailles", "Steuerfreiheit", "Zölle", "stehendes", "400.000", "Drittel", "absoluter", "Intendanten", "Generalstände"];
+const WORDS = ["Beamte", "Glaube", "Söldner", "Merkantilismus", "Gottesgnadentum", "Versailles", "Steuerfreiheit", "Zölle", "stehendes", "400.000", "Drittel", "absoluter", "Intendanten", "Parlament"];
 const SECTIONS = [
   ["Einleitung", "Ludwig XIV. regierte Frankreich als {1} Monarch. Er konzentrierte möglichst viel Macht bei sich und stützte sie auf fünf Säulen."],
   ["Säule 1 · Verwaltung und Justiz", "Der König setzte {2} ein, die in seinem Namen handelten. In den Provinzen vertraten ihn die {3}. Als oberster Richter konnte er Personen mit „lettres de cachet“ ohne Gerichtsverfahren verhaften lassen."],
@@ -56,7 +56,7 @@ function build(solution) {
     c.push(box([p([t("★ Schon fertig?  ", { bold: true, color: "C98A1E", size: 22 }), t("Welche Säule ist für Ludwig XIV. die wichtigste? Begründe in einem Satz. Schreibe ins Heft.", { size: 22 })], { after: 0 })], "FFFFFF", all(solid("E8A33D", 8))));
   } else {
     c.push(p([t("Zusatz ★: ", { bold: true, color: MUTED, size: 21 }), t("Es gibt keine einzig richtige Antwort. Erwartet wird eine Begründung, die zur gewählten Säule passt (z. B. Heer: Es setzt die Macht notfalls mit Gewalt durch; Wirtschaft: ohne Geld kann der König Heer und Beamte nicht bezahlen).", { size: 21, color: MUTED })], { before: 100, after: 40 }));
-    c.push(p([t("Nicht passende Wörter: ", { bold: true, color: MUTED, size: 21 }), t("Söldner (Ludwig verzichtete auf Söldner), Generalstände (unter Ludwig XIV. nicht einberufen).", { size: 21, color: MUTED })], { after: 0 }));
+    c.push(p([t("Nicht passende Wörter: ", { bold: true, color: MUTED, size: 21 }), t("Söldner (Ludwig verzichtete auf Söldner), Parlament (im Absolutismus kann niemand den König stoppen).", { size: 21, color: MUTED })], { after: 0 }));
   }
   return new Document({
     styles: { default: { document: { run: { font: "Calibri", size: 23 } } } },

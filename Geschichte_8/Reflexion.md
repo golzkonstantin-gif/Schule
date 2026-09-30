@@ -23,7 +23,7 @@
 - **Inhalt:** Testankündigung, Absolutismus (Merksatz, Ü1 ja/nein mit Begründung), fünf Säulen (Merksatz, Lückentext, Säulen-Tafelbild), Ständegesellschaft (Tabelle aus dem Gedächtnis, Merksatz), Ü4 „Im Absolutismus fühle ich mich …, weil …“ mit Bezug auf Rechte und Pflichten, Lernliste.
 - **Planungsentscheidungen:**
   - Die Säulen stammen aus dem Gruppenpuzzle-Text. Der Lückentext bringt alle fünf zusammen, der Wortspeicher enthält zwei Fallen (Söldner, Generalstände).
-  - Zahlen der Stände für Frankreich (ca. 1 % / 2 % / 97 %); Tabelle entspricht dem Gruppenpuzzle-Raster (Anzahl, Bildung, Vorrechte, Pflichten) plus Mitbestimmung. Inhalte stammen aus Allgemeinwissen, nicht aus den Gruppenpuzzle-Texten, und sind abzugleichen.
+  - Zahlen der Stände aus den Texten; Tabelle entspricht dem Gruppenpuzzle-Raster (Anzahl, Bildung, Vorrechte, Pflichten) plus Mitbestimmung. Alle Angaben (ca. 150 000 / 500 000 / 20 000 000; Bildung, Vorrechte, Pflichten) stammen aus den Gruppenpuzzle-Texten. Zur Mitbestimmung des Klerus nennen die Texte nichts.
   - Als Mitbestimmung ist festgehalten: Generalstände je Stand 1 Stimme, unter Ludwig XIV. nicht einberufen.
   - Gleiches Format wie im Deutschunterricht: feste Ansagen, Merksätze auf der Folie, Übungen im Heft, Kontrolle mit Grün.
 - **Rückmeldung der Lehrkraft:** *(steht noch aus)*
