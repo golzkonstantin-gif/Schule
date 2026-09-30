@@ -1,6 +1,6 @@
 # Unterrichtsplanung – Hinweise für Claude
 
-Dieses Repo enthält Unterrichtsmaterial (Deutsch). Die Lehrkraft plant hier gemeinsam mit Claude Stunden, meldet zurück, wie sie gelaufen sind, und lässt Hospitationsfeedback einfließen. Ziel: Die Planung wird von Stunde zu Stunde besser.
+Dieses Repo enthält Unterrichtsmaterial (Deutsch 7A, Geschichte 8). Die Vorlieben unten gelten für beide Klassen, sofern nicht fachspezifisch (z. B. Farbcode Verbformen nur Deutsch). Die Lehrkraft plant hier gemeinsam mit Claude Stunden, meldet zurück, wie sie gelaufen sind, und lässt Hospitationsfeedback einfließen. Ziel: Die Planung wird von Stunde zu Stunde besser.
 
 ## Vor jeder neuen Planung
 
@@ -43,3 +43,4 @@ Keine Klarnamen von Schülerinnen, Schülern oder Kolleginnen und Kollegen ins R
 
 - `Deutsch_7A/` – Material der Klasse 7A, ein Unterordner pro Stunde/Einheit
 - `Deutsch_7A/Reflexion.md` – Lernstand, Stundenlog, Hospitationsfeedback, offene Baustellen
+- `Geschichte_8/` – Material der Klasse 8 (Geschichte), gleiche Struktur; Reflexionslog: `Geschichte_8/Reflexion.md`
