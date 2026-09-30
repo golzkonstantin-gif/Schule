@@ -124,6 +124,23 @@ function merkSlide(nr, title, kern, beispiel, wofuer, test, notes, kernSize = 22
   s.addNotes("Ansage: „Stifte liegen. Ihr hört nur zu. Nächste Woche schreiben wir einen Test zu diesen drei Themen. Die Stunde heute ist eure Vorbereitung: Was hier nicht klappt, wisst ihr danach.“ Noch keinen Termin im Detail diskutieren; Fragen zum Test am Stundenende.");
 }
 
+// ============ Fünf Säulen ============
+merkSlide(1, "Die fünf Säulen des Absolutismus",
+  "Ludwig XIV. sicherte seine Macht auf **fünf Säulen**: **1** Verwaltung und Justiz · **2** Adel und Hof von Versailles · **3** Wirtschaft (Merkantilismus) · **4** Religion (Gottesgnadentum) · **5** Heer (stehendes Heer).",
+  "[r:Verwaltung] kontrolliert das Land · [r:Hof] bindet den Adel · [r:Wirtschaft] liefert Geld · [r:Religion] begründet die Macht · [r:Heer] setzt sie durch",
+  "Im Test sollst du die Säulen nennen **und** erklären, wie der König damit seine Macht sichert.",
+  "Bei jeder Säule fragen: **Was sichert der König damit?**",
+  "Ansage: „Jetzt schreibt ihr von der Folie ab: Merksatz 1. Rahmt ihn rot ein.“ Danach Arbeitsblatt Lückentext verteilen. Tipp: Die Säulen sind aus dem Gruppenpuzzle bekannt – kurz fragen, wer welche Säule bearbeitet hat.", 20);
+
+{
+  const { s, top } = taskSlide("Übung 1 · Arbeitsblatt", "Lückentext: Die fünf Säulen", ["Schreibe Ü1 oben auf das Arbeitsblatt.", "Lies den Text einmal ganz. Ergänze dann die 12 Lücken mit dem Wortspeicher.", "Streiche jedes benutzte Wort durch. Zwei Wörter passen nicht."], "6 Minuten · allein · leise",
+    "Lösung: 1 absoluter · 2 Beamte · 3 Intendanten · 4 Steuerfreiheit · 5 Versailles · 6 Merkantilismus · 7 Zölle · 8 Gottesgnadentum · 9 Glaube · 10 stehendes · 11 400.000 · 12 Drittel. Nicht passend: Söldner, Parlament. Kontrolle: „Wer drankommt, liest einen Absatz vor. Alle prüfen mit.“ Dann „Vergleicht und verbessert mit Grün.“ Schnelle machen die ★-Aufgabe (wichtigste Säule begründen).",
+    "Fertig? Stift hinlegen. Schnelle: ★-Aufgabe.");
+  box(s, 0.6, top + 0.1, 12.15, 1.6, LIGHT);
+  txt(s, "Wortspeicher", { x: 0.9, y: top + 0.22, w: 4, h: 0.35, fontFace: HEAD, fontSize: 17, bold: true, color: RED });
+  txt(s, "Beamte · Glaube · Söldner · Merkantilismus · Gottesgnadentum · Versailles · Steuerfreiheit · Zölle · stehendes · 400.000 · Drittel · absoluter · Intendanten · Parlament", { x: 0.9, y: top + 0.62, w: 11.6, h: 1.0, fontFace: HEAD, fontSize: 20 });
+}
+
 // ============ Einstieg Wahr oder falsch ============
 {
   const { s, top } = taskSlide("Einstieg · ohne Heft", "Wahr oder falsch?", ["Lies die vier Behauptungen. Entscheide still: wahr oder falsch?", "Melde dich: Nenne deine Entscheidung und begründe sie.", "Bei „falsch“: Verbessere die Aussage."], "4 Minuten · gemeinsam · mündlich",
@@ -137,15 +154,15 @@ function merkSlide(nr, title, kern, beispiel, wofuer, test, notes, kernSize = 22
 }
 
 // ============ Absolutismus ============
-merkSlide(1, "Absolutismus",
+merkSlide(2, "Absolutismus",
   "**Absolutismus** war eine Herrschaftsform in Europa im **17. und 18. Jahrhundert**, in der ein einzelner Monarch (König oder Fürst) **uneingeschränkt (absolut)** herrschte.",
   "Ludwig XIV. verkündet 1661: „Ich regiere jetzt selbst.“",
   "Der Begriff ordnet eine ganze Epoche ein und ist im Test die Grundlage für alle weiteren Fragen.",
   "Kann jemand den König stoppen (Parlament, Verfassung, Stände)? **Nein** → Absolutismus.",
-  "Vorher: Wort „Absolutismus“ an die Tafel, gemeinsam klären: absolut = uneingeschränkt. Dann Ansage: „Jetzt schreibt ihr von der Folie ab: Merksatz 1. Rahmt ihn rot ein.“", 21);
+  "Vorher: Wort „Absolutismus“ an die Tafel, gemeinsam klären: absolut = uneingeschränkt. Dann Ansage: „Jetzt schreibt ihr von der Folie ab: Merksatz 2. Rahmt ihn rot ein.“", 21);
 
 {
-  const { s, top } = taskSlide("Übung 1", "Absolutismus – ja oder nein?", ["Schreibe Ü1 an den Rand.", "Schreibe Nummer + „Absolutismus“ oder „kein Absolutismus“.", "Begründe mit dem Test: Kann jemand den König stoppen?"], "4 Minuten · allein · leise",
+  const { s, top } = taskSlide("Übung 2", "Absolutismus – ja oder nein?", ["Schreibe Ü2 an den Rand.", "Schreibe Nummer + „Absolutismus“ oder „kein Absolutismus“.", "Begründe mit dem Test: Kann jemand den König stoppen?"], "4 Minuten · allein · leise",
     "Lösung: 1 Absolutismus (keine Kontrolle) · 2 kein Absolutismus (Parlament kann den König stoppen) · 3 Absolutismus (Beamte sind dem König zum Gehorsam verpflichtet, er kontrolliert sie) · 4 kein Absolutismus (Wahl = Demokratie, Macht ist begrenzt). Nach der Einzelarbeit: „Wer drankommt, schreibt an die Tafel. Alle prüfen mit.“ Dann: „Vergleicht und verbessert mit Grün.“");
   sentences(s, [
     "Der König entscheidet allein über Gesetze, Krieg und Steuern.",
@@ -153,23 +170,6 @@ merkSlide(1, "Absolutismus",
     "Beamte handeln im Namen des Königs und müssen ihm gehorchen.",
     "Die Bürger wählen alle vier Jahre ihre Regierung.",
   ], top, { size: 22, rh: 0.8 });
-}
-
-// ============ Fünf Säulen ============
-merkSlide(2, "Die fünf Säulen des Absolutismus",
-  "Ludwig XIV. sicherte seine Macht auf **fünf Säulen**: **1** Verwaltung und Justiz · **2** Adel und Hof von Versailles · **3** Wirtschaft (Merkantilismus) · **4** Religion (Gottesgnadentum) · **5** Heer (stehendes Heer).",
-  "[r:Verwaltung] kontrolliert das Land · [r:Hof] bindet den Adel · [r:Wirtschaft] liefert Geld · [r:Religion] begründet die Macht · [r:Heer] setzt sie durch",
-  "Im Test sollst du die Säulen nennen **und** erklären, wie der König damit seine Macht sichert.",
-  "Bei jeder Säule fragen: **Was sichert der König damit?**",
-  "Ansage: „Jetzt schreibt ihr von der Folie ab: Merksatz 2. Rahmt ihn rot ein.“ Danach Arbeitsblatt Lückentext verteilen. Tipp: Die Säulen sind aus dem Gruppenpuzzle bekannt – kurz fragen, wer welche Säule bearbeitet hat.", 20);
-
-{
-  const { s, top } = taskSlide("Übung 2 · Arbeitsblatt", "Lückentext: Die fünf Säulen", ["Schreibe Ü2 oben auf das Arbeitsblatt.", "Lies den Text einmal ganz. Ergänze dann die 12 Lücken mit dem Wortspeicher.", "Streiche jedes benutzte Wort durch. Zwei Wörter passen nicht."], "6 Minuten · allein · leise",
-    "Lösung: 1 absoluter · 2 Beamte · 3 Intendanten · 4 Steuerfreiheit · 5 Versailles · 6 Merkantilismus · 7 Zölle · 8 Gottesgnadentum · 9 Glaube · 10 stehendes · 11 400.000 · 12 Drittel. Nicht passend: Söldner, Parlament. Kontrolle: „Wer drankommt, liest einen Absatz vor. Alle prüfen mit.“ Dann „Vergleicht und verbessert mit Grün.“ Schnelle machen die ★-Aufgabe (wichtigste Säule begründen).",
-    "Fertig? Stift hinlegen. Schnelle: ★-Aufgabe.");
-  box(s, 0.6, top + 0.1, 12.15, 1.6, LIGHT);
-  txt(s, "Wortspeicher", { x: 0.9, y: top + 0.22, w: 4, h: 0.35, fontFace: HEAD, fontSize: 17, bold: true, color: RED });
-  txt(s, "Beamte · Glaube · Söldner · Merkantilismus · Gottesgnadentum · Versailles · Steuerfreiheit · Zölle · stehendes · 400.000 · Drittel · absoluter · Intendanten · Parlament", { x: 0.9, y: top + 0.62, w: 11.6, h: 1.0, fontFace: HEAD, fontSize: 20 });
 }
 
 // ============ Ständegesellschaft ============
@@ -225,7 +225,7 @@ merkSlide(3, "Die Ständegesellschaft",
   s.background = { color: WHITE };
   txt(s, "ZUM SCHLUSS · STIFTE LIEGEN", { x: 0.6, y: 0.35, w: 10, h: 0.3, fontSize: 13, color: MUTED, charSpacing: 2, bold: true });
   txt(s, "So lernst du bis zum Test", { x: 0.6, y: 0.65, w: 12.1, h: 0.75, fontFace: HEAD, fontSize: 34, bold: true });
-  const items = ["Merksatz 1 auswendig: Was bedeutet Absolutismus?", "Lückentext noch einmal ohne Wortspeicher ausfüllen", "Tabelle Ständegesellschaft aus dem Kopf aufschreiben", "Deinen Ü4-Satz zu einem zweiten Stand noch einmal schreiben"];
+  const items = ["Merksatz 2 auswendig: Was bedeutet Absolutismus?", "Lückentext noch einmal ohne Wortspeicher ausfüllen", "Tabelle Ständegesellschaft aus dem Kopf aufschreiben", "Deinen Ü4-Satz zu einem zweiten Stand noch einmal schreiben"];
   items.forEach((x, i) => {
     const y = 1.7 + i * 1.05;
     box(s, 0.6, y, 12.15, 0.9, i % 2 ? LIGHT : LIGHT2);

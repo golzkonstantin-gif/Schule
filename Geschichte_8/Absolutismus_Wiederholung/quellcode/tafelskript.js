@@ -96,15 +96,15 @@ doc.push(table([900, 4400, 2100, 2806], [
   row(["Min.", "Phase", "Material", "Arbeitsform"].map((h, i) => hdr(h, [900, 4400, 2100, 2806][i], NAVY, 19)), 340),
   ...[
     ["2", "0  Testankündigung", "Folie 2", "zuhören"],
-    ["4", "1  Einstieg: Wahr oder falsch?", "Folie 3", "mündlich, gemeinsam"],
-    ["7", "2  Absolutismus: Merksatz 1 + Ü1", "Folie 4–5", "abschreiben, allein, Tafel"],
-    ["11", "3  Fünf Säulen: Merksatz 2 + Lückentext (Ü2)", "Folie 6–7, Arbeitsblatt", "abschreiben, allein, Kontrolle"],
+    ["11", "1  Fünf Säulen: Merksatz 1 + Lückentext (Ü1)", "Folie 3–4, Arbeitsblatt", "abschreiben, allein, Kontrolle"],
+    ["4", "2  Wahr oder falsch?", "Folie 5", "mündlich, gemeinsam"],
+    ["7", "3  Absolutismus: Merksatz 2 + Ü2", "Folie 6–7", "abschreiben, allein, Tafel"],
     ["10", "4  Ständegesellschaft: Tabelle (Ü3) + Merksatz 3", "Folie 8–9, Tafelbild", "gemeinsam, abschreiben"],
     ["9", "5  „Im Absolutismus fühle ich mich …“ (Ü4)", "Folie 10–11", "allein, Kontrolle"],
     ["2", "6  Lernliste und Test", "Folie 12", "zuhören"],
   ].map((r) => row(r.map((v, i) => tc(v, [900, 4400, 2100, 2806][i], { size: 20, bold: i < 2 })), 340)),
 ]));
-doc.push(p(S("Zeitpuffer: Wird es knapp, die Kontrolle zu Ü1 auf zwei Sätze kürzen (schon eingeplant) und bei Ü4 nur zwei Schüler vorlesen lassen. Gibt es eine Doppelstunde, Ü3 als Partnerquiz verlängern.", { italics: true, color: MUTED }), { before: 80, after: 60 }));
+doc.push(p(S("Zeitpuffer: Wird es knapp, die Kontrolle zu Ü2 auf zwei Sätze kürzen (schon eingeplant) und bei Ü4 nur zwei Schüler vorlesen lassen. Gibt es eine Doppelstunde, Ü3 als Partnerquiz verlängern.", { italics: true, color: MUTED }), { before: 80, after: 60 }));
 
 doc.push(h3("Eindeutige Ansagen (bei jedem Wechsel, wörtlich)"));
 doc.push(table([4700, 5506], [
@@ -127,24 +127,10 @@ doc.push(...steps([
 ]));
 
 // Phase 1
-doc.push(phase("1", "Einstieg: Wahr oder falsch?", 4));
+doc.push(phase("1", "Die fünf Säulen", 11));
 doc.push(...steps([
-  ["gemeinsam", { say: "Stifte liegen. Ihr schreibt noch nichts auf. Entscheidet still: wahr oder falsch? Dann meldet ihr euch und begründet.", do: ["Die vier Behauptungen stehen auf Folie 3 (oder vorher an der Tafel). Pro Behauptung eine Antwort mit Begründung, bei „falsch“ wird die Aussage verbessert.", "Die Antworten zeigen, was schon sitzt. Nicht ausführlich erklären: Was unsicher ist, kommt in den folgenden Phasen."], board: board("Mitte · Behauptungen", [bl("1  Der Dritte Stand war mit Abstand der größte Stand."), bl("2  Der Adel musste hohe Steuern an den König zahlen."), bl("3  Ludwig XIV. verzichtete auf Söldner und baute ein stehendes Heer auf."), bl("4  Ludwig XIV. erlaubte den Protestanten die freie Religionsausübung.", { after: 0 })]), sol: "1 wahr (ca. 20 Millionen von gut 20,6 Millionen) · 2 falsch: Der Adel musste keine Steuern zahlen (Vorrecht) · 3 wahr (Säule Heer) · 4 falsch: 1685 beendete er die religiöse Toleranz, ein König, ein Glaube (Säule Religion)." }],
-]));
-
-doc.push(phase("2", "Absolutismus", 7));
-doc.push(...steps([
-  ["gemeinsam", { say: "Meldet euch. Ihr schreibt noch nichts auf.", do: ["Frage: Was bedeutet das Wort „absolut“? Wo habt ihr es schon gehört (absolut richtig, absoluter Nullpunkt)?", "Erwartung: uneingeschränkt, ohne Ausnahme."], board: board("Mitte", [bl([N("Absolut", { bold: true, color: RED }), N("-ismus:  absolut = uneingeschränkt")], {}), bl("Herrschaft ohne Kontrolle durch andere")]) }],
-  ["abschreiben", { say: "Jetzt schreibt ihr von der Folie ab: Merksatz 1. Rahmt ihn rot ein.", board: merkBoard(1, "Absolutismus", "Absolutismus war eine Herrschaftsform in Europa im 17. und 18. Jahrhundert, in der ein einzelner Monarch (König oder Fürst) uneingeschränkt (absolut) herrschte.  Beispiel: Ludwig XIV. verkündet 1661: „Ich regiere jetzt selbst.“  Wofür? Den Begriff einordnen – Grundlage für den Test.  Test: Kann jemand den König stoppen? Nein → Absolutismus.") }],
-  ["allein", { say: "Jetzt arbeitet ihr allein. Die Aufgabe steht rechts.", board: auftrag("Ü1 Absolutismus – ja oder nein?", ["Schreibe Ü1 an den Rand.", "Schreibe Nummer + „Absolutismus“ oder „kein Absolutismus“.", "Begründe mit dem Test: Kann jemand den König stoppen?"], [bl("1  Der König entscheidet allein über Gesetze, Krieg und Steuern."), bl("2  Ein Parlament kann Steuererhöhungen des Königs verbieten."), bl("3  Beamte handeln im Namen des Königs und müssen ihm gehorchen."), bl("4  Die Bürger wählen alle vier Jahre ihre Regierung.", { after: 0 })], "4 Minuten · allein · leise") }],
-  ["tafel", { say: "Wer drankommt, schreibt an die Tafel. Alle prüfen mit. … Vergleicht und verbessert mit Grün.", sol: "1 Absolutismus (niemand kontrolliert ihn) · 2 kein Absolutismus (das Parlament kann den König stoppen) · 3 Absolutismus (Beamte sind ihm zum Gehorsam verpflichtet, er kontrolliert sie) · 4 kein Absolutismus (Wahl = Macht ist begrenzt und auf Zeit)." }],
-]));
-
-// Phase 2
-doc.push(phase("3", "Die fünf Säulen", 11));
-doc.push(...steps([
-  ["abschreiben", { say: "Jetzt schreibt ihr von der Folie ab: Merksatz 2. Rahmt ihn rot ein.", do: ["Kurz fragen: Wer hat welche Säule im Gruppenpuzzle bearbeitet? (Stärkt das Wiedererkennen.)"], board: merkBoard(2, "Die fünf Säulen des Absolutismus", "Ludwig XIV. sicherte seine Macht auf fünf Säulen: 1 Verwaltung und Justiz · 2 Adel und Hof von Versailles · 3 Wirtschaft (Merkantilismus) · 4 Religion (Gottesgnadentum) · 5 Heer (stehendes Heer).  Wofür? Im Test nennen und erklären.  Test: Was sichert der König damit?") }],
-  ["allein", { say: "Ich teile das Arbeitsblatt aus. Jetzt arbeitet ihr allein. Die Aufgabe steht rechts.", board: auftrag("Ü2 Lückentext: Die fünf Säulen", ["Schreibe Ü2 oben auf das Arbeitsblatt.", "Lies den Text einmal ganz. Ergänze die 12 Lücken mit dem Wortspeicher.", "Streiche jedes benutzte Wort durch. Zwei Wörter passen nicht."], [], "6 Minuten · allein · leise"), do: ["Schnelle: ★-Aufgabe auf dem Arbeitsblatt (wichtigste Säule in einem Satz begründen)."] }],
+  ["abschreiben", { say: "Jetzt schreibt ihr von der Folie ab: Merksatz 1. Rahmt ihn rot ein.", do: ["Kurz fragen: Wer hat welche Säule im Gruppenpuzzle bearbeitet? (Stärkt das Wiedererkennen.)"], board: merkBoard(1, "Die fünf Säulen des Absolutismus", "Ludwig XIV. sicherte seine Macht auf fünf Säulen: 1 Verwaltung und Justiz · 2 Adel und Hof von Versailles · 3 Wirtschaft (Merkantilismus) · 4 Religion (Gottesgnadentum) · 5 Heer (stehendes Heer).  Wofür? Im Test nennen und erklären.  Test: Was sichert der König damit?") }],
+  ["allein", { say: "Ich teile das Arbeitsblatt aus. Jetzt arbeitet ihr allein. Die Aufgabe steht rechts.", board: auftrag("Ü1 Lückentext: Die fünf Säulen", ["Schreibe Ü1 oben auf das Arbeitsblatt.", "Lies den Text einmal ganz. Ergänze die 12 Lücken mit dem Wortspeicher.", "Streiche jedes benutzte Wort durch. Zwei Wörter passen nicht."], [], "6 Minuten · allein · leise"), do: ["Schnelle: ★-Aufgabe auf dem Arbeitsblatt (wichtigste Säule in einem Satz begründen)."] }],
   ["tafel", { say: "Wer drankommt, liest einen Absatz vor. Alle prüfen mit. … Vergleicht und verbessert mit Grün.", do: ["Pro Säule eine Schülerin oder einen Schüler den Absatz vorlesen lassen. Bei Fehlern nach der Begründung fragen: „Welche Stelle im Text spricht dagegen?“"], sol: "1 absoluter · 2 Beamte · 3 Intendanten · 4 Steuerfreiheit · 5 Versailles · 6 Merkantilismus · 7 Zölle · 8 Gottesgnadentum · 9 Glaube · 10 stehendes · 11 400.000 · 12 Drittel. Nicht passend: Söldner (Ludwig verzichtete auf sie), Parlament (im Absolutismus kann niemand den König stoppen)." }],
   ["gemeinsam", { say: "Meldet euch. Ihr schreibt noch nichts auf. Was sichert der König mit jeder Säule?", do: ["Das Tafelbild entsteht gemeinsam, nicht abzeichnen (steht schon im Merksatz und im Lückentext):"], board: board("Mitte · Säulen-Tafelbild", [
     bl([N("Dach:  Absolute Herrschaft Ludwigs XIV.", { bold: true, color: NAVY })]),
@@ -156,6 +142,20 @@ doc.push(...steps([
 ]));
 
 // Phase 3
+doc.push(phase("2", "Einstieg: Wahr oder falsch?", 4));
+doc.push(...steps([
+  ["gemeinsam", { say: "Stifte liegen. Ihr schreibt noch nichts auf. Entscheidet still: wahr oder falsch? Dann meldet ihr euch und begründet.", do: ["Die vier Behauptungen stehen auf Folie 3 (oder vorher an der Tafel). Pro Behauptung eine Antwort mit Begründung, bei „falsch“ wird die Aussage verbessert.", "Die Antworten zeigen, was schon sitzt. Nicht ausführlich erklären: Was unsicher ist, kommt in den folgenden Phasen."], board: board("Mitte · Behauptungen", [bl("1  Der Dritte Stand war mit Abstand der größte Stand."), bl("2  Der Adel musste hohe Steuern an den König zahlen."), bl("3  Ludwig XIV. verzichtete auf Söldner und baute ein stehendes Heer auf."), bl("4  Ludwig XIV. erlaubte den Protestanten die freie Religionsausübung.", { after: 0 })]), sol: "1 wahr (ca. 20 Millionen von gut 20,6 Millionen) · 2 falsch: Der Adel musste keine Steuern zahlen (Vorrecht) · 3 wahr (Säule Heer) · 4 falsch: 1685 beendete er die religiöse Toleranz, ein König, ein Glaube (Säule Religion)." }],
+]));
+
+doc.push(phase("3", "Absolutismus", 7));
+doc.push(...steps([
+  ["gemeinsam", { say: "Meldet euch. Ihr schreibt noch nichts auf.", do: ["Frage: Was bedeutet das Wort „absolut“? Wo habt ihr es schon gehört (absolut richtig, absoluter Nullpunkt)?", "Erwartung: uneingeschränkt, ohne Ausnahme."], board: board("Mitte", [bl([N("Absolut", { bold: true, color: RED }), N("-ismus:  absolut = uneingeschränkt")], {}), bl("Herrschaft ohne Kontrolle durch andere")]) }],
+  ["abschreiben", { say: "Jetzt schreibt ihr von der Folie ab: Merksatz 2. Rahmt ihn rot ein.", board: merkBoard(2, "Absolutismus", "Absolutismus war eine Herrschaftsform in Europa im 17. und 18. Jahrhundert, in der ein einzelner Monarch (König oder Fürst) uneingeschränkt (absolut) herrschte.  Beispiel: Ludwig XIV. verkündet 1661: „Ich regiere jetzt selbst.“  Wofür? Den Begriff einordnen – Grundlage für den Test.  Test: Kann jemand den König stoppen? Nein → Absolutismus.") }],
+  ["allein", { say: "Jetzt arbeitet ihr allein. Die Aufgabe steht rechts.", board: auftrag("Ü2 Absolutismus – ja oder nein?", ["Schreibe Ü2 an den Rand.", "Schreibe Nummer + „Absolutismus“ oder „kein Absolutismus“.", "Begründe mit dem Test: Kann jemand den König stoppen?"], [bl("1  Der König entscheidet allein über Gesetze, Krieg und Steuern."), bl("2  Ein Parlament kann Steuererhöhungen des Königs verbieten."), bl("3  Beamte handeln im Namen des Königs und müssen ihm gehorchen."), bl("4  Die Bürger wählen alle vier Jahre ihre Regierung.", { after: 0 })], "4 Minuten · allein · leise") }],
+  ["tafel", { say: "Wer drankommt, schreibt an die Tafel. Alle prüfen mit. … Vergleicht und verbessert mit Grün.", sol: "1 Absolutismus (niemand kontrolliert ihn) · 2 kein Absolutismus (das Parlament kann den König stoppen) · 3 Absolutismus (Beamte sind ihm zum Gehorsam verpflichtet, er kontrolliert sie) · 4 kein Absolutismus (Wahl = Macht ist begrenzt und auf Zeit)." }],
+]));
+
+// Phase 2
 doc.push(phase("4", "Ständegesellschaft", 10));
 doc.push(...steps([
   ["gemeinsam", { say: "Hefte zu. Ihr schreibt noch nichts auf. Meldet euch.", do: ["Die leere Tabelle (Kopfzeile und Stände) ist schon an der Tafel. Unten steht die ausgefüllte Lösung.", "Fragen der Reihe nach: Wie heißen die drei Stände? Wie viele Menschen, ungefähr wie viel Prozent? Welche Bildung, welche Vorrechte, welche Pflichten? Durften die Stände mitbestimmen?", "Lücken bewusst stehen lassen und später mit Heft oder Buch klären."], board: board("Mitte · Tabelle", [stTable(true)]), sol: "Alle Angaben stammen aus den Gruppenpuzzle-Texten (Klerus, Adel, Bauern und Bürger). Die Texte nennen zur Mitbestimmung des Klerus nichts; hier ggf. ergänzen. Umrechnung der Zahlen: Klerus unter 1 %, Adel ca. 2–3 %, Dritter Stand ca. 97 %." }],
@@ -180,9 +180,9 @@ doc.push(...steps([
 doc.push(h3("So sieht das Heft am Ende der Stunde aus"));
 doc.push(table([2300, 7906], [
   ["Überschrift", "Absolutismus und Ständegesellschaft – Wiederholung (mit Lineal unterstrichen) · Datum rechts"],
-  ["Merksatz 1", "Absolutismus: Definition, Beispiel Ludwig XIV., Wofür, Test – rot umrahmt"],
-  ["Ü1", "4 Zeilen: Nummer + Absolutismus/kein Absolutismus + Begründung"],
-  ["Merksatz 2", "Die fünf Säulen – rot umrahmt (Lückentext liegt als Arbeitsblatt dabei, eingeklebt)"],
+  ["Merksatz 1", "Die fünf Säulen – rot umrahmt (Lückentext liegt als Arbeitsblatt dabei, eingeklebt)"],
+  ["Merksatz 2", "Absolutismus: Definition, Beispiel Ludwig XIV., Wofür, Test – rot umrahmt"],
+  ["Ü2", "4 Zeilen: Nummer + Absolutismus/kein Absolutismus + Begründung"],
   ["Ü3 Tabelle", "Ständegesellschaft: Stand, Anzahl, Bildung, Vorrechte, Pflichten, Mitbestimmung"],
   ["Merksatz 3", "Die Ständegesellschaft – rot umrahmt"],
   ["Ü4", "Satz „Im Absolutismus fühle ich mich …, weil …“ – Verbesserungen grün"],

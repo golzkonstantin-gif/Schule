@@ -20,7 +20,7 @@
 
 ### Wiederholung Absolutismus und Ständegesellschaft (geplant, 45 Min.)
 - **Material:** `Absolutismus_Wiederholung/` (Tafelskript, Präsentation mit Merksätzen und Aufgaben, Arbeitsblatt Lückentext mit Lösung)
-- **Inhalt:** Testankündigung, Einstieg „Wahr oder falsch?“ (vier Behauptungen zu Anzahl, Vorrechten, Heer, Religion; Kästchenaufgabe gab es schon), Absolutismus (Merksatz, Ü1 ja/nein mit Begründung), fünf Säulen (Merksatz, Lückentext, Säulen-Tafelbild), Ständegesellschaft (Tabelle aus dem Gedächtnis, Merksatz), Ü4 „Im Absolutismus fühle ich mich …, weil …“ mit Bezug auf Rechte und Pflichten, Lernliste.
+- **Inhalt (Reihenfolge):** Testankündigung, fünf Säulen zuerst (noch nicht abgeschlossen: Merksatz, Lückentext, Säulen-Tafelbild), „Wahr oder falsch?“ (vier Behauptungen zu Anzahl, Vorrechten, Heer, Religion; Kästchenaufgabe gab es schon), Absolutismus (Merksatz, Ü2 ja/nein mit Begründung), Ständegesellschaft (Tabelle aus dem Gedächtnis, Merksatz), Ü4 „Im Absolutismus fühle ich mich …, weil …“ mit Bezug auf Rechte und Pflichten, Lernliste.
 - **Planungsentscheidungen:**
   - Die Säulen stammen aus dem Gruppenpuzzle-Text. Der Lückentext bringt alle fünf zusammen, der Wortspeicher enthält zwei Fallen (Söldner, Generalstände).
   - Zahlen der Stände aus den Texten; Tabelle entspricht dem Gruppenpuzzle-Raster (Anzahl, Bildung, Vorrechte, Pflichten) plus Mitbestimmung. Alle Angaben (ca. 150 000 / 500 000 / 20 000 000; Bildung, Vorrechte, Pflichten) stammen aus den Gruppenpuzzle-Texten. Zur Mitbestimmung des Klerus nennen die Texte nichts.
