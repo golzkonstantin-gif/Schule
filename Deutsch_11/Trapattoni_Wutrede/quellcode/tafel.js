@@ -107,7 +107,8 @@ const board = table([TW], [
       cell([
         p([phase(6), ck("Jetzt bringt ihr das in Ordnung!", { bold: true, size: 20, color: "F5D76E" })], { after: 40 }),
         p(ck("Schreibt als Trapattoni einen Brief an die Spieler.", { size: 18 }), { after: 20 }),
-        p(ck("• alle vier Seiten „heilen“  • Ich-Botschaft  • Empathie  • konkrete Bitte  • Metakommunikation", { size: 17 }), { after: 20 }),
+        p(ck("Inhalt: alle vier Seiten „heilen“ – Ich-Botschaft · Empathie · konkrete Bitte · Metakommunikation", { size: 17 }), { after: 10 }),
+        p(ck("Sprache: Briefform · Ton · Rechtschreibung · Grammatik · Zeichensetzung", { size: 17 }), { after: 20 }),
         p(ck("Der Brief ersetzt den angekündigten Test.", { size: 17, italics: true, color: "C9C3A8" }), { after: 0 }),
       ], { w: boardW2, fill: BOARD2, borders: chalkBorder, m: 100 }),
     ])]),
@@ -140,7 +141,7 @@ const schritte = [
     "„Spieler öffentlich an den Pranger zu stellen – wozu führt das?“ Ergebnis zuspitzen: Der Trainer verliert.",
     "entwickeln Folgen (Spieler, Mannschaft, Medien, Trainer)"],
   ["⑥", "Transfer: Brief (letzte 20–25 Min.)", "Kasten unten rechts mit Auftrag und Kriterien.",
-    "„Jetzt bringt ihr das in Ordnung.“ Hinweis: Der Brief ersetzt den angekündigten Test und wird von allen geschrieben. Kriterien siehe Seite 3.",
+    "„Jetzt bringt ihr das in Ordnung.“ Der Brief ersetzt den Test. Note aus Inhalt + Sprache (inkl. Rechtschreibung, Grammatik, Zeichensetzung), Kriterien S. 3.",
     "schreiben einzeln einen Brief als Trapattoni an die Spieler"],
 ];
 const sRows = [row([hdr("", sW[0]), hdr("Phase", sW[1]), hdr("Was an die Tafel kommt", sW[2]), hdr("Ihre Moderation / Impuls", sW[3]), hdr("Klasse", sW[4])], 420)];
@@ -150,7 +151,7 @@ schritte.forEach(([n, ph, tafel, imp, sus]) => sRows.push(row([
   cell(p(t(tafel, { size: 19 }), { after: 0 }), { w: sW[2] }),
   cell(p(t(imp, { size: 19 }), { after: 0 }), { w: sW[3], fill: LIGHT2 }),
   cell(p(t(sus, { size: 19, color: MUTED }), { after: 0 }), { w: sW[4] }),
-], 700)));
+], 560)));
 
 const page2 = [
   kicker("Tafelscript · Ablauf", true),
@@ -166,38 +167,53 @@ const page2 = [
 
 // ================= Seite 3: Brief als Ersatz für den Test =================
 const kW = [3400, 7738, 2000, 2000];
-const kriterien = [
+const inhalt = [
   ["Sachinhalt klären", "Benennt die Kritik sachlich und konkret (z. B. Defensivarbeit, Einsatz im Training) – ohne Beleidigung und ohne „Flasche leer“.", "4"],
   ["Selbstoffenbarung ehrlich", "Zeigt Frust und Enttäuschung als Ich-Botschaft („Ich war enttäuscht, als …“) statt als Wutausbruch.", "4"],
   ["Beziehung reparieren", "Entschuldigt sich für die öffentliche Kritik, zeigt Respekt, geht auf die Sicht der Spieler ein (Empathie).", "4"],
   ["Appell an die Richtigen", "Richtet eine konkrete, erfüllbare Bitte direkt an die Spieler (wer, was, bis wann) – z. B. Gespräch unter vier Augen, Einsatz am Samstag.", "4"],
-  ["Metakommunikation", "Spricht über die Pressekonferenz selbst: was schiefgelaufen ist und wie man künftig miteinander redet (intern statt über die Medien).", "2"],
-  ["Form", "Briefform (Ort, Datum, Anrede, Schluss), passender Ton, sprachlich korrekt.", "2"],
+  ["Metakommunikation", "Spricht über die Pressekonferenz selbst: was schiefgelaufen ist und wie man künftig miteinander redet (intern statt über die Medien).", "4"],
+];
+const sprache = [
+  ["Ausdruck und Ton", "Angemessener, respektvoller Ton; treffende Wortwahl; abwechslungsreicher Satzbau.", "2"],
+  ["Briefform", "Ort, Datum, Anrede, Einleitung, Schluss, Grußformel.", "2"],
+  ["Rechtschreibung", "Korrekte Schreibung, auch Groß- und Kleinschreibung; Anredepronomen (du/ihr bzw. Sie) einheitlich.", "2"],
+  ["Grammatik", "Korrekter Satzbau, Kasus, Tempus und Bezüge.", "2"],
+  ["Zeichensetzung", "Kommas (v. a. bei Nebensätzen und Anrede), Satzzeichen, Zeichen bei wörtlicher Rede.", "2"],
 ];
 const kRows = [row([hdr("Kriterium", kW[0]), hdr("Erwartung", kW[1]), hdr("Punkte", kW[2]), hdr("erreicht", kW[3])], 420)];
-kriterien.forEach(([a, b, c]) => kRows.push(row([
-  cell(p(t(a, { bold: true, size: 20, color: NAVY }), { after: 0 }), { w: kW[0], fill: LIGHT }),
-  cell(p(t(b, { size: 19 }), { after: 0 }), { w: kW[1] }),
-  cell(p(t(c, { bold: true, size: 22 }), { align: AlignmentType.CENTER, after: 0 }), { w: kW[2], valign: VerticalAlign.CENTER }),
+const band = (label) => kRows.push(row([cell(p(t(label, { bold: true, size: 20, color: "FFFFFF" }), { after: 0 }), { w: kW.reduce((x, y) => x + y, 0), fill: "5B6B8C", span: 4 })], 300));
+const crit = ([a, b, c]) => kRows.push(row([
+  cell(p(t(a, { bold: true, size: 19, color: NAVY }), { after: 0 }), { w: kW[0], fill: LIGHT, m: 30 }),
+  cell(p(t(b, { size: 17 }), { after: 0 }), { w: kW[1], m: 30 }),
+  cell(p(t(c, { bold: true, size: 21 }), { align: AlignmentType.CENTER, after: 0 }), { w: kW[2], valign: VerticalAlign.CENTER }),
   cell(p(t("")), { w: kW[3] }),
-], 560)));
-kRows.push(row([
-  cell(p(t("Gesamt", { bold: true, size: 20, color: NAVY }), { after: 0 }), { w: kW[0], fill: LIGHT2 }),
-  cell(p(t("")), { w: kW[1], fill: LIGHT2 }),
-  cell(p(t("20", { bold: true, size: 22 }), { align: AlignmentType.CENTER, after: 0 }), { w: kW[2], fill: LIGHT2 }),
-  cell(p(t("")), { w: kW[3], fill: LIGHT2 }),
-], 460));
+], 280));
+const sum = (label, pts, fill = LIGHT2) => kRows.push(row([
+  cell(p(t(label, { bold: true, size: 19, color: NAVY }), { after: 0 }), { w: kW[0], fill }),
+  cell(p(t("")), { w: kW[1], fill }),
+  cell(p(t(pts, { bold: true, size: 21 }), { align: AlignmentType.CENTER, after: 0 }), { w: kW[2], fill }),
+  cell(p(t("")), { w: kW[3], fill }),
+], 320));
+band("I  Inhalt – Anwendung des Vier-Seiten-Modells und der Techniken");
+inhalt.forEach(crit);
+sum("Summe Inhalt", "20");
+band("II  Sprache – Darstellung, Rechtschreibung, Grammatik, Zeichensetzung");
+sprache.forEach(crit);
+sum("Summe Sprache", "10");
+sum("Gesamt (Inhalt + Sprache)", "30", "D9E2F3");
 
 const page3 = [
   kicker("Tafelscript · Transfer ⑥", true),
-  h1("„Jetzt bringt ihr das in Ordnung“ – Brief an die Spieler"),
+  p(t("„Jetzt bringt ihr das in Ordnung“ – Brief an die Spieler", { font: "Cambria", size: 34, bold: true, color: NAVY }), { after: 40 }),
   infoBox([
-    [t("Auftrag (Tafel / mündlich): ", { bold: true, color: NAVY }), t("Schreibe als Giovanni Trapattoni einen Brief an Thomas Strunz, Mario Basler und Mehmet Scholl. Bringe die Missverständnisse aus der Pressekonferenz in Ordnung – so, dass alle vier Seiten der Nachricht wieder stimmen. Nutze die Techniken aus der letzten Stunde.", { size: 21 })],
-    [t("Leistungsnachweis: ", { bold: true, color: RED }), t("Der Brief ersetzt den angekündigten Test über die Kommunikationsmodelle und wird von allen geschrieben und bewertet. Er prüft dasselbe – nur angewendet statt beschrieben.", { size: 21 })],
+    [t("Auftrag (Tafel / mündlich): ", { bold: true, color: NAVY }), t("Schreibe als Giovanni Trapattoni einen Brief an Thomas Strunz, Mario Basler und Mehmet Scholl. Bringe die Missverständnisse aus der Pressekonferenz in Ordnung – so, dass alle vier Seiten der Nachricht wieder stimmen. Nutze die Techniken aus der letzten Stunde.", { size: 19 })],
+    [t("Leistungsnachweis: ", { bold: true, color: RED }), t("Der Brief ersetzt den angekündigten Test und wird von allen geschrieben. ", { size: 19 }), t("Gesamtnote: ", { bold: true, color: NAVY }), t("Inhalt (20 P.) + Sprache (10 P.) = 30 P., Gewichtung 2 : 1 – bei anderen Fachschaftsvorgaben anpassen.", { size: 19 })],
   ]),
-  h2("✓", "Bewertungskriterien"),
+  p([t("✓  ", { font: "Cambria", size: 24, bold: true, color: RED }), t("Bewertungskriterien – Inhalt und Sprache ergeben die Gesamtnote", { font: "Cambria", size: 24, bold: true, color: NAVY })], { before: 80, after: 60 }),
   table(kW, kRows),
-  h2("✎", "Mögliche Formulierungen (Erwartungshorizont)"),
+  kicker("Tafelscript · Transfer ⑥ · Erwartungshorizont", true),
+  h2("✎", "Mögliche Formulierungen im Brief"),
   p([t("Metakommunikation: ", { bold: true, size: 20, color: NAVY }), t("„Liebe Spieler, auf der Pressekonferenz am Dienstag habe ich Dinge über euch gesagt, die ich euch persönlich hätte sagen müssen.“", { size: 20, italics: true })], { after: 40 }),
   p([t("Ich-Botschaft: ", { bold: true, size: 20, color: NAVY }), t("„Ich war nach dem Spiel in Schalke sehr enttäuscht und habe mich hilflos gefühlt, weil ich das Gefühl hatte, dass wir nicht als Mannschaft kämpfen.“", { size: 20, italics: true })], { after: 40 }),
   p([t("Empathie: ", { bold: true, size: 20, color: NAVY }), t("„Ich kann verstehen, dass ihr euch vor ganz Deutschland bloßgestellt gefühlt habt. Das tut mir leid.“", { size: 20, italics: true })], { after: 40 }),
@@ -205,7 +221,7 @@ const page3 = [
 ];
 
 // ================= Dokument =================
-const pageProps = { page: { size: { width: 11906, height: 16838, orientation: PageOrientation.LANDSCAPE }, margin: { top: 700, bottom: 700, left: 850, right: 850, footer: 350 } } };
+const pageProps = { page: { size: { width: 11906, height: 16838, orientation: PageOrientation.LANDSCAPE }, margin: { top: 600, bottom: 600, left: 850, right: 850, footer: 350 } } };
 const footer = new Footer({ children: [new Paragraph({ alignment: AlignmentType.RIGHT, children: [new TextRun({ font: "Calibri", size: 16, color: MUTED, children: ["Tafelscript · Trapattonis Wutrede · Seite ", PageNumber.CURRENT] })] })] });
 const doc = new Document({
   styles: { default: { document: { run: { font: "Calibri", size: 22 } } } },
