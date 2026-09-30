@@ -96,14 +96,15 @@ doc.push(table([900, 4400, 2100, 2806], [
   row(["Min.", "Phase", "Material", "Arbeitsform"].map((h, i) => hdr(h, [900, 4400, 2100, 2806][i], NAVY, 19)), 340),
   ...[
     ["2", "0  Testankündigung", "Folie 2", "zuhören"],
-    ["9", "1  Absolutismus: Merksatz 1 + Ü1", "Folie 3–4", "abschreiben, allein, Tafel"],
-    ["12", "2  Fünf Säulen: Merksatz 2 + Lückentext (Ü2)", "Folie 5–6, Arbeitsblatt", "abschreiben, allein, Kontrolle"],
-    ["10", "3  Ständegesellschaft: Tabelle (Ü3) + Merksatz 3", "Folie 7–8, Tafelbild", "gemeinsam, abschreiben"],
-    ["10", "4  „Im Absolutismus fühle ich mich …“ (Ü4)", "Folie 9–10", "allein, Kontrolle"],
-    ["2", "5  Lernliste und Test", "Folie 11", "zuhören"],
+    ["4", "1  Einstieg: Wahr oder falsch?", "Folie 3", "mündlich, gemeinsam"],
+    ["7", "2  Absolutismus: Merksatz 1 + Ü1", "Folie 4–5", "abschreiben, allein, Tafel"],
+    ["11", "3  Fünf Säulen: Merksatz 2 + Lückentext (Ü2)", "Folie 6–7, Arbeitsblatt", "abschreiben, allein, Kontrolle"],
+    ["10", "4  Ständegesellschaft: Tabelle (Ü3) + Merksatz 3", "Folie 8–9, Tafelbild", "gemeinsam, abschreiben"],
+    ["9", "5  „Im Absolutismus fühle ich mich …“ (Ü4)", "Folie 10–11", "allein, Kontrolle"],
+    ["2", "6  Lernliste und Test", "Folie 12", "zuhören"],
   ].map((r) => row(r.map((v, i) => tc(v, [900, 4400, 2100, 2806][i], { size: 20, bold: i < 2 })), 340)),
 ]));
-doc.push(p(S("Zeitpuffer: Wird es knapp, die Kontrolle zu Ü1 auf zwei Sätze kürzen und bei Ü4 nur zwei Schüler vorlesen lassen. Gibt es eine Doppelstunde, Ü3 als Partnerquiz verlängern.", { italics: true, color: MUTED }), { before: 80, after: 60 }));
+doc.push(p(S("Zeitpuffer: Wird es knapp, die Kontrolle zu Ü1 auf zwei Sätze kürzen (schon eingeplant) und bei Ü4 nur zwei Schüler vorlesen lassen. Gibt es eine Doppelstunde, Ü3 als Partnerquiz verlängern.", { italics: true, color: MUTED }), { before: 80, after: 60 }));
 
 doc.push(h3("Eindeutige Ansagen (bei jedem Wechsel, wörtlich)"));
 doc.push(table([4700, 5506], [
@@ -126,7 +127,12 @@ doc.push(...steps([
 ]));
 
 // Phase 1
-doc.push(phase("1", "Absolutismus", 9));
+doc.push(phase("1", "Einstieg: Wahr oder falsch?", 4));
+doc.push(...steps([
+  ["gemeinsam", { say: "Stifte liegen. Ihr schreibt noch nichts auf. Entscheidet still: wahr oder falsch? Dann meldet ihr euch und begründet.", do: ["Die vier Behauptungen stehen auf Folie 3 (oder vorher an der Tafel). Pro Behauptung eine Antwort mit Begründung, bei „falsch“ wird die Aussage verbessert.", "Die Antworten zeigen, was schon sitzt. Nicht ausführlich erklären: Was unsicher ist, kommt in den folgenden Phasen."], board: board("Mitte · Behauptungen", [bl("1  Der Dritte Stand war mit Abstand der größte Stand."), bl("2  Der Adel musste hohe Steuern an den König zahlen."), bl("3  Ludwig XIV. verzichtete auf Söldner und baute ein stehendes Heer auf."), bl("4  Ludwig XIV. erlaubte den Protestanten die freie Religionsausübung.", { after: 0 })]), sol: "1 wahr (ca. 20 Millionen von gut 20,6 Millionen) · 2 falsch: Der Adel musste keine Steuern zahlen (Vorrecht) · 3 wahr (Säule Heer) · 4 falsch: 1685 beendete er die religiöse Toleranz, ein König, ein Glaube (Säule Religion)." }],
+]));
+
+doc.push(phase("2", "Absolutismus", 7));
 doc.push(...steps([
   ["gemeinsam", { say: "Meldet euch. Ihr schreibt noch nichts auf.", do: ["Frage: Was bedeutet das Wort „absolut“? Wo habt ihr es schon gehört (absolut richtig, absoluter Nullpunkt)?", "Erwartung: uneingeschränkt, ohne Ausnahme."], board: board("Mitte", [bl([N("Absolut", { bold: true, color: RED }), N("-ismus:  absolut = uneingeschränkt")], {}), bl("Herrschaft ohne Kontrolle durch andere")]) }],
   ["abschreiben", { say: "Jetzt schreibt ihr von der Folie ab: Merksatz 1. Rahmt ihn rot ein.", board: merkBoard(1, "Absolutismus", "Absolutismus war eine Herrschaftsform in Europa im 17. und 18. Jahrhundert, in der ein einzelner Monarch (König oder Fürst) uneingeschränkt (absolut) herrschte.  Beispiel: Ludwig XIV. verkündet 1661: „Ich regiere jetzt selbst.“  Wofür? Den Begriff einordnen – Grundlage für den Test.  Test: Kann jemand den König stoppen? Nein → Absolutismus.") }],
@@ -135,7 +141,7 @@ doc.push(...steps([
 ]));
 
 // Phase 2
-doc.push(phase("2", "Die fünf Säulen", 12));
+doc.push(phase("3", "Die fünf Säulen", 11));
 doc.push(...steps([
   ["abschreiben", { say: "Jetzt schreibt ihr von der Folie ab: Merksatz 2. Rahmt ihn rot ein.", do: ["Kurz fragen: Wer hat welche Säule im Gruppenpuzzle bearbeitet? (Stärkt das Wiedererkennen.)"], board: merkBoard(2, "Die fünf Säulen des Absolutismus", "Ludwig XIV. sicherte seine Macht auf fünf Säulen: 1 Verwaltung und Justiz · 2 Adel und Hof von Versailles · 3 Wirtschaft (Merkantilismus) · 4 Religion (Gottesgnadentum) · 5 Heer (stehendes Heer).  Wofür? Im Test nennen und erklären.  Test: Was sichert der König damit?") }],
   ["allein", { say: "Ich teile das Arbeitsblatt aus. Jetzt arbeitet ihr allein. Die Aufgabe steht rechts.", board: auftrag("Ü2 Lückentext: Die fünf Säulen", ["Schreibe Ü2 oben auf das Arbeitsblatt.", "Lies den Text einmal ganz. Ergänze die 12 Lücken mit dem Wortspeicher.", "Streiche jedes benutzte Wort durch. Zwei Wörter passen nicht."], [], "6 Minuten · allein · leise"), do: ["Schnelle: ★-Aufgabe auf dem Arbeitsblatt (wichtigste Säule in einem Satz begründen)."] }],
@@ -150,14 +156,14 @@ doc.push(...steps([
 ]));
 
 // Phase 3
-doc.push(phase("3", "Ständegesellschaft", 10));
+doc.push(phase("4", "Ständegesellschaft", 10));
 doc.push(...steps([
   ["gemeinsam", { say: "Hefte zu. Ihr schreibt noch nichts auf. Meldet euch.", do: ["Die leere Tabelle (Kopfzeile und Stände) ist schon an der Tafel. Unten steht die ausgefüllte Lösung.", "Fragen der Reihe nach: Wie heißen die drei Stände? Wie viele Menschen, ungefähr wie viel Prozent? Welche Bildung, welche Vorrechte, welche Pflichten? Durften die Stände mitbestimmen?", "Lücken bewusst stehen lassen und später mit Heft oder Buch klären."], board: board("Mitte · Tabelle", [stTable(true)]), sol: "Alle Angaben stammen aus den Gruppenpuzzle-Texten (Klerus, Adel, Bauern und Bürger). Die Texte nennen zur Mitbestimmung des Klerus nichts; hier ggf. ergänzen. Umrechnung der Zahlen: Klerus unter 1 %, Adel ca. 2–3 %, Dritter Stand ca. 97 %." }],
   ["abschreiben", { say: "Jetzt schreibt ihr ab: die Tabelle. Mit Lineal. Dann: Merksatz 3 von der Folie. Rahmt ihn rot ein.", board: merkBoard(3, "Die Ständegesellschaft", "In der Ständegesellschaft gehört jeder Mensch durch Geburt zu einem von drei Ständen: Klerus (ca. 150 000), Adel (ca. 500 000) und Dritter Stand (ca. 20 000 000). Klerus und Adel haben Vorrechte. Der Dritte Stand zahlt Steuern und Abgaben und ist von der politischen Mitbestimmung ausgeschlossen.  Beispiel: Adel: alleiniges Jagdrecht · Klerus: Kirchenzehnt · Dritter Stand: hohe Abgaben.  Wofür? Erklären, warum Ludwig den Adel bei Laune hält und warum der Dritte Stand die Last trägt.  Test: Wer zahlt, wer ist ausgeschlossen? Wenige haben die Vorrechte, viele tragen die Last.") }],
 ]));
 
 // Phase 4
-doc.push(phase("4", "Im Absolutismus fühle ich mich …", 10));
+doc.push(phase("5", "Im Absolutismus fühle ich mich …", 9));
 doc.push(...steps([
   ["allein", { say: "Jetzt arbeitet ihr allein. Die Aufgabe steht rechts.", board: auftrag("Ü4 Im Absolutismus fühle ich mich …", ["Schreibe Ü4 an den Rand und wähle einen Stand.", "Schreibe den Satz ab und beende ihn: „Im Absolutismus fühle ich mich …, weil …“", "Nenne mindestens ein Recht und eine Pflicht deines Standes."], [bl([N("Hilfe:  ", { bold: true }), N("privilegiert · sicher · zufrieden · ausgenutzt · benachteiligt · machtlos · überlastet")], { after: 0 })], "6 Minuten · allein · leise"), sol: "Beispiele: „… als Adeliger privilegiert, weil ich keine Steuern zahlen muss und allein jagen darf. Dafür muss ich mich ehrenhaft verhalten und Verwaltungsaufgaben übernehmen.“ · „… als Bauer ausgenutzt, weil ich Steuern, hohe Abgaben und Pachtgebühren zahlen muss und von der Mitbestimmung ausgeschlossen bin.“" }],
   ["tafel", { say: "Wer drankommt, liest vor. Alle prüfen mit.", do: ["Drei Schüler vorlesen lassen, möglichst aus drei verschiedenen Ständen.", "Die Klasse prüft: Recht und Pflicht genannt? Passen sie zum Stand? Passt das Gefühl zur Begründung? (Folie 10)", "Typische Fehler: Adel zahlt Steuern · Klerus leistet Wehrdienst (ist befreit) · Dritter Stand hat Vorrechte."], sol: "Begründung ist wichtiger als das Gefühl: Jedes Gefühl ist richtig, wenn es mit Rechten und Pflichten begründet wird." }],
@@ -165,9 +171,9 @@ doc.push(...steps([
 ]));
 
 // Phase 5
-doc.push(phase("5", "Lernliste und Test", 2));
+doc.push(phase("6", "Lernliste und Test", 2));
 doc.push(...steps([
-  ["zuhoeren", { say: "Stifte liegen. Ihr hört nur zu. Das ist eure Lernliste für den Test.", do: ["Folie 11 zeigen, Testtermin noch einmal nennen, Fragen zum Test beantworten."] }],
+  ["zuhoeren", { say: "Stifte liegen. Ihr hört nur zu. Das ist eure Lernliste für den Test.", do: ["Folie 12 zeigen, Testtermin noch einmal nennen, Fragen zum Test beantworten."] }],
 ]));
 
 // Hefteintrag

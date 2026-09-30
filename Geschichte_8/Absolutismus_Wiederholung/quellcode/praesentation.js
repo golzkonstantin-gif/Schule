@@ -124,6 +124,18 @@ function merkSlide(nr, title, kern, beispiel, wofuer, test, notes, kernSize = 22
   s.addNotes("Ansage: „Stifte liegen. Ihr hört nur zu. Nächste Woche schreiben wir einen Test zu diesen drei Themen. Die Stunde heute ist eure Vorbereitung: Was hier nicht klappt, wisst ihr danach.“ Noch keinen Termin im Detail diskutieren; Fragen zum Test am Stundenende.");
 }
 
+// ============ Einstieg Wahr oder falsch ============
+{
+  const { s, top } = taskSlide("Einstieg · ohne Heft", "Wahr oder falsch?", ["Lies die vier Behauptungen. Entscheide still: wahr oder falsch?", "Melde dich: Nenne deine Entscheidung und begründe sie.", "Bei „falsch“: Verbessere die Aussage."], "4 Minuten · gemeinsam · mündlich",
+    "Ansage: „Stifte liegen. Ihr schreibt noch nichts auf. Entscheidet still und meldet euch.“ Lösung: 1 wahr (ca. 20 Mio. von gut 20,6 Mio.) · 2 falsch: Der Adel zahlte keine Steuern · 3 wahr (Säule Heer) · 4 falsch: 1685 beendete Ludwig die religiöse Toleranz (Säule Religion). Nicht lange erklären, sondern notieren, was unsicher ist. Es kommt in den folgenden Phasen.", "Wer begründet, bekommt das Wort.");
+  sentences(s, [
+    "Der Dritte Stand war mit Abstand der größte Stand.",
+    "Der Adel musste hohe Steuern an den König zahlen.",
+    "Ludwig XIV. verzichtete auf Söldner und baute ein stehendes Heer auf.",
+    "Ludwig XIV. erlaubte den Protestanten die freie Religionsausübung.",
+  ], top, { size: 22, rh: 0.8 });
+}
+
 // ============ Absolutismus ============
 merkSlide(1, "Absolutismus",
   "**Absolutismus** war eine Herrschaftsform in Europa im **17. und 18. Jahrhundert**, in der ein einzelner Monarch (König oder Fürst) **uneingeschränkt (absolut)** herrschte.",
@@ -202,7 +214,7 @@ merkSlide(3, "Die Ständegesellschaft",
 }
 
 {
-  const { s, top } = taskSlide("Kontrolle zu Ü4", "Prüft die Sätze der anderen", ["Hört zu: Welcher Stand wurde gewählt?", "Prüft: Wird ein Recht und eine Pflicht genannt? Passen sie zum Stand?", "Prüft: Passt das Gefühl zur Begründung?"], "4 Minuten · gemeinsam · mündlich",
+  const { s, top } = taskSlide("Kontrolle zu Ü4", "Prüft die Sätze der anderen", ["Hört zu: Welcher Stand wurde gewählt?", "Prüft: Wird ein Recht und eine Pflicht genannt? Passen sie zum Stand?", "Prüft: Passt das Gefühl zur Begründung?"], "3 Minuten · gemeinsam · mündlich",
     "Ansage: „Wer drankommt, liest vor. Alle prüfen mit.“ Typische Fehler: Adel als Steuerzahler, Klerus mit Wehrdienst (befreit), Dritter Stand mit Vorrechten. Dann: „Verbessert mit Grün.“", "Wer korrigiert, nennt die Begründung mit Fachbegriff.");
 }
 
