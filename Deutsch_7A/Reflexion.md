@@ -23,6 +23,17 @@
 - [ ] *werden* als dritte Hilfsverb-Familie und Futur (für die nächste Stunde geplant)
 - [ ] Danach als Anwendung: der Zeitformen-Baukasten (`Zeitformen_bauen/`)
 
+## Langfristige Idee: Satzklammer als roter Faden
+
+Die Lehrkraft möchte das weiterverfolgen, noch ohne Material. Die Satzklammer (finiter Teil an Position 2, infiniter Teil am Satzende) soll in jeder Einheit gleich dargestellt werden: als Bogen im Farbcode. Neue Grammatik wird dann jeweils als „bekannte Klammer, neuer Partner rechts“ eingeführt. Mögliche Abfolge:
+- Tempora: Das Hilfsverb links bestimmt die Zeitform (habe → Perfekt, hatte → Plusquamperfekt, werde → Futur).
+- Modalverben: Modalverb + Infinitiv.
+- Aktiv und Passiv: werden + Partizip II. Die Unterscheidung von Futur und Passiv hängt am rechten Teil.
+- Trennbare Verben: räumt … auf. Das erklärt auch *aufgeräumt*.
+- Prädikat bestimmen: Beide Teile gehören dazu. Satzmodell mit Vorfeld, Mittelfeld und Satzende.
+- Nebensätze und Kommasetzung: Steht das finite Verb am Ende, ist es ein Nebensatz, also kommt ein Komma davor.
+- Später: Konjunktiv II mit *würde*, indirekte Rede, Lesestrategie für lange Sätze.
+
 ## Stundenlog
 
 ### Wiederholung Verben (5 Minuten)
