@@ -4,7 +4,8 @@
 
 **Thema: Absolutismus (Frankreich unter Ludwig XIV.)**
 
-- Die Ständegesellschaft wurde behandelt (Rechte, Pflichten, Anzahl, Mitbestimmung).
+- Die Ständegesellschaft wurde im Gruppenpuzzle (Klerus, Adel, Bauern und Bürger) mit einem Raster zu Anzahl, Bildung, Vorrechten und Pflichten erarbeitet; Mitbestimmung ist für den Test dazugekommen.
+- Geplant als Folgestunde: Herrscherporträt Ludwigs XIV. (Symbole der Macht: Zepter, Richterstab, Krone, Ordenskette, Hermelinmantel, Schwert, Thron, rote Schuhe, Lilie) und Versailles („Was bezahlt der Dritte Stand?“).
 - Der Begriff Absolutismus wurde gelernt, die fünf Säulen wurden im Gruppenpuzzle erarbeitet (Text „Herrschaft ohne Stände“): Verwaltung und Justiz, Adel und Hof von Versailles, Wirtschaft (Merkantilismus), Religion (Gottesgnadentum), Heer.
 - Im Gruppenpuzzle kannte jede Gruppe nur ihre eigene Säule. Es ist offen, ob alle Schülerinnen und Schüler alle fünf Säulen gesichert haben.
 - Test nächste Woche zu: Ständegesellschaft, Begriff Absolutismus, fünf Säulen.
@@ -22,7 +23,7 @@
 - **Inhalt:** Testankündigung, Absolutismus (Merksatz, Ü1 ja/nein mit Begründung), fünf Säulen (Merksatz, Lückentext, Säulen-Tafelbild), Ständegesellschaft (Tabelle aus dem Gedächtnis, Merksatz), Ü4 „Im Absolutismus fühle ich mich …, weil …“ mit Bezug auf Rechte und Pflichten, Lernliste.
 - **Planungsentscheidungen:**
   - Die Säulen stammen aus dem Gruppenpuzzle-Text. Der Lückentext bringt alle fünf zusammen, der Wortspeicher enthält zwei Fallen (Söldner, Generalstände).
-  - Zahlen der Stände für Frankreich (ca. 1 % / 2 % / 97 %). Falls im Unterricht andere genannt wurden, anpassen.
+  - Zahlen der Stände für Frankreich (ca. 1 % / 2 % / 97 %); Tabelle entspricht dem Gruppenpuzzle-Raster (Anzahl, Bildung, Vorrechte, Pflichten) plus Mitbestimmung. Inhalte stammen aus Allgemeinwissen, nicht aus den Gruppenpuzzle-Texten, und sind abzugleichen.
   - Als Mitbestimmung ist festgehalten: Generalstände je Stand 1 Stimme, unter Ludwig XIV. nicht einberufen.
   - Gleiches Format wie im Deutschunterricht: feste Ansagen, Merksätze auf der Folie, Übungen im Heft, Kontrolle mit Grün.
 - **Rückmeldung der Lehrkraft:** *(steht noch aus)*

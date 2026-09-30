@@ -108,7 +108,7 @@ function merkSlide(nr, title, kern, beispiel, wofuer, test, notes, kernSize = 22
   txt(s, "ANSAGE ZU BEGINN · STIFTE LIEGEN", { x: 0.6, y: 0.35, w: 10, h: 0.3, fontSize: 13, color: MUTED, charSpacing: 2, bold: true });
   txt(s, "Nächste Woche schreiben wir einen Test", { x: 0.6, y: 0.65, w: 12.1, h: 0.75, fontFace: HEAD, fontSize: 34, bold: true });
   const items = [
-    ["Ständegesellschaft", "Rechte · Pflichten · Anzahl (Anteil der Stände) · Mitbestimmung"],
+    ["Ständegesellschaft", "Vorrechte · Pflichten · Anzahl · Mitbestimmung (dazu: Bildung)"],
     ["Begriff Absolutismus", "Was bedeutet er? Woran erkenne ich ihn?"],
     ["Die fünf Säulen des Absolutismus", "Nennen und erklären, wie der König damit seine Macht sichert"],
   ];
@@ -163,10 +163,10 @@ merkSlide(2, "Die fünf Säulen des Absolutismus",
 // ============ Ständegesellschaft ============
 {
   const { s, top } = taskSlide("Übung 3 · Tafel", "Die Ständegesellschaft aus dem Kopf", ["Klappe das Heft zu. Ihr meldet euch und nennt, was ihr wisst.", "Wir füllen die Tabelle an der Tafel gemeinsam aus.", "Jetzt schreibst du die fertige Tabelle mit Lineal ab."], "8 Minuten · gemeinsam, dann abschreiben",
-    "Ansage: „Hefte zu. Ihr schreibt noch nichts auf. Meldet euch.“ Tabelle (Stand | Anteil | Rechte | Pflichten | Mitbestimmung) bereits leer an der Tafel. Nach dem gemeinsamen Ausfüllen: „Jetzt schreibt ihr ab: die Tabelle. Mit Lineal.“ Lösungen siehe Tafelskript. Hinweis zur Mitbestimmung: Die Generalstände (je 1 Stimme pro Stand) wurden von 1614 bis 1789 nicht einberufen – unter Ludwig XIV. gab es praktisch keine Mitbestimmung.",
+    "Ansage: „Hefte zu. Ihr schreibt noch nichts auf. Meldet euch.“ Raster aus dem Gruppenpuzzle (Stand | Anzahl | Bildung | Vorrechte | Pflichten) plus Spalte Mitbestimmung bereits leer an der Tafel. Nach dem gemeinsamen Ausfüllen: „Jetzt schreibt ihr ab: die Tabelle. Mit Lineal.“ Lösungen siehe Tafelskript. Hinweis zur Mitbestimmung: Die Generalstände (je 1 Stimme pro Stand) wurden von 1614 bis 1789 nicht einberufen – unter Ludwig XIV. gab es praktisch keine Mitbestimmung.",
     "Fertig? Stift hinlegen.");
-  const cols = ["Stand", "Anteil", "Rechte", "Pflichten", "Mitbestimmung"];
-  const cw = [2.3, 1.6, 2.9, 2.9, 2.45];
+  const cols = ["Stand", "Anzahl", "Bildung", "Vorrechte", "Pflichten", "Mitbestimmung"];
+  const cw = [1.8, 1.3, 1.9, 2.4, 2.4, 2.35];
   let x = 0.6;
   cols.forEach((c, i) => {
     box(s, x, top - 0.15, cw[i] - 0.1, 0.45, NAVY, { r: 0.05 });

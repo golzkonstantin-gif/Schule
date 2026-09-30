@@ -70,15 +70,15 @@ function auftrag(title, todo, lines, meta) {
 const phase = (nr, title, min) => p([t(`${nr}  `, { font: "Cambria", size: 28, bold: true, color: RED }), t(title, { font: "Cambria", size: 28, bold: true, color: NAVY }), t(`   ${min} Min.`, { size: 20, bold: true, color: "C77C12" })], { before: 200, after: 100, keepNext: true });
 
 // Tabelle Ständegesellschaft (Tafelbild)
-const TBW = [1150, 850, 2100, 2100, 1900];
+const TBW = [1000, 800, 1350, 1800, 1750, 1466];
 const stTable = (filled) => {
   const rows = [
-    ["1. Stand\nKlerus", "ca. 1 %", "Steuerfreiheit · Zehnt (Abgabe der Bauern) · eigene Gerichte · Landbesitz", "Gottesdienst und Seelsorge · Schulen · Armen- und Krankenpflege", "Generalstände (je Stand 1 Stimme) – unter Ludwig XIV. nicht einberufen"],
-    ["2. Stand\nAdel", "ca. 2 %", "Steuerfreiheit · Jagdrecht · hohe Ämter und Offiziersstellen · Abgaben der Bauern", "Kriegsdienst für den König · Schutz des Landes · Anwesenheit am Hof", "wie Klerus: auf dem Papier Generalstände, praktisch keine"],
-    ["3. Stand\nBauern, Bürger", "ca. 97 %", "keine Privilegien (Bürger: Handel, Bildung; Bauern: Land bewirtschaften)", "Steuern · Abgaben an Kirche und Grundherren · Frondienste · Arbeit für alle", "formal 1 Stimme gegen 2 (immer überstimmt); praktisch keine"],
+    ["1. Stand\nKlerus", "ca. 1 %", "meist hoch: Lesen und Schreiben, Schulen, Universitäten", "Steuerfreiheit · Zehnt (Abgabe der Bauern) · eigene Gerichte · Landbesitz", "Gottesdienst und Seelsorge · Schulen · Armen- und Krankenpflege", "Generalstände (1 Stimme je Stand), nicht einberufen"],
+    ["2. Stand\nAdel", "ca. 2 %", "Hauslehrer, höfische und militärische Bildung", "Steuerfreiheit · Jagdrecht · hohe Ämter und Offiziersstellen · Abgaben der Bauern", "Kriegsdienst für den König · Schutz des Landes · Anwesenheit am Hof", "wie Klerus: praktisch keine"],
+    ["3. Stand\nBauern, Bürger", "ca. 97 %", "Bürger: teils Schule und Lehre; Bauern: meist kaum Schulbildung", "keine Privilegien (Bürger: Handel, Bildung; Bauern: Land bewirtschaften)", "Steuern · Abgaben an Kirche und Grundherren · Frondienste · Arbeit für alle", "1 Stimme gegen 2, überstimmt; praktisch keine"],
   ];
   return table(TBW, [
-    row(["Stand", "Anteil", "Rechte", "Pflichten", "Mitbestimmung"].map((h, i) => hdr(h, TBW[i], "3D4A3F", 18)), 330),
+    row(["Stand", "Anzahl", "Bildung", "Vorrechte", "Pflichten", "Mitbestimmung"].map((h, i) => hdr(h, TBW[i], "3D4A3F", 15)), 330),
     ...rows.map((r) => row(r.map((v, i) => tc(filled ? v : "", TBW[i], { size: 17, bold: i === 0, fill: i === 0 ? BOARD : undefined })), filled ? 700 : 600)),
   ]);
 };
@@ -152,7 +152,7 @@ doc.push(...steps([
 // Phase 3
 doc.push(phase("3", "Ständegesellschaft", 10));
 doc.push(...steps([
-  ["gemeinsam", { say: "Hefte zu. Ihr schreibt noch nichts auf. Meldet euch.", do: ["Die leere Tabelle (Kopfzeile und Stände) ist schon an der Tafel. Unten steht die ausgefüllte Lösung.", "Fragen der Reihe nach: Wie heißen die drei Stände? Wie viel Prozent der Bevölkerung? Welche Rechte, welche Pflichten? Durften die Stände mitbestimmen?", "Lücken bewusst stehen lassen und später mit Heft oder Buch klären."], board: board("Mitte · Tabelle", [stTable(true)]), sol: "Zahlen für Frankreich vor 1789. Wurden im Unterricht andere Werte oder Begriffe genutzt, die Tabelle entsprechend anpassen." }],
+  ["gemeinsam", { say: "Hefte zu. Ihr schreibt noch nichts auf. Meldet euch.", do: ["Die leere Tabelle (Kopfzeile und Stände) ist schon an der Tafel. Unten steht die ausgefüllte Lösung.", "Fragen der Reihe nach: Wie heißen die drei Stände? Wie viel Prozent der Bevölkerung? Welche Bildung, welche Vorrechte, welche Pflichten? Durften die Stände mitbestimmen?", "Lücken bewusst stehen lassen und später mit Heft oder Buch klären."], board: board("Mitte · Tabelle", [stTable(true)]), sol: "Zahlen für Frankreich vor 1789. Das Raster entspricht dem Gruppenpuzzle (Anzahl, Bildung, Vorrechte, Pflichten); die Spalte Mitbestimmung ist neu, weil sie im Test vorkommt. Inhalte mit den Gruppenpuzzle-Texten abgleichen und anpassen." }],
   ["abschreiben", { say: "Jetzt schreibt ihr ab: die Tabelle. Mit Lineal. Dann: Merksatz 3 von der Folie. Rahmt ihn rot ein.", board: merkBoard(3, "Die Ständegesellschaft", "In der Ständegesellschaft gehört jeder Mensch durch Geburt zu einem von drei Ständen: Klerus (ca. 1 %), Adel (ca. 2 %) und Dritter Stand (ca. 97 %). Rechte und Pflichten sind ungleich verteilt. Im Absolutismus hatten die Stände keine Mitbestimmung.  Wofür? Erklären, warum Ludwig den Adel bei Laune hält und warum der Dritte Stand die Last trägt.  Test: Wer zahlt Steuern, wer hat Privilegien?") }],
 ]));
 
@@ -177,7 +177,7 @@ doc.push(table([2300, 7906], [
   ["Merksatz 1", "Absolutismus: Definition, Beispiel Ludwig XIV., Wofür, Test – rot umrahmt"],
   ["Ü1", "4 Zeilen: Nummer + Absolutismus/kein Absolutismus + Begründung"],
   ["Merksatz 2", "Die fünf Säulen – rot umrahmt (Lückentext liegt als Arbeitsblatt dabei, eingeklebt)"],
-  ["Ü3 Tabelle", "Ständegesellschaft: Stand, Anteil, Rechte, Pflichten, Mitbestimmung"],
+  ["Ü3 Tabelle", "Ständegesellschaft: Stand, Anzahl, Bildung, Vorrechte, Pflichten, Mitbestimmung"],
   ["Merksatz 3", "Die Ständegesellschaft – rot umrahmt"],
   ["Ü4", "Satz „Im Absolutismus fühle ich mich …, weil …“ – Verbesserungen grün"],
 ].map(([a, b]) => row([tc(a, 2300, { bold: true, color: a.startsWith("Merk") ? RED : NAVY, fill: LIGHT, size: 20 }), tc(b, 7906, { size: 20 })], 360))));
