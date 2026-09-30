@@ -22,6 +22,7 @@
 - **Material:** `Absolutismus_Wiederholung/` (Tafelskript, Präsentation mit Merksätzen und Aufgaben, Arbeitsblatt Lückentext mit Lösung)
 - **Inhalt (Reihenfolge):** Testankündigung, fünf Säulen zuerst (noch nicht abgeschlossen: Merksatz, Lückentext, Säulen-Tafelbild), „Wahr oder falsch?“ (vier Behauptungen zu Anzahl, Vorrechten, Heer, Religion; Kästchenaufgabe gab es schon), Absolutismus (Merksatz, Ü2 ja/nein mit Begründung), Ständegesellschaft (Tabelle aus dem Gedächtnis, Merksatz), Ü4 „Im Absolutismus fühle ich mich …, weil …“ mit Bezug auf Rechte und Pflichten, Lernliste.
 - **Planungsentscheidungen:**
+  - Wahr oder falsch einzeln (Aussage, Gespräch, Antwortfolie). Säulen-Einstieg über die Frage, wie ein König regieren kann. „Wofür brauche ich das?“ gestrichen. „Dritter Stand“ immer mit Klammer (Bauern und Bürger). Ü4 mit Karikatur als Impuls (Bild aus der Doppelstunden-Präsentation; Version mit Sprechblasen liegt der Lehrkraft vor).
   - Die Säulen stammen aus dem Gruppenpuzzle-Text. Der Lückentext bringt alle fünf zusammen, der Wortspeicher enthält zwei Fallen (Söldner, Generalstände).
   - Zahlen der Stände aus den Texten; Tabelle entspricht dem Gruppenpuzzle-Raster (Anzahl, Bildung, Vorrechte, Pflichten) plus Mitbestimmung. Alle Angaben (ca. 150 000 / 500 000 / 20 000 000; Bildung, Vorrechte, Pflichten) stammen aus den Gruppenpuzzle-Texten. Zur Mitbestimmung des Klerus nennen die Texte nichts.
   - Als Mitbestimmung ist festgehalten: Generalstände je Stand 1 Stimme, unter Ludwig XIV. nicht einberufen.

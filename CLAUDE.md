@@ -27,6 +27,14 @@ Dieses Repo enthält Unterrichtsmaterial (Deutsch 7A, Geschichte 8). Die Vorlieb
 - **Tafelskript** für die Lehrkraft: pro Schritt, was die Klasse tut, die wörtliche Ansage, der Tafelanschrieb, die Lösung. Dazu eine Übersicht, wie das Heft am Ende aussieht.
 - **Parallel zur Tafel eine PowerPoint mit Merksätzen und Aufgaben** (gleicher Wortlaut wie im Tafelskript, Lösungen nur in den Notizen). Die **Merksätze kommen auf die Folie**, nicht an die Tafel. Je Merksatz eine Folie: Kernsatz im roten Rahmen, Beispiel in Farbe, „Wofür?“ und „Test“, jeweils direkt vor der passenden Übung. An der Tafel entstehen nur Tafelbilder und Tabellen, die gemeinsam entwickelt werden.
 
+## Vorlieben Geschichte 8
+
+- **Kein „Wofür brauche ich das?“** auf den Merksatz-Folien (gestrichen). Kernsatz, Beispiel und Test bleiben.
+- **„Dritter Stand“ immer mit Klammer:** „Dritter Stand (Bauern und Bürger)“, damit klar ist, wer gemeint ist.
+- **Wahr-oder-falsch-Einstieg einzeln nacheinander:** Aussage, Unterrichtsgespräch, dann die Antwort mit Begründung auf der Folie (je eine Folie).
+- **Säulen-Einstieg:** erst fragen, wie ein König ein Land regieren kann, dann „Ihr erinnert euch: fünf Säulen. Welche?“, dann Merksatz und Lückentext.
+- **Karikatur** als Impuls bei „Im Absolutismus fühle ich mich …“ (gibt Hinweise auf Vorrechte und Lasten).
+
 ## Gestaltung
 
 - Formate: Word (`.docx`) für Skripte/Arbeitsblätter, PowerPoint (`.pptx`) für Folien, jeweils zusätzlich als PDF.
