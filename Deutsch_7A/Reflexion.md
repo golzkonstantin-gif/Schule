@@ -55,7 +55,7 @@
 - **Nächster Schritt:** Zu Beginn der nächsten Stunde das Vorwissen an der Tafel reaktivieren, dann beim Partizip II weitermachen.
 
 ### Einzelstunde „Hilfsverben erkennen“ (geplant, 45 Min.)
-- **Material:** `Hilfsverben_erkennen/` (Tafelskript, Präsentation mit Merksätzen und Aufgaben)
+- **Material:** `Hilfsverben_erkennen/` (nur Tafelskript; Merksätze und Übungen stehen an der Tafel, keine Präsentation)
 - **Bezug zur letzten Stunde:** Infinitiv und finite Form sitzen, das Partizip II wurde bestimmt, aber der Merksatz fehlt. Die Kreide-Kette hat gut funktioniert.
 - **Inhalt:**
   - Reaktivierung per Kreide-Kette: Wörter nach Infinitiv, finit oder Partizip II sortieren.

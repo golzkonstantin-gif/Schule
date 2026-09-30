@@ -27,7 +27,10 @@ Dieses Repo enthält Unterrichtsmaterial (Deutsch). Die Lehrkraft plant hier gem
 - **Gleicher Ablauf je Phase:** gemeinsam entdecken → Merksatz abschreiben → allein üben → an der Tafel vergleichen → mit Grün verbessern.
 - **Merksätze** immer mit „Wofür brauche ich das?“, dazu ein Erkennungstrick/Test.
 - **Tafelskript** für die Lehrkraft: pro Schritt, was die Klasse tut, die wörtliche Ansage, der Tafelanschrieb, die Lösung. Dazu eine Übersicht, wie das Heft am Ende aussieht.
-- **Parallel zur Tafel eine PowerPoint mit Merksätzen und Aufgaben** (gleicher Wortlaut wie im Tafelskript, Lösungen nur in den Notizen). Die **Merksätze kommen auf die Folie**, nicht an die Tafel. Je Merksatz eine Folie: Kernsatz im roten Rahmen, Beispiel in Farbe, „Wofür?“ und „Test“, jeweils direkt vor der passenden Übung. An der Tafel entstehen nur Tafelbilder und Tabellen, die gemeinsam entwickelt werden.
+- **PowerPoint nur, wenn die Lehrkraft sie möchte – vorher fragen.** Für „Hilfsverben erkennen“ wurde ausdrücklich keine gewünscht.
+  - Mit PowerPoint: Sie enthält Merksätze und Aufgaben (gleicher Wortlaut wie im Tafelskript, Lösungen nur in den Notizen). Je Merksatz eine Folie: Kernsatz im roten Rahmen, Beispiel in Farbe, „Wofür?“ und „Test“, direkt vor der passenden Übung. An der Tafel entstehen dann nur Tafelbilder und Tabellen.
+  - Ohne PowerPoint: Merksätze und Übungen stehen an der Tafel. Im Skript den Tipp geben, die Merksätze vorab auf die Seitentafel zu schreiben.
+- **Im „Wofür?“ der Merksätze den Bezug zu den Tempora herstellen**, wenn es passt (z. B. Partizip II und Hilfsverb braucht man für die Tempora).
 
 ## Gestaltung
 
