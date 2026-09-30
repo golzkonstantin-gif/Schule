@@ -108,7 +108,7 @@ const board = table([TW], [
         p([phase(6), ck("Jetzt bringt ihr das in Ordnung!", { bold: true, size: 20, color: "F5D76E" })], { after: 40 }),
         p(ck("Schreibt als Trapattoni einen Brief an die Spieler.", { size: 18 }), { after: 20 }),
         p(ck("• alle vier Seiten „heilen“  • Ich-Botschaft  • Empathie  • konkrete Bitte  • Metakommunikation", { size: 17 }), { after: 20 }),
-        p(ck("Wahl: Der Brief kann als Test gewertet werden.", { size: 17, italics: true, color: "C9C3A8" }), { after: 0 }),
+        p(ck("Der Brief ersetzt den angekündigten Test.", { size: 17, italics: true, color: "C9C3A8" }), { after: 0 }),
       ], { w: boardW2, fill: BOARD2, borders: chalkBorder, m: 100 }),
     ])]),
   ], { w: TW, fill: BOARD, borders: allBorders(none), m: 100, ml: 200 })]),
@@ -140,7 +140,7 @@ const schritte = [
     "„Spieler öffentlich an den Pranger zu stellen – wozu führt das?“ Ergebnis zuspitzen: Der Trainer verliert.",
     "entwickeln Folgen (Spieler, Mannschaft, Medien, Trainer)"],
   ["⑥", "Transfer: Brief (letzte 20–25 Min.)", "Kasten unten rechts mit Auftrag und Kriterien.",
-    "„Jetzt bringt ihr das in Ordnung.“ Hinweis: Der Brief kann als Test gewertet werden (Wahl). Kriterien siehe Seite 3.",
+    "„Jetzt bringt ihr das in Ordnung.“ Hinweis: Der Brief ersetzt den angekündigten Test und wird von allen geschrieben. Kriterien siehe Seite 3.",
     "schreiben einzeln einen Brief als Trapattoni an die Spieler"],
 ];
 const sRows = [row([hdr("", sW[0]), hdr("Phase", sW[1]), hdr("Was an die Tafel kommt", sW[2]), hdr("Ihre Moderation / Impuls", sW[3]), hdr("Klasse", sW[4])], 420)];
@@ -164,7 +164,7 @@ const page2 = [
   ]),
 ];
 
-// ================= Seite 3: Brief als Test zur Wahl =================
+// ================= Seite 3: Brief als Ersatz für den Test =================
 const kW = [3400, 7738, 2000, 2000];
 const kriterien = [
   ["Sachinhalt klären", "Benennt die Kritik sachlich und konkret (z. B. Defensivarbeit, Einsatz im Training) – ohne Beleidigung und ohne „Flasche leer“.", "4"],
@@ -193,7 +193,7 @@ const page3 = [
   h1("„Jetzt bringt ihr das in Ordnung“ – Brief an die Spieler"),
   infoBox([
     [t("Auftrag (Tafel / mündlich): ", { bold: true, color: NAVY }), t("Schreibe als Giovanni Trapattoni einen Brief an Thomas Strunz, Mario Basler und Mehmet Scholl. Bringe die Missverständnisse aus der Pressekonferenz in Ordnung – so, dass alle vier Seiten der Nachricht wieder stimmen. Nutze die Techniken aus der letzten Stunde.", { size: 21 })],
-    [t("Test zur Wahl: ", { bold: true, color: RED }), t("Wer möchte, gibt den Brief als Testleistung ab. Die Entscheidung fällt vor dem Schreiben (Kreuz auf dem Blatt: ☐ als Test werten).", { size: 21 })],
+    [t("Leistungsnachweis: ", { bold: true, color: RED }), t("Der Brief ersetzt den angekündigten Test über die Kommunikationsmodelle und wird von allen geschrieben und bewertet. Er prüft dasselbe – nur angewendet statt beschrieben.", { size: 21 })],
   ]),
   h2("✓", "Bewertungskriterien"),
   table(kW, kRows),
