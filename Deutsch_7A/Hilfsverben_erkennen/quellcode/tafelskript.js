@@ -150,6 +150,19 @@ function phase(nr, title, min) {
 // ================================================================
 // Tafelskript „Hilfsverben erkennen“ (45 Min.)
 // ================================================================
+
+// Beispielsatz mit gezeichneter Satzklammer (Bogen über Tabellenränder)
+function klammerBeispiel() {
+  const w = [600, 1150, 4550, 1450];
+  const K = solid(NAVY, 12);
+  const nb = { top: none, bottom: none, left: none, right: none };
+  const c = (runs, i, borders, align = AlignmentType.CENTER) => cell(p(runs, { after: 0, align }), { w: w[i], borders, m: 10, ml: 40 });
+  return table(w, [
+    row([c([N("Ich")], 0, nb), c([R("habe")], 1, nb), c([N("am Samstag mit meinem Bruder Fußball", { size: 20 })], 2, nb), c([Y("gespielt"), N(".")], 3, nb)]),
+    row([c([t("")], 0, nb), c([t("")], 1, { top: none, left: K, bottom: K, right: none }), c([t("")], 2, { top: none, left: none, bottom: K, right: none }), c([t("")], 3, { top: none, left: none, bottom: K, right: K })], 160, HeightRule.EXACT),
+    row([c([t("")], 0, nb), c([t("Position 2", { size: 16, italics: true, color: MUTED })], 1, nb), c([t("Satzklammer", { size: 17, bold: true, color: NAVY })], 2, nb), c([t("Satzende", { size: 16, italics: true, color: MUTED })], 3, nb)]),
+  ]);
+}
 // In dieser Stunde ohne Präsentation: Merksätze stehen an der Tafel
 const merkTafel = (nr, title, runs) => board(`Merksatz ${nr} – abschreiben, rot umrahmen`, [
   p([t(title, { bold: true, color: C.hv, font: "Cambria", size: 22 })], { after: 40 }),
@@ -164,10 +177,10 @@ doc.push(p([S("Ziel: ", { bold: true }), S("Die Klasse weiß, was ein Hilfsverb 
 
 doc.push(h3("Ablauf"));
 doc.push(grid([900, 3300, 6006], ["Zeit", "Phase", "Kern"], [
-  ["8′", "0 Reaktivierung", "Kreide-Kette: Wörter nach Infinitiv, finit, Partizip II sortieren"],
+  ["5′", "0 Reaktivierung", "Kreide-Kette: Wörter nach Infinitiv, finit, Partizip II sortieren"],
   ["5′", "1 Merksatz Partizip II", "Merksatz 5 von der Tafel nachholen"],
-  ["15′", "2 Das Hilfsverb", "„Ich Fußball gespielt.“ – Was fehlt? Hilfsverb erarbeiten, Merksatz 6, Ü6"],
-  ["12′", "3 Hilfsverb oder Vollverb", "„Ich habe Hunger“ / „Ich habe gegessen“, Merksatz 7, Ü7"],
+  ["18′", "2 Hilfsverb und Satzklammer", "„Ich Fußball gespielt.“ – Was fehlt? Hilfsverb erarbeiten, Merksatz 6 (Hilfsverb), Merksatz 7 (Satzklammer), Ü6"],
+  ["12′", "3 Hilfsverb oder Vollverb", "„Ich habe Hunger“ / „Ich habe gegessen“, Merksatz 8, Ü7"],
   ["5′", "4 Exit-Ticket", "drei Sätze auf einem Zettel, dazu eine Erklärung in eigenen Worten"],
 ], { bold: [true, true, false], colors: [C.hv, NAVY, null], h: 380 }));
 
@@ -175,25 +188,26 @@ doc.push(h3("So sieht das Heft am Ende aus"));
 doc.push(table([2300, 7906], [
   ["Überschrift", "Hilfsverben erkennen (mit Lineal unterstrichen) · Datum rechts"],
   ["Merksatz 5", "Partizip II"],
-  ["Merksatz 6", "Das Hilfsverb + Beispielsatz mit Klammer"],
+  ["Merksatz 6", "Das Hilfsverb"],
+  ["Merksatz 7", "Die Satzklammer + farbiger Beispielsatz mit Bogen"],
   ["Ü6", "nur Nummer + Hilfsverb + Partizip II: 1 hat – gezockt …"],
-  ["Merksatz 7", "Hilfsverb oder Vollverb + Beispielpaar"],
+  ["Merksatz 8", "Hilfsverb oder Vollverb + Beispielpaar"],
   ["Ü7", "nur Nummer + H oder V, dazu ein Begründungssatz"],
 ].map(([a, b]) => row([tc(a, 2300, { bold: true, color: a.startsWith("Merk") ? C.hv : a === "Überschrift" ? NAVY : "C77C12", fill: LIGHT, size: 20 }), tc(b, 7906, { size: 20 })], 360))));
 
 doc.push(p([S("Kreide-Kette: ", { bold: true }), S("Wer die Kreide hat, löst eine Aufgabe an der Tafel und gibt die Kreide an den Nächsten weiter. Reihenfolge vorher festlegen (z. B. nach Sitzreihe), dann läuft es ohne Pausen. Alle anderen prüfen mit.")], { before: 120, after: 40 }));
-doc.push(p([S("Tipp: ", { bold: true }), S("Die drei Merksätze vor der Stunde auf die Seitentafel schreiben und zuklappen. Dann kostet das Anschreiben in der Stunde keine Zeit, und Sie klappen jeweils nur den nächsten Merksatz auf.")], { after: 40 }));
+doc.push(p([S("Tipp: ", { bold: true }), S("Die vier Merksätze vor der Stunde auf die Seitentafel schreiben und zuklappen. Dann kostet das Anschreiben in der Stunde keine Zeit, und Sie klappen jeweils nur den nächsten Merksatz auf.")], { after: 40 }));
 doc.push(p([S("Material: ", { bold: true }), S("Kreide Rot und Gelb · Schüler: Heft, Lineal, Buntstifte Rot und Gelb, kleiner Zettel für das Exit-Ticket")], { after: 40 }));
 doc.push(p([S("Farben: ", { bold: true }), t("Hilfsverb rot", { bold: true, color: C.hv, size: 21 }), S(" · "), t("Partizip II gelb", { bold: true, color: "C98A1E", size: 21 }), S(" · "), t("Infinitiv blau", { bold: true, color: C.inf, size: 21 }), S(" · "), t("Verbesserungen grün", { bold: true, color: C.mv, size: 21 })], { after: 0 }));
 
 // ---------- Phase 0 ----------
-const WORDS = ["spielen", "gespielt", "spielst", "war", "gegangen", "gehen", "hat", "gelesen", "lesen", "bist", "hatten", "gekauft"];
-doc.push(br(), phase("0", "Reaktivierung: Kreide-Kette", 8));
+const WORDS = ["spielen", "gespielt", "spielst", "war", "gegangen", "gehen", "hat", "bist", "gekauft"];
+doc.push(br(), phase("0", "Reaktivierung: Kreide-Kette", 5));
 doc.push(...steps([
   ["zuhoeren", { say: "Stifte liegen. Ihr hört nur zu. Letzte Stunde habt ihr drei Verbformen kennengelernt: Infinitiv, finite Form und Partizip II. Das holen wir jetzt an die Tafel – mit der Kreide-Kette.", do: ["Reihenfolge der Kreide-Kette festlegen (z. B. vorderste Reihe von links nach rechts)."] }],
   ["tafel", { say: "Wer die Kreide hat, nimmt ein Wort von der Liste, schreibt es in die richtige Spalte und gibt die Kreide weiter. Alle anderen prüfen mit.",
-    board: [auftrag("Kreide-Kette: Welche Verbform?", ["Nimm ein Wort von der Liste.", "Schreibe es in die richtige Spalte.", "Gib die Kreide weiter."], [bl(WORDS.join("  ·  ")), p(t(""), { after: 20 }), table([2400, 2400, 2400], [row([hdr("Infinitiv", 2400, C.inf, 18), hdr("finite Form", 2400, NAVY, 18), hdr("Partizip II", 2400, C.p2, 18)], 320), row([2400, 2400, 2400].map((x) => tc("", x)), 700)])], "8 Minuten · Kreide-Kette")],
-    sol: "Infinitiv: spielen, gehen, lesen · finit: spielst, war, hat, bist, hatten · Partizip II: gespielt, gegangen, gelesen, gekauft" }],
+    board: [auftrag("Kreide-Kette: Welche Verbform?", ["Nimm ein Wort von der Liste.", "Schreibe es in die richtige Spalte.", "Gib die Kreide weiter."], [bl(WORDS.join("  ·  ")), p(t(""), { after: 20 }), table([2400, 2400, 2400], [row([hdr("Infinitiv", 2400, C.inf, 18), hdr("finite Form", 2400, NAVY, 18), hdr("Partizip II", 2400, C.p2, 18)], 320), row([2400, 2400, 2400].map((x) => tc("", x)), 700)])], "5 Minuten · Kreide-Kette")],
+    sol: "Infinitiv: spielen, gehen · finit: spielst, war, hat, bist · Partizip II: gespielt, gegangen, gekauft" }],
   ["gemeinsam", { say: "Meldet euch. Woran habt ihr das Partizip II erkannt? Und woran die finite Form?", do: ["Partizip II: ge-…-t / ge-…-en, verändert sich nicht. Finite Form: verändert sich mit der Person (Test: ich → wir)."] }],
 ]));
 
@@ -205,17 +219,24 @@ doc.push(...steps([
 
 // ---------- Phase 2 ----------
 const HSATZ = [["Ich ", "habe", " Fußball ", "gespielt", "."], ["Wir ", "sind", " ins Kino ", "gegangen", "."], ["Lena ", "hat", " eine Pizza ", "bestellt", "."], ["Du ", "bist", " zu spät ", "gekommen", "."]];
-doc.push(phase("2", "Das Hilfsverb", 15));
+doc.push(phase("2", "Hilfsverb und Satzklammer", 18));
 doc.push(...steps([
   ["zuhoeren", { say: "Stifte liegen. Ihr hört nur zu. Ich schreibe vier Sätze an. Stimmt da etwas nicht?", board: board("Mitte", HSATZ.map((s, i) => bl([N(s[0]), N("_____  ", { color: MUTED }), N(s[2]), Y(s[3]), N(s[4])], { after: i === 3 ? 0 : 30 }))), do: ["Die Sätze ohne das Hilfsverb anschreiben (Lücke lassen), Partizip II schon gelb. Antwort sammeln: Es fehlt ein Wort – der Satz sagt nicht, wer es gemacht hat bzw. er klingt falsch."] }],
   ["tafel", { say: "Wer die Kreide hat, setzt das fehlende Wort ein – in Rot – und gibt die Kreide weiter. Alle prüfen mit.", board: board("Mitte (danach)", HSATZ.map((s, i) => bl([N(s[0]), R(s[1]), N(s[2]), Y(s[3]), N(s[4])], { after: i === 3 ? 0 : 30 }))), sol: "habe · sind · hat · bist" }],
   ["gemeinsam", { say: "Meldet euch. Ihr schreibt noch nichts auf. Schaut auf die roten Wörter: Sind sie finit oder infinit? Wo stehen sie im Satz? Und was steht am Satzende?", do: [
     "Ziel: Die roten Wörter sind finit (sie ändern sich mit der Person: ich habe – wir haben) und stehen an Position 2. Am Satzende steht das Partizip II.",
-    "Einen Bogen von jedem roten Wort zum gelben Partizip zeichnen: Die beiden bilden eine Klammer.",
+    "Einen Bogen von jedem roten Wort zum gelben Partizip zeichnen: Die beiden umschließen den Rest des Satzes wie eine Klammer. Den Begriff Satzklammer schon nennen – der Merksatz dazu folgt gleich nach dem Hilfsverb.",
     "Begriff einführen: „Das Partizip II kann nicht zeigen, wer etwas tut. Das rote Wort hilft ihm – deshalb heißt es Hilfsverb.“",
     "Kurz erwähnen: Es gibt drei Hilfsverben – haben, sein und werden. werden kommt später beim Futur.",
   ] }],
-  ["abschreiben", { say: "Jetzt schreibt ihr von der Tafel ab: Merksatz 6 mit dem Beispielsatz. Zeichnet die Klammer ein.", board: merkTafel(6, "Das Hilfsverb", [S("Hilfsverben sind "), S("haben, sein und werden", { bold: true }), S(". Das Hilfsverb ist "), S("finit", { bold: true }), S(" und steht an Position 2. Mit dem Partizip II am Satzende bildet es eine "), S("Klammer", { bold: true }), S(". "), S("Wofür? ", { bold: true }), S("Hilfsverben braucht man für die "), S("Tempora", { bold: true }), S(" (Zeitformen). Das Partizip II kann nicht zeigen, wer etwas tut – das übernimmt das Hilfsverb. Zusammen bilden sie die Zeitform. "), S("Test: ", { bold: true }), S("Steht am Satzende ein Partizip II? Dann ist das finite haben oder sein davor ein Hilfsverb.")]) }],
+  ["abschreiben", { say: "Jetzt schreibt ihr von der Tafel ab: Merksatz 6. Rot umrahmen.", board: merkTafel(6, "Das Hilfsverb", [S("Hilfsverben sind "), S("haben, sein und werden", { bold: true }), S(". Das Hilfsverb ist "), S("finit", { bold: true }), S(" und steht an Position 2. "), S("Wofür? ", { bold: true }), S("Hilfsverben braucht man für die "), S("Tempora", { bold: true }), S(" (Zeitformen). Das Partizip II kann nicht zeigen, wer etwas tut – das übernimmt das Hilfsverb. Zusammen bilden sie die Zeitform. "), S("Test: ", { bold: true }), S("Steht am Satzende ein Partizip II? Dann ist das finite haben oder sein davor ein Hilfsverb.")]) }],
+  ["abschreiben", { say: "Jetzt schreibt ihr von der Tafel ab: Merksatz 7 mit dem Beispielsatz. Hilfsverb rot, Partizip gelb, darunter den Bogen. Rot umrahmen.", board: board("Merksatz 7 – abschreiben, rot umrahmen", [
+    p([t("Die Satzklammer", { bold: true, color: C.hv, font: "Cambria", size: 22 })], { after: 40 }),
+    p([S("Die Satzklammer", { bold: true }), S(" besteht aus dem "), S("finiten Verb an Position 2", { bold: true }), S(" und dem "), S("infiniten Teil am Satzende", { bold: true }), S(". Zusammen umschließen sie den Rest des Satzes.")], { after: 80 }),
+    klammerBeispiel(),
+    p(t(""), { after: 60 }),
+    p([S("Wofür? ", { bold: true }), S("Die Satzklammer braucht man für die "), S("Tempora", { bold: true }), S(": Am linken Teil erkennt man die Zeitform, am rechten den Partner. So findet man auch in langen Sätzen das ganze Prädikat. "), S("Test: ", { bold: true }), S("Suche das finite Verb an Position 2. Suche dann am Satzende seinen Partner. Beide zusammen bilden die Satzklammer.")], { after: 0 }),
+  ]), do: ["Das Beispiel hat bewusst ein langes Mittelfeld: So sieht man, dass die Klammer auch weit auseinanderliegende Teile verbindet.", "Auf der Tafel den Bogen unter dem Satz von habe bis gespielt zeichnen, darüber klein „Position 2“ und „Satzende“."] }],
   ["luecken", { say: "Jetzt arbeitet ihr allein. Die Aufgabe steht rechts an der Tafel: Ü6. Ihr schreibt die Sätze nicht ab – nur Nummer, Hilfsverb und Partizip II. Vier Minuten.", board: auftrag("Ü6 Hilfsverb gesucht", ["Schreibe Ü6 an den Rand.", "Finde in jedem Satz das Hilfsverb und das Partizip II.", "Schreibe nur: Nummer, Hilfsverb – Partizip II (Hilfsverb rot, Partizip gelb)."], [
     bl("1  Mein Bruder hat gestern bis Mitternacht gezockt."), bl("2  Wir sind mit dem Bus zur Schule gefahren."), bl("3  Ihr habt die Hausaufgaben vergessen."), bl("4  Lea ist beim Training hingefallen."), bl("5  Ich habe mir ein neues Handy gekauft."), bl("6  Die Party hat um acht begonnen.", { after: 0 })], "4 Minuten · allein · leise"),
     sol: "1 hat – gezockt · 2 sind – gefahren · 3 habt – vergessen · 4 ist – hingefallen · 5 habe – gekauft · 6 hat – begonnen (kein ge-, Verb beginnt mit be-)" }],
@@ -227,7 +248,7 @@ doc.push(...steps([
 doc.push(phase("3", "Hilfsverb oder Vollverb?", 12));
 doc.push(...steps([
   ["zuhoeren", { say: "Stifte liegen. Ihr hört nur zu. Zwei Sätze, zweimal ‚habe‘. Ist es beide Male ein Hilfsverb?", board: board("Mitte", [bl([N("Ich "), N("habe", { bold: true }), N(" Hunger.          Ich "), R("habe"), N(" "), Y("gegessen"), N(".")], { after: 0 })]), do: ["Test aus Merksatz 6 anwenden lassen: Nur im zweiten Satz steht am Ende ein Partizip II → Hilfsverb.", "Im ersten Satz trägt habe selbst die Bedeutung (Hunger haben = spüren) → Vollverb. Genau diese Verwechslung war der Stolperstein in der Bastelstunde."] }],
-  ["abschreiben", { say: "Jetzt schreibt ihr von der Tafel ab: Merksatz 7 mit den beiden Beispielsätzen.", board: merkTafel(7, "Hilfsverb oder Vollverb?", [S("haben und sein sind nur dann "), S("Hilfsverben", { bold: true }), S(", wenn am Satzende ein "), S("Partizip II", { bold: true }), S(" steht. Sonst sind sie "), S("Vollverben", { bold: true }), S(" und tragen selbst die Bedeutung. "), S("Wofür? ", { bold: true }), S("Wer Hilfsverben erkennt, kann später die Zeitform bestimmen. "), S("Test: ", { bold: true }), S("Steht am Satzende ein Partizip II?")]) }],
+  ["abschreiben", { say: "Jetzt schreibt ihr von der Tafel ab: Merksatz 8 mit den beiden Beispielsätzen.", board: merkTafel(8, "Hilfsverb oder Vollverb?", [S("haben und sein sind nur dann "), S("Hilfsverben", { bold: true }), S(", wenn am Satzende ein "), S("Partizip II", { bold: true }), S(" steht. Sonst sind sie "), S("Vollverben", { bold: true }), S(" und tragen selbst die Bedeutung. "), S("Wofür? ", { bold: true }), S("Wer Hilfsverben erkennt, kann später die Zeitform bestimmen. "), S("Test: ", { bold: true }), S("Steht am Satzende ein Partizip II?")]) }],
   ["luecken", { say: "Jetzt arbeitet ihr allein: Ü7. Nur Nummer und H oder V – und eine Begründung. Drei Minuten.", board: auftrag("Ü7 Hilfsverb oder Vollverb?", ["Schreibe Ü7 an den Rand.", "Schreibe zu jeder Nummer H (Hilfsverb) oder V (Vollverb).", "Begründe bei Nr. 2 in einem Satz."], [
     bl("1  Mein Handy ist kaputt."), bl("2  Mein Handy ist runtergefallen."), bl("3  Wir hatten keine Hausaufgaben."), bl("4  Ihr habt die Hausaufgaben vergessen."), bl("5  Ich bin total müde."), bl("6  Ich bin um elf eingeschlafen.", { after: 0 })], "3 Minuten · allein · leise"),
     sol: "1 V · 2 H · 3 V · 4 H · 5 V · 6 H. Begründung 2: Am Satzende steht das Partizip II runtergefallen, also ist ist ein Hilfsverb." }],
@@ -240,7 +261,7 @@ doc.push(phase("4", "Exit-Ticket", 5));
 doc.push(...steps([
   ["luecken", { say: "Heft zu. Jetzt arbeitet ihr allein auf einem Zettel. Die Aufgabe steht rechts an der Tafel. Vier Minuten.", board: auftrag("Exit-Ticket", ["Nimm einen Zettel und schreibe deinen Namen oben hin.", "Schreibe zu jedem Satz: Hilfsverb ja oder nein – und wenn ja, das Partizip II.", "Erkläre in einem Satz: Was ist ein Hilfsverb?"], [bl("1  Wir waren gestern im Kino."), bl("2  Wir sind gestern ins Kino gegangen."), bl("3  Sie hat einen Hund.", { after: 0 })], "4 Minuten · allein · ohne Heft"),
     sol: "1 nein (Vollverb) · 2 ja – gegangen · 3 nein (Vollverb). Erklärung z. B.: „Ein Hilfsverb ist haben, sein oder werden; es ist finit und bildet mit dem Partizip II eine Zeitform.“" }],
-  ["fertig", { say: "Stift hinlegen. Ich sammle ein.", do: ["Auswertung: „ja“ bei 1 oder 3 → Hilfsverb und Vollverb noch verwechselt (Merksatz 7 in der nächsten Stunde kurz wiederholen). Die Erklärung zeigt, ob der Begriff sitzt – Voraussetzung für die Tempora."] }],
+  ["fertig", { say: "Stift hinlegen. Ich sammle ein.", do: ["Auswertung: „ja“ bei 1 oder 3 → Hilfsverb und Vollverb noch verwechselt (Merksatz 8 in der nächsten Stunde kurz wiederholen). Die Erklärung zeigt, ob der Begriff sitzt – Voraussetzung für die Tempora."] }],
 ]));
 doc.push(p([S("Ausblick nächste Stunde (Tempora): ", { bold: true }), S("Das Perfekt ist schon da: Hilfsverb im Präsens + Partizip II. Darauf aufbauend: haben oder sein (Bewegung, Veränderung), das Plusquamperfekt über hatte/war + Partizip II, später Futur mit werden. Der Chat aus der letzten Stunde („ich habe nach Hause gegangen“) passt als Einstieg – die Klasse hat die Fehler gefunden, aber noch nicht erklärt.")], { before: 120, after: 0 }));
 

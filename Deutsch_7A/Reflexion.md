@@ -71,8 +71,8 @@ Die Lehrkraft möchte das weiterverfolgen, noch ohne Material. Die Satzklammer (
 - **Inhalt:**
   - Reaktivierung per Kreide-Kette: Wörter nach Infinitiv, finit oder Partizip II sortieren.
   - Merksatz 5 (Partizip II) nachholen.
-  - Das Hilfsverb aus dem Partizip II heraus erarbeiten: „Ich Fußball gespielt.“ – Was fehlt? Die Klasse erkennt: finit, Position 2, Klammer mit dem Partizip II. Dazu Merksatz 6 und Ü6.
-  - Hilfsverb oder Vollverb: Merksatz 7 und Ü7.
+  - Das Hilfsverb aus dem Partizip II heraus erarbeiten: „Ich Fußball gespielt.“ – Was fehlt? Die Klasse erkennt: finit, Position 2, Klammer mit dem Partizip II. Dazu Merksatz 6 (Hilfsverb), Merksatz 7 (Satzklammer, farbiges Beispiel mit Bogen) und Ü6.
+  - Hilfsverb oder Vollverb: Merksatz 8 und Ü7.
   - Exit-Ticket mit einer Erklärung in eigenen Worten.
 - **Planungsentscheidung:** Die Tempora kommen erst, wenn der Begriff Hilfsverb sitzt (Wunsch der Lehrkraft). *haben* oder *sein* (Bewegung, Veränderung) wird hier bewusst noch nicht behandelt.
 - **Rückmeldung der Lehrkraft:** *(steht noch aus)*
