@@ -173,6 +173,74 @@ merkSlide(1, "Die fünf Säulen des Absolutismus",
   txt(s, "Beamte · Glaube · Merkantilismus · Gottesgnadentum · Versailles · Steuerfreiheit · Zölle · stehendes · 400.000 · Drittel · absoluter · Intendanten", { x: 0.9, y: top + 0.45, w: 11.6, h: 6.1 - top - 0.5, fontFace: HEAD, fontSize: 24 });
 }
 
+
+// ============ Exkurs: Steuern in Deutschland (nach Antwort „Adel steuerfrei“) ============
+function exkursSlides() {
+  // 1 Brutto und Netto
+  {
+    const s = pres.addSlide();
+    pageNo++;
+    s.background = { color: WHITE };
+    txt(s, "EXKURS · GEMEINSAM · OHNE HEFT", { x: 0.6, y: 0.35, w: 10, h: 0.3, fontSize: 13, color: MUTED, charSpacing: 2, bold: true });
+    txt(s, "Exkurs: Steuern in Deutschland", { x: 0.6, y: 0.65, w: 12.1, h: 0.75, fontFace: HEAD, fontSize: 34, bold: true });
+    [["Brutto", "Lohn vor allen Abzügen", 0.6], ["Netto", "Das, was auf dem Konto ankommt", 6.8]].forEach(([h, b, x]) => {
+      box(s, x, 1.6, 5.95, 2.1, LIGHT2);
+      txt(s, h, { x: x + 0.3, y: 1.75, w: 5.4, h: 0.6, fontFace: HEAD, fontSize: 34, bold: true, color: RED });
+      txt(s, b, { x: x + 0.3, y: 2.55, w: 5.4, h: 1.0, fontFace: HEAD, fontSize: 24 });
+    });
+    box(s, 0.6, 3.95, 12.15, 1.9, LIGHT);
+    txt(s, "Durchschnittsgehalt in Deutschland (gerundet):", { x: 0.9, y: 4.1, w: 11.6, h: 0.5, fontFace: HEAD, fontSize: 24, color: MUTED });
+    txt(s, "ca. 50 000 € brutto im Jahr", { x: 0.9, y: 4.75, w: 11.6, h: 0.8, fontFace: HEAD, fontSize: 34, bold: true });
+    bar(s, [{ text: "Jetzt: ", options: { bold: true } }, { text: "Meldet euch. Wer erklärt brutto und netto?      ", options: {} }, { text: "Noch nichts aufschreiben.", options: { italic: true, color: ICE } }]);
+    footer(s);
+    s.addNotes("Kurzer Exkurs zur Verdeutlichung (ca. 5 Minuten, bei Zeitnot weglassen). Ansage: „Stifte liegen. Ihr schreibt noch nichts auf. Meldet euch.“ Brutto und Netto von der Klasse erklären lassen, dann die Zahl nennen. Hinweis: 50 000 € ist ein runder Wert. Der Durchschnitt für Vollzeitbeschäftigte liegt nach meinem Kenntnisstand eher höher (etwa 55 000 bis 60 000 € im Jahr). Aktuellen Wert beim Statistischen Bundesamt prüfen und ggf. anpassen.");
+  }
+  // 2 Was bleibt netto
+  {
+    const s = pres.addSlide();
+    pageNo++;
+    s.background = { color: WHITE };
+    txt(s, "EXKURS · GEMEINSAM · OHNE HEFT", { x: 0.6, y: 0.35, w: 10, h: 0.3, fontSize: 13, color: MUTED, charSpacing: 2, bold: true });
+    txt(s, "Was bleibt von 50 000 € brutto?", { x: 0.6, y: 0.65, w: 12.1, h: 0.75, fontFace: HEAD, fontSize: 34, bold: true });
+    const rows = [
+      ["Brutto", "50 000 €", NAVY, WHITE],
+      ["− Lohnsteuer", "ca. 7 000 €", LIGHT2, NAVY],
+      ["− Sozialabgaben (Rente, Kranken-, Pflege-, Arbeitslosenversicherung)", "ca. 10 500 €", LIGHT2, NAVY],
+      ["= Netto", "ca. 32 500 €", RED, WHITE],
+    ];
+    rows.forEach(([l, r, fill, col], i) => {
+      const y = 1.6 + i * 1.12, h = 1.0;
+      box(s, 0.6, y, 12.15, h, fill);
+      txt(s, l, { x: 0.9, y, w: 8.4, h, fontFace: HEAD, fontSize: 24, bold: i === 0 || i === 3, color: col, valign: "middle" });
+      txt(s, r, { x: 9.3, y, w: 3.2, h, fontFace: HEAD, fontSize: 28, bold: true, color: col, align: "right", valign: "middle" });
+    });
+    bar(s, [{ text: "Jetzt: ", options: { bold: true } }, { text: "Meldet euch. Wofür braucht der Staat die Steuern?      ", options: {} }, { text: "Noch nichts aufschreiben.", options: { italic: true, color: ICE } }]);
+    footer(s);
+    s.addNotes("Gerundete Beispielrechnung: ledig, ohne Kinder, Lohnsteuerklasse I, Stand etwa 2025. Mit einem Brutto-Netto-Rechner (z. B. des Bundesfinanzministeriums) gegenprüfen und die Zahlen ggf. anpassen. Impuls: Wofür braucht der Staat Steuern? (Schulen, Straßen, Polizei, Bundeswehr, Beamte). Das ist die Brücke zu Versailles, Heer und Beamten im Absolutismus.");
+  }
+  // 3 Übung: keine Steuern
+  {
+    const { s } = taskSlide("Exkurs · Übung", "Stellt euch vor: keine Steuern", ["Du verdienst 50 000 € brutto und zahlst keine Steuern.", "Rechne: Wie viel mehr hast du im Monat? (Lohnsteuer: ca. 7 000 € im Jahr)", "Antworte: Wäre das gerecht, wenn dein Nachbar mit demselben Gehalt Steuern zahlt? Begründe."], "3 Minuten · zu zweit · Flüsterstimme",
+      "Ansage: „Jetzt arbeitet ihr zu zweit. Die Aufgabe steht rechts.“ Lösung: 7 000 € : 12 ≈ 580 € mehr pro Monat. Begründung offen, erwartbar: ungerecht, weil beide gleich viel verdienen und die Straßen, Schulen und die Polizei gleich nutzen. Danach 2 bis 3 Antworten sammeln. Leitfrage zur Überleitung: „Und jetzt stellt euch vor, das hängt nur davon ab, in welche Familie ihr geboren seid.“",
+      "Fertig? Stift hinlegen.");
+  }
+  // 4 Brücke
+  {
+    const s = pres.addSlide();
+    pageNo++;
+    s.background = { color: WHITE };
+    txt(s, "EXKURS · ZURÜCK ZUM ABSOLUTISMUS", { x: 0.6, y: 0.35, w: 10, h: 0.3, fontSize: 13, color: MUTED, charSpacing: 2, bold: true });
+    txt(s, "Genau das war im Absolutismus Realität", { x: 0.6, y: 0.65, w: 12.1, h: 0.75, fontFace: HEAD, fontSize: 34, bold: true });
+    box(s, 0.6, 1.6, 12.15, 1.7, LIGHT2);
+    txt(s, [{ text: "Der Adel", options: { bold: true, color: RED } }, { text: " (ca. 500 000 Menschen) zahlte keine Steuern – nur wegen seiner Geburt.", options: {} }], { x: 0.9, y: 1.6, w: 11.6, h: 1.7, fontFace: HEAD, fontSize: 24, valign: "middle" });
+    box(s, 0.6, 3.45, 12.15, 1.7, LIGHT);
+    txt(s, [{ text: "Der Dritte Stand (Bauern und Bürger)", options: { bold: true, color: RED } }, { text: " (ca. 20 000 000 Menschen) zahlte Steuern und Abgaben für fast alles.", options: {} }], { x: 0.9, y: 3.45, w: 11.6, h: 1.7, fontFace: HEAD, fontSize: 24, valign: "middle" });
+    bar(s, [{ text: "Frage: ", options: { bold: true } }, { text: "Wer bezahlte dann Versailles, Heer und Beamte?", options: {} }]);
+    footer(s);
+    s.addNotes("Ansage: „Meldet euch. Ihr schreibt noch nichts auf.“ Antwort: der Dritte Stand (Bauern und Bürger). Überleitung zurück zu Wahr oder falsch, Aussage 3 (stehendes Heer) und 4: Was kostet das alles? (Heer in Friedenszeiten ein Drittel des Staatshaushalts.) Der Adel zahlte keine Steuern, hatte aber ranghohe Posten in der Armee und alleiniges Jagdrecht.");
+  }
+}
+
 // ============ Wahr oder falsch (einzeln nacheinander) ============
 {
   const WF = [
@@ -212,6 +280,7 @@ merkSlide(1, "Die fünf Säulen des Absolutismus",
       footer(s);
       s.addNotes("Erst zeigen, wenn die Klasse begründet hat. Nicht ausführlich erklären: Was unsicher bleibt, kommt in den folgenden Phasen.");
     }
+    if (i === 1) exkursSlides();
   });
 }
 
