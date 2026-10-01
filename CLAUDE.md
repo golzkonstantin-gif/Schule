@@ -22,7 +22,8 @@ Dieses Repo enthält Unterrichtsmaterial (Deutsch). Die Lehrkraft plant hier gem
 - **Transparenz durch die Lehrkraft, nicht durch Hilfsmittel.** Keine Modus- oder Symbolkarten (ausdrücklich abgelehnt). Stattdessen:
   - feste, wörtliche Ansagen bei jedem Wechsel („Stifte liegen. Ihr hört nur zu.“ / „Jetzt schreibt ihr ab: …“ / „Jetzt arbeitet ihr allein. Die Aufgabe steht rechts.“ / „Wer drankommt, schreibt an die Tafel. Alle prüfen mit.“ / „Vergleicht und verbessert mit Grün.“),
   - Übungen immer im gleichen Format: Nummer + Titel, nummerierte Arbeitsschritte mit Verb am Anfang, Zeit, Arbeitsform, „Fertig? Stift hinlegen“.
-- **Bewährt: „Kreide-Kette“.** Die Schüler kommen nacheinander an die Tafel, lösen eine Aufgabe und geben die Kreide an den Nächsten weiter. Das sorgt für eine konzentrierte Atmosphäre und soll bei Tafelübungen standardmäßig eingeplant werden.
+- **Bewährt: „Kreide-Kette“.** Die Schüler kommen nacheinander an die Tafel, lösen eine Aufgabe und geben die Kreide an den Nächsten weiter. Das sorgt für eine konzentrierte Atmosphäre und soll bei Tafelübungen standardmäßig eingeplant werden. Besonders bewährt: Die übrigen Schüler schreiben dabei im Heft mit, so sind alle beschäftigt.
+- **Zeit realistisch planen.** Kreide-Kette und Mitschreiben brauchen mehr Zeit als gedacht. Die ersten beiden Stunden wurden nicht ganz geschafft. Lieber weniger Inhalt pro Stunde und eine klar markierte optionale Phase am Ende.
 - **Zu Beginn jeder Stunde das Vorwissen der letzten Stunde reaktivieren**, mit kurzen Übungen an der Tafel.
 - **Gleicher Ablauf je Phase:** gemeinsam entdecken → Merksatz abschreiben → allein üben → an der Tafel vergleichen → mit Grün verbessern.
 - **Merksätze** immer mit „Wofür brauche ich das?“, dazu ein Erkennungstrick/Test.

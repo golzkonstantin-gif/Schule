@@ -65,7 +65,7 @@ Die Lehrkraft möchte das weiterverfolgen, noch ohne Material. Die Satzklammer (
 - **Hospitationsfeedback:** –
 - **Nächster Schritt:** Zu Beginn der nächsten Stunde das Vorwissen an der Tafel reaktivieren, dann beim Partizip II weitermachen.
 
-### Einzelstunde „Hilfsverben erkennen“ (geplant, 45 Min.)
+### Einzelstunde „Hilfsverben erkennen“ (45 Min.)
 - **Material:** `Hilfsverben_erkennen/` (nur Tafelskript; Merksätze und Übungen stehen an der Tafel, keine Präsentation)
 - **Bezug zur letzten Stunde:** Infinitiv und finite Form sitzen, das Partizip II wurde bestimmt, aber der Merksatz fehlt. Die Kreide-Kette hat gut funktioniert.
 - **Inhalt:**
@@ -75,9 +75,15 @@ Die Lehrkraft möchte das weiterverfolgen, noch ohne Material. Die Satzklammer (
   - Hilfsverb oder Vollverb: Merksatz 8 und Ü7.
   - Exit-Ticket mit einer Erklärung in eigenen Worten.
 - **Planungsentscheidung:** Die Tempora kommen erst, wenn der Begriff Hilfsverb sitzt (Wunsch der Lehrkraft). *haben* oder *sein* (Bewegung, Veränderung) wird hier bewusst noch nicht behandelt.
-- **Rückmeldung der Lehrkraft:** *(steht noch aus)*
-- **Exit-Ticket-Auswertung:** *(steht noch aus)*
-- **Hospitationsfeedback:** *(steht noch aus)*
+- **Durchgeführt:** Rückmeldung vom 01.10.2026
+- **Was hat funktioniert:**
+  - Die Stunde hat gut geklappt.
+  - Besonders gut lief die erste Übung (Reaktivierung): Die Lehrkraft gab Verben vor, die Schüler ergänzten sie per Kreide-Kette an der Tafel, und der Rest der Klasse schrieb im Heft mit.
+- **Wie weit:** nicht bis zur Satzklammer (Merksatz 7). Offen sind die Satzklammer, Ü6, Merksatz 8 (Hilfsverb oder Vollverb), Ü7 und das Exit-Ticket.
+- **Beobachtung zur Planung:** Zum zweiten Mal in Folge wurde die geplante Stunde nicht ganz geschafft. Kreide-Kette und Mitschreiben brauchen mehr Zeit als eingeplant. Künftig weniger Inhalt pro Stunde planen, lieber mit einer optionalen Phase am Ende.
+- **Exit-Ticket-Auswertung:** – (nicht erreicht)
+- **Hospitationsfeedback:** –
+- **Nächster Schritt:** In der nächsten Stunde reaktivieren und mit der Satzklammer weitermachen.
 
 ## Hospitationsfeedback (gesammelt)
 
