@@ -22,8 +22,8 @@ function footer(s) {
   txt(s, String(pageNo), { x: 12.2, y: 7.12, w: 0.5, h: 0.25, fontSize: 10, color: MUTED, align: "right" });
 }
 function bar(s, runs) {
-  box(s, 0.6, 6.45, 12.15, 0.6, NAVY);
-  s.addText(runs, { isTextBox: true, x: 0.9, y: 6.45, w: 11.6, h: 0.6, fontFace: BODY, fontSize: 17, color: WHITE, valign: "middle", margin: 0 });
+  box(s, 0.6, 6.2, 12.15, 0.85, NAVY);
+  s.addText(runs, { isTextBox: true, x: 0.9, y: 6.2, w: 11.6, h: 0.85, fontFace: BODY, fontSize: 24, color: WHITE, valign: "middle", margin: 0 });
 }
 
 // Aufgabenfolie: gleiches Format wie immer (Nummer + Titel, nummerierte Schritte, Zeit, Arbeitsform)
@@ -33,29 +33,28 @@ function taskSlide(kicker, title, stepsArr, meta, notes, done = "Fertig? Stift h
   s.background = { color: WHITE };
   txt(s, kicker.toUpperCase(), { x: 0.6, y: 0.35, w: 8, h: 0.3, fontSize: 13, color: MUTED, charSpacing: 2, bold: true });
   txt(s, title, { x: 0.6, y: 0.65, w: 12.1, h: 0.75, fontFace: HEAD, fontSize: 34, bold: true });
-  const per = stepW > 10 ? 68 : 40;
-  const fs = stepW > 10 ? 21 : 18;
-  const hs = stepsArr.map((st) => (st.length > per * 2 ? 1.15 : st.length > per ? 0.8 : 0.45));
+  const per = stepW > 10 ? 56 : 38;
+  const hs = stepsArr.map((st) => (st.length > per * 2 ? 1.4 : st.length > per ? 0.95 : 0.5));
   const total = hs.reduce((a, b) => a + b, 0) + (hs.length - 1) * 0.08;
-  box(s, 0.6, 1.55, stepW, total + 0.3, LIGHT2);
-  let yy = 1.7;
+  box(s, 0.6, 1.5, stepW, total + 0.24, LIGHT2);
+  let yy = 1.62;
   stepsArr.forEach((st, i) => {
-    numCircle(s, i + 1, 0.8, yy + 0.015, 0.42);
-    txt(s, st, { x: 1.4, y: yy, w: stepW - 0.95, h: hs[i], fontSize: fs, bold: true });
+    numCircle(s, i + 1, 0.8, yy + 0.04, 0.42);
+    txt(s, st, { x: 1.4, y: yy, w: stepW - 0.95, h: hs[i], fontSize: 24, bold: true });
     yy += hs[i] + 0.08;
   });
   bar(s, [{ text: "Zeit: ", options: { bold: true } }, { text: meta + "      ", options: {} }, { text: done, options: { italic: true, color: ICE } }]);
   footer(s);
   if (notes) s.addNotes(notes);
-  return { s, top: 1.55 + total + 0.3 + 0.3 };
+  return { s, top: 1.5 + total + 0.24 + 0.2 };
 }
 function sentences(s, list, top, o = {}) {
-  const rows = list.length, avail = 6.3 - top, rh = Math.min(o.rh || 0.85, avail / rows);
+  const rows = list.length, avail = 6.1 - top, rh = Math.min(o.rh || 0.85, avail / rows);
   list.forEach((sent, i) => {
     const y = top + i * rh;
     box(s, 0.6, y, 12.15, rh - 0.08, LIGHT);
     numCircle(s, i + 1, 0.75, y + (rh - 0.08 - 0.4) / 2, 0.4, RED);
-    s.addText(sent, { isTextBox: true, x: 1.4, y, w: 11.2, h: rh - 0.08, fontFace: HEAD, fontSize: o.size || 22, color: NAVY, valign: "middle", margin: 0 });
+    s.addText(sent, { isTextBox: true, x: 1.4, y, w: 11.2, h: rh - 0.08, fontFace: HEAD, fontSize: o.size || 24, color: NAVY, valign: "middle", margin: 0 });
   });
 }
 
@@ -70,19 +69,18 @@ function rich(str, base = {}) {
   });
   return out;
 }
-function merkSlide(nr, title, kern, beispiel, test, notes, kernSize = 22) {
+function merkSlide(nr, title, kern, beispiel, test, notes, kernSize = 24) {
   const s = pres.addSlide();
   pageNo++;
   s.background = { color: WHITE };
   txt(s, `MERKSATZ ${nr} · ABSCHREIBEN UND ROT UMRAHMEN`, { x: 0.6, y: 0.35, w: 10, h: 0.3, fontSize: 13, color: RED, charSpacing: 2, bold: true });
   txt(s, title, { x: 0.6, y: 0.65, w: 12.1, h: 0.75, fontFace: HEAD, fontSize: 34, bold: true });
-  s.addShape(pres.shapes.ROUNDED_RECTANGLE, { x: 0.6, y: 1.55, w: 12.15, h: 2.0, rectRadius: 0.08, fill: { color: WHITE }, line: { color: RED, width: 3 } });
-  s.addText(rich(kern), { isTextBox: true, x: 0.95, y: 1.65, w: 11.45, h: 1.8, fontFace: HEAD, fontSize: kernSize, color: NAVY, valign: "middle", margin: 0 });
-  box(s, 0.6, 3.7, 12.15, 0.6, LIGHT2);
-  s.addText([{ text: "Beispiel:   ", options: { bold: true, color: MUTED, fontFace: BODY, fontSize: 17 } }, ...rich(beispiel)], { isTextBox: true, x: 0.9, y: 3.7, w: 11.6, h: 0.6, fontFace: HEAD, fontSize: 19, color: NAVY, valign: "middle", margin: 0 });
-  box(s, 0.6, 4.45, 12.15, 1.8, LIGHT);
-  txt(s, "Test", { x: 0.85, y: 4.58, w: 11.6, h: 0.4, fontFace: HEAD, fontSize: 19, bold: true, color: RED });
-  s.addText(rich(test), { isTextBox: true, x: 0.85, y: 5.0, w: 11.6, h: 1.15, fontFace: BODY, fontSize: 22, color: NAVY, valign: "top", margin: 0 });
+  s.addShape(pres.shapes.ROUNDED_RECTANGLE, { x: 0.6, y: 1.5, w: 12.15, h: 2.1, rectRadius: 0.08, fill: { color: WHITE }, line: { color: RED, width: 3 } });
+  s.addText(rich(kern), { isTextBox: true, x: 0.95, y: 1.55, w: 11.45, h: 2.0, fontFace: HEAD, fontSize: 24, color: NAVY, valign: "middle", margin: 0 });
+  box(s, 0.6, 3.72, 12.15, 1.25, LIGHT2);
+  s.addText([{ text: "Beispiel:   ", options: { bold: true, color: MUTED, fontFace: BODY, fontSize: 24 } }, ...rich(beispiel)], { isTextBox: true, x: 0.9, y: 3.72, w: 11.6, h: 1.25, fontFace: HEAD, fontSize: 24, color: NAVY, valign: "middle", margin: 0 });
+  box(s, 0.6, 5.08, 12.15, 0.97, LIGHT);
+  s.addText([{ text: "Test:   ", options: { bold: true, color: RED, fontFace: HEAD, fontSize: 24 } }, ...rich(test)], { isTextBox: true, x: 0.9, y: 5.08, w: 11.6, h: 0.97, fontFace: BODY, fontSize: 24, color: NAVY, valign: "middle", margin: 0 });
   bar(s, [{ text: "Jetzt: ", options: { bold: true } }, { text: "Schreibe den Merksatz mit Beispiel ab und rahme ihn rot ein.      ", options: {} }, { text: "Fertig? Stift hinlegen.", options: { italic: true, color: ICE } }]);
   footer(s);
   s.addNotes(notes || `Ansage: „Jetzt schreibt ihr von der Folie ab: Merksatz ${nr}. Rahmt ihn rot ein.“ Warten, bis alle den Stift hingelegt haben.`);
@@ -117,7 +115,7 @@ function merkSlide(nr, title, kern, beispiel, test, notes, kernSize = 22) {
     box(s, 0.6, y, 12.15, 1.25, i % 2 ? LIGHT : LIGHT2);
     numCircle(s, i + 1, 0.9, y + 0.375, 0.5, RED);
     txt(s, h, { x: 1.7, y: y + 0.14, w: 10.8, h: 0.5, fontFace: HEAD, fontSize: 26, bold: true });
-    txt(s, b, { x: 1.7, y: y + 0.68, w: 10.8, h: 0.45, fontSize: 19, color: MUTED });
+    txt(s, b, { x: 1.7, y: y + 0.66, w: 10.8, h: 0.5, fontSize: 24, color: MUTED });
   });
   bar(s, [{ text: "Heute: ", options: { bold: true } }, { text: "Wir wiederholen genau das und ergänzen, was in euren Unterlagen noch fehlt.", options: {} }]);
   footer(s);
@@ -170,9 +168,9 @@ merkSlide(1, "Die fünf Säulen des Absolutismus",
   const { s, top } = taskSlide("Übung 1 · Arbeitsblatt", "Lückentext: Die fünf Säulen", ["Schreibe Ü1 oben auf das Arbeitsblatt.", "Lies den Text einmal ganz. Ergänze dann die 12 Lücken mit dem Wortspeicher.", "Streiche jedes benutzte Wort durch."], "5 Minuten · allein · leise",
     "Lösung: 1 absoluter · 2 Beamte · 3 Intendanten · 4 Steuerfreiheit · 5 Versailles · 6 Merkantilismus · 7 Zölle · 8 Gottesgnadentum · 9 Glaube · 10 stehendes · 11 400.000 · 12 Drittel. Kontrolle: „Wer drankommt, liest einen Absatz vor. Alle prüfen mit.“ Dann „Vergleicht und verbessert mit Grün.“ Schnelle machen die ★-Aufgabe (wichtigste Säule begründen).",
     "Fertig? Stift hinlegen. Schnelle: ★-Aufgabe.");
-  box(s, 0.6, top + 0.1, 12.15, 1.6, LIGHT);
-  txt(s, "Wortspeicher", { x: 0.9, y: top + 0.22, w: 4, h: 0.35, fontFace: HEAD, fontSize: 17, bold: true, color: RED });
-  txt(s, "Beamte · Glaube · Merkantilismus · Gottesgnadentum · Versailles · Steuerfreiheit · Zölle · stehendes · 400.000 · Drittel · absoluter · Intendanten", { x: 0.9, y: top + 0.62, w: 11.6, h: 1.0, fontFace: HEAD, fontSize: 20 });
+  box(s, 0.6, top - 0.1, 12.15, 6.1 - top + 0.1, LIGHT);
+  txt(s, "Wortspeicher", { x: 0.9, y: top - 0.02, w: 4, h: 0.4, fontFace: HEAD, fontSize: 24, bold: true, color: RED });
+  txt(s, "Beamte · Glaube · Merkantilismus · Gottesgnadentum · Versailles · Steuerfreiheit · Zölle · stehendes · 400.000 · Drittel · absoluter · Intendanten", { x: 0.9, y: top + 0.45, w: 11.6, h: 6.1 - top - 0.5, fontFace: HEAD, fontSize: 24 });
 }
 
 // ============ Wahr oder falsch (einzeln nacheinander) ============
@@ -207,8 +205,8 @@ merkSlide(1, "Die fünf Säulen des Absolutismus",
       txt(s, urteil === "WAHR" ? "Wahr" : "Falsch", { x: 0.6, y: 0.65, w: 12.1, h: 0.75, fontFace: HEAD, fontSize: 34, bold: true, color: urteil === "WAHR" ? GREEN : RED });
       box(s, 0.6, 1.75, 12.15, 1.5, LIGHT);
       txt(s, aussage, { x: 1.0, y: 1.75, w: 11.4, h: 1.5, fontFace: HEAD, fontSize: 24, valign: "middle", color: MUTED });
-      box(s, 0.6, 3.45, 12.15, 2.75, WHITE, { line: urteil === "WAHR" ? GREEN : RED, lw: 3 });
-      txt(s, "Begründung", { x: 1.0, y: 3.6, w: 6, h: 0.4, fontFace: HEAD, fontSize: 19, bold: true, color: urteil === "WAHR" ? GREEN : RED });
+      box(s, 0.6, 3.45, 12.15, 2.6, WHITE, { line: urteil === "WAHR" ? GREEN : RED, lw: 3 });
+      txt(s, "Begründung", { x: 1.0, y: 3.6, w: 6, h: 0.4, fontFace: HEAD, fontSize: 24, bold: true, color: urteil === "WAHR" ? GREEN : RED });
       txt(s, erkl, { x: 1.0, y: 4.1, w: 11.4, h: 1.9, fontFace: HEAD, fontSize: 26 });
       bar(s, [{ text: "Vergleiche: ", options: { bold: true } }, { text: "Stimmt deine Begründung mit der Folie überein?", options: {} }]);
       footer(s);
@@ -235,49 +233,14 @@ merkSlide(2, "Absolutismus",
   ], top, { size: 22, rh: 0.8 });
 }
 
-// ============ Ständegesellschaft ============
+// ============ Im Absolutismus fühle ich mich ============
 {
-  const { s, top } = taskSlide("Übung 3 · Tafel", "Die Ständegesellschaft aus dem Kopf", ["Klappe das Heft zu. Ihr meldet euch und nennt, was ihr wisst.", "Wir füllen die Tabelle an der Tafel gemeinsam aus.", "Jetzt schreibst du die fertige Tabelle mit Lineal ab."], "8 Minuten · gemeinsam, dann abschreiben",
-    "Ansage: „Hefte zu. Ihr schreibt noch nichts auf. Meldet euch.“ Raster aus dem Gruppenpuzzle (Stand | Anzahl | Bildung | Vorrechte | Pflichten) plus Spalte Mitbestimmung bereits leer an der Tafel. Inhalte siehe Tafelskript (aus den Gruppenpuzzle-Texten). Nach dem gemeinsamen Ausfüllen: „Jetzt schreibt ihr ab: die Tabelle. Mit Lineal.“ Lösungen siehe Tafelskript. Hinweis: Der Text nennt zur Mitbestimmung des Klerus nichts.  Der Dritte Stand ist ausgeschlossen, der Adel bestimmt das politische Geschehen.",
-    "Fertig? Stift hinlegen.");
-  const cols = ["Stand", "Anzahl", "Bildung", "Vorrechte", "Pflichten", "Mitbestimmung"];
-  const cw = [1.8, 1.3, 1.9, 2.4, 2.4, 2.35];
-  let x = 0.6;
-  cols.forEach((c, i) => {
-    box(s, x, top - 0.15, cw[i] - 0.1, 0.45, NAVY, { r: 0.05 });
-    txt(s, c, { x, y: top - 0.15, w: cw[i] - 0.1, h: 0.45, fontSize: 17, bold: true, color: WHITE, align: "center", valign: "middle" });
-    x += cw[i];
-  });
-  ["1. Stand\nKlerus", "2. Stand\nAdel", "3. Stand\nBauern, Bürger"].forEach((r, j) => {
-    let xx = 0.6; const y = top + 0.38 + j * 0.72;
-    cols.forEach((c, i) => {
-      box(s, xx, y, cw[i] - 0.1, 0.64, i === 0 ? LIGHT2 : LIGHT);
-      if (i === 0) txt(s, r, { x: xx, y, w: cw[i] - 0.1, h: 0.64, fontFace: HEAD, fontSize: 14, bold: true, align: "center", valign: "middle" });
-      xx += cw[i];
-    });
-  });
-}
-
-merkSlide(3, "Die Ständegesellschaft",
-  "In der Ständegesellschaft gehört jeder Mensch **durch Geburt** zu einem von **drei Ständen**: **Klerus (ca. 150 000)**, **Adel (ca. 500 000)** und **Dritter Stand (Bauern und Bürger, ca. 20 000 000)**. Klerus und Adel haben **Vorrechte**. Der Dritte Stand zahlt **Steuern und Abgaben** und ist von der **politischen Mitbestimmung ausgeschlossen**.",
-  "Adel: **Jagdrecht** · Klerus: **Kirchenzehnt** · Dritter Stand: **Abgaben**",
-  "Wer zahlt, wer ist ausgeschlossen? **Wenige Menschen haben die Vorrechte, viele tragen die Last.**",
-  "Ansage: „Jetzt schreibt ihr von der Folie ab: Merksatz 3. Rahmt ihn rot ein.“ Alle Zahlen stammen aus den Gruppenpuzzle-Texten. Der Text nennt zur Mitbestimmung des Klerus nichts.", 20);
-
-{
-  const { s, top } = taskSlide("Übung 4", "Im Absolutismus fühle ich mich …", ["Schreibe Ü4 an den Rand. Betrachte die Karikatur.", "Wähle einen Stand und beende den Satz: „Im Absolutismus fühle ich mich …, weil …“", "Nenne ein Recht und eine Pflicht deines Standes."], "5 Minuten · allein · leise",
-    "Ansage: „Jetzt arbeitet ihr allein. Die Aufgabe steht rechts.“ Die Karikatur gibt Hinweise auf Vorrechte und Lasten der Stände (hier: Karikatur Drei Stände, 1789; wenn vorhanden, stattdessen die Karikatur mit Sprechblasen einsetzen: Bilddatei in quellcode/praesentation.js austauschen). Danach 3 Schüler vorlesen lassen (verschiedene Stände): „Wer drankommt, liest vor. Alle prüfen mit.“ Kriterien stehen auf der nächsten Folie. Mögliche Antwort: „Im Absolutismus fühle ich mich als Adeliger privilegiert, weil ich keine Steuern zahlen muss und allein jagen darf. Dafür muss ich mich ehrenhaft verhalten und Verwaltungsaufgaben übernehmen.“ / „… als Bauer ausgenutzt, weil ich Steuern, hohe Abgaben und Pachtgebühren zahlen muss und von der Mitbestimmung ausgeschlossen bin.“",
-    "Fertig? Stift hinlegen.", 8.1);
-  s.addImage({ path: "../material/karikatur_drei_staende.jpg", x: 8.91, y: 1.55, w: 3.84, h: 4.75 });
-  box(s, 0.6, top - 0.15, 8.1, 1.45, LIGHT);
-  txt(s, "Stände", { x: 0.85, y: top - 0.05, w: 7.6, h: 0.35, fontFace: HEAD, fontSize: 17, bold: true, color: RED });
-  txt(s, "Klerus (Geistliche) · Adel · Dritter Stand (Bauern und Bürger)", { x: 0.85, y: top + 0.25, w: 7.6, h: 0.35, fontFace: HEAD, fontSize: 15 });
-  txt(s, "Begriffe: Vorrechte · Steuerfreiheit · Jagdrecht · Kirchenzehnt · Pachtgebühren · Mitbestimmung", { x: 0.85, y: top + 0.7, w: 7.6, h: 0.5, fontFace: HEAD, fontSize: 14, color: MUTED });
-}
-
-{
-  const { s, top } = taskSlide("Kontrolle zu Ü4", "Prüft die Sätze der anderen", ["Hört zu: Welcher Stand wurde gewählt?", "Prüft: Wird ein Recht und eine Pflicht genannt? Passen sie zum Stand?", "Prüft: Passt das Gefühl zur Begründung?"], "3 Minuten · gemeinsam · mündlich",
-    "Ansage: „Wer drankommt, liest vor. Alle prüfen mit.“ Typische Fehler: Adel als Steuerzahler, Klerus mit Wehrdienst (befreit), Dritter Stand (Bauern und Bürger) mit Vorrechten. Dann: „Verbessert mit Grün.“", "Wer korrigiert, nennt die Begründung mit Fachbegriff.");
+  const { s, top } = taskSlide("Übung 3", "Im Absolutismus fühle ich mich …", ["Schreibe Ü3 an den Rand. Betrachte die Karikatur.", "Wähle einen Stand und beende den Satz: „Im Absolutismus fühle ich mich …, weil …“", "Nenne ein Recht und eine Pflicht deines Standes."], "5 Minuten · allein · leise",
+    "Ansage: „Jetzt arbeitet ihr allein. Die Aufgabe steht rechts.“ Die Karikatur gibt Hinweise auf Vorrechte und Lasten der Stände (hier: Karikatur Drei Stände, 1789; die Karikatur mit Sprechblasen kann die Bilddatei in quellcode/praesentation.js ersetzen). Danach 3 Schüler vorlesen lassen (verschiedene Stände): „Wer drankommt, liest vor. Alle prüfen mit.“ Mögliche Antwort: „Im Absolutismus fühle ich mich als Adeliger privilegiert, weil ich keine Steuern zahlen muss und allein jagen darf. Dafür muss ich mich ehrenhaft verhalten und Verwaltungsaufgaben übernehmen.“ / „… als Bauer ausgenutzt, weil ich Steuern, hohe Abgaben und Pachtgebühren zahlen muss und von der Mitbestimmung ausgeschlossen bin.“ Prüfen: Wird ein Vorrecht und eine Pflicht genannt? Passen sie zum Stand? Typische Fehler: Adel als Steuerzahler, Klerus mit Wehrdienst (befreit), Dritter Stand (Bauern und Bürger) mit Vorrechten. Dann: „Verbessert mit Grün.“",
+    "Fertig? Stift hinlegen.", 8.9);
+  s.addImage({ path: "../material/karikatur_drei_staende.jpg", x: 9.7, y: 1.5, w: 3.05, h: 3.78 });
+  box(s, 0.6, top + 0.1, 12.15, 0.8, LIGHT);
+  txt(s, "Klerus (Geistliche) · Adel · Dritter Stand (Bauern und Bürger)", { x: 0.9, y: top + 0.1, w: 11.6, h: 0.8, fontFace: HEAD, fontSize: 24, valign: "middle" });
 }
 
 // ============ Schluss ============
@@ -287,12 +250,12 @@ merkSlide(3, "Die Ständegesellschaft",
   s.background = { color: WHITE };
   txt(s, "ZUM SCHLUSS · STIFTE LIEGEN", { x: 0.6, y: 0.35, w: 10, h: 0.3, fontSize: 13, color: MUTED, charSpacing: 2, bold: true });
   txt(s, "So lernst du bis zum Test", { x: 0.6, y: 0.65, w: 12.1, h: 0.75, fontFace: HEAD, fontSize: 34, bold: true });
-  const items = ["Merksatz 2 auswendig: Was bedeutet Absolutismus?", "Lückentext noch einmal ohne Wortspeicher ausfüllen", "Tabelle Ständegesellschaft aus dem Kopf aufschreiben", "Deinen Ü4-Satz zu einem zweiten Stand noch einmal schreiben"];
+  const items = ["Merksatz 2 auswendig: Was bedeutet Absolutismus?", "Lückentext noch einmal ohne Wortspeicher ausfüllen", "Tabelle Ständegesellschaft aus dem Kopf aufschreiben", "Deinen Ü3-Satz zu einem zweiten Stand noch einmal schreiben"];
   items.forEach((x, i) => {
     const y = 1.7 + i * 1.05;
     box(s, 0.6, y, 12.15, 0.9, i % 2 ? LIGHT : LIGHT2);
     numCircle(s, i + 1, 0.85, y + 0.2, 0.5, RED);
-    txt(s, x, { x: 1.6, y, w: 10.9, h: 0.9, fontFace: HEAD, fontSize: 22, valign: "middle" });
+    txt(s, x, { x: 1.6, y, w: 10.9, h: 0.9, fontFace: HEAD, fontSize: 24, valign: "middle" });
   });
   bar(s, [{ text: "Test: ", options: { bold: true } }, { text: "nächste Woche · Ständegesellschaft · Absolutismus · fünf Säulen", options: {} }]);
   footer(s);
