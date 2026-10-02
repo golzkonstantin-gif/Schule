@@ -20,7 +20,7 @@
 - [ ] Perfekt mit *haben* oder *sein*
 - [ ] Hilfsverb oder Vollverb unterscheiden („Ich habe Hunger“ gegenüber „Ich habe gegessen“)
 - [ ] Modalverben + Infinitiv (für die nächste Stunde geplant)
-- [ ] *werden* als dritte Hilfsverb-Familie und Futur (für die nächste Stunde geplant)
+- [ ] *werden* und Futur I (Stunde „Das Futur I“ geplant)
 - [ ] Danach als Anwendung: der Zeitformen-Baukasten (`Zeitformen_bauen/`)
 
 ## Langfristige Idee: Satzklammer als roter Faden
@@ -84,6 +84,21 @@ Die Lehrkraft möchte das weiterverfolgen, noch ohne Material. Die Satzklammer (
 - **Exit-Ticket-Auswertung:** – (nicht erreicht)
 - **Hospitationsfeedback:** –
 - **Nächster Schritt:** In der nächsten Stunde reaktivieren und mit der Satzklammer weitermachen.
+
+### Einzelstunde „Das Futur I“ (geplant, 45 Min.)
+- **Material:** `Futur_I/` (Tafelskript, ohne Präsentation)
+- **Bezug zur letzten Stunde:** Die Kreide-Kette mit Mitschreiben lief sehr gut. Merksatz 6 (Hilfsverb) steht im Heft. Die Satzklammer und „Hilfsverb oder Vollverb“ wurden nicht erreicht.
+- **Planungsentscheidung der Lehrkraft:** Nach der Reaktivierung folgt direkt das Futur I, mit Schreibaufgabe zum Wochenende. Die Satzklammer wird dabei nur als Bogen gezeichnet. Ein eigener Merksatz dazu und „Hilfsverb oder Vollverb“ bleiben offen.
+- **Inhalt:**
+  - Reaktivierung per Kreide-Kette mit Mitschreiben: Infinitiv, finit oder Partizip II. Bewusst mit *werde* und *wirst*.
+  - Futur I an vier Wochenend-Sätzen entdecken.
+  - *werden* per Kreide-Kette konjugieren.
+  - Merksatz 7 (Futur I mit Klammer-Beispiel).
+  - Ü7: fünf eigene Sätze zum Wochenende.
+  - Vergleich per Kreide-Kette.
+  - Optional: Perfekt oder Futur I?
+- **Rückmeldung der Lehrkraft:** *(steht noch aus)*
+- **Hospitationsfeedback:** *(steht noch aus)*
 
 ## Hospitationsfeedback (gesammelt)
 
