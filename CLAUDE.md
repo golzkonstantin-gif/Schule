@@ -4,12 +4,15 @@ Dieses Repository enthält Unterrichtsplanungen und Material (Deutsch). Bei jede
 
 ## Stundenaufbau
 - **Jede Stunde braucht eine (Text-)Grundlage** – Dialog, Rede, Video mit Transkript o. Ä. –, die die Klasse bearbeitet und die **an der Tafel ausgewertet und gesichert** wird. Dazu immer ein **Tafelscript** mit Tafelbild im Endstand und schrittweisem Anschrieb (wann kommt was an die Tafel, Impulse der Lehrkraft).
-- Erarbeitung bevorzugt **erst Einzelarbeit, dann Partnerarbeit, dann Gruppen**. Klasse 11: 21 Schülerinnen und Schüler, Gruppen nach Sitzreihen (Wandreihe, Mittelreihe, Fensterreihe).
+- Erarbeitung bevorzugt **in Einzelarbeit**, danach Gruppen oder Unterrichtsgespräch. **Partnerarbeit nur, wenn sie wirklich zielführend ist** (zu zweit wird meist gequatscht) – nicht als Standardschritt. Klasse 11: 21 Schülerinnen und Schüler, Gruppen nach Sitzreihen (Wandreihe, Mittelreihe, Fensterreihe).
 - **Lösungen werden im Unterrichtsgespräch besprochen**, nicht per Selbstkontrolle am Pult.
 - Neue Techniken/Inhalte **Schritt für Schritt**: gemeinsam ansehen → allein am Text anwenden → kurz prüfen, erst dann das Nächste. Die Lösung danach auf einer Folie zeigen.
-- Rollenspiele **ohne Unterbrechung** spielen lassen, Auswertung danach.
+- Rollenspiele **genau kriteriengeleitet** planen – so konkret wie beim Brief: klarer Auftrag, festgelegte Kriterien für die Szene (was muss sichtbar werden?) und dieselben Kriterien als Beobachtungsbogen fürs Publikum; Auftrag und Kriterien auch als Whiteboard-PDF. Gespielt wird **ohne Unterbrechung**, Auswertung danach anhand der Kriterien.
 - Schülerinnen und Schüler entwickeln eigene Beispiele selbst; Input nur im Notfall.
 - **Keine Hausaufgaben.**
+
+## Rechtschreibung
+- Die Rechtschreibung der Klasse ist schwach: regelmäßig **Diktate mit den Definitionen der Fachbegriffe** einplanen – Lehrkraft liest vor, die Klasse schreibt mit, danach steht der Text an der Tafel bzw. auf dem Whiteboard **zur Selbstkontrolle** (Ausnahme von der Regel „Lösungen im Unterrichtsgespräch“). So werden Fachwissen und Rechtschreibung zugleich gesichert.
 
 ## Leistungsnachweise
 - Anwendung am konkreten Fall statt reiner Modellbeschreibung (z. B. Brief, der eine gestörte Kommunikation repariert).
