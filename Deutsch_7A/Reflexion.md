@@ -94,9 +94,9 @@ Die Lehrkraft möchte das weiterverfolgen, noch ohne Material. Die Satzklammer (
   - Futur I an vier Wochenend-Sätzen entdecken.
   - *werden* per Kreide-Kette konjugieren.
   - Merksatz 7 (Futur I mit Klammer-Beispiel).
-  - Ü7: fünf eigene Sätze zum Wochenende.
-  - Vergleich per Kreide-Kette.
-  - Optional: Perfekt oder Futur I?
+  - Ü7 a: drei eigene Sätze zum Wochenende im Futur I.
+  - Die Lehrkraft schreibt Schülersätze an die Tafel, die Kreide-Kette markiert *werden* und den Infinitiv, alle schreiben mit.
+  - Ü7 b „Zurück ins Perfekt“ (Idee der Lehrkraft: „Stellt euch vor, ich frage euch nächste Woche, was ihr gemacht habt“): Die Sätze werden per Kreide-Kette in eine zweite Spalte ins Perfekt umgebaut. Erkenntnis: Die Klammer bleibt, beide Teile werden ausgetauscht (werde → habe/bin, Infinitiv → Partizip II).
 - **Rückmeldung der Lehrkraft:** *(steht noch aus)*
 - **Hospitationsfeedback:** *(steht noch aus)*
 

@@ -173,16 +173,16 @@ doc.push(kicker("Tafelskript für die Lehrkraft · Einzelstunde (45 Min.)"), h1(
 doc.push(box([
   p([S("Anknüpfung an die letzte Stunde: ", { bold: true }), S("Die Kreide-Kette mit Mitschreiben lief sehr gut. Merksatz 6 (Das Hilfsverb: haben, sein, werden) steht im Heft. Dort wurde angekündigt: werden kommt beim Futur. Genau hier setzt die Stunde an. Das Futur I ist die erste Zeitform, die die Klasse mit einem Hilfsverb bildet – nur steht am Satzende diesmal kein Partizip II, sondern der Infinitiv.")], { after: 0 }),
 ], LIGHT2));
-doc.push(p([S("Ziel: ", { bold: true }), S("Die Klasse bildet das Futur I (werden + Infinitiv), konjugiert werden sicher und schreibt eigene Sätze über ihr Wochenende im Futur I.")], { before: 120, after: 100 }));
+doc.push(p([S("Ziel: ", { bold: true }), S("Die Klasse bildet das Futur I (werden + Infinitiv), konjugiert werden sicher, schreibt eigene Sätze über ihr Wochenende im Futur I und baut sie ins Perfekt um. Dabei wird sichtbar: Die Klammer bleibt, nur beide Teile werden ausgetauscht.")], { before: 120, after: 100 }));
 
 doc.push(h3("Ablauf"));
 doc.push(grid([900, 3300, 6006], ["Zeit", "Phase", "Kern"], [
-  ["8′", "0 Reaktivierung", "Kreide-Kette mit Mitschreiben: Infinitiv, finite Form, Partizip II"],
-  ["12′", "1 Wie bildet man das Futur I?", "Wochenend-Sätze an der Tafel, werden konjugieren, Klammer zeichnen"],
+  ["7′", "0 Reaktivierung", "Kreide-Kette mit Mitschreiben: Infinitiv, finite Form, Partizip II"],
+  ["10′", "1 Wie bildet man das Futur I?", "vier Beispielsätze, werden konjugieren, Klammer zeichnen"],
   ["4′", "2 Merksatz 7", "Das Futur I abschreiben"],
-  ["13′", "3 Ü7 Mein Wochenende", "fünf eigene Sätze im Futur I schreiben"],
-  ["8′", "4 Vergleich", "Kreide-Kette: je ein Satz an die Tafel, alle prüfen mit"],
-  ["(3′)", "5 optional", "Perfekt oder Futur I? – nur, wenn Zeit bleibt"],
+  ["6′", "3 Ü7 a Mein Wochenende", "drei eigene Sätze im Futur I schreiben"],
+  ["7′", "4 Sätze an die Tafel", "Lehrkraft schreibt Schülersätze an, Kreide-Kette markiert werden und Infinitiv"],
+  ["10′", "5 Ü7 b Zurück ins Perfekt", "„Ich frage euch nächste Woche …“ – Sätze per Kreide-Kette ins Perfekt umbauen"],
 ], { bold: [true, true, false], colors: [C.hv, NAVY, null], h: 360 }));
 
 doc.push(h3("So sieht das Heft am Ende aus"));
@@ -190,7 +190,8 @@ doc.push(table([2300, 7906], [
   ["Überschrift", "Das Futur I (mit Lineal unterstrichen) · Datum rechts"],
   ["Tabelle", "werden im Präsens (ich werde, du wirst …)"],
   ["Merksatz 7", "Das Futur I + Beispielsatz mit Klammer"],
-  ["Ü7", "fünf eigene Sätze zum Wochenende, werden rot, Infinitiv blau, Klammer"],
+  ["Ü7 a", "drei eigene Sätze zum Wochenende im Futur I, werden rot, Infinitiv blau, Klammer"],
+  ["Ü7 b", "die Tafelsätze in zwei Spalten: Futur I | Perfekt (mitgeschrieben)"],
 ].map(([a, b]) => row([tc(a, 2300, { bold: true, color: a.startsWith("Merk") ? C.hv : a === "Überschrift" ? NAVY : "C77C12", fill: LIGHT, size: 20 }), tc(b, 7906, { size: 20 })], 360))));
 
 doc.push(p([S("Tipp: ", { bold: true }), S("Merksatz 7 und den Wortspeicher für Ü7 vor der Stunde auf die Seitentafel schreiben und zuklappen.")], { before: 120, after: 40 }));
@@ -200,17 +201,17 @@ doc.push(p([S("Farben: ", { bold: true }), t("Hilfsverb rot", { bold: true, colo
 
 // ---------- Phase 0 ----------
 const WORDS = ["spielen", "gespielt", "spielst", "werde", "gegangen", "gehen", "hat", "wirst", "gekauft", "schlafen"];
-doc.push(br(), phase("0", "Reaktivierung: Kreide-Kette mit Mitschreiben", 8));
+doc.push(br(), phase("0", "Reaktivierung: Kreide-Kette mit Mitschreiben", 7));
 doc.push(...steps([
   ["abschreiben", { say: "Heft auf. Datum nach rechts. Zeichnet drei Spalten: Infinitiv, finite Form, Partizip II. Wer die Kreide hat, schreibt ein Wort an der Tafel in die richtige Spalte. Alle anderen schreiben im Heft mit.",
-    board: auftrag("Kreide-Kette: Welche Verbform?", ["Nimm ein Wort von der Liste.", "Schreibe es in die richtige Spalte.", "Gib die Kreide weiter."], [bl(WORDS.join("  ·  ")), p(t(""), { after: 20 }), table([2400, 2400, 2400], [row([hdr("Infinitiv", 2400, C.inf, 18), hdr("finite Form", 2400, NAVY, 18), hdr("Partizip II", 2400, C.p2, 18)], 320), row([2400, 2400, 2400].map((x) => tc("", x)), 700)])], "8 Minuten · Kreide-Kette, alle schreiben mit"),
+    board: auftrag("Kreide-Kette: Welche Verbform?", ["Nimm ein Wort von der Liste.", "Schreibe es in die richtige Spalte.", "Gib die Kreide weiter."], [bl(WORDS.join("  ·  ")), p(t(""), { after: 20 }), table([2400, 2400, 2400], [row([hdr("Infinitiv", 2400, C.inf, 18), hdr("finite Form", 2400, NAVY, 18), hdr("Partizip II", 2400, C.p2, 18)], 320), row([2400, 2400, 2400].map((x) => tc("", x)), 700)])], "7 Minuten · Kreide-Kette, alle schreiben mit"),
     sol: "Infinitiv: spielen, gehen, schlafen · finit: spielst, werde, hat, wirst · Partizip II: gespielt, gegangen, gekauft",
     do: ["Bewusst dabei: werde und wirst. Nachfragen: „Zu welchem Infinitiv gehören werde und wirst?“ → werden. „Was wisst ihr schon über werden?“ → ein Hilfsverb (Merksatz 6)."] }],
 ]));
 
 // ---------- Phase 1 ----------
 const FS = [["Am Samstag ", "werde", " ich lange ", "schlafen", "."], ["Wir ", "werden", " ins Kino ", "gehen", "."], ["Mein Bruder ", "wird", " Fußball ", "spielen", "."], ["", "Wirst", " du mit uns ", "kommen", "?"]];
-doc.push(phase("1", "Wie bildet man das Futur I?", 12));
+doc.push(phase("1", "Wie bildet man das Futur I?", 10));
 doc.push(...steps([
   ["zuhoeren", { say: "Stifte liegen. Ihr hört nur zu. Ich schreibe vier Sätze an. Wann passiert das – gestern, jetzt oder später?", board: board("Mitte", FS.map((s, i) => bl([N(s[0]), N(s[1]), N(s[2]), N(s[3]), N(s[4])], { after: i === 3 ? 0 : 30 }))), do: ["Antwort: später, in der Zukunft. Begriff nennen: „Diese Zeitform heißt Futur I.“"] }],
   ["tafel", { say: "Kreide-Kette: Wer die Kreide hat, unterstreicht in einem Satz die finite Form von werden rot und das Verb am Satzende blau. Dann Kreide weitergeben. Alle prüfen mit.", board: board("Mitte (danach)", FS.map((s, i) => bl([N(s[0]), R(s[1]), N(s[2]), B(s[3]), N(s[4])], { after: i === 3 ? 0 : 30 }))) }],
@@ -218,7 +219,6 @@ doc.push(...steps([
     "Ziel: rot = finite Form von werden, ein Hilfsverb (Merksatz 6). Am Satzende steht kein Partizip II, sondern der Infinitiv.",
     "Bogen vom roten Wort zum blauen Infinitiv zeichnen: Wieder umschließen die beiden den Rest des Satzes.",
     "Satz 4 ist eine Frage: Dort steht werden vorne – die Klammer bleibt trotzdem.",
-    "Kontrast an der Tafel daneben: Ich habe Fußball gespielt (Vergangenheit) – Ich werde Fußball spielen (Zukunft).",
   ] }],
   ["tafel", { say: "Kreide-Kette: Wir konjugieren werden. Wer die Kreide hat, trägt eine Form ein. Alle anderen schreiben die Tabelle im Heft mit.", board: board("Mitte", [table([1500, 1800, 1500, 1800], [
     ["ich", "werde", "wir", "werden"], ["du", "wirst", "ihr", "werdet"], ["er/sie/es", "wird", "sie/Sie", "werden"],
@@ -238,30 +238,47 @@ doc.push(...steps([
 ]));
 
 // ---------- Phase 3 ----------
-doc.push(phase("3", "Ü7 Mein Wochenende", 13));
+doc.push(phase("3", "Ü7 a Mein Wochenende", 6));
 doc.push(...steps([
-  ["luecken", { say: "Jetzt arbeitet ihr allein. Die Aufgabe steht rechts an der Tafel: Ü7. Ihr schreibt fünf eigene Sätze darüber, was ihr am Wochenende machen werdet. Acht Minuten. Wer fertig ist: Stift hinlegen.", board: auftrag("Ü7 Mein Wochenende", ["Schreibe Ü7 an den Rand.", "Schreibe fünf Sätze: Was wirst du am Wochenende machen? Benutze in jedem Satz das Futur I.", "Markiere werden rot und den Infinitiv blau. Zeichne die Klammer.", "★ Beginne nicht jeden Satz mit „Ich“ – z. B. „Am Samstag …“, „Danach …“, „Mit meiner Familie …“."], [
-    p([S("Wortspeicher: ", { bold: true, size: 20 }), N("ausschlafen · zocken · trainieren · Freunde treffen · ins Kino gehen · eine Serie schauen · Oma besuchen · Hausaufgaben machen · shoppen gehen", { size: 20 })], { after: 0 }),
-  ], "8 Minuten · allein · leise"), do: [
-    "Herumgehen und auf typische Fehler achten: „Ich werde spiele“ (finite Form statt Infinitiv), „du wirdst“ / „er werdet“ (falsche werden-Form), Infinitiv nicht am Satzende („Ich werde spielen am Samstag“).",
-    "Wer schnell fertig ist: die ★-Aufgabe oder einen sechsten Satz mit einer Frage („Wirst du …?“).",
+  ["luecken", { say: "Jetzt arbeitet ihr allein. Die Aufgabe steht rechts an der Tafel: Ü7 a. Schreibt drei Sätze darüber, was ihr am Wochenende machen werdet. Fünf Minuten. Wer fertig ist: Stift hinlegen.", board: auftrag("Ü7 a Mein Wochenende", ["Schreibe Ü7 a an den Rand.", "Schreibe drei Sätze: Was wirst du am Wochenende machen? Benutze in jedem Satz das Futur I.", "Markiere werden rot und den Infinitiv blau.", "★ Beginne nicht jeden Satz mit „Ich“ – z. B. „Am Samstag …“, „Danach …“."], [
+    p([S("Wortspeicher: ", { bold: true, size: 20 }), N("ausschlafen · zocken · trainieren · Freunde treffen · ins Kino gehen · eine Serie schauen · Oma besuchen · Hausaufgaben machen · Rad fahren", { size: 20 })], { after: 0 }),
+  ], "5 Minuten · allein · leise"), do: [
+    "Herumgehen und auf typische Fehler achten: „Ich werde spiele“ (finite Form statt Infinitiv), „du wirdst“ / „er werdet“, Infinitiv nicht am Satzende.",
+    "Dabei schon passende Sätze für Phase 4 auswählen: möglichst einige mit Bewegungsverben (gehen, fahren) und einige ohne (zocken, schauen) – das macht den Perfekt-Umbau später ergiebig.",
   ] }],
 ]));
 
 // ---------- Phase 4 ----------
-doc.push(phase("4", "Vergleich per Kreide-Kette", 8));
+doc.push(phase("4", "Schülersätze an die Tafel", 7));
+const SB = [["Am Samstag ", "werde", " ich ", "ausschlafen", "."], ["Ich ", "werde", " mit Freunden ", "zocken", "."], ["Wir ", "werden", " ins Kino ", "gehen", "."], ["Mein Bruder ", "wird", " Fußball ", "spielen", "."], ["Am Sonntag ", "werde", " ich zu Oma ", "fahren", "."]];
 doc.push(...steps([
-  ["tafel", { say: "Kreide-Kette: Wer die Kreide hat, schreibt einen seiner Sätze an die Tafel, markiert werden rot und den Infinitiv blau und zeichnet die Klammer. Dann Kreide weitergeben. Alle prüfen mit: Stimmt die Form von werden? Steht der Infinitiv am Ende?", do: ["Fehler nicht selbst korrigieren, sondern die Klasse fragen: „Stimmt das? Prüft mit dem Test aus Merksatz 7.“", "Gelungene Sätze mit anderem Satzanfang („Am Sonntag werde ich …“) hervorheben: Auch dann steht werden an Position 2."] }],
-  ["kontrolle", { say: "Vergleicht eure Sätze mit der Tafel und verbessert mit Grün." }],
+  ["gemeinsam", { say: "Meldet euch. Lest einen eurer Sätze vor. Ich schreibe fünf davon an die Tafel.", do: ["Fünf Sätze in die linke Spalte schreiben (Überschrift „Futur I“), noch ohne Farben. Rechts eine leere Spalte „Perfekt“ lassen.", "Falls passende Sätze fehlen: Beispiele unten ergänzen."],
+    board: board("Mitte (Beispiel)", SB.map((x, i) => bl([N(x[0]), N(x[1]), N(x[2]), N(x[3]), N(x[4])], { after: i === SB.length - 1 ? 0 : 30 }))) }],
+  ["tafel", { say: "Kreide-Kette: Wer die Kreide hat, markiert in einem Satz werden rot und den Infinitiv blau und zeichnet die Klammer. Alle anderen schreiben die Sätze als Ü7 b in die linke Spalte im Heft mit.", do: ["Heft-Ansage vorher: „Zeichnet zwei Spalten: links Futur I, rechts Perfekt. Die rechte bleibt erst einmal leer.“"] }],
 ]));
 
 // ---------- Phase 5 ----------
-doc.push(phase("5", "Optional: Perfekt oder Futur I?", 3));
-doc.push(p(t("Nur, wenn noch Zeit bleibt – sonst als Einstieg der nächsten Stunde.", { size: 20, italics: true, color: MUTED }), { after: 80 }));
+const PERF = [["Am Samstag ", "habe", " ich ", "ausgeschlafen", "."], ["Ich ", "habe", " mit Freunden ", "gezockt", "."], ["Wir ", "sind", " ins Kino ", "gegangen", "."], ["Mein Bruder ", "hat", " Fußball ", "gespielt", "."], ["Am Sonntag ", "bin", " ich zu Oma ", "gefahren", "."]];
+doc.push(phase("5", "Ü7 b Zurück ins Perfekt", 10));
 doc.push(...steps([
-  ["gemeinsam", { say: "Meldet euch. Ihr schreibt nichts auf. Gestern oder morgen? Und woran erkennt ihr das?", board: board("Mitte", [bl("1  Ich habe Fußball gespielt."), bl("2  Ich werde Fußball spielen."), bl("3  Wir sind ins Kino gegangen."), bl("4  Wir werden ins Kino gehen.", { after: 0 })]), sol: "1 gestern (habe + Partizip II, Perfekt) · 2 morgen (werde + Infinitiv, Futur I) · 3 gestern (sind + Partizip II, Perfekt) · 4 morgen (werden + Infinitiv, Futur I)", do: ["Erkenntnis: Beide Zeitformen sind eine Klammer. Am linken Teil (habe/sind oder werde) und am rechten Teil (Partizip II oder Infinitiv) erkennt man die Zeitform."] }],
+  ["zuhoeren", { say: "Stifte liegen. Ihr hört nur zu. Stellt euch vor, es ist Montag, und ich frage euch: Was habt ihr am Wochenende gemacht? Was müsst ihr an den Sätzen ändern?", do: ["Erwartung: Das Wochenende ist vorbei → Vergangenheit → Perfekt. Statt werde kommt habe oder bin, statt des Infinitivs das Partizip II."] }],
+  ["tafel", { say: "Kreide-Kette: Wer die Kreide hat, schreibt einen Satz rechts ins Perfekt – Hilfsverb rot, Partizip II gelb, Klammer drunter. Alle anderen schreiben im Heft in der rechten Spalte mit. Alle prüfen mit.",
+    board: board("Mitte · zwei Spalten", [table([3900, 3900], [
+      row([cell(p(N("Futur I", { bold: true, color: NAVY }), { after: 0 }), { w: 3900, borders: noBorders }), cell(p(N("Perfekt", { bold: true, color: NAVY }), { after: 0 }), { w: 3900, borders: noBorders })]),
+      ...SB.map((f, i) => row([f, PERF[i]].map((x, j) => cell(p([N(x[0], { size: 19 }), t(x[1], { bold: true, color: C.hv, font: "Cambria", size: 19 }), N(x[2], { size: 19 }), t(x[3], { bold: true, color: j ? "C98A1E" : C.inf, font: "Cambria", size: 19 }), N(x[4], { size: 19 })], { after: 0 }), { w: 3900, borders: noBorders, m: 15 })))),
+    ])]),
+    sol: "habe ausgeschlafen · habe gezockt · sind gegangen · hat gespielt · bin gefahren",
+    do: [
+      "Bei gehen und fahren hakt es vermutlich (haben oder sein?). Kurz klären, ohne neue Regel: „Hört sich ‚wir haben ins Kino gegangen‘ richtig an? Bei Bewegung von A nach B nimmt man sein.“ Die Regel kommt ausführlich in einer späteren Stunde.",
+      "ausschlafen → ausgeschlafen: ge- steht in der Mitte (trennbares Verb).",
+    ] }],
+  ["gemeinsam", { say: "Meldet euch. Vergleicht die beiden Spalten: Was ist gleich geblieben, was hat sich verändert?", do: [
+    "Erkenntnis: Die Klammer ist geblieben – links ein Hilfsverb an Position 2, rechts der Partner am Satzende. Ausgetauscht wurden beide Teile: werde → habe/bin, Infinitiv → Partizip II.",
+    "Merkhilfe für die Zeitform: „Schau auf beide Enden der Klammer: werde + Infinitiv = Futur I, habe/bin + Partizip II = Perfekt.“",
+  ] }],
+  ["kontrolle", { say: "Vergleicht eure rechte Spalte mit der Tafel und verbessert mit Grün." }],
 ]));
-doc.push(p([S("Ausblick: ", { bold: true }), S("Noch offen aus der letzten Stunde: der eigene Merksatz zur Satzklammer und „Hilfsverb oder Vollverb“. Die Klammer hat die Klasse heute schon gezeichnet – der Merksatz dazu lässt sich in der nächsten Stunde direkt aus den Futur- und Perfekt-Sätzen ableiten.")], { before: 120, after: 0 }));
+doc.push(p([S("Ausblick: ", { bold: true }), S("Offen sind der Merksatz zur Satzklammer, das Perfekt als eigener Merksatz (haben oder sein: Bewegung, Veränderung) und „Hilfsverb oder Vollverb“. Die zwei Spalten von heute sind dafür die ideale Grundlage: Den Merksatz zur Satzklammer kann die Klasse in der nächsten Stunde direkt aus ihnen ableiten.")], { before: 120, after: 0 }));
 
 const pageProps = { page: { size: { width: 11906, height: 16838 }, margin: { top: 900, bottom: 800, left: 850, right: 850, header: 400, footer: 400 } } };
 const styles = { default: { document: { run: { font: "Calibri", size: 22 } } } };
