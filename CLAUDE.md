@@ -23,3 +23,6 @@ Dieses Repository enthält Unterrichtsplanungen und Material (Deutsch). Bei jede
 - Ordner pro Klasse und Thema (`Deutsch_11/<Thema>/`), Dateien als `.docx` + `.pdf` bzw. `.pptx`, Quellcode der Generatoren in `quellcode/` (Node: `docx`, `pptxgenjs`).
 - PDFs mit LibreOffice erzeugen (`soffice --headless --convert-to pdf`) und vor dem Weitergeben gerendert prüfen (Umbrüche, Seitenzahl).
 - Zitate aus Reden oder Videos als „bitte mit der Quelle abgleichen“ kennzeichnen, wenn sie nicht geprüft werden konnten.
+
+## Für die nächste Planung vorgemerkt
+- Erstes **Definitionsdiktat** mit den bisherigen Fachbegriffen (Vier-Seiten-Modell und seine vier Seiten, Ich-Botschaft, Empathie, Wunsch & Bitte, Metakommunikation, Kipppunkt …): Vorlesefassung für die Lehrkraft + Whiteboard-PDF zur Selbstkontrolle; bewusst mit typischen Stolperstellen (das/dass, Kommas bei Nebensätzen, Groß- und Kleinschreibung).
