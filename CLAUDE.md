@@ -26,4 +26,5 @@ Dieses Repository enthält Unterrichtsplanungen und Material (Deutsch). Bei jede
 - Zitate aus Reden oder Videos als „bitte mit der Quelle abgleichen“ kennzeichnen, wenn sie nicht geprüft werden konnten.
 
 ## Für die nächste Planung vorgemerkt
-- Erstes **Definitionsdiktat** mit den bisherigen Fachbegriffen (Vier-Seiten-Modell und seine vier Seiten, Ich-Botschaft, Empathie, Wunsch & Bitte, Metakommunikation, Kipppunkt …): Vorlesefassung für die Lehrkraft + Whiteboard-PDF zur Selbstkontrolle; bewusst mit typischen Stolperstellen (das/dass, Kommas bei Nebensätzen, Groß- und Kleinschreibung).
+- Erstes Diktat ist erledigt (Kafka-Stunde: Kontext + komplementär, symmetrisch, Generationenkonflikt). Noch offen für ein späteres **Definitionsdiktat**: Vier-Seiten-Modell und seine vier Seiten, Ich-Botschaft, Empathie, Wunsch & Bitte, Metakommunikation, Kipppunkt – wieder mit Vorlesefassung, Whiteboard-PDF zur Selbstkontrolle und typischen Stolperstellen.
+- Kafka-Stunde (`Deutsch_11/Kafka_Brief_an_den_Vater/`): Tafelscript und Diktat fertig; es fehlen noch die drei Arbeitsblätter (Auszüge mit Zeilennummern, Worterklärungen, Lesehilfe, Matrix, Schreibfeld) und die Whiteboard-PDF (Briefanfang, Auftrag, Vater-Zitate zur Jugend S. 8).
