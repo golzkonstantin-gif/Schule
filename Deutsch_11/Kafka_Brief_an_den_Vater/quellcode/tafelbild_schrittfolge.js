@@ -83,17 +83,21 @@ const board = new Table({
   ],
 });
 
+// Export für das Tafelscript; eigenständig ausgeführt entsteht die einseitige Tafelbild-Datei
+module.exports = { board };
+if (require.main === module) {
 const doc = new Document({
-  styles: { default: { document: { run: { font: "Calibri", size: 20 } } } },
-  sections: [{
-    properties: { page: { size: { width: 11906, height: 16838, orientation: PageOrientation.LANDSCAPE }, margin: { top: 500, bottom: 400, left: 750, right: 750 } } },
-    children: [
-      new Paragraph({ spacing: { after: 60 }, children: [
-        new TextRun({ text: "TAFELBILD IN STICHWORTEN · ", font: "Calibri", size: 17, bold: true, color: MUTED }),
-        new TextRun({ text: "① Abschnitt A: im Unterrichtsgespräch, Matrix wächst an der Tafel und im Hefter · ② Abschnitt C: allein, dann an der Tafel zusammentragen · ③ These prüfen · ④ Matrix in Fließtext überführen", font: "Calibri", size: 17, color: MUTED }),
-      ] }),
-      board,
-    ],
-  }],
-});
-Packer.toBuffer(doc).then((b) => fs.writeFileSync("Tafelbild_Schrittfolge.docx", b));
+    styles: { default: { document: { run: { font: "Calibri", size: 20 } } } },
+    sections: [{
+      properties: { page: { size: { width: 11906, height: 16838, orientation: PageOrientation.LANDSCAPE }, margin: { top: 500, bottom: 400, left: 750, right: 750 } } },
+      children: [
+        new Paragraph({ spacing: { after: 60 }, children: [
+          new TextRun({ text: "TAFELBILD IN STICHWORTEN · ", font: "Calibri", size: 17, bold: true, color: MUTED }),
+          new TextRun({ text: "① Abschnitt A: im Unterrichtsgespräch, Matrix wächst an der Tafel und im Hefter · ② Abschnitt C: allein, dann an der Tafel zusammentragen · ③ These prüfen · ④ Matrix in Fließtext überführen", font: "Calibri", size: 17, color: MUTED }),
+        ] }),
+        board,
+      ],
+    }],
+  });
+  Packer.toBuffer(doc).then((b) => fs.writeFileSync("Tafelbild_Schrittfolge.docx", b));
+}

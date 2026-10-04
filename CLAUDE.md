@@ -27,4 +27,4 @@ Dieses Repository enthält Unterrichtsplanungen und Material (Deutsch). Bei jede
 
 ## Für die nächste Planung vorgemerkt
 - Erstes Diktat ist erledigt (Kafka-Stunde: Kontext + komplementär, symmetrisch, Generationenkonflikt). Noch offen für ein späteres **Definitionsdiktat**: Vier-Seiten-Modell und seine vier Seiten, Ich-Botschaft, Empathie, Wunsch & Bitte, Metakommunikation, Kipppunkt – wieder mit Vorlesefassung, Whiteboard-PDF zur Selbstkontrolle und typischen Stolperstellen.
-- Kafka-Stunde (`Deutsch_11/Kafka_Brief_an_den_Vater/`): Tafelscript und Diktat fertig; es fehlen noch die drei Arbeitsblätter (Auszüge mit Zeilennummern, Worterklärungen, Lesehilfe, Matrix, Schreibfeld) und die Whiteboard-PDF (Briefanfang, Auftrag, Vater-Zitate zur Jugend S. 8).
+- Kafka-Stunde (`Deutsch_11/Kafka_Brief_an_den_Vater/`): Diktat, Tafelbild, Tafelscript und Arbeitsblatt fertig (Abschnitt A im Unterrichtsgespräch, C allein, Matrix → Fließtext). Offen: Whiteboard-Folien (Briefanfang, Musteranfang Fließtext) und eine **Übungsklausur mit den Tischregeln** (S. 5) nach demselben Schema Verstehen → Untersuchen → Schreiben.

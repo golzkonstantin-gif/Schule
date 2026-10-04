@@ -1,198 +1,97 @@
+// Tafelscript: Tafelbild (aus tafelbild_schrittfolge.js), Ablauf mit Impulsen, Erwartungshorizont mit Musterfließtext
 const fs = require("fs");
 const {
   Document, Packer, Paragraph, TextRun, Table, TableRow, TableCell, WidthType, BorderStyle,
   ShadingType, AlignmentType, VerticalAlign, HeightRule, Footer, PageNumber, PageOrientation,
 } = require("docx");
+const { board } = require("./tafelbild_schrittfolge");
 
 const NAVY = "1E2761", MUTED = "5B6B8C", LIGHT = "F4F7FD", LIGHT2 = "EAF0FA", RED = "D9534F";
-// Tafel: dunkelgrün; Kreidefarben je Reihe und für die Synthese
-const BOARD = "2E4A3B", BOARD2 = "3A5A48", CHALK = "F3F1EA", DIM = "C9C3A8";
-const K = { wand: "8EC3F0", mitte: "F5D76E", fenster: "F29A8E", komp: "9BDB9B", gen: "D7B4F0" };
-const W = 15138; // Inhaltsbreite A4 quer, 1,5 cm Rand
+const W = 15338;
 
-const t = (text, o = {}) => new TextRun({ text, font: o.font || "Calibri", size: o.size || 22, bold: o.bold, italics: o.italics, color: o.color || "000000" });
-const p = (runs, o = {}) => new Paragraph({ children: Array.isArray(runs) ? runs : [runs], alignment: o.align, pageBreakBefore: o.pb, spacing: { before: o.before ?? 0, after: o.after ?? 100 }, keepNext: o.keepNext });
-const h1 = (text) => p(t(text, { font: "Cambria", size: 36, bold: true, color: NAVY }), { after: 60 });
-const kicker = (text, pb) => p(t(text.toUpperCase(), { size: 18, color: MUTED, bold: true }), { after: 20, pb });
-const h2 = (label, text) => p([t(label + "  ", { font: "Cambria", size: 24, bold: true, color: RED }), t(text, { font: "Cambria", size: 24, bold: true, color: NAVY })], { before: 140, after: 60, keepNext: true });
-
+const t = (text, o = {}) => new TextRun({ text, font: o.font || "Calibri", size: o.size || 20, bold: o.bold, italics: o.italics, color: o.color || "000000" });
+const p = (runs, o = {}) => new Paragraph({ children: Array.isArray(runs) ? runs : [runs], alignment: o.align, pageBreakBefore: o.pb, spacing: { before: o.before ?? 0, after: o.after ?? 80 }, keepNext: o.keepNext });
 const none = { style: BorderStyle.NONE, size: 0, color: "FFFFFF" };
-const solid = (c = NAVY, s = 8) => ({ style: BorderStyle.SINGLE, size: s, color: c });
-const allBorders = (b) => ({ top: b, bottom: b, left: b, right: b });
-
-function cell(children, o = {}) {
-  return new TableCell({
-    children: Array.isArray(children) ? children : [children],
-    width: { size: o.w, type: WidthType.DXA },
-    shading: o.fill ? { fill: o.fill, type: ShadingType.CLEAR, color: "auto" } : undefined,
-    borders: o.borders || allBorders(solid("B9C6E8", 6)),
-    verticalAlign: o.valign || VerticalAlign.TOP,
-    margins: { top: o.m ?? 60, bottom: o.m ?? 60, left: o.ml ?? 110, right: o.ml ?? 110 },
-    columnSpan: o.span,
-  });
-}
+const solid = (c, s = 6) => ({ style: BorderStyle.SINGLE, size: s, color: c });
+const all = (b) => ({ top: b, bottom: b, left: b, right: b });
+const cell = (children, o = {}) => new TableCell({
+  children: Array.isArray(children) ? children : [children], width: { size: o.w, type: WidthType.DXA },
+  shading: o.fill ? { fill: o.fill, type: ShadingType.CLEAR, color: "auto" } : undefined,
+  borders: o.borders || all(solid("B9C6E8")), verticalAlign: o.valign || VerticalAlign.TOP,
+  margins: { top: 50, bottom: 50, left: 100, right: 100 }, columnSpan: o.span,
+});
 const table = (widths, rows) => new Table({ width: { size: widths.reduce((a, b) => a + b, 0), type: WidthType.DXA }, columnWidths: widths, rows });
 const row = (cells, h) => new TableRow({ children: cells, height: h ? { value: h, rule: HeightRule.ATLEAST } : undefined, cantSplit: true });
-const hdr = (txt, w, fill = NAVY) => cell(p(t(txt, { bold: true, color: "FFFFFF", size: 19 }), { align: AlignmentType.CENTER, after: 0 }), { w, fill, valign: VerticalAlign.CENTER });
-const infoBox = (paras, fill = LIGHT2, w = W) => table([w], [row([cell(paras.map((r) => p(r, { after: 40 })), { w, fill, borders: allBorders(none), m: 110 })])]);
+const hdr = (txt, w) => cell(p(t(txt, { bold: true, color: "FFFFFF", size: 18 }), { align: AlignmentType.CENTER, after: 0 }), { w, fill: NAVY, valign: VerticalAlign.CENTER });
+const kicker = (text, pb) => p(t(text.toUpperCase(), { size: 17, bold: true, color: MUTED }), { after: 20, pb });
+const h1 = (text) => p(t(text, { font: "Cambria", size: 34, bold: true, color: NAVY }), { after: 60 });
+const box = (paras, fill = LIGHT2) => table([W], [row([cell(paras, { w: W, fill, borders: all(none) })])]);
 
-// Kreide-Helfer
-const ck = (text, o = {}) => t(text, { font: o.font || "Calibri", size: o.size || 18, bold: o.bold, italics: o.italics, color: o.color || CHALK });
-const phase = (n) => ck(["", "①", "②", "③", "④"][n] + " ", { size: 18, color: DIM, bold: true });
-const chalkBorder = allBorders(solid("6E8C7A", 6));
-
-// ================= Inhalte der Matrix (Tafel) =================
-const auszuege = [
-  {
-    key: "wand", reihe: "Wandreihe", titel: "Pawlatsche und Badekabine", seite: "S. 3",
-    vater: ["trägt das Kind nachts „im Hemd“ auf die Pawlatsche", "macht beim Baden „in guter Absicht“ Schwimmbewegungen vor"],
-    modell: "Appell ohne Erklärung („Sei still!“) – beim Kind kommt nur die Beziehungsbotschaft an. Gute Absicht ≠ Wirkung (Sender ≠ Empfänger).",
-    obenUnten: "„Ich mager, schwach, schmal, Du stark, groß, breit.“ – „die letzte Instanz“",
-    wirkung: "„… daß ich also ein solches Nichts für ihn war.“ – „tiefe Beschämung“",
-  },
-  {
-    key: "mitte", reihe: "Mittelreihe", titel: "Drohen und Ironie", seite: "S. 6",
-    vater: ["„ich zerreiße Dich wie einen Fisch“", "„Das ist Dir wohl schon zu viel?“", "„Das kann man vom Herrn Sohn natürlich nicht haben“"],
-    modell: "Drohung = Appell mit Beziehungsbotschaft (Macht). Ironie = inkongruente Botschaft (Worte ≠ Lachen/Gesicht). Kritik in der 3. Person: Empfänger wird übergangen.",
-    obenUnten: "Vater straft, „ehe man noch wußte, daß man etwas Schlechtes getan hatte“",
-    wirkung: "„Ich verlor das Vertrauen zu eigenem Tun.“ – fragt nur noch die Mutter: „Wie geht es dem Vater?“",
-  },
-  {
-    key: "fenster", reihe: "Fensterreihe", titel: "Tischregeln und drei Welten", seite: "S. 5",
-    vater: ["„Knochen durfte man nicht zerreißen, Du ja.“", "„Essig durfte man nicht schlürfen, Du ja.“", "schneidet sich bei Tisch die Nägel"],
-    modell: "Regeln (digital) und Verhalten (analog) widersprechen sich → Vater als Sender unglaubwürdig; Regeln sind reine Beziehungsbotschaft: „Ich darf, du nicht.“",
-    obenUnten: "drei Welten: „der Sklave“ – der Vater „mit der Regierung“ – die freien „übrigen Leute“",
-    wirkung: "„Ich war immerfort in Schande“ – gehorchen, trotzen oder scheitern: alles Schande",
-  },
-];
-
-// ================= Seite 1: Tafelbild im Endstand =================
-const cw = [2500, 3300, 3700, 2900, 2738]; // Summe = W
-const matrix = table(cw, [
-  row([
-    cell(p([phase(2), ck("Auszug", { bold: true })], { after: 0 }), { w: cw[0], fill: BOARD2, borders: chalkBorder }),
-    cell(p(ck("Was tut / sagt der Vater? (Zitat)", { bold: true }), { after: 0 }), { w: cw[1], fill: BOARD2, borders: chalkBorder }),
-    cell(p(ck("Modell (Seite / Axiom)", { bold: true }), { after: 0 }), { w: cw[2], fill: BOARD2, borders: chalkBorder }),
-    cell(p(ck("oben ↔ unten (komplementär)", { bold: true }), { after: 0 }), { w: cw[3], fill: BOARD2, borders: chalkBorder }),
-    cell(p(ck("Wirkung auf den Sohn (→ Furcht)", { bold: true }), { after: 0 }), { w: cw[4], fill: BOARD2, borders: chalkBorder }),
-  ], 360),
-  ...auszuege.map((a) => row([
-    cell([p(ck(a.reihe, { bold: true, size: 20, color: K[a.key] }), { after: 10 }), p(ck(a.titel + " (" + a.seite + ")", { size: 16, italics: true, color: K[a.key] }), { after: 0 })], { w: cw[0], fill: BOARD, borders: chalkBorder }),
-    cell(a.vater.map((v) => p(ck(v, { size: 16, italics: true, color: K[a.key] }), { after: 20 })), { w: cw[1], fill: BOARD, borders: chalkBorder }),
-    cell(p(ck(a.modell, { size: 16 }), { after: 0 }), { w: cw[2], fill: BOARD, borders: chalkBorder }),
-    cell(p(ck(a.obenUnten, { size: 16 }), { after: 0 }), { w: cw[3], fill: BOARD, borders: chalkBorder }),
-    cell(p(ck(a.wirkung, { size: 16 }), { after: 0 }), { w: cw[4], fill: BOARD, borders: chalkBorder }),
-  ], 1050)),
-]);
-
-const sw = [5000, 5000, W - 10000 - 400];
-const synthese = table(sw, [row([
-  cell([
-    p([phase(3), ck("Starre Komplementarität", { bold: true, size: 19, color: K.komp })], { after: 30 }),
-    p(ck("Vater immer oben: urteilt, droht, macht Regeln nur für den Sohn", { size: 16 }), { after: 10 }),
-    p(ck("Sohn immer unten: gehorcht, schämt sich, verstummt", { size: 16 }), { after: 10 }),
-    p(ck("→ kein Rollenwechsel, kein Gespräch auf Augenhöhe", { size: 16, bold: true, color: K.komp }), { after: 0 }),
-  ], { w: sw[0], fill: BOARD2, borders: chalkBorder, m: 90 }),
-  cell([
-    p([phase(3), ck("Generationenkonflikt", { bold: true, size: 19, color: K.gen })], { after: 30 }),
-    p(ck("„Schon mit sieben Jahren mußte ich mit dem Karren durch die Dörfer fahren.“", { size: 16, italics: true, color: K.gen }), { after: 10 }),
-    p(ck("Vater: Not, Arbeit, Kraft, Dankbarkeit – Sohn: Wohlstand, Bücher, Empfindsamkeit", { size: 16 }), { after: 10 }),
-    p(ck("→ Selbstbeklagung = versteckter Appell: „Sei dankbar!“", { size: 16, bold: true, color: K.gen }), { after: 0 }),
-  ], { w: sw[1], fill: BOARD2, borders: chalkBorder, m: 90 }),
-  cell([
-    p([phase(4), ck("These bestätigt?", { bold: true, size: 19, color: "F5D76E" })], { after: 30 }),
-    p(ck("Ja: Drohung, Ironie, widersprüchliche Regeln, „Kein Wort der Widerrede!“", { size: 16 }), { after: 10 }),
-    p(ck("Aber: „Du verstärktest nur, was war“ – „Deine Hand und mein Material“", { size: 16, italics: true }), { after: 10 }),
-    p(ck("Umschreiben zeigt: Techniken brauchen Augenhöhe – der Stärkere muss anfangen.", { size: 16, bold: true, color: "F5D76E" }), { after: 0 }),
-  ], { w: sw[2], fill: BOARD2, borders: chalkBorder, m: 90 }),
-])]);
-
-const board = table([W], [
-  row([cell([
-    p([phase(1), ck("Franz Kafka: „Brief an den Vater“ (1919)", { font: "Cambria", size: 30, bold: true })], { after: 50 }),
-    p([ck("„Du hast mich letzthin einmal gefragt, warum ich behaupte, ich hätte Furcht vor Dir. Ich wußte Dir, wie gewöhnlich, nichts zu antworten …“", { size: 19, italics: true })], { after: 30 }),
-    p([ck("These: ", { bold: true, size: 21, color: "F5D76E" }), ck("Kafkas „Furcht“ gründet auf Kommunikationsproblemen. → Beweist es mit Zitaten!", { size: 21 }), ck("      ← ④ „… weil ich vor Dir weder denken noch reden konnte.“", { size: 17, italics: true, color: DIM })], { after: 0 }),
-  ], { w: W, fill: BOARD, borders: allBorders(none), m: 120, ml: 200 })]),
-  row([cell([matrix], { w: W, fill: BOARD, borders: allBorders(none), m: 40, ml: 200 })]),
-  row([cell([synthese], { w: W, fill: BOARD, borders: allBorders(none), m: 80, ml: 200 })]),
-]);
-
+// ================= Seite 1: Tafelbild =================
 const page1 = [
-  kicker("Tafelscript · Deutsch 11 · Kommunikation in Literatur · Klausurvorbereitung"),
+  kicker("Tafelscript · Deutsch 11 · Kafka, „Brief an den Vater“ · Klausurvorbereitung"),
   h1("Tafelbild im Endstand"),
-  p([t("①–④ zeigen, ", { size: 19, color: MUTED }), t("wann", { size: 19, color: MUTED, bold: true }), t(" was an die Tafel kommt (Ablauf auf Seite 2). Kreidefarben: Wandreihe blau · Mittelreihe gelb · Fensterreihe rot · Komplementarität grün · Generationenkonflikt violett. Zitate in Originalschreibung (daß, mußte).", { size: 19, color: MUTED })], { after: 80 }),
+  p(t("① Abschnitt A im Unterrichtsgespräch (Matrix wächst an der Tafel und im Hefter) · ② Abschnitt C allein, dann zusammentragen · ③ These prüfen · ④ Fließtext. Zeilenangaben wie auf dem Arbeitsblatt; Zitate in Originalschreibung.", { size: 18, color: MUTED }), { after: 80 }),
   board,
 ];
 
-// ================= Seite 2: Ablauf – wann kommt was an die Tafel? =================
-const aW = [1100, 2300, 4200, 4838, 2700];
+// ================= Seite 2: Ablauf mit Impulsen =================
+const aW = [1000, 2400, 6500, 3238, 2200];
 const ablauf = [
-  ["0–15'", "", "Diktat + Selbstkontrolle", "– (Whiteboard: Diktattext)", "Diktat nach der Vorlesefassung. Danach Whiteboard-Folien zeigen, Fehler farbig anstreichen und zählen lassen. Keine Besprechung.", "schreiben mit, kontrollieren selbst"],
-  ["15–20'", "①", "Einstieg: Briefanfang und These", "Überschrift, Zitat des Briefanfangs, These", "Briefanfang vorlesen oder zeigen. Impuls: „Wovor hat ein 36-Jähriger Furcht – und warum schreibt er, statt zu reden?“ Zwei, drei Vermutungen sammeln. Dann die These anschreiben: „Kafkas ‚Furcht‘ gründet auf Kommunikationsproblemen.“ Auftrag für die Stunde: Beweist es mit Zitaten! Die Überprüfung folgt in ④.", "äußern Vermutungen"],
-  ["20–48'", "", "Einzelarbeit, dann Reihengruppe", "Leere Matrix vorbereiten: Spaltenköpfe, Reihen links in den Kreidefarben", "Jede Reihe bearbeitet ihren Auszug (Arbeitsblatt). Herumgehen, bei Verständnisfragen zum Text helfen. In der Gruppenphase: Sprecher bestimmen lassen, schwache Belege merken.", "füllen die Matrix für den eigenen Auszug; bündeln in der Reihe die drei stärksten Belege"],
-  ["48–63'", "②", "Vorstellung an der Tafel", "Matrix zeilenweise füllen, Zitate in der Farbe der Reihe", "Je Reihe ca. 4 Min. Sie schreiben mit, korrigieren und präzisieren: „Welche Seite der Nachricht ist das genau?“ – „Wo stehen hier oben und unten?“ Die anderen Reihen füllen ihre Matrix mit.", "stellen vor bzw. schreiben mit"],
-  ["63–68'", "③", "Synthese", "Kästen „Starre Komplementarität“ und „Generationenkonflikt“; Vater-Zitate zur Jugend auf dem Whiteboard", "Impuls 1: „Was haben alle drei Szenen gemeinsam?“ → starre Komplementarität. Impuls 2: Whiteboard mit den Sätzen des Vaters zu seiner Jugend: „Wie begründet der Vater seine Härte?“ → Generationenkonflikt, Selbstbeklagung als versteckter Appell.", "erkennen das Muster über alle Auszüge"],
-  ["68–80'", "", "Umschreiben (allein)", "–", "Jede und jeder schreibt den Kipppunkt des eigenen Auszugs mit mindestens zwei Techniken um (Buchstaben A–D notieren). Wahl: als Vater oder als Sohn. Herumgehen, je eine Vater- und eine Sohn-Version vormerken.", "schreiben um"],
-  ["80–87'", "④", "Vorlesen und Prüfung der These", "Kasten ④ rechts unten", "Vorgemerkte Umschreibungen vorlesen lassen: „Hätte das gereicht? Wer müsste sich ändern?“ Dann zurück zur These: „Ist sie bewiesen?“ Gegenargument einbringen, falls es nicht von selbst kommt – Kafka schreibt selbst: „Du verstärktest nur, was war“ (S. 6) und „Deine Hand und mein Material“ waren „einander so fremd“ (S. 6). Ergebnis im Kasten ④.", "lesen vor, prüfen die These"],
-  ["87–90'", "④", "Abschluss", "Pfeil von ④ zurück zur These, Zitat ergänzen", "Die Stelle zur Widerrede vorlesen (S. 5 f.): „… schließlich schwieg ich, zuerst vielleicht aus Trotz, dann, weil ich vor Dir weder denken noch reden konnte.“ Die Furcht macht sprachlos – darum der Brief.", "hören zu"],
+  ["0–15'", "Diktat + Selbstkontrolle", "Diktat nach der Vorlesefassung; danach Whiteboard-Folien, Fehler farbig anstreichen und zählen. Keine Besprechung.", "–", "Vorlesefassung, Whiteboard"],
+  ["15–20'", "Einstieg", "Briefanfang vorlesen: „Du hast mich letzthin einmal gefragt, warum ich behaupte, ich hätte Furcht vor Dir …“ Impuls: „Wovor hat ein 36-Jähriger Furcht – und warum schreibt er, statt zu reden?“ Dann These anschreiben: „Kafkas ‚Furcht‘ gründet auf Kommunikationsproblemen.“", "Titel, These, Fahrplan (Verstehen → Untersuchen → Schreiben)", "Arbeitsblatt S. 1"],
+  ["20–42'", "① Abschnitt A im Gespräch", "Erst still lesen (3'). Dann Zeile für Zeile der Matrix:\n• „Was tut der Vater in Z. 4–5? Mit welchen Worten?“ → Redeverbot\n• „Welche Seite der Nachricht ist das? Gibt es überhaupt eine Sachinformation?“ → Appell + Beziehung\n• „Und was passiert ohne Worte?“ → erhobene Hand, analog\n• „Was bewirkt das beim Sohn? Zeigt es mir mit Zeile.“ → stottern, schweigen\n• „Wer ist hier oben, wer unten – und woran seht ihr das?“ → komplementär\n• „Wie deutet der Vater das Schweigen – und wie der Sohn?“ (Z. 15–16) → Interpunktion, Missverständnis\nDie Klasse überträgt jede Zeile in den Hefter.", "Matrix A, Zeile für Zeile", "Hefter"],
+  ["42–55'", "② Abschnitt C allein", "Auftrag: Aufgabe 1 auf dem Arbeitsblatt. Herumgehen; wer hängt, bekommt den Hinweis auf die Hilfefragen. Zwei gute Zeilen für das Zusammentragen vormerken.", "–", "Arbeitsblatt S. 2"],
+  ["55–65'", "② C zusammentragen", "Reihum je eine Zeile nennen lassen, die nächste Person nimmt sich selbst dran. Korrigieren und präzisieren: „Ist das schon das Modell – oder noch die Handlung?“ Fehlendes ergänzen, v. a. die Kritik über die Mutter (Z. 9–10).", "Matrix C", "Hefter ergänzen"],
+  ["65–72'", "③ These prüfen", "„Bestätigen A und C die These?“ Dann die Gegenstimme einbringen, falls sie nicht kommt: Kafka selbst schreibt „Du verstärktest nur, was war“ (S. 6) und spricht von „Deiner Stärke und meiner Schwäche“ (A, Z. 16). Ergebnis: stützt – mit Ergänzung.", "Kasten ③", "–"],
+  ["72–88'", "④ Fließtext", "Auftrag: Aufgabe 2. Kurz an Aufbau und Satzbausteine erinnern (Tafel ④). Optional den Musteranfang auf dem Whiteboard zeigen. Wer nicht fertig wird, schreibt zu Beginn der nächsten Stunde weiter – keine Hausaufgabe.", "Kasten ④", "Arbeitsblatt S. 3"],
+  ["88–90'", "Ausblick", "Ein, zwei Einleitungen vorlesen lassen. „In der Übungsklausur wendet ihr genau diese Schritte an einem neuen Ausschnitt an.“", "–", "–"],
 ];
-const aRows = [row([hdr("Zeit", aW[0]), hdr("Phase", aW[1]), hdr("Was an die Tafel kommt", aW[2]), hdr("Ihre Impulse", aW[3]), hdr("Klasse", aW[4])], 380)];
-ablauf.forEach(([z, n, ph, tafel, imp, sus]) => aRows.push(row([
-  cell(p(t(z, { bold: true, size: 19, color: NAVY }), { after: 0 }), { w: aW[0], fill: LIGHT }),
-  cell([p([n ? t(n + " ", { bold: true, size: 22, color: RED }) : t(""), t(ph, { bold: true, size: 18, color: NAVY })], { after: 0 })], { w: aW[1], fill: LIGHT }),
-  cell(p(t(tafel, { size: 17 }), { after: 0 }), { w: aW[2] }),
-  cell(p(t(imp, { size: 17 }), { after: 0 }), { w: aW[3], fill: LIGHT2 }),
-  cell(p(t(sus, { size: 17, color: MUTED }), { after: 0 }), { w: aW[4] }),
-], 420)));
+const aRows = [row([hdr("Zeit", aW[0]), hdr("Phase", aW[1]), hdr("Ihre Impulse / was passiert", aW[2]), hdr("Tafel", aW[3]), hdr("Material", aW[4])], 360)];
+ablauf.forEach(([z, ph, imp, tafel, mat]) => aRows.push(row([
+  cell(p(t(z, { bold: true, color: NAVY, size: 18 }), { after: 0 }), { w: aW[0], fill: LIGHT }),
+  cell(p(t(ph, { bold: true, size: 18, color: NAVY }), { after: 0 }), { w: aW[1], fill: LIGHT }),
+  cell(imp.split("\n").map((l) => p(t(l, { size: 17 }), { after: 10 })), { w: aW[2], fill: LIGHT2 }),
+  cell(p(t(tafel, { size: 17 }), { after: 0 }), { w: aW[3] }),
+  cell(p(t(mat, { size: 17, color: MUTED }), { after: 0 }), { w: aW[4] }),
+], 380)));
 
 const page2 = [
   kicker("Tafelscript · Ablauf der Doppelstunde", true),
-  h1("Wann kommt was an die Tafel?"),
+  h1("Ablauf und Impulse"),
   table(aW, aRows),
-  p(t("Seitenangaben beziehen sich auf die PDF-Ausgabe von DigBib.Org. Gruppen = Sitzreihen; keine Partnerarbeit, kein Gruppenpuzzle (schwerer Text).", { size: 17, italics: true, color: MUTED }), { before: 80, after: 0 }),
 ];
 
-// ================= Seite 3: Erwartungshorizont =================
-const eW = [2400, 6369, 6369];
-const erw = [
-  ["wand", "Wandreihe\nPawlatsche und Badekabine",
-    "Komplementär: Der Vater handelt als „letzte Instanz“, ohne zu erklären; das Kind versteht den Zusammenhang zwischen „sinnlosem Ums-Wasser-Bitten“ und dem „Hinausgetragenwerden“ nicht. Es empfängt nur die Beziehungsbotschaft: Ich bin ein Nichts. In der Kabine wird das Gefälle körperlich sichtbar. Missverständnis: Der Vater macht die Schwimmbewegungen „in guter Absicht“ vor – beim Sohn kommt „tiefe Beschämung“ an.",
-    "Vater (nachts): „Du kannst nicht schlafen, oder? (B) Ich bin sehr müde und brauche Ruhe, weil ich früh ins Geschäft muss. (A) Ich bringe dir ein Glas Wasser, und dann schlafen wir beide – einverstanden? (C)“"],
-  ["mitte", "Mittelreihe\nDrohen und Ironie",
-    "Drohung („ich zerreiße Dich wie einen Fisch“): Appell mit maximaler Machtbotschaft. Ironie („Das ist Dir wohl schon zu viel?“): Wortlaut und „böses Lachen und böses Gesicht“ widersprechen sich (inkongruent); Strafe vor der Erklärung. Kritik über die Mutter in der 3. Person: Der eigentliche Empfänger wird übergangen – das Kind übernimmt das Muster („Wie geht es dem Vater?“).",
-    "Vater: „Ich ärgere mich, wenn die Aufgabe liegen bleibt, weil ich mich auf dich verlassen will. (A) Kannst du sie bis heute Abend erledigen? (C) Wenn sie dir zu schwer ist, sag es mir direkt.“"],
-  ["fenster", "Fensterreihe\nTischregeln und drei Welten",
-    "Die Regeln (Knochen, Essig, Nägel) gelten nur für den Sohn; das Verhalten des Vaters widerspricht ihnen. Dadurch wird der Vater als Sender unglaubwürdig, und jede Regel wird zur reinen Beziehungsbotschaft („Ich darf, du nicht“). Die „drei Welten“ beschreiben starre Komplementarität als Weltordnung; der Sohn sitzt in jeder Reaktion in der „Schande“ fest.",
-    "Sohn: „Vater, mir fällt auf, dass manche Regeln nur für mich gelten. (D) Das macht mich unsicher, weil ich nicht weiß, wonach ich mich richten soll. (A) Können wir die Regeln gemeinsam festlegen? (C)“ – Diskussion: Würde der Vater zuhören?"],
+// ================= Seite 3: Erwartungshorizont Fließtext =================
+const muster = [
+  ["Einleitung", "In seinem „Brief an den Vater“ (1919) versucht Franz Kafka, seinem Vater zu erklären, warum er Furcht vor ihm hat. In den beiden Abschnitten beschreibt er, wie der Vater mit ihm gesprochen hat: durch Redeverbote (A) und durch Ironie (C)."],
+  ["Hauptteil A", "Indem der Vater jede Widerrede verbietet, sendet er kaum eine Sachinformation, sondern einen Appell – „Schweig!“ – und vor allem eine Beziehungsbotschaft: Er allein bestimmt. Seine Drohung „kein Wort der Widerrede!“ (A, Z. 5) unterstreicht er nonverbal mit der „erhobene[n] Hand“ (Z. 5). Die Folge zeigt sich in einer Steigerung: Der Sohn bekommt „eine stockende, stotternde Art des Sprechens“ (Z. 7 f.), schweigt „schließlich“ (Z. 8) und kann am Ende „weder denken noch reden“ (Z. 9). Die Beziehung ist starr komplementär. Verschärft wird sie durch ein Missverständnis: Der Vater deutet das Schweigen als Trotz („contra“, Z. 15), der Sohn erlebt es als Folge von „Stärke“ und „Schwäche“ (Z. 16)."],
+  ["Hauptteil C", "Hinzu kommt die Ironie. Die Fragen des Vaters – „Das ist Dir wohl schon zu viel?“ (C, Z. 3 f.) – sind nur scheinbar Fragen, tatsächlich sind sie Vorwürfe. Weil sie von „bösem Lachen und bösem Gesicht“ (Z. 5) begleitet werden, widersprechen sich digitale und analoge Botschaft. Der Sohn fühlt sich „schon bestraft, ehe man noch wußte“, was er falsch gemacht hat (Z. 6). Besonders kränkend ist, dass der Vater ihn über die Mutter anspricht („vom Herrn Sohn“, Z. 10) und ihn damit „nicht einmal des bösen Ansprechens gewürdigt“ (Z. 8) hat. Der Sohn übernimmt dieses Muster und fragt nur noch die Mutter: „Wie geht es dem Vater?“ (Z. 15)."],
+  ["Schluss", "Insgesamt stützen beide Stellen die These, dass Kafkas Furcht auf Kommunikationsproblemen gründet: Wo Widerspruch verboten ist und Worte und Gesicht einander widersprechen, kann der Sohn nichts klären. Kafka ergänzt allerdings selbst, dass das Machtgefälle – „Deiner Stärke und meiner Schwäche“ (A, Z. 16) – dazugehört."],
 ];
-const eRows = [row([hdr("Auszug", eW[0]), hdr("Erwartete Analyse", eW[1]), hdr("Mögliche Umschreibung (Buchstaben = Techniken)", eW[2])], 380)];
-erw.forEach(([k, a, b, c]) => {
-  const [r, ti] = a.split("\n");
-  eRows.push(row([
-    cell([p(t(r, { bold: true, size: 19, color: NAVY }), { after: 10 }), p(t(ti, { size: 16, italics: true, color: MUTED }), { after: 0 })], { w: eW[0], fill: LIGHT }),
-    cell(p(t(b, { size: 17 }), { after: 0 }), { w: eW[1] }),
-    cell(p(t(c, { size: 17, italics: true }), { after: 0 }), { w: eW[2], fill: LIGHT2 }),
-  ], 900));
-});
+const mW = [1900, W - 1900];
+const mRows = muster.map(([a, b]) => row([
+  cell(p(t(a, { bold: true, color: NAVY, size: 19 }), { after: 0 }), { w: mW[0], fill: LIGHT }),
+  cell(p(t(b, { font: "Cambria", size: 19 }), { after: 0 }), { w: mW[1] }),
+], 400));
 
 const page3 = [
   kicker("Tafelscript · Erwartungshorizont", true),
-  h1("Was in der Matrix und beim Umschreiben herauskommen sollte"),
-  table(eW, eRows),
-  h2("④", "These: Kafkas „Furcht“ gründet auf Kommunikationsproblemen – bestätigt?"),
-  infoBox([
-    [t("Dafür: ", { bold: true, color: NAVY, size: 18 }), t("Drohung („ich zerreiße Dich wie einen Fisch“), Ironie mit „bösem Lachen“, Kritik über Dritte, Regeln, die nur für den Sohn gelten, und das Verbot der Widerrede machen jedes Gespräch unmöglich. Die Furcht entsteht dort, wo das Kind nichts verstehen und nichts erwidern darf.", { size: 18 })],
-    [t("Dagegen / Einschränkung: ", { bold: true, color: NAVY, size: 18 }), t("Kafka selbst relativiert: „Du verstärktest nur, was war“ (S. 6); „Deine Hand und mein Material“ seien „einander so fremd gewesen“ (S. 6). Dazu kommen der Generationenkonflikt (Not gegen Wohlstand, Kraft gegen Empfindsamkeit) und das körperliche Gefälle („Du stark, groß, breit“).", { size: 18 })],
-    [t("Fazit: ", { bold: true, color: RED, size: 18 }), t("Die These trägt, braucht aber eine Ergänzung: Die Kommunikation macht aus Unterschieden Furcht. Erst die starre Komplementarität verhindert, dass der Konflikt besprochen wird. Der Brief ist Kafkas Versuch der Metakommunikation – er erreicht den Vater nie.", { size: 18 })],
+  h1("Musterfließtext zu Aufgabe 2"),
+  p(t("Eine mögliche Lösung – Schülertexte sind kürzer. Entscheidend: jede Behauptung mit Zitat und Zeile belegt und mit einem Fachbegriff erklärt.", { size: 18, italics: true, color: MUTED }), { after: 80 }),
+  table(mW, mRows),
+  p(t(""), { after: 60 }),
+  box([
+    p([t("Woran man einen guten Fließtext erkennt:  ", { bold: true, color: NAVY, size: 19 }), t("Einleitung mit Autor, Titel, Jahr, Thema · Behauptung → Beleg (Zitat + Z.) → Erklärung in jedem Absatz · Fachbegriffe erklären, nicht nur nennen · Überleitungen statt Aufzählung · Schluss mit Bezug zur These · korrekte Zitierweise ([…], [n]) · Rechtschreibung, Grammatik, Zeichensetzung", { size: 18 })], { after: 0 }),
   ]),
-  p(t("Optional bei Zeit: Am Ende des Briefs lässt Kafka den Vater selbst antworten und wirft sich „Schmarotzertum“ vor (S. 20) – Perspektivwechsel als Diskussionsimpuls: Ist der Brief fair?", { size: 17, italics: true, color: MUTED }), { before: 80, after: 0 }),
 ];
 
-// ================= Dokument =================
-const pageProps = { page: { size: { width: 11906, height: 16838, orientation: PageOrientation.LANDSCAPE }, margin: { top: 600, bottom: 600, left: 850, right: 850, footer: 350 } } };
-const footer = new Footer({ children: [new Paragraph({ alignment: AlignmentType.RIGHT, children: [new TextRun({ font: "Calibri", size: 16, color: MUTED, children: ["Tafelscript · Kafka, Brief an den Vater · Seite ", PageNumber.CURRENT] })] })] });
 const doc = new Document({
-  styles: { default: { document: { run: { font: "Calibri", size: 22 } } } },
-  sections: [{ properties: pageProps, footers: { default: footer }, children: [...page1, ...page2, ...page3] }],
+  styles: { default: { document: { run: { font: "Calibri", size: 20 } } } },
+  sections: [{
+    properties: { page: { size: { width: 11906, height: 16838, orientation: PageOrientation.LANDSCAPE }, margin: { top: 500, bottom: 500, left: 750, right: 750, footer: 300 } } },
+    footers: { default: new Footer({ children: [new Paragraph({ alignment: AlignmentType.RIGHT, children: [new TextRun({ font: "Calibri", size: 16, color: MUTED, children: ["Tafelscript · Kafka, Brief an den Vater · Seite ", PageNumber.CURRENT] })] })] }) },
+    children: [...page1, ...page2, ...page3],
+  }],
 });
 Packer.toBuffer(doc).then((b) => fs.writeFileSync("Tafelscript_Kafka_Brief_an_den_Vater.docx", b));
