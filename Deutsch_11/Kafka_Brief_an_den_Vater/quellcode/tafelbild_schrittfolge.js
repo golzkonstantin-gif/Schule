@@ -1,17 +1,17 @@
-// Tafelbild in Stichworten: Schrittfolge „Kommunikation analysieren“ am Modellabschnitt A (eine Seite, A4 quer)
+// Tafelbild in Stichworten: gemeinsame Matrix zu Abschnitt A, danach Abschnitt C allein (eine Seite, A4 quer)
 const fs = require("fs");
 const {
   Document, Packer, Paragraph, TextRun, Table, TableRow, TableCell, WidthType, BorderStyle,
   ShadingType, AlignmentType, VerticalAlign, HeightRule, PageOrientation,
 } = require("docx");
 
-const NAVY = "1E2761", MUTED = "5B6B8C";
+const MUTED = "5B6B8C";
 const BOARD = "2E4A3B", BOARD2 = "3A5A48", CHALK = "F3F1EA", DIM = "C9C3A8", YEL = "F5D76E";
-const R = { B1: "8EC3F0", B2: "F5D76E", C: "F29A8E" }; // Kreidefarben der Reihen
+const COL_A = "8EC3F0", COL_C = "F29A8E";
 const W = 15338;
 
-const t = (text, o = {}) => new TextRun({ text, font: o.font || "Calibri", size: o.size || 20, bold: o.bold, italics: o.italics, color: o.color || CHALK });
-const p = (runs, o = {}) => new Paragraph({ children: Array.isArray(runs) ? runs : [runs], alignment: o.align, spacing: { before: o.before ?? 0, after: o.after ?? 30 } });
+const t = (text, o = {}) => new TextRun({ text, font: o.font || "Calibri", size: o.size || 21, bold: o.bold, italics: o.italics, color: o.color || CHALK });
+const p = (runs, o = {}) => new Paragraph({ children: Array.isArray(runs) ? runs : [runs], alignment: o.align, spacing: { before: o.before ?? 0, after: o.after ?? 20 } });
 const none = { style: BorderStyle.NONE, size: 0, color: "FFFFFF" };
 const line = { style: BorderStyle.SINGLE, size: 6, color: "6E8C7A" };
 const cell = (children, o = {}) => new TableCell({
@@ -25,64 +25,61 @@ const cell = (children, o = {}) => new TableCell({
 });
 const row = (cells, h) => new TableRow({ children: cells, height: h ? { value: h, rule: HeightRule.ATLEAST } : undefined, cantSplit: true });
 
-// Mehrere Stichwort-Zeilen in einer Zelle; Präfix „B1:“ usw. in Reihenfarbe
-function lines(arr, size = 22) {
-  return arr.map((s) => {
-    const m = s.match(/^(B1|B2|C):\s*(.*)$/);
-    if (m) return p([t(m[1] + "  ", { bold: true, size, color: R[m[1]] }), t(m[2], { size })]);
-    return p(t(s, { size }));
-  });
-}
-
-const steps = [
-  ["1", "Einordnen", "Wer? An wen? Warum?",
-    ["Brief 1919 · Sohn → Vater", "erklärt seine „Furcht“"],
-    []],
-  ["2", "Situation", "Worum geht es?",
-    ["Redeverbot → Sohn verlernt das Sprechen"],
-    ["B1: Drohen", "B2: Drohung als Prophezeiung", "C: Ironie"]],
-  ["3", "Handeln markieren", "Was tut der Sender? (Verben)",
-    ["V: verbietet · droht · hebt die Hand", "S: stottert · schweigt · verkriecht sich"],
-    ["B1: droht · läuft schreiend um den Tisch", "C: spottet · spricht über die Mutter"]],
-  ["4", "Modell zuordnen", "Seite? Axiom?",
-    ["Appell „Schweig!“ + Beziehung „Ich bestimme“", "Hand = analoge Botschaft", "starr komplementär", "Interpunktion: „contra“ ↔ Gehorsam"],
-    ["B1: inkongruent (droht, will nicht fassen)", "C: Ironie = inkongruent · Kritik über Dritte"]],
-  ["5", "Wirkung belegen", "Zitat + Zeile!",
-    ["stotternd (Z. 7) → schwieg (Z. 8) → verkroch mich (Z. 12)"],
-    ["B2: „Vertrauen zu eigenem Tun“ verloren", "C: fragt nur noch die Mutter"]],
-  ["6", "Deuten", "These?",
-    ["✓ stützt: kein Widerspruch → Furcht", "+ ergänzt: „Stärke … Schwäche“ (Z. 16)"],
-    ["B2: ⚠ „Du verstärktest nur, was war“"]],
-  ["7", "Ausformulieren", "B → B → E",
-    ["Behauptung → Beleg → Erklärung", "„Indem der Vater …, zeigt sich …“"],
-    ["(Musterabsatz auf dem Whiteboard)"]],
-];
-
-const cw = [3500, 6738, 5100];
-const head = row([
-  cell([p(t("FAHRPLAN", { bold: true, size: 20, color: YEL })), p(t("Kommunikation analysieren", { size: 18, color: DIM }))], { w: cw[0], fill: BOARD2 }),
-  cell([p(t("MODELL: Abschnitt A (Z. 1–16)", { bold: true, size: 20, color: YEL })), p(t("„ich verlernte das Reden“", { size: 18, italics: true, color: DIM }))], { w: cw[1], fill: BOARD2 }),
-  cell([p(t("BELEGE DER REIHEN", { bold: true, size: 20, color: YEL })), p([t("B1 Wand  ", { size: 18, color: R.B1 }), t("B2 Mitte  ", { size: 18, color: R.B2 }), t("C Fenster", { size: 18, color: R.C })])], { w: cw[2], fill: BOARD2 }),
+const cw = [1300, 4300, 5000, 4738];
+const colHead = row([
+  cell(p(t("Z.", { bold: true, color: YEL })), { w: cw[0], fill: BOARD2 }),
+  cell(p(t("Handlung des Vaters", { bold: true, color: YEL })), { w: cw[1], fill: BOARD2 }),
+  cell(p(t("Modell (Seite / Axiom)", { bold: true, color: YEL })), { w: cw[2], fill: BOARD2 }),
+  cell(p(t("Wirkung auf den Sohn (Zitat)", { bold: true, color: YEL })), { w: cw[3], fill: BOARD2 }),
+], 400);
+const band = (label, sub, col, phaseMark) => row([cell(p([
+  t(phaseMark + "  ", { bold: true, color: DIM, size: 20 }), t(label, { bold: true, size: 23, color: col }), t("   " + sub, { italics: true, size: 19, color: DIM }),
+]), { w: W, span: 4, fill: BOARD2 })], 380);
+const r = (z, h, m, w, col) => row([
+  cell(p(t(z, { bold: true, color: col, size: 20 })), { w: cw[0] }),
+  cell(p(t(h, { size: 20, italics: h.startsWith("„") })), { w: cw[1] }),
+  cell(p(t(m, { size: 20 })), { w: cw[2] }),
+  cell(p(t(w, { size: 20, italics: true })), { w: cw[3] }),
 ], 520);
 
-const stepRows = steps.map(([n, name, frage, mod, bel]) => row([
-  cell([p([t(n + "  ", { bold: true, size: 28, color: YEL }), t(name, { bold: true, size: 24 })]), p(t(frage, { size: 19, italics: true, color: DIM }))], { w: cw[0] }),
-  cell(lines(mod), { w: cw[1] }),
-  cell(bel.length ? lines(bel, 21) : [p(t(""))], { w: cw[2] }),
-], 900));
+const A = [
+  ["4–5", "„kein Wort der Widerrede!“", "Appell „Schweig!“ + Beziehung „Ich bestimme“", "„stockende, stotternde Art des Sprechens“ (Z. 7)"],
+  ["5", "erhobene Hand", "analoge Botschaft verstärkt die Drohung", "„schließlich schwieg ich“ (Z. 8)"],
+  ["6–7", "selbst „ausgezeichneter Redner“", "starr komplementär: oben / unten", "„weder denken noch reden“ (Z. 9)"],
+  ["15", "deutet Schweigen als „contra“", "Interpunktion → Missverständnis (Trotz ↔ Gehorsam)", "„verkroch mich vor Dir“ (Z. 12–13)"],
+];
+const C = [
+  ["3–4", "„Das ist Dir wohl schon zu viel?“", "Ironie: Frage (Sache) ≠ Vorwurf (Beziehung)", "„schon bestraft, ehe man noch wußte …“ (Z. 6)"],
+  ["5", "„bösem Lachen und bösem Gesicht“", "inkongruent: analog widerspricht digital", ""],
+  ["9–10", "spricht „zur Mutter“: „vom Herrn Sohn“", "Empfänger übergangen · Abwertung", "„nicht einmal des bösen Ansprechens gewürdigt“ (Z. 8)"],
+  ["2", "„Deiner Überlegenheit über mich“", "komplementär – Sohn übernimmt das Muster", "fragt nur die Mutter: „Wie geht es dem Vater?“ (Z. 15)"],
+];
 
 const board = new Table({
   width: { size: W, type: WidthType.DXA }, columnWidths: cw,
   rows: [
     row([cell([
       p(t("Franz Kafka: „Brief an den Vater“ (1919)", { font: "Cambria", size: 32, bold: true }), { after: 40 }),
-      p([t("These: ", { bold: true, size: 23, color: YEL }), t("Kafkas „Furcht“ gründet auf Kommunikationsproblemen.", { size: 23 })]),
-    ], { w: W, span: 3, fill: BOARD, borders: { top: none, bottom: line, left: none, right: none }, m: 110 })]),
-    head,
-    ...stepRows,
+      p([t("These: ", { bold: true, size: 23, color: YEL }), t("Kafkas „Furcht“ gründet auf Kommunikationsproblemen.", { size: 23 })], { after: 50 }),
+      p([t("So analysiert man: ", { bold: true, size: 20, color: YEL }),
+        t("1 Verstehen", { bold: true, size: 20 }), t(" (Wer? An wen? Worum?)  →  ", { size: 19, color: DIM }),
+        t("2 Untersuchen", { bold: true, size: 20 }), t(" (Handlung · Modell · Wirkung)  →  ", { size: 19, color: DIM }),
+        t("3 Schreiben", { bold: true, size: 20 }), t(" (Behauptung → Beleg → Erklärung)", { size: 19, color: DIM })]),
+    ], { w: W, span: 4, borders: { top: none, bottom: line, left: none, right: none }, m: 110 })]),
+    band("A  Redeverbot – gemeinsam", "„ich verlernte das Reden“ (S. 5 f.)", COL_A, "①"),
+    colHead,
+    ...A.map(([z, h, m, w]) => r(z, h, m, w, COL_A)),
+    band("C  Ironie – allein", "„Ein besonderes Vertrauen hattest Du zur Erziehung durch Ironie …“ (S. 6)", COL_C, "②"),
+    ...C.map(([z, h, m, w]) => r(z, h, m, w, COL_C)),
     row([cell([
-      p([t("These geprüft:  ", { bold: true, size: 22, color: YEL }), t("Kommunikation macht aus Unterschieden Furcht – das Machtgefälle gehört dazu.  → Der Brief = Metakommunikation.", { size: 21 })]),
-    ], { w: W, span: 3, fill: BOARD2, borders: { top: line, bottom: none, left: none, right: none }, m: 100 })], 480),
+      p([t("③ These geprüft:  ", { bold: true, size: 22, color: YEL }), t("✓ stützt: Wo Widerspruch unmöglich ist, entsteht Furcht.   + ergänzt: „Stärke … Schwäche“ – „Du verstärktest nur, was war“", { size: 20 })], { after: 30 }),
+      p([t("→ Der Brief selbst ist Metakommunikation – und erreicht den Vater nie.", { size: 20, bold: true })]),
+    ], { w: W, span: 4, fill: BOARD2, borders: { top: line, bottom: line, left: none, right: none }, m: 100 })], 520),
+    row([cell([
+      p([t("④ Auftrag: Tafelbild → Fließtext", { bold: true, size: 23, color: YEL }), t("   Schreibe deine Analyse von A und C als zusammenhängenden Text.", { size: 20 })], { after: 40 }),
+      p([t("Aufbau:  ", { bold: true, size: 20, color: YEL }), t("Einleitung (Wer? An wen? Worum?)  →  je Zeile der Matrix: Behauptung → Beleg (Zitat + Z.) → Erklärung  →  Schluss: These", { size: 20 })], { after: 40 }),
+      p([t("Satzbausteine:  ", { bold: true, size: 20, color: YEL }), t("Indem der Vater …, sendet er …  ·  Dies zeigt sich in … (Z. …)  ·  Hinzu kommt, dass …  ·  Die Folge ist …  ·  Insgesamt stützt die Stelle die These, weil …", { size: 20, italics: true })]),
+    ], { w: W, span: 4, fill: BOARD, borders: { top: none, bottom: none, left: none, right: none }, m: 110 })], 900),
   ],
 });
 
@@ -93,7 +90,7 @@ const doc = new Document({
     children: [
       new Paragraph({ spacing: { after: 60 }, children: [
         new TextRun({ text: "TAFELBILD IN STICHWORTEN · ", font: "Calibri", size: 17, bold: true, color: MUTED }),
-        new TextRun({ text: "links: von der Klasse abschreiben lassen · Mitte: Ihr Modell an Abschnitt A · rechts: Ergebnisse der Reihen nach jedem Schritt", font: "Calibri", size: 17, color: MUTED }),
+        new TextRun({ text: "① Abschnitt A: erst allein, dann gemeinsame Matrix · ② Abschnitt C: allein, dann an der Tafel zusammentragen · ③ These prüfen · ④ Matrix in Fließtext überführen", font: "Calibri", size: 17, color: MUTED }),
       ] }),
       board,
     ],
