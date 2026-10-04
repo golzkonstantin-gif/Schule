@@ -140,16 +140,24 @@ function textWithLines(s, lines, x, y, w, size, col) {
 // 9 Auftrag 2
 {
   const s = base("Auftrag 2 · allein", "Vom Tafelbild zum Fließtext", { time: "15 Min." });
-  txt(s, "Schreibe deine Analyse von A und C als zusammenhängenden Text in deinen Hefter – so wie in der Klausur.", { x: 0.6, y: 1.35, w: 12, h: 0.75, fontSize: 21 });
-  [["Einleitung", "Wer schreibt an wen, wann, worüber?"], ["Hauptteil", "je Zeile der Matrix: Behauptung → Beleg (Zitat + Z.) → Erklärung · erst A, dann C"], ["Schluss", "Stützen die Stellen die These? Was muss man ergänzen?"]].forEach(([h, d], i) => {
-    const y = 2.3 + i * 0.8;
-    pill(s, h, 0.6, y + 0.1, 2.2, NAVY, 16);
-    txt(s, d, { x: 3.05, y, w: 9.6, h: 0.65, fontSize: 19, valign: "middle" });
+  rect(s, 0.6, 1.3, 12.1, 1.75, LIGHT);
+  txt(s, [
+    { text: "Analysiere", options: { bold: true, color: RED } },
+    { text: " die Kommunikation zwischen Vater und Sohn in den Abschnitten A und C aus Franz Kafkas „Brief an den Vater“ (1919) unter Berücksichtigung der Kommunikationsmodelle von Schulz von Thun und Watzlawick. " },
+    { text: "Beurteile", options: { bold: true, color: RED } },
+    { text: " abschließend, inwieweit die These zutrifft, dass Kafkas „Furcht“ auf Kommunikationsproblemen gründet." },
+  ], { x: 0.85, y: 1.38, w: 11.6, h: 1.6, fontFace: HEAD, fontSize: 19, valign: "middle", lineSpacingMultiple: 1.1 });
+  txt(s, "So gehst du vor", { x: 0.6, y: 3.25, w: 6, h: 0.45, fontFace: HEAD, fontSize: 19, bold: true, color: NAVY });
+  [["Einleitung", "Autor, Titel, Entstehungsjahr, Thema"], ["Hauptteil", "je Zeile der Matrix: Behauptung → Beleg → Erklärung · erst A, dann C"], ["Schluss", "begründetes Urteil zur These (auch „ja, aber …“)"]].forEach(([h, d], i) => {
+    const y = 3.8 + i * 0.72;
+    pill(s, h, 0.6, y + 0.08, 1.75, NAVY, 14);
+    txt(s, d, { x: 2.5, y, w: 4.1, h: 0.62, fontSize: 15, valign: "middle" });
   });
-  rect(s, 0.6, 4.85, 12.1, 2.25, "FFF8EC");
-  txt(s, "Satzbausteine", { x: 0.9, y: 4.98, w: 6, h: 0.45, fontFace: HEAD, fontSize: 20, bold: true, color: GOLD });
-  txt(s, "In seinem „Brief an den Vater“ (1919) …  ·  Indem der Vater …, sendet er …  ·  Dies zeigt sich in … (Z. …)  ·  Hinzu kommt, dass …  ·  Die Folge ist …  ·  Besonders deutlich wird dies, wenn …  ·  Insgesamt stützt die Stelle die These, weil …  ·  Allerdings …", { x: 0.9, y: 5.5, w: 11.5, h: 1.5, fontSize: 18, italic: true, paraSpaceAfter: 4 });
-  s.addNotes("Timer 15 Minuten. Wer nach 5 Minuten keinen Anfang hat: nächste Folie (Musteranfang). Wer nicht fertig wird, schreibt zu Beginn der nächsten Stunde weiter – keine Hausaufgabe.");
+  txt(s, "Belege jede Aussage mit Zitat und Zeile (A, Z. … bzw. C, Z. …). Grundlage ist deine Matrix im Hefter.", { x: 0.6, y: 6.0, w: 6.0, h: 0.95, fontSize: 15, italic: true, color: MUTED });
+  rect(s, 6.9, 3.25, 5.8, 3.75, "FFF8EC");
+  txt(s, "Satzbausteine", { x: 7.15, y: 3.35, w: 5, h: 0.45, fontFace: HEAD, fontSize: 19, bold: true, color: GOLD });
+  txt(s, "In seinem „Brief an den Vater“ (1919) …\nIndem der Vater …, sendet er …\nDies zeigt sich in … (Z. …)\nHinzu kommt, dass …  ·  Die Folge ist …\nBesonders deutlich wird dies, wenn …\nInsgesamt stützt die Stelle die These, weil …\nAllerdings …", { x: 7.15, y: 3.85, w: 5.4, h: 3.05, fontSize: 15, italic: true, paraSpaceAfter: 3 });
+  s.addNotes("Operatoren kurz klären: Analysiere = untersuchen und geordnet, belegt darstellen; unter Berücksichtigung der Modelle = Fachbegriffe zur Erklärung nutzen; Beurteile abschließend, inwieweit = begründetes Urteil, auch „ja, aber“ ist möglich. Timer 15 Minuten. Wer nach 5 Minuten keinen Anfang hat: nächste Folie (Musteranfang). Wer nicht fertig wird, schreibt zu Beginn der nächsten Stunde weiter – keine Hausaufgabe.");
 }
 
 // 10 Musteranfang

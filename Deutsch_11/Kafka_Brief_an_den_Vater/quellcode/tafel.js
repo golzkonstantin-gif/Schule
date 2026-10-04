@@ -44,7 +44,7 @@ const ablauf = [
   ["42–55'", "② Abschnitt C allein", "Auftrag auf der Folie: Matrix zu C im Hefter, mindestens vier Zeilen mit Zitat und Zeile. Herumgehen; wer hängt, bekommt die Hilfefragen (Folie). Zwei gute Zeilen für das Zusammentragen vormerken.", "–", "Folie Auftrag 1, Hefter"],
   ["55–65'", "② C zusammentragen", "Reihum je eine Zeile nennen lassen, die nächste Person nimmt sich selbst dran. Korrigieren und präzisieren: „Ist das schon das Modell – oder noch die Handlung?“ Fehlendes ergänzen, v. a. die Kritik über die Mutter (Z. 9–10).", "Matrix C", "Hefter ergänzen"],
   ["65–72'", "③ These prüfen", "„Bestätigen A und C die These?“ Dann die Gegenstimme einbringen, falls sie nicht kommt: Kafka selbst schreibt „Du verstärktest nur, was war“ (S. 6) und spricht von „Deiner Stärke und meiner Schwäche“ (A, Z. 16). Ergebnis: stützt – mit Ergänzung.", "Kasten ③", "–"],
-  ["72–88'", "④ Fließtext", "Auftrag auf der Folie: Fließtext im Hefter. Aufbau und Satzbausteine stehen auf Folie und Tafel ④. Optional nach 5 Min. den Musteranfang zeigen. Wer nicht fertig wird, schreibt zu Beginn der nächsten Stunde weiter – keine Hausaufgabe.", "Kasten ④", "Folie Auftrag 2, Hefter"],
+  ["72–88'", "④ Fließtext", "Auftrag (Folie): „Analysiere die Kommunikation zwischen Vater und Sohn in den Abschnitten A und C aus Franz Kafkas ‚Brief an den Vater‘ (1919) unter Berücksichtigung der Kommunikationsmodelle von Schulz von Thun und Watzlawick. Beurteile abschließend, inwieweit die These zutrifft, dass Kafkas ‚Furcht‘ auf Kommunikationsproblemen gründet.“ Operatoren kurz klären (s. Erwartungshorizont). Fließtext im Hefter; optional nach 5 Min. Musteranfang zeigen. Rest zu Beginn der nächsten Stunde – keine Hausaufgabe.", "Kasten ④", "Folie Auftrag 2, Hefter"],
   ["88–90'", "Ausblick", "Ein, zwei Einleitungen vorlesen lassen. „In der Übungsklausur wendet ihr genau diese Schritte an einem neuen Ausschnitt an.“", "–", "–"],
 ];
 const aRows = [row([hdr("Zeit", aW[0]), hdr("Phase", aW[1]), hdr("Ihre Impulse / was passiert", aW[2]), hdr("Tafel", aW[3]), hdr("Material", aW[4])], 360)];
@@ -78,6 +78,8 @@ const mRows = muster.map(([a, b]) => row([
 const page3 = [
   kicker("Tafelscript · Erwartungshorizont", true),
   h1("Musterfließtext zu Auftrag 2 (Fließtext)"),
+  p([t("Auftrag: ", { bold: true, color: NAVY, size: 18 }), t("Analysiere die Kommunikation zwischen Vater und Sohn in den Abschnitten A und C aus Franz Kafkas „Brief an den Vater“ (1919) unter Berücksichtigung der Kommunikationsmodelle von Schulz von Thun und Watzlawick. Beurteile abschließend, inwieweit die These zutrifft, dass Kafkas „Furcht“ auf Kommunikationsproblemen gründet.", { size: 18 })], { after: 30 }),
+  p([t("Operatoren: ", { bold: true, color: NAVY, size: 17 }), t("Analysiere = untersuchen und geordnet, belegt darstellen · unter Berücksichtigung der Modelle = Fachbegriffe zur Erklärung nutzen · Beurteile abschließend, inwieweit = begründetes Urteil, auch „ja, aber …“", { size: 17, color: MUTED })], { after: 60 }),
   p(t("Eine mögliche Lösung – Schülertexte sind kürzer. Entscheidend: jede Behauptung mit Zitat und Zeile belegt und mit einem Fachbegriff erklärt.", { size: 18, italics: true, color: MUTED }), { after: 80 }),
   table(mW, mRows),
   p(t(""), { after: 60 }),

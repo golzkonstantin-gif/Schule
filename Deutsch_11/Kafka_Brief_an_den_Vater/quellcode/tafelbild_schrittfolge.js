@@ -76,8 +76,8 @@ const board = new Table({
       p([t("→ Der Brief selbst ist Metakommunikation – und erreicht den Vater nie.", { size: 20, bold: true })]),
     ], { w: W, span: 4, fill: BOARD2, borders: { top: line, bottom: line, left: none, right: none }, m: 100 })], 520),
     row([cell([
-      p([t("④ Auftrag: Tafelbild → Fließtext", { bold: true, size: 23, color: YEL }), t("   Schreibe deine Analyse von A und C als zusammenhängenden Text.", { size: 20 })], { after: 40 }),
-      p([t("Aufbau:  ", { bold: true, size: 20, color: YEL }), t("Einleitung (Wer? An wen? Worum?)  →  je Zeile der Matrix: Behauptung → Beleg (Zitat + Z.) → Erklärung  →  Schluss: These", { size: 20 })], { after: 40 }),
+      p([t("④ Auftrag: Tafelbild → Fließtext", { bold: true, size: 23, color: YEL }), t("   ", { size: 20 }), t("Analysiere", { bold: true, size: 20 }), t(" die Kommunikation in A und C mithilfe der Modelle und ", { size: 20 }), t("beurteile", { bold: true, size: 20 }), t(", inwieweit die These zutrifft.", { size: 20 })], { after: 40 }),
+      p([t("Aufbau:  ", { bold: true, size: 20, color: YEL }), t("Einleitung (Autor, Titel, Jahr, Thema)  →  je Zeile der Matrix: Behauptung → Beleg (Zitat + Z.) → Erklärung  →  Schluss: begründetes Urteil zur These", { size: 20 })], { after: 40 }),
       p([t("Satzbausteine:  ", { bold: true, size: 20, color: YEL }), t("Indem der Vater …, sendet er …  ·  Dies zeigt sich in … (Z. …)  ·  Hinzu kommt, dass …  ·  Die Folge ist …  ·  Insgesamt stützt die Stelle die These, weil …", { size: 20, italics: true })]),
     ], { w: W, span: 4, fill: BOARD, borders: { top: none, bottom: none, left: none, right: none }, m: 110 })], 900),
   ],
