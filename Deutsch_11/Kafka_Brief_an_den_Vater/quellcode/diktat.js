@@ -37,6 +37,9 @@ const STOLPER = [
   ["Fachwörter", "Diese Wörter müssen sitzen – sie kommen in jeder Analyse vor.", ["symmetrisch  ·  komplementär", "Generationenkonflikt  ·  Watzlawick", "handschriftlich  ·  veröffentlicht"]],
 ];
 
+module.exports = { TEIL1, TEIL2, STOLPER, clean };
+if (require.main !== module) return; // nur Daten exportieren, wenn eingebunden
+
 // ================= Vorlesefassung (docx) =================
 const t = (text, o = {}) => new TextRun({ text, font: o.font || "Calibri", size: o.size || 22, bold: o.bold, italics: o.italics, color: o.color || "000000" });
 const p = (runs, o = {}) => new Paragraph({ children: Array.isArray(runs) ? runs : [runs], alignment: o.align, pageBreakBefore: o.pb, spacing: { before: o.before ?? 0, after: o.after ?? 100, line: o.line }, keepNext: o.keepNext });

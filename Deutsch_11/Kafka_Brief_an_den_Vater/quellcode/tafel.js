@@ -41,10 +41,10 @@ const ablauf = [
   ["0–5'", "Einstieg", "Briefanfang vorlesen: „Du hast mich letzthin einmal gefragt, warum ich behaupte, ich hätte Furcht vor Dir …“ Impuls: „Wovor hat ein 36-Jähriger Furcht – und warum schreibt er, statt zu reden?“ Zwei, drei Vermutungen sammeln. Dann These anschreiben: „Kafkas ‚Furcht‘ gründet auf Kommunikationsproblemen.“ Überleitung: „Bevor wir das prüfen, brauchen wir den Hintergrund – den schreibt ihr jetzt mit.“", "Titel, These", "–"],
   ["5–20'", "Diktat + Selbstkontrolle", "Diktat nach der Vorlesefassung (Kontext + Fachbegriffe); danach Whiteboard-Folien, Fehler farbig anstreichen und zählen. Keine Besprechung. Zum Schluss den Fahrplan an die Tafel: Verstehen → Untersuchen → Schreiben.", "Fahrplan", "Vorlesefassung, Whiteboard; Arbeitsblatt austeilen"],
   ["20–42'", "① Abschnitt A im Gespräch", "Erst still lesen (3'). Dann Zeile für Zeile der Matrix:\n• „Was tut der Vater in Z. 4–5? Mit welchen Worten?“ → Redeverbot\n• „Welche Seite der Nachricht ist das? Gibt es überhaupt eine Sachinformation?“ → Appell + Beziehung\n• „Und was passiert ohne Worte?“ → erhobene Hand, analog\n• „Was bewirkt das beim Sohn? Zeigt es mir mit Zeile.“ → stottern, schweigen\n• „Wer ist hier oben, wer unten – und woran seht ihr das?“ → komplementär\n• „Wie deutet der Vater das Schweigen – und wie der Sohn?“ (Z. 15–16) → Interpunktion, Missverständnis\nDie Klasse überträgt jede Zeile in den Hefter.", "Matrix A, Zeile für Zeile", "Hefter"],
-  ["42–55'", "② Abschnitt C allein", "Auftrag: Aufgabe 1 auf dem Arbeitsblatt. Herumgehen; wer hängt, bekommt den Hinweis auf die Hilfefragen. Zwei gute Zeilen für das Zusammentragen vormerken.", "–", "Arbeitsblatt S. 2"],
+  ["42–55'", "② Abschnitt C allein", "Auftrag auf der Folie: Matrix zu C im Hefter, mindestens vier Zeilen mit Zitat und Zeile. Herumgehen; wer hängt, bekommt die Hilfefragen (Folie). Zwei gute Zeilen für das Zusammentragen vormerken.", "–", "Folie Auftrag 1, Hefter"],
   ["55–65'", "② C zusammentragen", "Reihum je eine Zeile nennen lassen, die nächste Person nimmt sich selbst dran. Korrigieren und präzisieren: „Ist das schon das Modell – oder noch die Handlung?“ Fehlendes ergänzen, v. a. die Kritik über die Mutter (Z. 9–10).", "Matrix C", "Hefter ergänzen"],
   ["65–72'", "③ These prüfen", "„Bestätigen A und C die These?“ Dann die Gegenstimme einbringen, falls sie nicht kommt: Kafka selbst schreibt „Du verstärktest nur, was war“ (S. 6) und spricht von „Deiner Stärke und meiner Schwäche“ (A, Z. 16). Ergebnis: stützt – mit Ergänzung.", "Kasten ③", "–"],
-  ["72–88'", "④ Fließtext", "Auftrag: Aufgabe 2. Kurz an Aufbau und Satzbausteine erinnern (Tafel ④). Optional den Musteranfang auf dem Whiteboard zeigen. Wer nicht fertig wird, schreibt zu Beginn der nächsten Stunde weiter – keine Hausaufgabe.", "Kasten ④", "Arbeitsblatt S. 3"],
+  ["72–88'", "④ Fließtext", "Auftrag auf der Folie: Fließtext im Hefter. Aufbau und Satzbausteine stehen auf Folie und Tafel ④. Optional nach 5 Min. den Musteranfang zeigen. Wer nicht fertig wird, schreibt zu Beginn der nächsten Stunde weiter – keine Hausaufgabe.", "Kasten ④", "Folie Auftrag 2, Hefter"],
   ["88–90'", "Ausblick", "Ein, zwei Einleitungen vorlesen lassen. „In der Übungsklausur wendet ihr genau diese Schritte an einem neuen Ausschnitt an.“", "–", "–"],
 ];
 const aRows = [row([hdr("Zeit", aW[0]), hdr("Phase", aW[1]), hdr("Ihre Impulse / was passiert", aW[2]), hdr("Tafel", aW[3]), hdr("Material", aW[4])], 360)];
@@ -77,7 +77,7 @@ const mRows = muster.map(([a, b]) => row([
 
 const page3 = [
   kicker("Tafelscript · Erwartungshorizont", true),
-  h1("Musterfließtext zu Aufgabe 2"),
+  h1("Musterfließtext zu Auftrag 2 (Fließtext)"),
   p(t("Eine mögliche Lösung – Schülertexte sind kürzer. Entscheidend: jede Behauptung mit Zitat und Zeile belegt und mit einem Fachbegriff erklärt.", { size: 18, italics: true, color: MUTED }), { after: 80 }),
   table(mW, mRows),
   p(t(""), { after: 60 }),

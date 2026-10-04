@@ -21,10 +21,11 @@ Dieses Repository enthält Unterrichtsplanungen und Material (Deutsch). Bei jede
 - Auftrag und Kriterien zusätzlich als **Whiteboard-PDF (16:9)** zum Anzeigen während der Bearbeitung.
 
 ## Material und Technik
+- **Drucke sparen:** Arbeitsblätter enthalten nur den Text; Aufträge, Matrix und Schreibfeld kommen auf Folie bzw. in den Hefter.
 - Ordner pro Klasse und Thema (`Deutsch_11/<Thema>/`), Dateien als `.docx` + `.pdf` bzw. `.pptx`, Quellcode der Generatoren in `quellcode/` (Node: `docx`, `pptxgenjs`).
 - PDFs mit LibreOffice erzeugen (`soffice --headless --convert-to pdf`) und vor dem Weitergeben gerendert prüfen (Umbrüche, Seitenzahl).
 - Zitate aus Reden oder Videos als „bitte mit der Quelle abgleichen“ kennzeichnen, wenn sie nicht geprüft werden konnten.
 
 ## Für die nächste Planung vorgemerkt
 - Erstes Diktat ist erledigt (Kafka-Stunde: Kontext + komplementär, symmetrisch, Generationenkonflikt). Noch offen für ein späteres **Definitionsdiktat**: Vier-Seiten-Modell und seine vier Seiten, Ich-Botschaft, Empathie, Wunsch & Bitte, Metakommunikation, Kipppunkt – wieder mit Vorlesefassung, Whiteboard-PDF zur Selbstkontrolle und typischen Stolperstellen.
-- Kafka-Stunde (`Deutsch_11/Kafka_Brief_an_den_Vater/`): Diktat, Tafelbild, Tafelscript und Arbeitsblatt fertig (Abschnitt A im Unterrichtsgespräch, C allein, Matrix → Fließtext). Offen: Whiteboard-Folien (Briefanfang, Musteranfang Fließtext) und eine **Übungsklausur mit den Tischregeln** (S. 5) nach demselben Schema Verstehen → Untersuchen → Schreiben.
+- Kafka-Stunde (`Deutsch_11/Kafka_Brief_an_den_Vater/`): komplett (Diktat, Tafelbild, Tafelscript, Arbeitsblatt nur mit Text, Präsentation mit Aufträgen; Matrix und Fließtext im Hefter). Offen: **Übungsklausur mit den Tischregeln** (S. 5) nach demselben Vorgehen.

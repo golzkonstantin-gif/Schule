@@ -48,14 +48,13 @@ const page1 = [
   kicker("Franz Kafka: „Brief an den Vater“ (1919) · Auszüge von S. 5–6"),
   h1("Wie der Vater spricht"),
   box([
-    p([t("These: ", { bold: true, color: RED }), t("Kafkas „Furcht“ gründet auf Kommunikationsproblemen.", { bold: true, color: NAVY })], { after: 40 }),
-    p([t("So analysiert man: ", { bold: true, color: NAVY, size: 20 }), t("1 Verstehen (Wer? An wen? Worum?)  →  2 Untersuchen (Handlung · Modell · Wirkung)  →  3 Schreiben (Behauptung → Beleg → Erklärung)", { size: 20 })], { after: 0 }),
+    p([t("These: ", { bold: true, color: RED }), t("Kafkas „Furcht“ gründet auf Kommunikationsproblemen.", { bold: true, color: NAVY })], { after: 0 }),
   ]),
   p(t("Der Text steht in der Rechtschreibung vor 1996: daß = dass, mußte = musste, wußte = wusste.", { size: 17, italics: true, color: MUTED }), { before: 60, after: 100 }),
-  p([t("A  ", { font: "Cambria", size: 26, bold: true, color: COL_A }), t("Redeverbot", { font: "Cambria", size: 26, bold: true, color: NAVY }), t("   gemeinsam im Unterrichtsgespräch – die Matrix übernimmst du in deinen Hefter", { size: 19, italics: true, color: MUTED })], { after: 60, keepNext: true }),
+  p([t("A  ", { font: "Cambria", size: 26, bold: true, color: COL_A }), t("Redeverbot", { font: "Cambria", size: 26, bold: true, color: NAVY }), t("   gemeinsam im Unterrichtsgespräch – Matrix in deinen Hefter", { size: 19, italics: true, color: MUTED })], { after: 60, keepNext: true }),
   textBlock(AUSZ.A, [["Verkehr", "Umgang miteinander"], ["Widerrede", "Widerspruch"], ["Gegenkräfte", "eigener Wille, Widerstand"], ["contra", "dagegen"], ["[…]", "Auslassung"]], COL_A),
   p(t(""), { after: 120 }),
-  p([t("C  ", { font: "Cambria", size: 26, bold: true, color: COL_C }), t("Ironie", { font: "Cambria", size: 26, bold: true, color: NAVY }), t("   allein – Aufgabe 1 auf der Rückseite", { size: 19, italics: true, color: MUTED })], { after: 60, keepNext: true }),
+  p([t("C  ", { font: "Cambria", size: 26, bold: true, color: COL_C }), t("Ironie", { font: "Cambria", size: 26, bold: true, color: NAVY }), t("   allein – Matrix in deinen Hefter", { size: 19, italics: true, color: MUTED })], { after: 60, keepNext: true }),
   textBlock(AUSZ.C, [["Ermahnung", "Zurechtweisung"], ["gewissermaßen", "sozusagen"], ["formell", "der Form nach"], ["gewürdigt", "für wert befunden"], ["Gegenspiel", "Gegenstück, Folge"]], COL_C),
 ];
 
@@ -101,6 +100,6 @@ const page3 = [
 
 const doc = new Document({
   styles: { default: { document: { run: { font: "Calibri", size: 22 } } } },
-  sections: [{ properties: { page: { size: { width: 11906, height: 16838 }, margin: { top: 850, bottom: 750, left: 850, right: 850, header: 380, footer: 380 } } }, headers: { default: header }, footers: { default: footer }, children: [...page1, ...page2, ...page3] }],
+  sections: [{ properties: { page: { size: { width: 11906, height: 16838 }, margin: { top: 850, bottom: 750, left: 850, right: 850, header: 380, footer: 380 } } }, headers: { default: header }, footers: { default: footer }, children: [...page1] }],
 });
 Packer.toBuffer(doc).then((b) => fs.writeFileSync("Arbeitsblatt_Kafka_Brief_an_den_Vater.docx", b));
