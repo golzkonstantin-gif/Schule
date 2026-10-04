@@ -28,14 +28,44 @@ const box = (paras, fill = LIGHT2) => table([W], [row([cell(paras, { w: W, fill,
 const kicker = (text, pb) => p(t(text.toUpperCase(), { size: 17, bold: true, color: MUTED }), { after: 20, pb });
 const h1 = (text) => p(t(text, { font: "Cambria", size: 34, bold: true, color: NAVY }), { after: 60 });
 
-// Text mit Zeilennummern (jede Zeile nummeriert, feste Umbrüche) + Worterklärungen rechts
-function textBlock(lines, glossar, col) {
+// Text mit Zeilennummern (jede Zeile nummeriert, feste Umbrüche); Worterklärungen als hochgestellte Fußnoten
+// glossar: [Wort, Erklärung] – Fußnotenziffer hinter dem ersten Vorkommen (ganzes Wort); Einträge ohne Treffer als Hinweis ohne Ziffer
+function textBlock(lines, glossar, col, start = 1) {
   const nW = 520, tW = W - nW;
+  const marks = lines.map(() => []);
+  const notes = [];
+  // Fundstellen ermitteln und nach Position im Text sortieren, damit die Ziffern aufsteigend erscheinen
+  const found = glossar.map(([w, e]) => {
+    const li = /^\w/.test(w) ? lines.findIndex((l) => l.includes(w)) : -1;
+    if (li < 0) return { w, e, li: Infinity };
+    let end = lines[li].indexOf(w) + w.length;
+    while (end < lines[li].length && /[\p{L}]/u.test(lines[li][end])) end++;
+    return { w, e, li, end };
+  }).sort((a, b) => a.li - b.li || a.end - b.end);
+  let n = start;
+  found.forEach(({ w, e, li, end }) => {
+    if (li === Infinity) { notes.push({ w, e }); return; }
+    marks[li].push({ end, n });
+    notes.push({ w, e, n: n++ });
+  });
+  const lineRuns = (l, ms) => {
+    const runs = []; let pos = 0;
+    ms.sort((a, b) => a.end - b.end).forEach(({ end, n }) => {
+      runs.push(t(l.slice(pos, end), { font: "Cambria", size: 21 }));
+      runs.push(new TextRun({ text: String(n), font: "Calibri", size: 21, bold: true, color: col, superScript: true }));
+      pos = end;
+    });
+    runs.push(t(l.slice(pos), { font: "Cambria", size: 21 }));
+    return runs;
+  };
   const rows = lines.map((l, i) => row([
     cell(p(t(String(i + 1), { size: 16, color: MUTED }), { align: AlignmentType.RIGHT, after: 0 }), { w: nW, borders: { top: none, bottom: none, left: none, right: solid(col, 10) }, m: 6, ml: 80 }),
-    cell(p(t(l, { font: "Cambria", size: 21 }), { after: 0 }), { w: tW, borders: all(none), m: 6, ml: 140 }),
+    cell(p(lineRuns(l, marks[i]), { after: 0 }), { w: tW, borders: all(none), m: 6, ml: 140 }),
   ]));
-  rows.push(row([cell(p(glossar.flatMap(([w, e], i) => [t((i ? "   ·   " : "") + w + " ", { size: 17, bold: true, color: col }), t("= " + e, { size: 17, color: MUTED })]), { after: 0 }), { w: W, span: 2, borders: { top: solid("D5DCEC", 6), bottom: none, left: none, right: none }, m: 60, ml: 140 })]));
+  notes.forEach(({ w, e, n }, i) => rows.push(row([cell(p([
+    n ? new TextRun({ text: String(n), font: "Calibri", size: 17, bold: true, color: col, superScript: true }) : t("", { size: 17 }),
+    t((n ? " " : "") + w + " ", { size: 17, bold: true, color: col }), t("= " + e, { size: 17, color: MUTED }),
+  ], { after: 0 }), { w: W, span: 2, borders: { top: i ? none : solid("D5DCEC", 6), bottom: none, left: none, right: none }, m: i ? 0 : 50, ml: 140 })])));
   return table([nW, tW], rows);
 }
 const lines = (n, h = 470) => table([W], Array.from({ length: n }, () => row([cell(p(t("")), { w: W, borders: { top: none, left: none, right: none, bottom: solid("9AA6C4") } })], h)));
@@ -55,7 +85,7 @@ const page1 = [
   textBlock(AUSZ.A, [["Verkehr", "Umgang miteinander"], ["Widerrede", "Widerspruch"], ["Gegenkräfte", "eigener Wille, Widerstand"], ["contra", "dagegen"], ["[…]", "Auslassung"]], COL_A),
   p(t(""), { after: 120 }),
   p([t("C  ", { font: "Cambria", size: 26, bold: true, color: COL_C }), t("Ironie", { font: "Cambria", size: 26, bold: true, color: NAVY }), t("   allein – Matrix in deinen Hefter", { size: 19, italics: true, color: MUTED })], { after: 60, keepNext: true }),
-  textBlock(AUSZ.C, [["Ermahnung", "Zurechtweisung"], ["gewissermaßen", "sozusagen"], ["formell", "der Form nach"], ["gewürdigt", "für wert befunden"], ["Gegenspiel", "Gegenstück, Folge"]], COL_C),
+  textBlock(AUSZ.C, [["Ermahnung", "Zurechtweisung"], ["gewissermaßen", "sozusagen"], ["formell", "der Form nach"], ["gewürdigt", "für wert befunden"], ["Gegenspiel", "Gegenstück, Folge"]], COL_C, 5),
 ];
 
 // ================= Seite 2: Aufgabe 1 – Matrix zu C =================
