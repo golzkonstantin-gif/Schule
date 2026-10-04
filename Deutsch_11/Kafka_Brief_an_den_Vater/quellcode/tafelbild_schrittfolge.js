@@ -66,7 +66,7 @@ const board = new Table({
         t("2 Untersuchen", { bold: true, size: 20 }), t(" (Handlung · Modell · Wirkung)  →  ", { size: 19, color: DIM }),
         t("3 Schreiben", { bold: true, size: 20 }), t(" (Behauptung → Beleg → Erklärung)", { size: 19, color: DIM })]),
     ], { w: W, span: 4, borders: { top: none, bottom: line, left: none, right: none }, m: 110 })]),
-    band("A  Redeverbot – gemeinsam", "„ich verlernte das Reden“ (S. 5 f.)", COL_A, "①"),
+    band("A  Redeverbot – gemeinsam im Unterrichtsgespräch", "„ich verlernte das Reden“ (S. 5 f.) · Matrix in den Hefter übernehmen", COL_A, "①"),
     colHead,
     ...A.map(([z, h, m, w]) => r(z, h, m, w, COL_A)),
     band("C  Ironie – allein", "„Ein besonderes Vertrauen hattest Du zur Erziehung durch Ironie …“ (S. 6)", COL_C, "②"),
@@ -90,7 +90,7 @@ const doc = new Document({
     children: [
       new Paragraph({ spacing: { after: 60 }, children: [
         new TextRun({ text: "TAFELBILD IN STICHWORTEN · ", font: "Calibri", size: 17, bold: true, color: MUTED }),
-        new TextRun({ text: "① Abschnitt A: erst allein, dann gemeinsame Matrix · ② Abschnitt C: allein, dann an der Tafel zusammentragen · ③ These prüfen · ④ Matrix in Fließtext überführen", font: "Calibri", size: 17, color: MUTED }),
+        new TextRun({ text: "① Abschnitt A: im Unterrichtsgespräch, Matrix wächst an der Tafel und im Hefter · ② Abschnitt C: allein, dann an der Tafel zusammentragen · ③ These prüfen · ④ Matrix in Fließtext überführen", font: "Calibri", size: 17, color: MUTED }),
       ] }),
       board,
     ],
