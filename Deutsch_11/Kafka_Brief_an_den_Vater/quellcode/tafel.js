@@ -74,7 +74,7 @@ const matrix = table(cw, [
     cell(p(ck("Was tut / sagt der Vater? (Zitat)", { bold: true }), { after: 0 }), { w: cw[1], fill: BOARD2, borders: chalkBorder }),
     cell(p(ck("Modell (Seite / Axiom)", { bold: true }), { after: 0 }), { w: cw[2], fill: BOARD2, borders: chalkBorder }),
     cell(p(ck("oben ↔ unten (komplementär)", { bold: true }), { after: 0 }), { w: cw[3], fill: BOARD2, borders: chalkBorder }),
-    cell(p(ck("Wirkung auf den Sohn", { bold: true }), { after: 0 }), { w: cw[4], fill: BOARD2, borders: chalkBorder }),
+    cell(p(ck("Wirkung auf den Sohn (→ Furcht)", { bold: true }), { after: 0 }), { w: cw[4], fill: BOARD2, borders: chalkBorder }),
   ], 360),
   ...auszuege.map((a) => row([
     cell([p(ck(a.reihe, { bold: true, size: 20, color: K[a.key] }), { after: 10 }), p(ck(a.titel + " (" + a.seite + ")", { size: 16, italics: true, color: K[a.key] }), { after: 0 })], { w: cw[0], fill: BOARD, borders: chalkBorder }),
@@ -100,10 +100,10 @@ const synthese = table(sw, [row([
     p(ck("→ Selbstbeklagung = versteckter Appell: „Sei dankbar!“", { size: 16, bold: true, color: K.gen }), { after: 0 }),
   ], { w: sw[1], fill: BOARD2, borders: chalkBorder, m: 90 }),
   cell([
-    p([phase(4), ck("Umschreiben: Hätte das gereicht?", { bold: true, size: 19, color: "F5D76E" })], { after: 30 }),
-    p(ck("Vater formuliert um → das Gespräch ändert sich sofort", { size: 16 }), { after: 10 }),
-    p(ck("Sohn formuliert um → prallt am Machtgefälle ab", { size: 16 }), { after: 10 }),
-    p(ck("⇒ Techniken brauchen Augenhöhe. Der Stärkere muss anfangen.", { size: 17, bold: true, color: "F5D76E" }), { after: 0 }),
+    p([phase(4), ck("These bestätigt?", { bold: true, size: 19, color: "F5D76E" })], { after: 30 }),
+    p(ck("Ja: Drohung, Ironie, widersprüchliche Regeln, „Kein Wort der Widerrede!“", { size: 16 }), { after: 10 }),
+    p(ck("Aber: „Du verstärktest nur, was war“ – „Deine Hand und mein Material“", { size: 16, italics: true }), { after: 10 }),
+    p(ck("Umschreiben zeigt: Techniken brauchen Augenhöhe – der Stärkere muss anfangen.", { size: 16, bold: true, color: "F5D76E" }), { after: 0 }),
   ], { w: sw[2], fill: BOARD2, borders: chalkBorder, m: 90 }),
 ])]);
 
@@ -111,7 +111,7 @@ const board = table([W], [
   row([cell([
     p([phase(1), ck("Franz Kafka: „Brief an den Vater“ (1919)", { font: "Cambria", size: 30, bold: true })], { after: 50 }),
     p([ck("„Du hast mich letzthin einmal gefragt, warum ich behaupte, ich hätte Furcht vor Dir. Ich wußte Dir, wie gewöhnlich, nichts zu antworten …“", { size: 19, italics: true })], { after: 30 }),
-    p([ck("Leitfrage: ", { bold: true, size: 20, color: "F5D76E" }), ck("Warum schreibt Kafka seinem Vater, statt mit ihm zu reden?", { size: 20 }), ck("      ← ④ „… weil ich vor Dir weder denken noch reden konnte.“", { size: 17, italics: true, color: DIM })], { after: 0 }),
+    p([ck("These: ", { bold: true, size: 21, color: "F5D76E" }), ck("Kafkas „Furcht“ gründet auf Kommunikationsproblemen. → Beweist es mit Zitaten!", { size: 21 }), ck("      ← ④ „… weil ich vor Dir weder denken noch reden konnte.“", { size: 17, italics: true, color: DIM })], { after: 0 }),
   ], { w: W, fill: BOARD, borders: allBorders(none), m: 120, ml: 200 })]),
   row([cell([matrix], { w: W, fill: BOARD, borders: allBorders(none), m: 40, ml: 200 })]),
   row([cell([synthese], { w: W, fill: BOARD, borders: allBorders(none), m: 80, ml: 200 })]),
@@ -128,13 +128,13 @@ const page1 = [
 const aW = [1100, 2300, 4200, 4838, 2700];
 const ablauf = [
   ["0–15'", "", "Diktat + Selbstkontrolle", "– (Whiteboard: Diktattext)", "Diktat nach der Vorlesefassung. Danach Whiteboard-Folien zeigen, Fehler farbig anstreichen und zählen lassen. Keine Besprechung.", "schreiben mit, kontrollieren selbst"],
-  ["15–20'", "①", "Einstieg: der Briefanfang", "Überschrift, Zitat des Briefanfangs, Leitfrage", "Briefanfang vorlesen oder zeigen. Impuls: „Warum schreibt ein 36-Jähriger seinem Vater einen Brief, statt mit ihm zu reden?“ Zwei, drei Vermutungen sammeln, dann die Leitfrage anschreiben. Die Antwort bleibt offen bis ④.", "äußern Vermutungen"],
+  ["15–20'", "①", "Einstieg: Briefanfang und These", "Überschrift, Zitat des Briefanfangs, These", "Briefanfang vorlesen oder zeigen. Impuls: „Wovor hat ein 36-Jähriger Furcht – und warum schreibt er, statt zu reden?“ Zwei, drei Vermutungen sammeln. Dann die These anschreiben: „Kafkas ‚Furcht‘ gründet auf Kommunikationsproblemen.“ Auftrag für die Stunde: Beweist es mit Zitaten! Die Überprüfung folgt in ④.", "äußern Vermutungen"],
   ["20–48'", "", "Einzelarbeit, dann Reihengruppe", "Leere Matrix vorbereiten: Spaltenköpfe, Reihen links in den Kreidefarben", "Jede Reihe bearbeitet ihren Auszug (Arbeitsblatt). Herumgehen, bei Verständnisfragen zum Text helfen. In der Gruppenphase: Sprecher bestimmen lassen, schwache Belege merken.", "füllen die Matrix für den eigenen Auszug; bündeln in der Reihe die drei stärksten Belege"],
   ["48–63'", "②", "Vorstellung an der Tafel", "Matrix zeilenweise füllen, Zitate in der Farbe der Reihe", "Je Reihe ca. 4 Min. Sie schreiben mit, korrigieren und präzisieren: „Welche Seite der Nachricht ist das genau?“ – „Wo stehen hier oben und unten?“ Die anderen Reihen füllen ihre Matrix mit.", "stellen vor bzw. schreiben mit"],
   ["63–68'", "③", "Synthese", "Kästen „Starre Komplementarität“ und „Generationenkonflikt“; Vater-Zitate zur Jugend auf dem Whiteboard", "Impuls 1: „Was haben alle drei Szenen gemeinsam?“ → starre Komplementarität. Impuls 2: Whiteboard mit den Sätzen des Vaters zu seiner Jugend: „Wie begründet der Vater seine Härte?“ → Generationenkonflikt, Selbstbeklagung als versteckter Appell.", "erkennen das Muster über alle Auszüge"],
   ["68–80'", "", "Umschreiben (allein)", "–", "Jede und jeder schreibt den Kipppunkt des eigenen Auszugs mit mindestens zwei Techniken um (Buchstaben A–D notieren). Wahl: als Vater oder als Sohn. Herumgehen, je eine Vater- und eine Sohn-Version vormerken.", "schreiben um"],
-  ["80–87'", "④", "Vorlesen und Diskussion", "Kasten ④ rechts unten", "Vorgemerkte Versionen vorlesen lassen. Impuls: „Hätte das gereicht? Wer müsste sich ändern?“ – dann: „Generationenkonflikt oder Kommunikationsproblem?“ Ergebnis: Techniken brauchen Augenhöhe.", "lesen vor, diskutieren"],
-  ["87–90'", "④", "Abschluss", "Pfeil von ④ zurück zur Leitfrage, Zitat ergänzen", "Die Stelle zur Widerrede vorlesen (S. 5): „… schließlich schwieg ich, zuerst vielleicht aus Trotz, dann, weil ich vor Dir weder denken noch reden konnte.“ Damit ist die Leitfrage beantwortet.", "hören zu"],
+  ["80–87'", "④", "Vorlesen und Prüfung der These", "Kasten ④ rechts unten", "Vorgemerkte Umschreibungen vorlesen lassen: „Hätte das gereicht? Wer müsste sich ändern?“ Dann zurück zur These: „Ist sie bewiesen?“ Gegenargument einbringen, falls es nicht von selbst kommt – Kafka schreibt selbst: „Du verstärktest nur, was war“ (S. 6) und „Deine Hand und mein Material“ waren „einander so fremd“ (S. 6). Ergebnis im Kasten ④.", "lesen vor, prüfen die These"],
+  ["87–90'", "④", "Abschluss", "Pfeil von ④ zurück zur These, Zitat ergänzen", "Die Stelle zur Widerrede vorlesen (S. 5 f.): „… schließlich schwieg ich, zuerst vielleicht aus Trotz, dann, weil ich vor Dir weder denken noch reden konnte.“ Die Furcht macht sprachlos – darum der Brief.", "hören zu"],
 ];
 const aRows = [row([hdr("Zeit", aW[0]), hdr("Phase", aW[1]), hdr("Was an die Tafel kommt", aW[2]), hdr("Ihre Impulse", aW[3]), hdr("Klasse", aW[4])], 380)];
 ablauf.forEach(([z, n, ph, tafel, imp, sus]) => aRows.push(row([
@@ -179,11 +179,11 @@ const page3 = [
   kicker("Tafelscript · Erwartungshorizont", true),
   h1("Was in der Matrix und beim Umschreiben herauskommen sollte"),
   table(eW, eRows),
-  h2("④", "Diskussion: Generationenkonflikt oder Kommunikationsproblem?"),
+  h2("④", "These: Kafkas „Furcht“ gründet auf Kommunikationsproblemen – bestätigt?"),
   infoBox([
-    [t("Generationenkonflikt: ", { bold: true, color: NAVY, size: 18 }), t("unterschiedliche Lebenserfahrung (Not gegen Wohlstand) und Werte (Kraft, Arbeit, Dankbarkeit gegen Empfindsamkeit, Bücher); der Vater misst den Sohn an seiner eigenen Jugend.", { size: 18 })],
-    [t("Kommunikationsproblem: ", { bold: true, color: NAVY, size: 18 }), t("Drohung, Ironie und widersprüchliche Regeln machen ein Gespräch unmöglich; Widerrede ist verboten. Der Konflikt könnte besprochen werden – wird es aber nicht.", { size: 18 })],
-    [t("Zuspitzung: ", { bold: true, color: RED, size: 18 }), t("Beides hängt zusammen – der Generationenkonflikt wird erst durch die starre Komplementarität unlösbar. Der Brief ist Kafkas Versuch der Metakommunikation; er erreicht den Vater nie.", { size: 18 })],
+    [t("Dafür: ", { bold: true, color: NAVY, size: 18 }), t("Drohung („ich zerreiße Dich wie einen Fisch“), Ironie mit „bösem Lachen“, Kritik über Dritte, Regeln, die nur für den Sohn gelten, und das Verbot der Widerrede machen jedes Gespräch unmöglich. Die Furcht entsteht dort, wo das Kind nichts verstehen und nichts erwidern darf.", { size: 18 })],
+    [t("Dagegen / Einschränkung: ", { bold: true, color: NAVY, size: 18 }), t("Kafka selbst relativiert: „Du verstärktest nur, was war“ (S. 6); „Deine Hand und mein Material“ seien „einander so fremd gewesen“ (S. 6). Dazu kommen der Generationenkonflikt (Not gegen Wohlstand, Kraft gegen Empfindsamkeit) und das körperliche Gefälle („Du stark, groß, breit“).", { size: 18 })],
+    [t("Fazit: ", { bold: true, color: RED, size: 18 }), t("Die These trägt, braucht aber eine Ergänzung: Die Kommunikation macht aus Unterschieden Furcht. Erst die starre Komplementarität verhindert, dass der Konflikt besprochen wird. Der Brief ist Kafkas Versuch der Metakommunikation – er erreicht den Vater nie.", { size: 18 })],
   ]),
   p(t("Optional bei Zeit: Am Ende des Briefs lässt Kafka den Vater selbst antworten und wirft sich „Schmarotzertum“ vor (S. 20) – Perspektivwechsel als Diskussionsimpuls: Ist der Brief fair?", { size: 17, italics: true, color: MUTED }), { before: 80, after: 0 }),
 ];
