@@ -34,19 +34,38 @@ function textWithLines(s, lines, x, y, w, size, col) {
   s.addShape(pres.shapes.LINE, { x: x + 0.52, y, w: 0, h: lines.length * lh, line: { color: col, width: 2 } });
 }
 
-// 1 Einstieg
+// 1 Einstieg: Briefanfang zum Mitlesen
+{
+  const s = base("Franz Kafka · „Brief an den Vater“ · 1919", "Der Anfang des Briefs");
+  txt(s, [
+    { text: "Liebster Vater,", options: { breakLine: true } },
+    { text: "Du hast mich letzthin einmal gefragt, warum ich behaupte, ich hätte Furcht vor Dir. Ich wußte Dir, wie gewöhnlich, nichts zu antworten, zum Teil eben aus der Furcht, die ich vor Dir habe, zum Teil deshalb, weil zur Begründung dieser Furcht zu viele Einzelheiten gehören, als daß ich sie im Reden halbwegs zusammenhalten könnte. Und wenn ich hier versuche, Dir schriftlich zu antworten, so wird es doch nur sehr unvollständig sein, weil auch im Schreiben die Furcht und ihre Folgen mich Dir gegenüber behindern und weil die Größe des Stoffs über mein Gedächtnis und meinen Verstand weit hinausgeht." },
+  ], { x: 0.7, y: 1.4, w: 11.9, h: 5.4, fontFace: HEAD, fontSize: 25, lineSpacingMultiple: 1.25, paraSpaceAfter: 8 });
+  txt(s, "S. 2", { x: 11.2, y: 6.85, w: 1.5, h: 0.35, fontSize: 14, color: MUTED, align: "right" });
+  s.addNotes("Briefanfang vorlesen, die Klasse liest mit. Dann weiter zur Impulsfrage.");
+}
+// 2 Impulsfrage
 {
   const s = pres.addSlide();
   s.background = { color: NAVY };
   s.addShape(pres.shapes.OVAL, { x: 10.6, y: -1.6, w: 4.6, h: 4.6, fill: { color: NAVY2 }, line: { type: "none" } });
-  txt(s, "FRANZ KAFKA · „BRIEF AN DEN VATER“ · 1919", { x: 0.9, y: 0.8, w: 10, h: 0.4, fontSize: 15, bold: true, color: ICE, charSpacing: 2 });
-  txt(s, "„Liebster Vater,\nDu hast mich letzthin einmal gefragt, warum ich behaupte, ich hätte Furcht vor Dir. Ich wußte Dir, wie gewöhnlich, nichts zu antworten, zum Teil eben aus der Furcht, die ich vor Dir habe …“", { x: 0.9, y: 1.5, w: 11.4, h: 3.2, fontFace: HEAD, fontSize: 30, italic: true, color: WHITE, paraSpaceAfter: 8 });
-  rect(s, 0.9, 5.25, 11.5, 1.1, RED);
-  txt(s, "Wovor hat ein 36-Jähriger Furcht – und warum schreibt er, statt zu reden?", { x: 1.2, y: 5.25, w: 11, h: 1.1, fontFace: HEAD, fontSize: 26, bold: true, color: WHITE, valign: "middle" });
-  s.addNotes("Briefanfang vorlesen, die Klasse liest mit. Impulsfrage stellen, zwei, drei Vermutungen sammeln. Dann die These an die Tafel: „Kafkas ‚Furcht‘ gründet auf Kommunikationsproblemen.“ Überleitung zum Diktat: „Bevor wir das prüfen, brauchen wir den Hintergrund – den schreibt ihr jetzt mit.“");
+  txt(s, "„… ich hätte Furcht vor Dir.“", { x: 0.9, y: 1.4, w: 11.4, h: 1.0, fontFace: HEAD, fontSize: 32, italic: true, color: ICE });
+  rect(s, 0.9, 2.9, 11.5, 1.6, RED);
+  txt(s, "Wovor hat ein 36-Jähriger Furcht – und warum schreibt er, statt zu reden?", { x: 1.2, y: 2.9, w: 11, h: 1.6, fontFace: HEAD, fontSize: 30, bold: true, color: WHITE, valign: "middle" });
+  s.addNotes("Zwei, drei Vermutungen sammeln. Dann die These an die Tafel: „Kafkas ‚Furcht‘ gründet auf Kommunikationsproblemen.“ Überleitung: „Bevor wir das prüfen, brauchen wir den Hintergrund – den schreibt ihr jetzt mit.“");
+}
+// 3 Diktat (Platzhalter, damit die Lösung nicht zu früh erscheint)
+{
+  const s = pres.addSlide();
+  s.background = { color: NAVY };
+  s.addShape(pres.shapes.OVAL, { x: -1.5, y: 4.6, w: 4.0, h: 4.0, fill: { color: NAVY2 }, line: { type: "none" } });
+  pill(s, "DIKTAT", 0.9, 2.0, 2.0, RED, 14);
+  txt(s, "Kafka und sein Vater – Kontext und Fachbegriffe", { x: 0.9, y: 2.7, w: 11.8, h: 0.9, fontFace: HEAD, fontSize: 30, bold: true, color: WHITE });
+  txt(s, "Schreibe mit. Satzzeichen werden nicht angesagt – achte selbst auf die Kommas.", { x: 0.9, y: 3.9, w: 11.5, h: 0.6, fontSize: 22, color: ICE });
+  s.addNotes("Diese Folie steht während des Diktats. Diktieren nach der Vorlesefassung. Danach weiter zur Lösungsfolie.");
 }
 
-// 2–3 Diktat Selbstkontrolle
+// 4–5 Diktat: Lösungsfolien
 [["Teil 1 · Kontext", TEIL1, 23], ["Teil 2 · Fachbegriffe", TEIL2, 24]].forEach(([k, arr, fs]) => {
   const s = base("Diktat · Selbstkontrolle · " + k, "Vergleiche Wort für Wort");
   txt(s, clean(arr), { x: 0.6, y: 1.3, w: 12.1, h: 5.1, fontFace: HEAD, fontSize: fs, lineSpacingMultiple: 1.25 });
@@ -54,7 +73,7 @@ function textWithLines(s, lines, x, y, w, size, col) {
   txt(s, "Fehler farbig anstreichen · Anzahl notieren · Kommafehler extra zählen", { x: 0.85, y: 6.55, w: 11.6, h: 0.6, fontSize: 17, bold: true, valign: "middle" });
   s.addNotes("Text stehen lassen, bis alle verglichen haben. Keine Besprechung – nur Selbstkontrolle.");
 });
-// 4 Stolperstellen
+// 6 Stolperstellen
 {
   const s = base("Diktat · Selbstkontrolle", "Darauf achten – auch in jeder Klausur");
   const cols = [RED, GOLD, GREEN, BLUE];
