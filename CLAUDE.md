@@ -31,6 +31,7 @@ Dieses Repository enthält Unterrichtsplanungen und Material (Deutsch). Bei jede
   - **Textschwierigkeit realistisch einschätzen.** Historische oder literarische Texte nur mit vorher gesichertem Kontext einsetzen; im Zweifel einen kürzeren, zugänglicheren Text wählen.
   - **Kontext ist eine eigene Phase.** Er wird erarbeitet und gesichert (z. B. kurzer Infotext oder Bild mit Leitfrage, Ergebnis an der Tafel), bevor analysiert wird.
   - **Analyse länger begleiten.** Eigenständiges Analysieren und Ausformulieren erst nach mehreren gemeinsamen Durchgängen. Zwischenschritte: Lückensätze, vorgegebene Zitate zuordnen, einen Absatz gemeinsam schreiben.
+  - **Was in der Stunde funktioniert hat (spontan umgestellt):** die Matrix komplett gemeinsam erstellen und danach **aus der ersten Matrixzeile gemeinsam einen zusammenhängenden Satz** formulieren. Diesen Schritt (Matrixzeile → ein Satz, gemeinsam) künftig fest einplanen, bevor die Klasse selbst ausformuliert.
   - **Diktate kürzer.** Weniger und kürzere Definitionen; Stolperwörter vorher an der Tafel üben.
 
 ## Für die nächste Planung vorgemerkt
