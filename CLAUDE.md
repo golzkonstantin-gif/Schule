@@ -26,6 +26,13 @@ Dieses Repository enthält Unterrichtsplanungen und Material (Deutsch). Bei jede
 - PDFs mit LibreOffice erzeugen (`soffice --headless --convert-to pdf`) und vor dem Weitergeben gerendert prüfen (Umbrüche, Seitenzahl).
 - Zitate aus Reden oder Videos als „bitte mit der Quelle abgleichen“ kennzeichnen, wenn sie nicht geprüft werden konnten.
 
+## Erfahrungen aus gehaltenen Stunden
+- **Kafka „Brief an den Vater“ (Okt. 2026): zu schwer.** Ohne Kontextwissen (Familie, Herkunft und Auftreten des Vaters, Kafkas Lebenslage) war die „Furcht“ nicht zu verstehen. Die Klasse brauchte viel Hilfe, und die eigenständige Analyse (C allein, Fließtext) war nicht zu bewältigen. Das Diktat hatte viele Fehler. Folgerungen:
+  - **Textschwierigkeit realistisch einschätzen.** Historische oder literarische Texte nur mit vorher gesichertem Kontext einsetzen; im Zweifel einen kürzeren, zugänglicheren Text wählen.
+  - **Kontext ist eine eigene Phase.** Er wird erarbeitet und gesichert (z. B. kurzer Infotext oder Bild mit Leitfrage, Ergebnis an der Tafel), bevor analysiert wird.
+  - **Analyse länger begleiten.** Eigenständiges Analysieren und Ausformulieren erst nach mehreren gemeinsamen Durchgängen. Zwischenschritte: Lückensätze, vorgegebene Zitate zuordnen, einen Absatz gemeinsam schreiben.
+  - **Diktate kürzer.** Weniger und kürzere Definitionen; Stolperwörter vorher an der Tafel üben.
+
 ## Für die nächste Planung vorgemerkt
 - Erstes Diktat ist erledigt (Kafka-Stunde: Kontext + komplementär, symmetrisch, Generationenkonflikt). Noch offen für ein späteres **Definitionsdiktat**: Vier-Seiten-Modell und seine vier Seiten, Ich-Botschaft, Empathie, Wunsch & Bitte, Metakommunikation, Kipppunkt – wieder mit Vorlesefassung, Whiteboard-PDF zur Selbstkontrolle und typischen Stolperstellen.
-- Kafka-Stunde (`Deutsch_11/Kafka_Brief_an_den_Vater/`): komplett (Diktat, Tafelbild, Tafelscript, Arbeitsblatt nur mit Text, Präsentation mit Aufträgen; Matrix und Fließtext im Hefter). Offen: **Übungsklausur mit den Tischregeln** (S. 5) nach demselben Vorgehen.
+- Kafka-Stunde (`Deutsch_11/Kafka_Brief_an_den_Vater/`): komplett (Diktat, Tafelbild, Tafelscript, Arbeitsblatt nur mit Text, Präsentation mit Aufträgen; Matrix und Fließtext im Hefter). Gehalten, war zu schwer (siehe Erfahrungen). Die geplante **Übungsklausur mit den Tischregeln** (S. 5) erst nach Kontextsicherung und mehr gelenkter Übung angehen oder durch einen leichteren Text ersetzen.
