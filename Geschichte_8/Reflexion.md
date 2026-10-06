@@ -32,6 +32,12 @@
 - **Rückmeldung der Lehrkraft:** *(steht noch aus)*
 - **Hospitationsfeedback:** *(steht noch aus)*
 
+### Test Ständegesellschaft und Absolutismus (Entwurf)
+- **Material:** `Test_Staendegesellschaft_Absolutismus/` (Test mit 5 Aufgaben, 28 Punkte, 30 Minuten; Erwartungshorizont mit Notenschlüssel)
+- **Inhalt:** Absolutismus (Begriff, zwei Aussagen), drei Stände (Anzahl, Vorrecht, Pflicht), Mitbestimmung, fünf Säulen (nennen, eine erklären), „Im Absolutismus fühle ich mich …, weil …“.
+- **Rückmeldung der Lehrkraft:** *(steht noch aus)*
+- **Ergebnisse:** *(steht noch aus)*
+
 ## Hospitationsfeedback (gesammelt)
 
 *(noch keine Einträge)*

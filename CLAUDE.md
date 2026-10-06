@@ -33,6 +33,7 @@ Dieses Repo enthält Unterrichtsmaterial (Deutsch 7A, Geschichte 8). Die Vorlieb
 - **„Dritter Stand“ immer mit Klammer:** „Dritter Stand (Bauern und Bürger)“, damit klar ist, wer gemeint ist.
 - **Wahr-oder-falsch-Einstieg einzeln nacheinander:** Aussage, Unterrichtsgespräch, dann die Antwort mit Begründung auf der Folie (je eine Folie).
 - **Säulen-Einstieg:** erst fragen, wie ein König ein Land regieren kann, dann „Ihr erinnert euch: fünf Säulen. Welche?“, dann Merksatz und Lückentext.
+- **Weniger Text auf den Folien** (Zukunftsregel der Lehrkraft): pro Folie nur das Nötigste, Erklärungen mündlich, Schrift mindestens 24 Punkt.
 - **Karikatur** als Impuls bei „Im Absolutismus fühle ich mich …“ (gibt Hinweise auf Vorrechte und Lasten).
 
 ## Gestaltung
@@ -52,3 +53,4 @@ Keine Klarnamen von Schülerinnen, Schülern oder Kolleginnen und Kollegen ins R
 - `Deutsch_7A/` – Material der Klasse 7A, ein Unterordner pro Stunde/Einheit
 - `Deutsch_7A/Reflexion.md` – Lernstand, Stundenlog, Hospitationsfeedback, offene Baustellen
 - `Geschichte_8/` – Material der Klasse 8 (Geschichte), gleiche Struktur; Reflexionslog: `Geschichte_8/Reflexion.md`
+- `Geschichte_8/Test_Staendegesellschaft_Absolutismus/` – Test-Entwurf mit Erwartungshorizont und Notenschlüssel
