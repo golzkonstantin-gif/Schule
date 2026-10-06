@@ -2,7 +2,7 @@
 
 ## Lernstand der Klasse (aktueller Stand)
 
-**Klassenprofil:** Alle Schülerinnen und Schüler sind Leistungssportler. Beispiele, Schreibanlässe und Kontexte daran anknüpfen (Training, Wettkampf, Trainer, Ergebnisse).
+**Klassenprofil:** Alle Schülerinnen und Schüler sind Leistungssportler, und zwar in **Judo, Handball und Gewichtheben**. Beispiele, Schreibanlässe und Kontexte daran anknüpfen (Training, Wettkampf, Trainer, Ergebnisse).
 
 **Thema: Verben und Zeitformen**
 

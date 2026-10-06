@@ -10,12 +10,14 @@ Dieses Repo enthält Unterrichtsmaterial (Deutsch). Die Lehrkraft plant hier gem
 
 ## Vorlieben der Lehrkraft
 
+- **Alle Klassen der Lehrkraft bestehen aus Leistungssportlern.** Das gilt für jede Planung: Beispiele, Übungssätze und Schreibanlässe an Training, Wettkampf, Trainer, Ergebnisse und den Alltag im Leistungssport anknüpfen. Die Sportarten der jeweiligen Klasse stehen im Reflexionslog der Klasse.
+
 - **Erst fragen, was gewünscht ist:** Wenn die Lehrkraft „erst mal Ideen sammeln“ sagt, nur Ideen im Chat – kein Material erstellen.
 - **Kleinschrittig und Vorwissen nicht überschätzen.** Lieber einen Schritt zurückgehen und Grundlagen sichern (die Bastelstunde zu Zeitformen ist genau daran gescheitert).
 - **Inhalt darf elementar sein, der Ton muss zur Altersstufe passen (7. Klasse, keine Grundschulanmutung).** Also:
   - Fachbegriffe konsequent verwenden (finit/infinit, Hilfsverb/Vollverb) statt kindlicher Metaphern („Verbfamilie“, „Familienname“),
   - Begründungen einfordern („Begründe, warum …“), Fehleranalyse statt Rätsel (z. B. Chatverlauf mit echten Fehlern),
-  - Beispielsätze aus der Lebenswelt der Klasse, keine Kinderbeispiele. **Die 7A besteht komplett aus Leistungssportlern:** Training, Wettkampf, Trainer und Ergebnisse sind der naheliegende Kontext für Beispiele und Schreibanlässe (daneben Serien, Handy, Klassenfahrt),
+  - Beispielsätze aus der Lebenswelt der Klasse (vor allem Leistungssport, daneben Serien, Handy, Klassenfahrt), keine Kinderbeispiele,
   - keine Finger- oder Handzeichenspiele; stattdessen z. B. Speed-Duell zu zweit mit Punkten,
   - Relevanz zeigen (wofür man es braucht, Bezug zum Englischen).
 - **Wenige Arbeitsblätter.** Übungen laufen an der Tafel, die Klasse schreibt ins Heft ab und löst dort.
