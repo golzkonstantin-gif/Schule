@@ -107,6 +107,26 @@ Die Lehrkraft möchte das weiterverfolgen, noch ohne Material. Die Satzklammer (
 - **Rückmeldung der Lehrkraft (06.10.):** Der Rückbau vom Futur I ins Perfekt war in Ordnung und kann wiederholt werden, z. B. als Reaktivierung.
 - **Hospitationsfeedback:** –
 
+### Doppelstunde „Präteritum und Plusquamperfekt“ (geplant, 90 Min.)
+- **Material:** `Praeteritum_Plusquamperfekt/` (Tafelskript, Kopiervorlage mit Schnipseln A–D, je 2 Schüler pro A4; keine Präsentation)
+- **Rahmen (integrativ, mit der Lehrkraft besprochen):** „Mein erster Wettkampf“, passend zur Klasse aus Leistungssportlern (Judo, Handball, Gewichtheben). Mündlich erzählt man im Perfekt, im Bericht für die Vereinszeitung steht das Präteritum, die Vorgeschichte im Plusquamperfekt.
+- **Inhalt:**
+  - Reaktivierung: Futur I → Perfekt (Ü8).
+  - Partner erzählen sich ihren ersten Wettkampf.
+  - Präteritum aus der Gegenüberstellung „So erzählen wir“ und „Vereinszeitung“ entdecken, dazu Merksatz 8.
+  - Ü9: Präteritum der Sportverben (Schnipsel A).
+  - Plusquamperfekt mit Zeitstrahl, Merksatz 9, Ü10 (Schnipsel B).
+  - Ü11: eigener Bericht mit Schreibrahmen (Schnipsel C).
+  - Partner-Check (Schnipsel D).
+  - Reflexion: „Wann nehme ich welche Zeitform?“
+- **Planungsentscheidungen:**
+  - Plusquamperfekt nur in Hauptsätzen (kein *nachdem*), weil das Hilfsverb im Nebensatz am Ende steht.
+  - Markiert werden Hilfsverb und Partizip II, Präteritum-Verben werden unterstrichen. Keine Klammer-Bögen.
+  - Das Thema „Gewicht machen“ bleibt in den Beispielen bewusst außen vor.
+  - Puffer: Den Bericht können die Schüler als Hausaufgabe fertigstellen. Partner-Check und Reflexion sind dann der Einstieg der nächsten Stunde.
+- **Rückmeldung der Lehrkraft:** *(steht noch aus)*
+- **Hospitationsfeedback:** *(steht noch aus)*
+
 ## Hospitationsfeedback (gesammelt)
 
 *(noch keine Einträge)*
