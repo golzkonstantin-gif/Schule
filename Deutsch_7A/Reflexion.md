@@ -2,6 +2,8 @@
 
 ## Lernstand der Klasse (aktueller Stand)
 
+**Klassenprofil:** Alle Schülerinnen und Schüler sind Leistungssportler. Beispiele, Schreibanlässe und Kontexte daran anknüpfen (Training, Wettkampf, Trainer, Ergebnisse).
+
 **Thema: Verben und Zeitformen**
 
 - Die vier Merkmale eines Verbs (Genus Verbi, Tempus, Numerus, Person) wurden in einer 5-Minuten-Wiederholung behandelt.
