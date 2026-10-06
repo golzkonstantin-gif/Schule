@@ -11,19 +11,24 @@
 - Das Perfekt mit *haben* oder *sein* muss noch geübt werden.
 - Das Vorwissen zu Verbformen (Infinitiv, Personalform, Partizip II) war geringer als angenommen.
 - Stand 30.09.: Den Unterschied zwischen Infinitiv und finiter Form hat die Klasse verstanden. Das Partizip II wurde eingeführt, das Perfekt noch nicht.
+- Stand 06.10. (laut Lehrkraft): Infinitiv, finite Verbform und Partizip II kann die Klasse gut unterscheiden. Das Perfekt mit *haben* und *sein* kann sie gut bilden. Im Unterricht werden durchgehend Hilfsverb und Partizip II markiert.
 
 ## Offene Baustellen
 
-- [x] Unterschied Infinitiv und finite Form verstanden (Doppelstunde „Verbformen verstehen“)
+- [x] Unterschied Infinitiv, finite Form und Partizip II sicher (Stand 06.10.)
 - [ ] Gebeugte Formen auf den Infinitiv zurückführen („Wie heißt der Infinitiv?“) zur Routine machen – weiter in jeder Stunde kurz üben
 - [ ] *haben* und *sein* im Präsens und Präteritum sicher konjugieren
-- [ ] Perfekt mit *haben* oder *sein*
+- [x] Perfekt mit *haben* oder *sein* bilden (Stand 06.10.)
 - [ ] Hilfsverb oder Vollverb unterscheiden („Ich habe Hunger“ gegenüber „Ich habe gegessen“)
-- [ ] Modalverben + Infinitiv (für die nächste Stunde geplant)
-- [ ] *werden* und Futur I (Stunde „Das Futur I“ geplant)
+- [ ] Modalverben + Infinitiv – nach hinten verschoben (Entscheidung der Lehrkraft, 06.10.)
+- [ ] *werden* und Futur I (Stunde „Das Futur I“)
+- [ ] Weitere Tempora: Präteritum, Plusquamperfekt (Futur II später)
+- [ ] Satzklammer als eigener Merksatz – erst am Schluss, wenn alle Tempora behandelt sind (Entscheidung der Lehrkraft, 06.10.)
 - [ ] Danach als Anwendung: der Zeitformen-Baukasten (`Zeitformen_bauen/`)
 
 ## Langfristige Idee: Satzklammer als roter Faden
+
+**Entscheidung der Lehrkraft (06.10.):** Die Satzklammer wird erst zum Schluss behandelt, wenn alle Tempora durch sind. Bis dahin werden nur Hilfsverb und Partizip II (bzw. Infinitiv) markiert, ohne Bogen und ohne Merksatz zur Satzklammer.
 
 Die Lehrkraft möchte das weiterverfolgen, noch ohne Material. Die Satzklammer (finiter Teil an Position 2, infiniter Teil am Satzende) soll in jeder Einheit gleich dargestellt werden: als Bogen im Farbcode. Neue Grammatik wird dann jeweils als „bekannte Klammer, neuer Partner rechts“ eingeführt. Mögliche Abfolge:
 - Tempora: Das Hilfsverb links bestimmt die Zeitform (habe → Perfekt, hatte → Plusquamperfekt, werde → Futur).

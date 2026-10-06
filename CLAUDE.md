@@ -31,6 +31,8 @@ Dieses Repo enthält Unterrichtsmaterial (Deutsch). Die Lehrkraft plant hier gem
 - **PowerPoint nur, wenn die Lehrkraft sie möchte – vorher fragen.** Für „Hilfsverben erkennen“ wurde ausdrücklich keine gewünscht.
   - Mit PowerPoint: Sie enthält Merksätze und Aufgaben (gleicher Wortlaut wie im Tafelskript, Lösungen nur in den Notizen). Je Merksatz eine Folie: Kernsatz im roten Rahmen, Beispiel in Farbe, „Wofür?“ und „Test“, direkt vor der passenden Übung. An der Tafel entstehen dann nur Tafelbilder und Tabellen.
   - Ohne PowerPoint: Merksätze und Übungen stehen an der Tafel. Im Skript den Tipp geben, die Merksätze vorab auf die Seitentafel zu schreiben.
+- **Markieren statt Klammer (Deutsch 7A, bis alle Tempora behandelt sind):** Hilfsverb rot und Partizip II gelb (bzw. Infinitiv blau) markieren. Noch keine Satzklammer-Bögen und kein Merksatz zur Satzklammer – das kommt erst am Schluss der Tempus-Einheit.
+- **Modalverben** sind nach hinten verschoben (nach den Tempora).
 - **Im „Wofür?“ der Merksätze den Bezug zu den Tempora herstellen**, wenn es passt (z. B. Partizip II und Hilfsverb braucht man für die Tempora).
 
 ## Gestaltung
