@@ -19,6 +19,8 @@ Dieses Repo enthält Unterrichtsmaterial (Deutsch). Die Lehrkraft plant hier gem
   - keine Finger- oder Handzeichenspiele; stattdessen z. B. Speed-Duell zu zweit mit Punkten,
   - Relevanz zeigen (wofür man es braucht, Bezug zum Englischen).
 - **Wenige Arbeitsblätter.** Übungen laufen an der Tafel, die Klasse schreibt ins Heft ab und löst dort.
+  - Erlaubt sind **kleine Arbeitsblatt-Schnipsel**: mehrere passen auf ein A4-Blatt, die Schüler tragen nur ein. Das spart die Zeit fürs Abschreiben. Grundsätzlich soll aber weiter geschrieben werden, weil die Klasse auch schreiben lernen muss. Eine sinnvolle Aufteilung: Merksätze und eigene Sätze ins Heft, längere Übungstexte als Schnipsel.
+- **Klassisch oder integrativ:** Beides ist möglich. Bei integrativer Gestaltung (Grammatik in einem Text- oder Schreibkontext) die Sprachnutzung ausdrücklich reflektieren lassen.
 - **Transparenz durch die Lehrkraft, nicht durch Hilfsmittel.** Keine Modus- oder Symbolkarten (ausdrücklich abgelehnt). Stattdessen:
   - feste, wörtliche Ansagen bei jedem Wechsel („Stifte liegen. Ihr hört nur zu.“ / „Jetzt schreibt ihr ab: …“ / „Jetzt arbeitet ihr allein. Die Aufgabe steht rechts.“ / „Wer drankommt, schreibt an die Tafel. Alle prüfen mit.“ / „Vergleicht und verbessert mit Grün.“),
   - Übungen immer im gleichen Format: Nummer + Titel, nummerierte Arbeitsschritte mit Verb am Anfang, Zeit, Arbeitsform, „Fertig? Stift hinlegen“.

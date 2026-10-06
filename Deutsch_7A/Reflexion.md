@@ -21,7 +21,7 @@
 - [x] Perfekt mit *haben* oder *sein* bilden (Stand 06.10.)
 - [ ] Hilfsverb oder Vollverb unterscheiden („Ich habe Hunger“ gegenüber „Ich habe gegessen“)
 - [ ] Modalverben + Infinitiv – nach hinten verschoben (Entscheidung der Lehrkraft, 06.10.)
-- [ ] *werden* und Futur I (Stunde „Das Futur I“)
+- [x] *werden* und Futur I (Stunde „Das Futur I“, Rückbau ins Perfekt kann wiederholt werden)
 - [ ] Weitere Tempora: Präteritum, Plusquamperfekt (Futur II später)
 - [ ] Satzklammer als eigener Merksatz – erst am Schluss, wenn alle Tempora behandelt sind (Entscheidung der Lehrkraft, 06.10.)
 - [ ] Danach als Anwendung: der Zeitformen-Baukasten (`Zeitformen_bauen/`)
@@ -90,7 +90,7 @@ Die Lehrkraft möchte das weiterverfolgen, noch ohne Material. Die Satzklammer (
 - **Hospitationsfeedback:** –
 - **Nächster Schritt:** In der nächsten Stunde reaktivieren und mit der Satzklammer weitermachen.
 
-### Einzelstunde „Das Futur I“ (geplant, 45 Min.)
+### Einzelstunde „Das Futur I“ (45 Min.)
 - **Material:** `Futur_I/` (Tafelskript, ohne Präsentation)
 - **Bezug zur letzten Stunde:** Die Kreide-Kette mit Mitschreiben lief sehr gut. Merksatz 6 (Hilfsverb) steht im Heft. Die Satzklammer und „Hilfsverb oder Vollverb“ wurden nicht erreicht.
 - **Planungsentscheidung der Lehrkraft:** Nach der Reaktivierung folgt direkt das Futur I, mit Schreibaufgabe zum Wochenende. Die Satzklammer wird dabei nur als Bogen gezeichnet. Ein eigener Merksatz dazu und „Hilfsverb oder Vollverb“ bleiben offen.
@@ -102,8 +102,8 @@ Die Lehrkraft möchte das weiterverfolgen, noch ohne Material. Die Satzklammer (
   - Ü7 a: drei eigene Sätze zum Wochenende im Futur I.
   - Die Lehrkraft schreibt Schülersätze an die Tafel, die Kreide-Kette markiert *werden* und den Infinitiv, alle schreiben mit.
   - Ü7 b „Zurück ins Perfekt“ (Idee der Lehrkraft: „Stellt euch vor, ich frage euch nächste Woche, was ihr gemacht habt“): Die Sätze werden per Kreide-Kette in eine zweite Spalte ins Perfekt umgebaut. Erkenntnis: Die Klammer bleibt, beide Teile werden ausgetauscht (werde → habe/bin, Infinitiv → Partizip II).
-- **Rückmeldung der Lehrkraft:** *(steht noch aus)*
-- **Hospitationsfeedback:** *(steht noch aus)*
+- **Rückmeldung der Lehrkraft (06.10.):** Der Rückbau vom Futur I ins Perfekt war in Ordnung und kann wiederholt werden, z. B. als Reaktivierung.
+- **Hospitationsfeedback:** –
 
 ## Hospitationsfeedback (gesammelt)
 
