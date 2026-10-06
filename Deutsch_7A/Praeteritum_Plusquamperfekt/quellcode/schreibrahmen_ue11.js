@@ -148,11 +148,11 @@ function phase(nr, title, min) {
 
 
 // ================================================================
-// Kopiervorlage: Schnipsel A–D (je 2 Schüler pro A4-Seite)
+// Druckvorlage: Schreibrahmen Ü11 „Mein erster Wettkampf“ (4 pro A4-Seite)
 // ================================================================
 const PW = 11906 - 1200;          // nutzbare Breite (Rand 600)
 const HW = Math.floor((PW - 200) / 2); // halbe Spalte
-const sz = 19;
+const sz = 21;
 const s = (txt, o = {}) => t(txt, Object.assign({ size: sz }, o));
 const sb = (txt, o = {}) => s(txt, Object.assign({ bold: true }, o));
 const gray = "9AA3B5";
@@ -196,7 +196,7 @@ function slipB() {
 function slipC() {
   const w3 = [1620, 1620, 1620];
   const col = (h, items) => cell([p(t(h, { bold: true, size: 17, color: "FFFFFF" }), { after: 0, align: AlignmentType.CENTER })], { w: 1620, fill: NAVY, borders: allBorders(solid("FFFFFF", 6)) });
-  const lst = (items) => cell(items.map((x) => p(s(x, { size: 17 }), { after: 10 })), { w: 1620, fill: LIGHT, borders: allBorders(solid("FFFFFF", 6)), valign: VerticalAlign.TOP });
+  const lst = (items) => cell(items.map((x) => p(s(x, { size: 19 }), { after: 10 })), { w: 1620, fill: LIGHT, borders: allBorders(solid("FFFFFF", 6)), valign: VerticalAlign.TOP });
   return [
     ...slipHead("Ü11", "Mein erster Wettkampf"),
     para([s("Schreibe "), sb("5–6 Sätze"), s(" ins Heft – im "), sb("Präteritum"), s(", mit mindestens einem Satz im "), sb("Plusquamperfekt"), s(" (Vorgeschichte).")], { after: 80 }),
@@ -209,7 +209,7 @@ function slipC() {
       row([col("Judo"), col("Handball"), col("Gewichtheben")]),
       row([lst(["die Matte", "der Gegner", "der Wurf", "der Haltegriff", "der Ippon"]), lst(["das Tor", "die Halbzeit", "der Siebenmeter", "die Abwehr", "der Schiedsrichter"]), lst(["die Hantel", "der Versuch", "das Reißen", "das Stoßen", "der Kampfrichter"])]),
     ]),
-    p(s("Die Präteritumformen findest du in Ü9.", { italics: true, color: MUTED, size: 17 }), { before: 60, after: 0 }),
+    p(s("Die Präteritumformen findest du in deinem Heft (Ü9).", { italics: true, color: MUTED, size: 17 }), { before: 60, after: 0 }),
   ];
 }
 // ---------- Schnipsel D ----------
@@ -232,11 +232,8 @@ function slipD() {
 }
 
 const pair = (left, right) => table([HW, 200, HW], [row([slipCell(left, HW), cell(p(t("")), { w: 200, borders: noBorders }), slipCell(right, HW)])]);
-const doc = [
-  pair(slipA(), slipB()), scissors(), pair(slipA(), slipB()),
-  new Paragraph({ children: [new PageBreak()] }),
-  pair(slipC(), slipD()), scissors(), pair(slipC(), slipD()),
-];
+// 4 Schreibrahmen Ü11 pro A4-Seite (2 × 2)
+const doc = [pair(slipC(), slipC()), scissors(), pair(slipC(), slipC())];
 const props = { page: { size: { width: 11906, height: 16838 }, margin: { top: 600, bottom: 500, left: 600, right: 600 } } };
 const styles = { default: { document: { run: { font: "Calibri", size: 20 } } } };
-Packer.toBuffer(new Document({ styles, sections: [{ properties: props, children: doc }] })).then((b) => fs.writeFileSync("Schnipsel_Praeteritum_Plusquamperfekt.docx", b));
+Packer.toBuffer(new Document({ styles, sections: [{ properties: props, children: doc }] })).then((b) => fs.writeFileSync("Ue11_Schreibrahmen_Wettkampf.docx", b));

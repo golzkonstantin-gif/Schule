@@ -108,16 +108,17 @@ Die Lehrkraft möchte das weiterverfolgen, noch ohne Material. Die Satzklammer (
 - **Hospitationsfeedback:** –
 
 ### Doppelstunde „Präteritum und Plusquamperfekt“ (geplant, 90 Min.)
-- **Material:** `Praeteritum_Plusquamperfekt/` (Tafelskript, Kopiervorlage mit Schnipseln A–D, je 2 Schüler pro A4; keine Präsentation)
+- **Material:** `Praeteritum_Plusquamperfekt/` (Tafelskript, Druckvorlage nur für den Schreibrahmen Ü11 mit 4 Stück pro A4; keine Präsentation)
 - **Rahmen (integrativ, mit der Lehrkraft besprochen):** „Mein erster Wettkampf“, passend zur Klasse aus Leistungssportlern (Judo, Handball, Gewichtheben). Mündlich erzählt man im Perfekt, im Bericht für die Vereinszeitung steht das Präteritum, die Vorgeschichte im Plusquamperfekt.
 - **Inhalt:**
   - Reaktivierung: Futur I → Perfekt (Ü8).
   - Partner erzählen sich ihren ersten Wettkampf.
   - Präteritum aus der Gegenüberstellung „So erzählen wir“ und „Vereinszeitung“ entdecken, dazu Merksatz 8.
-  - Ü9: Präteritum der Sportverben (Schnipsel A).
-  - Plusquamperfekt mit Zeitstrahl. Vor Merksatz 9 werden *haben* und *sein* im Präteritum per Kreide-Kette konjugiert, und die Tabelle kommt in den Hefter (Wunsch der Lehrkraft). Danach Merksatz 9 und Ü10 (Schnipsel B).
-  - Ü11: eigener Bericht mit Schreibrahmen (Schnipsel C).
-  - Partner-Check (Schnipsel D).
+  - Ü9: Präteritum der Sportverben, im Heft.
+  - Plusquamperfekt mit Zeitstrahl. Vor Merksatz 9 werden *haben* und *sein* im Präteritum per Kreide-Kette konjugiert, und die Tabelle kommt in den Hefter (Wunsch der Lehrkraft). Danach Merksatz 9 und Ü10, im Heft.
+  - Ü11: eigener Bericht mit gedrucktem Schreibrahmen.
+  - Partner-Check (Fragen an der Tafel, Antworten unter dem Text).
+  - Entscheidung der Lehrkraft: Nur Ü11 wird gedruckt, alles andere schreiben die Schüler ins Heft.
   - Reflexion: „Wann nehme ich welche Zeitform?“
 - **Planungsentscheidungen:**
   - Plusquamperfekt nur in Hauptsätzen (kein *nachdem*), weil das Hilfsverb im Nebensatz am Ende steht.

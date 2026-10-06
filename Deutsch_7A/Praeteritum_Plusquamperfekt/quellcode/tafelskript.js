@@ -182,10 +182,10 @@ doc.push(grid([900, 3500, 5806], ["Zeit", "Phase", "Kern"], [
   ["10′", "0 Reaktivierung", "Ü8: Futur I → Perfekt per Kreide-Kette, alle schreiben mit"],
   ["8′", "1 Erzählt euch!", "Partner erzählen ihren ersten Wettkampf – Lehrkraft notiert Sätze (Perfekt)"],
   ["12′", "2 Präteritum entdecken", "Dieselben Sätze „in der Vereinszeitung“ – Merksatz 8"],
-  ["12′", "3 Ü9 Präteritum der Sportverben", "Schnipsel A eintragen, Vergleich per Kreide-Kette"],
-  ["20′", "4 Plusquamperfekt", "„Ich war nervös. Ich hatte kaum geschlafen.“ – Zeitstrahl, haben/sein im Präteritum konjugieren, Merksatz 9, Ü10 (Schnipsel B)"],
-  ["15′", "5 Ü11 Mein erster Wettkampf", "eigenen Bericht ins Heft schreiben (Schnipsel C als Rahmen)"],
-  ["8′", "6 Partner-Check", "Schnipsel D: unterstreichen, markieren, drei Prüffragen"],
+  ["12′", "3 Ü9 Präteritum der Sportverben", "Verben ins Heft schreiben und ergänzen, Vergleich per Kreide-Kette"],
+  ["20′", "4 Plusquamperfekt", "„Ich war nervös. Ich hatte kaum geschlafen.“ – Zeitstrahl, haben/sein im Präteritum konjugieren, Merksatz 9, Ü10 ins Heft"],
+  ["15′", "5 Ü11 Mein erster Wettkampf", "eigenen Bericht ins Heft schreiben (gedruckter Schreibrahmen)"],
+  ["8′", "6 Partner-Check", "unterstreichen, markieren, drei Prüffragen (an der Tafel)"],
   ["5′", "7 Reflexion", "Tabelle „Wann nehme ich welche Zeitform?“"],
 ], { bold: [true, true, false], colors: [C.hv, NAVY, null], h: 360 }));
 doc.push(p([S("Puffer: ", { bold: true, color: C.hv }), S("Die 90 Minuten sind damit voll verplant. Wird es knapp, ist Phase 5 der Kern. Der Bericht kann als Hausaufgabe fertig geschrieben werden; Partner-Check und Reflexion (6, 7) sind dann der Einstieg der nächsten Stunde.")], { before: 80, after: 60 }));
@@ -196,14 +196,14 @@ doc.push(table([2300, 7906], [
   ["Ü8", "zwei Spalten: Futur I | Perfekt (mitgeschrieben)"],
   ["Tafelbild", "zwei Spalten: So erzählen wir | So steht es in der Vereinszeitung"],
   ["Merksatz 8", "Das Präteritum"],
-  ["Ü9", "Schnipsel A eingeklebt (Präteritum der Sportverben)"],
+  ["Ü9", "Infinitiv → Präteritum der Sportverben (z. B. werfen → warf*)"],
   ["Tabelle", "haben und sein im Präteritum (ich hatte, ich war …)"],
   ["Merksatz 9", "Das Plusquamperfekt + kleiner Zeitstrahl"],
-  ["Ü10", "Schnipsel B eingeklebt (Was war vorher?)"],
+  ["Ü10", "nur Nummer + Plusquamperfekt: 1 hatte trainiert …"],
   ["Ü11", "eigener Bericht „Mein erster Wettkampf“ (5–6 Sätze)"],
   ["Tabelle", "Wann nehme ich welche Zeitform?"],
 ].map(([a, b]) => row([tc(a, 2300, { bold: true, color: a.startsWith("Merk") ? C.hv : (a === "Überschrift" || a === "Tafelbild" || a === "Tabelle") ? NAVY : "C77C12", fill: LIGHT, size: 20 }), tc(b, 7906, { size: 20 })], 340))));
-doc.push(p([S("Material: ", { bold: true }), S("Kopiervorlage „Schnipsel“ (2 Seiten, je 2 Schüler pro A4 – halbe Klassenstärke kopieren und durchschneiden) · Kreide Rot, Gelb · Schüler: Heft, Kleber, Schere, Buntstifte Rot, Gelb, Grün")], { before: 100, after: 40 }));
+doc.push(p([S("Material: ", { bold: true }), S("Schreibrahmen Ü11 (4 Stück pro A4 – ein Viertel der Klassenstärke kopieren und zerschneiden) · Kreide Rot, Gelb · Schüler: Heft, Buntstifte Rot, Gelb, Grün")], { before: 100, after: 40 }));
 doc.push(p([S("Tipp: ", { bold: true }), S("Merksatz 8 und 9 vorab auf die Seitentafel schreiben und zuklappen.")], { after: 0 }));
 
 // ---------- Phase 0 ----------
@@ -252,9 +252,9 @@ doc.push(...steps([
 ]));
 
 // ---------- Phase 3 ----------
-doc.push(phase("3", "Ü9 Präteritum der Sportverben (Schnipsel A)", 12));
+doc.push(phase("3", "Ü9 Präteritum der Sportverben", 12));
 doc.push(...steps([
-  ["luecken", { say: "Jetzt arbeitet ihr allein. Ihr bekommt Schnipsel A. Tragt die Präteritumformen ein und markiert die unregelmäßigen mit einem Stern. Fünf Minuten. Danach einkleben.", board: auftrag("Ü9 Präteritum der Sportverben", ["Klebe Schnipsel A als Ü9 ins Heft.", "Trage die Präteritumform ein (ich …).", "Markiere unregelmäßige Verben mit einem Stern."], [p(S("Verben auf dem Schnipsel: werfen, fallen, greifen, halten, fangen, treffen, laufen, heben, reißen, stoßen, gewinnen, verlieren, kämpfen, starten, trainieren, sein, haben", { size: 20 }), { after: 0 })], "5 Minuten · allein · leise"),
+  ["luecken", { say: "Jetzt arbeitet ihr allein. Die Aufgabe steht rechts an der Tafel: Ü9. Schreibt die Verben untereinander ins Heft und ergänzt die Präteritumform. Fünf Minuten.", board: auftrag("Ü9 Präteritum der Sportverben", ["Schreibe Ü9 an den Rand.", "Schreibe jedes Verb ab und ergänze die Präteritumform: werfen → ich warf.", "Markiere unregelmäßige Verben mit einem Stern."], [p(S("werfen, fallen, greifen, halten, fangen, treffen, laufen, heben, reißen, stoßen, gewinnen, verlieren, kämpfen, starten, trainieren, sein, haben", { size: 20 }), { after: 0 })], "5 Minuten · allein · leise"),
     sol: "warf* · fiel* · griff* · hielt* · fing* · traf* · lief* · hob* · riss* · stieß* · gewann* · verlor* · kämpfte · startete · trainierte · war* · hatte*" }],
   ["tafel", { say: "Kreide-Kette: Wer die Kreide hat, schreibt ein Verb mit Präteritumform an die Tafel. Alle prüfen mit und verbessern mit Grün.", do: ["Mit werfen beginnen – das kennen Judoka und Handballer. Danach gezielt Schüler der jeweiligen Sportart nach „ihren“ Verben fragen (Judo: greifen, halten; Handball: fangen, treffen; Gewichtheben: heben, reißen, stoßen).", "Erkenntnis: Die meisten Sportverben sind unregelmäßig – genau die müsst ihr für euren Bericht können."] }],
 ]));
@@ -289,7 +289,7 @@ doc.push(...steps([
     p([S("Beispiel: ", { bold: true, color: MUTED }), n19("Ich "), r19("hatte"), n19(" wochenlang "), y19("trainiert"), n19(".  ·  Wir "), r19("waren"), n19(" früh "), y19("losgefahren"), n19(".")], { after: 60 }),
     p([S("Wofür? ", { bold: true }), S("Damit erzählt man, was "), S("vorher", { bold: true }), S(" passiert war – die Vorgeschichte zu einem Ereignis in der Vergangenheit. "), S("Test: ", { bold: true }), S("Steht hatte oder war mit einem Partizip II? Dann ist es Plusquamperfekt. (Steht habe oder bin, ist es Perfekt.)")], { after: 0 }),
   ]) }],
-  ["luecken", { say: "Jetzt arbeitet ihr allein: Schnipsel B, Ü10. Ergänzt in jedem zweiten Satz das Plusquamperfekt. Fünf Minuten.", board: auftrag("Ü10 Was war vorher? (Schnipsel B)", ["Klebe Schnipsel B als Ü10 ins Heft.", "Ergänze das Plusquamperfekt mit dem Verb in Klammern.", "Markiere hatte/war rot und das Partizip II gelb."], [
+  ["luecken", { say: "Jetzt arbeitet ihr allein: Ü10. Ihr schreibt die Sätze nicht ab – nur die Nummer und das Plusquamperfekt. Fünf Minuten.", board: auftrag("Ü10 Was war vorher?", ["Schreibe Ü10 an den Rand.", "Schreibe nur Nummer und Plusquamperfekt: 1 hatte … trainiert.", "Markiere hatte/war rot und das Partizip II gelb."], [
     bl("1  Ich war müde. Ich ___ die ganze Woche ___. (trainieren)"),
     bl("2  Der Trainer war zufrieden. Wir ___ alles richtig ___. (machen)"),
     bl("3  Sie gewann den Kampf. Sie ___ sich gut ___. (aufwärmen)"),
@@ -300,16 +300,16 @@ doc.push(...steps([
 ]));
 
 // ---------- Phase 5 ----------
-doc.push(phase("5", "Ü11 Mein erster Wettkampf (Schnipsel C)", 15));
+doc.push(phase("5", "Ü11 Mein erster Wettkampf (gedruckter Schreibrahmen)", 15));
 doc.push(...steps([
-  ["luecken", { say: "Jetzt schreibt ihr allein euren eigenen Bericht für die Vereinszeitung – ins Heft, als Ü11. Schnipsel C hilft euch mit Satzanfängen. Zwölf Minuten.", board: auftrag("Ü11 Mein erster Wettkampf", ["Schreibe 5–6 Sätze über deinen ersten Wettkampf (oder einen, an den du dich gut erinnerst) ins Heft.", "Schreibe im Präteritum – wie in der Vereinszeitung.", "Schreibe mindestens einen Satz zur Vorgeschichte im Plusquamperfekt („Vorher …“)."], [p(S("Hilfe: Satzanfänge und Bausteine auf Schnipsel C, Präteritumformen auf Schnipsel A (Ü9).", { size: 20, italics: true }), { after: 0 })], "12 Minuten · allein · leise"),
-    do: ["Schnipsel C nicht einkleben, sondern neben das Heft legen – geschrieben wird ins Heft.", "Typische Fehler: Wechsel ins Perfekt mitten im Text („Dann habe ich gewonnen“), Präteritum regelmäßig gebildet („werfte“, „fallte“), Plusquamperfekt mit habe statt hatte."] }],
+  ["luecken", { say: "Jetzt schreibt ihr allein euren eigenen Bericht für die Vereinszeitung – ins Heft, als Ü11. Der Schreibrahmen hilft euch mit Satzanfängen und Wörtern. Zwölf Minuten.", board: auftrag("Ü11 Mein erster Wettkampf", ["Schreibe 5–6 Sätze über deinen ersten Wettkampf (oder einen, an den du dich gut erinnerst) ins Heft.", "Schreibe im Präteritum – wie in der Vereinszeitung.", "Schreibe mindestens einen Satz zur Vorgeschichte im Plusquamperfekt („Vorher …“)."], [p(S("Hilfe: Satzanfänge und Bausteine auf dem Schreibrahmen, Präteritumformen in Ü9.", { size: 20, italics: true }), { after: 0 })], "12 Minuten · allein · leise"),
+    do: ["Den Schreibrahmen neben das Heft legen (oder nach der Stunde einkleben) – geschrieben wird ins Heft.", "Typische Fehler: Wechsel ins Perfekt mitten im Text („Dann habe ich gewonnen“), Präteritum regelmäßig gebildet („werfte“, „fallte“), Plusquamperfekt mit habe statt hatte."] }],
 ]));
 
 // ---------- Phase 6 ----------
-doc.push(phase("6", "Partner-Check (Schnipsel D)", 8));
+doc.push(phase("6", "Partner-Check", 8));
 doc.push(...steps([
-  ["partner", { say: "Jetzt arbeitet ihr zu zweit. Tauscht die Hefte. Ihr prüft den Bericht eures Partners mit Schnipsel D.", board: auftrag("Partner-Check", ["Unterstreiche alle Präteritum-Verben.", "Markiere im Plusquamperfekt hatte/war rot und das Partizip II gelb.", "Beantworte die drei Fragen auf Schnipsel D und gib das Heft zurück."], [
+  ["partner", { say: "Jetzt arbeitet ihr zu zweit. Tauscht die Hefte. Ihr prüft den Bericht eures Partners. Die Fragen stehen rechts an der Tafel.", board: auftrag("Partner-Check", ["Unterstreiche alle Präteritum-Verben.", "Markiere im Plusquamperfekt hatte/war rot und das Partizip II gelb.", "Schreibe unter den Text: die Antworten auf die drei Fragen (ja/nein) und einen Satz „Gut gelungen ist …“. Gib das Heft zurück."], [
     bl("Steht der Text durchgehend im Präteritum?   ja / nein"),
     bl("Gibt es mindestens einen Satz zur Vorgeschichte im Plusquamperfekt?   ja / nein"),
     bl("Stimmen die Formen? Wenn nicht: Wo?", { after: 0 }),
