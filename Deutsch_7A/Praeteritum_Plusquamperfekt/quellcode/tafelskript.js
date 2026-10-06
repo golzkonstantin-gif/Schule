@@ -183,12 +183,12 @@ doc.push(grid([900, 3500, 5806], ["Zeit", "Phase", "Kern"], [
   ["8′", "1 Erzählt euch!", "Partner erzählen ihren ersten Wettkampf – Lehrkraft notiert Sätze (Perfekt)"],
   ["12′", "2 Präteritum entdecken", "Dieselben Sätze „in der Vereinszeitung“ – Merksatz 8"],
   ["12′", "3 Ü9 Präteritum der Sportverben", "Schnipsel A eintragen, Vergleich per Kreide-Kette"],
-  ["15′", "4 Plusquamperfekt", "„Ich war nervös. Ich hatte kaum geschlafen.“ – Zeitstrahl, Merksatz 9, Ü10 (Schnipsel B)"],
+  ["20′", "4 Plusquamperfekt", "„Ich war nervös. Ich hatte kaum geschlafen.“ – Zeitstrahl, haben/sein im Präteritum konjugieren, Merksatz 9, Ü10 (Schnipsel B)"],
   ["15′", "5 Ü11 Mein erster Wettkampf", "eigenen Bericht ins Heft schreiben (Schnipsel C als Rahmen)"],
   ["8′", "6 Partner-Check", "Schnipsel D: unterstreichen, markieren, drei Prüffragen"],
   ["5′", "7 Reflexion", "Tabelle „Wann nehme ich welche Zeitform?“"],
 ], { bold: [true, true, false], colors: [C.hv, NAVY, null], h: 360 }));
-doc.push(p([S("Puffer: ", { bold: true, color: C.hv }), S("Wird es knapp, ist Phase 5 der Kern. Der Bericht kann als Hausaufgabe fertig geschrieben werden; Partner-Check und Reflexion (6, 7) sind dann der Einstieg der nächsten Stunde.")], { before: 80, after: 60 }));
+doc.push(p([S("Puffer: ", { bold: true, color: C.hv }), S("Die 90 Minuten sind damit voll verplant. Wird es knapp, ist Phase 5 der Kern. Der Bericht kann als Hausaufgabe fertig geschrieben werden; Partner-Check und Reflexion (6, 7) sind dann der Einstieg der nächsten Stunde.")], { before: 80, after: 60 }));
 
 doc.push(h3("So sieht das Heft am Ende aus"));
 doc.push(table([2300, 7906], [
@@ -197,6 +197,7 @@ doc.push(table([2300, 7906], [
   ["Tafelbild", "zwei Spalten: So erzählen wir | So steht es in der Vereinszeitung"],
   ["Merksatz 8", "Das Präteritum"],
   ["Ü9", "Schnipsel A eingeklebt (Präteritum der Sportverben)"],
+  ["Tabelle", "haben und sein im Präteritum (ich hatte, ich war …)"],
   ["Merksatz 9", "Das Plusquamperfekt + kleiner Zeitstrahl"],
   ["Ü10", "Schnipsel B eingeklebt (Was war vorher?)"],
   ["Ü11", "eigener Bericht „Mein erster Wettkampf“ (5–6 Sätze)"],
@@ -259,7 +260,7 @@ doc.push(...steps([
 ]));
 
 // ---------- Phase 4 ----------
-doc.push(phase("4", "Das Plusquamperfekt", 15));
+doc.push(phase("4", "Das Plusquamperfekt", 20));
 doc.push(...steps([
   ["zuhoeren", { say: "Stifte liegen. Ihr hört nur zu. Zwei Sätze aus einem Wettkampfbericht. Was ist zuerst passiert?", board: board("Mitte", [
     sl([n19("Ich "), u19("war"), n19(" vor dem Kampf sehr nervös. Ich "), r19("hatte"), n19(" die Nacht davor kaum "), y19("geschlafen"), n19(".")]),
@@ -275,10 +276,14 @@ doc.push(...steps([
     ])]),
   ]), do: ["Zeitstrahl darunter zeichnen. Antwort: Das Schlafen war vorher – vor der Vergangenheit."] }],
   ["gemeinsam", { say: "Meldet euch. Ihr schreibt noch nichts auf. Schaut auf hatte und geschlafen: Was davon kennt ihr schon?", do: [
-    "hatte kennt die Klasse aus Merksatz 4 (haben im Präteritum), geschlafen ist ein Partizip II. Neu ist nur die Kombination.",
+    "hatte ist haben im Präteritum, geschlafen ist ein Partizip II. Damit alle hatte und war sicher bilden können, konjugieren wir beide Hilfsverben gleich vollständig.",
     "Kontrast: Ich habe geschlafen (Perfekt) – Ich hatte geschlafen (Plusquamperfekt). Der einzige Unterschied steckt im Hilfsverb: Präsens oder Präteritum.",
     "Auch mit sein: Wir waren früh losgefahren.",
   ] }],
+  ["tafel", { say: "Kreide-Kette: Wir konjugieren haben und sein im Präteritum. Wer die Kreide hat, trägt eine Form ein und gibt die Kreide weiter. Alle anderen schreiben die Tabelle ins Heft.", board: board("Mitte · haben und sein im Präteritum", [table([1500, 1900, 1900], [
+    row([cell(p(N(""), { after: 0 }), { w: 1500, borders: allBorders(solid("9AA59C", 4)) }), cell(p(R("haben"), { after: 0, align: AlignmentType.CENTER }), { w: 1900, borders: allBorders(solid("9AA59C", 4)) }), cell(p(R("sein"), { after: 0, align: AlignmentType.CENTER }), { w: 1900, borders: allBorders(solid("9AA59C", 4)) })]),
+    ...[["ich", "hatte", "war"], ["du", "hattest", "warst"], ["er/sie/es", "hatte", "war"], ["wir", "hatten", "waren"], ["ihr", "hattet", "wart"], ["sie/Sie", "hatten", "waren"]].map(([ps, h, w]) => row([cell(p(N(ps, { color: MUTED }), { after: 0 }), { w: 1500, borders: allBorders(solid("9AA59C", 4)), m: 15 }), cell(p(N(h), { after: 0, align: AlignmentType.CENTER }), { w: 1900, borders: allBorders(solid("9AA59C", 4)), m: 15 }), cell(p(N(w), { after: 0, align: AlignmentType.CENTER }), { w: 1900, borders: allBorders(solid("9AA59C", 4)), m: 15 })])),
+  ])]), sol: "hatte · hattest · hatte · hatten · hattet · hatten | war · warst · war · waren · wart · waren", do: ["Die Personen und die Überschriften vorher anschreiben, die Formen trägt die Kreide-Kette ein.", "Stolperstellen: ihr wart (ohne e), du warst; die 1. und 3. Person Singular sind gleich (ich hatte – er hatte, ich war – sie war).", "Kurz nach Sportarten anwenden lassen: „Wir ___ müde.“ – „Ihr ___ gut trainiert.“"] }],
   ["abschreiben", { say: "Jetzt schreibt ihr von der Tafel ab: Merksatz 9 mit dem Beispiel und dem kleinen Zeitstrahl. Rot umrahmen.", board: merkTafel(9, "Das Plusquamperfekt", [
     p([S("Das "), S("Plusquamperfekt", { bold: true }), S(" bildet man mit "), S("haben oder sein im Präteritum", { bold: true }), S(" (hatte, war) und dem "), S("Partizip II", { bold: true }), S(".")], { after: 60 }),
     p([S("Beispiel: ", { bold: true, color: MUTED }), n19("Ich "), r19("hatte"), n19(" wochenlang "), y19("trainiert"), n19(".  ·  Wir "), r19("waren"), n19(" früh "), y19("losgefahren"), n19(".")], { after: 60 }),

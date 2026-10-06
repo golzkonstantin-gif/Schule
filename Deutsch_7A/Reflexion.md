@@ -115,7 +115,7 @@ Die Lehrkraft möchte das weiterverfolgen, noch ohne Material. Die Satzklammer (
   - Partner erzählen sich ihren ersten Wettkampf.
   - Präteritum aus der Gegenüberstellung „So erzählen wir“ und „Vereinszeitung“ entdecken, dazu Merksatz 8.
   - Ü9: Präteritum der Sportverben (Schnipsel A).
-  - Plusquamperfekt mit Zeitstrahl, Merksatz 9, Ü10 (Schnipsel B).
+  - Plusquamperfekt mit Zeitstrahl. Vor Merksatz 9 werden *haben* und *sein* im Präteritum per Kreide-Kette konjugiert, und die Tabelle kommt in den Hefter (Wunsch der Lehrkraft). Danach Merksatz 9 und Ü10 (Schnipsel B).
   - Ü11: eigener Bericht mit Schreibrahmen (Schnipsel C).
   - Partner-Check (Schnipsel D).
   - Reflexion: „Wann nehme ich welche Zeitform?“
