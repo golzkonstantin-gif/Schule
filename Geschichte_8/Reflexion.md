@@ -39,6 +39,11 @@
 - **Rückmeldung der Lehrkraft:** *(steht noch aus)*
 - **Ergebnisse:** *(steht noch aus)*
 
+### Ausblick nach dem Test: „Die Münze“ (geplant, 10 Min.)
+- **Material:** `Ausblick_Muenze/` (Tafelskript mit Vorlesetext und Tafelbild, keine Folie)
+- **Idee:** Eine Münze, nach der drei Hände greifen (Pacht, Zehnt, Steuer). Alle Stände kommen vor, die Klasse erkennt Probleme Frankreichs und dass die Stimmung kippt. Tafelbild gemeinsam, kein Heft.
+- **Rückmeldung der Lehrkraft:** *(steht noch aus)*
+
 ## Hospitationsfeedback (gesammelt)
 
 *(noch keine Einträge)*
