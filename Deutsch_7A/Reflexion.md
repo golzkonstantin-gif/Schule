@@ -107,7 +107,7 @@ Die Lehrkraft möchte das weiterverfolgen, noch ohne Material. Die Satzklammer (
 - **Rückmeldung der Lehrkraft (06.10.):** Der Rückbau vom Futur I ins Perfekt war in Ordnung und kann wiederholt werden, z. B. als Reaktivierung.
 - **Hospitationsfeedback:** –
 
-### Doppelstunde „Präteritum und Plusquamperfekt“ (geplant, 90 Min.)
+### Doppelstunde „Präteritum und Plusquamperfekt“ (90 Min.)
 - **Material:** `Praeteritum_Plusquamperfekt/` (Tafelskript, Druckvorlage nur für den Schreibrahmen Ü11 mit 4 Stück pro A4; keine Präsentation)
 - **Rahmen (integrativ, mit der Lehrkraft besprochen):** „Mein erster Wettkampf“, passend zur Klasse aus Leistungssportlern (Judo, Handball, Gewichtheben). Mündlich erzählt man im Perfekt, im Bericht für die Vereinszeitung steht das Präteritum, die Vorgeschichte im Plusquamperfekt.
 - **Inhalt:**
@@ -125,8 +125,9 @@ Die Lehrkraft möchte das weiterverfolgen, noch ohne Material. Die Satzklammer (
   - Markiert werden Hilfsverb und Partizip II, Präteritum-Verben werden unterstrichen. Keine Klammer-Bögen.
   - Das Thema „Gewicht machen“ bleibt in den Beispielen bewusst außen vor.
   - Puffer: Den Bericht können die Schüler als Hausaufgabe fertigstellen. Partner-Check und Reflexion sind dann der Einstieg der nächsten Stunde.
-- **Rückmeldung der Lehrkraft:** *(steht noch aus)*
-- **Hospitationsfeedback:** *(steht noch aus)*
+- **Rückmeldung der Lehrkraft (07.10.):** Die Klasse kam bis zum Präteritum. Das war für die Schüler etwas ungewohnt.
+- **Konsequenz:** In der nächsten Stunde wird das Präteritum noch einmal auf Schnipseln geübt, danach folgen Erklärung und Übung zum Plusquamperfekt. Der Schreibauftrag Ü11 „Mein erster Wettkampf“ verschiebt sich.
+- **Hospitationsfeedback:** –
 
 ## Hospitationsfeedback (gesammelt)
 
