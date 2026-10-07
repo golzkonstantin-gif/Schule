@@ -34,7 +34,7 @@
 
 ### Test Ständegesellschaft und Absolutismus (Entwurf)
 - **Material:** `Test_Staendegesellschaft_Absolutismus/` (Test mit 5 Aufgaben, 28 Punkte, 30 Minuten; Erwartungshorizont mit Notenschlüssel)
-- **Inhalt:** Absolutismus (Begriff, zwei Aussagen), drei Stände (Anzahl, Vorrecht, Pflicht), Mitbestimmung, fünf Säulen (nennen, eine erklären), „Im Absolutismus fühle ich mich …, weil …“.
+- **Inhalt:** Absolutismus (Begriff, zwei Aussagen), drei Stände (Anzahl, Vorrecht, Pflicht), Mitbestimmung, fünf Säulen (nennen, eine erklären), Stellungnahme („Im Absolutismus war es egal, in welchen Stand man geboren wurde“; ersetzt die redundante „Ich fühle mich“-Aufgabe), dazu Zusatzaufgabe („Der Staat bin ich“, 3 Zusatzpunkte).
 - **Rückmeldung der Lehrkraft:** *(steht noch aus)*
 - **Ergebnisse:** *(steht noch aus)*
 

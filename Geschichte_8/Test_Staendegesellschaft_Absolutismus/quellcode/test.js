@@ -41,7 +41,7 @@ function testDoc() {
   c.push(table([5400, 2400, 2406], [row([
     cell(p(t("Name:", { size: 22, color: MUTED }), { after: 0 }), { w: 5400, m: 160 }),
     cell(p(t("Datum:", { size: 22, color: MUTED }), { after: 0 }), { w: 2400, m: 160 }),
-    cell(p(t("Punkte:         / 28", { size: 22, color: MUTED }), { after: 0 }), { w: 2406, m: 160 }),
+    cell(p(t("Punkte:       / 28 (+3)", { size: 22, color: MUTED }), { after: 0 }), { w: 2406, m: 160 }),
   ])]));
   c.push(p(t("Arbeitszeit: 30 Minuten. Schreibe in ganzen Sätzen und verwende Fachbegriffe.", { size: 22, italics: true, color: MUTED }), { before: 80, after: 40 }));
 
@@ -75,10 +75,14 @@ function testDoc() {
   c.push(p([t("b) ", { bold: true }), t("Wähle eine Säule aus und erkläre, wie der König damit seine Macht sichert.")], { before: 100, after: 40 }), ...lines(5));
 
   // 5
-  c.push(aufgabe(5, "Im Absolutismus fühle ich mich …", 4));
-  c.push(p(t("Wähle einen Stand (Klerus, Adel oder Dritter Stand (Bauern und Bürger)) und beende den Satz. Gehe in deiner Begründung auf mindestens ein Vorrecht und eine Pflicht deines Standes ein."), { after: 60 }));
-  c.push(p([t("Ich wähle den Stand: ", { bold: true }), t("____________________________________")], { after: 80 }));
-  c.push(p(t("„Im Absolutismus fühle ich mich …", { italics: true }), { after: 20 }), ...lines(5));
+  c.push(aufgabe(5, "Stellung nehmen", 4));
+  c.push(p([t("Ein Mitschüler sagt: ", { }), t("„Im Absolutismus war es egal, in welchen Stand man geboren wurde.“", { italics: true })], { after: 40, keepNext: true }));
+  c.push(p(t("Nimm Stellung zu dieser Aussage und begründe mit mindestens zwei Argumenten."), { after: 60, keepNext: true }), ...lines(6));
+
+  // Zusatz
+  c.push(p([t("Zusatzaufgabe  ", { font: "Cambria", size: 28, bold: true, color: "C98A1E" }), t("(3 Zusatzpunkte)", { size: 22, color: MUTED })], { before: 240, after: 100, keepNext: true }));
+  c.push(p([t("Ludwig XIV. soll gesagt haben: "), t("„Der Staat bin ich.“", { italics: true })], { after: 40, keepNext: true }));
+  c.push(p(t("Erkläre den Satz mit Bezug auf den Absolutismus und zwei Säulen seiner Herrschaft."), { after: 60, keepNext: true }), ...lines(4));
 
   return new Document({ styles: { default: { document: { run: { font: "Calibri", size: 24 } } } }, sections: [{ properties: { page: { size: { width: 11906, height: 16838 }, margin: { top: 900, bottom: 800, left: 850, right: 850 } } }, footers: { default: footer("Geschichte 8 · Test Entwurf") }, children: c }] });
 }
@@ -91,7 +95,7 @@ function loesungDoc() {
   const bullet = (runs) => p([S("• "), ...[].concat(runs)], { after: 50, indent: { left: 240 } });
   c.push(p(t("ENTWURF · FÜR DIE LEHRKRAFT", { size: 18, bold: true, color: MUTED }), { after: 20 }));
   c.push(p(t("Erwartungshorizont zum Test", { font: "Cambria", size: 38, bold: true, color: NAVY }), { after: 120 }));
-  c.push(p(S("Gesamtpunktzahl: 28 Punkte. Formulierungen dürfen abweichen, entscheidend ist der Inhalt. Folgefehler werden nicht doppelt bestraft. Die Angaben stammen aus den Gruppenpuzzle-Texten (Stände, Säulen) und den Merksätzen der Wiederholungsstunde."), { after: 80 }));
+  c.push(p(S("Gesamtpunktzahl: 28 Punkte plus 3 Zusatzpunkte. Formulierungen dürfen abweichen, entscheidend ist der Inhalt. Folgefehler werden nicht doppelt bestraft. Die Angaben stammen aus den Gruppenpuzzle-Texten (Stände, Säulen) und den Merksätzen der Wiederholungsstunde."), { after: 80 }));
 
   c.push(aufgabe(1, "Absolutismus", 4));
   c.push(bullet([S("a) Herrschaftsform in Europa im 17. und 18. Jahrhundert, in der ein einzelner Monarch (König oder Fürst) uneingeschränkt (absolut) herrscht."), pt("2")]));
@@ -117,12 +121,22 @@ function loesungDoc() {
   c.push(bullet([S("b) Je nach gewählter Säule, 3 P: 1 P für ein zutreffendes Merkmal, 2 P für die Erklärung der Machtsicherung (Wirkung begründen). Beispiele:"), pt("3")]));
   SAEULEN.forEach(([h, b]) => c.push(p([S(h + ": ", { bold: true, size: 20 }), S(b, { size: 20, color: "333333" })], { after: 40, indent: { left: 600 } })));
 
-  c.push(aufgabe(5, "Im Absolutismus fühle ich mich …", 4));
-  c.push(bullet([S("Stand gewählt und passendes Gefühl formuliert."), pt("1")]));
-  c.push(bullet([S("Mindestens ein zutreffendes Vorrecht (oder „keine Vorrechte“ beim Dritten Stand) genannt."), pt("1")]));
-  c.push(bullet([S("Mindestens eine zutreffende Pflicht genannt."), pt("1")]));
-  c.push(bullet([S("Begründung ist schlüssig (Gefühl passt zu Vorrechten und Pflichten, mit „weil“ verbunden)."), pt("1")]));
-  c.push(p(S("Beispiele: „… als Adeliger privilegiert, weil ich keine Steuern zahlen muss und allein jagen darf. Dafür muss ich mich ehrenhaft verhalten und Verwaltungsaufgaben übernehmen.“ · „… als Bauer ausgenutzt, weil ich Steuern, hohe Abgaben und Pachtgebühren zahlen muss und von der Mitbestimmung ausgeschlossen bin.“", { color: MUTED }), { before: 40, after: 100 }));
+  c.push(aufgabe(5, "Stellung nehmen", 4));
+  c.push(bullet([S("Klare Position: Die Aussage stimmt nicht, denn der Stand entschied über Rechte, Pflichten und Lebenschancen."), pt("1")]));
+  c.push(bullet([S("Zwei zutreffende Argumente (je 1 P), zum Beispiel:"), pt("2")]));
+  [
+    "Vorrechte: Klerus und Adel zahlten keine Steuern (Adel zusätzlich alleiniges Jagdrecht und ranghohe Posten in der Armee), der Dritte Stand (Bauern und Bürger) zahlte Steuern, hohe Abgaben und Pachtgebühren.",
+    "Mitbestimmung: Der Dritte Stand war von der politischen Mitbestimmung ausgeschlossen, der Adel bestimmte das politische Geschehen mit.",
+    "Geburt: Man wurde in den Stand hineingeboren, für den Dritten Stand gab es kaum Möglichkeit aufzusteigen. In den Klerus kam man nur durch Berufung der Kirche.",
+    "Bildung: Klerus und Adel waren meist sehr gebildet, vom Dritten Stand konnten nur wenige lesen und schreiben.",
+    "Anzahl: Wenige Privilegierte (ca. 650 000) standen ca. 20 000 000 Menschen gegenüber, die die Last trugen.",
+  ].forEach((x) => c.push(p(S(x, { size: 20, color: "333333" }), { after: 30, indent: { left: 600 } })));
+  c.push(bullet([S("Schlüssige Darstellung mit Fachbegriffen (z. B. Vorrechte, Steuern, Mitbestimmung) und „weil“-Verknüpfung."), pt("1")]));
+
+  c.push(p([t("Zusatzaufgabe  ", { font: "Cambria", size: 28, bold: true, color: "C98A1E" }), t("(3 Zusatzpunkte)", { size: 22, color: MUTED })], { before: 240, after: 100, keepNext: true }));
+  c.push(bullet([S("Der König vereint alle Macht bei sich, niemand kann ihn stoppen: absolute Herrschaft („Der Staat bin ich“ = Staat und König sind eins)."), pt("1")]));
+  c.push(bullet([S("Zwei Säulen zutreffend einbezogen und erklärt, z. B. Verwaltung und Justiz (Beamte handeln in seinem Namen, er ist oberster Richter) und Heer (stehendes Heer setzt die Macht durch)."), pt("2 (je 1)")]));
+  c.push(p(S("Die Zusatzpunkte werden zur Gesamtpunktzahl addiert. Die Höchstnote ist weiterhin ab 26 Punkten erreicht (auch mit Zusatzpunkten ausgleichbar). Maximal erreichbar: 31 Punkte.", { color: MUTED }), { before: 40, after: 100 }));
 
   c.push(p(t("Notenschlüssel (28 Punkte)", { font: "Cambria", size: 26, bold: true, color: NAVY }), { before: 200, after: 80, keepNext: true }));
   const nw = [1500, 2600, 2600];
