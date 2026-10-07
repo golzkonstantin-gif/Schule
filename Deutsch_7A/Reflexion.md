@@ -129,6 +129,20 @@ Die Lehrkraft möchte das weiterverfolgen, noch ohne Material. Die Satzklammer (
 - **Konsequenz:** In der nächsten Stunde wird das Präteritum noch einmal auf Schnipseln geübt, danach folgen Erklärung und Übung zum Plusquamperfekt. Der Schreibauftrag Ü11 „Mein erster Wettkampf“ verschiebt sich.
 - **Hospitationsfeedback:** –
 
+### Einzelstunde „Präteritum üben, Plusquamperfekt“ (geplant, 45 Min.)
+- **Material:** `Praeteritum_ueben_Plusquamperfekt/` (Tafelskript, Schnipsel-Vorlage: Seite 1 mit Ü9a und Ü9b für 2 Schüler pro A4, Seite 2 mit Ü10 für 4 Schüler pro A4)
+- **Bezug zur letzten Stunde:** Das Präteritum war ungewohnt, deshalb zuerst Übung auf Schnipseln (Wunsch der Lehrkraft).
+- **Inhalt:**
+  - Merksatz 8 mündlich reaktivieren.
+  - Ü9a: Präteritum der Sportverben.
+  - Ü9b: Lückentext „Bericht für die Vereinszeitung“.
+  - Plusquamperfekt mit Zeitstrahl, *haben* und *sein* im Präteritum ins Heft, Merksatz 9.
+  - Ü10: „Was war vorher?“
+  - Optional: „Welche Zeitform?“
+- **Verschoben:** Ü11 „Mein erster Wettkampf“ (der Schreibrahmen ist gedruckt), Partner-Check und Reflexion folgen in der nächsten Stunde.
+- **Rückmeldung der Lehrkraft:** *(steht noch aus)*
+- **Hospitationsfeedback:** *(steht noch aus)*
+
 ## Hospitationsfeedback (gesammelt)
 
 *(noch keine Einträge)*
