@@ -25,6 +25,9 @@ Vorbild: Stunde „Bürgeramt Athen“ (`Geschichte_11/Stunde_Buergeramt_Athen/`
 - **Sparsam drucken:** möglichst 2 × A5 auf A4 quer; Ergebnisse im Heft.
 - **Sach- und Werturteil** regelmäßig üben; beim Werturteil den Maßstab nennen lassen (z. B. Gleichheit, Leistung, Schutz der Schwachen, gleiche Regeln).
 - **Inhaltlich nah am Lehrbuch** bleiben; keine Inhalte voraussetzen, die die Klasse noch nicht hatte.
+- **Arbeitsgrundlage an die Wand:** Das Material, mit dem gearbeitet wird (z. B. Schaubild aus dem Lehrbuch), direkt nach der Auftragsfolie groß projizieren, damit die Schüler das Buch nicht brauchen. Beim stummen Schaubild wird die Folie dann einfach weitergeschaltet.
+- **Fachbegriffe vor der Anwendung klären:** Bevor ein Begriff in einem Auftrag benutzt wird (z. B. „timokratisch“), eine eigene Begriffsfolie davorsetzen: schülerfreundliche Definition, Wortherkunft, kurzer Merksatz, große Schrift (ca. 27 pt).
+- **Foliennummern nicht als festen Text** in die Fußzeile schreiben, sondern automatisch nummerieren, weil die Lehrkraft Folien einfügt.
 - Zu jeder Stunde: **Folien (pptx)**, **Druckmaterial (docx)** und eine kurze **Handreichung** mit Druckliste, Verlauf, Foliennummern und Erwartungshorizont.
 
 ## Gestaltung der Materialien
