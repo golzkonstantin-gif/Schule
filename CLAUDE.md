@@ -34,6 +34,7 @@ Dieses Repo enthält Unterrichtsmaterial (Deutsch 7A, Geschichte 8). Die Vorlieb
 - **Wahr-oder-falsch-Einstieg einzeln nacheinander:** Aussage, Unterrichtsgespräch, dann die Antwort mit Begründung auf der Folie (je eine Folie).
 - **Säulen-Einstieg:** erst fragen, wie ein König ein Land regieren kann, dann „Ihr erinnert euch: fünf Säulen. Welche?“, dann Merksatz und Lückentext.
 - **Weniger Text auf den Folien** (Zukunftsregel der Lehrkraft): pro Folie nur das Nötigste, Erklärungen mündlich, Schrift mindestens 24 Punkt.
+- **Tests:** höchstens 2 Seiten, Stoff nicht aus dem Kopf abfragen, der zu schwer ist (z. B. Zahlen der Stände vorgeben), viele Wahr-oder-falsch-Aussagen (bei „falsch“ begründen), Sätze als Buchstaben zuordnen, Zusatzaufgabe nur 1 Punkt als „Nenne“-Aufgabe.
 - **Karikatur** als Impuls bei „Im Absolutismus fühle ich mich …“ (gibt Hinweise auf Vorrechte und Lasten).
 
 ## Gestaltung
