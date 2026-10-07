@@ -26,7 +26,7 @@ Vorbild: Stunde „Bürgeramt Athen“ (`Geschichte_11/Stunde_Buergeramt_Athen/`
 - **Rolle der Lehrkraft in der Arbeitsphase:** umhergehen, zuhören, beobachten, bei Bedarf korrigieren und unterstützen – nicht vorne erklären. Die Arbeitsphase muss so selbsttragend sein, dass das möglich ist. Dafür in die Handreichung: **typische Fehler/Stolpersteine je Fall** und **gestufte Hilfsimpulse** („Welche Klasse ist er? Schau im Schaubild nach: Wohin führt der Pfeil?“).
 - **Entscheider-Perspektive ist erwünscht:** Die Schüler entscheiden als Fachleute über Fälle (Sachbearbeiter, Gutachter, Richter: genehmigt/abgelehnt, weil …). Das hat Spaß gemacht und ist kein „Rollenspiel“ im abgelehnten Sinn (kein Theaterspielen, kein Hineinversetzen in historische Personen).
 
-- **Stundentypen Geschichte 11:** **Einzelstunde (45 Min.) = Inhalt** (Puzzle-Prinzip, kein Werturteil nötig). **Doppelstunde = Methode**, v. a. **Quellenanalyse** (am Inhalt der vorherigen Einzelstunde).
+- **Stundentypen Geschichte 11:** **Einzelstunde (45 Min.) = Inhalt** (Puzzle-Prinzip, kein Werturteil nötig). **Doppelstunde = Methode:** Sie greift den Inhalt der Einzelstunde auf und vertieft ihn **quellengestützt** (Quellenanalyse); kein neuer Stoff, sondern derselbe Inhalt aus den Quellen heraus.
 - **Klausur Geschichte 11 am 25.11.:** Themenblock Tyrannis des Peisistratos – Kleisthenes – Perikles.
 
 ## Weitere Vorlieben
