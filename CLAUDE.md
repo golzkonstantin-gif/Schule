@@ -11,6 +11,8 @@ Die folgenden Punkte gelten für jede neue Stundenplanung.
 4. **Vorstellen:** Jede Gruppe stellt ihr Ergebnis vor (z. B. an der Tafel eintragen und in einem Satz begründen).
 5. **Ins Ganze einfügen:** Jedes Ergebnis ist ein Puzzleteil eines Gesamtbilds (Tabelle, Schaubild). Erst alle Teile zusammen ergeben das vollständige Ergebnis – **das ist die Sicherung**.
 6. **Individuelle Überprüfung:** Danach Buch und Hefter zu, Abruf aus dem Gedächtnis (z. B. stummes Schaubild), anschließend Selbstkontrolle.
+   - **Stummes Schaubild bewährt:** analog zum Buch-Schaubild, aber anders aufgebaut – die Schüler müssen überlegen, wie es zu lösen ist (Transfer statt Abschreiben). Ankreuzen und Pfeile statt Sätze: spart unnötige Schreibarbeit.
+   - Die Lehrkraft zeichnet es auch an die Tafel und lässt es **gemeinsam ausfüllen**, dabei werden Fragen geklärt. Deshalb das stumme Schaubild so einfach halten, dass es sich in wenigen Minuten an die Tafel zeichnen lässt, und in der Handreichung eine **Tafelskizze** mitliefern.
 
 Vorbild: Stunde „Bürgeramt Athen“ (`Geschichte_11/Stunde_Buergeramt_Athen/`).
 
