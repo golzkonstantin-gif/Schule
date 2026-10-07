@@ -14,11 +14,20 @@ Die folgenden Punkte gelten für jede neue Stundenplanung.
 
 Vorbild: Stunde „Bürgeramt Athen“ (`Geschichte_11/Stunde_Buergeramt_Athen/`).
 
+**Warum es wirkt (Rückmeldung nach „Bürgeramt Athen“):** Die Schüler haben das Schaubild durchdrungen statt es nur zu verschriftlichen, konnten Sachverhalte flexibel anwenden und demokratische und timokratische Merkmale einordnen. Sie selbst fanden es deutlich besser als „Schaubild abschreiben“. **Anwenden statt abschreiben** ist der Maßstab für alle Stunden.
+
+## Feste Planungsschritte
+
+- **Begriffs-Check bei jeder Planung:** „Kennen die Schüler die Begriffe und Konzepte, die der Auftrag voraussetzt?“ Alle nötigen Fachbegriffe (z. B. Timokratie, Demokratie) vorher auflisten; jeder noch nicht gesicherte Begriff bekommt eine Begriffsfolie **vor** der Aufgabe, die ihn braucht. In der Handreichung die vorausgesetzten Begriffe nennen.
+- **Vormachen einplanen:** Bevor die Gruppen arbeiten, macht die Lehrkraft einen Fall vor der Klasse vor – laut denkend, Schritt für Schritt (z. B. Karte lesen → im Schaubild nachsehen → entscheiden → Begründungssatz). Die Schüler sollen sehen, *wie* man ein Problem löst. Dafür eine eigene Folie „So geht's – ein Beispiel“ und den Fall in der Handreichung als Musterlösung.
+- **Anzahl der Fälle an die Klasse anpassen:** Zusammenarbeit meist in **Paaren** (8 Paare). Einen Fall mehr als Paare planen – der übrige Fall ist der Vormach-Fall vor der Klasse.
+- **Entscheider-Perspektive ist erwünscht:** Die Schüler entscheiden als Fachleute über Fälle (Sachbearbeiter, Gutachter, Richter: genehmigt/abgelehnt, weil …). Das hat Spaß gemacht und ist kein „Rollenspiel“ im abgelehnten Sinn (kein Theaterspielen, kein Hineinversetzen in historische Personen).
+
 ## Weitere Vorlieben
 
 - **Wenig Unterrichtsgespräch.** Aktivierung über Arbeitsaufträge, Kontrolle über Lösungsfolien, Lösungskarten oder die Schüler selbst – nicht über lange Plenumsphasen.
 - **Aha-Moment einplanen:** Schüler legen sich vorher fest (Abstimmung, Vermutung), die Auflösung überrascht. Gegenwartsbezüge nur, wenn sie wirklich zum Thema passen.
-- **Keine Rollenspiele**, keine „albernen“ Formate (z. B. Zeugnisse für historische Personen).
+- **Keine Rollenspiele** (szenisch, historische Personen spielen), keine „albernen“ Formate (z. B. Zeugnisse für historische Personen).
 - **Konkrete Arbeitsaufträge** auf den Folien: nummerierte Schritte, Satzbausteine, Zeitangabe.
 - **Nach jeder Aufgabe eine Lösungsfolie.**
 - **Lösungen nicht auf Schülerkarten** (sonst wird umgedreht); Lösungskarten bleiben am Pult und gibt es gegen Vorzeigen der schriftlichen Antwort.
