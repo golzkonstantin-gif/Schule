@@ -34,7 +34,7 @@
 
 ### Test Ständegesellschaft und Absolutismus (Entwurf)
 - **Material:** `Test_Staendegesellschaft_Absolutismus/` (Test mit 5 Aufgaben auf 2 Seiten, 32 Punkte + 1 Zusatzpunkt, 35 Minuten; Erwartungshorizont mit Notenschlüssel)
-- **Inhalt:** Absolutismus (Begriff 3 P), drei Stände (Anzahl, Vorrechte und Pflichten als Buchstaben zuordnen, Zahlen vorgegeben), Mitbestimmung (2 P), fünf Säulen (nennen, eine erklären), Wahr oder falsch (8 Aussagen, bei falsch begründen, 12 P), Zusatzaufgabe „Nenne“ (Colbert, 1 P).
+- **Inhalt:** Absolutismus (Begriff 3 P), drei Stände (Anzahl, Vorrechte und Pflichten als Buchstaben zuordnen, Zahlen vorgegeben), Mitbestimmung (2 P), fünf Säulen (nennen, eine erklären), Wahr oder falsch (8 Aussagen, bei falsch begründen, 12 P), Zusatzaufgabe „Wirtschaftssystem erklären“ (Merkantilismus, 1 P).
 - **Planungsentscheidungen:** Anzahl der Stände nicht aus dem Kopf (zu schwer), keine Distraktoren bei der Zuordnung, Stellungnahme gestrichen, Test höchstens 2 Seiten.
 - **Rückmeldung der Lehrkraft:** *(steht noch aus)*
 - **Ergebnisse:** *(steht noch aus)*

@@ -53,7 +53,7 @@ const WF = [
   ["Ludwig XIV. erlaubte den Protestanten die freie Religionsausübung.", false, "1685 beendete er die religiöse Toleranz: Wie nur einen König sollte es auch nur einen Glauben geben (Gottesgnadentum)."],
   ["Der Dritte Stand (Bauern und Bürger) musste hohe Pachtgebühren an die Grundherren zahlen.", true, ""],
   ["Der Adel musste hohe Steuern an den König zahlen.", false, "Der Adel war steuerfrei (Vorrecht). Steuern und hohe Abgaben zahlte der Dritte Stand (Bauern und Bürger)."],
-  ["Beim Merkantilismus sollten mehr Waren ins Ausland verkauft als von dort eingeführt werden.", true, ""],
+  ["Ranghohe Posten in der Armee erhielten ausschließlich Adlige.", true, ""],
   ["Die Beamten Ludwigs XIV. waren dem Adel zum Gehorsam verpflichtet.", false, "Die Beamten handelten im Namen des Königs und waren ihm zum Gehorsam verpflichtet."],
 ];
 const checkbox = (w) => cell(p(t("☐", { size: 28 }), { after: 0, align: AlignmentType.CENTER }), { w });
@@ -114,7 +114,7 @@ function testDoc() {
 
   // Zusatz
   c.push(p([t("Zusatzaufgabe  ", { font: "Cambria", size: 28, bold: true, color: "C98A1E" }), t("(1 Zusatzpunkt)", { size: 22, color: MUTED })], { before: 240, after: 100, keepNext: true }));
-  c.push(p(t("Nenne den Finanzminister, der in Frankreich den Merkantilismus einführte."), { after: 60, keepNext: true }), ...lines(1));
+  c.push(p(t("Erkläre das Wirtschaftssystem, das Finanzminister Colbert in Frankreich einführte (Merkantilismus)."), { after: 60, keepNext: true }), ...lines(2));
 
   return new Document({ styles: { default: { document: { run: { font: "Calibri", size: 24 } } } }, sections: [{ properties: { page: { size: { width: 11906, height: 16838 }, margin: { top: 700, bottom: 650, left: 850, right: 850 } } }, footers: { default: footer("Geschichte 8 · Test Entwurf") }, children: c }] });
 }
@@ -158,7 +158,8 @@ function loesungDoc() {
   WF.forEach(([a, w, b], i) => c.push(bullet([S(`${i + 1}  ${a}  `, { size: 21 }), t(w ? "→ wahr" : "→ falsch", { bold: true, color: w ? "2E9E6B" : RED, size: 21 }), pt(w ? "1" : "2")]), ...(w ? [] : [sub("Begründung: " + b)])));
 
   c.push(p([t("Zusatzaufgabe  ", { font: "Cambria", size: 28, bold: true, color: "C98A1E" }), t("(1 Zusatzpunkt)", { size: 22, color: MUTED })], { before: 240, after: 100, keepNext: true }));
-  c.push(bullet([S("Colbert (Finanzminister Ludwigs XIV., führte den Merkantilismus ein)."), pt("1")]));
+  c.push(bullet([S("Merkantilismus: Der Staat lenkt die Wirtschaft; es sollen mehr fertige Waren (aus Manufakturen) teuer ins Ausland verkauft als billig von dort eingeführt werden. Mindestens dieser Kerngedanke (Staat lenkt, mehr verkaufen als einführen)."), pt("1")]));
+  c.push(sub("Weitere Elemente (nicht erforderlich): hohe Zölle auf ausländische Waren, Förderung von Manufakturen, Kolonien als Rohstoffquellen und Absatzmärkte; Ziel: Geld für Hof, Beamte und Heer."));
   c.push(p(S("Der Zusatzpunkt wird zur Gesamtpunktzahl addiert. Maximal erreichbar: 31 Punkte.", { color: MUTED }), { before: 40, after: 100 }));
 
   c.push(p(t("Notenschlüssel (32 Punkte)", { font: "Cambria", size: 26, bold: true, color: NAVY }), { before: 200, after: 80, keepNext: true }));
