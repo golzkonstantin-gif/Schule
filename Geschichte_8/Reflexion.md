@@ -33,8 +33,8 @@
 - **Hospitationsfeedback:** *(steht noch aus)*
 
 ### Test Ständegesellschaft und Absolutismus (Entwurf)
-- **Material:** `Test_Staendegesellschaft_Absolutismus/` (Test mit 5 Aufgaben, 28 Punkte, 30 Minuten; Erwartungshorizont mit Notenschlüssel)
-- **Inhalt:** Absolutismus (Begriff, zwei Aussagen), drei Stände (Anzahl, Vorrecht, Pflicht), Mitbestimmung, fünf Säulen (nennen, eine erklären), Stellungnahme („Im Absolutismus war es egal, in welchen Stand man geboren wurde“; ersetzt die redundante „Ich fühle mich“-Aufgabe), dazu Zusatzaufgabe („Der Staat bin ich“, 3 Zusatzpunkte).
+- **Material:** `Test_Staendegesellschaft_Absolutismus/` (Test mit 6 Aufgaben, 30 Punkte + 1 Zusatzpunkt, 35 Minuten; Erwartungshorizont mit Notenschlüssel)
+- **Inhalt:** Absolutismus (Begriff 3 P), drei Stände (Anzahl schreiben, Sätze als Buchstaben den Kästchen Vorrechte/Pflichten zuordnen), Mitbestimmung (2 P), fünf Säulen (nennen, eine erklären), Wahr oder falsch (bei falsch begründen), Stellungnahme („Im Absolutismus war es egal, in welchen Stand man geboren wurde“), Zusatzaufgabe „Nenne“ (Colbert, 1 P).
 - **Rückmeldung der Lehrkraft:** *(steht noch aus)*
 - **Ergebnisse:** *(steht noch aus)*
 
