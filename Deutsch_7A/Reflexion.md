@@ -145,6 +145,25 @@ Die Lehrkraft möchte das weiterverfolgen, noch ohne Material. Die Satzklammer (
 - **Konsequenz:** Tafel-Tabellen nur noch dort, wo sie wirklich nötig sind, und dann kurz halten. Sonst Abwechslung bei den Methoden.
 - **Hospitationsfeedback:** –
 
+### Einzelstunde „Das Plusquamperfekt“ (geplant, 45 Min.)
+- **Material:** `Plusquamperfekt/`
+  - Tafelskript.
+  - Druckvorlage: *hatte/war*-Schnipsel (8 pro A4), Ü10 (4 pro A4), 6 Satzstreifen für die Tafel.
+  - Schreibrahmen Ü11 aus `Praeteritum_Plusquamperfekt/`.
+- **Bezug zur letzten Stunde:** Das Präteritum wurde geübt. Die Schüler waren genervt von Tabellen an der Tafel, deshalb heute keine Tafel-Tabelle (mit der Lehrkraft besprochen):
+  - *hatte* und *war* kommen als fertiger Schnipsel.
+  - Das Plusquamperfekt wird mit Satzstreifen am Zeitstrahl entdeckt.
+  - Bei der Kreide-Kette schreibt jeder ganze Sätze.
+- **Inhalt:**
+  - Fehler finden in drei Präteritum-Sätzen.
+  - Satzstreifen zu einem Wettkampftag ordnen: Die *hatte*-Sätze gehören ganz nach links.
+  - *hatte/war*-Schnipsel einkleben.
+  - Merksatz 9.
+  - Ü10.
+  - Ü11 „Mein erster Wettkampf“ beginnen, der Rest ist Hausaufgabe.
+- **Rückmeldung der Lehrkraft:** *(steht noch aus)*
+- **Hospitationsfeedback:** *(steht noch aus)*
+
 ## Hospitationsfeedback (gesammelt)
 
 *(noch keine Einträge)*
