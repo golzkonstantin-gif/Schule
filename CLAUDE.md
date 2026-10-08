@@ -28,6 +28,7 @@ Dieses Repo enthält Unterrichtsmaterial (Deutsch). Die Lehrkraft plant hier gem
   - Übungen immer im gleichen Format: Nummer + Titel, nummerierte Arbeitsschritte mit Verb am Anfang, Zeit, Arbeitsform, „Fertig? Stift hinlegen“.
 - **Bewährt: „Kreide-Kette“.** Die Schüler kommen nacheinander an die Tafel, lösen eine Aufgabe und geben die Kreide an den Nächsten weiter. Das sorgt für eine konzentrierte Atmosphäre und soll bei Tafelübungen standardmäßig eingeplant werden. Besonders bewährt: Die übrigen Schüler schreiben dabei im Heft mit, so sind alle beschäftigt.
 - **Zeit realistisch planen.** Kreide-Kette und Mitschreiben brauchen mehr Zeit als gedacht. Die ersten beiden Stunden wurden nicht ganz geschafft. Lieber weniger Inhalt pro Stunde und eine klar markierte optionale Phase am Ende.
+- **Fehlertexte statt Diktat (Deutsch 11, Rechtschreibung und Zeichensetzung):** Die Klasse korrigiert einen Text mit typischen Fehlern, die Lösung entsteht an der Tafel (Kreide-Kette, alle prüfen mit, Verbessern in Grün). Das spart Zeit gegenüber dem Diktat. Fehler aus echten Schülerarbeiten nachbauen, anonymisiert.
 - **Zu Beginn jeder Stunde das Vorwissen der letzten Stunde reaktivieren**, mit kurzen Übungen an der Tafel.
 - **Gleicher Ablauf je Phase:** gemeinsam entdecken → Merksatz abschreiben → allein üben → an der Tafel vergleichen → mit Grün verbessern.
 - **Merksätze** immer mit „Wofür brauche ich das?“, dazu ein Erkennungstrick/Test.
@@ -55,3 +56,4 @@ Keine Klarnamen von Schülerinnen, Schülern oder Kolleginnen und Kollegen ins R
 
 - `Deutsch_7A/` – Material der Klasse 7A, ein Unterordner pro Stunde/Einheit
 - `Deutsch_7A/Reflexion.md` – Lernstand, Stundenlog, Hospitationsfeedback, offene Baustellen
+- `Deutsch_11/` – Material der Klasse 11 (Deutsch), `Deutsch_11/Reflexion.md` mit Lernstand und offenen Baustellen
