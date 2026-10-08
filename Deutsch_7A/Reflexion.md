@@ -134,6 +134,7 @@ Die Lehrkraft möchte das weiterverfolgen, noch ohne Material. Die Satzklammer (
 - **Bezug zur letzten Stunde:** Das Präteritum war ungewohnt, deshalb zuerst Übung auf Schnipseln (Wunsch der Lehrkraft).
 - **Inhalt:**
   - Merksatz 8 mündlich reaktivieren.
+  - Präteritum konjugieren (Wunsch der Lehrkraft): *kämpfen* (regelmäßig) und *werfen* (unregelmäßig) per Kreide-Kette ins Heft, Endungen einkreisen. Erkenntnis: regelmäßig heißt Stamm + -te + Endung, unregelmäßig heißt neuer Stamm + Endung. Bei *ich* und *er/sie/es* gibt es keine Personalendung.
   - Ü9a: Präteritum der Sportverben.
   - Ü9b: Lückentext „Bericht für die Vereinszeitung“.
   - Plusquamperfekt mit Zeitstrahl, *haben* und *sein* im Präteritum ins Heft, Merksatz 9.

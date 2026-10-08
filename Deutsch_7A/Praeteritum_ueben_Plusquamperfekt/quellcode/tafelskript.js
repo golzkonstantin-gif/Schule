@@ -171,17 +171,19 @@ doc.push(p([S("Markieren wie bisher: ", { bold: true }), t("Hilfsverb rot", { bo
 doc.push(h3("Ablauf"));
 doc.push(grid([900, 3500, 5806], ["Zeit", "Phase", "Kern"], [
   ["3′", "0 Reaktivierung", "Merksatz 8 mündlich: Was ist besonders am Präteritum?"],
-  ["10′", "1 Ü9a Präteritum der Sportverben", "Schnipsel eintragen, Vergleich per Kreide-Kette"],
-  ["10′", "2 Ü9b Bericht für die Vereinszeitung", "Lückentext im Präteritum, Vergleich per Kreide-Kette"],
-  ["12′", "3 Das Plusquamperfekt", "Zeitstrahl, haben/sein im Präteritum (Heft), Merksatz 9"],
-  ["8′", "4 Ü10 Was war vorher?", "Schnipsel eintragen, Vergleich per Kreide-Kette"],
-  ["(2′)", "5 optional", "Welche Zeitform? – drei Sätze mündlich"],
+  ["6′", "1 Präteritum konjugieren", "kämpfen (regelmäßig) und werfen (unregelmäßig) per Kreide-Kette ins Heft, Endungen markieren"],
+  ["8′", "2 Ü9a Präteritum der Sportverben", "Schnipsel eintragen, Vergleich per Kreide-Kette"],
+  ["8′", "3 Ü9b Bericht für die Vereinszeitung", "Lückentext im Präteritum, Vergleich per Kreide-Kette"],
+  ["12′", "4 Das Plusquamperfekt", "Zeitstrahl, haben/sein im Präteritum (Heft), Merksatz 9"],
+  ["8′", "5 Ü10 Was war vorher?", "Schnipsel eintragen, Vergleich per Kreide-Kette"],
+  ["(2′)", "6 optional", "Welche Zeitform? – drei Sätze mündlich"],
 ], { bold: [true, true, false], colors: [C.hv, NAVY, null], h: 360 }));
-doc.push(p([S("Puffer: ", { bold: true, color: C.hv }), S("Wird es knapp, Ü10 nur bis Nr. 3 vergleichen und den Rest als Hausaufgabe geben. Phase 3 (Merksatz 9) darf nicht wegfallen.")], { before: 80, after: 60 }));
+doc.push(p([S("Puffer: ", { bold: true, color: C.hv }), S("Die 45 Minuten sind voll verplant. Wird es knapp, Ü10 nur bis Nr. 3 vergleichen und den Rest als Hausaufgabe geben. Phase 3 (Merksatz 9) darf nicht wegfallen.")], { before: 80, after: 60 }));
 
 doc.push(h3("So sieht das Heft am Ende aus"));
 doc.push(table([2300, 7906], [
   ["Überschrift", "Präteritum üben, Plusquamperfekt · Datum rechts"],
+  ["Tabelle", "Präteritum konjugieren: kämpfen | werfen, Endungen markiert"],
   ["Ü9a", "Schnipsel eingeklebt: Präteritum der Sportverben"],
   ["Ü9b", "Schnipsel eingeklebt: Bericht für die Vereinszeitung"],
   ["Tabelle", "haben und sein im Präteritum (ich hatte, ich war …)"],
@@ -197,8 +199,32 @@ doc.push(...steps([
   ["gemeinsam", { say: "Meldet euch. Ihr schreibt nichts auf. Was ist besonders am Präteritum? Wo benutzt man es?", do: ["Erwartung (Merksatz 8): nur ein Verb, kein Hilfsverb; regelmäßig mit -te, unregelmäßig mit verändertem Stamm; man benutzt es schriftlich, z. B. in Berichten.", "Heft auf, Datum, Überschrift: Präteritum üben, Plusquamperfekt."] }],
 ]));
 
-// ---------- Phase 1 ----------
-doc.push(phase("1", "Ü9a Präteritum der Sportverben", 10));
+// ---------- Phase 1: konjugieren ----------
+// Stamm normal, Endung fett + unterstrichen (an der Tafel: Endung einkreisen)
+const st = (x) => N(x, { size: 21 });
+const en = (x) => t(x, { bold: true, u: true, font: "Cambria", size: 21, color: NAVY });
+const KJ = [["ich", ["kämpf", "te"], ["warf", ""]], ["du", ["kämpf", "test"], ["warf", "st"]], ["er/sie/es", ["kämpf", "te"], ["warf", ""]], ["wir", ["kämpf", "ten"], ["warf", "en"]], ["ihr", ["kämpf", "tet"], ["warf", "t"]], ["sie/Sie", ["kämpf", "ten"], ["warf", "en"]]];
+doc.push(phase("1", "Präteritum konjugieren: regelmäßig und unregelmäßig", 6));
+doc.push(...steps([
+  ["tafel", { say: "Kreide-Kette: Wir konjugieren zwei Sportverben im Präteritum – kämpfen und werfen. Wer die Kreide hat, trägt eine Form ein und kreist die Endung ein. Alle anderen schreiben die Tabelle ins Heft und markieren mit.", board: board("Mitte · Präteritum konjugieren", [
+    table([1500, 2400, 2400], [
+      row([cell(p(N(""), { after: 0 }), { w: 1500, borders: allBorders(solid("9AA59C", 4)) }), cell(p([N("kämpfen", { bold: true }), t("  regelmäßig", { size: 16, italics: true, color: MUTED })], { after: 0, align: AlignmentType.CENTER }), { w: 2400, borders: allBorders(solid("9AA59C", 4)) }), cell(p([N("werfen", { bold: true }), t("  unregelmäßig", { size: 16, italics: true, color: MUTED })], { after: 0, align: AlignmentType.CENTER }), { w: 2400, borders: allBorders(solid("9AA59C", 4)) })]),
+      ...KJ.map(([ps, a, b]) => row([cell(p(N(ps, { color: MUTED }), { after: 0 }), { w: 1500, borders: allBorders(solid("9AA59C", 4)), m: 15 }), cell(p([st(a[0]), en(a[1])], { after: 0, align: AlignmentType.CENTER }), { w: 2400, borders: allBorders(solid("9AA59C", 4)), m: 15 }), cell(p(b[1] ? [st(b[0]), en(b[1])] : [st(b[0]), t("  –", { size: 18, color: MUTED })], { after: 0, align: AlignmentType.CENTER }), { w: 2400, borders: allBorders(solid("9AA59C", 4)), m: 15 })])),
+    ]),
+    p(t(""), { after: 40 }),
+    p([S("regelmäßig: ", { bold: true }), S("Stamm bleibt + "), S("-te", { bold: true }), S(" + Endung   ·   "), S("unregelmäßig: ", { bold: true }), S("neuer Stamm + Endung   ·   "), S("ich und er/sie/es: keine Personalendung", { bold: true })], { after: 0 }),
+  ]),
+    sol: "kämpfte · kämpftest · kämpfte · kämpften · kämpftet · kämpften | warf · warfst · warf · warfen · warft · warfen",
+    do: [
+      "Die Personen, die beiden Infinitive und „regelmäßig / unregelmäßig“ vorher anschreiben – die Formen trägt die Kreide-Kette ein.",
+      "Endungen einkreisen lassen – mit Kreide/Bleistift, nicht in Rot (Rot bleibt für Hilfsverben). Bei werfen für ich und er/sie/es einen Strich setzen: Hier gibt es keine Endung.",
+      "Gemeinsam vergleichen (mündlich): Was ist gleich, was ist anders? → Regelmäßige Verben behalten den Stamm und bekommen -te; unregelmäßige ändern den Stamm (werfen → warf) und bekommen kein -te. Die Personalendungen danach (-st, -en, -t) sind bei beiden gleich.",
+      "Die Merkzeile unter der Tabelle mit abschreiben lassen.",
+    ] }],
+]));
+
+// ---------- Phase 2 ----------
+doc.push(phase("2", "Ü9a Präteritum der Sportverben", 8));
 doc.push(...steps([
   ["luecken", { say: "Jetzt arbeitet ihr allein. Ihr bekommt den Schnipsel Ü9a. Klebt ihn ein, tragt die Präteritumformen ein und markiert die unregelmäßigen mit einem Stern. Fünf Minuten.", board: auftrag("Ü9a Präteritum der Sportverben", ["Klebe den Schnipsel Ü9a ins Heft.", "Trage die Präteritumform ein (ich …).", "Markiere unregelmäßige Verben mit einem Stern."], [p(S("werfen, fallen, greifen, halten, fangen, treffen, laufen, heben, reißen, stoßen, gewinnen, verlieren, kämpfen, trainieren", { size: 20 }), { after: 0 })], "5 Minuten · allein · leise"),
     sol: "warf* · fiel* · griff* · hielt* · fing* · traf* · lief* · hob* · riss* · stieß* · gewann* · verlor* · kämpfte · trainierte" }],
@@ -206,7 +232,7 @@ doc.push(...steps([
 ]));
 
 // ---------- Phase 2 ----------
-doc.push(phase("2", "Ü9b Bericht für die Vereinszeitung", 10));
+doc.push(phase("3", "Ü9b Bericht für die Vereinszeitung", 8));
 doc.push(...steps([
   ["luecken", { say: "Jetzt arbeitet ihr allein: Schnipsel Ü9b. Das ist ein Bericht für die Vereinszeitung. Setzt die Verben im Präteritum ein. Fünf Minuten.", board: auftrag("Ü9b Bericht für die Vereinszeitung", ["Klebe den Schnipsel Ü9b ins Heft.", "Setze das Verb in Klammern im Präteritum ein.", "Unterstreiche alle Präteritum-Verben."], [p(S("Der Text steht auf dem Schnipsel.", { size: 20, italics: true }), { after: 0 })], "5 Minuten · allein · leise"),
     sol: "fuhr · kämpften · warf · spielten · traf · waren · hob · gewann" }],
@@ -214,7 +240,7 @@ doc.push(...steps([
 ]));
 
 // ---------- Phase 3 ----------
-doc.push(phase("3", "Das Plusquamperfekt", 12));
+doc.push(phase("4", "Das Plusquamperfekt", 12));
 doc.push(...steps([
   ["zuhoeren", { say: "Stifte liegen. Ihr hört nur zu. Zwei Sätze aus einem Wettkampfbericht. Was ist zuerst passiert?", board: board("Mitte", [
     sl([n19("Ich "), u19("war"), n19(" vor dem Kampf sehr nervös. Ich "), r19("hatte"), n19(" die Nacht davor kaum "), y19("geschlafen"), n19(".")]),
@@ -241,7 +267,7 @@ doc.push(...steps([
 ]));
 
 // ---------- Phase 4 ----------
-doc.push(phase("4", "Ü10 Was war vorher?", 8));
+doc.push(phase("5", "Ü10 Was war vorher?", 8));
 doc.push(...steps([
   ["luecken", { say: "Jetzt arbeitet ihr allein: Schnipsel Ü10. Ergänzt im zweiten Satz das Plusquamperfekt. Vier Minuten.", board: auftrag("Ü10 Was war vorher?", ["Klebe den Schnipsel Ü10 ins Heft.", "Ergänze das Plusquamperfekt mit dem Verb in Klammern.", "Markiere hatte/war rot und das Partizip II gelb."], [p(S("Die Sätze stehen auf dem Schnipsel.", { size: 20, italics: true }), { after: 0 })], "4 Minuten · allein · leise"),
     sol: "1 hatte trainiert · 2 hatten gemacht · 3 hatte aufgewärmt · 4 waren losgefahren · 5 hatte geschafft" }],
@@ -249,7 +275,7 @@ doc.push(...steps([
 ]));
 
 // ---------- Phase 5 ----------
-doc.push(phase("5", "Optional: Welche Zeitform?", 2));
+doc.push(phase("6", "Optional: Welche Zeitform?", 2));
 doc.push(...steps([
   ["gemeinsam", { say: "Meldet euch. Welche Zeitform – und woran erkennt ihr sie?", board: board("Mitte", [bl("1  Ich habe gewonnen."), bl("2  Ich gewann."), bl("3  Ich hatte gewonnen.", { after: 0 })]), sol: "1 Perfekt (habe + Partizip II) · 2 Präteritum (nur ein Verb) · 3 Plusquamperfekt (hatte + Partizip II)" }],
 ]));
