@@ -24,7 +24,7 @@
 - [ ] Hilfsverb oder Vollverb unterscheiden („Ich habe Hunger“ gegenüber „Ich habe gegessen“)
 - [ ] Modalverben + Infinitiv – nach hinten verschoben (Entscheidung der Lehrkraft, 06.10.)
 - [x] *werden* und Futur I (Stunde „Das Futur I“, Rückbau ins Perfekt kann wiederholt werden)
-- [ ] Weitere Tempora: Präteritum, Plusquamperfekt (Futur II später)
+- [x] Weitere Tempora: Präteritum, Plusquamperfekt eingeführt (Stand 09.10.; Futur II später)
 - [ ] Satzklammer als eigener Merksatz – erst am Schluss, wenn alle Tempora behandelt sind (Entscheidung der Lehrkraft, 06.10.)
 - [ ] Danach als Anwendung: der Zeitformen-Baukasten (`Zeitformen_bauen/`)
 
@@ -145,7 +145,7 @@ Die Lehrkraft möchte das weiterverfolgen, noch ohne Material. Die Satzklammer (
 - **Konsequenz:** Tafel-Tabellen nur noch dort, wo sie wirklich nötig sind, und dann kurz halten. Sonst Abwechslung bei den Methoden.
 - **Hospitationsfeedback:** –
 
-### Einzelstunde „Das Plusquamperfekt“ (geplant, 45 Min.)
+### Einzelstunde „Das Plusquamperfekt“ (45 Min., 09.10.)
 - **Material:** `Plusquamperfekt/`
   - Tafelskript.
   - Druckvorlage: *hatte/war*-Schnipsel (8 pro A4), Ü10 (4 pro A4), 6 Satzstreifen für die Tafel.
@@ -161,8 +161,15 @@ Die Lehrkraft möchte das weiterverfolgen, noch ohne Material. Die Satzklammer (
   - Merksatz 9.
   - Ü10.
   - Ü11 „Mein erster Wettkampf“ beginnen, der Rest ist Hausaufgabe.
-- **Rückmeldung der Lehrkraft:** *(steht noch aus)*
-- **Hospitationsfeedback:** *(steht noch aus)*
+- **Rückmeldung der Lehrkraft (09.10.):** Die Stunde lief gut, die Lehrkraft war zufrieden. Ein paar Aufgaben hat die Klasse nicht mehr geschafft.
+  - Die Satzstreifen mit Magneten an der Tafel waren eine sehr gute Methode. Für die Tafel waren sie aber zu klein gedruckt.
+  - Die Schüler sagten, auf den Schnipseln sei zu wenig Platz zum Eintragen.
+- **Konsequenz:**
+  - Schnipsel bekommen künftig größere Lücken und mehr Zeilenabstand. Lieber weniger Schnipsel pro A4.
+  - Tafelmaterial mit Magneten (Satzstreifen, Wortkarten) bekommt eine eigene Druckvorlage im Großformat, aus der Ferne lesbar.
+  - Satzstreifen am Zeitstrahl wieder einsetzen.
+  - Die nicht geschafften Aufgaben kommen in die nächste Stunde, voraussichtlich Ü11 „Mein erster Wettkampf“.
+- **Hospitationsfeedback:** –
 
 ## Hospitationsfeedback (gesammelt)
 
