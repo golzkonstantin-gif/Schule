@@ -161,14 +161,14 @@ Die Lehrkraft möchte das weiterverfolgen, noch ohne Material. Die Satzklammer (
   - Merksatz 9.
   - Ü10.
   - Ü11 „Mein erster Wettkampf“ beginnen, der Rest ist Hausaufgabe.
-- **Rückmeldung der Lehrkraft (09.10.):** Die Stunde lief gut, die Lehrkraft war zufrieden. Ein paar Aufgaben hat die Klasse nicht mehr geschafft.
+- **Rückmeldung der Lehrkraft (09.10.):** Die Stunde lief gut, die Lehrkraft war zufrieden. Die Klasse kam bis Ü11: Fehler finden, Satzstreifen, *hatte/war*-Schnipsel, Merksatz 9 und Ü10 sind erledigt. Der Schreibauftrag Ü11 „Mein erster Wettkampf“ ist offen.
   - Die Satzstreifen mit Magneten an der Tafel waren eine sehr gute Methode. Für die Tafel waren sie aber zu klein gedruckt.
   - Die Schüler sagten, auf den Schnipseln sei zu wenig Platz zum Eintragen.
 - **Konsequenz:**
   - Schnipsel bekommen künftig größere Lücken und mehr Zeilenabstand. Lieber weniger Schnipsel pro A4.
   - Tafelmaterial mit Magneten (Satzstreifen, Wortkarten) bekommt eine eigene Druckvorlage im Großformat, aus der Ferne lesbar.
   - Satzstreifen am Zeitstrahl wieder einsetzen.
-  - Die nicht geschafften Aufgaben kommen in die nächste Stunde, voraussichtlich Ü11 „Mein erster Wettkampf“.
+  - Die nächste Stunde beginnt mit Ü11 „Mein erster Wettkampf“ (Schreibrahmen ist gedruckt), danach Partner-Check und Reflexion der Zeitformen im eigenen Text.
 - **Hospitationsfeedback:** –
 
 ## Hospitationsfeedback (gesammelt)
