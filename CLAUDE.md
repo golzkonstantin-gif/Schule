@@ -15,7 +15,7 @@ Dieses Repo enthält Unterrichtsmaterial (Deutsch). Die Lehrkraft plant hier gem
 - **Erst fragen, was gewünscht ist:** Wenn die Lehrkraft „erst mal Ideen sammeln“ sagt, nur Ideen im Chat – kein Material erstellen.
 - **Kleinschrittig und Vorwissen nicht überschätzen.** Lieber einen Schritt zurückgehen und Grundlagen sichern (die Bastelstunde zu Zeitformen ist genau daran gescheitert).
 - **Inhalt darf elementar sein, der Ton muss zur Altersstufe passen (7. Klasse, keine Grundschulanmutung).** Also:
-  - Fachbegriffe konsequent verwenden (finit/infinit, Hilfsverb/Vollverb) statt kindlicher Metaphern („Verbfamilie“, „Familienname“),
+  - Fachbegriffe konsequent verwenden (finit/infinit, Hilfsverb/Vollverb, am Zeitstrahl „Vorvergangenheit“ statt „vorher“) statt kindlicher Metaphern („Verbfamilie“, „Familienname“),
   - Begründungen einfordern („Begründe, warum …“), Fehleranalyse statt Rätsel (z. B. Chatverlauf mit echten Fehlern),
   - Beispielsätze aus der Lebenswelt der Klasse (vor allem Leistungssport, daneben Serien, Handy, Klassenfahrt), keine Kinderbeispiele,
   - keine Finger- oder Handzeichenspiele; stattdessen z. B. Speed-Duell zu zweit mit Punkten,

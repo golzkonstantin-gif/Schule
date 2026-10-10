@@ -175,7 +175,7 @@ doc.push(table([2300, 7906], [
   ["Exit-Ticket", "wird eingesammelt (zurückgeben und einkleben in der nächsten Stunde)"],
 ].map(([a, b2]) => row([tc(a, 2300, { bold: true, color: a === "Überschrift" ? NAVY : "C77C12", fill: LIGHT, size: 20 }), tc(b2, 7906, { size: 20 })], 340))));
 doc.push(p([S("Material: ", { bold: true }), S("Druckvorlage: Seite 1 Tabelle (2 pro A4), Seite 2 Exit-Ticket mit Satzanfängen (mind. 4 je Zeitform, geordnet nach Inhalt: Vorbereitung – Ablauf und Ergebnis – was jemand gesagt hat – wie es dir jetzt geht – Ziele) und Schreiblinien (2 pro A4), Seiten 3–11 für die Tafel (einmal drucken, schneiden, Magnete): 8 Streifen Mustertext (kleine graue Zahl oben links = richtige Reihenfolge), 5 Zeitform-Karten, 5 Bauplan-Karten. Kreide rot, gelb, blau · Schüler: Heft, Kleber, Buntstifte rot, gelb, blau.")], { before: 100, after: 40 }));
-doc.push(p([S("Vorbereitung: ", { bold: true }), S("Zeitstrahl über die ganze Tafel zeichnen (Pfeil, Abschnitte „vorher – Vergangenheit – jetzt – Zukunft“; Vergangenheit doppelt so breit), darüber die Stundenfrage „Welche Zeitform wann?“. Mustertext-Streifen gemischt links an den Rand hängen, Zeitform- und Bauplan-Karten gemischt rechts – die Karten erst in Phase 2 zeigen.")], { after: 0 }));
+doc.push(p([S("Vorbereitung: ", { bold: true }), S("Zeitstrahl über die ganze Tafel zeichnen (Pfeil, Abschnitte „Vorvergangenheit – Vergangenheit – jetzt – Zukunft“; Vergangenheit doppelt so breit), darüber die Stundenfrage „Welche Zeitform wann?“. Mustertext-Streifen gemischt links an den Rand hängen, Zeitform- und Bauplan-Karten gemischt rechts – die Karten erst in Phase 2 zeigen.")], { after: 0 }));
 
 // ---------- Phase 0 ----------
 doc.push(phase("0", "Einstieg: unser Wochenende", 3));
@@ -194,16 +194,16 @@ const lab = (x) => t(x + "   ", { size: 16, color: MUTED, bold: true });
 doc.push(phase("1", "Mustertext am Zeitstrahl", 9));
 doc.push(...steps([
   ["tafel", { say: "Stifte liegen. Links hängen acht Streifen eines Gewichthebers – durcheinander. Wer drankommt, hängt einen Streifen an die richtige Stelle am Zeitstrahl, markiert die Verbformen und sagt, woran er es erkennt. Alle prüfen mit.", board: board("Mitte · Zeitstrahl mit dem Mustertext (Lösung)", [
-    bl([lab("vorher"), n("Vor dem Wettkampf "), r("hatte"), n(" ich wochenlang hart "), y("trainiert"), n(".")], { after: 10 }),
-    bl([lab("vorher"), n("Am Morgen "), r("waren"), n(" wir früh zur Halle in Frankfurt (Oder) "), y("gefahren"), n(".")], { after: 50 }),
+    bl([lab("Vorvergangenheit"), n("Vor dem Wettkampf "), r("hatte"), n(" ich wochenlang hart "), y("trainiert"), n(".")], { after: 10 }),
+    bl([lab("Vorvergangenheit"), n("Am Morgen "), r("waren"), n(" wir früh zur Halle in Frankfurt (Oder) "), y("gefahren"), n(".")], { after: 50 }),
     bl([lab("Vergangenheit"), n("Im Reißen "), u("schaffte"), n(" ich 50 Kilo.")], { after: 10 }),
     bl([lab("Vergangenheit"), n("Im Stoßen "), u("hob"), n(" ich 62 Kilo.")], { after: 10 }),
     bl([lab("Vergangenheit"), n("Danach "), u("sagte"), n(" mein Trainer:"), n("      ·      "), lab("daneben"), n("„Du "), r("hast"), n(" super "), y("gehoben"), n("!“")], { after: 50 }),
     bl([lab("jetzt"), n("Heute "), u("analysiere"), n(" ich mit ihm das Video.")], { after: 50 }),
     bl([lab("Zukunft"), n("Beim nächsten Wettkampf "), r("werde"), n(" ich 65 Kilo "), b("stoßen"), n(".")], { after: 0 }),
   ]), do: [
-    "Begründung über die Zeitangabe und die Verbform einfordern: „Vor dem Wettkampf – und hatte + trainiert, das war vorher.“",
-    "Die beiden vorher-Sätze dürfen getauscht hängen. Reißen kommt im Wettkampf vor dem Stoßen.",
+    "Begründung über die Zeitangabe und die Verbform einfordern: „Vor dem Wettkampf – und hatte + trainiert, das ist Vorvergangenheit.“",
+    "Die beiden Sätze der Vorvergangenheit dürfen getauscht hängen. Reißen kommt im Wettkampf vor dem Stoßen.",
   ] }],
   ["zuhoeren", { say: "Stifte liegen. Schaut auf die beiden Streifen vom Trainer. Danach sagte mein Trainer – das erzähle ich, also Präteritum. Du hast super gehoben – das sagt der Trainer, also Perfekt. Wer erzählt, schreibt im Präteritum. Wer spricht, nimmt das Perfekt.", do: ["Beide Streifen hängen im Abschnitt Vergangenheit nebeneinander: links „Danach sagte mein Trainer:“ (später unter der Präteritum-Karte), rechts „Du hast super gehoben!“ (unter der Perfekt-Karte)."] }],
 ]));
@@ -212,7 +212,7 @@ doc.push(...steps([
 doc.push(phase("2", "Die Übersicht entsteht", 13));
 doc.push(...steps([
   ["tafel", { say: "Ihr bekommt einen Schnipsel mit einer Tabelle. Klebt ihn ein. Rechts hängen Karten mit den Zeitformen und den Bauplänen. Kreide-Kette: Wer drankommt, hängt eine Karte über den richtigen Abschnitt und begründet am Satz darunter. Hängt etwas falsch, stellt der Nächste es um. Alle anderen ergänzen die Tabelle: Zeitform, Bauplan und einen Beispielsatz.", board: board("über den Abschnitten · Karten (Lösung)", [
-    bl([lab("vorher"), N("Plusquamperfekt", { bold: true, color: NAVY }), n("   "), r("hatte/war"), n(" + "), y("Partizip II")], { after: 20 }),
+    bl([lab("Vorvergangenheit"), N("Plusquamperfekt", { bold: true, color: NAVY }), n("   "), r("hatte/war"), n(" + "), y("Partizip II")], { after: 20 }),
     bl([lab("Vergangenheit"), N("Präteritum", { bold: true, color: NAVY }), n("   finites Verb im Präteritum   ·   "), N("Perfekt", { bold: true, color: NAVY }), n("   "), r("habe/bin"), n(" + "), y("Partizip II")], { after: 20 }),
     bl([lab("jetzt"), N("Präsens", { bold: true, color: NAVY }), n("   finites Verb im Präsens")], { after: 20 }),
     bl([lab("Zukunft"), N("Futur I", { bold: true, color: NAVY }), n("   "), r("werde"), n(" + "), b("Infinitiv")], { after: 0 }),
@@ -238,8 +238,8 @@ doc.push(...steps([
 // ---------- Phase 4 ----------
 doc.push(phase("4", "Vorlesen und einsammeln", 5));
 doc.push(...steps([
-  ["gemeinsam", { say: "Stifte liegen. Zwei lesen ihren Text vor. Alle anderen zeigen am Zeitstrahl mit: Wo sind wir gerade – vorher, Vergangenheit, jetzt oder Zukunft?", do: ["Die Lehrkraft zeigt beim Vorlesen am Zeitstrahl mit, die Klasse nennt die Zeitform."] }],
-  ["fertig", { say: "Beantwortet die Stundenfrage in einem Satz: Welche Zeitform wann? … Gebt jetzt eure Exit-Tickets ab.", do: ["Erwartete Antwort: Was vorher war: Plusquamperfekt; erzählte Vergangenheit: Präteritum, gesprochen: Perfekt; jetzt: Präsens; Zukunft: Futur I."] }],
+  ["gemeinsam", { say: "Stifte liegen. Zwei lesen ihren Text vor. Alle anderen zeigen am Zeitstrahl mit: Wo sind wir gerade – Vorvergangenheit, Vergangenheit, jetzt oder Zukunft?", do: ["Die Lehrkraft zeigt beim Vorlesen am Zeitstrahl mit, die Klasse nennt die Zeitform."] }],
+  ["fertig", { say: "Beantwortet die Stundenfrage in einem Satz: Welche Zeitform wann? … Gebt jetzt eure Exit-Tickets ab.", do: ["Erwartete Antwort: Vorvergangenheit: Plusquamperfekt; erzählte Vergangenheit: Präteritum, gesprochen: Perfekt; jetzt: Präsens; Zukunft: Futur I."] }],
 ]));
 doc.push(p([S("Ausblick: ", { bold: true }), S("Die Exit-Tickets zeigen, wer die Zeitformen schon sicher im Text einsetzt. Nächste Stunde: Rückgabe mit kurzem Feedback, Überarbeitung, danach Futur II, Hilfsverb oder Vollverb, Modalverben – und zum Schluss die Satzklammer.")], { before: 120, after: 0 }));
 

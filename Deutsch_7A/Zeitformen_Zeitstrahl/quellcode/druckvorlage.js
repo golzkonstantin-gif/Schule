@@ -167,10 +167,10 @@ const yel = (x, o = {}) => sb(x, Object.assign({ color: "C98A1E" }, o));
 const blu = (x, o = {}) => sb(x, Object.assign({ color: C.inf }, o));
 
 // ---------- Schnipsel 1: Tabelle ----------
-const TW2 = [2050, 2050, 2650, IW - 6750];
+const TW2 = [2400, 2000, 2600, IW - 7000];
 const tb = allBorders(solid("7A869E", 8));
 const th = (x, w) => cell(p(t(x, { bold: true, color: "FFFFFF", size: 20 }), { after: 0, align: AlignmentType.CENTER }), { w, fill: NAVY, borders: tb });
-const WANN = ["vorher", "Vergangenheit\n(erzählt)", "Vergangenheit\n(gesprochen)", "jetzt", "Zukunft"];
+const WANN = ["Vorvergangenheit", "Vergangenheit\n(erzählt)", "Vergangenheit\n(gesprochen)", "jetzt", "Zukunft"];
 function slipTab() {
   return slip([
     slipHead("Die Zeitformen im Überblick"),

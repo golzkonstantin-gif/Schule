@@ -177,7 +177,7 @@ doc.push(table([3300, LW - 3300], [
   ["Einheit", "Verben und Zeitformen (Präsens, Präteritum, Perfekt, Plusquamperfekt, Futur I; Futur II folgt später)"],
   ["Lerngruppe", "Klasse 7A, ausschließlich Leistungssportler (Judo, Handball, Gewichtheben). Alle hatten am vergangenen Wochenende Wettkämpfe. Satzstreifen am Zeitstrahl und die Kreide-Kette kennt die Klasse und hat sie in der letzten Stunde gut angenommen."],
   ["Kernanliegen", "Die Schülerinnen und Schüler erarbeiten an einem Mustertext über einen Wettkampf die zeitliche Abfolge der fünf bekannten Tempora und deren Bildung als Übersicht und wenden sie in einem eigenen zusammenhängenden Text über ihr Wettkampfwochenende an."],
-  ["Teilziele", "Die Schülerinnen und Schüler …\nTZ 1  ordnen die Sätze eines Mustertextes am Zeitstrahl (vorher – Vergangenheit – jetzt – Zukunft),\nTZ 2  ordnen jedem Abschnitt Zeitform und Bauplan zu (Hilfsverb + Partizip II bzw. Infinitiv) und begründen dies am Satz,\nTZ 3  sichern die Übersicht in einer Tabelle im Heft,\nTZ 4  schreiben mithilfe von Formulierungshilfen einen eigenen Text, in dem alle fünf Zeitformen passend vorkommen (Exit-Ticket)."],
+  ["Teilziele", "Die Schülerinnen und Schüler …\nTZ 1  ordnen die Sätze eines Mustertextes am Zeitstrahl (Vorvergangenheit – Vergangenheit – jetzt – Zukunft),\nTZ 2  ordnen jedem Abschnitt Zeitform und Bauplan zu (Hilfsverb + Partizip II bzw. Infinitiv) und begründen dies am Satz,\nTZ 3  sichern die Übersicht in einer Tabelle im Heft,\nTZ 4  schreiben mithilfe von Formulierungshilfen einen eigenen Text, in dem alle fünf Zeitformen passend vorkommen (Exit-Ticket)."],
 ].map(([a, b]) => row([
   tc(a, 3300, { bold: true, color: NAVY, fill: LIGHT, size: 19 }),
   cell(b.split("\n").map((x, i, arr) => p(s20(x), { after: i === arr.length - 1 ? 0 : 30 })), { w: LW - 3300 }),
@@ -196,7 +196,7 @@ doc.push(table(VW, [
   ]),
   vrow("3′–12′", "Erarbeitung I: Mustertext am Zeitstrahl", [
     L("hängt acht Satzstreifen eines Mustertextes gemischt an den Rand; Ansage: „Wer drankommt, hängt einen Streifen an die richtige Stelle am Zeitstrahl und markiert die Verbformen. Alle prüfen mit.“"),
-    SS("Magnet-Kette: ordnen die Sätze am Zeitstrahl (vorher – Vergangenheit – jetzt – Zukunft), markieren Hilfsverb rot, Partizip II gelb, Infinitiv blau bzw. unterstreichen das finite Verb und begründen mit den Zeitangaben („Vor dem Wettkampf …“)."),
+    SS("Magnet-Kette: ordnen die Sätze am Zeitstrahl (Vorvergangenheit – Vergangenheit – jetzt – Zukunft), markieren Hilfsverb rot, Partizip II gelb, Infinitiv blau bzw. unterstreichen das finite Verb und begründen mit den Zeitangaben („Vor dem Wettkampf …“)."),
     L("gibt bei den beiden Trainer-Streifen („Danach sagte mein Trainer:“ / „Du hast super gehoben!“) vor: „Wer erzählt, schreibt im Präteritum. Wer spricht – wie der Trainer –, nimmt das Perfekt.“"),
   ], ["EA an der Tafel", "UG"], ["8 Satzstreifen (Großformat, Magnete)", "Kreide rot/gelb/blau"], [
     "Vorgegebener Mustertext wie in der letzten Stunde: vertraute Methode, Fokus auf der zeitlichen Struktur (TZ 1).",
@@ -250,7 +250,7 @@ const bs = (x, c = MUTED) => t(x, { size: 18, color: c, bold: true });
 doc.push(p([s20("Stundenfrage oben: ", { bold: true }), s20("Welche Zeitform wann?   ·   Karten (Zeitform, Bauplan) über den Abschnitten, darunter die Streifen des Mustertextes")], { after: 80 }));
 doc.push(table(TBW, [
   row([
-    cell(p(t("vorher", { bold: true, color: "FFFFFF", size: 20 }), { after: 0, align: AlignmentType.CENTER }), { w: TBW[0], fill: "3D4A3F" }),
+    cell(p(t("Vorvergangenheit", { bold: true, color: "FFFFFF", size: 20 }), { after: 0, align: AlignmentType.CENTER }), { w: TBW[0], fill: "3D4A3F" }),
     cell(p(t("Vergangenheit", { bold: true, color: "FFFFFF", size: 20 }), { after: 0, align: AlignmentType.CENTER }), { w: TBW[1] + TBW[2], fill: "3D4A3F", span: 2 }),
     cell(p(t("jetzt", { bold: true, color: "FFFFFF", size: 20 }), { after: 0, align: AlignmentType.CENTER }), { w: TBW[3], fill: "3D4A3F" }),
     cell(p(t("Zukunft  ▶", { bold: true, color: "FFFFFF", size: 20 }), { after: 0, align: AlignmentType.CENTER }), { w: TBW[4], fill: "3D4A3F" }),
