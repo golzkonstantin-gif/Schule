@@ -23,6 +23,7 @@ Dieses Repo enthält Unterrichtsmaterial (Deutsch). Die Lehrkraft plant hier gem
 - **Wenige Arbeitsblätter.** Übungen laufen an der Tafel, die Klasse schreibt ins Heft ab und löst dort.
   - Erlaubt sind **kleine Arbeitsblatt-Schnipsel**: mehrere passen auf ein A4-Blatt, die Schüler tragen nur ein. Das spart die Zeit fürs Abschreiben. Grundsätzlich soll aber weiter geschrieben werden, weil die Klasse auch schreiben lernen muss. Eine sinnvolle Aufteilung: Merksätze und eigene Sätze ins Heft, längere Übungstexte als Schnipsel.
   - **Schnipsel mit großzügigen Lücken (Stand 09.10.):** Die Schüler hatten zu wenig Platz zum Eintragen. Lücken lang genug für Handschrift, ausreichend Zeilenabstand; lieber weniger Schnipsel pro A4.
+- **Formulierungshilfen bei Schreibaufgaben (Stand 10.10.):** großzügig anbieten, nach Zeitform bzw. Abschnitt geordnet, und die Bildung darin fett und im Farbcode hervorheben (z. B. Perfekt: **hast** rot + **gekämpft** gelb), damit den Schülern die Bildung beim Schreiben klar ist.
 - **Magnet-Material für die Tafel (Satzstreifen, Wortkarten) ist sehr beliebt (Stand 09.10.)**, braucht aber eine eigene Druckvorlage im Großformat (z. B. ein Streifen pro A4-Querhälfte, große Schrift), damit es aus der letzten Reihe lesbar ist.
 - **Klassisch oder integrativ:** Beides ist möglich. Bei integrativer Gestaltung (Grammatik in einem Text- oder Schreibkontext) die Sprachnutzung ausdrücklich reflektieren lassen.
 - **Transparenz durch die Lehrkraft, nicht durch Hilfsmittel.** Keine Modus- oder Symbolkarten (ausdrücklich abgelehnt). Stattdessen:
