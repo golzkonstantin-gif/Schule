@@ -256,7 +256,7 @@ doc.push(table(TBW, [
     cell(p(t("Zukunft  ▶", { bold: true, color: "FFFFFF", size: 20 }), { after: 0, align: AlignmentType.CENTER }), { w: TBW[4], fill: "3D4A3F" }),
   ]),
   row([
-    tbc([...card("Plusquamperfekt", [bs("hatte/war", C.hv), bs(" + "), bs("Partizip II", "C98A1E")]), ex([n("Vor dem Wettkampf "), r("hatte"), n(" ich wochenlang hart "), y("trainiert"), n(".")]), ex([n("Am Freitag "), r("waren"), n(" wir mit dem Team nach Leipzig "), y("gefahren"), n(".")])], TBW[0]),
+    tbc([...card("Plusquamperfekt", [bs("hatte/war", C.hv), bs(" + "), bs("Partizip II", "C98A1E")]), ex([n("Vor dem Wettkampf "), r("hatte"), n(" ich wochenlang hart "), y("trainiert"), n(".")]), ex([n("Am Morgen "), r("waren"), n(" wir früh zur Halle in Frankfurt (Oder) "), y("gefahren"), n(".")])], TBW[0]),
     tbc([...card("Präteritum (erzählt)", [bs("finites Verb im Präteritum")]), ex([n("Im Reißen "), u("schaffte"), n(" ich 50 Kilo.")]), ex([n("Im Stoßen "), u("hob"), n(" ich 62 Kilo.")]), ex([n("Danach "), u("sagte"), n(" mein Trainer: …")])], TBW[1]),
     tbc([...card("Perfekt (gesprochen)", [bs("habe/bin", C.hv), bs(" + "), bs("Partizip II", "C98A1E")]), ex([n("… „Du "), r("hast"), n(" super "), y("gehoben"), n("!“")])], TBW[2]),
     tbc([...card("Präsens", [bs("finites Verb im Präsens")]), ex([n("Heute "), u("analysiere"), n(" ich mit ihm das Video.")])], TBW[3]),

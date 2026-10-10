@@ -248,7 +248,7 @@ const STRIPS = [
   ["#1", [big("Vor dem Wettkampf hatte ich wochenlang hart trainiert.")]],
   ["#5", [big("Danach sagte mein Trainer: „Du hast super gehoben!“")]],
   ["#6", [big("Heute analysiere ich mit ihm das Video.")]],
-  ["#2", [big("Am Freitag waren wir mit dem Team nach Leipzig gefahren.")]],
+  ["#2", [big("Am Morgen waren wir früh zur Halle in Frankfurt (Oder) gefahren.")]],
   ["#4", [big("Im Stoßen hob ich 62 Kilo.")]],
   ["ZEITFORM", [big("Plusquamperfekt", { size: 120, color: NAVY })]],
   ["ZEITFORM", [big("Präteritum", { size: 120, color: NAVY })]],

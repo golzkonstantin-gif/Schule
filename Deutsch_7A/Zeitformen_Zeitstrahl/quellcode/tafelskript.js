@@ -195,7 +195,7 @@ doc.push(phase("1", "Mustertext am Zeitstrahl", 9));
 doc.push(...steps([
   ["tafel", { say: "Stifte liegen. Links hängen sieben Sätze eines Gewichthebers – durcheinander. Wer drankommt, hängt einen Streifen an die richtige Stelle am Zeitstrahl, markiert die Verbformen und sagt, woran er es erkennt. Alle prüfen mit.", board: board("Mitte · Zeitstrahl mit dem Mustertext (Lösung)", [
     bl([lab("vorher"), n("Vor dem Wettkampf "), r("hatte"), n(" ich wochenlang hart "), y("trainiert"), n(".")], { after: 10 }),
-    bl([lab("vorher"), n("Am Freitag "), r("waren"), n(" wir mit dem Team nach Leipzig "), y("gefahren"), n(".")], { after: 50 }),
+    bl([lab("vorher"), n("Am Morgen "), r("waren"), n(" wir früh zur Halle in Frankfurt (Oder) "), y("gefahren"), n(".")], { after: 50 }),
     bl([lab("Vergangenheit"), n("Im Reißen "), u("schaffte"), n(" ich 50 Kilo.")], { after: 10 }),
     bl([lab("Vergangenheit"), n("Im Stoßen "), u("hob"), n(" ich 62 Kilo.")], { after: 10 }),
     bl([lab("Vergangenheit"), n("Danach "), u("sagte"), n(" mein Trainer: „Du "), r("hast"), n(" super "), y("gehoben"), n("!“")], { after: 50 }),
