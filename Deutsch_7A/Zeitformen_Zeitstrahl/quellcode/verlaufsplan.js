@@ -195,10 +195,10 @@ doc.push(table(VW, [
     "Transparenz: Das Ziel der Stunde (eigener Text) wird zu Beginn genannt.",
   ]),
   vrow("3′–12′", "Erarbeitung I: Mustertext am Zeitstrahl", [
-    L("hängt sieben Satzstreifen eines Mustertextes gemischt an den Rand; Ansage: „Wer drankommt, hängt einen Streifen an die richtige Stelle am Zeitstrahl und markiert die Verbformen. Alle prüfen mit.“"),
+    L("hängt acht Satzstreifen eines Mustertextes gemischt an den Rand; Ansage: „Wer drankommt, hängt einen Streifen an die richtige Stelle am Zeitstrahl und markiert die Verbformen. Alle prüfen mit.“"),
     SS("Magnet-Kette: ordnen die Sätze am Zeitstrahl (vorher – Vergangenheit – jetzt – Zukunft), markieren Hilfsverb rot, Partizip II gelb, Infinitiv blau bzw. unterstreichen das finite Verb und begründen mit den Zeitangaben („Vor dem Wettkampf …“)."),
-    L("gibt beim Trainer-Satz vor: „Wer erzählt, schreibt im Präteritum. Wer spricht – wie der Trainer –, nimmt das Perfekt.“"),
-  ], ["EA an der Tafel", "UG"], ["7 Satzstreifen (Großformat, Magnete)", "Kreide rot/gelb/blau"], [
+    L("gibt bei den beiden Trainer-Streifen („Danach sagte mein Trainer:“ / „Du hast super gehoben!“) vor: „Wer erzählt, schreibt im Präteritum. Wer spricht – wie der Trainer –, nimmt das Perfekt.“"),
+  ], ["EA an der Tafel", "UG"], ["8 Satzstreifen (Großformat, Magnete)", "Kreide rot/gelb/blau"], [
     "Vorgegebener Mustertext wie in der letzten Stunde: vertraute Methode, Fokus auf der zeitlichen Struktur (TZ 1).",
     "Die Zeitangaben am Satzanfang stützen das Ordnen und sind später Formulierungshilfe.",
     "Den Unterschied Präteritum/Perfekt gibt die Lehrkraft vor – kein eigener Entdeckungsschritt nötig.",
@@ -257,13 +257,13 @@ doc.push(table(TBW, [
   ]),
   row([
     tbc([...card("Plusquamperfekt", [bs("hatte/war", C.hv), bs(" + "), bs("Partizip II", "C98A1E")]), ex([n("Vor dem Wettkampf "), r("hatte"), n(" ich wochenlang hart "), y("trainiert"), n(".")]), ex([n("Am Morgen "), r("waren"), n(" wir früh zur Halle in Frankfurt (Oder) "), y("gefahren"), n(".")])], TBW[0]),
-    tbc([...card("Präteritum (erzählt)", [bs("finites Verb im Präteritum")]), ex([n("Im Reißen "), u("schaffte"), n(" ich 50 Kilo.")]), ex([n("Im Stoßen "), u("hob"), n(" ich 62 Kilo.")]), ex([n("Danach "), u("sagte"), n(" mein Trainer: …")])], TBW[1]),
-    tbc([...card("Perfekt (gesprochen)", [bs("habe/bin", C.hv), bs(" + "), bs("Partizip II", "C98A1E")]), ex([n("… „Du "), r("hast"), n(" super "), y("gehoben"), n("!“")])], TBW[2]),
+    tbc([...card("Präteritum (erzählt)", [bs("finites Verb im Präteritum")]), ex([n("Im Reißen "), u("schaffte"), n(" ich 50 Kilo.")]), ex([n("Im Stoßen "), u("hob"), n(" ich 62 Kilo.")]), ex([n("Danach "), u("sagte"), n(" mein Trainer:")])], TBW[1]),
+    tbc([...card("Perfekt (gesprochen)", [bs("habe/bin", C.hv), bs(" + "), bs("Partizip II", "C98A1E")]), ex([n("„Du "), r("hast"), n(" super "), y("gehoben"), n("!“")])], TBW[2]),
     tbc([...card("Präsens", [bs("finites Verb im Präsens")]), ex([n("Heute "), u("analysiere"), n(" ich mit ihm das Video.")])], TBW[3]),
     tbc([...card("Futur I", [bs("werde", C.hv), bs(" + "), bs("Infinitiv", C.inf)]), ex([n("Beim nächsten Wettkampf "), r("werde"), n(" ich 65 Kilo "), b("stoßen"), n(".")])], TBW[4]),
   ]),
 ]));
-doc.push(p([s20("Hinweis: ", { bold: true }), s20("Der Trainer-Satz hängt im Abschnitt Vergangenheit zwischen Präteritum und Perfekt – sagte (erzählt) und hast gehoben (gesprochen) stehen im selben Satz.")], { before: 100, after: 0 }));
+doc.push(p([s20("Hinweis: ", { bold: true }), s20("Der Satz des Trainers ist auf zwei Streifen geteilt: „Danach sagte mein Trainer:“ (erzählt, Präteritum) und „Du hast super gehoben!“ (gesprochen, Perfekt). Sie hängen nebeneinander, so ist jede Zeitform eindeutig zuzuordnen.")], { before: 100, after: 0 }));
 
 const landProps = { page: { size: { width: 11906, height: 16838, orientation: PageOrientation.LANDSCAPE }, margin: { top: 700, bottom: 600, left: 700, right: 700, header: 350, footer: 350 } } };
 const styles = { default: { document: { run: { font: "Calibri", size: 20 } } } };

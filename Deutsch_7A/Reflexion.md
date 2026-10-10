@@ -176,7 +176,7 @@ Die Lehrkraft möchte das weiterverfolgen, noch ohne Material. Die Satzklammer (
 - **Material:** `Zeitformen_Zeitstrahl/`
   - Verlaufsplan und Tafelskript.
   - Druckvorlage: Tabelle „Die Zeitformen im Überblick“ und Exit-Ticket, je 2 pro A4.
-  - Für die Tafel im Großformat: 7 Streifen Mustertext, 5 Zeitform-Karten und 5 Bauplan-Karten.
+  - Für die Tafel im Großformat: 8 Streifen Mustertext, 5 Zeitform-Karten und 5 Bauplan-Karten.
 - **Bezug zur letzten Stunde:** Das Ordnen mit Satzstreifen am Zeitstrahl hat die Klasse gut verstanden, deshalb kommt die Methode wieder. Die Streifen sind diesmal im Großformat, die Schnipsel haben große Felder. Alle Schüler hatten am Wochenende Wettkämpfe, darüber schreiben sie am Ende.
 - **Entscheidungen der Lehrkraft:**
   - Keine Lerntheke, weil die Klasse die Methode noch nicht kennt.
@@ -186,7 +186,7 @@ Die Lehrkraft möchte das weiterverfolgen, noch ohne Material. Die Satzklammer (
   - Den eigenen Text schreibt die Klasse als Exit-Ticket.
 - **Inhalt:**
   - Einstieg mit dem eigenen Wochenende.
-  - Mustertext eines Gewichthebers am Zeitstrahl (die größte Gruppe der Klasse) ordnen (Magnet-Kette). Er enthält alle fünf Zeitformen, das Perfekt in wörtlicher Rede des Trainers.
+  - Mustertext eines Gewichthebers am Zeitstrahl (die größte Gruppe der Klasse) ordnen (Magnet-Kette). Er enthält alle fünf Zeitformen, das Perfekt in wörtlicher Rede des Trainers. Der Trainer-Satz ist auf zwei Streifen geteilt („Danach sagte mein Trainer:“ = Präteritum, „Du hast super gehoben!“ = Perfekt), damit jeder Streifen genau eine Zeitform hat.
   - Die Übersicht entsteht mit Zeitform- und Bauplan-Karten (Kreide-Kette), die Tabelle wird mitgeschrieben.
   - Exit-Ticket (halbes A4, 2 pro Blatt): 5–7 Sätze über das eigene Wochenende. Je Zeitform gibt es mindestens 4 Satzanfänge, keine fertigen Sätze, geordnet nach Inhalt (Vorbereitung, Ablauf und Ergebnis, wörtliche Rede, Befinden, Ziele). Das Hilfsverb ist rot, eine farbige Leerstelle zeigt den Platz für Partizip II bzw. Infinitiv. Darunter 6 Schreiblinien, bei Bedarf die Rückseite.
   - Zwei Texte vorlesen, die Klasse zeigt am Zeitstrahl mit.

@@ -161,7 +161,7 @@ doc.push(p([S("Markieren wie bisher: ", { bold: true }), t("Hilfsverb rot", { bo
 doc.push(h3("Ablauf"));
 doc.push(grid([900, 3700, 5606], ["Zeit", "Phase", "Kern"], [
   ["3′", "0 Einstieg: unser Wochenende", "2–3 Schüler erzählen einen Satz; Ziel der Stunde nennen"],
-  ["9′", "1 Mustertext am Zeitstrahl", "Magnet-Kette: 7 Streifen ordnen und markieren"],
+  ["9′", "1 Mustertext am Zeitstrahl", "Magnet-Kette: 8 Streifen ordnen und markieren"],
   ["13′", "2 Die Übersicht entsteht", "Kreide-Kette mit Karten; alle ergänzen die Tabelle"],
   ["15′", "3 Exit-Ticket: mein Wochenende", "eigener Text, jede Zeitform mindestens einmal"],
   ["5′", "4 Vorlesen und einsammeln", "zwei Texte, Klasse zeigt am Zeitstrahl mit"],
@@ -174,7 +174,7 @@ doc.push(table([2300, 7906], [
   ["Schnipsel", "Die Zeitformen im Überblick (Tabelle: Zeitform, Bauplan, Beispielsatz – mit „Wofür?“ und „Test“)"],
   ["Exit-Ticket", "wird eingesammelt (zurückgeben und einkleben in der nächsten Stunde)"],
 ].map(([a, b2]) => row([tc(a, 2300, { bold: true, color: a === "Überschrift" ? NAVY : "C77C12", fill: LIGHT, size: 20 }), tc(b2, 7906, { size: 20 })], 340))));
-doc.push(p([S("Material: ", { bold: true }), S("Druckvorlage: Seite 1 Tabelle (2 pro A4), Seite 2 Exit-Ticket mit Satzanfängen (mind. 4 je Zeitform, geordnet nach Inhalt: Vorbereitung – Ablauf und Ergebnis – was jemand gesagt hat – wie es dir jetzt geht – Ziele) und Schreiblinien (2 pro A4), Seiten 3–11 für die Tafel (einmal drucken, schneiden, Magnete): 7 Streifen Mustertext (kleine graue Zahl oben links = richtige Reihenfolge), 5 Zeitform-Karten, 5 Bauplan-Karten. Kreide rot, gelb, blau · Schüler: Heft, Kleber, Buntstifte rot, gelb, blau.")], { before: 100, after: 40 }));
+doc.push(p([S("Material: ", { bold: true }), S("Druckvorlage: Seite 1 Tabelle (2 pro A4), Seite 2 Exit-Ticket mit Satzanfängen (mind. 4 je Zeitform, geordnet nach Inhalt: Vorbereitung – Ablauf und Ergebnis – was jemand gesagt hat – wie es dir jetzt geht – Ziele) und Schreiblinien (2 pro A4), Seiten 3–11 für die Tafel (einmal drucken, schneiden, Magnete): 8 Streifen Mustertext (kleine graue Zahl oben links = richtige Reihenfolge), 5 Zeitform-Karten, 5 Bauplan-Karten. Kreide rot, gelb, blau · Schüler: Heft, Kleber, Buntstifte rot, gelb, blau.")], { before: 100, after: 40 }));
 doc.push(p([S("Vorbereitung: ", { bold: true }), S("Zeitstrahl über die ganze Tafel zeichnen (Pfeil, Abschnitte „vorher – Vergangenheit – jetzt – Zukunft“; Vergangenheit doppelt so breit), darüber die Stundenfrage „Welche Zeitform wann?“. Mustertext-Streifen gemischt links an den Rand hängen, Zeitform- und Bauplan-Karten gemischt rechts – die Karten erst in Phase 2 zeigen.")], { after: 0 }));
 
 // ---------- Phase 0 ----------
@@ -193,19 +193,19 @@ const u = (x) => n(x, { u: true, bold: true });
 const lab = (x) => t(x + "   ", { size: 16, color: MUTED, bold: true });
 doc.push(phase("1", "Mustertext am Zeitstrahl", 9));
 doc.push(...steps([
-  ["tafel", { say: "Stifte liegen. Links hängen sieben Sätze eines Gewichthebers – durcheinander. Wer drankommt, hängt einen Streifen an die richtige Stelle am Zeitstrahl, markiert die Verbformen und sagt, woran er es erkennt. Alle prüfen mit.", board: board("Mitte · Zeitstrahl mit dem Mustertext (Lösung)", [
+  ["tafel", { say: "Stifte liegen. Links hängen acht Streifen eines Gewichthebers – durcheinander. Wer drankommt, hängt einen Streifen an die richtige Stelle am Zeitstrahl, markiert die Verbformen und sagt, woran er es erkennt. Alle prüfen mit.", board: board("Mitte · Zeitstrahl mit dem Mustertext (Lösung)", [
     bl([lab("vorher"), n("Vor dem Wettkampf "), r("hatte"), n(" ich wochenlang hart "), y("trainiert"), n(".")], { after: 10 }),
     bl([lab("vorher"), n("Am Morgen "), r("waren"), n(" wir früh zur Halle in Frankfurt (Oder) "), y("gefahren"), n(".")], { after: 50 }),
     bl([lab("Vergangenheit"), n("Im Reißen "), u("schaffte"), n(" ich 50 Kilo.")], { after: 10 }),
     bl([lab("Vergangenheit"), n("Im Stoßen "), u("hob"), n(" ich 62 Kilo.")], { after: 10 }),
-    bl([lab("Vergangenheit"), n("Danach "), u("sagte"), n(" mein Trainer: „Du "), r("hast"), n(" super "), y("gehoben"), n("!“")], { after: 50 }),
+    bl([lab("Vergangenheit"), n("Danach "), u("sagte"), n(" mein Trainer:"), n("      ·      "), lab("daneben"), n("„Du "), r("hast"), n(" super "), y("gehoben"), n("!“")], { after: 50 }),
     bl([lab("jetzt"), n("Heute "), u("analysiere"), n(" ich mit ihm das Video.")], { after: 50 }),
     bl([lab("Zukunft"), n("Beim nächsten Wettkampf "), r("werde"), n(" ich 65 Kilo "), b("stoßen"), n(".")], { after: 0 }),
   ]), do: [
     "Begründung über die Zeitangabe und die Verbform einfordern: „Vor dem Wettkampf – und hatte + trainiert, das war vorher.“",
     "Die beiden vorher-Sätze dürfen getauscht hängen. Reißen kommt im Wettkampf vor dem Stoßen.",
   ] }],
-  ["zuhoeren", { say: "Stifte liegen. Schaut auf den Trainer-Satz: Da stehen zwei Zeitformen in einem Satz. Wer erzählt, schreibt im Präteritum – sagte. Wer spricht, wie der Trainer, nimmt das Perfekt – hast gehoben.", do: ["Der Trainer-Satz hängt im Abschnitt Vergangenheit an der Grenze zwischen Präteritum und Perfekt (die Karten kommen in Phase 2 darüber)."] }],
+  ["zuhoeren", { say: "Stifte liegen. Schaut auf die beiden Streifen vom Trainer. Danach sagte mein Trainer – das erzähle ich, also Präteritum. Du hast super gehoben – das sagt der Trainer, also Perfekt. Wer erzählt, schreibt im Präteritum. Wer spricht, nimmt das Perfekt.", do: ["Beide Streifen hängen im Abschnitt Vergangenheit nebeneinander: links „Danach sagte mein Trainer:“ (später unter der Präteritum-Karte), rechts „Du hast super gehoben!“ (unter der Perfekt-Karte)."] }],
 ]));
 
 // ---------- Phase 2 ----------

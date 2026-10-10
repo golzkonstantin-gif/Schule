@@ -151,7 +151,7 @@ function phase(nr, title, min) {
 // Druckvorlage „Welche Zeitform wann?“
 // Seite 1: Tabelle „Die Zeitformen im Überblick“ (2 pro A4)
 // Seite 2: Exit-Ticket „Mein Wochenende in fünf Zeitformen“ mit kurzen Formulierungshilfen und Schreiblinien (2 pro A4)
-// ab Seite 3: Mustertext (7 Satzstreifen), 5 Zeitform-Karten, 5 Bauplan-Karten (Großformat, 2 pro A4 quer)
+// ab Seite 3: Mustertext (8 Satzstreifen), 5 Zeitform-Karten, 5 Bauplan-Karten (Großformat, 2 pro A4 quer)
 // ================================================================
 const { PageOrientation } = require("docx");
 const PW = 11906 - 1200;
@@ -244,10 +244,11 @@ const LWS = 16838 - 1200;
 const big = (x, o = {}) => t(x, Object.assign({ font: "Cambria", size: 96, bold: true, color: "111111" }, o));
 const STRIPS = [
   ["#3", [big("Im Reißen schaffte ich 50 Kilo.")]],
-  ["#7", [big("Beim nächsten Wettkampf werde ich 65 Kilo stoßen.")]],
+  ["#8", [big("Beim nächsten Wettkampf werde ich 65 Kilo stoßen.")]],
   ["#1", [big("Vor dem Wettkampf hatte ich wochenlang hart trainiert.")]],
-  ["#5", [big("Danach sagte mein Trainer: „Du hast super gehoben!“")]],
-  ["#6", [big("Heute analysiere ich mit ihm das Video.")]],
+  ["#5", [big("Danach sagte mein Trainer:")]],
+  ["#6", [big("„Du hast super gehoben!“")]],
+  ["#7", [big("Heute analysiere ich mit ihm das Video.")]],
   ["#2", [big("Am Morgen waren wir früh zur Halle in Frankfurt (Oder) gefahren.")]],
   ["#4", [big("Im Stoßen hob ich 62 Kilo.")]],
   ["ZEITFORM", [big("Plusquamperfekt", { size: 120, color: NAVY })]],
