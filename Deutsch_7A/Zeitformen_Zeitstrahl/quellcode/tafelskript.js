@@ -181,7 +181,7 @@ doc.push(p([S("Vorbereitung: ", { bold: true }), S("Zeitstrahl über die ganze T
 doc.push(phase("0", "Einstieg: unser Wochenende", 3));
 doc.push(...steps([
   ["gemeinsam", { say: "Stifte liegen. Ihr hattet am Wochenende alle Wettkämpfe. Erzählt in einem Satz: Wie lief es?", do: ["Zwei bis drei Schüler drannehmen, möglichst aus jeder Sportart einen."] }],
-  ["zuhoeren", { say: "Am Ende der Stunde schreibt ihr euer Wochenende auf – mit allen Zeitformen, die ihr kennt. Vorher schauen wir uns an, wie das bei einer Judoka aussieht. Heft auf, Datum, Überschrift: Welche Zeitform wann?" }],
+  ["zuhoeren", { say: "Am Ende der Stunde schreibt ihr euer Wochenende auf – mit allen Zeitformen, die ihr kennt. Vorher schauen wir uns an, wie das bei einem Gewichtheber aussieht. Heft auf, Datum, Überschrift: Welche Zeitform wann?" }],
 ]));
 
 // ---------- Phase 1 ----------
@@ -193,19 +193,19 @@ const u = (x) => n(x, { u: true, bold: true });
 const lab = (x) => t(x + "   ", { size: 16, color: MUTED, bold: true });
 doc.push(phase("1", "Mustertext am Zeitstrahl", 9));
 doc.push(...steps([
-  ["tafel", { say: "Stifte liegen. Links hängen sieben Sätze einer Judoka – durcheinander. Wer drankommt, hängt einen Streifen an die richtige Stelle am Zeitstrahl, markiert die Verbformen und sagt, woran er es erkennt. Alle prüfen mit.", board: board("Mitte · Zeitstrahl mit dem Mustertext (Lösung)", [
-    bl([lab("vorher"), n("Vor dem Turnier "), r("hatte"), n(" ich wochenlang hart "), y("trainiert"), n(".")], { after: 10 }),
+  ["tafel", { say: "Stifte liegen. Links hängen sieben Sätze eines Gewichthebers – durcheinander. Wer drankommt, hängt einen Streifen an die richtige Stelle am Zeitstrahl, markiert die Verbformen und sagt, woran er es erkennt. Alle prüfen mit.", board: board("Mitte · Zeitstrahl mit dem Mustertext (Lösung)", [
+    bl([lab("vorher"), n("Vor dem Wettkampf "), r("hatte"), n(" ich wochenlang hart "), y("trainiert"), n(".")], { after: 10 }),
     bl([lab("vorher"), n("Am Freitag "), r("waren"), n(" wir mit dem Team nach Leipzig "), y("gefahren"), n(".")], { after: 50 }),
-    bl([lab("Vergangenheit"), n("Am Samstag "), u("kämpfte"), n(" ich in der Klasse bis 50 Kilo.")], { after: 10 }),
-    bl([lab("Vergangenheit"), n("Im Finale "), u("verlor"), n(" ich nur knapp.")], { after: 10 }),
-    bl([lab("Vergangenheit"), n("Danach "), u("sagte"), n(" mein Trainer: „Du "), r("hast"), n(" stark "), y("gekämpft"), n("!“")], { after: 50 }),
+    bl([lab("Vergangenheit"), n("Im Reißen "), u("schaffte"), n(" ich 50 Kilo.")], { after: 10 }),
+    bl([lab("Vergangenheit"), n("Im Stoßen "), u("hob"), n(" ich 62 Kilo.")], { after: 10 }),
+    bl([lab("Vergangenheit"), n("Danach "), u("sagte"), n(" mein Trainer: „Du "), r("hast"), n(" super "), y("gehoben"), n("!“")], { after: 50 }),
     bl([lab("jetzt"), n("Heute "), u("analysiere"), n(" ich mit ihm das Video.")], { after: 50 }),
-    bl([lab("Zukunft"), n("Beim nächsten Turnier "), r("werde"), n(" ich früher "), b("angreifen"), n(".")], { after: 0 }),
+    bl([lab("Zukunft"), n("Beim nächsten Wettkampf "), r("werde"), n(" ich 65 Kilo "), b("stoßen"), n(".")], { after: 0 }),
   ]), do: [
-    "Begründung über die Zeitangabe und die Verbform einfordern: „Vor dem Turnier – und hatte + trainiert, das war vorher.“",
-    "Die beiden vorher-Sätze dürfen getauscht hängen, ebenso Samstag/Finale in sinnvoller Reihenfolge.",
+    "Begründung über die Zeitangabe und die Verbform einfordern: „Vor dem Wettkampf – und hatte + trainiert, das war vorher.“",
+    "Die beiden vorher-Sätze dürfen getauscht hängen. Reißen kommt im Wettkampf vor dem Stoßen.",
   ] }],
-  ["zuhoeren", { say: "Stifte liegen. Schaut auf den Trainer-Satz: Da stehen zwei Zeitformen in einem Satz. Wer erzählt, schreibt im Präteritum – sagte. Wer spricht, wie der Trainer, nimmt das Perfekt – hast gekämpft.", do: ["Der Trainer-Satz hängt im Abschnitt Vergangenheit an der Grenze zwischen Präteritum und Perfekt (die Karten kommen in Phase 2 darüber)."] }],
+  ["zuhoeren", { say: "Stifte liegen. Schaut auf den Trainer-Satz: Da stehen zwei Zeitformen in einem Satz. Wer erzählt, schreibt im Präteritum – sagte. Wer spricht, wie der Trainer, nimmt das Perfekt – hast gehoben.", do: ["Der Trainer-Satz hängt im Abschnitt Vergangenheit an der Grenze zwischen Präteritum und Perfekt (die Karten kommen in Phase 2 darüber)."] }],
 ]));
 
 // ---------- Phase 2 ----------
@@ -218,7 +218,7 @@ doc.push(...steps([
     bl([lab("Zukunft"), N("Futur I", { bold: true, color: NAVY }), n("   "), r("werde"), n(" + "), b("Infinitiv")], { after: 0 }),
   ]), do: [
     "Reihenfolge: erst die fünf Zeitform-Karten, dann die fünf Bauplan-Karten. Jede Karte ein anderer Schüler – zehn Schüler sind an der Tafel.",
-    "Begründungsmuster: „Präteritum, weil kämpfte nur ein finites Verb ist – ohne Hilfsverb.“ · „hatte/war + Partizip II, weil hatte … trainiert.“",
+    "Begründungsmuster: „Präteritum, weil hob nur ein finites Verb ist – ohne Hilfsverb.“ · „hatte/war + Partizip II, weil hatte … trainiert.“",
     "Nach jeder Karte kurz warten, bis alle eingetragen haben. In der Tabelle reicht ein Beispielsatz pro Zeile.",
   ] }],
   ["kontrolle", { say: "Stift hinlegen. Lest unten auf dem Schnipsel „Wofür?“ und „Test“. Wann ist es passiert? Welches Hilfsverb steht da? Damit findet ihr jede Zeitform.", do: ["Ein Schüler liest den Test laut vor und wendet ihn auf einen Satz an der Tafel an."] }],
