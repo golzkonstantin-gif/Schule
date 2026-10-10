@@ -150,7 +150,7 @@ function phase(nr, title, min) {
 // ================================================================
 // Druckvorlage „Welche Zeitform wann?“
 // Seite 1: Tabelle „Die Zeitformen im Überblick“ (2 pro A4)
-// Seite 2: Exit-Ticket „Mein Wochenende in fünf Zeitformen“ als Schnipsel mit Formulierungshilfen (2 pro A4) – geschrieben wird auf eigenem Papier
+// Seite 2: Exit-Ticket „Mein Wochenende in fünf Zeitformen“ mit kurzen Formulierungshilfen und Schreiblinien (2 pro A4)
 // ab Seite 3: Mustertext (7 Satzstreifen), 5 Zeitform-Karten, 5 Bauplan-Karten (Großformat, 2 pro A4 quer)
 // ================================================================
 const { PageOrientation } = require("docx");
@@ -189,50 +189,33 @@ function slipTab() {
 }
 
 // ---------- Schnipsel 2: Exit-Ticket ----------
-const lineTable = (n) => table([IW], Array.from({ length: n }, () => row([cell(p(t(""), { after: 0 }), { w: IW, borders: { top: none, left: none, right: none, bottom: solid("9AA3B5", 6) } })], 620, HeightRule.EXACT)));
+const lineTable = (n) => table([IW], Array.from({ length: n }, () => row([cell(p(t(""), { after: 0 }), { w: IW, borders: { top: none, left: none, right: none, bottom: solid("9AA3B5", 6) } })], 540, HeightRule.EXACT)));
 function slipExit() {
-  const f = 18;
+  const f = 19;
   const h = (x) => s(x, { size: f });
   const R = (x) => s(x, { size: f, bold: true, color: C.hv });
   const Y = (x) => s(x, { size: f, bold: true, color: "C98A1E" });
   const B = (x) => s(x, { size: f, bold: true, color: C.inf });
   const U = (x) => s(x, { size: f, bold: true, u: true });
-  const dot = () => s("   ·   ", { size: f, color: gray });
-  const EW = [2350, IW - 2350];
+  const EW = [3800, IW - 3800];
   const eb = allBorders(solid("B9C6E8", 6));
-  const lineP = (runs) => p(runs, { after: 20 });
-  const hrow = (name, wann, bau, lines) => row([
-    cell([p(t(name, { bold: true, size: 20, color: NAVY, font: "Cambria" }), { after: 10 }), p(t(wann, { size: 16, color: MUTED }), { after: 10 }), p(bau, { after: 0 })], { w: EW[0], fill: LIGHT, borders: eb, valign: VerticalAlign.TOP, m: 70 }),
-    cell(lines.map(lineP), { w: EW[1], borders: eb, valign: VerticalAlign.TOP, m: 70 }),
+  const bt = (x, c) => t(x, { size: 16, bold: true, color: c || MUTED });
+  const hrow = (name, bau, runs) => row([
+    cell(p([t(name + "  ", { bold: true, size: 19, color: NAVY, font: "Cambria" }), ...bau], { after: 0 }), { w: EW[0], fill: LIGHT, borders: eb, m: 50 }),
+    cell(p(runs, { after: 0 }), { w: EW[1], borders: eb, m: 50 }),
   ]);
-  const bt = (x, c) => t(x, { size: 16, bold: true, color: c || "333333" });
   return slip([
-    p([t("Exit-Ticket: Formulierungshilfen", { font: "Cambria", bold: true, size: 28, color: NAVY })], { after: 80 }),
-    p([s("Schreibe auf ein "), sb("eigenes Blatt"), s(" (Name oben rechts) "), sb("5–7 Sätze"), s(" über deinen Wettkampf am Wochenende – nach dem Muster an der Tafel. Jede Zeitform kommt "), sb("mindestens einmal"), s(" vor. Du kannst die Vorschläge übernehmen und ergänzen. Am Ende gibst du das Blatt ab.")], { after: 100 }),
+    p([t("Exit-Ticket: Mein Wochenende", { font: "Cambria", bold: true, size: 28, color: NAVY }), t("          Name: ____________________", { size: 18, color: MUTED })], { after: 70 }),
+    p([s("Schreibe "), sb("5–7 Sätze"), s(" über deinen Wettkampf am Wochenende – nach dem Muster an der Tafel. Jede Zeitform kommt "), sb("mindestens einmal"), s(" vor.")], { after: 80 }),
     table(EW, [
-      hrow("Plusquamperfekt", "vorher", [bt("hatte/war", C.hv), bt(" + "), bt("Partizip II", "C98A1E")], [
-        [h("Vor dem Wettkampf "), R("hatte"), h(" ich wochenlang hart "), Y("trainiert"), h("."), dot(), h("Am Abend davor "), R("hatte"), h(" ich kaum "), Y("geschlafen"), h(".")],
-        [h("Am Freitag "), R("waren"), h(" wir mit dem Team nach … "), Y("gefahren"), h("."), dot(), h("Mein Trainer "), R("hatte"), h(" mir noch einen Tipp "), Y("gegeben"), h(".")],
-        [h("Ich "), R("hatte"), h(" mich lange "), Y("aufgewärmt"), h("."), dot(), h("Wir "), R("waren"), h(" früh "), Y("aufgestanden"), h(".")],
-      ]),
-      hrow("Präteritum", "Vergangenheit – erzählt", [bt("finites Verb im Präteritum")], [
-        [h("Am Samstag "), U("kämpfte"), h(" / "), U("spielte"), h(" / "), U("hob"), h(" ich …"), dot(), h("Im ersten Kampf / In der ersten Halbzeit / Im ersten Versuch …")],
-        [h("Am Anfang "), U("war"), h(" ich sehr nervös."), dot(), h("Dann "), U("warf"), h(" / "), U("traf"), h(" / "), U("stieß"), h(" ich …"), dot(), h("Am Ende "), U("gewann"), h(" / "), U("verlor"), h(" ich …")],
-      ]),
-      hrow("Perfekt", "Vergangenheit – gesprochen (wörtliche Rede)", [bt("habe/bin", C.hv), bt(" + "), bt("Partizip II", "C98A1E")], [
-        [h("Mein Trainer sagte: „Du "), R("hast"), h(" stark "), Y("gekämpft"), h("!“"), dot(), h("Mein Team rief: „Wir "), R("haben"), h(" "), Y("gewonnen"), h("!“")],
-        [h("Ich rief meinen Eltern zu: „Ich "), R("bin"), h(" Zweite(r) "), Y("geworden"), h("!“"), dot(), h("Der Kampfrichter sagte: „Das "), R("hast"), h(" du gut "), Y("gemacht"), h(".“")],
-      ]),
-      hrow("Präsens", "jetzt", [bt("finites Verb im Präsens")], [
-        [h("Heute "), U("bin"), h(" ich noch müde."), dot(), h("Heute "), U("tut"), h(" mir … weh."), dot(), h("Heute "), U("analysiere"), h(" ich mit meinem Trainer das Video.")],
-      ]),
-      hrow("Futur I", "Zukunft", [bt("werde", C.hv), bt(" + "), bt("Infinitiv", C.inf)], [
-        [h("Beim nächsten Wettkampf "), R("werde"), h(" ich früher "), B("angreifen"), h(" / besser "), B("verteidigen"), h("."), dot(), h("Ich "), R("werde"), h(" noch mehr "), B("trainieren"), h(".")],
-        [h("Nächstes Mal "), R("werde"), h(" ich … "), B("schaffen"), h("."), dot(), h("Wir "), R("werden"), h(" die Abwehr "), B("verbessern"), h(".")],
-      ]),
+      hrow("Plusquamperfekt", [bt("hatte/war", C.hv), bt(" + "), bt("Partizip II", "C98A1E")], [h("Vor dem Wettkampf "), R("hatte"), h(" ich wochenlang "), Y("trainiert"), h(".")]),
+      hrow("Präteritum", [bt("erzählt")], [h("Am Samstag "), U("kämpfte"), h(" / "), U("spielte"), h(" / "), U("hob"), h(" ich …")]),
+      hrow("Perfekt", [bt("habe/bin", C.hv), bt(" + "), bt("Partizip II", "C98A1E")], [h("Mein Trainer sagte: „Du "), R("hast"), h(" stark "), Y("gekämpft"), h("!“")]),
+      hrow("Präsens", [bt("jetzt")], [h("Heute "), U("bin"), h(" ich noch müde.")]),
+      hrow("Futur I", [bt("werde", C.hv), bt(" + "), bt("Infinitiv", C.inf)], [h("Beim nächsten Wettkampf "), R("werde"), h(" ich früher "), B("angreifen"), h(".")]),
     ]),
-    p([sb("Verben  ", { size: 18, color: NAVY }), s("Judo: kämpfen – kämpfte, werfen – warf, halten – hielt  ·  Handball: werfen – warf, treffen – traf, spielen – spielte  ·  Gewichtheben: heben – hob, reißen – riss, stoßen – stieß", { size: 18 })], { before: 80, after: 60 }),
-    p([sb("Prüfe vor dem Abgeben:  ", { size: 18 }), s("☐ alle fünf Zeitformen drin   ☐ Hilfsverb rot, Partizip II gelb, Infinitiv blau markiert   ☐ Präteritum-Verben unterstrichen", { size: 18 }), s("     Fertig? Stift hinlegen.", { size: 18, italics: true, color: MUTED })], { before: 100, after: 0 }),
+    lineTable(7),
+    p([s("☐ alle fünf Zeitformen drin   ☐ Hilfsverb rot, Partizip II gelb, Infinitiv blau markiert", { size: 18 }), s("     Fertig? Stift hinlegen.", { size: 18, italics: true, color: MUTED })], { before: 100, after: 0 }),
   ]);
 }
 
