@@ -215,10 +215,10 @@ doc.push(table(VW, [
   ]),
   vrow("25′–40′", "Anwendung: eigener Text (Exit-Ticket)", [
     L("teilt das Exit-Ticket aus; Auftrag: „Schreibt 5–7 Sätze über euren Wettkampf am Wochenende – nach dem Muster an der Tafel. Jede Zeitform kommt mindestens einmal vor.“ Geht herum und unterstützt."),
-    SS("schreiben einen zusammenhängenden Text, gestützt durch Satzanfänge je Abschnitt, Präteritumformen der Sportverben und den Mustertext an der Tafel; markieren die Verbformen und haken die Checkliste ab."),
-  ], ["EA"], ["Exit-Ticket mit einem Formulierungsvorschlag je Zeitform (Bildung farbig hervorgehoben) und Schreiblinien", "Tafel (Mustertext und Übersicht)"], [
+    SS("schreiben einen zusammenhängenden Text, gestützt durch Satzanfänge je Zeitform und den Mustertext an der Tafel; markieren die Verbformen und haken die Checkliste ab."),
+  ], ["EA"], ["Exit-Ticket mit Satzanfängen je Zeitform (Bildung farbig hervorgehoben) und Schreiblinien", "Tafel (Mustertext und Übersicht)"], [
     "Transfer: Die Schüler machen den Mustertext mit eigenem Inhalt nach (TZ 4).",
-    "Ein Formulierungsvorschlag je Zeitform mit farbig hervorgehobener Bildung und der Mustertext stützen schwächere Schreiber; Checkliste zur Selbstkontrolle.",
+    "Satzanfänge statt fertiger Sätze: kein Abschreiben, Lenkung auf Inhalte (Vorbereitung, Ablauf, wörtliche Rede, Befinden, Ziele), Bildung farbig sichtbar.",
     "Das Exit-Ticket zeigt der Lehrkraft den Lernstand jedes Einzelnen – Grundlage für die nächste Stunde.",
   ]),
   vrow("40′–45′", "Sicherung", [

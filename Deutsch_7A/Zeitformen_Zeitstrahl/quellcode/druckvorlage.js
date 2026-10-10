@@ -159,8 +159,8 @@ const IW = PW - 300; // Innenbreite im Schnipsel
 const gray = "9AA3B5";
 const s = (x, o = {}) => t(x, Object.assign({ size: 21 }, o));
 const sb = (x, o = {}) => s(x, Object.assign({ bold: true }, o));
-const scissors = () => p(t("✂ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -", { color: gray, size: 16 }), { before: 60, after: 60, align: AlignmentType.CENTER });
-const slip = (children) => table([PW], [row([cell(children, { w: PW, borders: allBorders(dashed), m: 130, ml: 150, valign: VerticalAlign.TOP })])]);
+const scissors = () => p(t("✂ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -", { color: gray, size: 16 }), { before: 20, after: 20, align: AlignmentType.CENTER });
+const slip = (children) => table([PW], [row([cell(children, { w: PW, borders: allBorders(dashed), m: 100, ml: 150, valign: VerticalAlign.TOP })])]);
 const slipHead = (title) => p([t(title, { font: "Cambria", bold: true, size: 26, color: NAVY }), t("          Name: ______________________", { size: 18, color: MUTED })], { after: 70 });
 const red = (x, o = {}) => sb(x, Object.assign({ color: C.hv }, o));
 const yel = (x, o = {}) => sb(x, Object.assign({ color: "C98A1E" }, o));
@@ -189,33 +189,53 @@ function slipTab() {
 }
 
 // ---------- Schnipsel 2: Exit-Ticket ----------
-const lineTable = (n) => table([IW], Array.from({ length: n }, () => row([cell(p(t(""), { after: 0 }), { w: IW, borders: { top: none, left: none, right: none, bottom: solid("9AA3B5", 6) } })], 540, HeightRule.EXACT)));
+const lineTable = (n) => table([IW], Array.from({ length: n }, () => row([cell(p(t(""), { after: 0 }), { w: IW, borders: { top: none, left: none, right: none, bottom: solid("9AA3B5", 6) } })], 480, HeightRule.EXACT)));
 function slipExit() {
-  const f = 19;
+  const f = 18;
   const h = (x) => s(x, { size: f });
   const R = (x) => s(x, { size: f, bold: true, color: C.hv });
-  const Y = (x) => s(x, { size: f, bold: true, color: "C98A1E" });
-  const B = (x) => s(x, { size: f, bold: true, color: C.inf });
-  const U = (x) => s(x, { size: f, bold: true, u: true });
-  const EW = [3800, IW - 3800];
+  const P2 = () => s("_______", { size: f, bold: true, color: "E8A33D" });
+  const INF = () => s("_______", { size: f, bold: true, color: C.inf });
+  const dot = () => s("  ·  ", { size: f, color: gray });
+  const EW = [2500, IW - 2500];
   const eb = allBorders(solid("B9C6E8", 6));
-  const bt = (x, c) => t(x, { size: 16, bold: true, color: c || MUTED });
-  const hrow = (name, bau, runs) => row([
-    cell(p([t(name + "  ", { bold: true, size: 19, color: NAVY, font: "Cambria" }), ...bau], { after: 0 }), { w: EW[0], fill: LIGHT, borders: eb, m: 50 }),
-    cell(p(runs, { after: 0 }), { w: EW[1], borders: eb, m: 50 }),
+  const bt = (x, c) => t(x, { size: 15, bold: true, color: c || MUTED });
+  const join = (items) => items.flatMap((it, i) => (i ? [dot(), ...it] : it));
+  const hrow = (name, bau, inhalt, items) => row([
+    cell([p([t(name, { bold: true, size: 19, color: NAVY, font: "Cambria" })], { after: 0 }), p(bau, { after: 0 }), p(t(inhalt, { size: 15, italics: true, color: MUTED }), { after: 0 })], { w: EW[0], fill: LIGHT, borders: eb, m: 40, valign: VerticalAlign.TOP }),
+    cell(p(join(items), { after: 0 }), { w: EW[1], borders: eb, m: 50 }),
   ]);
   return slip([
-    p([t("Exit-Ticket: Mein Wochenende", { font: "Cambria", bold: true, size: 28, color: NAVY }), t("          Name: ____________________", { size: 18, color: MUTED })], { after: 70 }),
-    p([s("Schreibe "), sb("5–7 Sätze"), s(" über deinen Wettkampf am Wochenende – nach dem Muster an der Tafel. Jede Zeitform kommt "), sb("mindestens einmal"), s(" vor.")], { after: 80 }),
+    p([t("Exit-Ticket: Mein Wochenende", { font: "Cambria", bold: true, size: 26, color: NAVY }), t("          Name: ____________________", { size: 18, color: MUTED })], { after: 40 }),
+    p([s("Schreibe "), sb("5–7 Sätze"), s(" über deinen Wettkampf – jede Zeitform "), sb("mindestens einmal"), s(". Farbige Linie = hier kommt Partizip II bzw. Infinitiv hin. Platz reicht nicht? Rückseite!", { size: 19 })], { after: 60 }),
     table(EW, [
-      hrow("Plusquamperfekt", [bt("hatte/war", C.hv), bt(" + "), bt("Partizip II", "C98A1E")], [h("Vor dem Wettkampf "), R("hatte"), h(" ich wochenlang "), Y("trainiert"), h(".")]),
-      hrow("Präteritum", [bt("erzählt")], [h("Am Samstag "), U("kämpfte"), h(" / "), U("spielte"), h(" / "), U("hob"), h(" ich …")]),
-      hrow("Perfekt", [bt("habe/bin", C.hv), bt(" + "), bt("Partizip II", "C98A1E")], [h("Mein Trainer sagte: „Du "), R("hast"), h(" stark "), Y("gekämpft"), h("!“")]),
-      hrow("Präsens", [bt("jetzt")], [h("Heute "), U("bin"), h(" ich noch müde.")]),
-      hrow("Futur I", [bt("werde", C.hv), bt(" + "), bt("Infinitiv", C.inf)], [h("Beim nächsten Wettkampf "), R("werde"), h(" ich früher "), B("angreifen"), h(".")]),
+      hrow("Plusquamperfekt", [bt("hatte/war", C.hv), bt(" + "), bt("Partizip II", "C98A1E")], "Vorbereitung", [
+        [h("Vor dem Wettkampf "), R("hatte"), h(" ich … "), P2()],
+        [h("Wochenlang "), R("hatte"), h(" ich … "), P2()],
+        [h("Am Abend davor "), R("hatte"), h(" ich … "), P2()],
+        [h("Am Morgen "), R("waren"), h(" wir … "), P2()],
+      ]),
+      hrow("Präteritum", [bt("finites Verb im Präteritum")], "Ablauf und Ergebnis", [
+        [h("In der Halle …")], [h("Im ersten Kampf / In der ersten Halbzeit / Im ersten Versuch …")], [h("Danach …")], [h("Am Ende …")],
+      ]),
+      hrow("Perfekt", [bt("habe/bin", C.hv), bt(" + "), bt("Partizip II", "C98A1E")], "Was jemand gesagt hat", [
+        [h("Mein Trainer sagte: „Du "), R("hast"), h(" … "), P2(), h("“")],
+        [h("Mein Team rief: „Wir "), R("haben"), h(" … "), P2(), h("“")],
+        [h("Meine Eltern fragten: „"), R("Hast"), h(" du … "), P2(), h("?“")],
+        [h("Ich antwortete: „Ich "), R("bin"), h(" … "), P2(), h("“")],
+      ]),
+      hrow("Präsens", [bt("finites Verb im Präsens")], "Wie es dir jetzt geht", [
+        [h("Heute …")], [h("Jetzt fühle ich mich …")], [h("Mein Körper …")], [h("Im Moment …")],
+      ]),
+      hrow("Futur I", [bt("werde", C.hv), bt(" + "), bt("Infinitiv", C.inf)], "Deine Ziele", [
+        [h("Beim nächsten Wettkampf "), R("werde"), h(" ich … "), INF()],
+        [h("Im Training "), R("werde"), h(" ich … "), INF()],
+        [h("Ab morgen "), R("werde"), h(" ich … "), INF()],
+        [h("Wir "), R("werden"), h(" … "), INF()],
+      ]),
     ]),
-    lineTable(7),
-    p([s("☐ alle fünf Zeitformen drin   ☐ Hilfsverb rot, Partizip II gelb, Infinitiv blau markiert", { size: 18 }), s("     Fertig? Stift hinlegen.", { size: 18, italics: true, color: MUTED })], { before: 100, after: 0 }),
+    lineTable(6),
+    p([s("☐ alle fünf Zeitformen drin   ☐ Hilfsverb rot, Partizip II gelb, Infinitiv blau markiert", { size: 18 }), s("     Fertig? Stift hinlegen.", { size: 18, italics: true, color: MUTED })], { before: 80, after: 0 }),
   ]);
 }
 
