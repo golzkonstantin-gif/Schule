@@ -27,6 +27,7 @@
 - [x] Weitere Tempora: Präteritum, Plusquamperfekt eingeführt (Stand 09.10.; Futur II später)
 - [ ] Satzklammer als eigener Merksatz – erst am Schluss, wenn alle Tempora behandelt sind (Entscheidung der Lehrkraft, 06.10.)
 - [ ] Danach als Anwendung: der Zeitformen-Baukasten (`Zeitformen_bauen/`)
+- [ ] Lerntheke als Methode einmal ohne Besuch einüben (Idee: Pflicht- und Wahlschnipsel auf einem Blatt, Lösungen am Pult)
 
 ## Langfristige Idee: Satzklammer als roter Faden
 
@@ -170,6 +171,19 @@ Die Lehrkraft möchte das weiterverfolgen, noch ohne Material. Die Satzklammer (
   - Satzstreifen am Zeitstrahl wieder einsetzen.
   - Die nächste Stunde beginnt mit Ü11 „Mein erster Wettkampf“ (Schreibrahmen ist gedruckt), danach Partner-Check und Reflexion der Zeitformen im eigenen Text.
 - **Hospitationsfeedback:** –
+
+### Einzelstunde „Welche Zeitform wann?“ (geplant, 45 Min., Unterrichtsbesuch: Orientierungshospitation)
+- **Material:** `Zeitformen_Zeitstrahl/` (Verlaufsplan, Tafelskript, Druckvorlage: Zeitstrahl-Schnipsel und Ü12 je 2 pro A4, 12 Streifen im Großformat für die Tafel)
+- **Bezug zur letzten Stunde:** Die Satzstreifen sind diesmal im Großformat gedruckt, die Schnipsel haben große Felder. Alle Schüler hatten am Wochenende Wettkämpfe, deshalb startet die Stunde dort. Ü11 wird zur Hausaufgabe über genau dieses Wochenende.
+- **Entscheidung der Lehrkraft:** Die zuerst überlegte Lerntheke ist gestrichen, weil die Klasse die Methode noch nicht kennt. Stattdessen gibt es einen integrativen Zugang.
+- **Inhalt:**
+  - Einstieg: Die Schüler erzählen mündlich vom Wochenende, erwartbar im Perfekt.
+  - Magnet-Kette: 8 Satzstreifen aus Vereinszeitung, Sprachnachricht und Post werden am Zeitstrahl sortiert und begründet, der Zeitstrahl-Schnipsel wird mitgeschrieben.
+  - Reflexion über die Etiketten (geschrieben: Präteritum, gesprochen: Perfekt), danach Merksatz 10 „Welche Zeitform wann?“.
+  - Ü12: Fehlertext „Bericht für die Vereinszeitung“, danach Kreide-Kette an den Fehlerstreifen.
+  - Hausaufgabe: Bericht über das Wochenende (Schreibrahmen Ü11).
+- **Rückmeldung der Lehrkraft:** *(steht noch aus)*
+- **Hospitationsfeedback:** *(steht noch aus)*
 
 ## Hospitationsfeedback (gesammelt)
 
