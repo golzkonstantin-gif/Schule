@@ -243,13 +243,13 @@ function slipExit() {
 const LWS = 16838 - 1200;
 const big = (x, o = {}) => t(x, Object.assign({ font: "Cambria", size: 96, bold: true, color: "111111" }, o));
 const STRIPS = [
-  ["MUSTERTEXT", [big("Am Samstag kämpfte ich in der Klasse bis 50 Kilo.")]],
-  ["MUSTERTEXT", [big("Beim nächsten Turnier werde ich früher angreifen.")]],
-  ["MUSTERTEXT", [big("Vor dem Turnier hatte ich wochenlang hart trainiert.")]],
-  ["MUSTERTEXT", [big("Danach sagte mein Trainer: „Du hast stark gekämpft!“")]],
-  ["MUSTERTEXT", [big("Heute analysiere ich mit ihm das Video.")]],
-  ["MUSTERTEXT", [big("Am Freitag waren wir mit dem Team nach Leipzig gefahren.")]],
-  ["MUSTERTEXT", [big("Im Finale verlor ich nur knapp.")]],
+  ["#3", [big("Am Samstag kämpfte ich in der Klasse bis 50 Kilo.")]],
+  ["#7", [big("Beim nächsten Turnier werde ich früher angreifen.")]],
+  ["#1", [big("Vor dem Turnier hatte ich wochenlang hart trainiert.")]],
+  ["#5", [big("Danach sagte mein Trainer: „Du hast stark gekämpft!“")]],
+  ["#6", [big("Heute analysiere ich mit ihm das Video.")]],
+  ["#2", [big("Am Freitag waren wir mit dem Team nach Leipzig gefahren.")]],
+  ["#4", [big("Im Finale verlor ich nur knapp.")]],
   ["ZEITFORM", [big("Plusquamperfekt", { size: 120, color: NAVY })]],
   ["ZEITFORM", [big("Präteritum", { size: 120, color: NAVY })]],
   ["ZEITFORM", [big("Perfekt", { size: 120, color: NAVY })]],
@@ -262,7 +262,7 @@ const STRIPS = [
   ["BAUPLAN", [big("werde", { color: C.hv }), big(" + "), big("Infinitiv", { color: C.inf })]],
 ];
 const strip = ([lab, runs]) => table([LWS], [row([cell([
-  p([t(lab, { size: 32, color: MUTED, bold: true })], { after: 120 }),
+  lab.startsWith("#") ? p([t(lab.slice(1), { size: 18, color: "A9B0BE" })], { after: 120 }) : p([t(lab, { size: 32, color: MUTED, bold: true })], { after: 120 }),
   p(runs, { after: 0, align: AlignmentType.CENTER }),
 ], { w: LWS, borders: allBorders(dashed), m: 200, ml: 260, valign: VerticalAlign.CENTER })], 5050, HeightRule.EXACT)]);
 const strips = [];
