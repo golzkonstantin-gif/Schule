@@ -173,15 +173,23 @@ Die Lehrkraft möchte das weiterverfolgen, noch ohne Material. Die Satzklammer (
 - **Hospitationsfeedback:** –
 
 ### Einzelstunde „Welche Zeitform wann?“ (geplant, 45 Min., Unterrichtsbesuch: Orientierungshospitation)
-- **Material:** `Zeitformen_Zeitstrahl/` (Verlaufsplan, Tafelskript, Druckvorlage: Zeitstrahl-Schnipsel und Ü12 je 2 pro A4, 12 Streifen im Großformat für die Tafel)
-- **Bezug zur letzten Stunde:** Die Satzstreifen sind diesmal im Großformat gedruckt, die Schnipsel haben große Felder. Alle Schüler hatten am Wochenende Wettkämpfe, deshalb startet die Stunde dort. Ü11 wird zur Hausaufgabe über genau dieses Wochenende.
-- **Entscheidung der Lehrkraft:** Die zuerst überlegte Lerntheke ist gestrichen, weil die Klasse die Methode noch nicht kennt. Stattdessen gibt es einen integrativen Zugang.
+- **Material:** `Zeitformen_Zeitstrahl/`
+  - Verlaufsplan und Tafelskript.
+  - Druckvorlage: Tabelle „Die Zeitformen im Überblick“ und Exit-Ticket, je 2 pro A4.
+  - Für die Tafel im Großformat: 7 Streifen Mustertext, 5 Zeitform-Karten und 5 Bauplan-Karten.
+- **Bezug zur letzten Stunde:** Das Ordnen mit Satzstreifen am Zeitstrahl hat die Klasse gut verstanden, deshalb kommt die Methode wieder. Die Streifen sind diesmal im Großformat, die Schnipsel haben große Felder. Alle Schüler hatten am Wochenende Wettkämpfe, darüber schreiben sie am Ende.
+- **Entscheidungen der Lehrkraft:**
+  - Keine Lerntheke, weil die Klasse die Methode noch nicht kennt.
+  - Keine Fehlersätze an der Tafel, weil es nur um die zeitliche Struktur geht.
+  - Den Unterschied Präteritum (erzählt) und Perfekt (gesprochen) gibt die Lehrkraft vor.
+  - Die Übersicht entsteht aus gedruckten Karten, die in der Kreide-Kette umgestellt werden. Gleichzeitig ergänzt die Klasse eine Tabelle zum Einkleben.
+  - Den eigenen Text schreibt die Klasse als Exit-Ticket.
 - **Inhalt:**
-  - Einstieg: Die Schüler erzählen mündlich vom Wochenende, erwartbar im Perfekt.
-  - Magnet-Kette: 8 Satzstreifen aus Vereinszeitung, Sprachnachricht und Post werden am Zeitstrahl sortiert und begründet, der Zeitstrahl-Schnipsel wird mitgeschrieben.
-  - Reflexion über die Etiketten (geschrieben: Präteritum, gesprochen: Perfekt), danach Merksatz 10 „Welche Zeitform wann?“.
-  - Ü12: Fehlertext „Bericht für die Vereinszeitung“, danach Kreide-Kette an den Fehlerstreifen.
-  - Hausaufgabe: Bericht über das Wochenende (Schreibrahmen Ü11).
+  - Einstieg mit dem eigenen Wochenende.
+  - Mustertext einer Judoka am Zeitstrahl ordnen (Magnet-Kette). Er enthält alle fünf Zeitformen, das Perfekt in wörtlicher Rede des Trainers.
+  - Die Übersicht entsteht mit Zeitform- und Bauplan-Karten (Kreide-Kette), die Tabelle wird mitgeschrieben.
+  - Exit-Ticket: 5–7 Sätze über das eigene Wochenende mit Satzanfängen und Präteritumformen der Sportverben.
+  - Zwei Texte vorlesen, die Klasse zeigt am Zeitstrahl mit.
 - **Rückmeldung der Lehrkraft:** *(steht noch aus)*
 - **Hospitationsfeedback:** *(steht noch aus)*
 

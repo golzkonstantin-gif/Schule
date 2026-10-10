@@ -149,94 +149,99 @@ function phase(nr, title, min) {
 
 // ================================================================
 // Druckvorlage „Welche Zeitform wann?“
-// Seite 1: Schnipsel Zeitstrahl (2 pro A4) · Seite 2: Ü12 Fehlertext (2 pro A4)
-// ab Seite 3: Satzstreifen und Fehlerstreifen für die Tafel (Großformat, 2 pro A4 quer)
+// Seite 1: Tabelle „Die Zeitformen im Überblick“ (2 pro A4)
+// Seite 2: Exit-Ticket „Mein Wochenende in fünf Zeitformen“ (2 pro A4)
+// ab Seite 3: Mustertext (7 Satzstreifen), 5 Zeitform-Karten, 5 Bauplan-Karten (Großformat, 2 pro A4 quer)
 // ================================================================
 const { PageOrientation } = require("docx");
 const PW = 11906 - 1200;
 const IW = PW - 300; // Innenbreite im Schnipsel
 const gray = "9AA3B5";
-const sz = 22;
-const s = (x, o = {}) => t(x, Object.assign({ size: sz }, o));
+const s = (x, o = {}) => t(x, Object.assign({ size: 21 }, o));
 const sb = (x, o = {}) => s(x, Object.assign({ bold: true }, o));
-const scissors = () => p(t("✂ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -", { color: gray, size: 16 }), { before: 80, after: 80, align: AlignmentType.CENTER });
-const slip = (children) => table([PW], [row([cell(children, { w: PW, borders: allBorders(dashed), m: 140, ml: 150, valign: VerticalAlign.TOP })])]);
-const slipHead = (nr, title) => p([t(nr ? nr + "  " : "", { font: "Cambria", bold: true, size: 26, color: C.hv }), t(title, { font: "Cambria", bold: true, size: 26, color: NAVY }), t("          Name: ______________________", { size: 18, color: MUTED })], { after: 80 });
+const scissors = () => p(t("✂ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -", { color: gray, size: 16 }), { before: 60, after: 60, align: AlignmentType.CENTER });
+const slip = (children) => table([PW], [row([cell(children, { w: PW, borders: allBorders(dashed), m: 130, ml: 150, valign: VerticalAlign.TOP })])]);
+const slipHead = (title) => p([t(title, { font: "Cambria", bold: true, size: 26, color: NAVY }), t("          Name: ______________________", { size: 18, color: MUTED })], { after: 70 });
+const red = (x, o = {}) => sb(x, Object.assign({ color: C.hv }, o));
+const yel = (x, o = {}) => sb(x, Object.assign({ color: "C98A1E" }, o));
+const blu = (x, o = {}) => sb(x, Object.assign({ color: C.inf }, o));
 
-// ---------- Schnipsel 1: Zeitstrahl ----------
-const ZW = [2070, 2070, 2070, 2070, IW - 4 * 2070];
-const zb = allBorders(solid("7A869E", 8));
-const secCell = (x, w, span) => cell(p(t(x, { bold: true, color: "FFFFFF", size: 22 }), { after: 0, align: AlignmentType.CENTER }), { w, fill: NAVY, span, borders: zb });
-const emptyCell = (label, w) => cell(p(t(label, { size: 15, color: gray }), { after: 0 }), { w, borders: zb, valign: VerticalAlign.TOP, m: 50, ml: 80 });
-function slipZeit() {
-  const r = (label, h) => row(ZW.map((w) => emptyCell(label, w)), h, HeightRule.EXACT);
+// ---------- Schnipsel 1: Tabelle ----------
+const TW2 = [2050, 2050, 2650, IW - 6750];
+const tb = allBorders(solid("7A869E", 8));
+const th = (x, w) => cell(p(t(x, { bold: true, color: "FFFFFF", size: 20 }), { after: 0, align: AlignmentType.CENTER }), { w, fill: NAVY, borders: tb });
+const WANN = ["vorher", "Vergangenheit\n(erzählt)", "Vergangenheit\n(gesprochen)", "jetzt", "Zukunft"];
+function slipTab() {
   return slip([
-    slipHead("", "Die Zeitformen am Zeitstrahl"),
-    p([s("Trage für jede Zeitform ihren Namen, den Bauplan und einen Beispielsatz von der Tafel ein. Markiere Hilfsverb "), sb("rot", { color: C.hv }), s(", Partizip II "), sb("gelb", { color: "C98A1E" }), s(", Infinitiv "), sb("blau", { color: C.inf }), s(" und unterstreiche ein finites Verb ohne Hilfsverb.")], { after: 100 }),
-    table(ZW, [
-      row([secCell("vorher", ZW[0]), secCell("Vergangenheit", ZW[1] + ZW[2], 2), secCell("jetzt", ZW[3]), secCell("Zukunft  ▶", ZW[4])], 420),
-      r("Zeitform", 820),
-      r("Bauplan", 1050),
-      r("Beispielsatz", 3500),
+    slipHead("Die Zeitformen im Überblick"),
+    p([s("Ergänze, während die Tafel entsteht: die "), sb("Zeitform"), s(", ihren "), sb("Bauplan"), s(" und einen "), sb("Beispielsatz"), s(" aus dem Text. Markiere Hilfsverb "), red("rot"), s(", Partizip II "), yel("gelb"), s(", Infinitiv "), blu("blau"), s(".")], { after: 80 }),
+    table(TW2, [
+      row([th("Wann?", TW2[0]), th("Zeitform", TW2[1]), th("Bauplan", TW2[2]), th("Beispielsatz aus dem Text", TW2[3])], 380),
+      ...WANN.map((w) => row([
+        cell(w.split("\n").map((x, i) => p(t(x, { bold: i === 0, size: i === 0 ? 20 : 17, color: i === 0 ? NAVY : MUTED }), { after: 0 })), { w: TW2[0], fill: LIGHT, borders: tb, valign: VerticalAlign.CENTER }),
+        cell(p(t(""), { after: 0 }), { w: TW2[1], borders: tb }),
+        cell(p(t(""), { after: 0 }), { w: TW2[2], borders: tb }),
+        cell(p(t(""), { after: 0 }), { w: TW2[3], borders: tb }),
+      ], 1060, HeightRule.EXACT)),
     ]),
+    p([sb("Wofür? ", { size: 19 }), s("Mit den Zeitformen ordnest du, wann etwas passiert. Wer erzählt, schreibt im Präteritum; wer spricht, nimmt das Perfekt.  ", { size: 19 }), sb("Test: ", { size: 19 }), s("Wann ist es passiert? Welches Hilfsverb steht da?", { size: 19 })], { before: 80, after: 0 }),
   ]);
 }
 
-// ---------- Schnipsel 2: Ü12 Fehlertext ----------
-const BER = [
-  "Am Samstag sind unsere Judoka nach Leipzig gefahren.",
-  "Sie hatten sich wochenlang auf das Turnier vorbereitet.",
-  "Im Halbfinale hat eine Judoka mit einem Haltegriff gewonnen.",
-  "Unsere Gewichtheber hatten schon um sechs Uhr losgefahren.",
-  "Im Reißen schaffte einer von ihnen einen neuen Vereinsrekord.",
-  "Die Handballer werften am Sonntag 28 Tore.",
-  "Vorher hatten sie den Siebenmeter lange geübt.",
-];
-function slipFehler() {
-  const step = (i, x) => p([sb(`${i}. `, { color: NAVY, size: 20 }), s(x, { size: 20 })], { after: 20 });
+// ---------- Schnipsel 2: Exit-Ticket ----------
+const lineTable = (n) => table([IW], Array.from({ length: n }, () => row([cell(p(t(""), { after: 0 }), { w: IW, borders: { top: none, left: none, right: none, bottom: solid("9AA3B5", 6) } })], 540, HeightRule.EXACT)));
+function slipExit() {
+  const hint = (label, runs) => p([sb(label + "  ", { size: 18, color: NAVY }), ...runs], { after: 30 });
+  const h = (x) => s(x, { size: 18 });
   return slip([
-    slipHead("Ü12", "Der Bericht für die Vereinszeitung"),
-    step(1, "Lies den Bericht. Ein Teamkollege hat ihn so geschrieben, wie er spricht."),
-    step(2, "Unterstreiche die vier Verbformen, die falsch sind."),
-    step(3, "Schreibe die richtige Form darüber."),
-    step(4, "Begründe einen Fehler im Heft: „… ist falsch, weil …“"),
-    p(t("Starkes Wochenende für unseren Verein", { font: "Cambria", bold: true, size: 24, color: NAVY }), { before: 80, after: 0 }),
-    ...BER.map((x, i) => p([t(`${i + 1}  `, { size: 18, bold: true, color: MUTED }), t(x, { font: "Cambria", size: 24 })], { before: 420, after: 0 })),
-    p([sb("Zusatz: ", { size: 19, color: C.hv }), s("Was hattest du vor deinem Wettkampf gemacht? Schreibe einen Satz im Plusquamperfekt ins Heft.", { size: 19 }), s("   Fertig? Stift hinlegen.", { size: 19, italics: true, color: MUTED })], { before: 200, after: 0 }),
+    p([t("Exit-Ticket: Mein Wochenende in fünf Zeitformen", { font: "Cambria", bold: true, size: 26, color: NAVY }), t("     Name: ______________", { size: 18, color: MUTED })], { after: 60 }),
+    p([s("Schreibe "), sb("5–7 Sätze"), s(" über deinen Wettkampf am Wochenende – nach dem Muster an der Tafel. Jede Zeitform kommt "), sb("mindestens einmal"), s(" vor.")], { after: 70 }),
+    hint("vorher", [h("Vor dem Wettkampf hatte ich …  ·  Am Freitag war(en) wir …")]),
+    hint("Vergangenheit", [h("Am Samstag …  ·  Im ersten Kampf / In der zweiten Halbzeit / Im ersten Versuch …  ·  Mein Trainer sagte: „Du hast …!“")]),
+    hint("jetzt · Zukunft", [h("Heute …  ·  Beim nächsten Wettkampf werde ich …")]),
+    hint("Verben", [h("Judo: kämpfen – kämpfte, werfen – warf, halten – hielt  ·  Handball: werfen – warf, treffen – traf, spielen – spielte  ·  Gewichtheben: heben – hob, reißen – riss, stoßen – stieß")]),
+    lineTable(7),
+    p([s("☐ alle fünf Zeitformen drin   ☐ Hilfsverb rot, Partizip II gelb, Infinitiv blau markiert", { size: 18 }), s("     Fertig? Stift hinlegen.", { size: 18, italics: true, color: MUTED })], { before: 100, after: 0 }),
   ]);
 }
 
-// ---------- Streifen für die Tafel ----------
+// ---------- Großformat für die Tafel ----------
 const LWS = 16838 - 1200;
+const big = (x, o = {}) => t(x, Object.assign({ font: "Cambria", size: 96, bold: true, color: "111111" }, o));
 const STRIPS = [
-  ["VEREINSZEITUNG", "Die Judoka hatten wochenlang für das Turnier trainiert."],
-  ["SPRACHNACHRICHT", "Ich habe im Finale Bronze geholt!"],
-  ["VEREINSZEITUNG", "Im Stoßen hob unsere Gewichtheberin 75 Kilo."],
-  ["POST", "Beim nächsten Turnier werde ich den Haltegriff besser verteidigen."],
-  ["VEREINSZEITUNG", "Die Handballer waren schon am Freitag angereist."],
-  ["SPRACHNACHRICHT", "Wir sind erst um zehn Uhr nach Hause gekommen."],
-  ["POST", "Heute analysieren wir mit dem Trainer das Video."],
-  ["VEREINSZEITUNG", "Unsere Handballer kämpften bis zur letzten Sekunde."],
-  ["BERICHT · SATZ 1", "Am Samstag sind unsere Judoka nach Leipzig gefahren."],
-  ["BERICHT · SATZ 3", "Im Halbfinale hat eine Judoka mit einem Haltegriff gewonnen."],
-  ["BERICHT · SATZ 4", "Unsere Gewichtheber hatten schon um sechs Uhr losgefahren."],
-  ["BERICHT · SATZ 6", "Die Handballer werften am Sonntag 28 Tore."],
+  ["MUSTERTEXT", [big("Am Samstag kämpfte ich in der Klasse bis 50 Kilo.")]],
+  ["MUSTERTEXT", [big("Beim nächsten Turnier werde ich früher angreifen.")]],
+  ["MUSTERTEXT", [big("Vor dem Turnier hatte ich wochenlang hart trainiert.")]],
+  ["MUSTERTEXT", [big("Danach sagte mein Trainer: „Du hast stark gekämpft!“")]],
+  ["MUSTERTEXT", [big("Heute analysiere ich mit ihm das Video.")]],
+  ["MUSTERTEXT", [big("Am Freitag waren wir mit dem Team nach Leipzig gefahren.")]],
+  ["MUSTERTEXT", [big("Im Finale verlor ich nur knapp.")]],
+  ["ZEITFORM", [big("Plusquamperfekt", { size: 120, color: NAVY })]],
+  ["ZEITFORM", [big("Präteritum", { size: 120, color: NAVY })]],
+  ["ZEITFORM", [big("Perfekt", { size: 120, color: NAVY })]],
+  ["ZEITFORM", [big("Präsens", { size: 120, color: NAVY })]],
+  ["ZEITFORM", [big("Futur I", { size: 120, color: NAVY })]],
+  ["BAUPLAN", [big("hatte / war", { color: C.hv }), big(" + "), big("Partizip II", { color: "C98A1E" })]],
+  ["BAUPLAN", [big("finites Verb im Präteritum")]],
+  ["BAUPLAN", [big("habe / bin", { color: C.hv }), big(" + "), big("Partizip II", { color: "C98A1E" })]],
+  ["BAUPLAN", [big("finites Verb im Präsens")]],
+  ["BAUPLAN", [big("werde", { color: C.hv }), big(" + "), big("Infinitiv", { color: C.inf })]],
 ];
-const strip = ([lab, txt]) => table([LWS], [row([cell([
-  p([t(lab, { size: 40, color: MUTED, bold: true })], { after: 120 }),
-  p([t(txt, { font: "Cambria", size: 96, bold: true, color: "111111" })], { after: 0, align: AlignmentType.CENTER }),
+const strip = ([lab, runs]) => table([LWS], [row([cell([
+  p([t(lab, { size: 32, color: MUTED, bold: true })], { after: 120 }),
+  p(runs, { after: 0, align: AlignmentType.CENTER }),
 ], { w: LWS, borders: allBorders(dashed), m: 200, ml: 260, valign: VerticalAlign.CENTER })], 5050, HeightRule.EXACT)]);
 const strips = [];
 STRIPS.forEach((x, i) => {
   strips.push(strip(x));
-  if (i % 2 === 0) strips.push(p(t(""), { after: 0 }));
+  if (i % 2 === 0 && i < STRIPS.length - 1) strips.push(p(t(""), { after: 0 }));
   else if (i < STRIPS.length - 1) strips.push(new Paragraph({ children: [new PageBreak()] }));
 });
 
 const doc = [
-  slipZeit(), scissors(), slipZeit(),
+  slipTab(), scissors(), slipTab(),
   new Paragraph({ children: [new PageBreak()] }),
-  slipFehler(), scissors(), slipFehler(),
+  slipExit(), scissors(), slipExit(),
 ];
 const props = { page: { size: { width: 11906, height: 16838 }, margin: { top: 500, bottom: 400, left: 600, right: 600 } } };
 const landProps = { page: { size: { width: 11906, height: 16838, orientation: PageOrientation.LANDSCAPE }, margin: { top: 500, bottom: 400, left: 600, right: 600 } } };

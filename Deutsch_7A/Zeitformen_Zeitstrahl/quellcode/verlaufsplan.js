@@ -148,7 +148,7 @@ function phase(nr, title, min) {
 
 
 // ================================================================
-// Verlaufsplan „Die Zeitformen am Zeitstrahl“ (Orientierungshospitation, 45 Min.)
+// Verlaufsplan „Welche Zeitform wann?“ (Orientierungshospitation, 45 Min.)
 // ================================================================
 const { PageOrientation } = require("docx");
 const LW = 16838 - 1400; // nutzbare Breite quer
@@ -175,9 +175,9 @@ doc.push(kicker("Verlaufsplan · Orientierungshospitation · Deutsch · Klasse 7
 doc.push(h1("Welche Zeitform wann? – Die Zeitformen am Zeitstrahl"));
 doc.push(table([3300, LW - 3300], [
   ["Einheit", "Verben und Zeitformen (Präsens, Präteritum, Perfekt, Plusquamperfekt, Futur I; Futur II folgt später)"],
-  ["Lerngruppe", "Klasse 7A, ausschließlich Leistungssportler (Judo, Handball, Gewichtheben). Alle hatten am vergangenen Wochenende Wettkämpfe."],
-  ["Kernanliegen", "Die Schülerinnen und Schüler ordnen Sätze über ihr Wettkampfwochenende begründet den fünf bekannten Tempora auf einem Zeitstrahl zu und reflektieren, dass die Wahl der Zeitform vom Zeitbezug und von der Textsorte (geschrieben oder gesprochen) abhängt."],
-  ["Teilziele", "Die Schülerinnen und Schüler …\nTZ 1  bestimmen die Zeitform eines Satzes anhand ihrer Bildung (Hilfsverb + Partizip II bzw. Infinitiv) und begründen sie mit Fachbegriffen,\nTZ 2  ordnen die Tempora zeitlich ein (vorher – Vergangenheit – jetzt – Zukunft),\nTZ 3  erkennen, dass man Vergangenes schriftlich im Präteritum, mündlich meist im Perfekt erzählt und die Vorgeschichte im Plusquamperfekt steht,\nTZ 4  wenden dieses Wissen an, indem sie falsche Verbformen in einem Bericht für die Vereinszeitung verbessern und begründen."],
+  ["Lerngruppe", "Klasse 7A, ausschließlich Leistungssportler (Judo, Handball, Gewichtheben). Alle hatten am vergangenen Wochenende Wettkämpfe. Satzstreifen am Zeitstrahl und die Kreide-Kette kennt die Klasse und hat sie in der letzten Stunde gut angenommen."],
+  ["Kernanliegen", "Die Schülerinnen und Schüler erarbeiten an einem Mustertext über einen Wettkampf die zeitliche Abfolge der fünf bekannten Tempora und deren Bildung als Übersicht und wenden sie in einem eigenen zusammenhängenden Text über ihr Wettkampfwochenende an."],
+  ["Teilziele", "Die Schülerinnen und Schüler …\nTZ 1  ordnen die Sätze eines Mustertextes am Zeitstrahl (vorher – Vergangenheit – jetzt – Zukunft),\nTZ 2  ordnen jedem Abschnitt Zeitform und Bauplan zu (Hilfsverb + Partizip II bzw. Infinitiv) und begründen dies am Satz,\nTZ 3  sichern die Übersicht in einer Tabelle im Heft,\nTZ 4  schreiben mithilfe von Formulierungshilfen einen eigenen Text, in dem alle fünf Zeitformen passend vorkommen (Exit-Ticket)."],
 ].map(([a, b]) => row([
   tc(a, 3300, { bold: true, color: NAVY, fill: LIGHT, size: 19 }),
   cell(b.split("\n").map((x, i, arr) => p(s20(x), { after: i === arr.length - 1 ? 0 : 30 })), { w: LW - 3300 }),
@@ -186,77 +186,68 @@ doc.push(p(t(""), { after: 120 }));
 doc.push(p(s20("UG = Unterrichtsgespräch · EA = Einzelarbeit · PA = Partnerarbeit", { color: MUTED }), { after: 60 }));
 doc.push(table(VW, [
   new TableRow({ tableHeader: true, children: vhdr.map((h, i) => hdr(h, VW[i], NAVY, 18)) }),
-  vrow("0′–4′", "Einstieg", [
+  vrow("0′–3′", "Einstieg", [
     L("knüpft an das Wochenende an: „Ihr hattet am Wochenende alle Wettkämpfe. Erzählt in einem Satz: Wie lief es?“"),
-    SS("zwei bis drei erzählen mündlich – erfahrungsgemäß im Perfekt."),
-    L("greift das auf: „Ihr habt gerade im Perfekt erzählt. In der Vereinszeitung klingt das anders.“ Zeigt den Zeitstrahl und acht ungeordnete Satzstreifen aus drei Texten (Sprachnachricht, Vereinszeitung, Post). Stundenfrage an der Tafel: „Welche Zeitform wann?“"),
-  ], ["UG"], ["Tafel: Zeitstrahl (vorgezeichnet)", "8 Satzstreifen mit Magneten (Großformat)"], [
+    SS("zwei bis drei erzählen mündlich."),
+    L("leitet über: „Heute schreibt ihr euer Wochenende auf – mit allen Zeitformen. Zuerst schauen wir uns an, wie das bei einer Judoka aussieht.“ Stundenfrage an der Tafel: „Welche Zeitform wann?“"),
+  ], ["UG"], ["Tafel: Zeitstrahl (vorgezeichnet), Stundenfrage"], [
     "Lebensweltbezug: reale Wettkämpfe der Klasse – hohe Motivation.",
-    "Die spontane Verwendung des Perfekts wird zum Anlass für die spätere Reflexion der Sprachverwendung (integrativer Zugang).",
+    "Transparenz: Das Ziel der Stunde (eigener Text) wird zu Beginn genannt.",
   ]),
-  vrow("4′–17′", "Erarbeitung I: Zeitstrahl", [
-    L("teilt den Schnipsel „Die Zeitformen am Zeitstrahl“ aus, gibt die feste Ansage: „Wer drankommt, hängt einen Streifen an den Zeitstrahl, markiert und begründet. Alle prüfen mit und tragen ein.“"),
-    SS("Magnet-Kette: Nacheinander hängt jeweils eine Schülerin oder ein Schüler einen Streifen an den Zeitstrahl, markiert Hilfsverb rot, Partizip II gelb, Infinitiv blau bzw. unterstreicht das finite Verb, nennt die Zeitform und begründet sie („Plusquamperfekt, weil hatte + Partizip II“)."),
-    SS("Die übrigen prüfen mit und tragen Zeitform und einen Beispielsatz in den Schnipsel ein."),
-    L("lässt im Anschluss den Bauplan jeder Zeitform nennen; S ergänzen die Zeile „Bauplan“."),
-  ], ["EA an der Tafel", "UG"], ["Satzstreifen, Kreide rot/gelb/blau", "Schnipsel 1 (Zeitstrahl)", "Heft, Kleber, Buntstifte"], [
-    "Bekannte, bewährte Routine (Kreide-Kette mit Mitschreiben): Sicherheit und Aktivierung aller.",
-    "Begründung über die Bildung sichert Fachbegriffe (TZ 1).",
-    "Zeitstrahl statt Tafel-Tabelle – die Klasse ist tabellenmüde.",
-    "Präteritum und Perfekt landen am selben Platz: bewusst erzeugter Widerspruch als Überleitung.",
+  vrow("3′–12′", "Erarbeitung I: Mustertext am Zeitstrahl", [
+    L("hängt sieben Satzstreifen eines Mustertextes gemischt an den Rand; Ansage: „Wer drankommt, hängt einen Streifen an die richtige Stelle am Zeitstrahl und markiert die Verbformen. Alle prüfen mit.“"),
+    SS("Magnet-Kette: ordnen die Sätze am Zeitstrahl (vorher – Vergangenheit – jetzt – Zukunft), markieren Hilfsverb rot, Partizip II gelb, Infinitiv blau bzw. unterstreichen das finite Verb und begründen mit den Zeitangaben („Vor dem Turnier …“)."),
+    L("gibt beim Trainer-Satz vor: „Wer erzählt, schreibt im Präteritum. Wer spricht – wie der Trainer –, nimmt das Perfekt.“"),
+  ], ["EA an der Tafel", "UG"], ["7 Satzstreifen (Großformat, Magnete)", "Kreide rot/gelb/blau"], [
+    "Vorgegebener Mustertext wie in der letzten Stunde: vertraute Methode, Fokus auf der zeitlichen Struktur (TZ 1).",
+    "Die Zeitangaben am Satzanfang stützen das Ordnen und sind später Formulierungshilfe.",
+    "Den Unterschied Präteritum/Perfekt gibt die Lehrkraft vor – kein eigener Entdeckungsschritt nötig.",
   ]),
-  vrow("17′–24′", "Erarbeitung II: Reflexion + Merksatz 10", [
-    L("Impuls: „Präteritum und Perfekt hängen am selben Platz. Schaut auf die Etiketten: Aus welchem Text kommen die Sätze?“"),
-    SS("erkennen: Vereinszeitung (geschrieben) → Präteritum, Vorgeschichte im Plusquamperfekt; Sprachnachricht (gesprochen) → Perfekt; Post über heute und morgen → Präsens, Futur I."),
-    L("deckt Merksatz 10 an der Seitentafel auf."),
-    SS("schreiben Merksatz 10 ins Heft ab und rahmen ihn rot ein."),
-  ], ["UG", "EA"], ["Tafel (Etiketten der Streifen)", "Seitentafel: Merksatz 10", "Heft"], [
-    "Integrativer Kern: Grammatik wird in ihrer Funktion für Textsorten reflektiert (TZ 3).",
-    "Merksatz wie gewohnt mit „Wofür?“ und Test.",
+  vrow("12′–25′", "Erarbeitung II: Übersicht", [
+    L("teilt den Schnipsel „Die Zeitformen im Überblick“ aus; hängt fünf Zeitform-Karten und fünf Bauplan-Karten gemischt an die Seite."),
+    SS("Kreide-Kette: Nacheinander hängt jeweils eine Schülerin oder ein Schüler eine Karte über den passenden Abschnitt des Zeitstrahls (zuerst die Zeitformen, dann die Baupläne) und begründet am Satz darunter („hatte + trainiert: Hilfsverb im Präteritum + Partizip II“). Falsch Gehängtes stellt der Nächste um."),
+    SS("Die übrigen ergänzen gleichzeitig die Tabelle: Zeitform, Bauplan, Beispielsatz aus dem Text."),
+  ], ["EA an der Tafel", "EA"], ["5 Zeitform-Karten, 5 Bauplan-Karten (Großformat, Magnete)", "Schnipsel 1 (Tabelle)", "Heft, Kleber, Buntstifte"], [
+    "Die Übersicht entsteht schrittweise an der Tafel und zugleich im Heft (TZ 2, TZ 3).",
+    "Kreide-Kette mit Mitschreiben hat sich bewährt: Alle sind beschäftigt.",
+    "Umstellen statt Anschreiben spart Zeit und macht Fehler sofort korrigierbar.",
+    "Tabelle auf dem Schnipsel statt an der Tafel – an der Tafel entsteht sie aus Karten.",
   ]),
-  vrow("24′–34′", "Anwendung: Fehlertext", [
-    L("teilt Schnipsel Ü12 aus; Auftrag steht im gewohnten Format an der Tafel. Geht herum und unterstützt."),
-    SS("lesen den Bericht eines Teamkollegen für die Vereinszeitung, unterstreichen die vier falschen Verbformen, schreiben die richtige Form darüber und begründen einen Fehler im Heft („… ist falsch, weil …“)."),
-    SS("Zusatz für Schnelle: ein Satz im Plusquamperfekt zur Vorgeschichte des eigenen Wettkampfs."),
-  ], ["EA"], ["Schnipsel 2 (Ü12)", "Heft"], [
-    "Fehleranalyse statt Lückentext: altersgerecht, verlangt Begründung (TZ 4).",
-    "Die Fehler spiegeln typische Schwierigkeiten: Perfekt statt Präteritum, unregelmäßiges Präteritum, falsches Hilfsverb.",
-    "Zusatzaufgabe als Binnendifferenzierung.",
+  vrow("25′–40′", "Anwendung: eigener Text (Exit-Ticket)", [
+    L("teilt das Exit-Ticket aus; Auftrag: „Schreibt 5–7 Sätze über euren Wettkampf am Wochenende – nach dem Muster an der Tafel. Jede Zeitform kommt mindestens einmal vor.“ Geht herum und unterstützt."),
+    SS("schreiben einen zusammenhängenden Text, gestützt durch Satzanfänge je Abschnitt, Präteritumformen der Sportverben und den Mustertext an der Tafel; markieren die Verbformen und haken die Checkliste ab."),
+  ], ["EA"], ["Exit-Ticket mit Formulierungshilfen", "Tafel (Mustertext und Übersicht)"], [
+    "Transfer: Die Schüler machen den Mustertext mit eigenem Inhalt nach (TZ 4).",
+    "Formulierungshilfen und Mustertext stützen schwächere Schreiber; Checkliste zur Selbstkontrolle.",
+    "Das Exit-Ticket zeigt der Lehrkraft den Lernstand jedes Einzelnen – Grundlage für die nächste Stunde.",
   ]),
-  vrow("34′–42′", "Sicherung", [
-    L("hängt die vier Fehlersätze als Streifen auf."),
-    SS("Kreide-Kette: schreiben die richtige Verbform unter den Streifen und begründen mündlich mit Fachbegriffen."),
-    SS("vergleichen und verbessern im Schnipsel mit Grün."),
-  ], ["EA an der Tafel", "UG"], ["4 Fehlerstreifen", "Kreide, grüne Stifte"], [
-    "Rückbezug auf Zeitstrahl und Merksatz 10.",
-    "Verbessern mit Grün macht den Lernzuwachs im Heft sichtbar.",
-  ]),
-  vrow("42′–45′", "Ausblick / Hausaufgabe", [
-    L("beantwortet mit der Klasse die Stundenfrage noch einmal in einem Satz."),
-    L("Hausaufgabe: „Schreibt euren Bericht über dieses Wochenende für die Vereinszeitung – im Präteritum, die Vorgeschichte im Plusquamperfekt.“ (Schreibrahmen Ü11)"),
-  ], ["UG"], ["Schreibrahmen Ü11 (bereits ausgeteilt)"], [
-    "Transfer in die eigene Textproduktion zum realen Wettkampf.",
+  vrow("40′–45′", "Sicherung", [
+    SS("zwei lesen ihren Text vor; die Klasse zeigt am Zeitstrahl, in welchem Abschnitt der Text gerade ist, und nennt die Zeitform."),
+    L("beantwortet mit der Klasse die Stundenfrage in einem Satz und sammelt die Exit-Tickets ein."),
+  ], ["UG"], ["Tafel", "Exit-Tickets"], [
+    "Die zeitliche Struktur wird am eigenen Text hörbar.",
+    "Rückbezug auf die Stundenfrage rundet die Stunde ab.",
   ]),
   vrow("opt.", "Didaktische Reserve / Kürzung", [
     plain([s20("Reserve: ", { bold: true }), s20("Speed-Duell zu zweit – einer liest einen Satz vom Zeitstrahl in einer anderen Zeitform vor, der andere bestimmt die Zeitform; ein Punkt pro richtige Antwort.")]),
-    plain([s20("Kürzung: ", { bold: true }), s20("Wird es knapp, in der Sicherung nur zwei Fehler an der Tafel besprechen; die übrigen zu Beginn der nächsten Stunde.")]),
+    plain([s20("Kürzung: ", { bold: true }), s20("Wird es knapp, schreiben die Schüler mindestens fünf Sätze (einen pro Zeitform); in der Sicherung liest nur eine Schülerin oder ein Schüler vor.")]),
   ], ["PA"], ["–"], ["Zeitpuffer – die Klasse braucht für Kreide-Kette und Mitschreiben erfahrungsgemäß mehr Zeit."]),
 ]));
 
 // ---------- Tafelbild ----------
 doc.push(br());
-doc.push(h3("Geplantes Tafelbild"));
-const TBW = [2700, 2900, 2900, 2600, 2700];
-const sec = (x, span) => cell(p(t(x, { bold: true, color: "FFFFFF", size: 20 }), { after: 0, align: AlignmentType.CENTER }), { w: span ? TBW[1] + TBW[2] : 0, fill: "3D4A3F", span });
-const tb = (children, w) => cell(children, { w, fill: BOARD, borders: allBorders(solid("3D4A3F", 8)), m: 80, valign: VerticalAlign.TOP });
-const zf = (name, bau) => [p(t(name, { bold: true, font: "Cambria", size: 21, color: NAVY }), { after: 10, align: AlignmentType.CENTER }), p(t(bau, { size: 18, color: MUTED }), { after: 60, align: AlignmentType.CENTER })];
+doc.push(h3("Geplantes Tafelbild (am Ende der Erarbeitung II)"));
+const TBW = [2900, 2800, 3000, 2600, 2700];
+const tbc = (children, w) => cell(children, { w, fill: BOARD, borders: allBorders(solid("3D4A3F", 8)), m: 80, valign: VerticalAlign.TOP });
+const card = (name, bau) => [p(t(name, { bold: true, font: "Cambria", size: 21, color: NAVY }), { after: 10, align: AlignmentType.CENTER }), p(bau, { after: 70, align: AlignmentType.CENTER })];
 const ex = (runs) => p(runs, { after: 40 });
 const r = (x) => t(x, { bold: true, color: C.hv, size: 19, font: "Cambria" });
 const y = (x) => t(x, { bold: true, color: "C98A1E", size: 19, font: "Cambria" });
 const b = (x) => t(x, { bold: true, color: C.inf, size: 19, font: "Cambria" });
 const n = (x, o = {}) => t(x, Object.assign({ size: 19, font: "Cambria" }, o));
-const tag = (x) => t(x + "  ", { size: 15, color: MUTED, bold: true });
-doc.push(p([s20("Stundenfrage oben: ", { bold: true }), s20("Welche Zeitform wann?   ·   Links und rechts: Seitentafel mit Merksatz 10 und Auftrag Ü12")], { after: 80 }));
+const u = (x) => n(x, { u: true, bold: true });
+const bs = (x, c = MUTED) => t(x, { size: 18, color: c, bold: true });
+doc.push(p([s20("Stundenfrage oben: ", { bold: true }), s20("Welche Zeitform wann?   ·   Karten (Zeitform, Bauplan) über den Abschnitten, darunter die Streifen des Mustertextes")], { after: 80 }));
 doc.push(table(TBW, [
   row([
     cell(p(t("vorher", { bold: true, color: "FFFFFF", size: 20 }), { after: 0, align: AlignmentType.CENTER }), { w: TBW[0], fill: "3D4A3F" }),
@@ -265,20 +256,14 @@ doc.push(table(TBW, [
     cell(p(t("Zukunft  ▶", { bold: true, color: "FFFFFF", size: 20 }), { after: 0, align: AlignmentType.CENTER }), { w: TBW[4], fill: "3D4A3F" }),
   ]),
   row([
-    tb([...zf("Plusquamperfekt", "hatte/war + Partizip II"), ex([tag("ZEITUNG"), n("Die Judoka "), r("hatten"), n(" wochenlang für das Turnier "), y("trainiert"), n(".")]), ex([tag("ZEITUNG"), n("Die Handballer "), r("waren"), n(" schon am Freitag "), y("angereist"), n(".")])], TBW[0]),
-    tb([...zf("Präteritum", "nur finites Verb · geschrieben"), ex([tag("ZEITUNG"), n("Im Stoßen "), n("hob", { u: true, bold: true }), n(" unsere Gewichtheberin 75 Kilo.")]), ex([tag("ZEITUNG"), n("Unsere Handballer "), n("kämpften", { u: true, bold: true }), n(" bis zur letzten Sekunde.")])], TBW[1]),
-    tb([...zf("Perfekt", "habe/bin + Partizip II · gesprochen"), ex([tag("SPRACHNACHRICHT"), n("Ich "), r("habe"), n(" im Finale Bronze "), y("geholt"), n("!")]), ex([tag("SPRACHNACHRICHT"), n("Wir "), r("sind"), n(" erst um zehn Uhr nach Hause "), y("gekommen"), n(".")])], TBW[2]),
-    tb([...zf("Präsens", "nur finites Verb"), ex([tag("POST"), n("Heute "), n("analysieren", { u: true, bold: true }), n(" wir mit dem Trainer das Video.")])], TBW[3]),
-    tb([...zf("Futur I", "werde + Infinitiv"), ex([tag("POST"), n("Beim nächsten Turnier "), r("werde"), n(" ich den Haltegriff besser "), b("verteidigen"), n(".")])], TBW[4]),
+    tbc([...card("Plusquamperfekt", [bs("hatte/war", C.hv), bs(" + "), bs("Partizip II", "C98A1E")]), ex([n("Vor dem Turnier "), r("hatte"), n(" ich wochenlang hart "), y("trainiert"), n(".")]), ex([n("Am Freitag "), r("waren"), n(" wir mit dem Team nach Leipzig "), y("gefahren"), n(".")])], TBW[0]),
+    tbc([...card("Präteritum (erzählt)", [bs("finites Verb im Präteritum")]), ex([n("Am Samstag "), u("kämpfte"), n(" ich in der Klasse bis 50 Kilo.")]), ex([n("Im Finale "), u("verlor"), n(" ich nur knapp.")]), ex([n("Danach "), u("sagte"), n(" mein Trainer: …")])], TBW[1]),
+    tbc([...card("Perfekt (gesprochen)", [bs("habe/bin", C.hv), bs(" + "), bs("Partizip II", "C98A1E")]), ex([n("… „Du "), r("hast"), n(" stark "), y("gekämpft"), n("!“")])], TBW[2]),
+    tbc([...card("Präsens", [bs("finites Verb im Präsens")]), ex([n("Heute "), u("analysiere"), n(" ich mit ihm das Video.")])], TBW[3]),
+    tbc([...card("Futur I", [bs("werde", C.hv), bs(" + "), bs("Infinitiv", C.inf)]), ex([n("Beim nächsten Turnier "), r("werde"), n(" ich früher "), b("angreifen"), n(".")])], TBW[4]),
   ]),
 ]));
-doc.push(p([s20("Unter dem Zeitstrahl (Sicherung): ", { bold: true }), s20("die vier Fehlerstreifen aus Ü12, darunter jeweils die Verbesserung: fuhren · gewann · waren … losgefahren · warfen")], { before: 100, after: 60 }));
-doc.push(h3("Merksatz 10 (Seitentafel)"));
-doc.push(box([
-  p([t("Welche Zeitform wann?", { bold: true, color: C.hv, font: "Cambria", size: 22 })], { after: 40 }),
-  p([s20("Was "), s20("vorher", { bold: true }), s20(" war, steht im "), s20("Plusquamperfekt", { bold: true }), s20(". Vergangenes "), s20("schreibt", { bold: true }), s20(" man im "), s20("Präteritum", { bold: true }), s20(", "), s20("mündlich", { bold: true }), s20(" erzählt man meist im "), s20("Perfekt", { bold: true }), s20(". Was jetzt ist: "), s20("Präsens", { bold: true }), s20(". Was kommt: "), s20("Futur I", { bold: true }), s20(".")], { after: 40 }),
-  p([s20("Wofür? ", { bold: true }), s20("Damit jeder Text die passende Zeitform hat: der Bericht für die Vereinszeitung im Präteritum, die Sprachnachricht im Perfekt.   "), s20("Test: ", { bold: true }), s20("Wann ist es passiert? Und: Schreibe ich oder spreche ich?")], { after: 0 }),
-], LIGHT2, allBorders(solid(C.hv, 12))));
+doc.push(p([s20("Hinweis: ", { bold: true }), s20("Der Trainer-Satz hängt im Abschnitt Vergangenheit zwischen Präteritum und Perfekt – sagte (erzählt) und hast gekämpft (gesprochen) stehen im selben Satz.")], { before: 100, after: 0 }));
 
 const landProps = { page: { size: { width: 11906, height: 16838, orientation: PageOrientation.LANDSCAPE }, margin: { top: 700, bottom: 600, left: 700, right: 700, header: 350, footer: 350 } } };
 const styles = { default: { document: { run: { font: "Calibri", size: 20 } } } };
