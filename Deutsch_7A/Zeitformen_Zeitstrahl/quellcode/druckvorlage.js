@@ -150,7 +150,7 @@ function phase(nr, title, min) {
 // ================================================================
 // Druckvorlage „Welche Zeitform wann?“
 // Seite 1: Tabelle „Die Zeitformen im Überblick“ (2 pro A4)
-// Seite 2: Exit-Ticket „Mein Wochenende in fünf Zeitformen“ (1 pro A4, mit Formulierungsvorschlägen)
+// Seite 2: Exit-Ticket „Mein Wochenende in fünf Zeitformen“ als Schnipsel mit Formulierungshilfen (2 pro A4) – geschrieben wird auf eigenem Papier
 // ab Seite 3: Mustertext (7 Satzstreifen), 5 Zeitform-Karten, 5 Bauplan-Karten (Großformat, 2 pro A4 quer)
 // ================================================================
 const { PageOrientation } = require("docx");
@@ -191,7 +191,7 @@ function slipTab() {
 // ---------- Schnipsel 2: Exit-Ticket ----------
 const lineTable = (n) => table([IW], Array.from({ length: n }, () => row([cell(p(t(""), { after: 0 }), { w: IW, borders: { top: none, left: none, right: none, bottom: solid("9AA3B5", 6) } })], 620, HeightRule.EXACT)));
 function slipExit() {
-  const f = 19;
+  const f = 18;
   const h = (x) => s(x, { size: f });
   const R = (x) => s(x, { size: f, bold: true, color: C.hv });
   const Y = (x) => s(x, { size: f, bold: true, color: "C98A1E" });
@@ -200,15 +200,15 @@ function slipExit() {
   const dot = () => s("   ·   ", { size: f, color: gray });
   const EW = [2350, IW - 2350];
   const eb = allBorders(solid("B9C6E8", 6));
-  const lineP = (runs) => p(runs, { after: 40 });
+  const lineP = (runs) => p(runs, { after: 20 });
   const hrow = (name, wann, bau, lines) => row([
     cell([p(t(name, { bold: true, size: 20, color: NAVY, font: "Cambria" }), { after: 10 }), p(t(wann, { size: 16, color: MUTED }), { after: 10 }), p(bau, { after: 0 })], { w: EW[0], fill: LIGHT, borders: eb, valign: VerticalAlign.TOP, m: 70 }),
     cell(lines.map(lineP), { w: EW[1], borders: eb, valign: VerticalAlign.TOP, m: 70 }),
   ]);
   const bt = (x, c) => t(x, { size: 16, bold: true, color: c || "333333" });
   return slip([
-    p([t("Exit-Ticket: Mein Wochenende in fünf Zeitformen", { font: "Cambria", bold: true, size: 28, color: NAVY }), t("   Name: ______________", { size: 18, color: MUTED })], { after: 80 }),
-    p([s("Schreibe "), sb("5–7 Sätze"), s(" über deinen Wettkampf am Wochenende – nach dem Muster an der Tafel. Jede Zeitform kommt "), sb("mindestens einmal"), s(" vor. Du kannst die Vorschläge übernehmen und ergänzen.")], { after: 100 }),
+    p([t("Exit-Ticket: Formulierungshilfen", { font: "Cambria", bold: true, size: 28, color: NAVY })], { after: 80 }),
+    p([s("Schreibe auf ein "), sb("eigenes Blatt"), s(" (Name oben rechts) "), sb("5–7 Sätze"), s(" über deinen Wettkampf am Wochenende – nach dem Muster an der Tafel. Jede Zeitform kommt "), sb("mindestens einmal"), s(" vor. Du kannst die Vorschläge übernehmen und ergänzen. Am Ende gibst du das Blatt ab.")], { after: 100 }),
     table(EW, [
       hrow("Plusquamperfekt", "vorher", [bt("hatte/war", C.hv), bt(" + "), bt("Partizip II", "C98A1E")], [
         [h("Vor dem Wettkampf "), R("hatte"), h(" ich wochenlang hart "), Y("trainiert"), h("."), dot(), h("Am Abend davor "), R("hatte"), h(" ich kaum "), Y("geschlafen"), h(".")],
@@ -231,10 +231,8 @@ function slipExit() {
         [h("Nächstes Mal "), R("werde"), h(" ich … "), B("schaffen"), h("."), dot(), h("Wir "), R("werden"), h(" die Abwehr "), B("verbessern"), h(".")],
       ]),
     ]),
-    p([sb("Verben  ", { size: 18, color: NAVY }), s("Judo: kämpfen – kämpfte, werfen – warf, halten – hielt  ·  Handball: werfen – warf, treffen – traf, spielen – spielte  ·  Gewichtheben: heben – hob, reißen – riss, stoßen – stieß", { size: 18 })], { before: 80, after: 100 }),
-    p(sb("Dein Text", { color: NAVY, size: 22 }), { after: 0 }),
-    lineTable(10),
-    p([s("☐ alle fünf Zeitformen drin   ☐ Hilfsverb rot, Partizip II gelb, Infinitiv blau markiert   ☐ Präteritum-Verben unterstrichen", { size: 18 }), s("     Fertig? Stift hinlegen.", { size: 18, italics: true, color: MUTED })], { before: 100, after: 0 }),
+    p([sb("Verben  ", { size: 18, color: NAVY }), s("Judo: kämpfen – kämpfte, werfen – warf, halten – hielt  ·  Handball: werfen – warf, treffen – traf, spielen – spielte  ·  Gewichtheben: heben – hob, reißen – riss, stoßen – stieß", { size: 18 })], { before: 80, after: 60 }),
+    p([sb("Prüfe vor dem Abgeben:  ", { size: 18 }), s("☐ alle fünf Zeitformen drin   ☐ Hilfsverb rot, Partizip II gelb, Infinitiv blau markiert   ☐ Präteritum-Verben unterstrichen", { size: 18 }), s("     Fertig? Stift hinlegen.", { size: 18, italics: true, color: MUTED })], { before: 100, after: 0 }),
   ]);
 }
 
@@ -274,7 +272,7 @@ STRIPS.forEach((x, i) => {
 const doc = [
   slipTab(), scissors(), slipTab(),
   new Paragraph({ children: [new PageBreak()] }),
-  slipExit(),
+  slipExit(), scissors(), slipExit(),
 ];
 const props = { page: { size: { width: 11906, height: 16838 }, margin: { top: 500, bottom: 400, left: 600, right: 600 } } };
 const landProps = { page: { size: { width: 11906, height: 16838, orientation: PageOrientation.LANDSCAPE }, margin: { top: 500, bottom: 400, left: 600, right: 600 } } };

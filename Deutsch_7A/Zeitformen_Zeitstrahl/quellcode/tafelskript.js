@@ -172,9 +172,10 @@ doc.push(h3("So sieht das Heft am Ende aus"));
 doc.push(table([2300, 7906], [
   ["Überschrift", "Welche Zeitform wann? · Datum rechts"],
   ["Schnipsel", "Die Zeitformen im Überblick (Tabelle: Zeitform, Bauplan, Beispielsatz – mit „Wofür?“ und „Test“)"],
-  ["Exit-Ticket", "wird eingesammelt (zurückgeben und einkleben in der nächsten Stunde)"],
+  ["Schnipsel", "Formulierungshilfen (nach der Stunde einkleben)"],
+  ["Exit-Ticket", "eigenes Blatt, wird eingesammelt (zurückgeben und einkleben in der nächsten Stunde)"],
 ].map(([a, b2]) => row([tc(a, 2300, { bold: true, color: a === "Überschrift" ? NAVY : "C77C12", fill: LIGHT, size: 20 }), tc(b2, 7906, { size: 20 })], 340))));
-doc.push(p([S("Material: ", { bold: true }), S("Druckvorlage: Seite 1 Tabelle (2 pro A4), Seite 2 Exit-Ticket (1 pro A4, mit Formulierungsvorschlägen je Zeitform), Seiten 3–11 für die Tafel (einmal drucken, schneiden, Magnete): 7 Streifen Mustertext, 5 Zeitform-Karten, 5 Bauplan-Karten. Kreide rot, gelb, blau · Schüler: Heft, Kleber, Buntstifte rot, gelb, blau.")], { before: 100, after: 40 }));
+doc.push(p([S("Material: ", { bold: true }), S("Druckvorlage: Seite 1 Tabelle (2 pro A4), Seite 2 Schnipsel Formulierungshilfen (2 pro A4; geschrieben wird auf eigenem Papier), Seiten 3–11 für die Tafel (einmal drucken, schneiden, Magnete): 7 Streifen Mustertext, 5 Zeitform-Karten, 5 Bauplan-Karten. Kreide rot, gelb, blau · Schüler: Heft, Kleber, Buntstifte rot, gelb, blau, ein leeres Blatt Papier (ggf. Collegeblock-Blätter bereithalten).")], { before: 100, after: 40 }));
 doc.push(p([S("Vorbereitung: ", { bold: true }), S("Zeitstrahl über die ganze Tafel zeichnen (Pfeil, Abschnitte „vorher – Vergangenheit – jetzt – Zukunft“; Vergangenheit doppelt so breit), darüber die Stundenfrage „Welche Zeitform wann?“. Mustertext-Streifen gemischt links an den Rand hängen, Zeitform- und Bauplan-Karten gemischt rechts – die Karten erst in Phase 2 zeigen.")], { after: 0 }));
 
 // ---------- Phase 0 ----------
@@ -227,7 +228,7 @@ doc.push(...steps([
 // ---------- Phase 3 ----------
 doc.push(phase("3", "Exit-Ticket: mein Wochenende", 15));
 doc.push(...steps([
-  ["luecken", { say: "Jetzt arbeitet ihr allein. Ihr schreibt über euren Wettkampf am Wochenende – nach dem Muster an der Tafel. Fünf bis sieben Sätze, jede Zeitform mindestens einmal. Auf dem Exit-Ticket stehen zu jeder Zeitform Vorschläge – ihr dürft sie übernehmen. Die farbigen Wörter zeigen euch die Bildung. Ihr gebt das Ticket am Ende ab.", board: auftrag("Exit-Ticket: Mein Wochenende in fünf Zeitformen", ["Schreibe 5–7 Sätze über deinen Wettkampf am Wochenende.", "Benutze jede Zeitform mindestens einmal.", "Markiere Hilfsverb rot, Partizip II gelb, Infinitiv blau.", "Hake die Checkliste ab."], [p(S("Hilfe: Mustertext an der Tafel, Vorschläge je Zeitform auf dem Ticket.", { size: 20, italics: true }), { after: 0 })], "12 Minuten · allein · leise"),
+  ["luecken", { say: "Jetzt arbeitet ihr allein. Ihr schreibt über euren Wettkampf am Wochenende – nach dem Muster an der Tafel. Nehmt ein eigenes Blatt, Name oben rechts. Fünf bis sieben Sätze, jede Zeitform mindestens einmal. Auf dem Schnipsel stehen zu jeder Zeitform Vorschläge – ihr dürft sie übernehmen. Die farbigen Wörter zeigen euch die Bildung. Ihr gebt das Blatt am Ende ab.", board: auftrag("Exit-Ticket: Mein Wochenende in fünf Zeitformen", ["Schreibe auf ein eigenes Blatt 5–7 Sätze über deinen Wettkampf am Wochenende.", "Benutze jede Zeitform mindestens einmal.", "Markiere Hilfsverb rot, Partizip II gelb, Infinitiv blau.", "Hake die Checkliste ab."], [p(S("Hilfe: Mustertext an der Tafel, Vorschläge je Zeitform auf dem Schnipsel.", { size: 20, italics: true }), { after: 0 })], "12 Minuten · allein · leise"),
     do: [
       "Herumgehen. Typische Stolperstellen: Wechsel ins Perfekt beim Erzählen („Dann habe ich gewonnen“), habe statt hatte in der Vorgeschichte, regelmäßig gebildetes Präteritum („werfte“).",
       "Wer schnell fertig ist: einen zweiten Satz zur Vorgeschichte schreiben, diesmal mit war.",

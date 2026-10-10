@@ -188,7 +188,7 @@ Die Lehrkraft möchte das weiterverfolgen, noch ohne Material. Die Satzklammer (
   - Einstieg mit dem eigenen Wochenende.
   - Mustertext einer Judoka am Zeitstrahl ordnen (Magnet-Kette). Er enthält alle fünf Zeitformen, das Perfekt in wörtlicher Rede des Trainers.
   - Die Übersicht entsteht mit Zeitform- und Bauplan-Karten (Kreide-Kette), die Tabelle wird mitgeschrieben.
-  - Exit-Ticket (1 pro A4): 5–7 Sätze über das eigene Wochenende. Zu jeder Zeitform gibt es mehrere Formulierungsvorschläge, in denen die Bildung fett und farbig markiert ist (Wunsch der Lehrkraft). Dazu Präteritumformen der Sportverben.
+  - Exit-Ticket: 5–7 Sätze über das eigene Wochenende auf eigenem Papier. Die Formulierungshilfen gibt es als Schnipsel (2 pro A4). Zu jeder Zeitform gibt es mehrere Formulierungsvorschläge, in denen die Bildung fett und farbig markiert ist (Wunsch der Lehrkraft). Dazu Präteritumformen der Sportverben.
   - Zwei Texte vorlesen, die Klasse zeigt am Zeitstrahl mit.
 - **Rückmeldung der Lehrkraft:** *(steht noch aus)*
 - **Hospitationsfeedback:** *(steht noch aus)*
