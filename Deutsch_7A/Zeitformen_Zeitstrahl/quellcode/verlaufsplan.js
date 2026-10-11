@@ -148,124 +148,57 @@ function phase(nr, title, min) {
 
 
 // ================================================================
-// Verlaufsplan „Welche Zeitform wann?“ (Orientierungshospitation, 45 Min.)
+// Verlaufsplan „Welche Zeitform wann?“ (Orientierungshospitation, 45 Min.) – Kurzfassung
 // ================================================================
 const { PageOrientation } = require("docx");
 const LW = 16838 - 1400; // nutzbare Breite quer
-const s20 = (x, o = {}) => t(x, Object.assign({ size: 19 }, o));
-const lp = (runs, o = {}) => p(Array.isArray(runs) ? runs : [s20(runs)], Object.assign({ after: 50 }, o));
+const s20 = (x, o = {}) => t(x, Object.assign({ size: 20 }, o));
+const lp = (runs, o = {}) => p(Array.isArray(runs) ? runs : [s20(runs)], Object.assign({ after: 40 }, o));
 const L = (x) => lp([s20("L: ", { bold: true, color: NAVY }), s20(x)]);
 const SS = (x) => lp([s20("S: ", { bold: true, color: "C77C12" }), s20(x)]);
-const plain = (x, o = {}) => lp(Array.isArray(x) ? x : [s20(x, o)]);
+const plain = (x) => lp([s20(x)]);
 
-const VW = [800, 1650, 6300, 1550, 1900, 3238];
-const vhdr = ["Zeit", "Phase", "Unterrichtsgeschehen (L = Lehrkraft, S = Schüler)", "Sozialform", "Medien / Material", "Didaktisch-methodischer Kommentar"];
-const vcell = (children, w, o = {}) => cell(children, { w, fill: o.fill, borders: allBorders(solid("B9C6E8", 6)), m: 80, ml: 100, valign: VerticalAlign.TOP });
-const vrow = (zeit, phase, geschehen, sf, medien, komm) => new TableRow({ cantSplit: false, children: [
-  vcell([p(t(zeit, { bold: true, size: 19, color: C.hv }), { after: 0 })], VW[0], { fill: LIGHT }),
-  vcell([p(t(phase, { bold: true, size: 19, color: NAVY, font: "Cambria" }), { after: 0 })], VW[1], { fill: LIGHT }),
+const VW = [1000, 2600, 7600, 1600, LW - 12800];
+const vhdr = ["Zeit", "Phase", "Unterrichtsgeschehen", "Sozialform", "Medien"];
+const vcell = (children, w, o = {}) => cell(children, { w, fill: o.fill, borders: allBorders(solid("B9C6E8", 6)), m: 70, ml: 100, valign: VerticalAlign.TOP });
+const vrow = (zeit, phase, geschehen, sf, medien) => row([
+  vcell([p(t(zeit, { bold: true, size: 20, color: C.hv }), { after: 0 })], VW[0], { fill: LIGHT }),
+  vcell([p(t(phase, { bold: true, size: 20, color: NAVY, font: "Cambria" }), { after: 0 })], VW[1], { fill: LIGHT }),
   vcell(geschehen, VW[2]),
-  vcell(sf.map((x) => plain(x)), VW[3]),
-  vcell(medien.map((x) => plain(x)), VW[4]),
-  vcell(komm.map((x) => plain(x)), VW[5]),
-] });
+  vcell([plain(sf)], VW[3]),
+  vcell(medien.map(plain), VW[4]),
+]);
 
 const doc = [];
-doc.push(kicker("Verlaufsplan · Orientierungshospitation · Deutsch · Klasse 7A · Einzelstunde (45 Min.)"));
+doc.push(kicker("Verlaufsplan · Deutsch · Klasse 7A · Einzelstunde (45 Min.)"));
 doc.push(h1("Welche Zeitform wann? – Die Zeitformen am Zeitstrahl"));
-doc.push(table([3300, LW - 3300], [
-  ["Einheit", "Verben und Zeitformen (Präsens, Präteritum, Perfekt, Plusquamperfekt, Futur I; Futur II folgt später)"],
-  ["Lerngruppe", "Klasse 7A, ausschließlich Leistungssportler (Judo, Handball, Gewichtheben). Alle hatten am vergangenen Wochenende Wettkämpfe. Satzstreifen am Zeitstrahl und die Kreide-Kette kennt die Klasse und hat sie in der letzten Stunde gut angenommen."],
-  ["Kernanliegen", "Die Schülerinnen und Schüler erarbeiten an einem Mustertext über einen Wettkampf die zeitliche Abfolge der fünf bekannten Tempora und deren Bildung als Übersicht und wenden sie in einem eigenen zusammenhängenden Text über ihr Wettkampfwochenende an."],
-  ["Teilziele", "Die Schülerinnen und Schüler …\nTZ 1  ordnen die Sätze eines Mustertextes am Zeitstrahl (Vorvergangenheit – Vergangenheit – jetzt – Zukunft),\nTZ 2  ordnen jedem Abschnitt Zeitform und Bauplan zu (Hilfsverb + Partizip II bzw. Infinitiv) und begründen dies am Satz,\nTZ 3  sichern die Übersicht in einer Tabelle im Heft,\nTZ 4  schreiben mithilfe von Formulierungshilfen einen eigenen Text, in dem alle fünf Zeitformen passend vorkommen (Exit-Ticket)."],
-].map(([a, b]) => row([
-  tc(a, 3300, { bold: true, color: NAVY, fill: LIGHT, size: 19 }),
-  cell(b.split("\n").map((x, i, arr) => p(s20(x), { after: i === arr.length - 1 ? 0 : 30 })), { w: LW - 3300 }),
-]))));
-doc.push(p(t(""), { after: 120 }));
-doc.push(p(s20("UG = Unterrichtsgespräch · EA = Einzelarbeit · PA = Partnerarbeit", { color: MUTED }), { after: 60 }));
-doc.push(table(VW, [
-  new TableRow({ tableHeader: true, children: vhdr.map((h, i) => hdr(h, VW[i], NAVY, 18)) }),
-  vrow("0′–3′", "Einstieg", [
-    L("knüpft an das Wochenende an: „Ihr hattet am Wochenende alle Wettkämpfe. Erzählt in einem Satz: Wie lief es?“"),
-    SS("zwei bis drei erzählen mündlich."),
-    L("leitet über: „Heute schreibt ihr euer Wochenende auf – mit allen Zeitformen. Zuerst schauen wir uns an, wie das bei einem Gewichtheber aussieht.“ Stundenfrage an der Tafel: „Welche Zeitform wann?“"),
-  ], ["UG"], ["Tafel: Zeitstrahl (vorgezeichnet), Stundenfrage"], [
-    "Lebensweltbezug: reale Wettkämpfe der Klasse – hohe Motivation.",
-    "Transparenz: Das Ziel der Stunde (eigener Text) wird zu Beginn genannt.",
-  ]),
-  vrow("3′–12′", "Erarbeitung I: Mustertext am Zeitstrahl", [
-    L("hängt acht Satzstreifen eines Mustertextes gemischt an den Rand; Ansage: „Wer drankommt, hängt einen Streifen an die richtige Stelle am Zeitstrahl und markiert die Verbformen. Alle prüfen mit.“"),
-    SS("Magnet-Kette: ordnen die Sätze am Zeitstrahl (Vorvergangenheit – Vergangenheit – jetzt – Zukunft), markieren Hilfsverb rot, Partizip II gelb, Infinitiv blau bzw. unterstreichen das finite Verb und begründen mit den Zeitangaben („Vor dem Wettkampf …“)."),
-    L("gibt bei den beiden Trainer-Streifen („Danach sagte mein Trainer:“ / „Du hast super gehoben!“) vor: „Wer erzählt, schreibt im Präteritum. Wer spricht – wie der Trainer –, nimmt das Perfekt.“"),
-  ], ["EA an der Tafel", "UG"], ["8 Satzstreifen (Großformat, Magnete)", "Kreide rot/gelb/blau"], [
-    "Vorgegebener Mustertext wie in der letzten Stunde: vertraute Methode, Fokus auf der zeitlichen Struktur (TZ 1).",
-    "Die Zeitangaben am Satzanfang stützen das Ordnen und sind später Formulierungshilfe.",
-    "Den Unterschied Präteritum/Perfekt gibt die Lehrkraft vor – kein eigener Entdeckungsschritt nötig.",
-  ]),
-  vrow("12′–25′", "Erarbeitung II: Übersicht", [
-    L("teilt den Schnipsel „Die Zeitformen im Überblick“ aus; hängt fünf Zeitform-Karten und fünf Bauplan-Karten gemischt an die Seite."),
-    SS("Kreide-Kette: Nacheinander hängt jeweils eine Schülerin oder ein Schüler eine Karte über den passenden Abschnitt des Zeitstrahls (zuerst die Zeitformen, dann die Baupläne) und begründet am Satz darunter („hatte + trainiert: Hilfsverb im Präteritum + Partizip II“). Falsch Gehängtes stellt der Nächste um."),
-    SS("Die übrigen ergänzen gleichzeitig die Tabelle: Zeitform, Bauplan, Beispielsatz aus dem Text."),
-  ], ["EA an der Tafel", "EA"], ["5 Zeitform-Karten, 5 Bauplan-Karten (Großformat, Magnete)", "Schnipsel 1 (Tabelle)", "Heft, Kleber, Buntstifte"], [
-    "Die Übersicht entsteht schrittweise an der Tafel und zugleich im Heft (TZ 2, TZ 3).",
-    "Kreide-Kette mit Mitschreiben hat sich bewährt: Alle sind beschäftigt.",
-    "Umstellen statt Anschreiben spart Zeit und macht Fehler sofort korrigierbar.",
-    "Tabelle auf dem Schnipsel statt an der Tafel – an der Tafel entsteht sie aus Karten.",
-  ]),
-  vrow("25′–40′", "Anwendung: eigener Text (Exit-Ticket)", [
-    L("teilt das Exit-Ticket aus; Auftrag: „Schreibt 5–7 Sätze über euren Wettkampf am Wochenende – nach dem Muster an der Tafel. Jede Zeitform kommt mindestens einmal vor.“ Geht herum und unterstützt."),
-    SS("schreiben einen zusammenhängenden Text, gestützt durch Satzanfänge je Zeitform und den Mustertext an der Tafel; markieren die Verbformen und haken die Checkliste ab."),
-  ], ["EA"], ["Exit-Ticket mit Satzanfängen je Zeitform (Bildung farbig hervorgehoben) und Schreiblinien", "Tafel (Mustertext und Übersicht)"], [
-    "Transfer: Die Schüler machen den Mustertext mit eigenem Inhalt nach (TZ 4).",
-    "Satzanfänge statt fertiger Sätze: kein Abschreiben, Lenkung auf Inhalte (Vorbereitung, Ablauf, wörtliche Rede, Befinden, Ziele), Bildung farbig sichtbar.",
-    "Das Exit-Ticket zeigt der Lehrkraft den Lernstand jedes Einzelnen – Grundlage für die nächste Stunde.",
-  ]),
-  vrow("40′–45′", "Sicherung", [
-    SS("zwei lesen ihren Text vor; die Klasse zeigt am Zeitstrahl, in welchem Abschnitt der Text gerade ist, und nennt die Zeitform."),
-    L("beantwortet mit der Klasse die Stundenfrage in einem Satz und sammelt die Exit-Tickets ein."),
-  ], ["UG"], ["Tafel", "Exit-Tickets"], [
-    "Die zeitliche Struktur wird am eigenen Text hörbar.",
-    "Rückbezug auf die Stundenfrage rundet die Stunde ab.",
-  ]),
-  vrow("opt.", "Didaktische Reserve / Kürzung", [
-    plain([s20("Reserve: ", { bold: true }), s20("Speed-Duell zu zweit – einer liest einen Satz vom Zeitstrahl in einer anderen Zeitform vor, der andere bestimmt die Zeitform; ein Punkt pro richtige Antwort.")]),
-    plain([s20("Kürzung: ", { bold: true }), s20("Wird es knapp, schreiben die Schüler mindestens fünf Sätze (einen pro Zeitform); in der Sicherung liest nur eine Schülerin oder ein Schüler vor.")]),
-  ], ["PA"], ["–"], ["Zeitpuffer – die Klasse braucht für Kreide-Kette und Mitschreiben erfahrungsgemäß mehr Zeit."]),
-]));
+doc.push(p([s20("Stundenziel: ", { bold: true, color: NAVY }), s20("Die Schülerinnen und Schüler ordnen die fünf bekannten Tempora an einem Mustertext zeitlich ein, sichern ihre Bildung in einer Übersicht und wenden sie in einem eigenen Text über ihr Wettkampfwochenende an.")], { after: 140 }));
 
-// ---------- Tafelbild ----------
-doc.push(br());
-doc.push(h3("Geplantes Tafelbild (am Ende der Erarbeitung II)"));
-const TBW = [2900, 2800, 3000, 2600, 2700];
-const tbc = (children, w) => cell(children, { w, fill: BOARD, borders: allBorders(solid("3D4A3F", 8)), m: 80, valign: VerticalAlign.TOP });
-const card = (name, bau) => [p(t(name, { bold: true, font: "Cambria", size: 21, color: NAVY }), { after: 10, align: AlignmentType.CENTER }), p(bau, { after: 70, align: AlignmentType.CENTER })];
-const ex = (runs) => p(runs, { after: 40 });
-const r = (x) => t(x, { bold: true, color: C.hv, size: 19, font: "Cambria" });
-const y = (x) => t(x, { bold: true, color: "C98A1E", size: 19, font: "Cambria" });
-const b = (x) => t(x, { bold: true, color: C.inf, size: 19, font: "Cambria" });
-const n = (x, o = {}) => t(x, Object.assign({ size: 19, font: "Cambria" }, o));
-const u = (x) => n(x, { u: true, bold: true });
-const bs = (x, c = MUTED) => t(x, { size: 18, color: c, bold: true });
-doc.push(p([s20("Stundenfrage oben: ", { bold: true }), s20("Welche Zeitform wann?   ·   Karten (Zeitform, Bauplan) über den Abschnitten, darunter die Streifen des Mustertextes")], { after: 80 }));
-doc.push(table(TBW, [
-  row([
-    cell(p(t("Vorvergangenheit", { bold: true, color: "FFFFFF", size: 20 }), { after: 0, align: AlignmentType.CENTER }), { w: TBW[0], fill: "3D4A3F" }),
-    cell(p(t("Vergangenheit", { bold: true, color: "FFFFFF", size: 20 }), { after: 0, align: AlignmentType.CENTER }), { w: TBW[1] + TBW[2], fill: "3D4A3F", span: 2 }),
-    cell(p(t("jetzt", { bold: true, color: "FFFFFF", size: 20 }), { after: 0, align: AlignmentType.CENTER }), { w: TBW[3], fill: "3D4A3F" }),
-    cell(p(t("Zukunft  ▶", { bold: true, color: "FFFFFF", size: 20 }), { after: 0, align: AlignmentType.CENTER }), { w: TBW[4], fill: "3D4A3F" }),
-  ]),
-  row([
-    tbc([...card("Plusquamperfekt", [bs("hatte/war", C.hv), bs(" + "), bs("Partizip II", "C98A1E")]), ex([n("Vor dem Wettkampf "), r("hatte"), n(" ich wochenlang hart "), y("trainiert"), n(".")]), ex([n("Am Morgen "), r("waren"), n(" wir früh zur Halle in Frankfurt (Oder) "), y("gefahren"), n(".")])], TBW[0]),
-    tbc([...card("Präteritum (erzählt)", [bs("finites Verb im Präteritum")]), ex([n("Im Reißen "), u("schaffte"), n(" ich 50 Kilo.")]), ex([n("Im Stoßen "), u("hob"), n(" ich 62 Kilo.")]), ex([n("Danach "), u("sagte"), n(" mein Trainer:")])], TBW[1]),
-    tbc([...card("Perfekt (gesprochen)", [bs("habe/bin", C.hv), bs(" + "), bs("Partizip II", "C98A1E")]), ex([n("„Du "), r("hast"), n(" super "), y("gehoben"), n("!“")])], TBW[2]),
-    tbc([...card("Präsens", [bs("finites Verb im Präsens")]), ex([n("Heute "), u("analysiere"), n(" ich mit ihm das Video.")])], TBW[3]),
-    tbc([...card("Futur I", [bs("werde", C.hv), bs(" + "), bs("Infinitiv", C.inf)]), ex([n("Beim nächsten Wettkampf "), r("werde"), n(" ich 65 Kilo "), b("stoßen"), n(".")])], TBW[4]),
-  ]),
+doc.push(table(VW, [
+  row(vhdr.map((h, i) => hdr(h, VW[i], NAVY, 19)), 380),
+  vrow("0′–3′", "Einstieg", [
+    SS("erzählen kurz von ihren Wettkämpfen am Wochenende."),
+    L("nennt Stundenfrage und Ziel: eigener Text in allen Zeitformen."),
+  ], "UG", ["Tafel (Zeitstrahl)"]),
+  vrow("3′–12′", "Erarbeitung I: Mustertext am Zeitstrahl", [
+    SS("ordnen in einer Magnet-Kette acht Satzstreifen (Wettkampf eines Gewichthebers) am Zeitstrahl und markieren die Verbformen."),
+    L("gibt vor: Wer erzählt, schreibt im Präteritum; wer spricht, nimmt das Perfekt."),
+  ], "EA an der Tafel, UG", ["Satzstreifen (Magnete)"]),
+  vrow("12′–25′", "Erarbeitung II: Übersicht", [
+    SS("hängen in einer Kreide-Kette Zeitform- und Bauplan-Karten über die Abschnitte und begründen am Satz; die übrigen ergänzen die Tabelle im Heft."),
+  ], "EA an der Tafel, EA", ["Zeitform- und Bauplan-Karten", "Tabelle (Schnipsel)"]),
+  vrow("25′–40′", "Anwendung: Exit-Ticket", [
+    SS("schreiben 5–7 Sätze über ihr Wettkampfwochenende, jede Zeitform mindestens einmal, gestützt durch Satzanfänge."),
+  ], "EA", ["Exit-Ticket"]),
+  vrow("40′–45′", "Sicherung", [
+    SS("zwei lesen vor, die Klasse ordnet am Zeitstrahl zu."),
+    L("beantwortet mit der Klasse die Stundenfrage, sammelt die Exit-Tickets ein."),
+  ], "UG", ["Tafel, Exit-Tickets"]),
+  vrow("opt.", "Reserve", [plain("Speed-Duell zu zweit: Zeitformen bestimmen.")], "PA", ["–"]),
 ]));
-doc.push(p([s20("Hinweis: ", { bold: true }), s20("Der Satz des Trainers ist auf zwei Streifen geteilt: „Danach sagte mein Trainer:“ (erzählt, Präteritum) und „Du hast super gehoben!“ (gesprochen, Perfekt). Sie hängen nebeneinander, so ist jede Zeitform eindeutig zuzuordnen.")], { before: 100, after: 0 }));
+doc.push(p(s20("UG = Unterrichtsgespräch · EA = Einzelarbeit · PA = Partnerarbeit", { color: MUTED, size: 17 }), { before: 80, after: 0 }));
 
 const landProps = { page: { size: { width: 11906, height: 16838, orientation: PageOrientation.LANDSCAPE }, margin: { top: 700, bottom: 600, left: 700, right: 700, header: 350, footer: 350 } } };
 const styles = { default: { document: { run: { font: "Calibri", size: 20 } } } };
 const vhead = new Header({ children: [new Paragraph({ tabStops: [{ type: TabStopType.RIGHT, position: LW }], children: [t("Deutsch · Klasse 7A · Welche Zeitform wann?", { size: 17, color: MUTED }), t("\tVerlaufsplan", { size: 17, color: MUTED })] })] });
-Packer.toBuffer(new Document({ styles, sections: [{ properties: landProps, headers: { default: vhead }, footers: { default: footer("Verlaufsplan") }, children: doc }] })).then((buf) => fs.writeFileSync("Verlaufsplan_Zeitformen_Zeitstrahl.docx", buf));
+Packer.toBuffer(new Document({ styles, sections: [{ properties: landProps, headers: { default: vhead }, children: doc }] })).then((buf) => fs.writeFileSync("Verlaufsplan_Zeitformen_Zeitstrahl.docx", buf));
