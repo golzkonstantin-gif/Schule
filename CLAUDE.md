@@ -12,6 +12,17 @@ Dieses Repository enthält Unterrichtsplanungen und Material (Deutsch). Bei jede
 - Schülerinnen und Schüler entwickeln eigene Beispiele selbst; Input nur im Notfall.
 - **Keine Hausaufgaben.**
 
+## Planungsmuster der Mentorin (übernommen, Okt. 2026)
+- **Kontext zuerst:** kurze Kontext-Box („Brücke zur Biografie“), bevor der Text gelesen wird.
+- **Kurzer Auszug:** bei schweren Texten 3–5 Sätze statt langer Abschnitte; jeder Satz trägt eine Aussage.
+- **Erst verstehen, dann analysieren:** Vorarbeit zum Inhalt (Kernbotschaft in eigenen Worten), erst danach das Modell.
+- **Ein Schwerpunkt pro Stunde** (z. B. nur Selbstkundgabe oder nur Appell), nicht alle vier Seiten plus Axiome.
+- **Leitfragen, die auf einzelne Wörter zeigen** („Achte auf das Wort …“, „Wie verhalten sich … und … zueinander?“).
+- **Formulierungshilfen mit Fachbegriff** (Satzanfänge), damit der Schritt vom Stichwort zum Satz gelingt.
+- **Immer ein Transfer** am Ende (z. B. Umformulieren, Brief aus einer anderen Perspektive), mit klarem Umfang.
+- Phasenfolge der Mentorin: Auszug → Information → Vorarbeit → Analyse → Visualisierung → Reflexion → Transfer.
+- Zitate aus fremdem Material immer mit dem Original abgleichen (ihr erster Auszug war teils nicht wörtlich).
+
 ## Rechtschreibung
 - Die Rechtschreibung der Klasse ist schwach: regelmäßig **Diktate mit den Definitionen der Fachbegriffe** einplanen – Lehrkraft liest vor, die Klasse schreibt mit, danach steht der Text an der Tafel bzw. auf dem Whiteboard **zur Selbstkontrolle** (Ausnahme von der Regel „Lösungen im Unterrichtsgespräch“). So werden Fachwissen und Rechtschreibung zugleich gesichert.
 
