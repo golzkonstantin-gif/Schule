@@ -17,7 +17,7 @@
 
 ## Offene Baustellen
 
-> **Stand 12.10.:** Die Einheit Verben und Zeitformen endet mit einem Test. Danach folgen Kurzgeschichten (lesen, bearbeiten, kreativ weiterschreiben). Die offenen Grammatikpunkte unten werden vorerst nicht weiterverfolgt.
+> **Stand 12.10.:** Die Einheit Verben und Zeitformen endet mit einem Test, der später folgt. Danach kommt laut SchiC die Einheit **Balladen**, ca. 9 Wochen (`Balladen/SchiC_Balladen.md`). Leistungsbewertung: Rezitation, Analyse der Merkmale, gestaltendes Schreiben aus der Figurenperspektive. Die offenen Grammatikpunkte unten werden vorerst nicht weiterverfolgt.
 
 - [x] Unterschied Infinitiv, finite Form und Partizip II sicher (Stand 06.10.)
 - [ ] Gebeugte Formen auf den Infinitiv zurückführen („Wie heißt der Infinitiv?“) zur Routine machen – weiter in jeder Stunde kurz üben

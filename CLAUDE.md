@@ -66,7 +66,7 @@ Die folgenden Vorlieben und Reflexionen gelten für die gesamte weitere Planung,
   - Ohne PowerPoint: Merksätze und Übungen stehen an der Tafel. Im Skript den Tipp geben, die Merksätze vorab auf die Seitentafel zu schreiben.
 ## Klassenspezifisch: Deutsch 7A
 
-- **Einheit Verben und Zeitformen** wird mit einem Test abgeschlossen (Stand 12.10.). Danach folgt die Einheit **Kurzgeschichten**: lesen, bearbeiten und kreativ weiterschreiben.
+- **Einheit Verben und Zeitformen** wird mit einem Test abgeschlossen (Stand 12.10., Test folgt später). Danach folgt laut schulinternem Curriculum die Einheit **Balladen** („Leute, höret die Geschicht’“, ca. 9 Wochen, siehe `Deutsch_7A/Balladen/SchiC_Balladen.md`), nicht Kurzgeschichten. Die Einheit wird am SchiC und am RLP Teil C ausgerichtet, einschließlich der dort vorgegebenen Leistungsbewertung.
 - Für die Verb-Einheit galt:
   - **Markieren statt Klammer (Deutsch 7A, bis alle Tempora behandelt sind):** Hilfsverb rot und Partizip II gelb (bzw. Infinitiv blau) markieren. Noch keine Satzklammer-Bögen und kein Merksatz zur Satzklammer – das kommt erst am Schluss der Tempus-Einheit.
   - **Modalverben** sind nach hinten verschoben (nach den Tempora).
