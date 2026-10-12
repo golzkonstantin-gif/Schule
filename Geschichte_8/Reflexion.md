@@ -46,6 +46,12 @@
 - **Konsequenz:** Für die Französische Revolution eher selbst erarbeiten lassen (Gruppenpuzzle) statt Hörtext.
 - **Nächster Schritt:** Stunde zur Französischen Revolution, Gruppenpuzzle geplant.
 
+### Französische Revolution 1789: Gruppenpuzzle (geplant, 45 Min., 12 Schülerinnen und Schüler)
+- **Material:** `Franzoesische_Revolution/` (drei Expertentexte, Tafelskript, vier Folien)
+- **Inhalt:** Bildimpuls Bastille; Expertengruppen A (Generalstände, Nationalversammlung, Ballhausschwur), B (Sturm auf die Bastille), C (Ende der Vorrechte, Menschenrechte); Stammgruppen; Zeitstrahl an der Tafel mit Zuordnung zu den Problemen aus der Münzgeschichte; Abschluss mit zwei Gründen für die Revolution.
+- **Planungsentscheidungen:** drei statt vier Themen (45 Minuten), kein Hörtext, kein Zusatztext, Raster ins Heft (kein Arbeitsblatt außer den Expertentexten), nur wenige Folien.
+- **Rückmeldung der Lehrkraft:** *(steht noch aus)*
+
 ## Hospitationsfeedback (gesammelt)
 
 *(noch keine Einträge)*

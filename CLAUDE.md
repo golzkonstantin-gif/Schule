@@ -56,3 +56,4 @@ Keine Klarnamen von Schülerinnen, Schülern oder Kolleginnen und Kollegen ins R
 - `Deutsch_7A/Reflexion.md` – Lernstand, Stundenlog, Hospitationsfeedback, offene Baustellen
 - `Geschichte_8/` – Material der Klasse 8 (Geschichte), gleiche Struktur; Reflexionslog: `Geschichte_8/Reflexion.md`
 - `Geschichte_8/Test_Staendegesellschaft_Absolutismus/` – Test-Entwurf mit Erwartungshorizont und Notenschlüssel
+- `Geschichte_8/Ausblick_Muenze/` und `Geschichte_8/Franzoesische_Revolution/` – Ausblick und Gruppenpuzzle zur Französischen Revolution
