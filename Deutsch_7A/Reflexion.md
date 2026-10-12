@@ -17,6 +17,8 @@
 
 ## Offene Baustellen
 
+> **Stand 12.10.:** Die Einheit Verben und Zeitformen endet mit einem Test. Danach folgen Kurzgeschichten (lesen, bearbeiten, kreativ weiterschreiben). Die offenen Grammatikpunkte unten werden vorerst nicht weiterverfolgt.
+
 - [x] Unterschied Infinitiv, finite Form und Partizip II sicher (Stand 06.10.)
 - [ ] Gebeugte Formen auf den Infinitiv zurückführen („Wie heißt der Infinitiv?“) zur Routine machen – weiter in jeder Stunde kurz üben
 - [ ] *haben* und *sein* im Präsens und Präteritum sicher konjugieren

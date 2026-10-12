@@ -8,7 +8,9 @@ Dieses Repo enthält Unterrichtsmaterial (Deutsch). Die Lehrkraft plant hier gem
 2. Die Planung ausdrücklich darauf beziehen („Letztes Mal hing die Klasse bei …, deshalb …“).
 3. Wenn die Lehrkraft Rückmeldung zu einer Stunde oder Hospitationsfeedback gibt: im Reflexionslog eintragen (Vorlage steht dort) und mitcommitten. Dauerhafte neue Vorlieben zusätzlich hier in `CLAUDE.md` ergänzen.
 
-## Vorlieben der Lehrkraft
+## Vorlieben der Lehrkraft (gelten für alle Klassen und Fächer)
+
+Die folgenden Vorlieben und Reflexionen gelten für die gesamte weitere Planung, auch in anderen Klassen und Fächern (Stand 12.10.). Beispiele aus dem Deutschunterricht der 7A sind nur zur Veranschaulichung genannt. Klassenspezifisches steht im eigenen Abschnitt weiter unten.
 
 - **Planung nach einem didaktischen Planungsmodell (Stand 12.10., gilt für alle Stunden).** Jede Stunde wird nach einem ausdrücklich genannten Modell geplant, das Seminarmodell hat Vorrang. Die Phasen folgen dem Modell, und jede Phase dient dem Stundenziel.
 - **Planungsmodell AVIVA (Stand 12.10., wird erprobt).** Die Phasen heißen A – V – I – V – A:
@@ -62,15 +64,20 @@ Dieses Repo enthält Unterrichtsmaterial (Deutsch). Die Lehrkraft plant hier gem
 - **PowerPoint nur, wenn die Lehrkraft sie möchte – vorher fragen.** Für „Hilfsverben erkennen“ wurde ausdrücklich keine gewünscht.
   - Mit PowerPoint: Sie enthält Merksätze und Aufgaben (gleicher Wortlaut wie im Tafelskript, Lösungen nur in den Notizen). Je Merksatz eine Folie: Kernsatz im roten Rahmen, Beispiel in Farbe, „Wofür?“ und „Test“, direkt vor der passenden Übung. An der Tafel entstehen dann nur Tafelbilder und Tabellen.
   - Ohne PowerPoint: Merksätze und Übungen stehen an der Tafel. Im Skript den Tipp geben, die Merksätze vorab auf die Seitentafel zu schreiben.
-- **Markieren statt Klammer (Deutsch 7A, bis alle Tempora behandelt sind):** Hilfsverb rot und Partizip II gelb (bzw. Infinitiv blau) markieren. Noch keine Satzklammer-Bögen und kein Merksatz zur Satzklammer – das kommt erst am Schluss der Tempus-Einheit.
-- **Modalverben** sind nach hinten verschoben (nach den Tempora).
-- **Im „Wofür?“ der Merksätze den Bezug zu den Tempora herstellen**, wenn es passt (z. B. Partizip II und Hilfsverb braucht man für die Tempora).
+## Klassenspezifisch: Deutsch 7A
+
+- **Einheit Verben und Zeitformen** wird mit einem Test abgeschlossen (Stand 12.10.). Danach folgt die Einheit **Kurzgeschichten**: lesen, bearbeiten und kreativ weiterschreiben.
+- Für die Verb-Einheit galt:
+  - **Markieren statt Klammer (Deutsch 7A, bis alle Tempora behandelt sind):** Hilfsverb rot und Partizip II gelb (bzw. Infinitiv blau) markieren. Noch keine Satzklammer-Bögen und kein Merksatz zur Satzklammer – das kommt erst am Schluss der Tempus-Einheit.
+  - **Modalverben** sind nach hinten verschoben (nach den Tempora).
+  - **Im „Wofür?“ der Merksätze den Bezug zu den Tempora herstellen**, wenn es passt (z. B. Partizip II und Hilfsverb braucht man für die Tempora).
+- Futur II, Hilfsverb oder Vollverb, Modalverben und die Satzklammer wurden nicht mehr behandelt. Bei einer späteren Wiederaufnahme der Grammatik dort ansetzen.
 
 ## Gestaltung
 
 - Formate: Word (`.docx`) für Skripte/Arbeitsblätter, PowerPoint (`.pptx`) für Folien, jeweils zusätzlich als PDF.
 - Farben: Navy `1E2761` (Grundfarbe), Hellblau `F4F7FD`/`EAF0FA` (Flächen), Grau `5B6B8C` (Nebentext).
-- Farbcode Verbformen (gilt für Tafel, Heft, Folien): Hilfsverb haben/sein/werden **rot** `D9534F`, Modalverb **grün** `2E9E6B`, Partizip II **gelb** `E8A33D`, Infinitiv **blau** `3F7CC4`, Verbesserungen im Heft grün.
+- Farbcode Verbformen (Grammatik Deutsch; gilt für Tafel, Heft, Folien): Hilfsverb haben/sein/werden **rot** `D9534F`, Modalverb **grün** `2E9E6B`, Partizip II **gelb** `E8A33D`, Infinitiv **blau** `3F7CC4`, Verbesserungen im Heft grün.
 - Schrift: Überschriften Cambria, Text Calibri. Folien 16:9 im Stil der bisherigen Präsentationen.
 - Die Dateien werden per Skript erzeugt; die Skripte liegen jeweils im Unterordner `quellcode/` (Node: `docx`, `pptxgenjs`). Änderungen am Material im Skript machen und neu erzeugen.
 
