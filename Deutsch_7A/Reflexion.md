@@ -204,6 +204,14 @@ Die Lehrkraft möchte das weiterverfolgen, noch ohne Material. Die Satzklammer (
   - Lernziel und Ablauf stehen zu Beginn an der Tafel, mögliche Streichphasen sind mit * markiert.
 - **Hospitationsfeedback:** *(steht noch aus)*
 
+### Einheit „Leute, höret die Geschicht’ – Umgang mit Balladen“ (Grobplanung, ab 12.10.)
+- **Material:** `Balladen/` mit SchiC-Auszug und Grobplanung (44 Stunden: 4 in Woche 1, danach je 5).
+- **Balladen (Wahl der Lehrkraft):** John Maynard, Die Bürgschaft, Der Handschuh, Erlkönig, Der Zauberlehrling.
+- **Bewertungen:** Analyse (Std. 19), Textüberarbeitung aus der Figurenperspektive (Std. 25), Rezitation (Std. 39–41).
+- **KA 1 = Verben-Test:** Der Termin ist noch offen und noch nicht eingeplant.
+- **Planungsprinzipien:** AVIVA, Lernziel und Ablauf transparent, alle Schüler aktiv.
+- **Rückmeldung der Lehrkraft:** *(steht noch aus)*
+
 ## Hospitationsfeedback (gesammelt)
 
 *(noch keine Einträge)*
