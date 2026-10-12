@@ -221,6 +221,21 @@ Die Lehrkraft möchte das weiterverfolgen, noch ohne Material. Die Satzklammer (
 - **Planungsprinzipien:** AVIVA, Lernziel und Ablauf transparent, alle Schüler aktiv.
 - **Rückmeldung der Lehrkraft:** *(steht noch aus)*
 
+### Mi 14.10. (DS) „John Maynard – hören und lesen“ und Fr 16.10. „John Maynard – eine Ballade gliedern“ (geplant, AVIVA)
+- **Material:** `Balladen/Woche1/`
+  - zwei Tafelskripte, nach AVIVA gegliedert,
+  - Druckvorlage: Notizraster und Ü2 je 2 pro A4, Ü1 1 pro A4.
+  - Der Text kommt aus dem Lehrbuch. Strophenangaben bei Bedarf an die Lehrbuchzeilen anpassen.
+- **Lernziele:**
+  - Mi: Ich kann beim Zuhören Notizen machen und je nach Leseziel überfliegend, orientierend oder genau lesen. (Merksatz 1)
+  - Fr: Ich kann eine Ballade in Abschnitte gliedern und Zwischenüberschriften formulieren. (Merksatz 2)
+- **Umsetzung der Rückmeldung zum Unterrichtsbesuch:**
+  - Ziel und Ablauf (mit *) stehen an der Seitentafel.
+  - In jeder Phase hat jeder einen eigenen Auftrag, an der Tafel wird nur verglichen.
+  - Am Ende schreiben alle „Heute habe ich gelernt, …“.
+- **Mitarbeit:** Mi Selbsteinschätzung (20 Min.), Fr Rückgabe mit Note.
+- **Rückmeldung der Lehrkraft:** *(steht noch aus)*
+
 ## Hospitationsfeedback (gesammelt)
 
 *(noch keine Einträge)*
