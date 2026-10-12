@@ -198,6 +198,8 @@ Die Lehrkraft möchte das weiterverfolgen, noch ohne Material. Die Satzklammer (
   - Stunden nach einem didaktischen Planungsmodell planen und das Modell im Material nennen.
   - Jede Stunde braucht einen konkreten, überprüfbaren Lernzuwachs. Auf die Frage „Was habt ihr heute gelernt?“ muss eine klare Antwort kommen.
   - In jeder Phase sind alle Schüler aktiv. Die Tafel-Kette dient nur zum Vergleichen, nicht zum Erarbeiten.
+  - Planungsmodell: AVIVA wird ab der nächsten Stunde erprobt.
+  - Lernziel und Ablauf stehen zu Beginn an der Tafel, mögliche Streichphasen sind mit * markiert.
 - **Hospitationsfeedback:** *(steht noch aus)*
 
 ## Hospitationsfeedback (gesammelt)

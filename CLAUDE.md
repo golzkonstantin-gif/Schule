@@ -11,6 +11,18 @@ Dieses Repo enthält Unterrichtsmaterial (Deutsch). Die Lehrkraft plant hier gem
 ## Vorlieben der Lehrkraft
 
 - **Planung nach einem didaktischen Planungsmodell (Stand 12.10., gilt für alle Stunden).** Jede Stunde wird nach einem ausdrücklich genannten Modell geplant, das Seminarmodell hat Vorrang. Die Phasen folgen dem Modell, und jede Phase dient dem Stundenziel.
+- **Planungsmodell AVIVA (Stand 12.10., wird erprobt).** Die Phasen heißen A – V – I – V – A:
+  - **A**nkommen und einstimmen
+  - **V**orwissen aktivieren
+  - **I**nformieren
+  - **V**erarbeiten
+  - **A**uswerten
+
+  Verlaufsplan und Tafelskript werden nach diesen Phasen gegliedert. Im Lernlog festhalten, wie sich das Modell bewährt.
+- **Lernziel und Ablauf für die Schüler transparent machen (Stand 12.10.).**
+  - Zu Beginn jeder Stunde stehen an der Tafel (Seitentafel) das Stundenziel als „Ich kann …“ und der Ablauf in wenigen Stichpunkten.
+  - Was eventuell nicht mehr geschafft wird, ist mit einem Stern (*) markiert.
+  - In der Phase „Auswerten“ wird darauf zurückgegriffen: Haben wir das Ziel erreicht?
 - **Konkreter Lernzuwachs in jeder Stunde (Stand 12.10.).**
   - Vorab ein überprüfbares Stundenziel formulieren, als Schülersatz „Ich kann …“.
   - Wenn jemand die Schüler fragt, was sie heute gelernt haben, muss eine klare Antwort kommen.
