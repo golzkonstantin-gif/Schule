@@ -172,7 +172,7 @@ Die Lehrkraft möchte das weiterverfolgen, noch ohne Material. Die Satzklammer (
   - Die nächste Stunde beginnt mit Ü11 „Mein erster Wettkampf“ (Schreibrahmen ist gedruckt), danach Partner-Check und Reflexion der Zeitformen im eigenen Text.
 - **Hospitationsfeedback:** –
 
-### Einzelstunde „Welche Zeitform wann?“ (geplant, 45 Min., Unterrichtsbesuch: Orientierungshospitation)
+### Einzelstunde „Welche Zeitform wann?“ (45 Min., 12.10., Unterrichtsbesuch: Orientierungshospitation)
 - **Material:** `Zeitformen_Zeitstrahl/`
   - Verlaufsplan und Tafelskript.
   - Druckvorlage: Tabelle „Die Zeitformen im Überblick“ und Exit-Ticket, je 2 pro A4.
@@ -190,7 +190,14 @@ Die Lehrkraft möchte das weiterverfolgen, noch ohne Material. Die Satzklammer (
   - Die Übersicht entsteht mit Zeitform- und Bauplan-Karten (Kreide-Kette), die Tabelle wird mitgeschrieben.
   - Exit-Ticket (halbes A4, 2 pro Blatt): 5–7 Sätze über das eigene Wochenende. Je Zeitform gibt es mindestens 4 Satzanfänge, keine fertigen Sätze, geordnet nach Inhalt (Vorbereitung, Ablauf und Ergebnis, wörtliche Rede, Befinden, Ziele). Das Hilfsverb ist rot, eine farbige Leerstelle zeigt den Platz für Partizip II bzw. Infinitiv. Darunter 6 Schreiblinien, bei Bedarf die Rückseite.
   - Zwei Texte vorlesen, die Klasse zeigt am Zeitstrahl mit.
-- **Rückmeldung der Lehrkraft:** *(steht noch aus)*
+- **Rückmeldung der Lehrkraft (12.10.):**
+  - Die erste Hälfte der Stunde war chaotisch.
+  - Beim Sortieren am Zeitstrahl war immer nur ein Schüler aktiv, der Rest hatte nichts zu tun. Der Planungsfehler: In Phase 1 lagen die Stifte, und es gab keinen Auftrag für alle anderen.
+  - Das Exit-Ticket lief gut.
+- **Konsequenz (gilt für alle Stunden):**
+  - Stunden nach einem didaktischen Planungsmodell planen und das Modell im Material nennen.
+  - Jede Stunde braucht einen konkreten, überprüfbaren Lernzuwachs. Auf die Frage „Was habt ihr heute gelernt?“ muss eine klare Antwort kommen.
+  - In jeder Phase sind alle Schüler aktiv. Die Tafel-Kette dient nur zum Vergleichen, nicht zum Erarbeiten.
 - **Hospitationsfeedback:** *(steht noch aus)*
 
 ## Hospitationsfeedback (gesammelt)

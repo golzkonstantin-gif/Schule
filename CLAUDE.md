@@ -10,6 +10,17 @@ Dieses Repo enthält Unterrichtsmaterial (Deutsch). Die Lehrkraft plant hier gem
 
 ## Vorlieben der Lehrkraft
 
+- **Planung nach einem didaktischen Planungsmodell (Stand 12.10., gilt für alle Stunden).** Jede Stunde wird nach einem ausdrücklich genannten Modell geplant, das Seminarmodell hat Vorrang. Die Phasen folgen dem Modell, und jede Phase dient dem Stundenziel.
+- **Konkreter Lernzuwachs in jeder Stunde (Stand 12.10.).**
+  - Vorab ein überprüfbares Stundenziel formulieren, als Schülersatz „Ich kann …“.
+  - Wenn jemand die Schüler fragt, was sie heute gelernt haben, muss eine klare Antwort kommen.
+  - Die Sicherung zielt genau darauf und macht den Lernzuwachs ausdrücklich, z. B. mit dem Satz „Heute habe ich gelernt, …“.
+  - Keine Phase nur zum Beschäftigen.
+- **Alle Schüler in jeder Phase aktiv (Stand 12.10.).**
+  - Wenn ein Schüler an der Tafel arbeitet, brauchen alle anderen einen eigenen Auftrag, z. B. dasselbe am Platz oder zu zweit lösen, mitschreiben oder prüfen.
+  - Sortier- und Zuordnungsaufgaben erst am Platz oder zu zweit bearbeiten, dann an der Tafel vergleichen.
+  - Die Sortierphase in der Stunde „Welche Zeitform wann?“ war chaotisch, weil immer nur ein Schüler beschäftigt war.
+
 - **Alle Klassen der Lehrkraft bestehen aus Leistungssportlern.** Das gilt für jede Planung: Beispiele, Übungssätze und Schreibanlässe an Training, Wettkampf, Trainer, Ergebnisse und den Alltag im Leistungssport anknüpfen. Die Sportarten der jeweiligen Klasse stehen im Reflexionslog der Klasse.
 
 - **Erst fragen, was gewünscht ist:** Wenn die Lehrkraft „erst mal Ideen sammeln“ sagt, nur Ideen im Chat – kein Material erstellen.
@@ -29,7 +40,7 @@ Dieses Repo enthält Unterrichtsmaterial (Deutsch). Die Lehrkraft plant hier gem
 - **Transparenz durch die Lehrkraft, nicht durch Hilfsmittel.** Keine Modus- oder Symbolkarten (ausdrücklich abgelehnt). Stattdessen:
   - feste, wörtliche Ansagen bei jedem Wechsel („Stifte liegen. Ihr hört nur zu.“ / „Jetzt schreibt ihr ab: …“ / „Jetzt arbeitet ihr allein. Die Aufgabe steht rechts.“ / „Wer drankommt, schreibt an die Tafel. Alle prüfen mit.“ / „Vergleicht und verbessert mit Grün.“),
   - Übungen immer im gleichen Format: Nummer + Titel, nummerierte Arbeitsschritte mit Verb am Anfang, Zeit, Arbeitsform, „Fertig? Stift hinlegen“.
-- **Bewährt: „Kreide-Kette“.** Die Schüler kommen nacheinander an die Tafel, lösen eine Aufgabe und geben die Kreide an den Nächsten weiter. Das sorgt für eine konzentrierte Atmosphäre und soll bei Tafelübungen standardmäßig eingeplant werden. Besonders bewährt: Die übrigen Schüler schreiben dabei im Heft mit, so sind alle beschäftigt.
+- **Bewährt: „Kreide-Kette“.** Die Schüler kommen nacheinander an die Tafel, lösen eine Aufgabe und geben die Kreide an den Nächsten weiter. Das sorgt für eine konzentrierte Atmosphäre und soll bei Tafelübungen standardmäßig eingeplant werden. Sie funktioniert nur, wenn die übrigen Schüler dabei etwas zu tun haben, z. B. im Heft mitschreiben. Ohne Auftrag für alle (z. B. beim reinen Sortieren von Magnetstreifen) wird es chaotisch.
 - **Abwechslung bei Tafelübungen (Stand 08.10.):** Die Schüler sind genervt davon, ständig Tabellen an der Tafel auszufüllen. Tafel-Tabellen nur dort einsetzen, wo sie wirklich nötig sind (z. B. Konjugation fürs Heft), und dann kurz halten. Sonst variieren: Fehler finden statt Lücken füllen, Satzstreifen ordnen, ganze Sätze statt einzelner Zellen, Partnerarbeit, eigene Texte.
 - **Zeit realistisch planen.** Kreide-Kette und Mitschreiben brauchen mehr Zeit als gedacht. Die ersten beiden Stunden wurden nicht ganz geschafft. Lieber weniger Inhalt pro Stunde und eine klar markierte optionale Phase am Ende.
 - **Zu Beginn jeder Stunde das Vorwissen der letzten Stunde reaktivieren**, mit kurzen Übungen an der Tafel.
