@@ -18,7 +18,7 @@ Dieses Repo enthält Unterrichtsmaterial (Deutsch). Die Lehrkraft plant hier gem
   - **V**erarbeiten
   - **A**uswerten
 
-  Verlaufsplan und Tafelskript werden nach diesen Phasen gegliedert. Im Lernlog festhalten, wie sich das Modell bewährt.
+  Verlaufsplan und Tafelskript werden nach diesen Phasen gegliedert. Im Reflexionslog festhalten, wie sich das Modell bewährt.
 - **Lernziel und Ablauf für die Schüler transparent machen (Stand 12.10.).**
   - Zu Beginn jeder Stunde stehen an der Tafel (Seitentafel) das Stundenziel als „Ich kann …“ und der Ablauf in wenigen Stichpunkten.
   - Was eventuell nicht mehr geschafft wird, ist mit einem Stern (*) markiert.
