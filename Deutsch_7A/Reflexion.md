@@ -206,16 +206,17 @@ Die Lehrkraft möchte das weiterverfolgen, noch ohne Material. Die Satzklammer (
 
 ### Einheit „Leute, höret die Geschicht’ – Umgang mit Balladen“ (Grobplanung, ab 12.10.)
 - **Material:** `Balladen/` mit SchiC-Auszug und Grobplanung.
-  - 39 Balladenstunden: Woche 1 (13.–16.10.) und Woche 2 (3.–6.11.) mit je 4 Stunden, danach je 5. Woche 9 umfasst den 21.–22.12. (Stundenzahl prüfen).
+  - Stundenplan: Mo Einzelstunde, Mi Doppelstunde, Do und Fr je eine Einzelstunde.
+  - 38 Balladenstunden. Woche 1 hat 3 (dazu KA 1), Woche 2 hat 4 (Mo 2.11. frei), danach je 5. Woche 9 ist nur Mo 21.12.
   - Herbstferien 17.10.–2.11.; Weihnachtsferien ab 23.12.
   - Lesetechniken (überfliegend, orientierend, genau) werden auf Wunsch der Lehrkraft schon in Woche 1 eingeführt.
   - Bezug zum Leistungssport nur dort, wo er sich anbietet.
-  - Ohne eigenen Puffer: Std. 39 und die mit * markierten Teile können entfallen.
+  - Ohne eigenen Puffer: Die mit * markierten Teile können entfallen.
 - **Balladen (Wahl der Lehrkraft):** John Maynard, Die Bürgschaft, Der Handschuh, Erlkönig, Der Zauberlehrling.
-- **Bewertungen:** Analyse (Std. 19), Textüberarbeitung aus der Figurenperspektive (Std. 25), Rezitation (Std. 36–38, vor den Weihnachtsferien).
+- **Bewertungen:** Analyse (Std. 19), Textüberarbeitung aus der Figurenperspektive (Std. 25), Rezitation (Std. 36–38, 17.–21.12., vor den Weihnachtsferien).
 - **KA 1 = Verben-Test:** am Do 15.10.
 - **Mitarbeitsnoten:**
-  - Di 13.10.: 20 Minuten Selbsteinschätzung mit dem Bogen in `Mitarbeit/` (7 Kriterien, ++/+/o/–).
+  - Mi 14.10.: 20 Minuten Selbsteinschätzung mit dem Bogen in `Mitarbeit/` (7 Kriterien, ++/+/o/–).
   - Die Lehrkraft sammelt die Bögen ein und gibt sie am Fr 16.10. mit eigener Einschätzung und Note zurück.
 - **Planungsprinzipien:** AVIVA, Lernziel und Ablauf transparent, alle Schüler aktiv.
 - **Rückmeldung der Lehrkraft:** *(steht noch aus)*

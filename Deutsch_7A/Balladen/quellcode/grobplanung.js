@@ -169,14 +169,14 @@ const grow = ([nr, thema, ziel, inhalt, rlp, bew]) => row([
 const week = (title, sub) => row([cell(p([t(title, { bold: true, color: "FFFFFF", size: 21, font: "Cambria" }), t(sub ? "   " + sub : "", { color: "DCE3F2", size: 18 })], { after: 0 }), { w: LW, fill: title.includes("ferien") ? "9AA3B5" : NAVY, borders: gb, span: 6, m: 50, ml: 100 })]);
 
 const WEEKS = [
-  ["Woche 1 · 13.–16.10. · Was ist eine Ballade? – Lesetechniken", "4 Stunden · John Maynard (Fontane) · KA 1 · Mitarbeit", [
-    [1, "Mitarbeit einschätzen (20′) · Eine Ballade hören (25′)", "… meine Mitarbeit nach Kriterien einschätzen. / … beim Zuhören Notizen zu Figuren, Ort und Handlung machen.", "Selbsteinschätzungsbogen Mitarbeit ausfüllen, Lehrkraft sammelt ein. Danach Hörfassung „John Maynard“ (z. B. Achim Reichel) mit Notizraster wer – wo – was passiert – wie endet es; Abgleich zu zweit.", "2.3 D · 2.11 D", ""],
-    [2, "Lesetechniken", "… überfliegend, orientierend und genau lesen und die passende Technik zum Leseziel wählen.", "Merksatz Lesetechniken (Wofür? Test). Drei Aufträge am Text, alle arbeiten allein mit Zeitvorgabe: überfliegen (Worum geht es? 1 Min.), orientieren (Wo steht …?), genau lesen mit Randnotizen; unbekannte Wörter aus dem Kontext erschließen. Vergleich in PA.", "2.8 D/E · 2.12", ""],
-    ["KA", "KA 1: Verben und Zeitformen (Do 15.10.)", "", "Klassenarbeit.", "", "KA 1"],
-    [3, "Rückgabe Mitarbeit (10′) · Eine Ballade gliedern (35′)", "… eine Ballade in Abschnitte gliedern und Zwischenüberschriften formulieren.", "Bögen mit Einschätzung und Note der Lehrkraft zurück, kurze Einzelgespräche während der Arbeitsphase. Genaues Lesen anwenden: in PA Abschnitte markieren und Zwischenüberschriften notieren; Vergleich an der Tafel.", "2.8 D", ""],
+  ["Woche 1 · 14.–16.10. · Was ist eine Ballade? – Lesetechniken", "4 Stunden · John Maynard (Fontane) · KA 1 · Mitarbeit", [
+    [1, "Mi 14.10. (DS) · Mitarbeit einschätzen (20′) · Eine Ballade hören (25′)", "… meine Mitarbeit nach Kriterien einschätzen. / … beim Zuhören Notizen zu Figuren, Ort und Handlung machen.", "Selbsteinschätzungsbogen Mitarbeit ausfüllen, Lehrkraft sammelt ein. Danach Hörfassung „John Maynard“ (z. B. Achim Reichel) mit Notizraster wer – wo – was passiert – wie endet es; Abgleich zu zweit.", "2.3 D · 2.11 D", ""],
+    [2, "Mi 14.10. (DS) · Lesetechniken", "… überfliegend, orientierend und genau lesen und die passende Technik zum Leseziel wählen.", "Merksatz Lesetechniken (Wofür? Test). Drei Aufträge am Text, alle arbeiten allein mit Zeitvorgabe: überfliegen (Worum geht es? 1 Min.), orientieren (Wo steht …?), genau lesen mit Randnotizen; unbekannte Wörter aus dem Kontext erschließen. Vergleich in PA.", "2.8 D/E · 2.12", ""],
+    ["KA", "Do 15.10. · KA 1: Verben und Zeitformen", "", "Klassenarbeit.", "", "KA 1"],
+    [3, "Fr 16.10. · Rückgabe Mitarbeit (10′) · Eine Ballade gliedern (35′)", "… eine Ballade in Abschnitte gliedern und Zwischenüberschriften formulieren.", "Bögen mit Einschätzung und Note der Lehrkraft zurück, kurze Einzelgespräche während der Arbeitsphase. Genaues Lesen anwenden: in PA Abschnitte markieren und Zwischenüberschriften notieren; Vergleich an der Tafel.", "2.8 D", ""],
   ]],
   ["Herbstferien 17.10.–2.11.", "", []],
-  ["Woche 2 · 3.–6.11. · Eine Ballade erschließen", "4 Stunden · John Maynard", [
+  ["Woche 2 · 4.–6.11. · Eine Ballade erschließen", "4 Stunden (Mo 2.11. frei) · John Maynard", [
     [4, "Das „Ur-Ei“: episch, lyrisch, dramatisch", "… an einer Ballade erzählende, lyrische und dramatische Elemente nachweisen.", "Einstieg nach den Ferien: Lesetechniken und Gliederung wiederholen. Merksatz Ballade (Goethe: „Ur-Ei“); Belegstellen in drei Farben markieren (allein), dann PA.", "2.9 D", ""],
     [5, "Strophe, Vers, Reim", "… Strophe und Vers unterscheiden und Paarreim, Kreuzreim und umarmenden Reim bestimmen.", "Merksatz Reimformen; Reimschema an Strophen bestimmen (Schnipsel); Speed-Duell zu Reimformen.", "2.9 D", ""],
     [6, "Der Spannungsbogen", "… den Handlungsverlauf einer Ballade als Spannungskurve darstellen und begründen.", "Spannungskurve zeichnen (allein), Höhepunkt mit Textstelle belegen; Vergleich in PA.", "2.8 E · 2.9 F", ""],
@@ -224,20 +224,19 @@ const WEEKS = [
     [36, "Rezitation I", "… eine Ballade kriterienorientiert vortragen.", "Vorträge; Zuhörer notieren Feedback.", "2.7 · 2.3", "Bewertung 3: Rezitation"],
     [37, "Rezitation II", "… eine Ballade kriterienorientiert vortragen.", "Vorträge; Zuhörer notieren Feedback.", "2.7 · 2.3", "Bewertung 3: Rezitation"],
   ]],
-  ["Woche 9 · 21.–22.12. · Abschluss vor den Weihnachtsferien", "Stundenzahl prüfen (angenommen: 2)", [
-    [38, "Rezitation III", "… eine Ballade kriterienorientiert vortragen.", "Restliche Vorträge (ggf. im geschützten Raum).", "2.7", "Bewertung 3: Rezitation"],
-    [39, "* Rückblick: meine Ballade", "… meinen Lernstand einschätzen und begründen, welche Ballade mich am meisten überzeugt.", "Selbsteinschätzung; kurze begründete Stellungnahme. Dient zugleich als Puffer, falls Rezitationen länger dauern.", "2.7 D · 2.8 D", ""],
+  ["Woche 9 · Mo 21.12. · Abschluss vor den Weihnachtsferien", "1 Stunde", [
+    [38, "Rezitation III · * Rückblick", "… eine Ballade kriterienorientiert vortragen.", "Restliche Vorträge (ggf. im geschützten Raum). * Falls Zeit bleibt: Rückblick „Welche Ballade hat mich am meisten überzeugt – und warum?“", "2.7 · 2.8 D", "Bewertung 3: Rezitation"],
   ]],
 ];
 
 const doc = [];
-doc.push(kicker("Grobplanung · Deutsch · Klasse 7A · ca. 9 Unterrichtswochen · 5 Stunden pro Woche · 39 Stunden Balladen"));
+doc.push(kicker("Grobplanung · Deutsch · Klasse 7A · ca. 9 Unterrichtswochen · 5 Stunden pro Woche · 38 Stunden Balladen"));
 doc.push(h1("„Leute, höret die Geschicht’“ – Umgang mit Balladen"));
 doc.push(table([3000, LW - 3000], [
   ["Balladen", "Fontane: John Maynard · Schiller: Die Bürgschaft, Der Handschuh · Goethe: Erlkönig, Der Zauberlehrling · zur Rezitation frei wählbar"],
-  ["Leistungsbewertung (SchiC)", "Bewertung 1: Analyse der Merkmale (Std. 19, Woche 5) · Bewertung 2: Textüberarbeitung aus der Figurenperspektive (Std. 25, Woche 6) · Bewertung 3: Rezitation einer selbst gewählten Ballade (Std. 36–38, Woche 8–9, vor den Weihnachtsferien)"],
+  ["Leistungsbewertung (SchiC)", "Bewertung 1: Analyse der Merkmale (Std. 19, Woche 5) · Bewertung 2: Textüberarbeitung aus der Figurenperspektive (Std. 25, Woche 6) · Bewertung 3: Rezitation einer selbst gewählten Ballade (Std. 36–38, 17.–21.12., vor den Weihnachtsferien)"],
   ["Planungsprinzipien", "Jede Stunde nach AVIVA · Lernziel als „Ich kann …“ und Ablauf an der Tafel (Streichbares mit *) · alle Schüler in jeder Phase aktiv: erst allein oder zu zweit, dann Vergleich an der Tafel · am Ende „Heute habe ich gelernt, …“ · Bezüge zum Leistungssport nur dort, wo sie sich anbieten"],
-  ["Termine", "KA 1 (Verben) am Do 15.10. · Mitarbeit: Selbsteinschätzung Di 13.10. (20 Min.), Rückgabe mit Note Fr 16.10. · Herbstferien 17.10.–2.11. · Weihnachtsferien ab 23.12. · Woche 2: 4 Std. (2.11. frei), Woche 9: 21.–22.12. (Stundenzahl prüfen) · Kein eigener Puffer mehr: Std. 39 und die mit * markierten Teile können entfallen."],
+  ["Termine", "Stundenplan: Mo ES, Mi DS, Do ES, Fr ES · KA 1 (Verben) am Do 15.10. · Mitarbeit: Selbsteinschätzung Mi 14.10. (20 Min.), Rückgabe mit Note Fr 16.10. · Herbstferien 17.10.–2.11. · Weihnachtsferien ab 23.12. (letzte Stunde Mo 21.12.) · Kein eigener Puffer: mit * markierte Teile können entfallen."],
 ].map(([a, b]) => row([tc(a, 3000, { bold: true, color: NAVY, fill: LIGHT, size: 19 }), cell(p(s19(b), { after: 0 }), { w: LW - 3000, m: 50, ml: 80 })]))));
 doc.push(p(t(""), { after: 120 }));
 const rows = [new TableRow({ tableHeader: true, children: ghdr.map((h, i) => hdr(h, GW[i], NAVY, 18)) })];
