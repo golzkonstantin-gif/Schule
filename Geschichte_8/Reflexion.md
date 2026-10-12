@@ -39,10 +39,12 @@
 - **Rückmeldung der Lehrkraft:** *(steht noch aus)*
 - **Ergebnisse:** *(steht noch aus)*
 
-### Ausblick nach dem Test: „Die Münze“ (geplant, 10 Min.)
+### Ausblick nach dem Test: „Die Münze“ (10 Min.)
 - **Material:** `Ausblick_Muenze/` (Tafelskript mit Vorlesetext und Tafelbild, keine Folie)
 - **Idee:** Eine Münze, nach der drei Hände greifen (Pacht, Zehnt, Steuer). Alle Stände kommen vor, die Klasse erkennt Probleme Frankreichs und dass die Stimmung kippt. Tafelbild gemeinsam, kein Heft.
-- **Rückmeldung der Lehrkraft:** *(steht noch aus)*
+- **Rückmeldung der Lehrkraft:** Das Vorlesen und Heraushören war okay, würde die Lehrkraft aber nicht noch einmal so machen.
+- **Konsequenz:** Für die Französische Revolution eher selbst erarbeiten lassen (Gruppenpuzzle) statt Hörtext.
+- **Nächster Schritt:** Stunde zur Französischen Revolution, Gruppenpuzzle geplant.
 
 ## Hospitationsfeedback (gesammelt)
 
