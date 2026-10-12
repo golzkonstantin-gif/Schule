@@ -89,3 +89,4 @@ Keine Klarnamen von Schülerinnen, Schülern oder Kolleginnen und Kollegen ins R
 
 - `Deutsch_7A/` – Material der Klasse 7A, ein Unterordner pro Stunde/Einheit
 - `Deutsch_7A/Reflexion.md` – Lernstand, Stundenlog, Hospitationsfeedback, offene Baustellen
+- Weitere Klassen und Fächer bekommen einen eigenen Ordner nach demselben Muster (`<Fach>_<Klasse>/`) mit eigenem `Reflexion.md`, z. B. Klassenprofil, Sportarten und Lernstand. Die Vorlieben oben gelten dort genauso.
