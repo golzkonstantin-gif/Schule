@@ -170,10 +170,10 @@ const week = (title, sub) => row([cell(p([t(title, { bold: true, color: "FFFFFF"
 
 const WEEKS = [
   ["Woche 1 · 14.–16.10. · Was ist eine Ballade? – Lesetechniken", "4 Stunden · John Maynard (Fontane) · KA 1 · Mitarbeit", [
-    [1, "Mi 14.10. (DS) · Mitarbeit einschätzen (20′) · Eine Ballade hören (25′)", "… meine Mitarbeit nach Kriterien einschätzen. / … beim Zuhören Notizen zu Figuren, Ort und Handlung machen.", "Selbsteinschätzungsbogen Mitarbeit ausfüllen, Lehrkraft sammelt ein. Danach Hörfassung „John Maynard“ (z. B. Achim Reichel) mit Notizraster wer – wo – was passiert – wie endet es; Abgleich zu zweit.", "2.3 D · 2.11 D", ""],
+    [1, "Mi 14.10. (DS) · Mitarbeit einschätzen (20′) · Eine Ballade hören (25′)", "… meine Mitarbeit nach Kriterien einschätzen. / … beim Zuhören Notizen zu Figuren, Ort und Handlung machen.", "Selbsteinschätzungsbogen Mitarbeit ausfüllen, Lehrkraft sammelt ein. Danach Hörfassung „John Maynard“ (z. B. Achim Reichel) mit Notizraster wer – wo – was passiert – wie endet es; Abgleich zu zweit. Lesetraining: Schattenlesen mit dem Hörbuch, Nachlesen im Tandem.", "2.3 D · 2.11 D", ""],
     [2, "Mi 14.10. (DS) · Lesetechniken", "… überfliegend, orientierend und genau lesen und die passende Technik zum Leseziel wählen.", "Merksatz Lesetechniken (Wofür? Test). Drei Aufträge am Text, alle arbeiten allein mit Zeitvorgabe: überfliegen (Worum geht es? 1 Min.), orientieren (Wo steht …?), genau lesen mit Randnotizen; unbekannte Wörter aus dem Kontext erschließen. Vergleich in PA.", "2.8 D/E · 2.12", ""],
     ["KA", "Do 15.10. · KA 1: Verben und Zeitformen", "", "Klassenarbeit.", "", "KA 1"],
-    [3, "Fr 16.10. · Rückgabe Mitarbeit (10′) · Eine Ballade gliedern (35′)", "… eine Ballade in Abschnitte gliedern und Zwischenüberschriften formulieren.", "Bögen mit Einschätzung und Note der Lehrkraft zurück, kurze Einzelgespräche während der Arbeitsphase. Genaues Lesen anwenden: in PA Abschnitte markieren und Zwischenüberschriften notieren; Vergleich an der Tafel.", "2.8 D", ""],
+    [3, "Fr 16.10. · Rückgabe Mitarbeit (10′) · Eine Ballade gliedern (35′)", "… eine Ballade in Abschnitte gliedern und Zwischenüberschriften formulieren.", "Bögen mit Einschätzung und Note der Lehrkraft zurück, kurze Einzelgespräche während der Arbeitsphase. Lesetraining: Tandemlesen. Dann in PA Abschnitte festlegen und Zwischenüberschriften notieren; Vergleich in der Kreide-Kette.", "2.8 D", ""],
   ]],
   ["Herbstferien 17.10.–2.11.", "", []],
   ["Woche 2 · 4.–6.11. · Eine Ballade erschließen", "4 Stunden (Mo 2.11. frei) · John Maynard", [
@@ -185,14 +185,14 @@ const WEEKS = [
   ["Woche 3 · 9.–13.11. · Figuren und Konflikte", "5 Stunden · John Maynard, Die Bürgschaft (Schiller)", [
     [8, "Fakten hinter der Ballade", "… einen Sachtext mit der passenden Lesetechnik lesen und Informationen auf Verlässlichkeit prüfen.", "Sachtext zum Unglück der „Erie“ (1841) und zu Fontane; Lesetechnik selbst wählen; zwei Quellen vergleichen: Was ist belegt, was erfunden?", "2.8 D/E · 2.10 D/E", ""],
     [9, "Ein Held? John Maynard", "… eine Figur beschreiben und meine Einschätzung am Text begründen.", "Figurenbeschreibung mit Textbelegen; Positionslinie „Held oder Pflichterfüllung?“", "2.8 D · 2.9 E", ""],
-    [10, "Ein Konflikt beginnt", "… den Ausgangskonflikt einer Ballade benennen und Vermutungen zum Verlauf begründen.", "Bürgschaft Strophen 1–7 lesen bzw. hören; Konflikt Möros – Dionys; Vermutungen schriftlich, dann Weiterlesen.", "2.8 D · 2.9 F", ""],
+    [10, "Ein Konflikt beginnt", "… den Ausgangskonflikt einer Ballade benennen und Vermutungen zum Verlauf begründen.", "Bürgschaft Strophen 1–7 in Gruppen mit Ich-Du-Wir-Würfeln lesen; Konflikt Möros – Dionys; Vermutungen schriftlich, dann Weiterlesen.", "2.8 D · 2.9 F", ""],
     [11, "Ein Lauf gegen die Zeit", "… die Hindernisse der Handlung in einer Grafik darstellen.", "Hindernisse als Grafik (Fluss, Räuber, Hitze); Was treibt Möros an? (Bezug Ausdauer bietet sich an.)", "2.8 E · 2.9 F", ""],
     [12, "Figurenkonstellation", "… die Beziehungen der Figuren in einem Schaubild darstellen.", "Schaubild (Dionys, Möros, Freund, Philostratus) allein, dann in PA ergänzen.", "2.9 E", ""],
   ]],
   ["Woche 4 · 16.–20.11. · Balladen analysieren", "5 Stunden · Die Bürgschaft, Der Handschuh (Schiller)", [
     [13, "Eine Figur verändert sich", "… die Entwicklung einer Figur beschreiben und am Text belegen.", "Dionys am Anfang und am Ende: Zitate sammeln, Wandel begründen; einfache Zitiertechnik (Strophe/Vers).", "2.9 E/F", ""],
     [14, "Sprache und Wirkung", "… sprachliche Mittel erkennen und ihre Wirkung fachsprachlich beschreiben.", "Wortwahl, Wiederholung, sprachliche Bilder; Wirkung mit Formulierungshilfen beschreiben.", "2.9 E", ""],
-    [15, "Der Handschuh", "… den Inhalt einer Ballade erfassen und gliedern (binnendifferenziert).", "Lesen mit gestuften Hilfen (Worterklärungen, Leitfragen); Gliederung mit Zwischenüberschriften.", "2.8 D/E", ""],
+    [15, "Der Handschuh", "… den Inhalt einer Ballade erfassen und gliedern (binnendifferenziert).", "Blitzlesen schwieriger Wörter (z. B. Altan, Leu, Zwinger); Lesen mit gestuften Hilfen (Worterklärungen, Leitfragen); Gliederung mit Zwischenüberschriften.", "2.8 D/E", ""],
     [16, "Mutprobe oder Demütigung?", "… das Verhalten zweier Figuren bewerten und meine Deutung am Text belegen.", "Kunigunde und Delorges: Positionen sammeln und mit Zitaten belegen.", "2.9 E", ""],
     [17, "Wie analysiere ich eine Ballade?", "… eine Ballade nach Inhalt, Form und Sprache untersuchen.", "Checkliste Inhalt – Form – Sprache gemeinsam erarbeiten; Musteranalyse einer Strophe; Formulierungshilfen.", "2.9 D/E", ""],
   ]],
@@ -207,7 +207,7 @@ const WEEKS = [
     [23, "Schreibkonferenz", "… einen fremden Text nach Kriterien einschätzen und Verbesserungsvorschläge machen.", "Kriterienbogen; Schreibkonferenz in Dreiergruppen mit festen Rollen.", "2.6 D · 2.3", ""],
     [24, "Überarbeiten", "… meinen Text nach Kriterien und eigenen Schwerpunkten überarbeiten.", "Überarbeitung mit Grün; eigene Überarbeitungsschwerpunkte notieren.", "2.6 D/E", ""],
     [25, "Leistung: Textüberarbeitung", "… einen Text aus der Figurenperspektive kriteriengeleitet überarbeiten.", "Überarbeitung und Abgabe (Bewertung).", "2.6", "Bewertung 2: Textüberarbeitung"],
-    [26, "Wer spricht im Erlkönig?", "… die Sprecher einer Ballade unterscheiden und den Dialog als dramatisches Element erklären.", "Sprecher farbig markieren (Erzähler, Vater, Sohn, Erlkönig); mit verteilten Rollen lesen.", "2.9 D", ""],
+    [26, "Wer spricht im Erlkönig?", "… die Sprecher einer Ballade unterscheiden und den Dialog als dramatisches Element erklären.", "Sprecher farbig markieren (Erzähler, Vater, Sohn, Erlkönig); Rollenlesen, Erzählerstrophen chorisch.", "2.9 D", ""],
     [27, "Wie entsteht das Unheimliche?", "… beschreiben, wie Sprache und Aufbau Spannung erzeugen.", "Steigerung von Strophe zu Strophe; Wortwahl des Erlkönigs; Wirkung belegen.", "2.9 E", ""],
   ]],
   ["Woche 7 · 7.–11.12. · Medien und Vortrag", "5 Stunden · Erlkönig, Der Zauberlehrling (Goethe)", [
@@ -215,7 +215,7 @@ const WEEKS = [
     [29, "Der Zauberlehrling", "… Aufbau und Kehrreim einer Ballade beschreiben und ihre Wirkung erklären.", "Lesen, Kehrreim markieren, Wirkung der Wiederholung beschreiben.", "2.9 D/E", ""],
     [30, "Ballade, Film und Graphic Novel", "… Text, Verfilmung und Bildfassung vergleichen.", "Micky-Maus-Fassung (Fantasia) mit Vergleichsraster; * eine Strophe als Comic-Panel gestalten.", "2.11 D · 2.8 E", ""],
     [31, "Was macht einen guten Vortrag aus?", "… Kriterien für einen gelungenen Balladenvortrag nennen.", "Zwei Vorträge derselben Strophe vergleichen; Kriterien sammeln; Ballade für die Rezitation wählen.", "2.7 D · 2.3", ""],
-    [32, "Vortragszeichen setzen", "… einen Text mit Vortragszeichen für meinen Vortrag vorbereiten.", "Vortragszeichen an einer Strophe, dann an der eigenen Ballade. Hausaufgabe: auswendig lernen.", "2.7 D", ""],
+    [32, "Vortragszeichen setzen", "… einen Text mit Vortragszeichen für meinen Vortrag vorbereiten.", "Vortragszeichen an einer Strophe; die Strophe chorisch mit festgelegten Pausen und Tempo lesen; dann Vortragszeichen an der eigenen Ballade. Hausaufgabe: auswendig lernen.", "2.7 D", ""],
   ]],
   ["Woche 8 · 14.–18.12. · Rezitation", "5 Stunden", [
     [33, "Auswendig lernen", "… Strategien zum Auswendiglernen anwenden.", "Strophenweise lernen, Stichwortkarten, Partnerabfrage.", "2.7", ""],
@@ -235,7 +235,7 @@ doc.push(h1("„Leute, höret die Geschicht’“ – Umgang mit Balladen"));
 doc.push(table([3000, LW - 3000], [
   ["Balladen", "Fontane: John Maynard · Schiller: Die Bürgschaft, Der Handschuh · Goethe: Erlkönig, Der Zauberlehrling · zur Rezitation frei wählbar"],
   ["Leistungsbewertung (SchiC)", "Bewertung 1: Analyse der Merkmale (Std. 19, Woche 5) · Bewertung 2: Textüberarbeitung aus der Figurenperspektive (Std. 25, Woche 6) · Bewertung 3: Rezitation einer selbst gewählten Ballade (Std. 36–38, 17.–21.12., vor den Weihnachtsferien)"],
-  ["Planungsprinzipien", "Jede Stunde nach AVIVA · Lernziel als „Ich kann …“ und Ablauf an der Tafel (Streichbares mit *) · alle Schüler in jeder Phase aktiv: erst allein oder zu zweit, dann Vergleich an der Tafel · am Ende „Heute habe ich gelernt, …“ · Bezüge zum Leistungssport nur dort, wo sie sich anbieten"],
+  ["Planungsprinzipien", "Jede Stunde nach AVIVA · Lernziel als „Ich kann …“ und Ablauf an der Tafel (Streichbares mit *) · alle Schüler in jeder Phase aktiv: erst allein oder zu zweit, dann Vergleich an der Tafel · am Ende „Heute habe ich gelernt, …“ · Lesetraining nach den Methodenkarten der Schule (Tandemlesen, chorisches Lesen, Ich-Du-Wir-Würfeln, Blitzlesen, Lautlesetraining mit Hörbuch) regelmäßig eingebaut · Bezüge zum Leistungssport nur dort, wo sie sich anbieten"],
   ["Termine", "Stundenplan: Mo ES, Mi DS, Do ES, Fr ES · KA 1 (Verben) am Do 15.10. · Mitarbeit: Selbsteinschätzung Mi 14.10. (20 Min.), Rückgabe mit Note Fr 16.10. · Herbstferien 17.10.–2.11. · Weihnachtsferien ab 23.12. (letzte Stunde Mo 21.12.) · Kein eigener Puffer: mit * markierte Teile können entfallen."],
 ].map(([a, b]) => row([tc(a, 3000, { bold: true, color: NAVY, fill: LIGHT, size: 19 }), cell(p(s19(b), { after: 0 }), { w: LW - 3000, m: 50, ml: 80 })]))));
 doc.push(p(t(""), { after: 120 }));

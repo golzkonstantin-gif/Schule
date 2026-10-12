@@ -37,6 +37,7 @@ Die folgenden Vorlieben und Reflexionen gelten für die gesamte weitere Planung,
 
 - **Alle Klassen der Lehrkraft bestehen aus Leistungssportlern.** Beispiele, Übungssätze und Schreibanlässe dort an Training, Wettkampf, Trainer und Alltag im Leistungssport anknüpfen, **wo es sich anbietet – nicht erzwingen** (Stand 12.10.). Bei literarischen Texten steht der Text im Vordergrund. Die Sportarten der jeweiligen Klasse stehen im Reflexionslog der Klasse.
 
+- **Lesetraining nach den Methodenkarten der Schule (Stand 12.10.):** Tandemlesen, chorisches Lesen, Ich-Du-Wir-Würfeln, Blitzlesen und Lautlesetraining mit Hörbüchern (siehe `Methoden/Methodenkarten_Lesetraining.md`). Regelmäßig und kurz einbauen, wo Texte gelesen werden, und im Tafelskript die Methode benennen.
 - **Erst fragen, was gewünscht ist:** Wenn die Lehrkraft „erst mal Ideen sammeln“ sagt, nur Ideen im Chat – kein Material erstellen.
 - **Kleinschrittig und Vorwissen nicht überschätzen.** Lieber einen Schritt zurückgehen und Grundlagen sichern (die Bastelstunde zu Zeitformen ist genau daran gescheitert).
 - **Inhalt darf elementar sein, der Ton muss zur Altersstufe passen (7. Klasse, keine Grundschulanmutung).** Also:
@@ -89,4 +90,5 @@ Keine Klarnamen von Schülerinnen, Schülern oder Kolleginnen und Kollegen ins R
 
 - `Deutsch_7A/` – Material der Klasse 7A, ein Unterordner pro Stunde/Einheit
 - `Deutsch_7A/Reflexion.md` – Lernstand, Stundenlog, Hospitationsfeedback, offene Baustellen
+- `Methoden/` – Methodenmaterial der Schule, das für alle Klassen gilt (z. B. Methodenkarten Lesetraining)
 - Weitere Klassen und Fächer bekommen einen eigenen Ordner nach demselben Muster (`<Fach>_<Klasse>/`) mit eigenem `Reflexion.md`, z. B. Klassenprofil, Sportarten und Lernstand. Die Vorlieben oben gelten dort genauso.

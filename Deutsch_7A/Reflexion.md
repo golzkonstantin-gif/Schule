@@ -234,6 +234,10 @@ Die Lehrkraft möchte das weiterverfolgen, noch ohne Material. Die Satzklammer (
   - In jeder Phase hat jeder einen eigenen Auftrag, an der Tafel wird nur verglichen.
   - Am Ende schreiben alle „Heute habe ich gelernt, …“.
 - **Mitarbeit:** Mi Selbsteinschätzung (20 Min.), Fr Rückgabe mit Note.
+- **Lesetraining (Methodenkarten der Schule):**
+  - Mi: Schattenlesen mit dem Hörbuch, danach Tandemlesen von Strophe 2–3.
+  - Fr: Tandemlesen vor dem Gliedern.
+  - Die Tandems (lesestärker/leseschwächer) legt die Lehrkraft fest. In der Grobplanung sind weitere Methoden den Stunden zugeordnet.
 - **Rückmeldung der Lehrkraft:** *(steht noch aus)*
 
 ## Hospitationsfeedback (gesammelt)

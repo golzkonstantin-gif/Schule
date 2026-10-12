@@ -172,10 +172,10 @@ doc.push(p([S("Antwort auf „Was habt ihr heute gelernt?“: ", { bold: true })
 doc.push(h3("Ablauf"));
 doc.push(grid([900, 1300, 3400, 4606], ["Zeit", "AVIVA", "Phase", "Alle Schüler …"], [
   ["20′", "–", "Mitarbeit einschätzen", "füllen den Selbsteinschätzungsbogen aus"],
-  ["12′", "A", "Ankommen: die Ballade hören", "notieren beim Hören im Notizraster"],
+  ["17′", "A", "Ankommen: die Ballade hören und mitlesen", "notieren beim Hören, lesen mit dem Hörbuch mit (Schattenlesen), lesen im Tandem nach"],
   ["7′", "V", "Vorwissen: Wie lest ihr?", "ordnen drei Alltagssituationen eine Leseweise zu"],
   ["8′", "I", "Merksatz 1: Lesetechniken", "schreiben ab"],
-  ["30′", "V", "Ü1 Drei Arten zu lesen", "überfliegen, suchen, genau lesen – allein, dann zu zweit"],
+  ["25′", "V", "Ü1 Drei Arten zu lesen", "überfliegen, suchen, genau lesen – allein, dann zu zweit"],
   ["8′", "A", "Auswerten: Ziel erreicht?", "lösen drei Situationen, schreiben „Heute habe ich gelernt, …“"],
 ], { bold: [true, true, true, false], colors: [C.hv, C.hv, NAVY, null], h: 360 }));
 doc.push(p([S("Puffer: ", { bold: true, color: C.hv }), S("5 Minuten. Mit * markiert (kann entfallen): Ü1 c) Teil 2 (Wörter aus dem Kontext) und die Zusatzfrage 5 in Ü1 b).")], { before: 80, after: 60 }));
@@ -190,8 +190,8 @@ doc.push(table([2300, 7906], [
   ["Ü1", "Schnipsel „Drei Arten zu lesen“ (eingeklebt und bearbeitet)"],
   ["Abschluss", "„Heute habe ich gelernt, …“"],
 ].map(([a, b2]) => row([tc(a, 2300, { bold: true, color: a.startsWith("Merk") ? C.hv : a === "Überschrift" || a === "Einheit" ? NAVY : "C77C12", fill: LIGHT, size: 20 }), tc(b2, 7906, { size: 20 })], 340))));
-doc.push(p([S("Material: ", { bold: true }), S("Lehrbuch (John Maynard) · Hörfassung (z. B. Achim Reichel; sonst liest die Lehrkraft vor) · Selbsteinschätzungsbogen Mitarbeit · Druckvorlage: Notizraster (2 pro A4), Ü1 (1 pro A4, viel Schreibplatz).")], { before: 100, after: 40 }));
-doc.push(p([S("Vorbereitung: ", { bold: true }), S("Ziel und Ablauf links an die Seitentafel, Merksatz 1 rechts auf die Seitentafel (zugeklappt). Seite und Zeilen von John Maynard im Lehrbuch nachschlagen und in Ü1 b) die Strophen ggf. durch Zeilen ersetzen.")], { after: 60 }));
+doc.push(p([S("Material: ", { bold: true }), S("Lehrbuch (John Maynard) · Hörfassung (z. B. Achim Reichel; sonst liest die Lehrkraft vor) · Methodenkarten Lesetraining (Lautlesetraining mit Hörbüchern, Tandemlesen) · Selbsteinschätzungsbogen Mitarbeit · Druckvorlage: Notizraster (2 pro A4), Ü1 (1 pro A4, viel Schreibplatz).")], { before: 100, after: 40 }));
+doc.push(p([S("Vorbereitung: ", { bold: true }), S("Ziel und Ablauf links an die Seitentafel, Merksatz 1 rechts auf die Seitentafel (zugeklappt). Tandems (lesestärker/leseschwächer) vorher festlegen. Seite und Zeilen von John Maynard im Lehrbuch nachschlagen und in Ü1 b) die Strophen ggf. durch Zeilen ersetzen.")], { after: 60 }));
 doc.push(zielTafel("Ich kann beim Zuhören Notizen machen und je nach Leseziel überfliegend, orientierend oder genau lesen.", [
   "Mitarbeit einschätzen", "Eine Ballade hören", "Wie lest ihr?", "Merksatz 1: Lesetechniken", "Ü1 Drei Arten zu lesen (c Teil 2 *)", "Was habe ich heute gelernt?",
 ]));
@@ -204,11 +204,13 @@ doc.push(...steps([
 ]));
 
 // ---------- A ----------
-doc.push(avivaPhase("A", "Ankommen und einstimmen: die Ballade hören", 12));
+doc.push(avivaPhase("A", "Ankommen und einstimmen: die Ballade hören und mitlesen", 17));
 doc.push(...steps([
   ["zuhoeren", { say: "Stifte liegen. Ab heute geht es um Balladen. An der Tafel steht unser Ziel für heute und der Ablauf. Neue Heftseite: Leute, höret die Geschicht’ – Balladen. Darunter: John Maynard – hören und lesen, Datum rechts.", do: ["Auf Ziel und Ablauf an der Seitentafel zeigen und beides einmal vorlesen."] }],
   ["luecken", { say: "Ihr bekommt einen Schnipsel. Klebt ihn ein. Ihr hört jetzt eine Ballade. Beim ersten Hören notiert ihr nur Stichpunkte: Wer? Wo? Was passiert? Wie endet es?", do: ["Hörfassung einmal abspielen (ca. 3–4 Min.). Alle schreiben beim Hören."] }],
-  ["partner", { say: "Vergleicht zu zweit eure Notizen. Ergänzt, was euch fehlt. Zwei Minuten. Dann hört ihr noch einmal und beantwortet die letzte Frage: Wer ist John Maynard?", do: ["Zweites Hören. Danach zwei Schüler: „Wer ist John Maynard?“ – erwartete Antwort: der Steuermann, der das brennende Schiff ans Ufer steuert, alle rettet und selbst stirbt."], sol: "Wer: John Maynard (Steuermann), Kapitän, Passagiere · Wo: auf dem Schiff „Schwalbe“ auf dem Eriesee, auf dem Weg nach Buffalo · Was passiert: Feuer bricht aus, Panik, Maynard hält das Steuer und fährt ans Ufer · Wie endet es: alle gerettet, nur Maynard stirbt; die Stadt ehrt ihn." }],
+  ["partner", { say: "Vergleicht zu zweit eure Notizen. Ergänzt, was euch fehlt. Zwei Minuten." }],
+  ["luecken", { say: "Lehrbuch auf Seite … Ihr hört die Ballade noch einmal und lest dabei leise im Buch mit. Danach beantwortet ihr die letzte Frage auf dem Schnipsel: Wer ist John Maynard?", do: ["Methodenkarte „Lautlesetraining mit Hörbüchern“, Variante Schattenlesen: Hörfassung läuft, alle lesen still mit.", "Danach zwei Schüler: „Wer ist John Maynard?“ – erwartete Antwort: der Steuermann, der das brennende Schiff ans Ufer steuert, alle rettet und selbst stirbt."] }],
+  ["partner", { say: "Nachlesen im Tandem: Ihr lest Strophe 2 und 3 halblaut gleichzeitig. Wenn jemand stockt, hilft der Partner sofort. Drei Minuten.", do: ["Methodenkarte „Tandemlesen“. Tandems vorher festlegen: je eine lesestärkere und eine leseschwächere Person."], sol: "Wer: John Maynard (Steuermann), Kapitän, Passagiere · Wo: auf dem Schiff „Schwalbe“ auf dem Eriesee, auf dem Weg nach Buffalo · Was passiert: Feuer bricht aus, Panik, Maynard hält das Steuer und fährt ans Ufer · Wie endet es: alle gerettet, nur Maynard stirbt; die Stadt ehrt ihn." }],
 ]));
 
 // ---------- V ----------
@@ -235,14 +237,13 @@ doc.push(...steps([
 ]));
 
 // ---------- V ----------
-doc.push(avivaPhase("V", "Verarbeiten: Ü1 Drei Arten zu lesen", 30));
+doc.push(avivaPhase("V", "Verarbeiten: Ü1 Drei Arten zu lesen", 25));
 doc.push(...steps([
   ["luecken", { say: "Jetzt arbeitet ihr allein. Klebt den Schnipsel Ü1 ein. Lehrbuch auf Seite … Wir machen die drei Lesetechniken nacheinander, jeweils mit Zeit. Teil a: überfliegen. Ihr habt genau eine Minute. Dann Buch zu und einen Satz schreiben.", board: auftrag("Ü1 Drei Arten zu lesen", ["Überfliege die Ballade (1 Minute). Schreibe einen Satz: „In der Ballade geht es um …“", "Lies orientierend und beantworte die Fragen. Notiere die Strophe.", "Lies Strophe 5 und 6 genau. Notiere Stichpunkte wie Randnotizen und kläre die Wörter aus dem Kontext."], [p(S("Die Fragen und Wörter stehen auf dem Schnipsel.", { size: 20, italics: true }), { after: 0 })], "a) 1 Min. + 2 Min. · b) 8 Min. · c) 10 Min. · allein · leise"),
     do: ["Zeit für a) laut stoppen: „Start … Stopp. Buch zu.“ Das Überfliegen funktioniert nur mit echter Zeitgrenze."] }],
   ["luecken", { say: "Teil b: orientierend lesen. Ihr sucht nur die Antworten – nicht alles lesen! Acht Minuten. Wer fertig ist, macht Frage 5.", sol: "1 „Schwalbe“ (Str. 2) · 2 von Detroit nach Buffalo, über den Eriesee (Str. 2) · 3 zwanzig Minuten (Str. 3) · 4 „Ja, Herr, ich halt’s!“ (Str. 6) · *5 zehntausend oder mehr (Str. 8)" }],
   ["luecken", { say: "Teil c: genau lesen. Strophe 5 und 6, Satz für Satz. Notiert auf dem Schnipsel zu jeder Strophe Stichpunkte, was dort passiert – wie Randnotizen, nur nicht im Buch. Dann klärt ihr die Wörter: Was vermutet ihr – und welcher Hinweis im Text hilft euch?", sol: "Stichpunkte z. B.: Kapitän fragt – Maynard antwortet – Befehl: auf den Strand – Maynard hält aus – steuert in die Brandung. Wörter: Sprachrohr = Rohr, durch das man über Entfernung spricht (Kapitän „fragt an“, sieht ihn nicht) · Brandung = Wellen, die am Ufer brechen („auf den Strand! In die Brandung!“) · Bugspriet = vorderster Teil des Schiffs („vorn ist noch Luft und Licht“, Str. 4).", do: ["Die Wörter (Teil 2) sind mit * markiert und können bei Zeitmangel entfallen."] }],
-  ["partner", { say: "Vergleicht zu zweit a, b und c. Verbessert mit Grün. Fünf Minuten.", do: ["Herumgehen; bei b) nachfragen: „Wie hast du die Stelle so schnell gefunden?“ – Ziel: Schlüsselwörter suchen (Feuer, Minuten, Grab)."] }],
-  ["tafel", { say: "Wer drankommt, schreibt die Antwort zu einer Frage aus b) an die Tafel – mit Strophe. Alle prüfen mit.", do: ["Nur b) an der Tafel, kurz: 4 Schüler, je eine Frage. Die übrigen haken in ihrem Schnipsel ab und verbessern mit Grün."] }],
+  ["partner", { say: "Vergleicht zu zweit a, b und c. Verbessert mit Grün. Fünf Minuten.", do: ["Danach die Antworten zu b) kurz mündlich abfragen (je ein Schüler pro Frage), alle verbessern mit Grün. ", "Herumgehen; bei b) nachfragen: „Wie hast du die Stelle so schnell gefunden?“ – Ziel: Schlüsselwörter suchen (Feuer, Minuten, Grab)."] }],
 ]));
 
 // ---------- A ----------

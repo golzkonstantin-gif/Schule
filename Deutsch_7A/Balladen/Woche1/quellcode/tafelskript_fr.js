@@ -174,7 +174,7 @@ doc.push(grid([900, 1300, 3400, 4606], ["Zeit", "AVIVA", "Phase", "Alle Schüler
   ["5′", "A", "Ankommen: Rückgabe Mitarbeit", "lesen die Rückmeldung still"],
   ["5′", "V", "Vorwissen: Lesetechniken", "beantworten drei Fragen im Heft"],
   ["7′", "I", "Merksatz 2: Einen Text gliedern", "schreiben ab; erster Abschnitt gemeinsam"],
-  ["20′", "V", "Ü2 John Maynard gliedern", "gliedern zu zweit, vergleichen in der Kreide-Kette"],
+  ["20′", "V", "Ü2 John Maynard gliedern", "lesen im Tandem, gliedern zu zweit, vergleichen in der Kreide-Kette"],
   ["5′", "A", "Auswerten: Ziel erreicht?", "erzählen mit den Überschriften nach, schreiben „Heute habe ich gelernt, …“"],
 ], { bold: [true, true, true, false], colors: [C.hv, C.hv, NAVY, null], h: 360 }));
 doc.push(p([S("Puffer: ", { bold: true, color: C.hv }), S("3 Minuten. Mit * markiert: die Nacherzählung in der Auswertung (kann durch den Satz „Heute habe ich gelernt“ allein ersetzt werden).")], { before: 80, after: 60 }));
@@ -187,7 +187,7 @@ doc.push(table([2300, 7906], [
   ["Ü2", "Schnipsel „John Maynard gliedern“ (eingeklebt, mit Grün verbessert)"],
   ["Abschluss", "„Heute habe ich gelernt, …“"],
 ].map(([a, b2]) => row([tc(a, 2300, { bold: true, color: a.startsWith("Merk") ? C.hv : a === "Überschrift" ? NAVY : "C77C12", fill: LIGHT, size: 20 }), tc(b2, 7906, { size: 20 })], 340))));
-doc.push(p([S("Material: ", { bold: true }), S("Lehrbuch · Mitarbeitsbögen mit Einschätzung und Note · Druckvorlage: Ü2 (2 pro A4).")], { before: 100, after: 40 }));
+doc.push(p([S("Material: ", { bold: true }), S("Lehrbuch · Mitarbeitsbögen mit Einschätzung und Note · Methodenkarte Tandemlesen · Druckvorlage: Ü2 (2 pro A4).")], { before: 100, after: 40 }));
 doc.push(p([S("Vorbereitung: ", { bold: true }), S("Ziel und Ablauf links an die Seitentafel, Merksatz 2 rechts (zugeklappt). In der Tafelmitte untereinander die Strophennummern 1–9 anschreiben, rechts daneben Platz für Überschriften.")], { after: 60 }));
 doc.push(zielTafel("Ich kann eine Ballade in Abschnitte gliedern und passende Zwischenüberschriften formulieren.", [
   "Rückgabe Mitarbeit", "Lesetechniken wiederholen", "Merksatz 2: Einen Text gliedern", "Ü2 John Maynard gliedern", "Was habe ich heute gelernt? (Nacherzählen *)",
@@ -224,9 +224,9 @@ doc.push(...steps([
 // ---------- V ----------
 doc.push(avivaPhase("V", "Verarbeiten: Ü2 John Maynard gliedern", 20));
 doc.push(...steps([
-  ["partner", { say: "Jetzt arbeitet ihr zu zweit. Klebt den Schnipsel Ü2 ein. Lest die Ballade genau. Entscheidet, wo ein neuer Abschnitt beginnt, und schreibt für jeden Abschnitt eine Zwischenüberschrift. Zwölf Minuten.", board: auftrag("Ü2 John Maynard gliedern", ["Lies die Ballade genau.", "Markiere, wo ein neuer Abschnitt beginnt (Ort, Zeit, Figuren, Handlung).", "Trage die Strophen und eine Zwischenüberschrift in den Schnipsel ein."], [p(S("Hilfe: Wo ändert sich etwas? Was ist der Kern?", { size: 20, italics: true }), { after: 0 })], "12 Minuten · zu zweit · leise"),
+  ["partner", { say: "Jetzt arbeitet ihr im Tandem. Klebt den Schnipsel Ü2 ein. Lest die Ballade zuerst zusammen halblaut – wer stockt, bekommt sofort Hilfe. Dann entscheidet ihr, wo ein neuer Abschnitt beginnt, und schreibt für jeden Abschnitt eine Zwischenüberschrift. Vierzehn Minuten.", board: auftrag("Ü2 John Maynard gliedern", ["Lest die Ballade im Tandem halblaut.", "Entscheidet, wo ein neuer Abschnitt beginnt (Ort, Zeit, Figuren, Handlung).", "Tragt Strophen und Zwischenüberschrift in den Schnipsel ein."], [p(S("Hilfe: Wo ändert sich etwas? Was ist der Kern?", { size: 20, italics: true }), { after: 0 })], "14 Minuten · Tandem · halblaut, dann leise"),
     sol: "Möglichkeit: Str. 1 Die Frage nach John Maynard · Str. 2 Fröhliche Fahrt nach Buffalo · Str. 3 Feuer an Bord! · Str. 4 Panik der Passagiere · Str. 5–6 John Maynard hält aus · Str. 7 Alle gerettet – einer fehlt · Str. 8–9 Die Stadt ehrt ihren Helden. Andere Abgrenzungen sind möglich, wenn sie begründet werden (z. B. Str. 5 und 6 getrennt).",
-    do: ["Herumgehen; Einzelgespräche zu den Mitarbeitsbögen hier führen.", "Typische Schwierigkeit: ganze Sätze statt Überschriften – auf den Merksatz verweisen."] }],
+    do: ["Methodenkarte „Tandemlesen“: dieselben Tandems wie am Mittwoch.", "Herumgehen; Einzelgespräche zu den Mitarbeitsbögen hier führen.", "Typische Schwierigkeit: ganze Sätze statt Überschriften – auf den Merksatz verweisen."] }],
   ["tafel", { say: "Kreide-Kette: Wer drankommt, schreibt eure Überschrift neben die passende Strophe an die Tafel. Alle anderen vergleichen mit ihrem Schnipsel und schreiben eine bessere Idee mit Grün daneben.", do: ["Ein Paar pro Abschnitt, sieben Schüler. Bei Abweichungen begründen lassen: „Warum beginnt hier ein neuer Abschnitt?“"] }],
 ]));
 
