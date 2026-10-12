@@ -166,81 +166,81 @@ const grow = ([nr, thema, ziel, inhalt, rlp, bew]) => row([
   gcell(rlp, GW[4], { color: MUTED, size: 17 }),
   gcell(bew, GW[5], { bold: true, color: BEW }),
 ]);
-const week = (title, sub) => row([cell(p([t(title, { bold: true, color: "FFFFFF", size: 21, font: "Cambria" }), t(sub ? "   " + sub : "", { color: "DCE3F2", size: 18 })], { after: 0 }), { w: LW, fill: NAVY, borders: gb, span: 6, m: 50, ml: 100 })]);
+const week = (title, sub) => row([cell(p([t(title, { bold: true, color: "FFFFFF", size: 21, font: "Cambria" }), t(sub ? "   " + sub : "", { color: "DCE3F2", size: 18 })], { after: 0 }), { w: LW, fill: title.includes("ferien") ? "9AA3B5" : NAVY, borders: gb, span: 6, m: 50, ml: 100 })]);
 
 const WEEKS = [
-  ["Woche 1 · Was ist eine Ballade?", "4 Stunden · John Maynard (Fontane)", [
-    [1, "Eine Ballade hören", "… beim Zuhören Notizen zu Figuren, Ort und Handlung machen.", "Hörfassung „John Maynard“ (z. B. Achim Reichel). Hörauftrag für alle: Notizraster wer – wo – was passiert – wie endet es. Zweites Hören zu zweit ergänzen, dann Abgleich.", "2.3 D · 2.11 D", ""],
-    [2, "Eine Ballade gliedern", "… eine Ballade in Abschnitte gliedern und Zwischenüberschriften formulieren.", "Text lesen, in PA Abschnitte markieren und Zwischenüberschriften notieren; Vergleich an der Tafel (Streifen mit Überschriften ordnen – erst am Platz, dann Tafel).", "2.8 D", ""],
-    [3, "Das „Ur-Ei“: episch, lyrisch, dramatisch", "… an einer Ballade erzählende, lyrische und dramatische Elemente nachweisen.", "Merksatz Ballade (Goethe: „Ur-Ei“). Belegstellen in John Maynard in drei Farben markieren (allein), dann in PA vergleichen.", "2.9 D", ""],
-    [4, "Strophe, Vers, Reim", "… Strophe und Vers unterscheiden und Paarreim, Kreuzreim und umarmenden Reim bestimmen.", "Merksatz Reimformen; Reimschema an Strophen bestimmen (Schnipsel); Speed-Duell zu Reimformen.", "2.9 D", ""],
+  ["Woche 1 · 13.–15.10. · Was ist eine Ballade? – Lesetechniken", "4 Stunden · John Maynard (Fontane)", [
+    [1, "Eine Ballade hören", "… beim Zuhören Notizen zu Figuren, Ort und Handlung machen.", "Hörfassung „John Maynard“ (z. B. Achim Reichel). Hörauftrag für alle: Notizraster wer – wo – was passiert – wie endet es. Zweites Hören: zu zweit ergänzen, dann Abgleich.", "2.3 D · 2.11 D", ""],
+    [2, "Lesetechniken", "… überfliegend, orientierend und genau lesen und die passende Technik zum Leseziel wählen.", "Merksatz Lesetechniken (Wofür? Test). Drei Aufträge am Text, alle arbeiten allein mit Zeitvorgabe: überfliegen (Worum geht es? 1 Min.), orientieren (Wo steht …? Stelle finden), genau lesen mit Randnotizen; unbekannte Wörter aus dem Kontext erschließen. Vergleich in PA.", "2.8 D/E · 2.12", ""],
+    [3, "Eine Ballade gliedern", "… eine Ballade in Abschnitte gliedern und Zwischenüberschriften formulieren.", "Genaues Lesen anwenden: in PA Abschnitte markieren und Zwischenüberschriften notieren; danach Vergleich an der Tafel.", "2.8 D", ""],
+    [4, "Das „Ur-Ei“: episch, lyrisch, dramatisch", "… an einer Ballade erzählende, lyrische und dramatische Elemente nachweisen.", "Merksatz Ballade (Goethe: „Ur-Ei“). Belegstellen in John Maynard in drei Farben markieren (allein), dann in PA vergleichen.", "2.9 D", ""],
   ]],
-  ["Woche 2 · Eine Ballade erschließen", "5 Stunden · John Maynard", [
-    [5, "Unbekannte Wörter erschließen", "… unbekannte Wörter aus dem Kontext erschließen und Randnotizen anlegen.", "Wörter wie Steuermann, Bug, Qualm: erst aus dem Kontext raten, dann nachschlagen; Randnotizen-Technik einüben.", "2.8 E · 2.12", ""],
-    [6, "Der Spannungsbogen", "… den Handlungsverlauf einer Ballade als Spannungskurve darstellen und begründen.", "Spannungskurve zeichnen (allein), Höhepunkt mit Textstelle belegen; Vergleich in PA. Vergleich mit dem Spielverlauf eines knappen Wettkampfs.", "2.8 E · 2.9 F", ""],
-    [7, "Erzählzeit und erzählte Zeit", "… Erzählzeit und erzählte Zeit unterscheiden und ihre Wirkung erklären.", "Countdown „Noch zwanzig Minuten …“: Zeitangaben markieren, Zeitraffung/-dehnung erkennen, Wirkung auf die Spannung beschreiben.", "2.9 F", ""],
-    [8, "Fakten hinter der Ballade", "… einen Sachtext orientierend und genau lesen und Informationen auf Verlässlichkeit prüfen.", "Sachtext zum Unglück der „Erie“ (1841) und zu Fontane; Lesetechniken; zwei Quellen vergleichen: Was ist belegt, was erfunden?", "2.8 D · 2.10 D/E", ""],
-    [9, "Ein Held? John Maynard", "… eine Figur beschreiben und meine Einschätzung am Text begründen.", "Figurenbeschreibung mit Textbelegen; Positionslinie „Held oder Pflichterfüllung?“; Bezug Verantwortung im Team.", "2.8 D · 2.9 E", ""],
+  ["Herbstferien 16.10.–2.11.", "", []],
+  ["Woche 2 · 3.–6.11. · Eine Ballade erschließen", "4 Stunden · John Maynard", [
+    [5, "Strophe, Vers, Reim", "… Strophe und Vers unterscheiden und Paarreim, Kreuzreim und umarmenden Reim bestimmen.", "Einstieg nach den Ferien: Wiederholung Lesetechniken und Ur-Ei. Merksatz Reimformen; Reimschema an Strophen bestimmen (Schnipsel); Speed-Duell zu Reimformen.", "2.9 D", ""],
+    [6, "Der Spannungsbogen", "… den Handlungsverlauf einer Ballade als Spannungskurve darstellen und begründen.", "Spannungskurve zeichnen (allein), Höhepunkt mit Textstelle belegen; Vergleich in PA.", "2.8 E · 2.9 F", ""],
+    [7, "Erzählzeit und erzählte Zeit", "… Erzählzeit und erzählte Zeit unterscheiden und ihre Wirkung erklären.", "Countdown „Noch zwanzig Minuten …“: Zeitangaben markieren, Zeitraffung und -dehnung erkennen, Wirkung auf die Spannung beschreiben.", "2.9 F", ""],
+    [8, "Fakten hinter der Ballade", "… einen Sachtext mit der passenden Lesetechnik lesen und Informationen auf Verlässlichkeit prüfen.", "Sachtext zum Unglück der „Erie“ (1841) und zu Fontane; Lesetechniken gezielt wählen; zwei Quellen vergleichen: Was ist belegt, was erfunden?", "2.8 D/E · 2.10 D/E", ""],
   ]],
-  ["Woche 3 · Figuren und Konflikte", "5 Stunden · Die Bürgschaft (Schiller)", [
-    [10, "Ein Konflikt beginnt", "… den Ausgangskonflikt einer Ballade benennen und Vermutungen zum Verlauf begründen.", "Strophen 1–7 lesen/hören; Konflikt Möros – Dionys herausarbeiten; Vermutungen schriftlich, dann Weiterlesen.", "2.8 D · 2.9 F", ""],
-    [11, "Ein Lauf gegen die Zeit", "… die Hindernisse der Handlung in einer Grafik darstellen.", "Hindernisparcours als Grafik (Fluss, Räuber, Hitze); Parallele zum Ausdauerwettkampf: Was treibt Möros an?", "2.8 E · 2.9 F", ""],
+  ["Woche 3 · 9.–13.11. · Figuren und Konflikte", "5 Stunden · John Maynard, Die Bürgschaft (Schiller)", [
+    [9, "Ein Held? John Maynard", "… eine Figur beschreiben und meine Einschätzung am Text begründen.", "Figurenbeschreibung mit Textbelegen; Positionslinie „Held oder Pflichterfüllung?“", "2.8 D · 2.9 E", ""],
+    [10, "Ein Konflikt beginnt", "… den Ausgangskonflikt einer Ballade benennen und Vermutungen zum Verlauf begründen.", "Bürgschaft Strophen 1–7 lesen bzw. hören; Konflikt Möros – Dionys herausarbeiten; Vermutungen schriftlich, dann Weiterlesen.", "2.8 D · 2.9 F", ""],
+    [11, "Ein Lauf gegen die Zeit", "… die Hindernisse der Handlung in einer Grafik darstellen.", "Hindernisse als Grafik (Fluss, Räuber, Hitze); Was treibt Möros an? (Bezug Ausdauer und Durchhalten bietet sich an.)", "2.8 E · 2.9 F", ""],
     [12, "Figurenkonstellation", "… die Beziehungen der Figuren in einem Schaubild darstellen.", "Schaubild (Dionys, Möros, Freund, Philostratus) allein, dann in PA ergänzen; Beziehungspfeile beschriften.", "2.9 E", ""],
     [13, "Eine Figur verändert sich", "… die Entwicklung einer Figur beschreiben und am Text belegen.", "Dionys am Anfang und am Ende: Zitate sammeln, Wandel begründen; einfache Zitiertechnik (Strophe/Vers).", "2.9 E/F", ""],
-    [14, "Sprache und Wirkung", "… sprachliche Mittel erkennen und ihre Wirkung fachsprachlich beschreiben.", "Wortwahl, Wiederholung, sprachliche Bilder in ausgewählten Strophen; Wirkung mit Formulierungshilfen beschreiben.", "2.9 E", ""],
   ]],
-  ["Woche 4 · Balladen analysieren", "5 Stunden · Der Handschuh (Schiller)", [
+  ["Woche 4 · 16.–20.11. · Balladen analysieren", "5 Stunden · Die Bürgschaft, Der Handschuh (Schiller)", [
+    [14, "Sprache und Wirkung", "… sprachliche Mittel erkennen und ihre Wirkung fachsprachlich beschreiben.", "Wortwahl, Wiederholung, sprachliche Bilder in ausgewählten Strophen der Bürgschaft; Wirkung mit Formulierungshilfen beschreiben.", "2.9 E", ""],
     [15, "Der Handschuh", "… den Inhalt einer Ballade erfassen und gliedern (binnendifferenziert).", "Lesen mit gestuften Hilfen (Worterklärungen, Leitfragen); Gliederung mit Zwischenüberschriften.", "2.8 D/E", ""],
-    [16, "Mutprobe oder Demütigung?", "… das Verhalten zweier Figuren bewerten und meine Deutung am Text belegen.", "Kunigunde und Delorges: Positionen sammeln, mit Zitaten belegen; Bezug Mut, Risiko und Respekt.", "2.9 E", ""],
+    [16, "Mutprobe oder Demütigung?", "… das Verhalten zweier Figuren bewerten und meine Deutung am Text belegen.", "Kunigunde und Delorges: Positionen sammeln und mit Zitaten belegen.", "2.9 E", ""],
     [17, "Wie analysiere ich eine Ballade?", "… eine Ballade nach Inhalt, Form und Sprache untersuchen.", "Checkliste Inhalt – Form – Sprache gemeinsam erarbeiten; Musteranalyse einer Strophe; Formulierungshilfen.", "2.9 D/E", ""],
     [18, "Analyse üben", "… eine Ballade mithilfe der Checkliste analysieren und überprüfen.", "Analyse allein schreiben, in PA mit Checkliste prüfen, mit Grün verbessern.", "2.9 D/E", ""],
-    [19, "Leistung: Analyse", "… eine Ballade hinsichtlich ihrer Merkmale analysieren.", "Schriftliche Analyse (behandelte Ballade oder kurze neue Strophenfolge).", "2.9", "Bewertung 1: Analyse"],
   ]],
-  ["Woche 5 · Aus der Sicht einer Figur schreiben", "5 Stunden · Bürgschaft / Handschuh / John Maynard", [
+  ["Woche 5 · 23.–27.11. · Aus der Sicht einer Figur schreiben", "5 Stunden · Bürgschaft / Handschuh / John Maynard", [
+    [19, "Leistung: Analyse", "… eine Ballade hinsichtlich ihrer Merkmale analysieren.", "Schriftliche Analyse (behandelte Ballade oder kurze neue Strophenfolge).", "2.9", "Bewertung 1: Analyse"],
     [20, "Perspektive wechseln", "… Erzähler und Figur unterscheiden und Gefühle einer Figur aus dem Text erschließen.", "Erzählperspektive bestimmen; Gefühlskurve einer Figur (z. B. der Freund als Bürge) mit Textbelegen.", "2.9 E", ""],
     [21, "Textformen und Schreibplan", "… Merkmale von Tagebuch, Brief und Chatverlauf nennen und einen Schreibplan anlegen.", "Merkmale vergleichen; Figur und Textform wählen; Schreibplan (Cluster/Stichpunkte).", "2.6 D/F", ""],
     [22, "Entwurf schreiben", "… einen Text aus der Sicht einer Figur schreiben.", "Entwurf mit Satzanfängen als Formulierungshilfe (keine fertigen Sätze).", "2.6 F", ""],
     [23, "Schreibkonferenz", "… einen fremden Text nach Kriterien einschätzen und Verbesserungsvorschläge machen.", "Kriterienbogen; Schreibkonferenz in Dreiergruppen mit festen Rollen.", "2.6 D · 2.3", ""],
-    [24, "Überarbeiten", "… meinen Text nach Kriterien und eigenen Schwerpunkten überarbeiten.", "Überarbeitung mit Grün; eigene Überarbeitungsschwerpunkte notieren.", "2.6 D/E", ""],
   ]],
-  ["Woche 6 · Balladen in Ton und Musik", "5 Stunden · Erlkönig (Goethe)", [
+  ["Woche 6 · 30.11.–4.12. · Balladen in Ton und Musik", "5 Stunden · Erlkönig (Goethe)", [
+    [24, "Überarbeiten", "… meinen Text nach Kriterien und eigenen Schwerpunkten überarbeiten.", "Überarbeitung mit Grün; eigene Überarbeitungsschwerpunkte notieren.", "2.6 D/E", ""],
     [25, "Leistung: Textüberarbeitung", "… einen Text aus der Figurenperspektive kriteriengeleitet überarbeiten.", "Überarbeitung und Abgabe (Bewertung).", "2.6", "Bewertung 2: Textüberarbeitung"],
     [26, "Wer spricht im Erlkönig?", "… die Sprecher einer Ballade unterscheiden und den Dialog als dramatisches Element erklären.", "Sprecher farbig markieren (Erzähler, Vater, Sohn, Erlkönig); mit verteilten Rollen lesen.", "2.9 D", ""],
     [27, "Wie entsteht das Unheimliche?", "… beschreiben, wie Sprache und Aufbau Spannung erzeugen.", "Steigerung von Strophe zu Strophe; Wortwahl des Erlkönigs; Wirkung belegen.", "2.9 E", ""],
     [28, "Schuberts Erlkönig", "… mediale Gestaltungsmittel einer Vertonung beschreiben.", "Hören: Galopp im Klavier, Stimmlagen der Figuren; Höraufträge für alle, Notizraster.", "2.11 D · 2.3", ""],
-    [29, "Moderne Fassungen", "… zwei Fassungen vergleichen und ihre Wirkung auf mich begründen.", "Rap-/Popversion vs. Schubert; eigene Medienerfahrung austauschen.", "2.11 F · C/D", ""],
   ]],
-  ["Woche 7 · Vom Text zum Bild – und zur Bühne", "5 Stunden · Der Zauberlehrling (Goethe)", [
-    [30, "Der Zauberlehrling", "… Aufbau und Kehrreim einer Ballade beschreiben und ihre Wirkung erklären.", "Lesen, Kehrreim markieren; Bezug: Was passiert, wenn man eine Technik einsetzt, die man noch nicht beherrscht?", "2.9 D/E", ""],
+  ["Woche 7 · 7.–11.12. · Vom Text zu Film und Bild", "5 Stunden · Erlkönig, Der Zauberlehrling (Goethe)", [
+    [29, "Moderne Fassungen", "… zwei Fassungen vergleichen und ihre Wirkung auf mich begründen.", "Rap- oder Popversion vs. Schubert; eigene Medienerfahrung austauschen.", "2.11 F · C/D", ""],
+    [30, "Der Zauberlehrling", "… Aufbau und Kehrreim einer Ballade beschreiben und ihre Wirkung erklären.", "Lesen, Kehrreim markieren, Wirkung der Wiederholung beschreiben.", "2.9 D/E", ""],
     [31, "Ballade und Film", "… Text und Verfilmung vergleichen.", "Micky-Maus-Fassung (Fantasia): Was übernimmt der Film, was verändert er? Vergleichsraster allein, dann PA.", "2.11 D", ""],
     [32, "Ballade als Graphic Novel", "… mein Textverständnis in einer anderen Darstellungsform ausdrücken.", "Eine Strophe als Comic-Panel mit Sprechblase gestalten; Galeriegang mit Kurzbegründung.", "2.8 E", ""],
-    [33, "Was macht einen guten Vortrag aus?", "… Kriterien für einen gelungenen Balladenvortrag nennen.", "Zwei Vorträge derselben Strophe vergleichen; Kriterien sammeln (Tempo, Pausen, Betonung, Lautstärke, Mimik, Gestik, Blickkontakt).", "2.7 D · 2.3", ""],
-    [34, "Vortragszeichen setzen", "… einen Text mit Vortragszeichen für meinen Vortrag vorbereiten.", "Vortragszeichen an einer Strophe; Ballade für die Rezitation wählen.", "2.7 D", ""],
+    [33, "Was macht einen guten Vortrag aus?", "… Kriterien für einen gelungenen Balladenvortrag nennen.", "Zwei Vorträge derselben Strophe vergleichen; Kriterien sammeln (Tempo, Pausen, Betonung, Lautstärke, Mimik, Gestik, Blickkontakt). Ballade für die Rezitation wählen.", "2.7 D · 2.3", ""],
   ]],
-  ["Woche 8 · Rezitation vorbereiten und vortragen", "5 Stunden", [
-    [35, "Auswendig lernen", "… Strategien zum Auswendiglernen anwenden.", "Strophenweise lernen (Training in Etappen), Stichwortkarten, Partnerabfrage.", "2.7", ""],
+  ["Woche 8 · 14.–18.12. · Rezitation vorbereiten", "5 Stunden", [
+    [34, "Vortragszeichen setzen", "… einen Text mit Vortragszeichen für meinen Vortrag vorbereiten.", "Vortragszeichen an einer Strophe, dann an der eigenen Ballade.", "2.7 D", ""],
+    [35, "Auswendig lernen", "… Strategien zum Auswendiglernen anwenden.", "Strophenweise lernen, Stichwortkarten, Partnerabfrage.", "2.7", ""],
     [36, "Mimik, Gestik, Stimme", "… nonverbale Mittel und Intonation gezielt einsetzen.", "Übungen zu Stimme und Haltung; eine Strophe mit unterschiedlicher Wirkung sprechen.", "2.1 · 2.7 E/F", ""],
     [37, "Üben mit Feedback", "… einen Vortrag nach Kriterien einschätzen und Feedback geben.", "PA: Vortrag – Feedbackbogen mit Notizen beim Zuhören – zweiter Durchgang.", "2.7 D · 2.3", ""],
-    [38, "Generalprobe", "… meinen Vortrag im geschützten Rahmen halten und verbessern.", "Kleingruppen; Selbst- und Fremdeinschätzung.", "2.7", ""],
-    [39, "Rezitation I", "… eine Ballade kriterienorientiert vortragen.", "Vorträge; Zuhörer notieren Feedback.", "2.7 · 2.3", "Bewertung 3: Rezitation"],
+    [38, "Generalprobe", "… meinen Vortrag im geschützten Rahmen halten und verbessern.", "Kleingruppen; Selbst- und Fremdeinschätzung. Über die Ferien weiter auswendig lernen.", "2.7", ""],
   ]],
-  ["Woche 9 · Abschluss", "5 Stunden", [
+  ["Woche 9 · nach den Weihnachtsferien (Termin prüfen) · Rezitation und Abschluss", "5 Stunden", [
+    [39, "Rezitation I", "… eine Ballade kriterienorientiert vortragen.", "Kurze Auffrischung, dann Vorträge; Zuhörer notieren Feedback.", "2.7 · 2.3", "Bewertung 3: Rezitation"],
     [40, "Rezitation II", "… eine Ballade kriterienorientiert vortragen.", "Vorträge; Zuhörer notieren Feedback.", "2.7 · 2.3", "Bewertung 3: Rezitation"],
     [41, "Rezitation III", "… eine Ballade kriterienorientiert vortragen.", "Restliche Vorträge (ggf. im geschützten Raum).", "2.7", "Bewertung 3: Rezitation"],
-    [42, "Feedback und Selbsteinschätzung", "… meinen Lernstand in der Einheit einschätzen.", "Selbsteinschätzungsbogen; Rückmeldung zu den drei Bewertungen.", "2.7 D", ""],
-    [43, "Meine Ballade", "… begründen, welche Ballade mich am meisten überzeugt.", "Kurze begründete Stellungnahme; Austausch in PA, dann Plenum.", "2.8 D · 2.11 C/D", ""],
-    [44, "Puffer", "", "Reserve für Verschiebungen.", "", ""],
+    [42, "Rückblick: meine Ballade", "… meinen Lernstand einschätzen und begründen, welche Ballade mich am meisten überzeugt.", "Selbsteinschätzungsbogen; kurze begründete Stellungnahme; Austausch in PA, dann Plenum.", "2.7 D · 2.8 D · 2.11 C/D", ""],
+    [43, "Puffer", "", "Reserve für Verschiebungen (z. B. KA 1).", "", ""],
   ]],
 ];
 
 const doc = [];
-doc.push(kicker("Grobplanung · Deutsch · Klasse 7A · ca. 9 Wochen · 5 Stunden pro Woche"));
+doc.push(kicker("Grobplanung · Deutsch · Klasse 7A · ca. 9 Unterrichtswochen · 5 Stunden pro Woche · 43 Stunden"));
 doc.push(h1("„Leute, höret die Geschicht’“ – Umgang mit Balladen"));
 doc.push(table([3000, LW - 3000], [
   ["Balladen", "Fontane: John Maynard · Schiller: Die Bürgschaft, Der Handschuh · Goethe: Erlkönig, Der Zauberlehrling · zur Rezitation frei wählbar"],
-  ["Leistungsbewertung (SchiC)", "Bewertung 1: Analyse der Merkmale (Std. 19) · Bewertung 2: Textüberarbeitung aus der Figurenperspektive (Std. 25) · Bewertung 3: Rezitation einer selbst gewählten Ballade (Std. 39–41)"],
-  ["Planungsprinzipien", "Jede Stunde nach AVIVA · Lernziel als „Ich kann …“ und Ablauf an der Tafel (Streichbares mit *) · alle Schüler in jeder Phase aktiv: erst allein oder zu zweit, dann Vergleich an der Tafel · am Ende „Heute habe ich gelernt, …“ · Bezüge zum Leistungssport, wo sie sich anbieten"],
-  ["Noch offen", "KA 1 (Verben-Test) ist nicht eingeplant – Termin legt die Lehrkraft fest; ggf. Puffer nutzen und Woche 7 straffen. Ferien und Feiertage sind nicht berücksichtigt."],
+  ["Leistungsbewertung (SchiC)", "Bewertung 1: Analyse der Merkmale (Std. 19, Woche 5) · Bewertung 2: Textüberarbeitung aus der Figurenperspektive (Std. 25, Woche 6) · Bewertung 3: Rezitation einer selbst gewählten Ballade (Std. 39–41, nach den Weihnachtsferien)"],
+  ["Planungsprinzipien", "Jede Stunde nach AVIVA · Lernziel als „Ich kann …“ und Ablauf an der Tafel (Streichbares mit *) · alle Schüler in jeder Phase aktiv: erst allein oder zu zweit, dann Vergleich an der Tafel · am Ende „Heute habe ich gelernt, …“ · Bezüge zum Leistungssport nur dort, wo sie sich anbieten"],
+  ["Termine / offen", "Herbstferien 16.10.–2.11. sind eingeplant (Woche 1: 4 Std., Woche 2: 4 Std., da 2.11. frei). Weihnachtsferien angenommen ab 21.12. – Woche 9 liegt danach, bitte prüfen. KA 1 (Verben-Test) ist noch nicht terminiert; dafür den Puffer nutzen."],
 ].map(([a, b]) => row([tc(a, 3000, { bold: true, color: NAVY, fill: LIGHT, size: 19 }), cell(p(s19(b), { after: 0 }), { w: LW - 3000, m: 50, ml: 80 })]))));
 doc.push(p(t(""), { after: 120 }));
 const rows = [new TableRow({ tableHeader: true, children: ghdr.map((h, i) => hdr(h, GW[i], NAVY, 18)) })];

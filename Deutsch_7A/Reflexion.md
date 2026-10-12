@@ -205,7 +205,11 @@ Die Lehrkraft möchte das weiterverfolgen, noch ohne Material. Die Satzklammer (
 - **Hospitationsfeedback:** *(steht noch aus)*
 
 ### Einheit „Leute, höret die Geschicht’ – Umgang mit Balladen“ (Grobplanung, ab 12.10.)
-- **Material:** `Balladen/` mit SchiC-Auszug und Grobplanung (44 Stunden: 4 in Woche 1, danach je 5).
+- **Material:** `Balladen/` mit SchiC-Auszug und Grobplanung.
+  - 43 Stunden: Woche 1 (13.–15.10.) und Woche 2 (3.–6.11.) mit je 4 Stunden, danach je 5.
+  - Herbstferien 16.10.–2.11.; Woche 9 liegt nach den Weihnachtsferien.
+  - Lesetechniken (überfliegend, orientierend, genau) werden auf Wunsch der Lehrkraft schon in Woche 1 eingeführt.
+  - Bezug zum Leistungssport nur dort, wo er sich anbietet.
 - **Balladen (Wahl der Lehrkraft):** John Maynard, Die Bürgschaft, Der Handschuh, Erlkönig, Der Zauberlehrling.
 - **Bewertungen:** Analyse (Std. 19), Textüberarbeitung aus der Figurenperspektive (Std. 25), Rezitation (Std. 39–41).
 - **KA 1 = Verben-Test:** Der Termin ist noch offen und noch nicht eingeplant.

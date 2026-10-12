@@ -35,7 +35,7 @@ Die folgenden Vorlieben und Reflexionen gelten für die gesamte weitere Planung,
   - Sortier- und Zuordnungsaufgaben erst am Platz oder zu zweit bearbeiten, dann an der Tafel vergleichen.
   - Die Sortierphase in der Stunde „Welche Zeitform wann?“ war chaotisch, weil immer nur ein Schüler beschäftigt war.
 
-- **Alle Klassen der Lehrkraft bestehen aus Leistungssportlern.** Das gilt für jede Planung: Beispiele, Übungssätze und Schreibanlässe an Training, Wettkampf, Trainer, Ergebnisse und den Alltag im Leistungssport anknüpfen. Die Sportarten der jeweiligen Klasse stehen im Reflexionslog der Klasse.
+- **Alle Klassen der Lehrkraft bestehen aus Leistungssportlern.** Beispiele, Übungssätze und Schreibanlässe dort an Training, Wettkampf, Trainer und Alltag im Leistungssport anknüpfen, **wo es sich anbietet – nicht erzwingen** (Stand 12.10.). Bei literarischen Texten steht der Text im Vordergrund. Die Sportarten der jeweiligen Klasse stehen im Reflexionslog der Klasse.
 
 - **Erst fragen, was gewünscht ist:** Wenn die Lehrkraft „erst mal Ideen sammeln“ sagt, nur Ideen im Chat – kein Material erstellen.
 - **Kleinschrittig und Vorwissen nicht überschätzen.** Lieber einen Schritt zurückgehen und Grundlagen sichern (die Bastelstunde zu Zeitformen ist genau daran gescheitert).
