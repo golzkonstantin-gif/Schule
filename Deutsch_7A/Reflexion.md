@@ -220,10 +220,9 @@ Die Lehrkraft möchte das weiterverfolgen, noch ohne Material. Die Satzklammer (
   - A3: zwei Sätze in Präteritum, Perfekt, Plusquamperfekt und Futur I setzen (haben/sein)
   - A4: Hilfsverb und Partizip II bzw. Infinitiv unterstreichen
   - Zusatz: Futur II einmal bilden
-- **Mitarbeitsnoten:**
-  - Selbsteinschätzung der mündlichen Mitarbeit mit dem Bogen in `Mitarbeit/`.
-  - Der Bogen beruht auf den Kriterien der Schule für mündliche Noten: Notenstufen 1–6 in Ich-Form, je eine Spalte „Ich“ und „Lehrkraft“, dazu eine Begründung mit einem Beispiel.
-  - Die Lehrkraft gibt die Bögen am Fr 16.10. mit Einschätzung und Note zurück.
+- **Mitarbeitsnoten:** Es gibt keine Selbsteinschätzung, weil sich die Schüler überschätzen würden (Entscheidung der Lehrkraft).
+  - Die Lehrkraft erklärt die Kriterien der Schule mit der Präsentation `Mitarbeit/Muendliche_Noten_Kriterien.pptx` und teilt danach die Noten mit.
+  - Inhalt der Präsentation: zwei Leitfragen (Wie oft? Wie gut?), die Notentreppe, die Stufen im Detail, ein Beispiel aus dem Unterricht und Tipps zum Verbessern.
 - **Planungsprinzipien:** AVIVA, Lernziel und Ablauf transparent, alle Schüler aktiv.
 - **Rückmeldung der Lehrkraft:** *(steht noch aus)*
 
