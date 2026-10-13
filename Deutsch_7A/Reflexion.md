@@ -235,6 +235,7 @@ Die Lehrkraft möchte das weiterverfolgen, noch ohne Material. Die Satzklammer (
   - Tafelskript „Paddy Fingal – Lesetechniken“
   - Präsentation (12 Folien, Lösungen in den Notizen)
   - Tafelskript „Paddy Fingal – gliedern und nacherzählen“ (ohne Präsentation)
+  - **Mittwoch 14.10.:** durchgehende Präsentation `Mittwoch_14-10_Deutsch_7A.pptx` (29 Folien) mit Überblick und Lernzielen, Teil 1 Leistungskontrolle, Teil 2 Mündliche Noten, Teil 3 Paddy Fingal
   - Die Reihenfolge Do/Fr ist eine Annahme und noch zu bestätigen.
 - **Lernziele:**
   - Lesetechniken: Ich kann je nach Leseziel überfliegend, orientierend oder genau lesen und meinen ersten Eindruck von einer Ballade begründen. (Merksatz 1)
