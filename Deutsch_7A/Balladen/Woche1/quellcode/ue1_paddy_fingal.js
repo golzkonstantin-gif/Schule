@@ -148,86 +148,46 @@ function phase(nr, title, min) {
 
 
 // ================================================================
-// Druckvorlage Balladen Woche 1: Notizraster (Mi, 2 pro A4), Ü1 (Mi, 1 pro A4), Ü2 (Fr, 2 pro A4)
+// Druckvorlage Ü1 „Paddy Fingal lesen“ (1 pro A4, viel Schreibplatz)
 // ================================================================
 const PW = 11906 - 1200;
 const IW = PW - 300;
 const gray = "9AA3B5";
-const s = (x, o = {}) => t(x, Object.assign({ size: 20 }, o));
+const s = (x, o = {}) => t(x, Object.assign({ size: 21 }, o));
 const sb = (x, o = {}) => s(x, Object.assign({ bold: true }, o));
-const scissors = () => p(t("✂ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -", { color: gray, size: 16 }), { before: 40, after: 40, align: AlignmentType.CENTER });
-const slip = (children) => table([PW], [row([cell(children, { w: PW, borders: allBorders(dashed), m: 110, ml: 150, valign: VerticalAlign.TOP })])]);
-const head = (nr, title) => p([t(nr ? nr + "  " : "", { font: "Cambria", bold: true, size: 26, color: C.hv }), t(title, { font: "Cambria", bold: true, size: 26, color: NAVY }), t("          Name: ____________________", { size: 17, color: MUTED })], { after: 70 });
 const bd = allBorders(solid("7A869E", 8));
-const field = (label, w, h, hint) => cell([p(t(label, { bold: true, size: 19, color: NAVY }), { after: 0 }), ...(hint ? [p(t(hint, { size: 15, italics: true, color: gray }), { after: 0 })] : [])], { w, borders: bd, valign: VerticalAlign.TOP, m: 60, ml: 90 });
-const lineRows = (n, h = 520) => table([IW], Array.from({ length: n }, () => row([cell(p(t(""), { after: 0 }), { w: IW, borders: { top: none, left: none, right: none, bottom: solid("9AA3B5", 6) } })], h, HeightRule.EXACT)));
-
-// ---------- Notizraster ----------
-function slipHoeren() {
-  const H = IW / 2;
-  return slip([
-    head("", "John Maynard hören"),
-    p([s("1. Hören: Notiere Stichpunkte. 2. Hören: Ergänze und beantworte die letzte Frage.")], { after: 80 }),
-    table([H, H], [
-      row([field("Wer?", H, 0, "Figuren"), field("Wo?", H, 0, "Ort")], 1300, HeightRule.EXACT),
-      row([cell([p(t("Was passiert?", { bold: true, size: 19, color: NAVY }), { after: 0 }), p(t("3–4 Stichpunkte", { size: 15, italics: true, color: gray }), { after: 0 })], { w: IW, borders: bd, span: 2, valign: VerticalAlign.TOP, m: 60, ml: 90 })], 2000, HeightRule.EXACT),
-      row([cell([p(t("Wie endet es?", { bold: true, size: 19, color: NAVY }), { after: 0 })], { w: IW, borders: bd, span: 2, valign: VerticalAlign.TOP, m: 60, ml: 90 })], 1100, HeightRule.EXACT),
-      row([cell([p(t("Wer ist John Maynard? (nach dem 2. Hören, ein ganzer Satz)", { bold: true, size: 19, color: C.hv }), { after: 0 })], { w: IW, borders: bd, span: 2, valign: VerticalAlign.TOP, m: 60, ml: 90 })], 1100, HeightRule.EXACT),
-    ]),
-  ]);
-}
-
-// ---------- Ü1 ----------
-function slipLesen() {
+const slip = (children) => table([PW], [row([cell(children, { w: PW, borders: allBorders(dashed), m: 140, ml: 160, valign: VerticalAlign.TOP })])]);
+const lineRows = (n, h = 600) => table([IW], Array.from({ length: n }, () => row([cell(p(t(""), { after: 0 }), { w: IW, borders: { top: none, left: none, right: none, bottom: solid("9AA3B5", 6) } })], h, HeightRule.EXACT)));
+const part = (k, name, col, rest) => p([sb(`${k}) ${name}  `, { color: col, size: 23 }), s(rest, { size: 20 })], { before: 200, after: 40, keepNext: true });
+const label = (x) => p(sb(x, { size: 20, color: NAVY }), { before: 100, after: 0 });
+function slipPaddy() {
   const QW = [IW - 1500, 1500];
-  const q = (nr, x) => row([cell([p([sb(nr + "  ", { color: C.hv, size: 19 }), s(x, { size: 19 })], { after: 0 })], { w: QW[0], borders: bd, m: 50, ml: 90, valign: VerticalAlign.TOP }), cell(p(t("Str. ___", { size: 18, color: gray }), { after: 0, align: AlignmentType.CENTER }), { w: QW[1], borders: bd, m: 50 })], 700, HeightRule.EXACT);
-  const WW = [1900, (IW - 1900) / 2, (IW - 1900) / 2];
-  const wh = (x, w) => cell(p(t(x, { bold: true, size: 17, color: "FFFFFF" }), { after: 0, align: AlignmentType.CENTER }), { w, fill: NAVY, borders: bd, m: 30 });
-  const wr = (x) => row([cell(p(t(x, { font: "Cambria", bold: true, size: 20 }), { after: 0 }), { w: WW[0], borders: bd, m: 40, ml: 90 }), cell(p(t(""), { after: 0 }), { w: WW[1], borders: bd }), cell(p(t(""), { after: 0 }), { w: WW[2], borders: bd })], 700, HeightRule.EXACT);
+  const q = (nr, x) => row([cell([p([sb(nr + "  ", { color: C.hv, size: 20 }), s(x, { size: 20 })], { after: 0 })], { w: QW[0], borders: bd, m: 60, ml: 100, valign: VerticalAlign.TOP }), cell(p(t("Str. ___", { size: 18, color: gray }), { after: 0, align: AlignmentType.CENTER }), { w: QW[1], borders: bd, m: 60, valign: VerticalAlign.BOTTOM })], 820, HeightRule.EXACT);
+  const SW = [1300, IW - 1300];
+  const sr = (x) => row([cell(p(t(x, { bold: true, size: 20, color: NAVY }), { after: 0 }), { w: SW[0], borders: bd, m: 50, ml: 100, fill: LIGHT }), cell(p(t(""), { after: 0 }), { w: SW[1], borders: bd })], 700, HeightRule.EXACT);
   return slip([
-    head("Ü1", "Drei Arten zu lesen"),
-    p([sb("a) überfliegend  ", { color: NAVY }), s("(1 Minute, dann Buch zu)  In der Ballade geht es um …", { size: 19 })], { after: 0 }),
-    lineRows(3, 600),
-    p([sb("b) orientierend  ", { color: NAVY }), s("Suche nur die Antworten und notiere die Strophe.", { size: 19 })], { before: 80, after: 30 }),
+    p([t("Ü1  ", { font: "Cambria", bold: true, size: 28, color: C.hv }), t("Paddy Fingal lesen", { font: "Cambria", bold: true, size: 28, color: NAVY }), t("          Name: ______________________", { size: 18, color: MUTED })], { after: 20 }),
+    p(s("Wilhelm Brandes: „Paddy Fingal“ · Lehrbuch S. 136 f.", { size: 18, italics: true, color: MUTED }), { after: 60 }),
+    part("a", "überfliegend", C.inf, "(1 Minute, dann Buch zu)"),
+    label("In der Ballade geht es um …"),
+    lineRows(2),
+    label("Mein erster Eindruck (nach dem Vorlesen): Die Ballade wirkt lustig / spannend / unheimlich, weil …"),
+    lineRows(2),
+    part("b", "orientierend", "C98A1E", "Suche nur die Antworten und notiere die Strophe."),
     table(QW, [
-      q("1", "Wie heißt das Schiff?"),
-      q("2", "Von wo nach wo fährt es?"),
-      q("3", "Wie viele Minuten sind es noch bis Buffalo, als das Feuer ausbricht?"),
-      q("4", "Was antwortet John Maynard dem Kapitän zuletzt?"),
-      q("5*", "Wie viele Menschen folgen dem Sarg?"),
+      q("1", "Wie lang ist Paddys Bart?"),
+      q("2", "Woher kommt der Fremde?"),
+      q("3", "Wie heißt Paddys Frau?"),
+      q("4", "Was guckt aus dem Bett heraus?"),
+      q("5*", "Was ist eine Furt? (Tipp: Worterklärungen)"),
     ]),
-    p([sb("c) genau  ", { color: NAVY }), s("Lies Strophe 5 und 6 Satz für Satz. Notiere Stichpunkte, was passiert:", { size: 19 })], { before: 80, after: 0 }),
-    lineRows(3, 600),
-    p([sb("* Wörter aus dem Kontext  ", { color: NAVY, size: 19 }), s("Was bedeutet das Wort? Welcher Hinweis im Text hilft?", { size: 19 })], { before: 70, after: 30 }),
-    table(WW, [row([wh("Wort", WW[0]), wh("Meine Vermutung", WW[1]), wh("Hinweis im Text", WW[2])]), wr("Sprachrohr"), wr("Brandung"), wr("Bugspriet")]),
+    part("c", "genau", C.mv, "Lies Strophe 7 bis 9 Satz für Satz. Notiere zu jeder Strophe einen Stichpunkt."),
+    table(SW, [sr("Str. 7"), sr("Str. 8"), sr("Str. 9")]),
+    label("Warum läuft der Schotte weg?"),
+    lineRows(2),
+    p(s("Fertig? Stift hinlegen.", { size: 18, italics: true, color: MUTED }), { before: 100, after: 0, align: AlignmentType.RIGHT }),
   ]);
 }
-
-// ---------- Ü2 ----------
-function slipGliedern() {
-  const GW2 = [1700, IW - 1700];
-  const gh = (x, w) => cell(p(t(x, { bold: true, size: 18, color: "FFFFFF" }), { after: 0, align: AlignmentType.CENTER }), { w, fill: NAVY, borders: bd, m: 30 });
-  const gr = (a) => row([cell(p(t(a, { size: 18, color: gray }), { after: 0 }), { w: GW2[0], borders: bd, m: 40, ml: 90 }), cell(p(t(""), { after: 0 }), { w: GW2[1], borders: bd })], 820, HeightRule.EXACT);
-  return slip([
-    head("Ü2", "John Maynard gliedern"),
-    p([s("Trage ein, welche Strophen zu einem Abschnitt gehören, und schreibe eine "), sb("Zwischenüberschrift"), s(" (kein ganzer Satz). Abschnitt 2 ist ein Beispiel.")], { after: 80 }),
-    table(GW2, [
-      row([gh("Strophe(n)", GW2[0]), gh("Zwischenüberschrift", GW2[1])]),
-      gr("Str. ____"),
-      row([cell(p(t("Str. 2", { size: 18, bold: true }), { after: 0 }), { w: GW2[0], borders: bd, m: 40, ml: 90, fill: LIGHT }), cell(p(t("Fröhliche Fahrt nach Buffalo", { font: "Cambria", size: 20, italics: true }), { after: 0 }), { w: GW2[1], borders: bd, m: 40, ml: 90, fill: LIGHT })], 620, HeightRule.EXACT),
-      gr("Str. ____"), gr("Str. ____"), gr("Str. ____"), gr("Str. ____"), gr("Str. ____"),
-    ]),
-    p([sb("Test: ", { size: 19 }), s("Kann ich mit meinen Überschriften die Ballade nacherzählen?", { size: 19 })], { before: 80, after: 0 }),
-  ]);
-}
-
-const doc = [
-  slipHoeren(), scissors(), slipHoeren(),
-  new Paragraph({ children: [new PageBreak()] }),
-  slipLesen(),
-  new Paragraph({ children: [new PageBreak()] }),
-  slipGliedern(), scissors(), slipGliedern(),
-];
 const props = { page: { size: { width: 11906, height: 16838 }, margin: { top: 500, bottom: 400, left: 600, right: 600 } } };
 const styles = { default: { document: { run: { font: "Calibri", size: 20 } } } };
-Packer.toBuffer(new Document({ styles, sections: [{ properties: props, children: doc }] })).then((buf) => fs.writeFileSync("Druckvorlage_Balladen_Woche1.docx", buf));
+Packer.toBuffer(new Document({ styles, sections: [{ properties: props, children: [slipPaddy()] }] })).then((buf) => fs.writeFileSync("Ue1_Paddy_Fingal_lesen.docx", buf));

@@ -228,21 +228,19 @@ Die Lehrkraft möchte das weiterverfolgen, noch ohne Material. Die Satzklammer (
 - **Planungsprinzipien:** AVIVA, Lernziel und Ablauf transparent, alle Schüler aktiv.
 - **Rückmeldung der Lehrkraft:** *(steht noch aus)*
 
-### Mi 14.10. (DS) „John Maynard – hören und lesen“ und Fr 16.10. „John Maynard – eine Ballade gliedern“ (geplant, AVIVA)
+### „Paddy Fingal – Lesetechniken“ (geplant, 45 Min., AVIVA) und Fr 16.10. „Gliedern“ (Inhalt noch offen)
+- **Text:** Im Lehrbuch S. 136 f. steht „Paddy Fingal“ (Wilhelm Brandes). Laut Lehrkraft geht es zuerst um den Leseeindruck, den ungefähren Inhalt und die Lesetechniken. LB-Aufgabe 1 ist kein Muss.
 - **Material:** `Balladen/Woche1/`
-  - zwei Tafelskripte, nach AVIVA gegliedert,
-  - Druckvorlage: Notizraster und Ü2 je 2 pro A4, Ü1 1 pro A4.
-  - Der Text kommt aus dem Lehrbuch. Strophenangaben bei Bedarf an die Lehrbuchzeilen anpassen.
-- **Lernziele:**
-  - Mi: Ich kann beim Zuhören Notizen machen und je nach Leseziel überfliegend, orientierend oder genau lesen. (Merksatz 1)
-  - Fr: Ich kann eine Ballade in Abschnitte gliedern und Zwischenüberschriften formulieren. (Merksatz 2)
+  - Tafelskript „Paddy Fingal – Lesetechniken“
+  - Präsentation (12 Folien, Lösungen in den Notizen)
+  - Ü1 „Paddy Fingal lesen“ (1 pro A4)
+  - Ü2 „John Maynard gliedern“ (für Freitag, noch offen) und das zugehörige Tafelskript
+- **Lernziel:** Ich kann je nach Leseziel überfliegend, orientierend oder genau lesen und meinen ersten Eindruck von einer Ballade begründen. (Merksatz 1)
+- **Lesetraining:** chorisches Lesen des Kehrreims („… Paddy Fingal“), während die Lehrkraft vorliest.
 - **Umsetzung der Rückmeldung zum Unterrichtsbesuch:**
   - Ziel und Ablauf (mit *) stehen an der Seitentafel.
   - In jeder Phase hat jeder einen eigenen Auftrag, an der Tafel wird nur verglichen.
   - Am Ende schreiben alle „Heute habe ich gelernt, …“.
-- **Präsentation Lesetechniken** (`Woche1/Praesentation_Lesetechniken.pptx`, Wunsch der Lehrkraft):
-  - Folienfolge: Ziel und Ablauf, Hören und Mitlesen, Wie lest ihr?, Merksatz 1, Ü1 a–c, Vergleich, Auswertung, „Heute habe ich gelernt“.
-  - Die Lösungen stehen in den Notizen.
 - **Lesetraining (Methodenkarten der Schule):**
   - Mi: Schattenlesen mit dem Hörbuch, danach Tandemlesen von Strophe 2–3.
   - Fr: Tandemlesen vor dem Gliedern.
