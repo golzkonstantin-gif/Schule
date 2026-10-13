@@ -225,7 +225,8 @@ function test(g) {
     ...G.t2.slice(0, 4).map(([parts]) => row([td(verbRuns(parts), W2[0]), td("", W2[1]), td("", W2[2]), td("", W2[3])], 620, HeightRule.EXACT)),
   ]));
 
-  // Aufgabe 3
+  // Aufgabe 3 (auf der Rückseite)
+  d.push(new Paragraph({ children: [new PageBreak()] }));
   d.push(...aufgabe(3, "Zeitformen bilden", 8, [s("Schreibe den Satz in den angegebenen Zeitformen. Achte auf das richtige Hilfsverb ("), sb("haben"), s(" oder "), sb("sein"), s(").")]));
   G.t3.forEach(([k, satz]) => {
     d.push(p([sb(`${k})  `, { color: C.hv }), t("Präsens: ", { size: 22, color: MUTED }), t(satz, { font: "Cambria", size: 24, bold: true })], { before: 120, after: 20, keepNext: true }));
