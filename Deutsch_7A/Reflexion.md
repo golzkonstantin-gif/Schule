@@ -214,7 +214,12 @@ Die Lehrkraft möchte das weiterverfolgen, noch ohne Material. Die Satzklammer (
   - Ohne eigenen Puffer: Die mit * markierten Teile können entfallen.
 - **Balladen (Wahl der Lehrkraft):** John Maynard, Die Bürgschaft, Der Handschuh, Erlkönig, Der Zauberlehrling.
 - **Bewertungen:** Analyse (Std. 19), Textüberarbeitung aus der Figurenperspektive (Std. 25), Rezitation (Std. 36–38, 17.–21.12., vor den Weihnachtsferien).
-- **KA 1 = Verben-Test:** am Do 15.10.
+- **KA 1 = Verben-Test:** am Do 15.10. Material in `KA1_Verben/`: Gruppe A und B sowie ein Erwartungshorizont. 28 Punkte + 2 Zusatzpunkte.
+  - A1: Infinitiv, finite Form und Partizip II in einer Tabelle (mit Beispiel)
+  - A2: Person, Numerus und Tempus bestimmen (mit Beispiel)
+  - A3: zwei Sätze in Präteritum, Perfekt, Plusquamperfekt und Futur I setzen (haben/sein)
+  - A4: Hilfsverb und Partizip II bzw. Infinitiv unterstreichen
+  - Zusatz: Futur II einmal bilden
 - **Mitarbeitsnoten:**
   - Mi 14.10.: 20 Minuten Selbsteinschätzung mit dem Bogen in `Mitarbeit/` (7 Kriterien, ++/+/o/–).
   - Die Lehrkraft sammelt die Bögen ein und gibt sie am Fr 16.10. mit eigener Einschätzung und Note zurück.
