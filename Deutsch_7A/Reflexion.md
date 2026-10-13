@@ -240,7 +240,9 @@ Die Lehrkraft möchte das weiterverfolgen, noch ohne Material. Die Satzklammer (
   - Ziel und Ablauf (mit *) stehen an der Seitentafel.
   - In jeder Phase hat jeder einen eigenen Auftrag, an der Tafel wird nur verglichen.
   - Am Ende schreiben alle „Heute habe ich gelernt, …“.
-- **Mitarbeit:** Mi Selbsteinschätzung (20 Min.), Fr Rückgabe mit Note.
+- **Präsentation Lesetechniken** (`Woche1/Praesentation_Lesetechniken.pptx`, Wunsch der Lehrkraft):
+  - Folienfolge: Ziel und Ablauf, Hören und Mitlesen, Wie lest ihr?, Merksatz 1, Ü1 a–c, Vergleich, Auswertung, „Heute habe ich gelernt“.
+  - Die Lösungen stehen in den Notizen.
 - **Lesetraining (Methodenkarten der Schule):**
   - Mi: Schattenlesen mit dem Hörbuch, danach Tandemlesen von Strophe 2–3.
   - Fr: Tandemlesen vor dem Gliedern.
