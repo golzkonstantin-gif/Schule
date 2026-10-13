@@ -157,38 +157,36 @@ const s = (x, o = {}) => t(x, Object.assign({ size: 19 }, o));
 const sb = (x, o = {}) => s(x, Object.assign({ bold: true }, o));
 const scissors = () => p(t("✂ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -", { color: gray, size: 16 }), { before: 30, after: 30, align: AlignmentType.CENTER });
 const slip = (children) => table([PW], [row([cell(children, { w: PW, borders: allBorders(dashed), m: 100, ml: 150, valign: VerticalAlign.TOP })])]);
-const KRIT = [
-  "Ich melde mich regelmäßig und beteilige mich am Unterrichtsgespräch.",
-  "Meine Beiträge sind fachlich richtig; ich begründe und benutze Fachbegriffe.",
-  "In Einzel- und Partnerarbeit arbeite ich konzentriert und werde fertig.",
-  "Bei Tafelarbeit (z. B. Kreide-Kette) mache ich mit und prüfe mit.",
-  "Ich höre anderen zu und gehe auf ihre Beiträge ein.",
-  "Mein Heft ist vollständig (Merksätze, Übungen, Verbesserungen in Grün).",
-  "Ich habe Material und Hausaufgaben dabei.",
+const STUFEN = [
+  ["1", "Ich melde mich regelmäßig von mir aus. Ich erkenne das Problem, ordne es in größere Zusammenhänge ein, bringe eigene Gedanken ein und begründe sie. Ich drücke mich klar und mit Fachbegriffen aus."],
+  ["2", "Ich melde mich regelmäßig. Ich verstehe auch schwierige Inhalte, ordne sie ins Thema ein und trenne Wichtiges von Unwichtigem. Manchmal weiß ich mehr, als im Unterricht dran war."],
+  ["3", "Ich melde mich regelmäßig von mir aus. Meine Antworten zum aktuellen Stoff sind meist richtig, und ich verknüpfe sie mit früheren Themen der Einheit."],
+  ["4", "Ich melde mich nur gelegentlich. Ich gebe einfache Fakten aus dem gerade behandelten Stoff wieder, meistens richtig."],
+  ["5", "Ich melde mich nicht von mir aus. Wenn ich drangenommen werde, ist meine Antwort nur teilweise richtig."],
+  ["6", "Ich melde mich nicht von mir aus. Wenn ich drangenommen werde, ist meine Antwort falsch."],
 ];
-const SC = ["++", "+", "o", "–"];
-const KW = IW - 8 * 470;
+const NW = 650, CW2 = 1250;
+const DW = IW - NW - 2 * CW2;
 const bd = allBorders(solid("B9C6E8", 6));
-const hcell = (x, w, fill, span) => cell(p(t(x, { bold: true, size: 16, color: "FFFFFF" }), { after: 0, align: AlignmentType.CENTER }), { w, fill, borders: bd, span, m: 20 });
-const tick = (w) => cell(p(t("☐", { size: 20, color: "7A869E" }), { after: 0, align: AlignmentType.CENTER }), { w, borders: bd, m: 20 });
+const hcell = (x, w, fill) => cell(p(t(x, { bold: true, size: 16, color: "FFFFFF" }), { after: 0, align: AlignmentType.CENTER }), { w, fill, borders: bd, m: 20 });
+const tick = (w) => cell(p(t("☐", { size: 24, color: "7A869E" }), { after: 0, align: AlignmentType.CENTER }), { w, borders: bd, m: 20, valign: VerticalAlign.CENTER });
 const line = (label, n = 1) => p([sb(label + " ", { size: 18 }), s("_".repeat(n), { color: gray, size: 18 })], { before: 120, after: 0 });
 function bogen() {
   return slip([
-    p([t("Meine Mitarbeit in Deutsch", { font: "Cambria", bold: true, size: 26, color: NAVY }), t("     Name: ____________________   Zeitraum: bis 15.10.", { size: 17, color: MUTED })], { after: 50 }),
-    p([s("Kreuze ehrlich an: "), sb("++"), s(" trifft immer zu · "), sb("+"), s(" meistens · "), sb("o"), s(" manchmal · "), sb("–"), s(" selten. Die rechte Seite füllt deine Lehrkraft aus.")], { after: 60 }),
-    table([KW, ...Array(8).fill(470)], [
-      row([hcell("Kriterium", KW, NAVY), hcell("Ich", 4 * 470, "C77C12", 4), hcell("Lehrkraft", 4 * 470, MUTED, 4)]),
-      row([cell(p(t(""), { after: 0 }), { w: KW, borders: bd, m: 10 }), ...[...SC, ...SC].map((x) => cell(p(t(x, { bold: true, size: 16 }), { after: 0, align: AlignmentType.CENTER }), { w: 470, borders: bd, fill: LIGHT, m: 10 }))]),
-      ...KRIT.map((k) => row([cell(p(s(k, { size: 18 }), { after: 0 }), { w: KW, borders: bd, m: 30, ml: 80 }), ...Array(8).fill(0).map(() => tick(470))], 400)),
+    p([t("Meine mündliche Mitarbeit in Deutsch", { font: "Cambria", bold: true, size: 26, color: NAVY }), t("     Name: ____________________   bis 14.10.", { size: 17, color: MUTED })], { after: 40 }),
+    p([s("Welche Beschreibung passt am besten zu dir? Kreuze in der Spalte „Ich“ "), sb("eine"), s(" Zeile an. Die Spalte „Lehrkraft“ füllt deine Lehrkraft aus.")], { after: 60 }),
+    table([NW, DW, CW2, CW2], [
+      row([hcell("Note", NW, NAVY), hcell("So arbeite ich mündlich mit", DW, NAVY), hcell("Ich", CW2, "C77C12"), hcell("Lehrkraft", CW2, MUTED)]),
+      ...STUFEN.map(([n, d]) => row([cell(p(t(n, { bold: true, size: 24, color: NAVY, font: "Cambria" }), { after: 0, align: AlignmentType.CENTER }), { w: NW, borders: bd, fill: LIGHT, valign: VerticalAlign.CENTER }), cell(p(s(d, { size: 17 }), { after: 0 }), { w: DW, borders: bd, m: 30, ml: 80 }), tick(CW2), tick(CW2)], 560)),
     ]),
-    line("Das gelingt mir gut:", 80),
-    line("Daran arbeite ich bis Weihnachten:", 64),
-    p([sb("Meine Note (Selbsteinschätzung): ", { size: 18 }), s("_____", { color: gray, size: 18 }), sb("        Note der Lehrkraft: ", { size: 18, color: MUTED }), s("_____", { color: gray, size: 18 })], { before: 140, after: 0 }),
-    line("Kommentar der Lehrkraft:", 72),
+    line("Begründe mit einem Beispiel aus dem Unterricht:", 52),
     p(s("_".repeat(98), { color: gray, size: 18 }), { before: 160, after: 0 }),
+    line("Daran arbeite ich bis Weihnachten:", 64),
+    line("Kommentar der Lehrkraft:", 72),
+    p(s("Grundlage: Kriterien zur Beurteilung der mündlichen Leistung (lehrerfreund.de)", { size: 14, color: gray }), { before: 80, after: 0 }),
   ]);
 }
 const doc = [bogen(), scissors(), bogen()];
 const props = { page: { size: { width: 11906, height: 16838 }, margin: { top: 500, bottom: 400, left: 600, right: 600 } } };
 const styles = { default: { document: { run: { font: "Calibri", size: 20 } } } };
-Packer.toBuffer(new Document({ styles, sections: [{ properties: props, children: doc }] })).then((buf) => fs.writeFileSync("Selbsteinschaetzung_Mitarbeit.docx", buf));
+Packer.toBuffer(new Document({ styles, sections: [{ properties: props, children: doc }] })).then((buf) => fs.writeFileSync("Selbsteinschaetzung_Muendliche_Mitarbeit.docx", buf));

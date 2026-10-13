@@ -221,8 +221,9 @@ Die Lehrkraft möchte das weiterverfolgen, noch ohne Material. Die Satzklammer (
   - A4: Hilfsverb und Partizip II bzw. Infinitiv unterstreichen
   - Zusatz: Futur II einmal bilden
 - **Mitarbeitsnoten:**
-  - Mi 14.10.: 20 Minuten Selbsteinschätzung mit dem Bogen in `Mitarbeit/` (7 Kriterien, ++/+/o/–).
-  - Die Lehrkraft sammelt die Bögen ein und gibt sie am Fr 16.10. mit eigener Einschätzung und Note zurück.
+  - Selbsteinschätzung der mündlichen Mitarbeit mit dem Bogen in `Mitarbeit/`.
+  - Der Bogen beruht auf den Kriterien der Schule für mündliche Noten: Notenstufen 1–6 in Ich-Form, je eine Spalte „Ich“ und „Lehrkraft“, dazu eine Begründung mit einem Beispiel.
+  - Die Lehrkraft gibt die Bögen am Fr 16.10. mit Einschätzung und Note zurück.
 - **Planungsprinzipien:** AVIVA, Lernziel und Ablauf transparent, alle Schüler aktiv.
 - **Rückmeldung der Lehrkraft:** *(steht noch aus)*
 
