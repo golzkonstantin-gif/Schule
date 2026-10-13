@@ -222,7 +222,9 @@ Die Lehrkraft möchte das weiterverfolgen, noch ohne Material. Die Satzklammer (
   - Zusatz: Futur II einmal bilden
 - **Mitarbeitsnoten:** Es gibt keine Selbsteinschätzung, weil sich die Schüler überschätzen würden (Entscheidung der Lehrkraft).
   - Die Lehrkraft erklärt die Kriterien der Schule mit der Präsentation `Mitarbeit/Muendliche_Noten_Kriterien.pptx` und teilt danach die Noten mit.
-  - Inhalt der Präsentation: zwei Leitfragen (Wie oft? Wie gut?), die Notentreppe, die Stufen im Detail, ein Beispiel aus dem Unterricht und Tipps zum Verbessern.
+  - Inhalt der Präsentation: zwei Leitfragen (Wie oft? Wie gut?), die Notentreppe, die Stufen im Detail und ein Beispiel aus dem Unterricht.
+  - Dazu kommen Unterrichtsstörungen: was als Störung zählt und ein Stufenplan (Hinweis → Ermahnung → Notiz und Gespräch → Konsequenz → Eltern und Klassenleitung). Die Stufen gelten pro Stunde; der Plan ist noch an die Schulordnung anzupassen.
+  - Am Ende stehen Tipps zum Verbessern.
 - **Planungsprinzipien:** AVIVA, Lernziel und Ablauf transparent, alle Schüler aktiv.
 - **Rückmeldung der Lehrkraft:** *(steht noch aus)*
 

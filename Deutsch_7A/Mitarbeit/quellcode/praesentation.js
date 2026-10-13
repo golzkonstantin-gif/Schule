@@ -124,6 +124,47 @@ pair(2, 1, "Note 2 und 1: verstehen und selbst denken", "Für die 1 braucht es e
   });
 }
 
+// ============ Unterrichtsstörungen: was zählt als Störung ============
+{
+  const s = base("Unterrichtsstörungen", "Was stört den Unterricht?", "Kurz mit der Klasse sammeln, dann die Folie zeigen. Wichtig: Es geht darum, dass alle lernen können, nicht um Strafe.");
+  const items = [
+    ["Reinrufen", "ohne Melden dazwischenreden"],
+    ["Nebengespräche", "während jemand anderes spricht oder alle arbeiten"],
+    ["Handy", "benutzen oder sichtbar auf dem Tisch"],
+    ["Nicht arbeiten", "Aufgabe liegen lassen, andere ablenken"],
+    ["Herumlaufen", "ohne Auftrag den Platz verlassen"],
+    ["Material fehlt", "Heft, Buch oder Stifte nicht dabei"],
+  ];
+  items.forEach(([h, d], i) => {
+    const x = 0.6 + (i % 2) * 6.15, y = 1.75 + Math.floor(i / 2) * 1.55;
+    box(s, x, y, 5.95, 1.35, LIGHT);
+    s.addShape(pres.shapes.RECTANGLE, { x, y, w: 0.12, h: 1.35, fill: { color: RED }, line: { type: "none" } });
+    txt(s, h, { x: x + 0.4, y: y + 0.22, w: 5.4, h: 0.45, fontFace: HEAD, fontSize: 22, bold: true });
+    txt(s, d, { x: x + 0.4, y: y + 0.72, w: 5.4, h: 0.45, fontSize: 16, color: MUTED });
+  });
+  txt(s, "Wer stört, hält nicht nur sich selbst vom Lernen ab, sondern auch alle anderen.", { x: 0.6, y: 6.5, w: 12.1, h: 0.4, fontSize: 16, italic: true, color: NAVY, align: "center" });
+}
+
+// ============ Unterrichtsstörungen: Stufen ============
+{
+  const s = base("Unterrichtsstörungen", "So reagiere ich – Stufe für Stufe", "Stufen an die Schulordnung bzw. Absprachen der Klassenleitung anpassen. Die Stufen gelten pro Stunde; wer sich wieder fängt, startet in der nächsten Stunde neu. Wiederholte Störungen fließen in die Einschätzung der Mitarbeit ein, weil sachliche, regelmäßige Mitarbeit dann nicht möglich ist.");
+  const ST = [
+    ["1", "Hinweis", "Blick, Zeichen oder Name – ohne Unterbrechung", "9DB84A"],
+    ["2", "Ermahnung", "deutliche Ansage vor der Klasse", "E8A33D"],
+    ["3", "Notiz", "Eintrag in meiner Liste, kurzes Gespräch nach der Stunde", "E07B45"],
+    ["4", "Konsequenz", "Umsetzen, Zusatzaufgabe oder Nacharbeit", "D9534F"],
+    ["5", "Eltern und Klassenleitung", "Information, Eintrag, gemeinsames Gespräch", "A93A36"],
+  ];
+  ST.forEach(([n, h, d, c], i) => {
+    const x = 0.6 + i * 2.45, h0 = 2.3 + i * 0.42, y = 6.6 - h0;
+    box(s, x, y, 2.3, h0, c, { r: 0.05 });
+    txt(s, "Stufe " + n, { x, y: y + 0.15, w: 2.3, h: 0.4, fontSize: 14, bold: true, color: WHITE, align: "center" });
+    txt(s, h, { x: x + 0.1, y: y + 0.55, w: 2.1, h: 0.75, fontFace: HEAD, fontSize: 18, bold: true, color: WHITE, align: "center" });
+    txt(s, d, { x: x + 0.12, y: y + 1.3, w: 2.06, h: h0 - 1.35, fontSize: 13, color: WHITE, align: "center" });
+  });
+  txt(s, "Mit jeder Störung in derselben Stunde geht es eine Stufe höher. Die nächste Stunde beginnt wieder bei null.", { x: 0.6, y: 1.65, w: 7.0, h: 0.8, fontSize: 16, italic: true, color: MUTED });
+}
+
 // ============ 8 So verbesserst du dich ============
 {
   const s = base("Nach oben kommen", "So verbesserst du deine mündliche Note", "Konkrete Tipps; gerne gemeinsam an die Tafel schreiben lassen, was sich jeder bis Weihnachten vornimmt.");
@@ -148,7 +189,7 @@ pair(2, 1, "Note 2 und 1: verstehen und selbst denken", "Für die 1 braucht es e
   const s = pres.addSlide();
   darkBg(s);
   txt(s, "Und jetzt?", { x: 0.9, y: 1.9, w: 11, h: 0.9, fontFace: HEAD, fontSize: 40, bold: true, color: WHITE });
-  const pts = ["Ich teile dir deine aktuelle mündliche Note mit – mit einer kurzen Begründung.", "Überleg dir: Welche Stufe willst du bis Weihnachten erreichen?", "Schreib einen Tipp von der letzten Folie ins Heft, an dem du arbeitest."];
+  const pts = ["Ich teile dir deine aktuelle mündliche Note mit – mit einer kurzen Begründung.", "Überleg dir: Welche Stufe willst du bis Weihnachten erreichen?", "Schreib einen Tipp ins Heft, an dem du arbeitest – und was du gegen Störungen tust."];
   pts.forEach((x, i) => {
     txt(s, [{ text: `${i + 1}  `, options: { bold: true, color: YEL } }, { text: x }], { x: 0.9, y: 3.1 + i * 0.85, w: 11.5, h: 0.7, fontSize: 22, color: WHITE });
   });
