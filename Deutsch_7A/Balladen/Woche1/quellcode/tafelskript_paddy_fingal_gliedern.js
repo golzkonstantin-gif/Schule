@@ -148,7 +148,7 @@ function phase(nr, title, min) {
 
 
 // ================================================================
-// Tafelskript Fr 16.10. (Einzelstunde): Rückgabe Mitarbeit · John Maynard gliedern – AVIVA
+// Tafelskript Paddy Fingal gliedern und nacherzählen (Einzelstunde) – AVIVA
 // ================================================================
 const merkTafel = (nr, title, children) => board(`Seitentafel · Merksatz ${nr} – abschreiben, rot umrahmen`, [
   p([t(title, { bold: true, color: C.hv, font: "Cambria", size: 22 })], { after: 40 }),
@@ -162,51 +162,51 @@ const zielTafel = (ziel, ablauf) => board("Seitentafel links · bleibt die ganze
 ]);
 
 const doc = [];
-doc.push(kicker("Tafelskript für die Lehrkraft · Fr 16.10. · Einzelstunde (45 Min.) · Planungsmodell AVIVA"), h1("John Maynard – eine Ballade gliedern"));
+doc.push(kicker("Tafelskript für die Lehrkraft · Einzelstunde (45 Min.) · Planungsmodell AVIVA · ohne Präsentation"), h1("Paddy Fingal – eine Ballade gliedern und nacherzählen"));
 doc.push(box([
-  p([S("Bezug: ", { bold: true }), S("Am Mittwoch hat die Klasse die Ballade gehört und die drei Lesetechniken kennengelernt; Strophe 5 und 6 wurden schon genau gelesen. Heute wird das genaue Lesen auf die ganze Ballade angewendet. Gestern war KA 1 – die Stunde ist kurz getaktet und endet vor den Ferien mit einem klaren Ergebnis.")], { after: 0 }),
+  p([S("Bezug: ", { bold: true }), S("In der letzten Stunde hat die Klasse „Paddy Fingal“ (LB S. 136 f.) überflogen, gehört und mit den drei Lesetechniken erschlossen. Heute wird das genaue Lesen auf die ganze Ballade angewendet: gliedern und mit den Überschriften nacherzählen (LB-Aufgabe 1 b). Die Mitarbeitsnoten teilt die Lehrkraft in der Arbeitsphase einzeln mit.")], { after: 0 }),
 ], LIGHT2));
-doc.push(p([S("Lernziel: ", { bold: true }), S("Ich kann eine Ballade in Abschnitte gliedern und passende Zwischenüberschriften formulieren.", { italics: true })], { before: 120, after: 40 }));
+doc.push(p([S("Lernziel: ", { bold: true }), S("Ich kann eine Ballade in Abschnitte gliedern, passende Zwischenüberschriften formulieren und sie damit nacherzählen.", { italics: true })], { before: 120, after: 40 }));
 doc.push(p([S("Antwort auf „Was habt ihr heute gelernt?“: ", { bold: true }), S("„Ein neuer Abschnitt beginnt, wenn sich Ort, Zeit, Figuren oder die Handlung ändern. Eine Zwischenüberschrift nennt den Kern in wenigen Wörtern. Mit den Überschriften kann ich die Geschichte nacherzählen.“")], { after: 100 }));
 
 doc.push(h3("Ablauf"));
 doc.push(grid([900, 1300, 3400, 4606], ["Zeit", "AVIVA", "Phase", "Alle Schüler …"], [
-  ["5′", "A", "Ankommen: Rückgabe Mitarbeit", "lesen die Rückmeldung still"],
+  ["5′", "A", "Ankommen: Paddy Fingal in drei Sätzen", "erinnern sich: Wer? Was will er? Wie endet es?"],
   ["5′", "V", "Vorwissen: Lesetechniken", "beantworten drei Fragen im Heft"],
   ["7′", "I", "Merksatz 2: Einen Text gliedern", "schreiben ab; erster Abschnitt gemeinsam"],
-  ["20′", "V", "Ü2 John Maynard gliedern", "lesen im Tandem, gliedern zu zweit, vergleichen in der Kreide-Kette"],
-  ["5′", "A", "Auswerten: Ziel erreicht?", "erzählen mit den Überschriften nach, schreiben „Heute habe ich gelernt, …“"],
+  ["20′", "V", "Ü2 Paddy Fingal gliedern", "lesen im Tandem, gliedern zu zweit, vergleichen in der Kreide-Kette"],
+  ["5′", "A", "Auswerten: nacherzählen (LB 1 b)", "erzählen mit den Überschriften nach, schreiben „Heute habe ich gelernt, …“"],
 ], { bold: [true, true, true, false], colors: [C.hv, C.hv, NAVY, null], h: 360 }));
-doc.push(p([S("Puffer: ", { bold: true, color: C.hv }), S("3 Minuten. Mit * markiert: die Nacherzählung in der Auswertung (kann durch den Satz „Heute habe ich gelernt“ allein ersetzt werden).")], { before: 80, after: 60 }));
+doc.push(p([S("Puffer: ", { bold: true, color: C.hv }), S("3 Minuten. Mit * markiert: eine zweite Nacherzählung durch ein anderes Paar.")], { before: 80, after: 60 }));
 
 doc.push(h3("So sieht das Heft am Ende aus"));
 doc.push(table([2300, 7906], [
-  ["Überschrift", "John Maynard – eine Ballade gliedern · Datum rechts"],
+  ["Überschrift", "Paddy Fingal – eine Ballade gliedern · Datum rechts"],
   ["Heft", "Drei Antworten zu den Lesetechniken"],
   ["Merksatz 2", "Einen Text gliedern (rot umrahmt)"],
-  ["Ü2", "Schnipsel „John Maynard gliedern“ (eingeklebt, mit Grün verbessert)"],
+  ["Ü2", "Gliederung untereinander: Str. … – Zwischenüberschrift (mit Grün verbessert)"],
   ["Abschluss", "„Heute habe ich gelernt, …“"],
 ].map(([a, b2]) => row([tc(a, 2300, { bold: true, color: a.startsWith("Merk") ? C.hv : a === "Überschrift" ? NAVY : "C77C12", fill: LIGHT, size: 20 }), tc(b2, 7906, { size: 20 })], 340))));
-doc.push(p([S("Material: ", { bold: true }), S("Lehrbuch · Mitarbeitsbögen mit Einschätzung und Note · Methodenkarte Tandemlesen · Druckvorlage: Ü2 (2 pro A4).")], { before: 100, after: 40 }));
-doc.push(p([S("Vorbereitung: ", { bold: true }), S("Ziel und Ablauf links an die Seitentafel, Merksatz 2 rechts (zugeklappt). In der Tafelmitte untereinander die Strophennummern 1–9 anschreiben, rechts daneben Platz für Überschriften.")], { after: 60 }));
-doc.push(zielTafel("Ich kann eine Ballade in Abschnitte gliedern und passende Zwischenüberschriften formulieren.", [
-  "Rückgabe Mitarbeit", "Lesetechniken wiederholen", "Merksatz 2: Einen Text gliedern", "Ü2 John Maynard gliedern", "Was habe ich heute gelernt? (Nacherzählen *)",
+doc.push(p([S("Material: ", { bold: true }), S("Lehrbuch S. 136 f. · Notenliste Mitarbeit (für die Einzelgespräche) · Methodenkarte Tandemlesen.")], { before: 100, after: 40 }));
+doc.push(p([S("Vorbereitung: ", { bold: true }), S("Ziel und Ablauf links an die Seitentafel, Merksatz 2 rechts (zugeklappt). In der Tafelmitte untereinander die Strophennummern 1–11 anschreiben, rechts daneben Platz für Überschriften.")], { after: 60 }));
+doc.push(zielTafel("Ich kann eine Ballade gliedern, Zwischenüberschriften formulieren und sie damit nacherzählen.", [
+  "Paddy Fingal in drei Sätzen", "Lesetechniken wiederholen", "Merksatz 2: Einen Text gliedern", "Ü2 Paddy Fingal gliedern", "Nacherzählen – Was habe ich heute gelernt?",
 ]));
 
 // ---------- A ----------
-doc.push(avivaPhase("A", "Ankommen und einstimmen: Rückgabe Mitarbeit", 5));
+doc.push(avivaPhase("A", "Ankommen und einstimmen: Paddy Fingal in drei Sätzen", 5));
 doc.push(...steps([
-  ["zuhoeren", { say: "Ihr bekommt eure Bögen zurück. Rechts steht meine Einschätzung und eure Note. Lest still. Wer darüber sprechen möchte, kommt in der Arbeitsphase kurz zu mir.", do: ["Bögen austeilen. Kurze Einzelgespräche während Ü2 anbieten, nicht im Plenum."] }],
+  ["luecken", { say: "Heft auf, Überschrift: Paddy Fingal – eine Ballade gliedern. Buch bleibt zu. Schreibt aus dem Gedächtnis drei Sätze: Wer ist Paddy Fingal? Was will der Schotte? Wie endet es? Zwei Minuten.", do: ["Ein Schüler liest vor, die anderen ergänzen. Auf Ziel und Ablauf an der Seitentafel zeigen."] }],
 ]));
 
 // ---------- V ----------
 doc.push(avivaPhase("V", "Vorwissen aktivieren: Lesetechniken", 5));
 doc.push(...steps([
-  ["luecken", { say: "Heft auf, Überschrift: John Maynard – eine Ballade gliedern. Dann beantwortet ihr allein drei Fragen an der Tafel. Zwei Minuten.", board: board("Mitte", [
+  ["luecken", { say: "Jetzt beantwortet ihr allein drei Fragen an der Tafel. Zwei Minuten.", board: board("Mitte", [
     bl("1  Welche drei Lesetechniken kennt ihr?"),
-    bl("2  Wie habt ihr am Mittwoch die Strophe mit dem Feuer schnell gefunden?"),
+    bl("2  Wie habt ihr letzte Stunde schnell gefunden, wie lang Paddys Bart ist?"),
     bl("3  Welche Lesetechnik braucht ihr, um eine Ballade zu gliedern? Begründe.", { after: 0 }),
-  ]), sol: "1 überfliegend, orientierend, genau · 2 orientierend: nach Schlüsselwörtern wie „Feuer“ gesucht · 3 genau – man muss jeden Abschnitt verstehen, um zu merken, wo sich etwas ändert" }],
+  ]), sol: "1 überfliegend, orientierend, genau · 2 orientierend: nach Schlüsselwörtern wie „Bart“ gesucht · 3 genau – man muss jeden Abschnitt verstehen, um zu merken, wo sich etwas ändert" }],
   ["gemeinsam", { say: "Wer liest Antwort 3 vor?", do: ["Überleitung: „Heute lesen wir die ganze Ballade genau und gliedern sie.“"] }],
 ]));
 
@@ -215,28 +215,28 @@ doc.push(avivaPhase("I", "Informieren: Merksatz 2 Einen Text gliedern", 7));
 doc.push(...steps([
   ["abschreiben", { say: "Jetzt schreibt ihr von der Seitentafel ab: Merksatz 2. Rot umrahmen.", board: merkTafel(2, "Einen Text gliedern", [
     p([S("Einen Text teile ich in "), S("Abschnitte", { bold: true }), S(". Ein neuer Abschnitt beginnt, wenn sich "), S("Ort, Zeit, Figuren oder die Handlung", { bold: true }), S(" ändern.")], { after: 30 }),
-    p([S("Jeder Abschnitt bekommt eine "), S("Zwischenüberschrift", { bold: true }), S(": kurz, ohne ganzen Satz, sie nennt den Kern (z. B. „Feuer an Bord“).")], { after: 60 }),
+    p([S("Jeder Abschnitt bekommt eine "), S("Zwischenüberschrift", { bold: true }), S(": kurz, ohne ganzen Satz, sie nennt den Kern (z. B. „Paddy versteckt sich“).")], { after: 60 }),
     p([S("Wofür? ", { bold: true }), S("So behalte ich den Überblick über die Handlung – das brauche ich später für Inhaltsangabe und Analyse. "), S("Test: ", { bold: true }), S("Kann ich mit meinen Zwischenüberschriften allein die Geschichte nacherzählen?")], { after: 0 }),
   ]) }],
-  ["gemeinsam", { say: "Stifte liegen. Den ersten Abschnitt machen wir zusammen. Lest Strophe 2. Was ist der Kern? Wo ändert sich etwas?", do: ["Ergebnis an die Tafel neben Strophe 2: „Fröhliche Fahrt nach Buffalo“. Kurz klären: Strophe 1 ist ein Rahmen – die Frage „Wer ist John Maynard?“ und die Antwort, die am Ende auf dem Grabstein wiederkehrt."] }],
+  ["gemeinsam", { say: "Stifte liegen. Den ersten Abschnitt machen wir zusammen. Lest Strophe 1. Was ist der Kern? Wo ändert sich in Strophe 2 etwas?", do: ["Ergebnis an die Tafel neben Strophe 1: „Paddy Fingal – ein Riese“. In Strophe 2 kommt eine neue Figur dazu (der Schotte) – also beginnt ein neuer Abschnitt."] }],
 ]));
 
 // ---------- V ----------
-doc.push(avivaPhase("V", "Verarbeiten: Ü2 John Maynard gliedern", 20));
+doc.push(avivaPhase("V", "Verarbeiten: Ü2 Paddy Fingal gliedern", 20));
 doc.push(...steps([
-  ["partner", { say: "Jetzt arbeitet ihr im Tandem. Klebt den Schnipsel Ü2 ein. Lest die Ballade zuerst zusammen halblaut – wer stockt, bekommt sofort Hilfe. Dann entscheidet ihr, wo ein neuer Abschnitt beginnt, und schreibt für jeden Abschnitt eine Zwischenüberschrift. Vierzehn Minuten.", board: auftrag("Ü2 John Maynard gliedern", ["Lest die Ballade im Tandem halblaut.", "Entscheidet, wo ein neuer Abschnitt beginnt (Ort, Zeit, Figuren, Handlung).", "Tragt Strophen und Zwischenüberschrift in den Schnipsel ein."], [p(S("Hilfe: Wo ändert sich etwas? Was ist der Kern?", { size: 20, italics: true }), { after: 0 })], "14 Minuten · Tandem · halblaut, dann leise"),
-    sol: "Möglichkeit: Str. 1 Die Frage nach John Maynard · Str. 2 Fröhliche Fahrt nach Buffalo · Str. 3 Feuer an Bord! · Str. 4 Panik der Passagiere · Str. 5–6 John Maynard hält aus · Str. 7 Alle gerettet – einer fehlt · Str. 8–9 Die Stadt ehrt ihren Helden. Andere Abgrenzungen sind möglich, wenn sie begründet werden (z. B. Str. 5 und 6 getrennt).",
-    do: ["Methodenkarte „Tandemlesen“: dieselben Tandems wie am Mittwoch.", "Herumgehen; Einzelgespräche zu den Mitarbeitsbögen hier führen.", "Typische Schwierigkeit: ganze Sätze statt Überschriften – auf den Merksatz verweisen."] }],
-  ["tafel", { say: "Kreide-Kette: Wer drankommt, schreibt eure Überschrift neben die passende Strophe an die Tafel. Alle anderen vergleichen mit ihrem Schnipsel und schreiben eine bessere Idee mit Grün daneben.", do: ["Ein Paar pro Abschnitt, sieben Schüler. Bei Abweichungen begründen lassen: „Warum beginnt hier ein neuer Abschnitt?“"] }],
+  ["partner", { say: "Jetzt arbeitet ihr im Tandem. Schreibt ins Heft: Ü2 Paddy Fingal gliedern. Lest die Ballade zuerst zusammen halblaut – wer stockt, bekommt sofort Hilfe. Dann entscheidet ihr, wo ein neuer Abschnitt beginnt, und schreibt für jeden Abschnitt eine Zwischenüberschrift. Vierzehn Minuten.", board: auftrag("Ü2 Paddy Fingal gliedern", ["Lest die Ballade im Tandem halblaut.", "Entscheidet, wo ein neuer Abschnitt beginnt (Ort, Zeit, Figuren, Handlung).", "Schreibt untereinander ins Heft: Str. … – Zwischenüberschrift."], [p(S("Beispiel: Str. 1 – Paddy Fingal, ein Riese · Hilfe: Wo ändert sich etwas? Was ist der Kern?", { size: 20, italics: true }), { after: 0 })], "14 Minuten · Tandem · halblaut, dann leise"),
+    sol: "Möglichkeit: Str. 1 Paddy Fingal – ein Riese · Str. 2–3 Ein noch größerer Schotte kommt · Str. 4–5 Angst und Versteck im Bett · Str. 6–7 Der Schotte sucht – Schayas Warnung · Str. 8–9 Die Nase des „Babys“ · Str. 10 Flucht des Schotten · Str. 11 Paddys Sieg. Andere Abgrenzungen sind möglich, wenn sie begründet werden.",
+    do: ["Methodenkarte „Tandemlesen“: feste Tandems (lesestärker/leseschwächer).", "Herumgehen; hier die Mitarbeitsnoten einzeln mitteilen (kurz, mit einer Begründung nach den Kriterien).", "Typische Schwierigkeit: ganze Sätze statt Überschriften – auf den Merksatz verweisen."] }],
+  ["tafel", { say: "Kreide-Kette: Wer drankommt, schreibt eure Überschrift neben die passende Strophe an die Tafel. Alle anderen vergleichen mit ihrem Heft und schreiben eine bessere Idee mit Grün daneben.", do: ["Ein Paar pro Abschnitt, etwa sieben Schüler. Bei Abweichungen begründen lassen: „Warum beginnt hier ein neuer Abschnitt?“"] }],
 ]));
 
 // ---------- A ----------
-doc.push(avivaPhase("A", "Auswerten: Ziel erreicht?", 5));
+doc.push(avivaPhase("A", "Auswerten: nacherzählen (LB-Aufgabe 1 b)", 5));
 doc.push(...steps([
-  ["gemeinsam", { say: "* Test aus dem Merksatz: Einer erzählt die Ballade nur mit den Überschriften an der Tafel nach. Alle anderen prüfen: Fehlt etwas?", do: ["Ein Schüler erzählt in fünf, sechs Sätzen nach."] }],
-  ["luecken", { say: "Schaut auf unser Ziel. Schreibt ins Heft: Heute habe ich gelernt, …", do: ["Zwei Schüler lesen vor. Ausblick nach den Ferien: „Warum ist eine Ballade Erzählung, Gedicht und Theater zugleich?“ – schöne Ferien."] }],
+  ["gemeinsam", { say: "Test aus dem Merksatz: Ein Paar erzählt die Ballade nur mit den Überschriften an der Tafel nach – Titel und Autor zuerst, richtige Reihenfolge, nichts dazuerfinden. Alle anderen prüfen: Fehlt etwas?", do: ["LB-Aufgabe 1 b. * Ein zweites Paar erzählt spannend mit wörtlicher Rede."] }],
+  ["luecken", { say: "Schaut auf unser Ziel. Schreibt ins Heft: Heute habe ich gelernt, …", do: ["Zwei Schüler lesen vor. Ausblick: „Warum ist eine Ballade Erzählung, Gedicht und Theater zugleich?“"] }],
 ]));
 
 const pageProps = { page: { size: { width: 11906, height: 16838 }, margin: { top: 900, bottom: 800, left: 850, right: 850, header: 400, footer: 400 } } };
 const styles = { default: { document: { run: { font: "Calibri", size: 22 } } } };
-Packer.toBuffer(new Document({ styles, sections: [{ properties: pageProps, headers: { default: header("Balladen · Fr 16.10.") }, footers: { default: footer("Tafelskript") }, children: doc }] })).then((buf) => fs.writeFileSync("Tafelskript_Fr_16-10_Gliedern.docx", buf));
+Packer.toBuffer(new Document({ styles, sections: [{ properties: pageProps, headers: { default: header("Balladen · Paddy Fingal") }, footers: { default: footer("Tafelskript") }, children: doc }] })).then((buf) => fs.writeFileSync("Tafelskript_Paddy_Fingal_Gliedern.docx", buf));

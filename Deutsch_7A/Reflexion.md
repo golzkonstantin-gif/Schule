@@ -228,14 +228,17 @@ Die Lehrkraft möchte das weiterverfolgen, noch ohne Material. Die Satzklammer (
 - **Planungsprinzipien:** AVIVA, Lernziel und Ablauf transparent, alle Schüler aktiv.
 - **Rückmeldung der Lehrkraft:** *(steht noch aus)*
 
-### „Paddy Fingal – Lesetechniken“ (geplant, 45 Min., AVIVA) und Fr 16.10. „Gliedern“ (Inhalt noch offen)
-- **Text:** Im Lehrbuch S. 136 f. steht „Paddy Fingal“ (Wilhelm Brandes). Laut Lehrkraft geht es zuerst um den Leseeindruck, den ungefähren Inhalt und die Lesetechniken. LB-Aufgabe 1 ist kein Muss.
+### Woche 1: „Paddy Fingal – Lesetechniken“ (Mi, nach der Leistungskontrolle), „Paddy Fingal gliedern und nacherzählen“ (Do), „Ur-Ei“ (Fr) – geplant, AVIVA
+- **Text:** „Paddy Fingal“ (Wilhelm Brandes, LB S. 136 f.). Die Lehrkraft hält die Ballade für den ersten Eindruck für zugänglicher als „John Maynard“, der deshalb erst nach den Herbstferien kommt. Zuerst geht es um den Leseeindruck, den ungefähren Inhalt und die Lesetechniken. LB-Aufgabe 1 ist kein Muss.
+- **Keine Schnipsel:** Gearbeitet wird mit dem Lehrbuch und im Heft.
 - **Material:** `Balladen/Woche1/`
   - Tafelskript „Paddy Fingal – Lesetechniken“
   - Präsentation (12 Folien, Lösungen in den Notizen)
-  - Ü1 „Paddy Fingal lesen“ (1 pro A4)
-  - Ü2 „John Maynard gliedern“ (für Freitag, noch offen) und das zugehörige Tafelskript
-- **Lernziel:** Ich kann je nach Leseziel überfliegend, orientierend oder genau lesen und meinen ersten Eindruck von einer Ballade begründen. (Merksatz 1)
+  - Tafelskript „Paddy Fingal – gliedern und nacherzählen“ (ohne Präsentation)
+  - Die Reihenfolge Do/Fr ist eine Annahme und noch zu bestätigen.
+- **Lernziele:**
+  - Lesetechniken: Ich kann je nach Leseziel überfliegend, orientierend oder genau lesen und meinen ersten Eindruck von einer Ballade begründen. (Merksatz 1)
+  - Gliedern: Ich kann eine Ballade gliedern, Zwischenüberschriften formulieren und sie damit nacherzählen. (Merksatz 2)
 - **Lesetraining:** chorisches Lesen des Kehrreims („… Paddy Fingal“), während die Lehrkraft vorliest.
 - **Umsetzung der Rückmeldung zum Unterrichtsbesuch:**
   - Ziel und Ablauf (mit *) stehen an der Seitentafel.

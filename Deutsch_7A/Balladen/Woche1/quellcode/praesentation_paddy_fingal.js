@@ -126,7 +126,7 @@ function uebung(kicker, title, steps, meta, notes, extra) {
 
 // ============ 6–8 Ü1 ============
 uebung("Verarbeiten · Ü1 a", "Ü1 a) Überfliegen", [
-  "Klebe den Schnipsel Ü1 ins Heft. Schlage S. 136 f. auf.",
+  "Schreibe ins Heft: Ü1 Paddy Fingal lesen – a). Schlage S. 136 f. auf.",
   "Überfliege die Ballade – genau 1 Minute für beide Seiten.",
   "Klappe das Buch zu. Schreibe einen Satz: „In der Ballade geht es um …“",
 ], "1 Minute lesen + 2 Minuten schreiben · allein · leise",
@@ -139,7 +139,7 @@ uebung("Verarbeiten · Ü1 a", "Ü1 a) Überfliegen", [
 // ============ Zuhören, Kehrreim, erster Eindruck ============
 {
   const s = base("Verarbeiten · Zuhören", "Zuhören und mitsprechen", "Methodenkarte „Chorisches Lesen“: Lehrkraft liest die Strophen, die Klasse spricht die letzte Zeile jeder Strophe im Chor. Vorher Tempo und Lautstärke festlegen. Danach schreiben alle den ersten Eindruck in Ü1; zwei lesen vor.");
-  ["Hör zu, während die Ballade vorgelesen wird. Lies im Buch mit.", "Die letzte Zeile jeder Strophe sprecht ihr alle im Chor mit.", "Schreibe in Ü1: Die Ballade wirkt lustig / spannend / unheimlich, weil …"].forEach((x, i) => {
+  ["Hör zu, während die Ballade vorgelesen wird. Lies im Buch mit.", "Die letzte Zeile jeder Strophe sprecht ihr alle im Chor mit.", "Schreibe ins Heft: Die Ballade wirkt lustig / spannend / unheimlich, weil …"].forEach((x, i) => {
     num(s, i + 1, 0.6, 1.85 + i * 0.85);
     txt(s, x, { x: 1.3, y: 1.89 + i * 0.85, w: 11.3, h: 0.7, fontSize: 21, bold: true });
   });
@@ -151,7 +151,7 @@ uebung("Verarbeiten · Ü1 a", "Ü1 a) Überfliegen", [
 
 uebung("Verarbeiten · Ü1 b", "Ü1 b) Orientierend lesen", [
   "Suche nur die Antworten – lies nicht alles!",
-  "Notiere die Antwort und die Strophe auf dem Schnipsel.",
+  "Schreibe b) ins Heft. Notiere die Antwort und die Strophe.",
 ], "6 Minuten · allein · leise · Wer fertig ist, macht Frage 5*",
 "Lösung: 1 sechs Ellen (Str. 1) · 2 aus Schottland (Str. 2) · 3 Schaya (Str. 4) · 4 nur seine Nase (Str. 5) · *5 eine flache Stelle in einem Fluss oder Bach (Worterklärung 7). Nachfragen: Wie hast du die Stelle so schnell gefunden? (Schlüsselwörter, Fußnoten)",
 (s, y) => {
@@ -160,7 +160,7 @@ uebung("Verarbeiten · Ü1 b", "Ü1 b) Orientierend lesen", [
 });
 
 uebung("Verarbeiten · Ü1 c", "Ü1 c) Genau lesen", [
-  "Lies Strophe 7 bis 9 Satz für Satz.",
+  "Schreibe c) ins Heft. Lies Strophe 7 bis 9 Satz für Satz.",
   "Notiere zu jeder Strophe einen Stichpunkt.",
   "Beantworte: Warum läuft der Schotte weg?",
 ], "5 Minuten · allein · leise",
