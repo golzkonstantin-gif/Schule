@@ -148,7 +148,7 @@ function phase(nr, title, min) {
 
 
 // ================================================================
-// KA 1 Verben und Zeitformen – Gruppe A und B + Erwartungshorizont
+// Leistungskontrolle Verben und Zeitformen (30 Min.) – Gruppe A und B + Erwartungshorizont
 // ================================================================
 const PW = 11906 - 1600;
 const gray = "9AA3B5";
@@ -202,10 +202,10 @@ function test(g) {
   const G = GROUPS[g];
   const d = [];
   d.push(table([PW - 2600, 2600], [row([
-    cell([p([t("Klassenarbeit Nr. 1 · Deutsch · Klasse 7A", { size: 20, color: MUTED, bold: true })], { after: 20 }), p(t("Verben und Zeitformen", { font: "Cambria", bold: true, size: 34, color: NAVY }), { after: 60 }), p([s("Name: ______________________________     Datum: 15.10.")], { after: 0 })], { w: PW - 2600, borders: noBorders, m: 0 }),
-    cell([p(t(`Gruppe ${g}`, { font: "Cambria", bold: true, size: 36, color: C.hv }), { after: 60, align: AlignmentType.CENTER }), p(s("Punkte: ____ / 28"), { after: 40, align: AlignmentType.CENTER }), p(s("Zusatz: ____ / 2"), { after: 40, align: AlignmentType.CENTER }), p(s("Note: ______"), { after: 0, align: AlignmentType.CENTER })], { w: 2600, borders: allBorders(solid(NAVY, 10)), m: 100 }),
+    cell([p([t("Leistungskontrolle · Deutsch · Klasse 7A", { size: 20, color: MUTED, bold: true })], { after: 20 }), p(t("Verben und Zeitformen", { font: "Cambria", bold: true, size: 34, color: NAVY }), { after: 60 }), p([s("Name: ______________________________     Datum: 14.10.")], { after: 0 })], { w: PW - 2600, borders: noBorders, m: 0 }),
+    cell([p(t(`Gruppe ${g}`, { font: "Cambria", bold: true, size: 36, color: C.hv }), { after: 60, align: AlignmentType.CENTER }), p(s("Punkte: ____ / 25"), { after: 40, align: AlignmentType.CENTER }), p(s("Zusatz: ____ / 2"), { after: 40, align: AlignmentType.CENTER }), p(s("Note: ______"), { after: 0, align: AlignmentType.CENTER })], { w: 2600, borders: allBorders(solid(NAVY, 10)), m: 100 }),
   ])]));
-  d.push(p([s("Lies jede Aufgabe genau. Schreibe sauber. Du hast 45 Minuten Zeit.", { italics: true, color: MUTED, size: 20 })], { before: 120, after: 0 }));
+  d.push(p([s("Lies jede Aufgabe genau. Schreibe sauber. Du hast 30 Minuten Zeit.", { italics: true, color: MUTED, size: 20 })], { before: 120, after: 0 }));
 
   // Aufgabe 1
   const W1 = [Math.floor(PW / 3), Math.floor(PW / 3), PW - 2 * Math.floor(PW / 3)];
@@ -218,11 +218,11 @@ function test(g) {
 
   // Aufgabe 2
   const W2 = [PW - 3 * 1900, 1900, 1900, 1900];
-  d.push(...aufgabe(2, "Person, Numerus und Tempus bestimmen", 9, [s("Bestimme für die "), sb("fett gedruckte"), s(" Verbform Person, Numerus und Tempus. Die erste Zeile ist ein Beispiel.")]));
+  d.push(...aufgabe(2, "Person, Numerus und Tempus bestimmen", 6, [s("Bestimme für die "), sb("fett gedruckte"), s(" Verbform Person, Numerus und Tempus. Die erste Zeile ist ein Beispiel.")]));
   d.push(table(W2, [
     row([th("Satz", W2[0]), th("Person", W2[1]), th("Numerus", W2[2]), th("Tempus", W2[3])], 420),
     row([td(verbRuns(["Wir ", ["trainieren"], " jeden Tag."]), W2[0], { fill: LIGHT }), td("1. Person", W2[1], { it: true, color: MUTED, fill: LIGHT }), td("Plural", W2[2], { it: true, color: MUTED, fill: LIGHT }), td("Präsens", W2[3], { it: true, color: MUTED, fill: LIGHT })], 520, HeightRule.EXACT),
-    ...G.t2.map(([parts]) => row([td(verbRuns(parts), W2[0]), td("", W2[1]), td("", W2[2]), td("", W2[3])], 620, HeightRule.EXACT)),
+    ...G.t2.slice(0, 4).map(([parts]) => row([td(verbRuns(parts), W2[0]), td("", W2[1]), td("", W2[2]), td("", W2[3])], 620, HeightRule.EXACT)),
   ]));
 
   // Aufgabe 3
@@ -246,26 +246,26 @@ function test(g) {
 
 function solution() {
   const d = [];
-  d.push(kicker("Für die Lehrkraft · KA 1 · Verben und Zeitformen · 15.10."), h1("Erwartungshorizont Gruppe A und B"));
-  d.push(p([S("Gesamt: ", { bold: true }), S("28 Punkte + 2 Zusatzpunkte. Aufgabe 1: je richtige Form 0,5 P. (12 Formen) · Aufgabe 2: je richtige Angabe 0,5 P. (18 Angaben) · Aufgabe 3: je richtiger Satz 1 P. (bei richtigem Hilfsverb und falscher Präteritumform/Partizip 0,5 P.) · Aufgabe 4: je richtig markiertes Paar 1 P. (5 Paare; ein fälschlich markiertes Präteritum-Verb: −0,5 P.) · Zusatz: 2 P. (1 P. bei kleinem Fehler).")], { after: 100 }));
+  d.push(kicker("Für die Lehrkraft · Leistungskontrolle · Verben und Zeitformen · 14.10. · 30 Minuten"), h1("Erwartungshorizont Gruppe A und B"));
+  d.push(p([S("Gesamt: ", { bold: true }), S("25 Punkte + 2 Zusatzpunkte. Aufgabe 1: je richtige Form 0,5 P. (12 Formen) · Aufgabe 2: je richtige Angabe 0,5 P. (12 Angaben) · Aufgabe 3: je richtiger Satz 1 P. (bei richtigem Hilfsverb und falscher Präteritumform/Partizip 0,5 P.) · Aufgabe 4: je richtig markiertes Paar 1 P. (5 Paare; ein fälschlich markiertes Präteritum-Verb: −0,5 P.) · Zusatz: 2 P. (1 P. bei kleinem Fehler).")], { after: 100 }));
   ["A", "B"].forEach((g) => {
     const G = GROUPS[g];
     d.push(h3(`Gruppe ${g}`, C.hv));
     d.push(p([S("Aufgabe 1: ", { bold: true }), S(G.t1sol.map((r) => r.join(" – ")).join("  ·  "))], { after: 60 }));
-    d.push(p([S("Aufgabe 2: ", { bold: true }), S(G.t2.map(([parts, sol], i) => `${i + 1} ${parts.map((x) => (Array.isArray(x) ? x[0] : "")).filter(Boolean).join(" … ")}: ${sol[0]} Person, ${sol[1]}, ${sol[2]}`).join("  ·  "))], { after: 60 }));
+    d.push(p([S("Aufgabe 2: ", { bold: true }), S(G.t2.slice(0, 4).map(([parts, sol], i) => `${i + 1} ${parts.map((x) => (Array.isArray(x) ? x[0] : "")).filter(Boolean).join(" … ")}: ${sol[0]} Person, ${sol[1]}, ${sol[2]}`).join("  ·  "))], { after: 60 }));
     d.push(p([S("Aufgabe 3: ", { bold: true }), S(G.t3.map(([k, , sols]) => `${k}) ` + sols.map((x, i) => `${TENSES[i]}: ${x}`).join(" / ")).join("   "))], { after: 60 }));
     d.push(p([S("Aufgabe 4: ", { bold: true }), S(G.t4sol)], { after: 60 }));
     d.push(p([S("Zusatz: ", { bold: true }), S(G.zusatz[1])], { after: 120 }));
   });
   d.push(h3("Notenschlüssel (Vorschlag – an den Schulschlüssel anpassen)"));
-  const NK = [["1", "28 – 26"], ["2", "25,5 – 22,5"], ["3", "22 – 18,5"], ["4", "18 – 14"], ["5", "13,5 – 7"], ["6", "6,5 – 0"]];
-  d.push(table([1800, 3000], [row([hdr("Note", 1800), hdr("Punkte (von 28)", 3000)]), ...NK.map(([n, pt]) => row([tc(n, 1800, { bold: true, align: AlignmentType.CENTER }), tc(pt, 3000, { align: AlignmentType.CENTER })], 340))]));
-  d.push(p([S("Zusatzpunkte werden zur Gesamtpunktzahl addiert (höchstens bis 28).", { color: MUTED })], { before: 80, after: 0 }));
+  const NK = [["1", "25 – 23,5"], ["2", "23 – 20"], ["3", "19,5 – 16,5"], ["4", "16 – 12,5"], ["5", "12 – 6"], ["6", "5,5 – 0"]];
+  d.push(table([1800, 3000], [row([hdr("Note", 1800), hdr("Punkte (von 25)", 3000)]), ...NK.map(([n, pt]) => row([tc(n, 1800, { bold: true, align: AlignmentType.CENTER }), tc(pt, 3000, { align: AlignmentType.CENTER })], 340))]));
+  d.push(p([S("Zusatzpunkte werden zur Gesamtpunktzahl addiert (höchstens bis 25).", { color: MUTED })], { before: 80, after: 0 }));
   return d;
 }
 
 const props = { page: { size: { width: 11906, height: 16838 }, margin: { top: 800, bottom: 700, left: 800, right: 800 } } };
 const styles = { default: { document: { run: { font: "Calibri", size: 22 } } } };
-const foot = (g) => new Footer({ children: [new Paragraph({ alignment: AlignmentType.RIGHT, children: [new TextRun({ font: "Calibri", size: 16, color: MUTED, children: [`KA 1 · Gruppe ${g} · Seite `, PageNumber.CURRENT] })] })] });
-["A", "B"].forEach((g) => Packer.toBuffer(new Document({ styles, sections: [{ properties: props, footers: { default: foot(g) }, children: test(g) }] })).then((buf) => fs.writeFileSync(`KA1_Verben_Gruppe_${g}.docx`, buf)));
-Packer.toBuffer(new Document({ styles, sections: [{ properties: props, children: solution() }] })).then((buf) => fs.writeFileSync("KA1_Verben_Erwartungshorizont.docx", buf));
+const foot = (g) => new Footer({ children: [new Paragraph({ alignment: AlignmentType.RIGHT, children: [new TextRun({ font: "Calibri", size: 16, color: MUTED, children: [`Leistungskontrolle Verben · Gruppe ${g} · Seite `, PageNumber.CURRENT] })] })] });
+["A", "B"].forEach((g) => Packer.toBuffer(new Document({ styles, sections: [{ properties: props, footers: { default: foot(g) }, children: test(g) }] })).then((buf) => fs.writeFileSync(`LK_Verben_Gruppe_${g}.docx`, buf)));
+Packer.toBuffer(new Document({ styles, sections: [{ properties: props, children: solution() }] })).then((buf) => fs.writeFileSync("LK_Verben_Erwartungshorizont.docx", buf));
