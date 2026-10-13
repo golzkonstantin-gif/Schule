@@ -214,7 +214,7 @@ Die Lehrkraft möchte das weiterverfolgen, noch ohne Material. Die Satzklammer (
   - Ohne eigenen Puffer: Die mit * markierten Teile können entfallen.
 - **Balladen (Wahl der Lehrkraft):** John Maynard, Die Bürgschaft, Der Handschuh, Erlkönig, Der Zauberlehrling.
 - **Bewertungen:** Analyse (Std. 19), Textüberarbeitung aus der Figurenperspektive (Std. 25), Rezitation (Std. 36–38, 17.–21.12., vor den Weihnachtsferien).
-- **Leistungskontrolle Verben (keine Klassenarbeit):** Mi 14.10., 30 Minuten. Material in `Leistungskontrolle_Verben/`: Gruppe A und B sowie ein Erwartungshorizont. 25 Punkte + 2 Zusatzpunkte.
+- **Leistungskontrolle Verben (keine Klassenarbeit):** Mi 14.10., 30 Minuten. Material in `Leistungskontrolle_Verben/`: Gruppe A und B, je ein ausgefülltes Lösungsblatt und ein Erwartungshorizont. 25 Punkte + 2 Zusatzpunkte.
   - A1: Infinitiv, finite Form und Partizip II in einer Tabelle (mit Beispiel)
   - A2: Person, Numerus und Tempus bestimmen, 4 Sätze (mit Beispiel)
   - A3: zwei Sätze in Präteritum, Perfekt, Plusquamperfekt und Futur I setzen (haben/sein)

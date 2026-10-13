@@ -161,7 +161,8 @@ const aufgabe = (nr, title, pts, intro) => [
   p([t(`Aufgabe ${nr}  `, { font: "Cambria", bold: true, size: 26, color: C.hv }), t(title, { font: "Cambria", bold: true, size: 26, color: NAVY }), t(`     ___ / ${pts} P.`, { size: 20, color: MUTED })], { before: 280, after: 60, keepNext: true }),
   p(intro, { after: 100, keepNext: true }),
 ];
-const lineRow = (label) => table([2400, PW - 2400], [row([cell(p(t(label, { bold: true, size: 21, color: NAVY }), { after: 0 }), { w: 2400, borders: noBorders, m: 40, valign: VerticalAlign.BOTTOM }), cell(p(t(""), { after: 0 }), { w: PW - 2400, borders: { top: none, left: none, right: none, bottom: solid("7A869E", 6) } })], 620, HeightRule.EXACT)]);
+const SOLC = "1E7B4A";
+const lineRow = (label, ans = "") => table([2400, PW - 2400], [row([cell(p(t(label, { bold: true, size: 21, color: NAVY }), { after: 0 }), { w: 2400, borders: noBorders, m: 40, valign: VerticalAlign.BOTTOM }), cell(p(t(ans, { size: 22, color: SOLC, italics: true }), { after: 0 }), { valign: VerticalAlign.BOTTOM,  w: PW - 2400, borders: { top: none, left: none, right: none, bottom: solid("7A869E", 6) } })], 620, HeightRule.EXACT)]);
 
 const GROUPS = {
   A: {
@@ -178,6 +179,7 @@ const GROUPS = {
     t4: ["Am Samstag bin ich früh aufgestanden.", "Mein Trainer hatte alles vorbereitet.", "Im ersten Kampf habe ich gut gekämpft.", "Danach trank ich viel Wasser.", "Nächste Woche werde ich wieder antreten.", "Meine Eltern haben mich laut angefeuert."],
     t4sol: "bin – aufgestanden · hatte – vorbereitet · habe – gekämpft · (trank: kein Hilfsverb) · werde – antreten (Infinitiv) · haben – angefeuert",
     zusatz: ["Aufgabe 3a", "Ich werde den Kampf gewonnen haben."],
+    t4mark: [{ bin: "h", aufgestanden: "p" }, { hatte: "h", vorbereitet: "p" }, { habe: "h", "gekämpft": "p" }, {}, { werde: "h", antreten: "i" }, { haben: "h", angefeuert: "p" }],
   },
   B: {
     t1: [["halten", "", ""], ["", "er trifft", ""], ["", "", "gestoßen"], ["spielen", "", ""], ["", "er verliert", ""], ["", "", "gesprungen"]],
@@ -193,17 +195,21 @@ const GROUPS = {
     t4: ["Am Sonntag sind wir früh losgefahren.", "Die Trainerin hatte uns gut vorbereitet.", "In der ersten Halbzeit haben wir drei Tore geworfen.", "In der Pause aß ich eine Banane.", "Im Rückspiel werden wir noch stärker spielen.", "Die Fans haben laut gesungen."],
     t4sol: "sind – losgefahren · hatte – vorbereitet · haben – geworfen · (aß: kein Hilfsverb) · werden – spielen (Infinitiv) · haben – gesungen",
     zusatz: ["Aufgabe 3a", "Du wirst den Ball geworfen haben."],
+    t4mark: [{ sind: "h", losgefahren: "p" }, { hatte: "h", vorbereitet: "p" }, { haben: "h", geworfen: "p" }, {}, { werden: "h", spielen: "i" }, { haben: "h", gesungen: "p" }],
   },
 };
 const TENSES = ["Präteritum", "Perfekt", "Plusquamperfekt", "Futur I"];
+const MC = { h: C.hv, p: "C98A1E", i: C.inf };
+const markRuns = (sent, m) => sent.split(/(\s+|[.,!?])/).filter((x) => x !== "").map((w) => (m[w] ? t(w, { font: "Cambria", size: 26, bold: true, u: true, color: MC[m[w]] }) : t(w, { font: "Cambria", size: 26 })));
 const verbRuns = (parts) => parts.map((x) => (Array.isArray(x) ? t(x[0], { size: 22, bold: true, font: "Cambria" }) : t(x, { size: 22, font: "Cambria" })));
 
-function test(g) {
+function test(g, sol = false) {
   const G = GROUPS[g];
+  const SV = (x) => ({ it: true, color: SOLC });
   const d = [];
   d.push(table([PW - 2600, 2600], [row([
     cell([p([t("Leistungskontrolle · Deutsch · Klasse 7A", { size: 20, color: MUTED, bold: true })], { after: 20 }), p(t("Verben und Zeitformen", { font: "Cambria", bold: true, size: 34, color: NAVY }), { after: 60 }), p([s("Name: ______________________________     Datum: 14.10.")], { after: 0 })], { w: PW - 2600, borders: noBorders, m: 0 }),
-    cell([p(t(`Gruppe ${g}`, { font: "Cambria", bold: true, size: 36, color: C.hv }), { after: 60, align: AlignmentType.CENTER }), p(s("Punkte: ____ / 25"), { after: 40, align: AlignmentType.CENTER }), p(s("Zusatz: ____ / 2"), { after: 40, align: AlignmentType.CENTER }), p(s("Note: ______"), { after: 0, align: AlignmentType.CENTER })], { w: 2600, borders: allBorders(solid(NAVY, 10)), m: 100 }),
+    cell([p(t(`Gruppe ${g}`, { font: "Cambria", bold: true, size: 36, color: C.hv }), { after: 60, align: AlignmentType.CENTER }), ...(sol ? [p(t("LÖSUNG", { bold: true, size: 26, color: SOLC }), { after: 40, align: AlignmentType.CENTER })] : []), p(s("Punkte: ____ / 25"), { after: 40, align: AlignmentType.CENTER }), p(s("Zusatz: ____ / 2"), { after: 40, align: AlignmentType.CENTER }), p(s("Note: ______"), { after: 0, align: AlignmentType.CENTER })], { w: 2600, borders: allBorders(solid(NAVY, 10)), m: 100 }),
   ])]));
   d.push(p([s("Lies jede Aufgabe genau. Schreibe sauber. Du hast 30 Minuten Zeit.", { italics: true, color: MUTED, size: 20 })], { before: 120, after: 0 }));
 
@@ -213,34 +219,34 @@ function test(g) {
   d.push(table(W1, [
     row([th("Infinitiv", W1[0]), th("finite Verbform (er …)", W1[1]), th("Partizip II", W1[2])], 420),
     row([td("werfen", W1[0], { it: true, color: MUTED, fill: LIGHT }), td("er wirft", W1[1], { it: true, color: MUTED, fill: LIGHT }), td("geworfen", W1[2], { it: true, color: MUTED, fill: LIGHT })], 520, HeightRule.EXACT),
-    ...G.t1.map((r) => row(r.map((x, i) => td(x, W1[i], { font: "Cambria", bold: !!x })), 600, HeightRule.EXACT)),
+    ...G.t1.map((r, ri) => row(r.map((x, i) => (x || !sol ? td(x, W1[i], { font: "Cambria", bold: !!x }) : td(G.t1sol[ri][i], W1[i], SV()))), 600, HeightRule.EXACT)),
   ]));
 
   // Aufgabe 2
-  const W2 = [PW - 3 * 1900, 1900, 1900, 1900];
+  const W2 = [PW - 5700, 1500, 1700, 2500];
   d.push(...aufgabe(2, "Person, Numerus und Tempus bestimmen", 6, [s("Bestimme für die "), sb("fett gedruckte"), s(" Verbform Person, Numerus und Tempus. Die erste Zeile ist ein Beispiel.")]));
   d.push(table(W2, [
     row([th("Satz", W2[0]), th("Person", W2[1]), th("Numerus", W2[2]), th("Tempus", W2[3])], 420),
     row([td(verbRuns(["Wir ", ["trainieren"], " jeden Tag."]), W2[0], { fill: LIGHT }), td("1. Person", W2[1], { it: true, color: MUTED, fill: LIGHT }), td("Plural", W2[2], { it: true, color: MUTED, fill: LIGHT }), td("Präsens", W2[3], { it: true, color: MUTED, fill: LIGHT })], 520, HeightRule.EXACT),
-    ...G.t2.slice(0, 4).map(([parts]) => row([td(verbRuns(parts), W2[0]), td("", W2[1]), td("", W2[2]), td("", W2[3])], 620, HeightRule.EXACT)),
+    ...G.t2.slice(0, 4).map(([parts, so]) => row([td(verbRuns(parts), W2[0]), td(sol ? so[0] + " Person" : "", W2[1], SV()), td(sol ? so[1] : "", W2[2], SV()), td(sol ? so[2] : "", W2[3], SV())], 620, HeightRule.EXACT)),
   ]));
 
   // Aufgabe 3 (auf der Rückseite)
   d.push(new Paragraph({ children: [new PageBreak()] }));
   d.push(...aufgabe(3, "Zeitformen bilden", 8, [s("Schreibe den Satz in den angegebenen Zeitformen. Achte auf das richtige Hilfsverb ("), sb("haben"), s(" oder "), sb("sein"), s(").")]));
-  G.t3.forEach(([k, satz]) => {
+  G.t3.forEach(([k, satz, sols]) => {
     d.push(p([sb(`${k})  `, { color: C.hv }), t("Präsens: ", { size: 22, color: MUTED }), t(satz, { font: "Cambria", size: 24, bold: true })], { before: 120, after: 20, keepNext: true }));
-    TENSES.forEach((tn) => d.push(lineRow(tn + ":")));
+    TENSES.forEach((tn, i) => d.push(lineRow(tn + ":", sol ? sols[i] : "")));
   });
 
   // Aufgabe 4
   d.push(...aufgabe(4, "Hilfsverb und Partizip II bzw. Infinitiv unterstreichen", 5, [s("Unterstreiche in jedem Satz das "), sb("Hilfsverb rot", { color: C.hv }), s(" und das "), sb("Partizip II gelb", { color: "C98A1E" }), s(" bzw. den "), sb("Infinitiv blau", { color: C.inf }), s(". Achtung: Nicht jeder Satz hat ein Hilfsverb. (Ohne Farbstifte: Hilfsverb einfach, Partizip II/Infinitiv doppelt unterstreichen.)")]));
-  G.t4.forEach((x, i) => d.push(p([t(`${i + 1}  `, { size: 20, bold: true, color: MUTED }), t(x, { font: "Cambria", size: 26 })], { after: 0, line: 480 })));
+  G.t4.forEach((x, i) => d.push(p([t(`${i + 1}  `, { size: 20, bold: true, color: MUTED }), ...(sol ? markRuns(x, G.t4mark[i]) : [t(x, { font: "Cambria", size: 26 })])], { after: 0, line: 480 })));
 
   // Zusatz
   d.push(p([t("Zusatz  ", { font: "Cambria", bold: true, size: 26, color: C.hv }), t("Futur II", { font: "Cambria", bold: true, size: 26, color: NAVY }), t("     ___ / 2 P.", { size: 20, color: MUTED })], { before: 280, after: 60, keepNext: true }));
   d.push(p([s(`Bilde zum Satz aus ${G.zusatz[0]} das Futur II. Tipp: `), sb("werden + Partizip II + haben/sein"), s(".")], { after: 60, keepNext: true }));
-  d.push(lineRow("Futur II:"));
+  d.push(lineRow("Futur II:", sol ? G.zusatz[1] : ""));
   d.push(p(s("Fertig? Lies alles noch einmal durch und prüfe die Hilfsverben.", { italics: true, color: MUTED, size: 20 }), { before: 240, after: 0, align: AlignmentType.RIGHT }));
   return d;
 }
@@ -269,4 +275,5 @@ const props = { page: { size: { width: 11906, height: 16838 }, margin: { top: 80
 const styles = { default: { document: { run: { font: "Calibri", size: 22 } } } };
 const foot = (g) => new Footer({ children: [new Paragraph({ alignment: AlignmentType.RIGHT, children: [new TextRun({ font: "Calibri", size: 16, color: MUTED, children: [`Leistungskontrolle Verben · Gruppe ${g} · Seite `, PageNumber.CURRENT] })] })] });
 ["A", "B"].forEach((g) => Packer.toBuffer(new Document({ styles, sections: [{ properties: props, footers: { default: foot(g) }, children: test(g) }] })).then((buf) => fs.writeFileSync(`LK_Verben_Gruppe_${g}.docx`, buf)));
+["A", "B"].forEach((g) => Packer.toBuffer(new Document({ styles, sections: [{ properties: props, footers: { default: foot(g) }, children: test(g, true) }] })).then((buf) => fs.writeFileSync(`LK_Verben_Gruppe_${g}_Loesung.docx`, buf)));
 Packer.toBuffer(new Document({ styles, sections: [{ properties: props, children: solution() }] })).then((buf) => fs.writeFileSync("LK_Verben_Erwartungshorizont.docx", buf));
