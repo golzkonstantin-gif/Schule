@@ -13,14 +13,14 @@ Dieses Repo enthält Unterrichtsmaterial (Deutsch). Die Lehrkraft plant hier gem
 Die folgenden Vorlieben und Reflexionen gelten für die gesamte weitere Planung, auch in anderen Klassen und Fächern (Stand 12.10.). Beispiele aus dem Deutschunterricht der 7A sind nur zur Veranschaulichung genannt. Klassenspezifisches steht im eigenen Abschnitt weiter unten.
 
 - **Planung nach einem didaktischen Planungsmodell (Stand 12.10., gilt für alle Stunden).** Jede Stunde wird nach einem ausdrücklich genannten Modell geplant, das Seminarmodell hat Vorrang. Die Phasen folgen dem Modell, und jede Phase dient dem Stundenziel.
-- **Planungsmodell AVIVA (Stand 12.10., wird erprobt).** Die Phasen heißen A – V – I – V – A:
+- **Planungsmodell AVIVA (Stand 14.10.: bewährt, beibehalten).** Die Phasen heißen A – V – I – V – A:
   - **A**nkommen und einstimmen
   - **V**orwissen aktivieren
   - **I**nformieren
   - **V**erarbeiten
   - **A**uswerten
 
-  Verlaufsplan und Tafelskript werden nach diesen Phasen gegliedert. Im Reflexionslog festhalten, wie sich das Modell bewährt.
+  Verlaufsplan und Tafelskript werden nach diesen Phasen gegliedert. Rückmeldung 14.10.: Lernziele und Verlauf zu Beginn vorzustellen „hilft sehr“. Bei Doppelstunden mit mehreren Teilen gibt es eine Überblicksfolie mit Ablauf, Zeiten und je einem „Ich …“-Ziel pro Teil.
 - **Lernziel und Ablauf für die Schüler transparent machen (Stand 12.10.).**
   - Zu Beginn jeder Stunde stehen an der Tafel (Seitentafel) das Stundenziel als „Ich kann …“ und der Ablauf in wenigen Stichpunkten.
   - Was eventuell nicht mehr geschafft wird, ist mit einem Stern (*) markiert.

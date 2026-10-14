@@ -228,7 +228,7 @@ Die Lehrkraft möchte das weiterverfolgen, noch ohne Material. Die Satzklammer (
 - **Planungsprinzipien:** AVIVA, Lernziel und Ablauf transparent, alle Schüler aktiv.
 - **Rückmeldung der Lehrkraft:** *(steht noch aus)*
 
-### Woche 1: „Paddy Fingal – Lesetechniken“ (Mi, nach der Leistungskontrolle), „Paddy Fingal gliedern und nacherzählen“ (Do), „Ur-Ei“ (Fr) – geplant, AVIVA
+### Woche 1: „Paddy Fingal – Lesetechniken“ (Mi 14.10., nach der Leistungskontrolle), „Paddy Fingal gliedern und nacherzählen“ (Do), „Ur-Ei“ (Fr) – AVIVA
 - **Text:** „Paddy Fingal“ (Wilhelm Brandes, LB S. 136 f.). Die Lehrkraft hält die Ballade für den ersten Eindruck für zugänglicher als „John Maynard“, der deshalb erst nach den Herbstferien kommt. Zuerst geht es um den Leseeindruck, den ungefähren Inhalt und die Lesetechniken. LB-Aufgabe 1 ist kein Muss.
 - **Keine Schnipsel:** Gearbeitet wird mit dem Lehrbuch und im Heft.
 - **Material:** `Balladen/Woche1/`
@@ -249,7 +249,8 @@ Die Lehrkraft möchte das weiterverfolgen, noch ohne Material. Die Satzklammer (
   - Mi: Schattenlesen mit dem Hörbuch, danach Tandemlesen von Strophe 2–3.
   - Fr: Tandemlesen vor dem Gliedern.
   - Die Tandems (lesestärker/leseschwächer) legt die Lehrkraft fest. In der Grobplanung sind weitere Methoden den Stunden zugeordnet.
-- **Rückmeldung der Lehrkraft:** *(steht noch aus)*
+- **Rückmeldung der Lehrkraft (14.10., Doppelstunde Mittwoch):** Die Stunde hat ihr gut gefallen. Lernziele und Verlauf nach AVIVA vorzustellen (Überblicksfolie mit Ablauf und „Ich …“-Zielen) hilft sehr.
+- **Konsequenz:** Lernziele und Verlauf weiterhin zu Beginn vorstellen, auch in Doppelstunden mit mehreren Teilen (Überblicksfolie). AVIVA hat sich bewährt.
 
 ## Hospitationsfeedback (gesammelt)
 
