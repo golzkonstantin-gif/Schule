@@ -255,6 +255,10 @@ Die Lehrkraft möchte das weiterverfolgen, noch ohne Material. Die Satzklammer (
 - **Entscheidungen der Lehrkraft (14.10.):**
   - Wiederholung ist künftig extrem wichtig. Die nächste Stunde beginnt mit Ü1 als Wiederholung, danach folgt LB-Aufgabe 1.
   - Merksätze werden vorerst nicht abgeschrieben. Wenn nötig, gibt es dazu einen Schnipsel.
+- **Do 15.10. geplant: „Paddy Fingal – wiederholen und nacherzählen“** (Tafelskript, Präsentation mit 9 Folien, Merksatz-Schnipsel Lesetechniken 10 pro A4 bei Bedarf)
+  - Ziel: Ich kann mit den Lesetechniken Informationen in der Ballade finden und den Inhalt mit eigenen Worten nacherzählen.
+  - Ablauf: Wiederholung (Situationen, Ü1 a und b) → LB-Aufgabe 1 a im Tandem → LB-Aufgabe 1 b nacherzählen mit Checkliste → ein Paar erzählt vor, „Heute habe ich gelernt“.
+- **Rückmeldung der Lehrkraft (Do):** *(steht noch aus)*
 
 ## Hospitationsfeedback (gesammelt)
 
