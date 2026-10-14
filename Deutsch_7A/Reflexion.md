@@ -251,6 +251,10 @@ Die Lehrkraft möchte das weiterverfolgen, noch ohne Material. Die Satzklammer (
   - Die Tandems (lesestärker/leseschwächer) legt die Lehrkraft fest. In der Grobplanung sind weitere Methoden den Stunden zugeordnet.
 - **Rückmeldung der Lehrkraft (14.10., Doppelstunde Mittwoch):** Die Stunde hat ihr gut gefallen. Lernziele und Verlauf nach AVIVA vorzustellen (Überblicksfolie mit Ablauf und „Ich …“-Zielen) hilft sehr.
 - **Konsequenz:** Lernziele und Verlauf weiterhin zu Beginn vorstellen, auch in Doppelstunden mit mehreren Teilen (Überblicksfolie). AVIVA hat sich bewährt.
+- **Stand nach Mittwoch:** Teil 3 kam nur bis zum Lesetraining (Vorlesen, Kehrreim im Chor); Ü1 wurde nicht geschafft.
+- **Entscheidungen der Lehrkraft (14.10.):**
+  - Wiederholung ist künftig extrem wichtig. Die nächste Stunde beginnt mit Ü1 als Wiederholung, danach folgt LB-Aufgabe 1.
+  - Merksätze werden vorerst nicht abgeschrieben. Wenn nötig, gibt es dazu einen Schnipsel.
 
 ## Hospitationsfeedback (gesammelt)
 
