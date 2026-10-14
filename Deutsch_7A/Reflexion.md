@@ -258,6 +258,10 @@ Die Lehrkraft möchte das weiterverfolgen, noch ohne Material. Die Satzklammer (
 - **Do 15.10. geplant: „Paddy Fingal – wiederholen und nacherzählen“** (Tafelskript, Präsentation mit 9 Folien, Merksatz-Schnipsel Lesetechniken 10 pro A4 bei Bedarf)
   - Ziel: Ich kann mit den Lesetechniken Informationen in der Ballade finden und den Inhalt mit eigenen Worten nacherzählen.
   - Ablauf: Wiederholung (Situationen, Ü1 a und b) → LB-Aufgabe 1 a im Tandem → LB-Aufgabe 1 b nacherzählen mit Checkliste → ein Paar erzählt vor, „Heute habe ich gelernt“.
+- **Änderung 14.10. abends:** Am Do gibt die Lehrkraft die Leistungskontrolle zurück (ca. 10 Min.). Im Raum funktioniert keine Präsentation. Deshalb gilt das neue Tafelskript `Tafelskript_Do_15-10_Testrueckgabe_Paddy_Fingal` (AVIVA, alles an der Tafel). Das Tafelskript und die Präsentation „wiederholen und nacherzählen“ sind damit überholt.
+  - Ziel: Ich kann mit den Lesetechniken Informationen in der Ballade finden und Fragen zum Inhalt mit Textbeleg beantworten.
+  - Ablauf: A 10′ Ziel/Ablauf und Testrückgabe (Notenschlüssel an der Seitentafel, alle verbessern einen Fehler mit Grün) → V 9′ Wiederholung Lesetechniken (Situationen A–C) und Ü1 a/b → I 2′ Auftrag LB-Aufgabe 1 → V 15′ Tandemlesen und LB 1 a im Heft → A 5′ Kreide-Kette zu 1 a, „Heute habe ich gelernt, …“.
+  - Mit *: Frage 5 in Ü1 b, LB 1 b (nacherzählen im Tandem, A Str. 1–5, B Str. 6–11). Nicht Geschafftes wird am Freitag als Wiederholung aufgegriffen.
 - **Rückmeldung der Lehrkraft (Do):** *(steht noch aus)*
 
 ## Hospitationsfeedback (gesammelt)
