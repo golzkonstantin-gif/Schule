@@ -20,7 +20,7 @@ Dieses Repository enthält Unterrichtsplanungen und Material (Deutsch). Bei jede
 - **Leitfragen, die auf einzelne Wörter zeigen** („Achte auf das Wort …“, „Wie verhalten sich … und … zueinander?“).
 - **Formulierungshilfen mit Fachbegriff** (Satzanfänge), damit der Schritt vom Stichwort zum Satz gelingt.
 - **Immer ein Transfer** am Ende (z. B. Umformulieren, Brief aus einer anderen Perspektive), mit klarem Umfang.
-- Phasenfolge der Mentorin: Auszug → Information → Vorarbeit → Analyse → Visualisierung → Reflexion → Transfer.
+- Phasenfolge der Mentorin: Auszug → Information → Vorarbeit → Analyse → Visualisierung → Reflexion → Transfer. Stunden zusätzlich nach **AVIVA** gliedern (Ankommen, Vorwissen aktivieren, Informieren, Verarbeiten, Auswerten).
 - Zitate aus fremdem Material immer mit dem Original abgleichen (ihr erster Auszug war teils nicht wörtlich).
 
 ## Rechtschreibung
@@ -50,4 +50,4 @@ Dieses Repository enthält Unterrichtsplanungen und Material (Deutsch). Bei jede
 ## Für die nächste Planung vorgemerkt
 - Erstes Diktat ist erledigt (Kafka-Stunde: Kontext + komplementär, symmetrisch, Generationenkonflikt). Noch offen für ein späteres **Definitionsdiktat**: Vier-Seiten-Modell und seine vier Seiten, Ich-Botschaft, Empathie, Wunsch & Bitte, Metakommunikation, Kipppunkt – wieder mit Vorlesefassung, Whiteboard-PDF zur Selbstkontrolle und typischen Stolperstellen.
 - Kafka-Stunde (`Deutsch_11/Kafka_Brief_an_den_Vater/`): komplett (Diktat, Tafelbild, Tafelscript, Arbeitsblatt nur mit Text, Präsentation mit Aufträgen; Matrix und Fließtext im Hefter). Gehalten, war zu schwer (siehe Erfahrungen). Die geplante **Übungsklausur mit den Tischregeln** (S. 5) erst nach Kontextsicherung und mehr gelenkter Übung angehen oder durch einen leichteren Text ersetzen.
-- Kafka-Appell-Stunde (`Deutsch_11/Kafka_Appell/`, 45 Min., Lehrkraft übernimmt von der Mentorin): Teil 1 Rechtschreib-Check (10 Min., WhatsApp-Fehlertext, Schnipsel mit Regeln), Teil 2 Kafka: Auszug S. 3 („immerfort bitte … guter Blick“), Information Appell, Kommunikationsquadrat mit Schwerpunkt Appell, Transfer: Rede Kafkas an den Vater (knüpft an Max Brods Brief aus dem Transfer der Mentorin an). Das Mini-Diktat ist entfallen. Rückmeldung nach der Stunde einarbeiten.
+- Kafka-Appell-Stunde (`Deutsch_11/Kafka_Appell/`, 45 Min., Lehrkraft übernimmt von der Mentorin): Teil 1 (15 Min.) Testauswertung (Durchschnitt der Punkte, nicht Note) + Rechtschreibtraining mit Schnipsel (8 Sätze, zeigen → zusammen → allein → besprechen), Teil 2 (30 Min.) Kafka nach **AVIVA**: Ankommen („Was ist mein Appell?“), Wiederholung, Information Appell, Auszug S. 3 (gekürzt), Aufgaben 1–3, Auswertung mit Quadrat, Reflexion, Transfer: Rede als Franz (wird begonnen, Vortrag nächste Stunde). **Arbeitsblatt diesmal mit Aufträgen nach dem Muster der Mentorin (Versuch, entgegen „Drucke sparen“).** Rückmeldung nach der Stunde einarbeiten.

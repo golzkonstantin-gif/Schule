@@ -1,16 +1,13 @@
-// Gemeinsame Daten der Stunde „Kafkas Appell“: Rechtschreib-Check (Chat, Regeln), Auszug, Fußnoten, Leitfragen, Redekriterien
-// Auszug: Kafka, „Brief an den Vater“, S. 3 (DigBib-Ausgabe), mit dem Original abgeglichen
+// Gemeinsame Daten der Stunde „Testauswertung, Rechtschreibtraining und Kafkas Appell“
+// Auszug: Kafka, „Brief an den Vater“, S. 3 (DigBib-Ausgabe), mit dem Original abgeglichen, gekürzt […]
 const TEXT = [
   "Wobei ich Dich aber immerfort bitte, nicht zu vergessen, daß ich",
   "niemals im entferntesten an eine Schuld Deinerseits glaube. Du",
   "wirktest so auf mich, wie Du wirken mußtest, nur sollst Du aufhören,",
   "es für eine besondere Bosheit meinerseits zu halten, daß ich dieser",
-  "Wirkung erlegen bin. Ich war ein ängstliches Kind; trotzdem war ich",
-  "gewiß auch störrisch, wie Kinder sind; gewiß verwöhnte mich die Mutter",
-  "auch, aber ich kann nicht glauben, daß ich besonders schwer lenkbar",
-  "war, ich kann nicht glauben, daß ein freundliches Wort, ein stilles",
-  "Bei-der-Hand-Nehmen, ein guter Blick mir nicht alles hätten abfordern",
-  "können, was man wollte.",
+  "Wirkung erlegen bin. […] ich kann nicht glauben, daß ein freundliches",
+  "Wort, ein stilles Bei-der-Hand-Nehmen, ein guter Blick mir nicht alles",
+  "hätten abfordern können, was man wollte.",
 ];
 const QUELLE = "Franz Kafka: „Brief an den Vater“ (1919), S. 3";
 
@@ -20,30 +17,37 @@ const GLOSSAR = [
   ["Deinerseits", "von Deiner Seite"],
   ["Bosheit", "böse Absicht"],
   ["erlegen", "nicht widerstehen können"],
-  ["störrisch", "trotzig, eigensinnig"],
-  ["lenkbar", "zu lenken, zu erziehen"],
   ["abfordern", "abverlangen"],
 ];
 
-const KONTEXT = "Franz Kafka (1883–1924) schrieb 1919 mit 36 Jahren einen über 100 Seiten langen Brief an seinen Vater Hermann, einen erfolgreichen, lauten und bestimmenden Kaufmann. Vor ihm fühlte sich der Sohn klein und verstummte oft. Den Brief gab Kafka seiner Mutter – sie reichte ihn nie weiter.";
+const KONTEXT = "Franz Kafka (1883–1924) schrieb 1919 mit 36 Jahren einen über 100 Seiten langen Brief an seinen Vater Hermann, einen erfolgreichen, lauten und bestimmenden Kaufmann. Vor ihm fühlte sich der Sohn klein und verstummte oft. Kafka wollte mit dem Brief erreichen, dass sich die Beziehung bessert. Den Brief gab er seiner Mutter – sie reichte ihn nie weiter.";
+const KONTEXT_ZITAT = ["… daß es uns beide ein wenig beruhigen und Leben und Sterben leichter machen kann.", "Franz Kafka, letzter Satz des Briefs (S. 20)"];
 
-// Information zum Appell (ersetzt das Diktat; Folie in 27 pt)
+// Information zum Appell
 const APPELL = [
   ["Appell", "Mit dieser Seite einer Nachricht will der Sender erreichen, dass der Empfänger etwas tut, denkt oder fühlt."],
   ["offen", "direkt ausgesprochen, z. B. als Bitte: „Hör mir bitte zu!“"],
   ["verdeckt", "versteckt in einem Wunsch, einer Frage oder einer Beschreibung: „Du hörst mir nie zu.“"],
 ];
 
-// Rechtschreib-Check: WhatsApp-Chat mit Fehlern (nur Großschreibung von Substantiven und Kommas vor Nebensätzen)
-// Fehlerfassung und richtige Fassung haben gleich viele Wörter – die Unterschiede werden automatisch markiert.
-const CHAT = [
-  { von: "Mia", seite: "l", zeit: "18:41", f: "Ich glaube dass der vater von Kafka einfach keine geduld hatte.", r: "Ich glaube, dass der Vater von Kafka einfach keine Geduld hatte." },
-  { von: "Jonas", seite: "r", zeit: "18:43", f: "Ja, aber Kafka hatte auch angst. Er schreibt dass er als kind nur ein freundliches wort gebraucht hätte.", r: "Ja, aber Kafka hatte auch Angst. Er schreibt, dass er als Kind nur ein freundliches Wort gebraucht hätte." },
-  { von: "Mia", seite: "l", zeit: "18:44", f: "Das finde ich traurig. Ich wünsche mir dass mein vater beim zuhören auch mal das handy weglegt.", r: "Das finde ich traurig. Ich wünsche mir, dass mein Vater beim Zuhören auch mal das Handy weglegt." },
-  { von: "Jonas", seite: "r", zeit: "18:46", f: "Haha, same. Wenn ich was erzähle schaut meiner nur auf den fernseher.", r: "Haha, same. Wenn ich was erzähle, schaut meiner nur auf den Fernseher." },
-  { von: "Mia", seite: "l", zeit: "18:47", f: "Weißt du ob wir morgen die rede halten müssen?", r: "Weißt du, ob wir morgen die Rede halten müssen?" },
-  { von: "Jonas", seite: "r", zeit: "18:47", f: "Keine ahnung. Ich hoffe nur dass ich nicht zuerst dran bin.", r: "Keine Ahnung. Ich hoffe nur, dass ich nicht zuerst dran bin." },
+// ===== Rechtschreibtraining: Großschreibung von Substantiven und Komma vor Nebensätzen =====
+// f = Fehlerfassung (Substantive klein, Kommas fehlen), r = richtig; gleiche Wortzahl, Unterschiede werden automatisch markiert
+const DEMO = [
+  { f: "Beim essen durfte niemand reden.", r: "Beim Essen durfte niemand reden." },
+  { f: "Der vater merkte nicht dass sein sohn angst hatte.", r: "Der Vater merkte nicht, dass sein Sohn Angst hatte." },
 ];
+const SAETZE = [
+  { f: "Ich glaube dass der vater keine geduld hatte.", r: "Ich glaube, dass der Vater keine Geduld hatte." },
+  { f: "Wenn Franz etwas erzählte hörte der vater nicht zu.", r: "Wenn Franz etwas erzählte, hörte der Vater nicht zu." },
+  { f: "Beim schreiben achte ich auf die kommas.", r: "Beim Schreiben achte ich auf die Kommas." },
+  { f: "Kafka hatte angst weil der vater oft laut wurde.", r: "Kafka hatte Angst, weil der Vater oft laut wurde." },
+  { f: "Ich wünsche mir dass meine eltern beim zuhören das handy weglegen.", r: "Ich wünsche mir, dass meine Eltern beim Zuhören das Handy weglegen." },
+  { f: "Der sohn wusste nicht ob er seinem vater die wahrheit sagen durfte.", r: "Der Sohn wusste nicht, ob er seinem Vater die Wahrheit sagen durfte." },
+  { f: "Ein freundliches wort hätte dem kind mehr geholfen als jede drohung.", r: "Ein freundliches Wort hätte dem Kind mehr geholfen als jede Drohung." },
+  { f: "Weil er sich fürchtete schrieb er seinem vater einen brief.", r: "Weil er sich fürchtete, schrieb er seinem Vater einen Brief." },
+];
+const ZUSAMMEN = 2; // Sätze 1–2 gemeinsam, ab Satz 3 allein
+
 // Wortweiser Vergleich: [{ text, fehler: "gross" | "komma" | null }]
 function vergleich(f, r) {
   const a = f.split(" "), b = r.split(" ");
@@ -61,29 +65,40 @@ function vergleich(f, r) {
   });
   return out;
 }
-const zaehle = (msgs) => msgs.reduce((z, m) => { vergleich(m.f, m.r).forEach((x) => { if (x.fehler) z[x.fehler]++; }); return z; }, { gross: 0, komma: 0 });
+const zaehle = (list) => list.reduce((z, m) => { vergleich(m.f, m.r).forEach((x) => { if (x.fehler) z[x.fehler]++; }); return z; }, { gross: 0, komma: 0 });
 
 const REGELN = [
   { titel: "Großschreibung", kern: "Substantive schreibt man groß.", punkte: ["Probe: Passt der, die, das oder ein davor? → groß: der Vater, die Angst", "Auch Verben werden groß, wenn beim, zum oder das davorsteht: beim Zuhören, das Schreiben"] },
-  { titel: "Komma vor Nebensätzen", kern: "Vor dass, weil, wenn und ob steht ein Komma.", punkte: ["Ich glaube, dass … · Ich wünsche mir, dass …", "Steht der Nebensatz vorne, kommt das Komma danach: Wenn ich erzähle, schaut er weg.", "Tipp: Verb am Ende → Nebensatz → Komma"] },
+  { titel: "Komma vor Nebensätzen", kern: "Vor dass, weil, wenn und ob steht ein Komma.", punkte: ["Ich glaube, dass … · Ich wünsche mir, dass …", "Steht der Nebensatz vorne, kommt das Komma danach: Wenn ich erzähle, hört er nicht zu.", "Tipp: Verb am Ende → Nebensatz → Komma"] },
 ];
 
-// Leitfragen zur Analyse (zeigen auf einzelne Wörter)
+// ===== Kafka: Leitfragen (zeigen auf einzelne Wörter) =====
 const LEITFRAGEN = [
-  ["„bitte“ (Z. 1) · „sollst Du aufhören“ (Z. 3)", "Was genau soll der Vater tun?"],
-  ["„ein freundliches Wort, ein stilles Bei-der-Hand-Nehmen, ein guter Blick“ (Z. 8 f.)", "Was wünscht sich Kafka – ohne es direkt zu fordern?"],
-  ["„niemals … an eine Schuld Deinerseits“ (Z. 2)", "Warum sichert Kafka seine Bitte so ab?"],
+  ["Was soll der Vater tun?", "Achte auf „bitte“ (Z. 1) und „sollst Du aufhören“ (Z. 3)."],
+  ["Was wünscht sich Kafka, ohne es direkt zu fordern?", "Achte auf „Wort“, „Hand“ und „Blick“ (Z. 5 f.)."],
+  ["Warum betont Kafka, dass der Vater keine Schuld hat?", "Achte auf „niemals … an eine Schuld Deinerseits“ (Z. 1 f.)."],
+];
+const FORMULIERUNGSHILFEN = [
+  "Ein offener Appell zeigt sich in … (Z. …).",
+  "Verdeckt appelliert Kafka, wenn er …",
+  "Damit will er erreichen, dass der Vater …",
+  "Seine Bitte sichert er ab, indem er …",
 ];
 
-// Transfer: Rede an den Vater
-const REDE_AUFTRAG = "Max Brods Brief hat gewirkt: Der Vater hört zu. Schreibe die Rede, die Franz jetzt an ihn hält.";
-const REDE_UMFANG = "6–8 Sätze · allein · in den Hefter";
+// ===== Transfer: Rede an den Vater =====
+const REDE_SITUATION = "Max Brods Brief an Hermann Kafka war erfolgreich: Der Vater ist bereit, seinem Sohn zuzuhören.";
+const REDE_AUFTRAG = "Schreibe als Franz eine Rede an den Vater, in der du an ihn appellierst.";
+const REDE_UMFANG = "ca. 100–150 Wörter · allein · in den Hefter";
 const KRITERIEN = [
   ["Anrede", "„Vater, …“"],
-  ["Ich-Botschaften", "zwei: Gefühl + Wirkung"],
-  ["Offener Appell", "eine klare Bitte"],
-  ["Bezug zum Text", "Wort, Hand, Blick"],
-  ["Respektvoller Ton", "keine Vorwürfe"],
+  ["Ich-Botschaften", "mindestens zwei: Gefühl + Wirkung"],
+  ["Offener Appell", "mindestens eine klare Bitte"],
+  ["Bezug zum Text", "Kafkas Wünsche: Wort, Hand, Blick"],
+  ["Ton", "ehrlich, mutig, respektvoll – keine Vorwürfe"],
 ];
 
-module.exports = { TEXT, QUELLE, GLOSSAR, KONTEXT, APPELL, CHAT, vergleich, zaehle, REGELN, LEITFRAGEN, REDE_AUFTRAG, REDE_UMFANG, KRITERIEN };
+module.exports = {
+  TEXT, QUELLE, GLOSSAR, KONTEXT, KONTEXT_ZITAT, APPELL,
+  DEMO, SAETZE, ZUSAMMEN, vergleich, zaehle, REGELN,
+  LEITFRAGEN, FORMULIERUNGSHILFEN, REDE_SITUATION, REDE_AUFTRAG, REDE_UMFANG, KRITERIEN,
+};
