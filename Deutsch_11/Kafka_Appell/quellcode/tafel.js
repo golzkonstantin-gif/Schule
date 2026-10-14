@@ -1,11 +1,11 @@
-// Tafelscript „Kafkas Appell“ (Tafelbild im Endstand, Ablauf mit Impulsen, Erwartungshorizont mit Musterrede)
-// und Vorlesefassung des Mini-Diktats
+// Tafelscript „Rechtschreib-Check + Kafkas Appell“: Tafelbild im Endstand, Ablauf mit Impulsen,
+// Rechtschreib-Check (Vormachen, Lösung), Erwartungshorizont mit Musterrede
 const fs = require("fs");
 const {
   Document, Packer, Paragraph, TextRun, Table, TableRow, TableCell, WidthType, BorderStyle,
   ShadingType, AlignmentType, VerticalAlign, HeightRule, Footer, PageNumber, PageOrientation,
 } = require("docx");
-const { TEXT, QUELLE, DIKTAT, clean, STOLPER, LEITFRAGEN, REDE_AUFTRAG, KRITERIEN } = require("./daten");
+const { CHAT, vergleich, zaehle, REGELN, LEITFRAGEN, REDE_AUFTRAG, REDE_UMFANG, KRITERIEN } = require("./daten");
 
 const NAVY = "1E2761", MUTED = "5B6B8C", LIGHT = "F4F7FD", LIGHT2 = "EAF0FA", RED = "D9534F";
 const BOARD = "2E4A3B", BOARD2 = "3A5A48", CHALK = "F3F1EA", DIM = "C9C3A8", YEL = "F5D76E", APP = "F29A8E";
@@ -72,15 +72,19 @@ const page1 = [
 ];
 
 // ================= Seite 2: Ablauf =================
-const aW = [950, 1900, 7000, 3088, 2400];
+const aW = [950, 2350, 6650, 2988, 2400];
 const hdr = (x, w) => cell(p(t(x, { bold: true, color: "FFFFFF", size: 18 }), { after: 0 }), { w, fill: NAVY });
 const ablauf = [
-  ["0–4'", "Einstieg", "Kontext vom Arbeitsblatt vorlesen, dann den Auszug (Folie 1, Klasse liest mit). Impuls (Folie 2): „Worum bittet Kafka seinen Vater?“ Zwei, drei spontane Antworten – nicht bewerten.", "① Vermutungen", "AB, Folie 1–2"],
-  ["4–9'", "Information: Mini-Diktat", "Folie 3 steht. Ganz vorlesen, Satz für Satz diktieren (Pausen an ‖), noch einmal vorlesen. Selbstkontrolle mit Folie 4, Fehler zählen, Stolperstellen kurz zeigen.", "–", "Vorlesefassung, Folie 3–4"],
-  ["9–13'", "Vorarbeit (allein)", "Auftrag 1 (Folie 5): Kernbotschaft in einem Satz, „Kafka bittet seinen Vater, …“. Zwei Sätze vorlesen lassen, den treffendsten anschreiben. Impuls: „Stimmt das mit unseren Vermutungen überein?“", "② Kernbotschaft", "Folie 5, Hefter"],
-  ["13–23'", "Analyse (6' allein, 4' Gespräch)", "Auftrag 2 (Folie 6): drei Leitfragen, jeweils offen oder verdeckt? Danach Frage für Frage im Unterrichtsgespräch, Ergebnisse ins Quadrat. Impulse: „Welches Wort zeigt, dass Kafka etwas will?“ · „Was soll der Vater mit ‚freundliches Wort, Hand, Blick‘ anfangen?“ · „Warum betont Kafka, dass der Vater keine Schuld hat?“ → Furcht.", "③ Quadrat, Appell zuletzt und groß", "Folie 6, Hefter"],
-  ["23–38'", "Transfer (allein)", "Überleitung: „Max Brods Brief hat gewirkt – der Vater hört zu. Jetzt spricht Franz selbst, und zwar offen.“ Auftrag und Kriterien (Folie 7 bzw. Whiteboard-PDF). Kriterien an die Tafel. Timer 15 Min.; herumgehen, bei Bedarf auf die Ich-Botschaft hinweisen.", "④ Kriterien", "Folie 7 / Whiteboard, Hefter"],
-  ["38–45'", "Vortrag und Reflexion", "Zwei Reden ohne Unterbrechung (Folie 8: die anderen haken ab). Auswertung Kriterium für Kriterium. Reflexion (Folie 9): „Warum hat Kafka im Brief nicht so gesprochen? Welche Fassung hätte der Vater eher gehört?“ Merksatz anschreiben. Wer nicht fertig ist, schreibt nächste Stunde weiter – keine Hausaufgabe.", "⑤ Merksatz", "Folie 8–9"],
+  ["0–2'", "Rechtschreibung: Instruktion", "Schnipsel austeilen. „In euren Texten passieren immer dieselben zwei Fehler – nicht, weil ihr die Regel nicht kennt, sondern weil ihr nicht darauf achtet.“ Regel 1 und 2 zeigen (Folie 2–3), je ein Beispiel laut prüfen.", "–", "Schnipsel, Folie 1–3"],
+  ["2–4'", "Vormachen", "Nachricht 1 laut denkend korrigieren (Folie 4, dann 5): Artikelprobe, Verb am Ende → Komma. Siehe nächste Seite.", "–", "Folie 4–5"],
+  ["4–8'", "Korrigieren (allein)", "Nachrichten 2–6 auf dem Schnipsel korrigieren, Timer 4 Min. sichtbar. Nicht helfen – die Regeln stehen auf dem Schnipsel. Wer fertig ist, zählt seine Fehler.", "–", "Folie 6, Schnipsel"],
+  ["8–10'", "Lösung im Gespräch", "Klasse nennt die Fehler je Nachricht und begründet (Artikelprobe / Verb am Ende), dann Folie zeigen. Abfrage: „Wer hat mindestens 11 von 14?“ Überleitung: „In Nachricht 2 ging es schon um Kafka.“", "–", "Folie 7–8"],
+  ["10–13'", "Kafka: Einstieg", "Kontext vom Arbeitsblatt vorlesen, dann den Auszug (Folie 9, AB mit Zeilennummern). Impuls (Folie 10): „Worum bittet Kafka seinen Vater?“", "① Vermutungen", "AB, Folie 9–10"],
+  ["13–15'", "Information", "Folie 11: Appell, offen, verdeckt. Rückfrage zum Chat: „‚Ich wünsche mir, dass mein Vater das Handy weglegt‘ – offen oder verdeckt?“", "–", "Folie 11"],
+  ["15–18'", "Vorarbeit (allein)", "Auftrag 1 (Folie 12): Kernbotschaft in einem Satz. Zwei vorlesen, den treffendsten anschreiben.", "② Kernbotschaft", "Folie 12, Hefter"],
+  ["18–26'", "Analyse (5' allein, 3' Gespräch)", "Auftrag 2 (Folie 13), Formulierungshilfen (Folie 14) bei Bedarf. Dann Frage für Frage ins Quadrat. Impulse: „Welches Wort zeigt, dass Kafka etwas will?“ · „Was soll der Vater mit Wort, Hand, Blick anfangen?“ · „Warum betont Kafka, dass der Vater keine Schuld hat?“ → Furcht.", "③ Quadrat, Appell zuletzt und groß", "Folie 13–14, Hefter"],
+  ["26–38'", "Transfer (allein)", "Überleitung: „Max Brods Brief hat gewirkt – der Vater hört zu. Jetzt spricht Franz selbst, und zwar offen.“ Folie 15 bzw. Whiteboard-PDF. Timer 12 Min. Hinweis: Großschreibung und Kommas wie im Chat!", "④ Kriterien", "Folie 15 / Whiteboard, Hefter"],
+  ["38–45'", "Vortrag und Reflexion", "Eine bis zwei Reden ohne Unterbrechung (Folie 16, die anderen haken ab), Auswertung nach Kriterien. Reflexion (Folie 17). Merksatz anschreiben. Rest nächste Stunde – keine Hausaufgabe.", "⑤ Merksatz", "Folie 16–17"],
 ];
 const aRows = [row([hdr("Zeit", aW[0]), hdr("Phase", aW[1]), hdr("Ihre Impulse / was passiert", aW[2]), hdr("Tafel", aW[3]), hdr("Material", aW[4])], 360)];
 ablauf.forEach(([z, ph, imp, tafel, mat]) => aRows.push(row([
@@ -91,13 +95,42 @@ ablauf.forEach(([z, ph, imp, tafel, mat]) => aRows.push(row([
   cell(p(t(mat, { size: 17, color: MUTED }), { after: 0 }), { w: aW[4] }),
 ])));
 const page2 = [
-  kicker("TAFELSCRIPT · ABLAUF DER STUNDE (45 MIN.)", true),
+  kicker("TAFELSCRIPT · ABLAUF DER STUNDE (45 MIN.: 10 RECHTSCHREIBUNG + 35 KAFKA)", true),
   h1("Ablauf und Impulse"),
-  p(t("Phasenfolge nach dem Muster der Mentorin: Auszug → Information → Vorarbeit → Analyse mit Visualisierung → Transfer → Reflexion. Jede Phase hat ein eigenes Produkt (rechts: was danach an der Tafel steht).", { size: 18, italics: true, color: MUTED }), { after: 80 }),
+  p(t("Teil 1 höchstens 10 Minuten – Tempo ist Ziel. Teil 2 nach dem Muster der Mentorin: Auszug → Information → Vorarbeit → Analyse mit Visualisierung → Transfer → Reflexion. Alle Folien in 27 pt.", { size: 18, italics: true, color: MUTED }), { after: 80 }),
   table(aW, aRows),
 ];
 
-// ================= Seite 3: Erwartungshorizont =================
+// ================= Seite 3: Rechtschreib-Check =================
+const fehlerRuns = (m, size) => vergleich(m.f, m.r).map((x) => x.fehler ? t(x.text, { size, bold: true, color: RED }) : t(x.text, { size }));
+const rest = zaehle(CHAT.slice(1));
+const cW = [700, 7300, W - 8000];
+const pageR = [
+  kicker("TAFELSCRIPT · TEIL 1: RECHTSCHREIB-CHECK", true),
+  h1("Vormachen und Lösung"),
+  table([W], [row([cell([
+    p(t("So denken Sie bei Nachricht 1 laut (Folie 4):", { bold: true, color: NAVY, size: 19 }), { after: 40 }),
+    p(t("„Ich glaube dass … – ‚dass‘: Wo steht das Verb? ‚hatte‘, ganz am Ende. Also Nebensatz, also Komma vor dass. – ‚vater‘: Passt ‚der‘ davor? Der Vater – ja, also groß. – ‚geduld‘: die Geduld – groß.“ Dann Folie 5 mit der Korrektur zeigen.", { size: 19, italics: true }), { after: 0 }),
+  ], { w: W, fill: LIGHT2, borders: all(none) })])]),
+  p(t(""), { after: 60 }),
+  table(cW, [
+    row([cell(p(t("Nr.", { bold: true, color: "FFFFFF", size: 18 }), { after: 0 }), { w: cW[0], fill: NAVY }), cell(p(t("Korrigierte Nachricht (Fehler rot)", { bold: true, color: "FFFFFF", size: 18 }), { after: 0 }), { w: cW[1], fill: NAVY }), cell(p(t("Begründung", { bold: true, color: "FFFFFF", size: 18 }), { after: 0 }), { w: cW[2], fill: NAVY })]),
+    ...CHAT.map((m, i) => {
+      const fe = vergleich(m.f, m.r).filter((x) => x.fehler);
+      const gross = fe.filter((x) => x.fehler === "gross").map((x) => x.text);
+      const komma = fe.filter((x) => x.fehler === "komma").length;
+      const grund = [gross.length ? "groß: " + gross.join(", ") + " (Artikelprobe" + (gross.includes("Zuhören") ? "; beim Zuhören: Signalwort" : "") + ")" : "", komma ? "Komma vor dem Nebensatz (Verb am Ende)" : ""].filter(Boolean).join(" · ");
+      return row([
+        cell(p(t(String(i + 1) + (i ? "" : " *"), { bold: true, size: 18, color: NAVY }), { after: 0 }), { w: cW[0], fill: LIGHT }),
+        cell(p([t(m.von + ": ", { bold: true, size: 18, color: MUTED }), ...fehlerRuns(m, 19)], { after: 0 }), { w: cW[1] }),
+        cell(p(t(grund, { size: 17 }), { after: 0 }), { w: cW[2] }),
+      ]);
+    }),
+  ]),
+  p(t(`* Nachricht 1 machen Sie vor. Die Klasse korrigiert 2–6: ${rest.gross + rest.komma} Fehler (${rest.gross} × groß, ${rest.komma} × Komma).`, { size: 17, italics: true, color: MUTED }), { before: 60 }),
+];
+
+// ================= Seite 4: Erwartungshorizont =================
 const eW = [5200, W - 5200];
 const erwartung = [
   "Offener Appell: Der Vater soll nicht vergessen, dass Kafka ihm keine Schuld gibt, und aufhören, Kafkas Schwäche für Bosheit zu halten.",
@@ -112,7 +145,6 @@ const ROTE = [
   ["Ich war ein ängstliches Kind, und manchmal bin ich es heute noch.", 0],
   ["Darum bitte ich Dich: Hör auf, mein Verhalten als Bosheit zu deuten.", 3],
   ["Sag mir ab und zu ein freundliches Wort und sieh mich an, wenn ich Dir etwas erzähle.", 4],
-  ["Ein guter Blick hätte mir als Kind mehr geholfen als jede Drohung.", 4],
   ["Ich wünsche mir, dass wir in Zukunft miteinander reden können, ohne dass einer von uns Angst haben muss.", 3],
 ];
 const page3 = [
@@ -126,7 +158,7 @@ const page3 = [
   p(t("In Klammern das erfüllte Kriterium: 1 Anrede · 2 Ich-Botschaft · 3 offener Appell · 4 Bezug zum Text · 5 respektvoller Ton", { size: 17, italics: true, color: MUTED }), { after: 80 }),
   p(ROTE.flatMap(([s, k]) => [t(s + " ", { font: "Cambria", size: 21 }), ...(k ? [t("(" + k + ")  ", { size: 16, bold: true, color: RED })] : [])]), { after: 120, line: 320 }),
   table([W], [row([cell([
-    p([t("Auftrag (Folie 7): ", { bold: true, color: NAVY, size: 18 }), t(REDE_AUFTRAG, { size: 18 })], { after: 30 }),
+    p([t("Auftrag (Folie 15): ", { bold: true, color: NAVY, size: 18 }), t(REDE_AUFTRAG + " (" + REDE_UMFANG + ")", { size: 18 })], { after: 30 }),
     p([t("Hinweis: ", { bold: true, color: NAVY, size: 18 }), t("Der erfolgreiche Brief von Max Brod stammt aus dem Transfer der Mentorin (Unterrichtsfiktion). Historisch hat Hermann Kafka den „Brief an den Vater“ nie gelesen.", { size: 18 })], { after: 0 }),
   ], { w: W, fill: LIGHT2, borders: all(none) })])]),
 ];
@@ -135,38 +167,6 @@ const footer = (label) => new Footer({ children: [new Paragraph({ alignment: Ali
 const land = { size: { width: 11906, height: 16838, orientation: PageOrientation.LANDSCAPE }, margin: { top: 600, bottom: 500, left: 750, right: 750, footer: 300 } };
 const doc = new Document({
   styles: { default: { document: { run: { font: "Calibri", size: 20 } } } },
-  sections: [{ properties: { page: land }, footers: { default: footer("Tafelscript · Kafkas Appell") }, children: [...page1, ...page2, ...page3] }],
+  sections: [{ properties: { page: land }, footers: { default: footer("Tafelscript · Kafkas Appell") }, children: [...page1, ...page2, ...pageR, ...page3] }],
 });
 Packer.toBuffer(doc).then((b) => fs.writeFileSync("Tafelscript_Kafkas_Appell.docx", b));
-
-// ================= Mini-Diktat: Vorlesefassung (A4 hoch, eine Seite) =================
-const DW = 10206;
-const dict = DIKTAT.map((s, i) => {
-  const runs = [t(String(i + 1) + "  ", { bold: true, color: MUTED, size: 24 })];
-  s.split(" / ").forEach((part, j, arr) => {
-    runs.push(t(part, { font: "Cambria", size: 30 }));
-    if (j < arr.length - 1) runs.push(t("  ‖  ", { bold: true, color: RED, size: 30 }));
-  });
-  return p(runs, { after: 160, line: 360 });
-});
-const diktat = new Document({
-  styles: { default: { document: { run: { font: "Calibri", size: 22 } } } },
-  sections: [{
-    properties: { page: { size: { width: 11906, height: 16838 }, margin: { top: 900, bottom: 800, left: 850, right: 850, footer: 400 } } },
-    footers: { default: footer("Mini-Diktat · Der Appell") },
-    children: [
-      kicker("MINI-DIKTAT · VORLESEFASSUNG FÜR DIE LEHRKRAFT"),
-      p(t("Der Appell – offen und verdeckt", { font: "Cambria", size: 38, bold: true, color: NAVY }), { after: 120 }),
-      table([DW], [row([cell([
-        p(t("Ablauf (ca. 5 Min.)", { bold: true, color: NAVY, size: 21 }), { after: 40 }),
-        p(t("1. Ganz vorlesen – nur zuhören.  2. Satz für Satz diktieren, an ‖ kurz pausieren, Satzzeichen nicht ansagen.  3. Noch einmal vorlesen.  4. Selbstkontrolle mit Folie 4: Fehler farbig anstreichen und zählen.", { size: 21 }), { after: 0 }),
-      ], { w: DW, fill: LIGHT2, borders: all(none) })])]),
-      p(t(""), { after: 160 }),
-      ...dict,
-      p(t("Stolperstellen (vorher kurz an die Tafel: Appell · dass · Empfänger)", { font: "Cambria", size: 26, bold: true, color: NAVY }), { before: 240, after: 100 }),
-      ...STOLPER.map(([h, e]) => p([t(h + ":  ", { bold: true, color: RED, size: 22 }), t(e, { size: 22 })], { after: 60 })),
-      p(t(`Umfang: ${clean(DIKTAT).split(/\s+/).length} Wörter – bewusst kurz.`, { size: 19, italics: true, color: MUTED }), { before: 160 }),
-    ],
-  }],
-});
-Packer.toBuffer(diktat).then((b) => fs.writeFileSync("Diktat_Appell_Vorlesefassung.docx", b));
