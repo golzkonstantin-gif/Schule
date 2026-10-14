@@ -20,7 +20,7 @@ const GLOSSAR = [
   ["abfordern", "abverlangen"],
 ];
 
-const KONTEXT = "Franz Kafka (1883–1924) schrieb 1919 mit 36 Jahren einen über 100 Seiten langen Brief an seinen Vater Hermann, einen erfolgreichen, lauten und bestimmenden Kaufmann. Vor ihm fühlte sich der Sohn klein und verstummte oft. Kafka wollte mit dem Brief erreichen, dass sich die Beziehung bessert. Den Brief gab er seiner Mutter – sie reichte ihn nie weiter.";
+const KONTEXT = "Franz Kafka (1883–1924) schrieb 1919 mit 36 Jahren einen über 100 Seiten langen Brief an seinen Vater Hermann, einen erfolgreichen, lauten und bestimmenden Kaufmann. Vor ihm fühlte sich der Sohn klein und verstummte oft. Kafka wollte mit dem Brief erreichen, dass sich die Beziehung bessert.";
 const KONTEXT_ZITAT = ["… daß es uns beide ein wenig beruhigen und Leben und Sterben leichter machen kann.", "Franz Kafka, letzter Satz des Briefs (S. 20)"];
 
 // Information zum Appell

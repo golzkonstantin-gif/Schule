@@ -9,7 +9,7 @@ const {
 const NAVY = "1E2761", MUTED = "5B6B8C", LIGHT = "F4F7FD", LIGHT2 = "EAF0FA", RED = "D9534F";
 const COL_A = "3F7CC4", COL_C = "D9534F";
 const W = 10206;
-const { TEXT, QUELLE, GLOSSAR, KONTEXT, KONTEXT_ZITAT, APPELL, LEITFRAGEN, FORMULIERUNGSHILFEN, REDE_SITUATION, REDE_AUFTRAG, REDE_UMFANG, KRITERIEN } = require("./daten");
+const { TEXT, QUELLE, KONTEXT, APPELL, LEITFRAGEN, FORMULIERUNGSHILFEN, REDE_SITUATION, REDE_AUFTRAG, REDE_UMFANG, KRITERIEN } = require("./daten");
 const FS = 24;
 
 const t = (text, o = {}) => new TextRun({ text, font: o.font || "Calibri", size: o.size || 22, bold: o.bold, italics: o.italics, color: o.color || "000000" });
@@ -94,13 +94,11 @@ const seite1 = [
   p([t("Ziel: ", { bold: true, size: 20 }), t("Analyse der offenen und verdeckten Appelle, die Franz Kafka an seinen Vater richtet.", { size: 20 })], { after: 160 }),
   box([
     p(t("Kontext-Box (Brücke zur Biografie)", { bold: true, color: RED, size: 22 }), { after: 50 }),
-    p(t(KONTEXT, { size: 21 }), { after: 80, line: 290 }),
-    p(t("„" + KONTEXT_ZITAT[0] + "“", { font: "Cambria", italics: true, size: 21 }), { after: 10 }),
-    p(t("– " + KONTEXT_ZITAT[1], { size: 18, color: MUTED }), { after: 0 }),
+    p(t(KONTEXT, { size: 21 }), { after: 0, line: 290 }),
   ]),
   h2("1. Textauszug"),
   p(t("Rechtschreibung vor 1996: daß = dass, mußte = musste · […] = Auslassung", { size: 17, italics: true, color: MUTED }), { after: 100 }),
-  textBlock(TEXT, GLOSSAR, COL_A),
+  textBlock(TEXT, [], COL_A),
   p(t(QUELLE, { size: 17, color: MUTED }), { before: 80, align: AlignmentType.RIGHT, after: 0 }),
   h2("2. Information: Das „Vier-Ohren-Modell“ (Fokus Appell)"),
   p(t("Jede Äußerung enthält vier Botschaften gleichzeitig: Sachinhalt, Selbstkundgabe, Beziehung und Appell. Das Appell-Ohr achtet darauf, wozu der Sprecher den anderen bringen will – was er tun, denken oder fühlen soll.", { size: 21 }), { after: 80, line: 290 }),
@@ -115,7 +113,7 @@ const seite2 = [
   p(t("Aufgaben 1–3 löst du direkt auf diesem Blatt, Aufgabe 4 und 5 in deinem Hefter.", { size: 19, italics: true, color: MUTED }), { after: 40 }),
   aufgabe(1, "Vorarbeit (Textverständnis)", "allein"),
   p(t("Fasse den Textauszug in einem Satz zusammen: Worum bittet Kafka seinen Vater?", { size: 21 }), { after: 0 }),
-  schreibLinien(2, W),
+  schreibLinien(3, W),
   aufgabe(2, "Analyse des Appells", "allein", true),
   p(t("Untersuche den Auszug gezielt mit dem Appell-Ohr. Beantworte die Leitfragen und belege deine Aussagen mit Zitaten und Zeilenangaben:", { size: 21 }), { after: 50 }),
   ...LEITFRAGEN.flatMap(([frage, tipp]) => [bullet([t(frage + " ", { bold: true, size: 21 }), t("(" + tipp + ")", { size: 19, color: MUTED })]), schreibLinien(3, W)]),
