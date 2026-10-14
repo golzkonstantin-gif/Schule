@@ -79,17 +79,18 @@ const aW = [950, 2350, 6650, 2988, 2400];
 const hdr = (x, w) => cell(p(t(x, { bold: true, color: "FFFFFF", size: 18 }), { after: 0 }), { w, fill: NAVY });
 const allein = zaehle(SAETZE.slice(ZUSAMMEN));
 const ablauf = [
-  ["0–3'", "Testauswertung", "Folie 1: Durchschnitt der Punkte (vorher eintragen). „Inhaltlich wisst ihr viel – Punkte verliert ihr bei der Sprache: Substantive klein, Kommas fehlen.“ Ankündigung: ab jetzt kleine Trainingseinheiten. Schnipsel austeilen.", "–", "Folie 1, Schnipsel"],
-  ["3–7'", "Zeigen, wie es geht", "Regel 1 und 2 (Folie 2–3). Dann zwei Beispielsätze laut denkend korrigieren (Folie 4, dann 5) – siehe Seite 3.", "–", "Folie 2–5"],
-  ["7–9'", "Übung zusammen", `Satz 1–${ZUSAMMEN} vom Schnipsel: Klasse sagt an und begründet, Sie bestätigen (Folie 6–7).`, "–", "Folie 6–7"],
-  ["9–13'", "Übung allein", `Satz ${ZUSAMMEN + 1}–${SAETZE.length}, Timer 4 Min. (Folie 8): ${allein.gross + allein.komma} Fehler (${allein.gross} × groß, ${allein.komma} × Komma). Nicht helfen.`, "–", "Folie 8, Schnipsel"],
-  ["13–15'", "Besprechung", "Klasse nennt Korrekturen und begründet, dann Folie 9–10. Satz 7: „als jede Drohung“ – kein Nebensatz, kein Komma.", "–", "Folie 9–10"],
-  ["15–17'", "A: Ankommen", "Folie 11: „Ich habe euch eben kritisiert. Was ist mein Appell an euch?“ – Rückfrage: offen oder versteckt? („Ich habe nur gesagt, was schlecht war.“)", "–", "Folie 11"],
-  ["17–22'", "V: Vorwissen aktivieren", "Folie 12: verbal / paraverbal / nonverbal · vier Ohren · Inhalts- und Beziehungsebene. Folie 13: Beziehung Kafka–Vater gestört, Brods Brief (letzte Stunde) → heute: Appell-Ebene.", "① Wiederholung", "Folie 12–13"],
-  ["22–25'", "I: Informieren", "Folie 14: Appell, offen, verdeckt (auch AB, Nr. 2). Kontext-Box vorlesen, dann den Auszug (Folie 15, AB).", "–", "AB S. 1, Folie 14–15"],
-  ["25–33'", "V: Verarbeiten (allein)", "Aufgaben 1–3 auf dem AB (Folie 16), Timer 8 Min. Herumgehen. Hilfe zu Aufgabe 1: „Was soll der Vater nach diesem Satz anders machen?“", "–", "AB S. 2, Hefter"],
-  ["33–39'", "A: Auswerten", "Kernbotschaft anschreiben (②). Leitfragen der Reihe nach, Ergebnisse ins Quadrat, Appell zuletzt und groß (③). Formulierungshilfen (Folie 17): Antworten in ganzen Sätzen. Reflexion (Folie 18): Warum so vorsichtig? → Merksatz (④).", "② ③ ④", "Folie 17–18"],
-  ["39–45'", "Transfer beginnen", "Folie 19 bzw. Whiteboard-PDF: Rede als Franz, Kriterien an die Tafel (⑤). Hinweis: Großschreibung und Kommas wie im Training! Vortrag in der nächsten Stunde – keine Hausaufgabe.", "⑤ Kriterien", "Folie 19 / Whiteboard"],
+  ["0–2'", "Verlauf und Lernziele", "Folie 1–2: Teil 1 Auswertung und Rechtschreibtraining, Teil 2 Kafka (Appell). Lernziele vorlesen.", "–", "Folie 1–2"],
+  ["2–5'", "Auswertung des Briefs", "Folie 3: Ø 14,5/20 Inhalt, 4,4/10 Sprache, 18,9/30 gesamt (Auswertung vom 08.10.; vorher mit Ihren endgültigen Punkten abgleichen). Lob zuerst (Beziehung, Metakommunikation), dann: Appell oft nur „Ich hoffe, ihr …“ → Teil 2. Folie 4: Rechtschreibung Ø 0,4/2, Zeichensetzung Ø 0,6/2 → ab jetzt kleine Trainingseinheiten. Schnipsel austeilen.", "–", "Folie 3–4, Schnipsel"],
+  ["5–8'", "Zeigen, wie es geht", "Regel 1 und 2 (Folie 5–6), dabei „Ich hoffe, ihr …“: Passt „dass“ hinein? → Komma. Zwei Beispielsätze laut denkend korrigieren (Folie 7, dann 8) – siehe Seite 3.", "–", "Folie 5–8"],
+  ["8–10'", "Übung zusammen", `Satz 1–${ZUSAMMEN} vom Schnipsel: Klasse sagt an und begründet (Folie 9–10). Satz 2 ist der Fall „Ich hoffe, …“.`, "–", "Folie 9–10"],
+  ["10–14'", "Übung allein", `Satz ${ZUSAMMEN + 1}–${SAETZE.length}, Timer 4 Min. (Folie 11): ${allein.gross + allein.komma} Fehler (${allein.gross} × groß, ${allein.komma} × Komma). Nicht helfen.`, "–", "Folie 11, Schnipsel"],
+  ["14–16'", "Besprechung", "Klasse nennt Korrekturen und begründet, dann Folie 12–14. Satz 9: „als jede Drohung“ – kein Nebensatz, kein Komma.", "–", "Folie 12–14"],
+  ["16–18'", "A: Ankommen", "Folie 15 (Verlauf, Teil 2), dann Folie 16: „Ich habe euch eben kritisiert. Was ist mein Appell an euch?“ – Rückfrage: offen oder versteckt?", "–", "Folie 15–16"],
+  ["18–22'", "V: Vorwissen aktivieren", "Folie 17: verbal / paraverbal / nonverbal · vier Ohren · Inhalts- und Beziehungsebene. Folie 18: Beziehung Kafka–Vater gestört, Brods Brief → heute: Appell-Ebene.", "① Wiederholung", "Folie 17–18"],
+  ["22–25'", "I: Informieren", "Folie 19: Appell, offen, verdeckt (auch AB, Nr. 2). Kontext-Box vorlesen, dann den Auszug (Folie 20, AB).", "–", "AB S. 1, Folie 19–20"],
+  ["25–33'", "V: Verarbeiten (allein)", "Aufgaben 1–3 (Folie 21), Timer 8 Min. Aufgabe 3 direkt ins Quadrat auf dem AB. Hilfe zu Aufgabe 1: „Was soll der Vater nach diesem Satz anders machen?“", "–", "AB S. 2, Hefter"],
+  ["33–39'", "A: Auswerten", "Kernbotschaft anschreiben (②). Leitfragen der Reihe nach, Ergebnisse ins Quadrat, Appell zuletzt und groß (③). Formulierungshilfen (Folie 22): ganze Sätze. Reflexion (Folie 23) → Merksatz (④). Rückblick auf die Lernziele.", "② ③ ④", "Folie 22–23"],
+  ["39–45'", "Transfer beginnen", "Folie 24 bzw. Whiteboard-PDF: Rede als Franz, Kriterien an die Tafel (⑤). Hinweis: Großschreibung und Kommas wie im Training! Vortrag in der nächsten Stunde – keine Hausaufgabe.", "⑤ Kriterien", "Folie 24 / Whiteboard"],
 ];
 const aRows = [row([hdr("Zeit", aW[0]), hdr("Phase", aW[1]), hdr("Ihre Impulse / was passiert", aW[2]), hdr("Tafel", aW[3]), hdr("Material", aW[4])], 360)];
 ablauf.forEach(([z, ph, imp, tafel, mat]) => aRows.push(row([
@@ -100,7 +101,7 @@ ablauf.forEach(([z, ph, imp, tafel, mat]) => aRows.push(row([
   cell(p(t(mat, { size: 17, color: MUTED }), { after: 0 }), { w: aW[4] }),
 ])));
 const page2 = [
-  kicker("TAFELSCRIPT · ABLAUF DER STUNDE (45 MIN.: 15 RECHTSCHREIBUNG + 30 KAFKA)", true),
+  kicker("TAFELSCRIPT · ABLAUF DER STUNDE (45 MIN.: 16 AUSWERTUNG UND RECHTSCHREIBUNG + 29 KAFKA)", true),
   h1("Ablauf und Impulse"),
   p(t("Teil 1: Testauswertung und Rechtschreibtraining (zeigen → zusammen → allein → besprechen). Teil 2 nach AVIVA, Arbeitsblatt nach dem Muster der Mentorin. Alle Folien in 27 pt. Zeitlich eng: Die Rede wird begonnen und in der nächsten Stunde vorgetragen.", { size: 18, italics: true, color: MUTED }), { after: 80 }),
   table(aW, aRows),
@@ -115,7 +116,7 @@ const grund = (m) => {
   const komma = fe.filter((x) => x.fehler === "komma").length;
   const sig = gross.filter((g) => /^(Essen|Schreiben|Zuhören)$/.test(g));
   return [gross.length ? "groß: " + gross.join(", ") + (sig.length ? " (" + sig.join(", ") + ": Signalwort beim)" : " (Artikelprobe)") : "",
-    komma ? "Komma: Nebensatz, Verb am Ende" : (m.r.includes(" als ") ? "kein Komma: „als jede Drohung“ ist kein Nebensatz" : "")].filter(Boolean).join(" · ");
+    komma ? (/(hoffe|denke|glaube|finde), (?!dass|ob|weil|wenn)/.test(m.r) ? "Komma auch ohne dass (Probe: „dass“ passt hinein)" : "Komma: Nebensatz, Verb am Ende") : (m.r.includes(" als ") ? "kein Komma: „als jede Drohung“ ist kein Nebensatz" : "")].filter(Boolean).join(" · ");
 };
 const satzRow = (m, nr, fill) => row([
   cell(p(t(nr, { bold: true, size: 18, color: NAVY }), { after: 0 }), { w: cW[0], fill: fill || LIGHT }),
@@ -127,8 +128,8 @@ const pageR = [
   kicker("TAFELSCRIPT · TEIL 1: RECHTSCHREIBTRAINING", true),
   h1("Vormachen und Lösung"),
   table([W], [row([cell([
-    p(t("So denken Sie bei den Beispielsätzen laut (Folie 4):", { bold: true, color: NAVY, size: 19 }), { after: 40 }),
-    p(t("„Beim essen – ‚beim‘ ist ein Signalwort, also groß: beim Essen. – Der vater: Passt ‚der‘ davor? Ja, also groß. – … merkte nicht dass: Wo steht das Verb? ‚hatte‘, ganz am Ende. Also Nebensatz, also Komma vor dass. – sohn, angst: der Sohn, die Angst – groß.“ Dann Folie 5.", { size: 19, italics: true }), { after: 0 }),
+    p(t("So denken Sie bei den Beispielsätzen laut (Folie 7):", { bold: true, color: NAVY, size: 19 }), { after: 40 }),
+    p(t("„Beim essen – ‚beim‘ ist ein Signalwort, also groß: beim Essen. – Der vater: Passt ‚der‘ davor? Ja, also groß. – … merkte nicht dass: Wo steht das Verb? ‚hatte‘, ganz am Ende. Also Nebensatz, also Komma vor dass. – sohn, angst: der Sohn, die Angst – groß.“ Dann Folie 8.", { size: 19, italics: true }), { after: 0 }),
   ], { w: W, fill: LIGHT2, borders: all(none) })])]),
   p(t(""), { after: 60 }),
   table(cW, [

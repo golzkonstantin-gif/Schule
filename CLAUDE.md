@@ -24,7 +24,7 @@ Dieses Repository enthält Unterrichtsplanungen und Material (Deutsch). Bei jede
 - Zitate aus fremdem Material immer mit dem Original abgleichen (ihr erster Auszug war teils nicht wörtlich).
 
 ## Rechtschreibung
-- Ursache der Fehler: Die Klasse achtet beim Schreiben nicht auf Rechtschreibung und Grammatik. Deshalb **Fehlertexte korrigieren lassen** (z. B. als WhatsApp-Chat), mit wenigen klaren Regeln als Schnipsel zum Austeilen; Lehrkraft macht die erste Nachricht laut denkend vor. **Höchstens 10 Minuten** – die Klasse soll schneller werden. Schwerpunkte bisher: Großschreibung von Substantiven (Artikelprobe, Signalwörter) und Komma vor Nebensätzen (dass, weil, wenn, ob).
+- Ursache der Fehler: Die Klasse achtet beim Schreiben nicht auf Rechtschreibung und Grammatik. Deshalb **Fehlertexte korrigieren lassen** (z. B. als WhatsApp-Chat), mit wenigen klaren Regeln als Schnipsel zum Austeilen; Lehrkraft macht die erste Nachricht laut denkend vor. **Höchstens 10 Minuten** – die Klasse soll schneller werden. Schwerpunkte bisher: Großschreibung von Substantiven (Artikelprobe, Signalwörter) und Komma vor Nebensätzen (dass, weil, wenn, ob), **auch ohne „dass“** („Ich hoffe, er …“ – Probe: passt „dass“ hinein?). Grundlage: Auswertung des Briefs „Pressekonferenz“ (Branch `claude/youthful-keller-an8voz`, `Deutsch_11/Auswertung_Brief`: Ø 18,9/30, Inhalt 14,5/20, Sprache 4,4/10; Rechtschreibung Ø 0,4/2, Zeichensetzung Ø 0,6/2; inhaltlich schwach: Appell, oft nur „Ich hoffe, ihr …“).
 - Die Rechtschreibung der Klasse ist schwach: regelmäßig **Diktate mit den Definitionen der Fachbegriffe** einplanen – Lehrkraft liest vor, die Klasse schreibt mit, danach steht der Text an der Tafel bzw. auf dem Whiteboard **zur Selbstkontrolle** (Ausnahme von der Regel „Lösungen im Unterrichtsgespräch“). So werden Fachwissen und Rechtschreibung zugleich gesichert.
 
 ## Leistungsnachweise
@@ -36,6 +36,8 @@ Dieses Repository enthält Unterrichtsplanungen und Material (Deutsch). Bei jede
 - **Drucke sparen:** Arbeitsblätter enthalten nur den Text; Aufträge, Matrix und Schreibfeld kommen auf Folie bzw. in den Hefter.
 - Ordner pro Klasse und Thema (`Deutsch_11/<Thema>/`), Dateien als `.docx` + `.pdf` bzw. `.pptx`, Quellcode der Generatoren in `quellcode/` (Node: `docx`, `pptxgenjs`).
 - **Präsentationen: Schriftgröße immer 27 pt** (Fließtext auf allen Folien, Überschriften größer). Lieber eine Folie mehr als kleinere Schrift.
+- **Präsentationen beginnen mit Verlauf und Lernzielen** (Folie „Heute“ mit den Teilen der Stunde, Folie „Lernziele“ als Ich-Sätze); beim Übergang zu einem neuen Teil den Verlauf noch einmal zeigen.
+- Bei Visualisierungen auf dem Arbeitsblatt (z. B. Kommunikationsquadrat) **Schreiblinien** vorsehen.
 - PDFs mit LibreOffice erzeugen (`soffice --headless --convert-to pdf`) und vor dem Weitergeben gerendert prüfen (Umbrüche, Seitenzahl).
 - Zitate aus Reden oder Videos als „bitte mit der Quelle abgleichen“ kennzeichnen, wenn sie nicht geprüft werden konnten.
 

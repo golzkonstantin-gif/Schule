@@ -2,7 +2,7 @@
 // + Whiteboard-PDF mit Redeauftrag und Kriterien
 const pptxgen = require("pptxgenjs");
 const {
-  TEXT, QUELLE, APPELL, DEMO, SAETZE, ZUSAMMEN, vergleich, zaehle, REGELN,
+  TEXT, QUELLE, APPELL, DEMO, SAETZE, ZUSAMMEN, vergleich, zaehle, REGELN, TEST, LERNZIELE, VERLAUF,
   FORMULIERUNGSHILFEN, REDE_SITUATION, REDE_AUFTRAG, REDE_UMFANG, KRITERIEN,
 } = require("./daten");
 
@@ -65,26 +65,57 @@ if (require.main === module) {
   const { pres, txt, rect, base, dark, satz } = d;
   const allein = zaehle(SAETZE.slice(ZUSAMMEN));
 
+  // Verlauf der Stunde; aktiv = hervorgehobener Teil (oder -1 für keinen)
+  const verlauf = (aktiv) => {
+    const s = base(aktiv < 0 ? "Heute" : "Weiter geht’s");
+    VERLAUF.forEach(([teil, inhalt, zeit], i) => {
+      const y = 1.4 + i * 2.2, on = aktiv < 0 || aktiv === i;
+      rect(s, 0.5, y, 12.3, 1.9, on ? (i ? "FDECEA" : "E3F1E8") : LIGHT, { line: on ? (i ? RED : GREEN) : undefined, lw: 2 });
+      txt(s, [{ text: teil + "  ·  " + zeit, options: { bold: true, color: on ? (i ? RED : GREEN) : MUTED, breakLine: true } }, { text: inhalt, options: { color: on ? NAVY : MUTED } }], { x: 0.85, y, w: 11.7, h: 1.9, valign: "middle" });
+    });
+    return s;
+  };
+
+  // ===== Einstieg: Verlauf und Lernziele =====
+  verlauf(-1).addNotes("Verlauf kurz vorstellen: erst die Auswertung des Briefs und ein kurzes Rechtschreibtraining, dann Kafka – heute geht es um den Appell.");
+  {
+    const s = base("Lernziele");
+    txt(s, LERNZIELE.map((z, i) => ({ text: z, options: { bullet: { indent: 24 }, breakLine: i < LERNZIELE.length - 1, paraSpaceAfter: 18 } })), { x: 0.8, y: 1.4, w: 11.8, h: 5.6 });
+    s.addNotes("Lernziele vorlesen. Am Ende der Stunde darauf zurückkommen: Was davon kann ich jetzt?");
+  }
+
   // ===== Teil 1: Testauswertung und Rechtschreibtraining (ca. 15 Min.) =====
   {
-    const s = base("Auswertung des Tests");
-    rect(s, 0.5, 1.3, 12.3, 1.3, LIGHT);
-    txt(s, [{ text: "Durchschnitt:  ", options: { bold: true } }, { text: "____ von ____ Punkten" }], { x: 0.8, y: 1.3, w: 11.8, h: 1.3, fontSize: 32, valign: "middle" });
-    txt(s, [{ text: "Größtes Problem: ", options: { bold: true, color: RED } }, { text: "Rechtschreibung", options: { bold: true } }], { x: 0.5, y: 2.95, w: 12.3, h: 0.6 });
+    const s = base("Auswertung: Brief „Pressekonferenz“");
+    const box = [["Inhalt", TEST.inhalt], ["Sprache", TEST.sprache], ["Gesamt", TEST.gesamt]];
+    box.forEach(([k, v], i) => {
+      const x = 0.5 + i * 4.15;
+      rect(s, x, 1.3, 4.0, 1.7, i === 2 ? "D8E1F3" : LIGHT);
+      txt(s, [{ text: k, options: { breakLine: true, color: MUTED } }, { text: "Ø " + v, options: { bold: true, fontSize: 30 } }], { x: x + 0.2, y: 1.3, w: 3.6, h: 1.7, align: "center", valign: "middle" });
+    });
+    txt(s, [{ text: "Stark: ", options: { bold: true, color: GREEN } }, { text: TEST.stark }], { x: 0.5, y: 3.35, w: 12.3, h: 1.2 });
+    txt(s, [{ text: "Schwach: ", options: { bold: true, color: RED } }, { text: TEST.schwach }], { x: 0.5, y: 4.6, w: 12.3, h: 1.4 });
+    txt(s, "→ Darum geht es heute in Teil 2.", { x: 0.5, y: 6.2, w: 12.3, h: 0.6, italic: true, color: MUTED });
+    s.addNotes("Werte aus der Auswertung vom 08.10. (Deutsch_11/Auswertung_Brief) – vor der Stunde mit den endgültigen Punkten abgleichen. Lob zuerst: Beziehung und Metakommunikation gelingen. Dann: Der Appell war oft nur eine Hoffnung – genau das untersuchen wir heute bei Kafka.");
+  }
+  {
+    const s = base("Wo die Punkte verloren gehen");
+    rect(s, 0.5, 1.3, 12.3, 1.3, "FDECEA");
+    txt(s, TEST.rs, { x: 0.8, y: 1.3, w: 11.8, h: 1.3, bold: true, color: RED, valign: "middle" });
     txt(s, [
       { text: "Substantive werden kleingeschrieben.", options: { bullet: { indent: 24 }, breakLine: true } },
-      { text: "Kommas vor Nebensätzen fehlen.", options: { bullet: { indent: 24 } } },
-    ], { x: 0.8, y: 3.65, w: 11.8, h: 1.3, paraSpaceAfter: 8 });
-    rect(s, 0.5, 5.4, 12.3, 1.2, "E3F1E8");
-    txt(s, "Ab jetzt: kleine Trainingseinheiten in jeder Stunde.", { x: 0.8, y: 5.4, w: 11.8, h: 1.2, bold: true, color: GREEN, valign: "middle" });
-    s.addNotes("Durchschnittliche Punktzahl vor der Stunde in der pptx eintragen. Ansage: „Inhaltlich wisst ihr viel – Punkte verliert ihr bei der Sprache. Die meisten Fehler sind immer dieselben zwei. Das trainieren wir jetzt.“ Schnipsel austeilen.");
+      { text: "Kommas zwischen Sätzen fehlen – auch bei „Ich hoffe, ihr …“", options: { bullet: { indent: 24 } } },
+    ], { x: 0.8, y: 2.9, w: 11.8, h: 1.8, paraSpaceAfter: 10 });
+    rect(s, 0.5, 5.2, 12.3, 1.3, "E3F1E8");
+    txt(s, "Ab jetzt: kleine Trainingseinheiten in jeder Stunde.", { x: 0.8, y: 5.2, w: 11.8, h: 1.3, bold: true, color: GREEN, valign: "middle" });
+    s.addNotes("„Inhaltlich wisst ihr viel – Punkte verliert ihr bei der Sprache. Die meisten Fehler sind immer dieselben zwei. Das trainieren wir jetzt.“ Schnipsel austeilen.");
   }
   REGELN.forEach((r, i) => {
     const s = base("Regel " + (i + 1) + ": " + r.titel);
     rect(s, 0.5, 1.25, 12.3, 1.0, i ? "FDECEA" : "E3F1E8");
     txt(s, r.kern, { x: 0.8, y: 1.25, w: 11.8, h: 1.0, fontFace: HEAD, bold: true, valign: "middle", color: i ? RED : GREEN });
     txt(s, r.punkte.map((pt, j) => ({ text: pt, options: { bullet: { indent: 24 }, breakLine: j < r.punkte.length - 1, paraSpaceAfter: 14 } })), { x: 0.8, y: 2.55, w: 11.8, h: 4.5 });
-    s.addNotes(i ? "Am Beispiel zeigen: „…, dass sein Sohn Angst hatte.“ – Wo steht das Verb? Am Ende, also Nebensatz, also Komma." : "Artikelprobe vormachen: „Vater – der Vater? Passt, also groß.“ „Zuhören – beim Zuhören: Signalwort, also groß.“");
+    s.addNotes(i ? "Am Beispiel zeigen: „…, dass sein Sohn Angst hatte.“ – Verb am Ende, also Komma. Dann: „Ich hoffe, ihr …“ – passt „dass“ hinein? „Ich hoffe, dass ihr …“ – ja, also Komma. Genau dieser Fehler stand in vielen Briefen." : "Artikelprobe vormachen: „Vater – der Vater? Passt, also groß.“ „Zuhören – beim Zuhören: Signalwort, also groß.“");
   });
   // Zeigen, wie es geht
   [false, true].forEach((korr) => {
@@ -105,7 +136,7 @@ if (require.main === module) {
       rect(s, 0.5, 1.35 + i * 1.65, 12.3, 1.4, LIGHT);
       txt(s, satz(m, korr, i + 1), { x: 0.8, y: 1.35 + i * 1.65, w: 11.8, h: 1.4, fontFace: HEAD, valign: "middle" });
     });
-    txt(s, korr ? "Satz 2: Der Nebensatz steht vorne – das Komma kommt danach." : "Ihr sagt an, ich schreibe mit – und ihr begründet mit der Regel.", { x: 0.5, y: 4.85, w: 12.3, h: 1.2, color: MUTED, italic: true });
+    txt(s, korr ? "Satz 2: Komma auch ohne „dass“ – Probe: „Ich hoffe, dass der Vater …“" : "Ihr sagt an, ich schreibe mit – und ihr begründet mit der Regel.", { x: 0.5, y: 4.85, w: 12.3, h: 1.2, color: MUTED, italic: true });
     s.addNotes(korr ? "Kurz bestätigen, dann direkt zur Einzelarbeit." : "Schülerinnen und Schüler sagen die Korrekturen an und begründen (Artikelprobe / Verb am Ende). Erst danach weiter.");
   });
   {
@@ -135,6 +166,7 @@ if (require.main === module) {
   }
 
   // ===== Teil 2: Kafka nach AVIVA (ca. 30 Min.) =====
+  verlauf(1).addNotes("Kurz zeigen: Teil 1 ist geschafft, jetzt Kafka.");
   dark((s) => {
     rect(s, 0.9, 1.4, 3.2, 0.6, RED, { r: 0.3 });
     txt(s, "ANKOMMEN", { x: 0.9, y: 1.4, w: 3.2, h: 0.6, bold: true, color: WHITE, align: "center", valign: "middle" });

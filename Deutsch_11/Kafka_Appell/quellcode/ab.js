@@ -76,13 +76,16 @@ const bullet = (runs) => p([t("•  ", { size: 21, color: NAVY }), ...(Array.isA
 
 // Kommunikationsquadrat zum Ausfüllen (Fokus Appell)
 const qW = W / 2;
-const quad = (label, frage, focus) => cell([
+const schreibLinien = (n, w) => table([w], Array.from({ length: n }, () => row([cell(p(t(""), { after: 0 }), { w, borders: { top: none, left: none, right: none, bottom: solid("9AA6C4", 4) }, m: 0, ml: 0 })], 440)));
+const quad = (label, frage, focus, n) => cell([
   p(t("[ " + label + " ]", { bold: true, size: 20, color: focus ? RED : NAVY }), { after: 10 }),
   p(t(frage, { italics: true, size: 17, color: MUTED }), { after: 0 }),
+  schreibLinien(n, qW - 320),
+  p(t(""), { after: 0 }),
 ], { w: qW, fill: focus ? "FDECEA" : "FFFFFF", borders: all(solid(focus ? RED : "B9C6E8", focus ? 12 : 6)), m: 80, ml: 140 });
 const quadrat = table([qW, qW], [
-  row([quad("SACHINHALT", "Worüber spricht Kafka?"), quad("SELBSTKUNDGABE", "Was zeigt er von sich?")], 1250),
-  row([quad("BEZIEHUNG", "Wie steht er zum Vater?"), quad("APPELL", "Was soll der Vater tun? offen / verdeckt", true)], 1650),
+  row([quad("SACHINHALT", "Worüber spricht Kafka?", false, 4), quad("SELBSTKUNDGABE", "Was zeigt er von sich?", false, 4)]),
+  row([quad("BEZIEHUNG", "Wie steht er zum Vater?", false, 5), quad("APPELL", "Was soll der Vater tun? offen / verdeckt", true, 5)]),
 ]);
 
 const seite1 = [
@@ -109,7 +112,7 @@ const seite1 = [
 
 const seite2 = [
   h2("3. Arbeitsaufträge", { pb: true, before: 0 }),
-  p(t("Bearbeite die Aufgaben in deinem Hefter.", { size: 19, italics: true, color: MUTED }), { after: 40 }),
+  p(t("Aufgabe 3 löst du direkt auf diesem Blatt, alle anderen Aufgaben in deinem Hefter.", { size: 19, italics: true, color: MUTED }), { after: 40 }),
   aufgabe(1, "Vorarbeit (Textverständnis)", "allein"),
   p(t("Fasse den Textauszug in einem Satz zusammen: Worum bittet Kafka seinen Vater?", { size: 21 }), { after: 40 }),
   aufgabe(2, "Analyse des Appells", "allein"),
