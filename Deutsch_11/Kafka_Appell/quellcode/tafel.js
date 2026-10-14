@@ -88,7 +88,7 @@ const ablauf = [
   ["16–18'", "A: Ankommen", "Folie 15 (Verlauf, Teil 2), dann Folie 16: „Ich habe euch eben kritisiert. Was ist mein Appell an euch?“ – Rückfrage: offen oder versteckt?", "–", "Folie 15–16"],
   ["18–22'", "V: Vorwissen aktivieren", "Folie 17: verbal / paraverbal / nonverbal · vier Ohren · Inhalts- und Beziehungsebene. Folie 18: Beziehung Kafka–Vater gestört, Brods Brief → heute: Appell-Ebene.", "① Wiederholung", "Folie 17–18"],
   ["22–25'", "I: Informieren", "Folie 19: Appell, offen, verdeckt (auch AB, Nr. 2). Kontext-Box vorlesen, dann den Auszug (Folie 20, AB).", "–", "AB S. 1, Folie 19–20"],
-  ["25–33'", "V: Verarbeiten (allein)", "Aufgaben 1–3 (Folie 21), Timer 8 Min. Aufgabe 3 direkt ins Quadrat auf dem AB. Hilfe zu Aufgabe 1: „Was soll der Vater nach diesem Satz anders machen?“", "–", "AB S. 2, Hefter"],
+  ["25–33'", "V: Verarbeiten (allein)", "Aufgaben 1–3 (Folie 21), Timer 8 Min. Aufgaben 1–3 direkt auf dem AB (Schreiblinien). Hilfe zu Aufgabe 1: „Was soll der Vater nach diesem Satz anders machen?“", "–", "AB S. 1–2"],
   ["33–39'", "A: Auswerten", "Kernbotschaft anschreiben (②). Leitfragen der Reihe nach, Ergebnisse ins Quadrat, Appell zuletzt und groß (③). Formulierungshilfen (Folie 22): ganze Sätze. Reflexion (Folie 23) → Merksatz (④). Rückblick auf die Lernziele.", "② ③ ④", "Folie 22–23"],
   ["39–45'", "Transfer beginnen", "Folie 24 bzw. Whiteboard-PDF: Rede als Franz, Kriterien an die Tafel (⑤). Hinweis: Großschreibung und Kommas wie im Training! Vortrag in der nächsten Stunde – keine Hausaufgabe.", "⑤ Kriterien", "Folie 24 / Whiteboard"],
 ];

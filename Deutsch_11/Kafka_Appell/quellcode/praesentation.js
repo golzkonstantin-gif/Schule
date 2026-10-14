@@ -217,7 +217,7 @@ if (require.main === module) {
       rect(s, 0.5, y, 12.3, 1.4, i % 2 ? WHITE : LIGHT, { line: "D5DCEC", lw: 0.75 });
       txt(s, [{ text: "Aufgabe " + n + ": " + k, options: { bold: true, breakLine: true } }, { text: e, options: { color: MUTED } }], { x: 0.8, y, w: 11.8, h: 1.4, valign: "middle" });
     });
-    txt(s, "Allein, im Hefter. Formulierungshilfen stehen auf dem Arbeitsblatt.", { x: 0.5, y: 6.3, w: 12.3, h: 0.6, italic: true, color: MUTED });
+    txt(s, "Allein, direkt auf dem Arbeitsblatt. Formulierungshilfen stehen dort.", { x: 0.5, y: 6.3, w: 12.3, h: 0.6, italic: true, color: MUTED });
     s.addNotes("VERARBEITEN. Herumgehen. Wer bei Aufgabe 1 hängt: „Was soll der Vater nach diesem Satz anders machen?“");
   }
   {

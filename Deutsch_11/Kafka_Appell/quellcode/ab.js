@@ -71,12 +71,12 @@ const header = new Header({ children: [new Paragraph({ tabStops: [{ type: TabSto
 const footer = new Footer({ children: [new Paragraph({ alignment: AlignmentType.RIGHT, children: [new TextRun({ font: "Calibri", size: 16, color: MUTED, children: [QUELLE + " · DigBib-Ausgabe"] })] })] });
 
 const h2 = (text, o = {}) => p(t(text, { font: "Cambria", size: 26, bold: true, color: NAVY }), { before: o.before ?? 200, after: 80, pb: o.pb, keepNext: true });
-const aufgabe = (nr, titel, form) => p([t("Aufgabe " + nr + ": " + titel, { bold: true, color: NAVY, size: 22 }), t(form ? "   (" + form + ")" : "", { italics: true, color: MUTED, size: 19 })], { before: 160, after: 50, keepNext: true });
+const aufgabe = (nr, titel, form, pb) => p([t("Aufgabe " + nr + ": " + titel, { bold: true, color: NAVY, size: 22 }), t(form ? "   (" + form + ")" : "", { italics: true, color: MUTED, size: 19 })], { before: pb ? 0 : 100, after: 40, keepNext: true, pb });
 const bullet = (runs) => p([t("•  ", { size: 21, color: NAVY }), ...(Array.isArray(runs) ? runs : [runs])], { after: 40 });
 
 // Kommunikationsquadrat zum Ausfüllen (Fokus Appell)
 const qW = W / 2;
-const schreibLinien = (n, w) => table([w], Array.from({ length: n }, () => row([cell(p(t(""), { after: 0 }), { w, borders: { top: none, left: none, right: none, bottom: solid("9AA6C4", 4) }, m: 0, ml: 0 })], 440)));
+const schreibLinien = (n, w) => table([w], Array.from({ length: n }, () => row([cell(p(t(""), { after: 0 }), { w, borders: { top: none, left: none, right: none, bottom: solid("9AA6C4", 4) }, m: 0, ml: 0 })], 420)));
 const quad = (label, frage, focus, n) => cell([
   p(t("[ " + label + " ]", { bold: true, size: 20, color: focus ? RED : NAVY }), { after: 10 }),
   p(t(frage, { italics: true, size: 17, color: MUTED }), { after: 0 }),
@@ -84,8 +84,8 @@ const quad = (label, frage, focus, n) => cell([
   p(t(""), { after: 0 }),
 ], { w: qW, fill: focus ? "FDECEA" : "FFFFFF", borders: all(solid(focus ? RED : "B9C6E8", focus ? 12 : 6)), m: 80, ml: 140 });
 const quadrat = table([qW, qW], [
-  row([quad("SACHINHALT", "Worüber spricht Kafka?", false, 4), quad("SELBSTKUNDGABE", "Was zeigt er von sich?", false, 4)]),
-  row([quad("BEZIEHUNG", "Wie steht er zum Vater?", false, 5), quad("APPELL", "Was soll der Vater tun? offen / verdeckt", true, 5)]),
+  row([quad("SACHINHALT", "Worüber spricht Kafka?", false, 3), quad("SELBSTKUNDGABE", "Was zeigt er von sich?", false, 3)]),
+  row([quad("BEZIEHUNG", "Wie steht er zum Vater?", false, 4), quad("APPELL", "Was soll der Vater tun? offen / verdeckt", true, 4)]),
 ]);
 
 const seite1 = [
@@ -111,13 +111,14 @@ const seite1 = [
 ];
 
 const seite2 = [
-  h2("3. Arbeitsaufträge", { pb: true, before: 0 }),
-  p(t("Aufgabe 3 löst du direkt auf diesem Blatt, alle anderen Aufgaben in deinem Hefter.", { size: 19, italics: true, color: MUTED }), { after: 40 }),
+  h2("3. Arbeitsaufträge"),
+  p(t("Aufgaben 1–3 löst du direkt auf diesem Blatt, Aufgabe 4 und 5 in deinem Hefter.", { size: 19, italics: true, color: MUTED }), { after: 40 }),
   aufgabe(1, "Vorarbeit (Textverständnis)", "allein"),
-  p(t("Fasse den Textauszug in einem Satz zusammen: Worum bittet Kafka seinen Vater?", { size: 21 }), { after: 40 }),
-  aufgabe(2, "Analyse des Appells", "allein"),
+  p(t("Fasse den Textauszug in einem Satz zusammen: Worum bittet Kafka seinen Vater?", { size: 21 }), { after: 0 }),
+  schreibLinien(2, W),
+  aufgabe(2, "Analyse des Appells", "allein", true),
   p(t("Untersuche den Auszug gezielt mit dem Appell-Ohr. Beantworte die Leitfragen und belege deine Aussagen mit Zitaten und Zeilenangaben:", { size: 21 }), { after: 50 }),
-  ...LEITFRAGEN.map(([frage, tipp]) => bullet([t(frage + " ", { bold: true, size: 21 }), t("(" + tipp + ")", { size: 19, color: MUTED })])),
+  ...LEITFRAGEN.flatMap(([frage, tipp]) => [bullet([t(frage + " ", { bold: true, size: 21 }), t("(" + tipp + ")", { size: 19, color: MUTED })]), schreibLinien(3, W)]),
   box([p([t("Formulierungshilfen:  ", { bold: true, color: NAVY, size: 19 }), t(FORMULIERUNGSHILFEN.join("  ·  "), { size: 19, italics: true })], { after: 0 })], "FFF8EC"),
   aufgabe(3, "Visualisierung"),
   p(t("Trage deine Ergebnisse in das Kommunikationsquadrat ein. Konzentriere dich vor allem auf den Quadranten Appell.", { size: 21 }), { after: 80 }),
@@ -127,7 +128,7 @@ const seite2 = [
   aufgabe(5, "Transfer: Kafkas Rede an den Vater", "allein"),
   p([t("Situation: ", { bold: true, size: 21 }), t(REDE_SITUATION, { size: 21 })], { after: 30 }),
   p([t("Deine Aufgabe: ", { bold: true, size: 21 }), t(REDE_AUFTRAG + " Umfang: " + REDE_UMFANG.split(" · ")[0] + ".", { size: 21 })], { after: 50 }),
-  ...KRITERIEN.map(([k, e]) => bullet([t(k + ": ", { bold: true, size: 20 }), t(e, { size: 20 })])),
+  p([t("Kriterien: ", { bold: true, size: 20 }), ...KRITERIEN.flatMap(([k, e], i) => [t((i ? "  ·  " : "") + k + ": ", { bold: true, size: 19, color: NAVY }), t(e, { size: 19 })])], { after: 0, line: 280 }),
 ];
 
 const doc = new Document({
