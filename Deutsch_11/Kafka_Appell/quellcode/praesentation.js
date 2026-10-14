@@ -1,8 +1,8 @@
-// Präsentation (16:9, Schrift durchgehend 27 pt): Testauswertung + Rechtschreibtraining, dann Kafkas Appell nach AVIVA
+// Präsentation (16:9, Schrift durchgehend 27 pt): Auswertung des Briefs, dann Kafkas Appell nach AVIVA
 // + Whiteboard-PDF mit Redeauftrag und Kriterien
 const pptxgen = require("pptxgenjs");
 const {
-  TEXT, QUELLE, APPELL, DEMO, SAETZE, ZUSAMMEN, vergleich, zaehle, REGELN, TEST, LERNZIELE, VERLAUF,
+  TEXT, QUELLE, APPELL, TEST, LERNZIELE, VERLAUF,
   FORMULIERUNGSHILFEN, REDE_SITUATION, REDE_AUFTRAG, REDE_UMFANG, KRITERIEN,
 } = require("./daten");
 
@@ -33,14 +33,7 @@ function deck(title) {
     fn(s);
     return s;
   }
-  // Übungssatz: Fehlerfassung oder korrigiert (Korrekturen rot, unterstrichen)
-  const satz = (m, korrigiert, nr) => [
-    ...(nr ? [{ text: nr + "  ", options: { bold: true, color: MUTED } }] : []),
-    ...(korrigiert
-      ? vergleich(m.f, m.r).map((x) => ({ text: x.text, options: x.fehler ? { color: RED, bold: true, underline: { style: "sng" } } : {} }))
-      : [{ text: m.f }]),
-  ];
-  return { pres, txt, rect, base, dark, satz };
+  return { pres, txt, rect, base, dark };
 }
 
 // Folie mit Redeauftrag und Kriterien (auch als Whiteboard-PDF)
@@ -62,8 +55,7 @@ function redeFolie(d, notes) {
 
 if (require.main === module) {
   const d = deck("Rechtschreibtraining und Kafkas Appell");
-  const { pres, txt, rect, base, dark, satz } = d;
-  const allein = zaehle(SAETZE.slice(ZUSAMMEN));
+  const { pres, txt, rect, base, dark } = d;
 
   // Verlauf der Stunde; aktiv = hervorgehobener Teil (oder -1 für keinen)
   const verlauf = (aktiv) => {
@@ -77,14 +69,14 @@ if (require.main === module) {
   };
 
   // ===== Einstieg: Verlauf und Lernziele =====
-  verlauf(-1).addNotes("Verlauf kurz vorstellen: erst die Auswertung des Briefs und ein kurzes Rechtschreibtraining, dann Kafka – heute geht es um den Appell.");
+  verlauf(-1).addNotes("Verlauf kurz vorstellen: erst die Auswertung des Briefs, dann Kafka – heute geht es um den Appell.");
   {
     const s = base("Lernziele");
     txt(s, LERNZIELE.map((z, i) => ({ text: z, options: { bullet: { indent: 24 }, breakLine: i < LERNZIELE.length - 1, paraSpaceAfter: 18 } })), { x: 0.8, y: 1.4, w: 11.8, h: 5.6 });
     s.addNotes("Lernziele vorlesen. Am Ende der Stunde darauf zurückkommen: Was davon kann ich jetzt?");
   }
 
-  // ===== Teil 1: Testauswertung und Rechtschreibtraining (ca. 15 Min.) =====
+  // ===== Teil 1: Auswertung des Briefs (ca. 5 Min.) =====
   {
     const s = base("Auswertung: Brief „Pressekonferenz“");
     const box = [["Inhalt", TEST.inhalt], ["Sprache", TEST.sprache], ["Gesamt", TEST.gesamt]];
@@ -107,70 +99,15 @@ if (require.main === module) {
       { text: "Kommas zwischen Sätzen fehlen – auch bei „Ich hoffe, ihr …“", options: { bullet: { indent: 24 } } },
     ], { x: 0.8, y: 2.9, w: 11.8, h: 1.8, paraSpaceAfter: 10 });
     rect(s, 0.5, 5.2, 12.3, 1.3, "E3F1E8");
-    txt(s, "Ab jetzt: kleine Trainingseinheiten in jeder Stunde.", { x: 0.8, y: 5.2, w: 11.8, h: 1.3, bold: true, color: GREEN, valign: "middle" });
-    s.addNotes("„Inhaltlich wisst ihr viel – Punkte verliert ihr bei der Sprache. Die meisten Fehler sind immer dieselben zwei. Das trainieren wir jetzt.“ Schnipsel austeilen.");
+    txt(s, "Training folgt in den nächsten Stunden – achtet schon heute beim Schreiben darauf.", { x: 0.8, y: 5.2, w: 11.8, h: 1.3, bold: true, color: GREEN, valign: "middle" });
+    s.addNotes("„Inhaltlich wisst ihr viel – Punkte verliert ihr bei der Sprache. Die meisten Fehler sind immer dieselben zwei: Substantive klein und fehlende Kommas, z. B. bei ‚Ich hoffe, ihr …‘. Das trainieren wir in den nächsten Stunden.“");
   }
-  REGELN.forEach((r, i) => {
-    const s = base("Regel " + (i + 1) + ": " + r.titel);
-    rect(s, 0.5, 1.25, 12.3, 1.0, i ? "FDECEA" : "E3F1E8");
-    txt(s, r.kern, { x: 0.8, y: 1.25, w: 11.8, h: 1.0, fontFace: HEAD, bold: true, valign: "middle", color: i ? RED : GREEN });
-    txt(s, r.punkte.map((pt, j) => ({ text: pt, options: { bullet: { indent: 24 }, breakLine: j < r.punkte.length - 1, paraSpaceAfter: 14 } })), { x: 0.8, y: 2.55, w: 11.8, h: 4.5 });
-    s.addNotes(i ? "Am Beispiel zeigen: „…, dass sein Sohn Angst hatte.“ – Verb am Ende, also Komma. Dann: „Ich hoffe, ihr …“ – passt „dass“ hinein? „Ich hoffe, dass ihr …“ – ja, also Komma. Genau dieser Fehler stand in vielen Briefen." : "Artikelprobe vormachen: „Vater – der Vater? Passt, also groß.“ „Zuhören – beim Zuhören: Signalwort, also groß.“");
-  });
-  // Zeigen, wie es geht
-  [false, true].forEach((korr) => {
-    const s = base(korr ? "So geht es: korrigiert" : "So geht es: Ich mache vor");
-    DEMO.forEach((m, i) => {
-      rect(s, 0.5, 1.35 + i * 1.65, 12.3, 1.4, LIGHT);
-      txt(s, satz(m, korr), { x: 0.8, y: 1.35 + i * 1.65, w: 11.8, h: 1.4, fontFace: HEAD, valign: "middle" });
-    });
-    txt(s, korr
-      ? [{ text: "Essen, Vater, Sohn, Angst", options: { bold: true, color: RED } }, { text: " → Artikelprobe / Signalwort beim → groß", options: { breakLine: true } }, { text: "nicht, dass", options: { bold: true, color: RED } }, { text: " → Verb am Ende („hatte“) → Komma" }]
-      : "Ich denke laut: Artikelprobe? · Signalwort? · Verb am Ende?", { x: 0.5, y: 4.85, w: 12.3, h: 1.6, italic: !korr, color: korr ? NAVY : MUTED, paraSpaceAfter: 8 });
-    s.addNotes(korr ? "Die Korrekturen zeigen und noch einmal begründen." : "Wort für Wort laut prüfen: „Beim essen – beim: Signalwort, also groß: beim Essen.“ „Der vater – der Vater: groß. … nicht dass – Verb am Ende? ‚hatte‘ – ja, also Komma vor dass.“");
-  });
-  // Übung zusammen (Sätze 1–2)
-  [false, true].forEach((korr) => {
-    const s = base(korr ? `Zusammen: Lösung Satz 1–${ZUSAMMEN}` : `Zusammen: Satz 1–${ZUSAMMEN} auf dem Schnipsel`);
-    SAETZE.slice(0, ZUSAMMEN).forEach((m, i) => {
-      rect(s, 0.5, 1.35 + i * 1.65, 12.3, 1.4, LIGHT);
-      txt(s, satz(m, korr, i + 1), { x: 0.8, y: 1.35 + i * 1.65, w: 11.8, h: 1.4, fontFace: HEAD, valign: "middle" });
-    });
-    txt(s, korr ? "Satz 2: Komma auch ohne „dass“ – Probe: „Ich hoffe, dass der Vater …“" : "Ihr sagt an, ich schreibe mit – und ihr begründet mit der Regel.", { x: 0.5, y: 4.85, w: 12.3, h: 1.2, color: MUTED, italic: true });
-    s.addNotes(korr ? "Kurz bestätigen, dann direkt zur Einzelarbeit." : "Schülerinnen und Schüler sagen die Korrekturen an und begründen (Artikelprobe / Verb am Ende). Erst danach weiter.");
-  });
-  {
-    const s = base(`Jetzt allein: Satz ${ZUSAMMEN + 1}–${SAETZE.length}`, { time: "4 Min." });
-    txt(s, [
-      { text: "Korrigiere die Sätze auf deinem Schnipsel.", options: { bold: true, breakLine: true } },
-      { text: " ", options: { breakLine: true, fontSize: 12 } },
-      { text: `Es sind ${allein.gross + allein.komma} Fehler:  ${allein.gross} × Großschreibung,  ${allein.komma} × Komma.`, options: { breakLine: true } },
-      { text: " ", options: { breakLine: true, fontSize: 12 } },
-      { text: "Achtung: Nicht jeder Satz hat ein Komma.", options: { color: RED, bold: true, breakLine: true } },
-      { text: " ", options: { breakLine: true, fontSize: 12 } },
-      { text: "Fertig? Zähle, wie viele du gefunden hast.", options: { color: MUTED, italic: true } },
-    ], { x: 0.6, y: 1.4, w: 12.1, h: 5.2 });
-    s.addNotes("Timer 4 Minuten sichtbar. Tempo betonen. Nicht helfen – die Regeln stehen auf dem Schnipsel.");
-  }
-  // Lösung allein (je 3 Sätze)
-  const rest = SAETZE.slice(ZUSAMMEN);
-  for (let k = 0; k < rest.length; k += 3) {
-    const teil = rest.slice(k, k + 3);
-    const von = ZUSAMMEN + k + 1, bis = von + teil.length - 1;
-    const s = base(`Lösung: Satz ${von}–${bis}`);
-    teil.forEach((m, i) => {
-      rect(s, 0.5, 1.25 + i * 1.95, 12.3, 1.75, LIGHT);
-      txt(s, satz(m, true, von + i), { x: 0.8, y: 1.25 + i * 1.95, w: 11.8, h: 1.75, fontFace: HEAD, valign: "middle" });
-    });
-    s.addNotes(teil.some((m) => m.r.includes(" als ")) ? "Erst die Klasse nennen lassen, dann zeigen. Satz 7: „als jede Drohung“ ist kein Nebensatz (kein Verb am Ende) – also kein Komma." : "Erst die Klasse nennen lassen: „Was hast du in Satz … korrigiert – und warum?“ Dann die Folie zeigen.");
-  }
-
-  // ===== Teil 2: Kafka nach AVIVA (ca. 30 Min.) =====
+  // ===== Teil 2: Kafka nach AVIVA (ca. 40 Min.) =====
   verlauf(1).addNotes("Kurz zeigen: Teil 1 ist geschafft, jetzt Kafka.");
   dark((s) => {
     rect(s, 0.9, 1.4, 3.2, 0.6, RED, { r: 0.3 });
     txt(s, "ANKOMMEN", { x: 0.9, y: 1.4, w: 3.2, h: 0.6, bold: true, color: WHITE, align: "center", valign: "middle" });
-    txt(s, "Ich habe euch eben kritisiert.", { x: 0.9, y: 2.4, w: 11.4, h: 0.8, fontFace: HEAD, fontSize: 32, color: ICE });
+    txt(s, "Ich habe euch eben Rückmeldung gegeben.", { x: 0.9, y: 2.4, w: 11.4, h: 0.8, fontFace: HEAD, fontSize: 32, color: ICE });
     txt(s, "Was ist mein Appell an euch?", { x: 0.9, y: 3.3, w: 11.4, h: 1.2, fontFace: HEAD, fontSize: 40, bold: true, color: WHITE });
   }).addNotes("Antworten sammeln (z. B. „Achtet beim Schreiben auf Großschreibung und Kommas!“). Rückfrage: Offen oder versteckt? – „Ich habe nur gesagt, was schlecht war. Den Appell musstet ihr selbst heraushören.“ Überleitung zur Kommunikation.");
   {
@@ -210,7 +147,7 @@ if (require.main === module) {
     s.addNotes("Kontext-Box vom Arbeitsblatt vorlesen, dann den Auszug. Die Klasse liest auf dem Arbeitsblatt mit (Zeilennummern, Fußnoten).");
   }
   {
-    const s = base("Arbeitsblatt: Aufgaben 1–3", { time: "8 Min." });
+    const s = base("Arbeitsblatt: Aufgaben 1–3", { time: "9 Min." });
     const a = [["1", "Vorarbeit", "Worum bittet Kafka? (ein Satz)"], ["2", "Analyse", "drei Leitfragen, mit Zitat und Zeile"], ["3", "Visualisierung", "Kommunikationsquadrat, Fokus Appell"]];
     a.forEach(([n, k, e], i) => {
       const y = 1.35 + i * 1.6;
@@ -231,7 +168,7 @@ if (require.main === module) {
     txt(s, "Kafka hat den Brief nie übergeben.", { x: 0.9, y: 2.4, w: 11.4, h: 0.9, fontFace: HEAD, fontSize: 32, bold: true, color: WHITE });
     txt(s, [{ text: "Warum appelliert er so vorsichtig und versteckt?", options: { breakLine: true } }, { text: "Hätte der Vater die Bitte verstanden?" }], { x: 0.9, y: 3.6, w: 11.4, h: 1.6, color: ICE, paraSpaceAfter: 10 });
   }).addNotes("Aufgabe 4 im Gespräch. Ziel: Furcht → verdeckter, abgesicherter Appell. Merksatz an die Tafel.");
-  redeFolie(d, "Aufgabe 5. Überleitung: „Max Brods Brief war erfolgreich – der Vater hört zu. Jetzt spricht Franz selbst, und zwar offen.“ In der Stunde beginnen; vorgetragen wird in der nächsten Stunde (keine Hausaufgabe). Hinweis: Großschreibung und Kommas wie im Training!");
+  redeFolie(d, "Aufgabe 5. Überleitung: „Max Brods Brief war erfolgreich – der Vater hört zu. Jetzt spricht Franz selbst, und zwar offen.“ Timer 10 Minuten, danach ein bis zwei Reden ohne Unterbrechung vortragen und nach den Kriterien auswerten. Wer nicht fertig ist, schreibt nächste Stunde weiter (keine Hausaufgabe). Hinweis: Substantive groß, Komma vor dass – auch bei „Ich hoffe, …“!");
 
   pres.writeFile({ fileName: "Praesentation_Kafkas_Appell.pptx" });
 
