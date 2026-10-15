@@ -55,7 +55,7 @@ d.push(table([4700, 5506], [
   ["„Wer drankommt, schreibt an die Tafel. Alle prüfen mit.“", "Zeitleiste oder Ergebnis an der Tafel."],
   ["„Vergleicht und verbessert mit Grün.“", "Kontrolle im eigenen Heft."],
 ].map(([a, b]) => row([tc(a, 4700, { fill: LIGHT, bold: true }), tc(b, 5506)], 340))));
-d.push(p(S("Material: Text „Wie kam es zu den Generalständen?“ mit Zeitstrahl auf der Rückseite (ein Blatt pro Person, Datenfelder leer), Tests (verdeckt), Folien 1 bis 5, Grün zum Verbessern. Vorab an der Tafel vorbereiten: Strichliste der Noten (ohne Namen) und die Erfolgsquote je Test-Aufgabe in Prozent.", { italics: true, color: MUTED }), { before: 80, after: 40 }));
+d.push(p(S("Material: Text „Wie kam es zu den Generalständen?“ mit Zeitstrahl unten auf demselben Blatt (ein Blatt pro Person, Datenfelder leer), Tests (verdeckt), Folien 1 bis 5, Grün zum Verbessern. Vorab an der Tafel vorbereiten: Strichliste der Noten (ohne Namen) und die Erfolgsquote je Test-Aufgabe in Prozent.", { italics: true, color: MUTED }), { before: 80, after: 40 }));
 
 // Phase 0
 d.push(phase("0", "Test zurück, Reflexion", 8, "AVIVA: Ankommen"));
@@ -82,7 +82,7 @@ d.push(step("meldet sich", {
 d.push(phase("2", "Text lesen, Zeitstrahl ausfüllen", 12, "AVIVA: Informieren"));
 d.push(step("arbeitet allein, dann gemeinsam", {
   say: "Ich teile den Text aus. Jetzt arbeitet ihr allein. Die Aufgabe steht rechts.",
-  do: ["Folie 1. Text und Zeitstrahl austeilen (Vorderseite Text, Rückseite Zeitstrahl mit den Ereignissen, aber leeren Datenfeldern). 5 Minuten lesen, Jahreszahlen unterstreichen, Daten im Zeitstrahl eintragen."],
+  do: ["Folie 1. Blatt austeilen (oben der Text, unten der Zeitstrahl mit den Ereignissen, aber leeren Datenfeldern). 5 Minuten lesen, Jahreszahlen unterstreichen, Daten im Zeitstrahl eintragen."],
   extra: [folieBox("1 · Ü1 Text und Zeitstrahl", [p(t("Ü1 Wie kam es zu den Generalständen?", { font: "Cambria", size: 22, bold: true, color: NAVY }), { after: 40 }), bl("1. Lies den Text und unterstreiche die Jahreszahlen."), bl("2. Trage die Daten in den Zeitstrahl ein."), bl("3. Prüfe: Passt jedes Datum zum Ereignis?", { after: 40 }), p([t("Zeit: ", { bold: true, size: 19 }), t("5 Minuten · allein · leise     ", { size: 19 }), t("Fertig? Stift hinlegen.", { size: 19, italics: true })], { after: 0 })]), gapP()],
 }));
 d.push(p(t(""), { after: 20 }));

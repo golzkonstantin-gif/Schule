@@ -47,10 +47,10 @@
 - **Nächster Schritt:** Stunde zur Französischen Revolution, Gruppenpuzzle geplant.
 
 ### Französische Revolution 1789: Gruppenpuzzle (geplant, 45 Min., 12 Schülerinnen und Schüler)
-- **Material:** `Franzoesische_Revolution/` (drei Expertentexte, Tafelskript, vier Folien)
+- **Material:** `Franzoesische_Revolution/` (Tafelskript, vier Folien; die Expertentexte wurden gestrichen, das Gruppenpuzzle ist zurückgestellt)
 - **Inhalt:** Bildimpuls Bastille; Expertengruppen A (Generalstände, Nationalversammlung, Ballhausschwur), B (Sturm auf die Bastille), C (Ende der Vorrechte, Menschenrechte); Stammgruppen; Zeitstrahl an der Tafel mit Zuordnung zu den Problemen aus der Münzgeschichte; Abschluss mit zwei Gründen für die Revolution.
 - **Planungsentscheidungen:** drei statt vier Themen (45 Minuten), kein Hörtext, kein Zusatztext, Raster ins Heft (kein Arbeitsblatt außer den Expertentexten), nur wenige Folien.
-- **Rückmeldung der Lehrkraft:** *(steht noch aus)*
+- **Rückmeldung der Lehrkraft:** Expertentexte gestrichen. Fokus stattdessen auf Zeitstrahl und Abstimmungsverhältnisse in den Generalständen (Stunde 1). Nach den Ferien wird daran angeknüpft.
 
 ### Generalstände, Stunde 1 (geplant, 45 Min., 12 Schülerinnen und Schüler, zwei Lehrkräfte)
 - **Material:** `Generalstaende_Stunde1/` (Tafelskript, Text zum Lesen, fünf Folien)
