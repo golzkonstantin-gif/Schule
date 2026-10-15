@@ -43,7 +43,7 @@ d.push(p(t("Ziel: Die Klasse bekommt den Test zurück und reflektiert ihre Vorbe
 
 d.push(table([800, 2300, 4300, 2806], [
   row([th("Min.", 800), th("AVIVA", 2300), th("Phase", 4300), th("Arbeitsform", 2806)], 320),
-  ...[["8", "Ankommen", "0  Test zurück, Reflexion", "gemeinsam, mündlich"], ["3", "Vorwissen", "1  Probleme Frankreichs sammeln", "gemeinsam, mündlich"], ["12", "Informieren", "2  Text lesen, Zeitleiste erarbeiten", "allein, gemeinsam, abschreiben"], ["14", "Verarbeiten", "3  Zahlen, Mini-Abstimmung, Rechnung, Merksatz", "gemeinsam, abschreiben"], ["5", "Auswerten", "4  Satz „unfair, weil …“, Ausblick", "allein, mündlich"], ["3", "—", "Puffer", "—"]].map((r) => row(r.map((v, i) => tc(v, [800, 2300, 4300, 2806][i], { bold: i < 3 })), 320)),
+  ...[["8", "Ankommen", "0  Test zurück, Reflexion", "gemeinsam, mündlich"], ["3", "Vorwissen", "1  Probleme Frankreichs sammeln", "gemeinsam, mündlich"], ["12", "Informieren", "2  Text lesen, Zeitstrahl ausfüllen, kontrollieren", "allein, gemeinsam"], ["14", "Verarbeiten", "3  Zahlen, Mini-Abstimmung, Rechnung, Merksatz", "gemeinsam, abschreiben"], ["5", "Auswerten", "4  Satz „unfair, weil …“, Ausblick", "allein, mündlich"], ["3", "—", "Puffer (Abschreiben der Zeitleiste entfällt)", "—"]].map((r) => row(r.map((v, i) => tc(v, [800, 2300, 4300, 2806][i], { bold: i < 3 })), 320)),
 ]));
 
 d.push(h3("Eindeutige Ansagen (wörtlich)"));
@@ -55,7 +55,7 @@ d.push(table([4700, 5506], [
   ["„Wer drankommt, schreibt an die Tafel. Alle prüfen mit.“", "Zeitleiste oder Ergebnis an der Tafel."],
   ["„Vergleicht und verbessert mit Grün.“", "Kontrolle im eigenen Heft."],
 ].map(([a, b]) => row([tc(a, 4700, { fill: LIGHT, bold: true }), tc(b, 5506)], 340))));
-d.push(p(S("Material: Text „Wie kam es zu den Generalständen?“ (ein Blatt pro Person), Tests (verdeckt), Folien 1 bis 5, Grün zum Verbessern. Vorab an der Tafel vorbereiten: Strichliste der Noten (ohne Namen) und die Erfolgsquote je Test-Aufgabe in Prozent.", { italics: true, color: MUTED }), { before: 80, after: 40 }));
+d.push(p(S("Material: Text „Wie kam es zu den Generalständen?“ mit Zeitstrahl auf der Rückseite (ein Blatt pro Person, Datenfelder leer), Tests (verdeckt), Folien 1 bis 5, Grün zum Verbessern. Vorab an der Tafel vorbereiten: Strichliste der Noten (ohne Namen) und die Erfolgsquote je Test-Aufgabe in Prozent.", { italics: true, color: MUTED }), { before: 80, after: 40 }));
 
 // Phase 0
 d.push(phase("0", "Test zurück, Reflexion", 8, "AVIVA: Ankommen"));
@@ -79,17 +79,17 @@ d.push(step("meldet sich", {
 }));
 
 // Phase 2
-d.push(phase("2", "Text lesen, Zeitleiste erarbeiten", 12, "AVIVA: Informieren"));
+d.push(phase("2", "Text lesen, Zeitstrahl ausfüllen", 12, "AVIVA: Informieren"));
 d.push(step("arbeitet allein, dann gemeinsam", {
   say: "Ich teile den Text aus. Jetzt arbeitet ihr allein. Die Aufgabe steht rechts.",
-  do: ["Folie 1. Text austeilen. 3 Minuten lesen, Jahreszahlen unterstreichen, Stichworte an den Rand."],
-  extra: [folieBox("1 · Ü1 Text lesen", [p(t("Ü1 Wie kam es zu den Generalständen?", { font: "Cambria", size: 22, bold: true, color: NAVY }), { after: 40 }), bl("1. Lies den Text."), bl("2. Unterstreiche alle Jahreszahlen."), bl("3. Schreibe zu jeder Jahreszahl ein Stichwort.", { after: 40 }), p([t("Zeit: ", { bold: true, size: 19 }), t("3 Minuten · allein · leise     ", { size: 19 }), t("Fertig? Stift hinlegen.", { size: 19, italics: true })], { after: 0 })]), gapP()],
+  do: ["Folie 1. Text und Zeitstrahl austeilen (Vorderseite Text, Rückseite Zeitstrahl mit den Ereignissen, aber leeren Datenfeldern). 5 Minuten lesen, Jahreszahlen unterstreichen, Daten im Zeitstrahl eintragen."],
+  extra: [folieBox("1 · Ü1 Text und Zeitstrahl", [p(t("Ü1 Wie kam es zu den Generalständen?", { font: "Cambria", size: 22, bold: true, color: NAVY }), { after: 40 }), bl("1. Lies den Text und unterstreiche die Jahreszahlen."), bl("2. Trage die Daten in den Zeitstrahl ein."), bl("3. Prüfe: Passt jedes Datum zum Ereignis?", { after: 40 }), p([t("Zeit: ", { bold: true, size: 19 }), t("5 Minuten · allein · leise     ", { size: 19 }), t("Fertig? Stift hinlegen.", { size: 19, italics: true })], { after: 0 })]), gapP()],
 }));
 d.push(p(t(""), { after: 20 }));
 d.push(step("kommt an die Tafel", {
   say: "Wer drankommt, schreibt an die Tafel. Alle prüfen mit.",
-  do: ["Zeitleiste gemeinsam entwickeln, 5 Minuten. Schüler nennen Zahl und Stichwort, einer oder eine schreibt an. Leitfrage danach:"],
-  extra: [boardBox("Mitte · Zeitleiste", [
+  do: ["Kontrolle des Zeitstrahls, 5 Minuten. Pro Ereignis nennt ein Schüler oder eine Schülerin das Datum, ein Schüler oder eine Schülerin schreibt es an die Tafel (Stichwort daneben). Leitfrage danach:"],
+  extra: [boardBox("Mitte · Zeitstrahl (Lösung)", [
     bl("1614    letzte Generalstände (danach 175 Jahre nicht mehr)"),
     bl("1778–1783    Krieg in Amerika, hohe Schulden"),
     bl("1787    Plan „Steuern auch für Adel und Klerus“ scheitert"),
@@ -98,7 +98,7 @@ d.push(step("kommt an die Tafel", {
     bl("Frühjahr 1789    Wahlen, Beschwerdehefte"),
     bl("5. Mai 1789    Eröffnung in Versailles", { after: 0 }),
   ]), gapP()],
-  sol: "Leitfrage: „Warum ruft der König die Generalstände ein, obwohl er sie 175 Jahre nicht brauchte?“ Antwort: Er braucht Geld, die Privilegierten blockieren Reformen, dazu kommen Hunger und drohender Bankrott. Danach: „Jetzt schreibt ihr ab: die Zeitleiste.“ (4 Minuten)",
+  sol: "Leitfrage: „Warum ruft der König die Generalstände ein, obwohl er sie 175 Jahre nicht brauchte?“ Antwort: Er braucht Geld, die Privilegierten blockieren Reformen, dazu kommen Hunger und drohender Bankrott. Danach „Vergleicht und verbessert mit Grün.“ Das Abschreiben entfällt, weil die Daten schon im Zeitstrahl stehen. Die gewonnene Zeit (2 Minuten) geht in den Puffer.",
 }));
 
 // Phase 3
@@ -155,7 +155,7 @@ d.push(h3("So sieht das Heft am Ende der Stunde aus"));
 d.push(table([2300, 7906], [
   ["Überschrift", "Generalstände 1789 (mit Lineal unterstrichen) · Datum rechts"],
   ["Berichtigung", "Falsche Testaufgaben mit Grün verbessert (bis zur nächsten Stunde)"],
-  ["Zeitleiste", "1614 bis 5. Mai 1789 mit Stichworten"],
+  ["Zeitstrahl", "Blatt eingeklebt, Daten eingetragen (1614 bis 5. Mai 1789), Verbesserungen grün"],
   ["Merksatz 1", "Abstimmung nach Ständen – rot umrahmt"],
   ["Ü2", "Satz „Die Abstimmung nach Ständen ist unfair, weil …“"],
 ].map(([a, b]) => row([tc(a, 2300, { bold: true, fill: LIGHT }), tc(b, 7906)], 340))));

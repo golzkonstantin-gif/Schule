@@ -54,7 +54,7 @@ TEXTE.forEach((x, i) => {
   c.push(p(t(`EXPERTENGRUPPE ${x.gruppe} · GESCHICHTE · KLASSE 8`, { size: 18, bold: true, color: MUTED }), { after: 20 }));
   c.push(p(t(x.thema, { font: "Cambria", size: 38, bold: true, color: NAVY }), { after: 40 }));
   c.push(p(t(x.zeit, { size: 24, color: RED, bold: true }), { after: 160 }));
-  x.absaetze.forEach((a) => c.push(p(t(a, { font: "Cambria", size: 26 }), { after: 140, line: 330 })));
+  x.absaetze.forEach((a) => c.push(p(t(a, { font: "Cambria", size: 26 }), { after: 140, line: 330, align: AlignmentType.JUSTIFIED })));
   c.push(p(t(""), { after: 60 }));
   c.push(box([p(t("Wörter erklärt", { bold: true, color: NAVY, size: 22 }), { after: 60 }), ...x.woerter.map(([w, e]) => p([t(w + ": ", { bold: true, size: 22 }), t(e, { size: 22 })], { after: 30 }))], LIGHT2));
   c.push(p(t(""), { after: 60 }));

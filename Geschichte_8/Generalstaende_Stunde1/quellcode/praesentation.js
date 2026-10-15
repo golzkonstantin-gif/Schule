@@ -88,8 +88,8 @@ function merkSlide(nr, title, kern, beispiel, test, notes, kernSize = 24) {
 
 
 // ============ 1 Text lesen ============
-taskSlide("Übung 1 · Text", "Wie kam es zu den Generalständen?", ["Lies den Text.", "Unterstreiche alle Jahreszahlen.", "Schreibe zu jeder Jahreszahl ein Stichwort."], "3 Minuten · allein · leise",
-  "Ansage: „Ich teile den Text aus. Jetzt arbeitet ihr allein. Die Aufgabe steht rechts.“ Danach Zeitleiste gemeinsam an der Tafel (siehe Tafelskript): 1614 · 1778–1783 · 1787 · 1788 · August 1788 · Frühjahr 1789 · 5. Mai 1789.");
+taskSlide("Übung 1 · Text und Zeitstrahl", "Wie kam es zu den Generalständen?", ["Lies den Text. Unterstreiche die Jahreszahlen.", "Trage die Daten in den Zeitstrahl ein.", "Prüfe: Passt jedes Datum zum Ereignis?"], "5 Minuten · allein · leise",
+  "Ansage: „Ich teile Text und Zeitstrahl aus. Jetzt arbeitet ihr allein. Die Aufgabe steht rechts.“ Danach Kontrolle an der Tafel (siehe Tafelskript): 1614 · 1778–1783 · 1787 · 1788 · August 1788 · Frühjahr 1789 · 5. Mai 1789. Dann „Vergleicht und verbessert mit Grün.“");
 
 // ============ 2 Zahlen ============
 {
