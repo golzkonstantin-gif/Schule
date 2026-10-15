@@ -79,14 +79,16 @@ const aW = [950, 2350, 6650, 2988, 2400];
 const hdr = (x, w) => cell(p(t(x, { bold: true, color: "FFFFFF", size: 18 }), { after: 0 }), { w, fill: NAVY });
 const ablauf = [
   ["0–2'", "Verlauf und Lernziele", "Folie 1–2: Teil 1 Auswertung des Briefs, Teil 2 Kafka (Appell). Lernziele vorlesen.", "–", "Folie 1–2"],
-  ["2–6'", "Auswertung des Briefs", "Folie 3: Ø 14,5/20 Inhalt, 4,4/10 Sprache, 18,9/30 gesamt (Auswertung vom 08.10.; vorher mit Ihren endgültigen Punkten abgleichen). Lob zuerst (Beziehung, Metakommunikation), dann: Appell oft nur „Ich hoffe, ihr …“ → Teil 2. Folie 4: Rechtschreibung Ø 0,4/2, Zeichensetzung Ø 0,6/2 – Substantive groß, Komma vor dass (auch „Ich hoffe, ihr …“); Training folgt in den nächsten Stunden.", "–", "Folie 3–4"],
-  ["6–8'", "A: Ankommen", "Folie 5 (Verlauf, Teil 2), dann Folie 6: „Ich habe euch eben Rückmeldung gegeben. Was ist mein Appell an euch?“ – Rückfrage: offen oder versteckt? („Ich habe nur gesagt, was schlecht war.“)", "–", "Folie 5–6"],
-  ["8–13'", "V: Vorwissen aktivieren", "Folie 7: verbal / paraverbal / nonverbal · vier Ohren · Inhalts- und Beziehungsebene. Folie 8: Beziehung Kafka–Vater gestört, Brods Brief → heute: Appell-Ebene.", "① Wiederholung", "Folie 7–8"],
-  ["13–16'", "I: Informieren", "Folie 9: Appell, offen, verdeckt (auch AB, Nr. 2). Kontext-Box vorlesen, dann den Auszug (Folie 10, AB).", "–", "AB S. 1, Folie 9–10"],
-  ["16–25'", "V: Verarbeiten (allein)", "Aufgaben 1–3 (Folie 11), Timer 9 Min. Aufgaben 1–3 direkt auf dem AB (Schreiblinien). Hilfe zu Aufgabe 1: „Was soll der Vater nach diesem Satz anders machen?“", "–", "AB S. 1–2"],
-  ["25–31'", "A: Auswerten", "Kernbotschaft anschreiben (②). Leitfragen der Reihe nach, Ergebnisse ins Quadrat, Appell zuletzt und groß (③). Formulierungshilfen (Folie 12): ganze Sätze. Reflexion (Folie 13) → Merksatz (④).", "② ③ ④", "Folie 12–13"],
-  ["31–41'", "Transfer: Rede schreiben", "Folie 14 bzw. Whiteboard-PDF: Rede als Franz, Kriterien an die Tafel (⑤). Timer 10 Min. Hinweis: Substantive groß, Komma vor dass – auch bei „Ich hoffe, …“.", "⑤ Kriterien", "Folie 14 / Whiteboard"],
-  ["41–45'", "Vortrag und Rückblick", "Ein bis zwei Reden ohne Unterbrechung, kurze Auswertung nach den Kriterien. Rückblick auf die Lernziele. Wer nicht fertig ist, schreibt nächste Stunde weiter – keine Hausaufgabe.", "–", "Folie 14"],
+  ["2–5'", "Auswertung des Briefs", "Folie 3: Ø 14,5/20 Inhalt, 4,4/10 Sprache, 18,9/30 gesamt (vorher mit Ihren endgültigen Punkten abgleichen). Lob zuerst, dann: Appell oft nur „Ich hoffe, ihr …“ → Teil 2. Folie 4: Rechtschreibung und Zeichensetzung, „Achtet schon heute beim Schreiben auf diese Fehlerquellen!“", "–", "Folie 3–4"],
+  ["5–7'", "A: Ankommen", "Folie 5 (Verlauf, Teil 2), dann Folie 6: „Was ist mein Appell an euch?“ – offen oder versteckt?", "–", "Folie 5–6"],
+  ["7–10'", "V: Vorwissen aktivieren", "Folie 7: drei Ebenen (verbal, paraverbal, nonverbal) · vier Ohren · Inhalts- und Beziehungsebene – Antworten an die Tafel.", "① Wiederholung", "Folie 7"],
+  ["10–14'", "V: Kontextualisieren", "Folie 8: „Mein Schreiben handelte von Dir …“ (S. 14) – kurz allein überlegen, dann im Gespräch. „Mein Schreiben“ meint Kafkas Bücher: Was er dem Vater nicht sagen kann, schreibt er. Folie 9: Beziehung gestört, Brods Brief → heute: Appell-Ebene.", "① ergänzen", "Folie 8–9"],
+  ["14–17'", "I: Informieren", "Folie 10: Appell, offen, verdeckt (auch AB, Nr. 2). Kontext-Box vorlesen, dann den Auszug (Folie 11, AB).", "–", "AB S. 1, Folie 10–11"],
+  ["17–20'", "V: Aufgabe 1", "Folie 12: Kernbotschaft in einem Satz (3 Min.). Zwei Sätze vorlesen, den treffendsten anschreiben.", "② Kernbotschaft", "Folie 12, AB"],
+  ["20–26'", "V: Aufgabe 2", "Folie 13: Leitfragen mit Zitat und Zeile, Formulierungshilfen auf der Folie (6 Min.). Kurz prüfen, bevor es weitergeht.", "–", "Folie 13, AB"],
+  ["26–32'", "V: Aufgabe 3", "Folie 14: Kommunikationsquadrat, Fokus Appell (6 Min.).", "–", "Folie 14, AB"],
+  ["32–38'", "A: Auswerten und Reflexion", "Leitfragen der Reihe nach, Ergebnisse ins Quadrat, Appell zuletzt und groß (③), ganze Sätze mit den Formulierungshilfen. Reflexion (Folie 15) → Merksatz (④). Rückblick auf die Lernziele.", "③ ④", "Folie 13–15"],
+  ["38–45'", "Transfer: Rede beginnen", "Folie 16 bzw. Whiteboard-PDF: Rede als Franz, Kriterien an die Tafel (⑤). In der Stunde beginnen; Vortrag und Auswertung nach den Kriterien in der nächsten Stunde – keine Hausaufgabe.", "⑤ Kriterien", "Folie 16 / Whiteboard"],
 ];
 const aRows = [row([hdr("Zeit", aW[0]), hdr("Phase", aW[1]), hdr("Ihre Impulse / was passiert", aW[2]), hdr("Tafel", aW[3]), hdr("Material", aW[4])], 360)];
 ablauf.forEach(([z, ph, imp, tafel, mat]) => aRows.push(row([
@@ -97,9 +99,9 @@ ablauf.forEach(([z, ph, imp, tafel, mat]) => aRows.push(row([
   cell(p(t(mat, { size: 17, color: MUTED }), { after: 0 }), { w: aW[4] }),
 ])));
 const page2 = [
-  kicker("TAFELSCRIPT · ABLAUF DER STUNDE (45 MIN.: 6 AUSWERTUNG + 39 KAFKA)", true),
+  kicker("TAFELSCRIPT · ABLAUF DER STUNDE (45 MIN.: 5 AUSWERTUNG + 40 KAFKA)", true),
   h1("Ablauf und Impulse"),
-  p(t("Teil 1: Auswertung des Briefs (Rechtschreibtraining entfällt, folgt in den nächsten Stunden). Teil 2 nach AVIVA, Arbeitsblatt nach dem Muster der Mentorin. Alle Folien in 27 pt.", { size: 18, italics: true, color: MUTED }), { after: 80 }),
+  p(t("Teil 1: Auswertung des Briefs. Teil 2 nach AVIVA, Aufgaben 1–3 Schritt für Schritt auf eigenen Folien. Alle Folien in 27 pt. Zeitlich eng: Die Rede wird begonnen und in der nächsten Stunde vorgetragen.", { size: 18, italics: true, color: MUTED }), { after: 80 }),
   table(aW, aRows),
 ];
 
@@ -126,7 +128,7 @@ const page3 = [
   p(t("In Klammern das erfüllte Kriterium: 1 Anrede · 2 Ich-Botschaft · 3 offener Appell · 4 Bezug zum Text · 5 respektvoller Ton", { size: 17, italics: true, color: MUTED }), { after: 80 }),
   p(ROTE.flatMap(([s, k]) => [t(s + " ", { font: "Cambria", size: 21 }), ...(k ? [t("(" + k + ")  ", { size: 16, bold: true, color: RED })] : [])]), { after: 120, line: 320 }),
   table([W], [row([cell([
-    p([t("Auftrag (AB Aufgabe 5, Folie 14): ", { bold: true, color: NAVY, size: 18 }), t(REDE_SITUATION + " " + REDE_AUFTRAG + " (" + REDE_UMFANG + ")", { size: 18 })], { after: 30 }),
+    p([t("Auftrag (AB Aufgabe 5, Folie 16): ", { bold: true, color: NAVY, size: 18 }), t(REDE_SITUATION + " " + REDE_AUFTRAG + " (" + REDE_UMFANG + ")", { size: 18 })], { after: 30 }),
     p([t("Hinweis: ", { bold: true, color: NAVY, size: 18 }), t("Der erfolgreiche Brief von Max Brod stammt aus dem Transfer der Mentorin (Unterrichtsfiktion). Historisch hat Hermann Kafka den „Brief an den Vater“ nie gelesen.", { size: 18 })], { after: 0 }),
   ], { w: W, fill: LIGHT2, borders: all(none) })])]),
 ];

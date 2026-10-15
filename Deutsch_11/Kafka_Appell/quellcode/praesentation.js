@@ -99,7 +99,7 @@ if (require.main === module) {
       { text: "Kommas zwischen Sätzen fehlen – auch bei „Ich hoffe, ihr …“", options: { bullet: { indent: 24 } } },
     ], { x: 0.8, y: 2.9, w: 11.8, h: 1.8, paraSpaceAfter: 10 });
     rect(s, 0.5, 5.2, 12.3, 1.3, "E3F1E8");
-    txt(s, "Training folgt in den nächsten Stunden – achtet schon heute beim Schreiben darauf.", { x: 0.8, y: 5.2, w: 11.8, h: 1.3, bold: true, color: GREEN, valign: "middle" });
+    txt(s, "Achtet schon heute beim Schreiben auf diese Fehlerquellen!", { x: 0.8, y: 5.2, w: 11.8, h: 1.3, bold: true, color: GREEN, valign: "middle" });
     s.addNotes("„Inhaltlich wisst ihr viel – Punkte verliert ihr bei der Sprache. Die meisten Fehler sind immer dieselben zwei: Substantive klein und fehlende Kommas, z. B. bei ‚Ich hoffe, ihr …‘. Das trainieren wir in den nächsten Stunden.“");
   }
   // ===== Teil 2: Kafka nach AVIVA (ca. 40 Min.) =====
@@ -112,13 +112,22 @@ if (require.main === module) {
   }).addNotes("Antworten sammeln (z. B. „Achtet beim Schreiben auf Großschreibung und Kommas!“). Rückfrage: Offen oder versteckt? – „Ich habe nur gesagt, was schlecht war. Den Appell musstet ihr selbst heraushören.“ Überleitung zur Kommunikation.");
   {
     const s = base("Was wisst ihr noch?", { phase: "VORWISSEN" });
-    const boxes = [["Wie kommunizieren wir?", "verbal · paraverbal · nonverbal"], ["Wie viele Ohren hat eine Nachricht?", "Schulz von Thun"], ["Welche zwei Ebenen hat jede Nachricht?", "Watzlawick"]];
+    const boxes = [["Wie kommunizieren wir?", "3 Ebenen"], ["Wie viele Ohren hat eine Nachricht?", "Schulz von Thun"], ["Welche zwei Ebenen hat jede Nachricht?", "Watzlawick"]];
     boxes.forEach(([q, h], i) => {
       const y = 1.3 + i * 1.85;
       rect(s, 0.5, y, 12.3, 1.65, i % 2 ? WHITE : LIGHT, { line: "D5DCEC", lw: 0.75 });
       txt(s, [{ text: q, options: { bold: true, breakLine: true } }, { text: h, options: { color: MUTED, italic: true } }], { x: 0.8, y, w: 11.8, h: 1.65, valign: "middle" });
     });
     s.addNotes("Schnelle Abfrage, Antworten an die Tafel (Wiederholung links): verbal / paraverbal / nonverbal · vier Ohren: Sachinhalt, Selbstkundgabe, Beziehung, Appell · Inhalts- und Beziehungsebene (Beziehung bestimmt, wie der Inhalt ankommt).");
+  }
+  {
+    const s = base("Kontextualisieren", { time: "4 Min." });
+    txt(s, "Kontextualisiere den Auszug aus Franz Kafkas „Brief an den Vater“ an Hermann Kafka. Beziehe dich dabei mit deinem Vorwissen auf die Beziehung zwischen Vater und Sohn.", { x: 0.5, y: 1.25, w: 12.3, h: 1.9 });
+    rect(s, 0.5, 3.35, 12.3, 2.2, LIGHT);
+    s.addShape(pres.shapes.RECTANGLE, { x: 0.5, y: 3.35, w: 0.12, h: 2.2, fill: { color: RED }, line: { type: "none" } });
+    txt(s, "„Mein Schreiben handelte von Dir, ich klagte dort ja nur, was ich an Deiner Brust nicht klagen konnte.“", { x: 0.9, y: 3.35, w: 11.7, h: 2.2, fontFace: HEAD, italic: true, valign: "middle" });
+    txt(s, "Franz Kafka: „Brief an den Vater“ (1919), S. 14", { x: 0.5, y: 5.7, w: 12.3, h: 0.5, color: MUTED, align: "right" });
+    s.addNotes("Zitat aus dem Material der Mentorin (dort leicht abweichend: „darin“ statt „dort ja“), hier nach dem Original. Achtung: „Mein Schreiben“ meint Kafkas Bücher, nicht den Brief – der Vater begrüßte sie mit „Legs auf den Nachttisch!“. Erwartung: Kafka kann nicht mit dem Vater reden („an Deiner Brust“ = Nähe, Vertrauen), deshalb schreibt er; die Beziehung ist gestört, der Sohn hat Furcht. Überleitung: Was will Kafka eigentlich von ihm?");
   }
   {
     const s = base("Kafka und sein Vater", { phase: "VORWISSEN" });
@@ -146,29 +155,38 @@ if (require.main === module) {
     txt(s, QUELLE, { x: 0.5, y: 6.85, w: 12.3, h: 0.5, color: MUTED, align: "right" });
     s.addNotes("Kontext-Box vom Arbeitsblatt vorlesen, dann den Auszug. Die Klasse liest auf dem Arbeitsblatt mit (Zeilennummern, Fußnoten).");
   }
-  {
-    const s = base("Arbeitsblatt: Aufgaben 1–3", { time: "9 Min." });
-    const a = [["1", "Vorarbeit", "Worum bittet Kafka? (ein Satz)"], ["2", "Analyse", "drei Leitfragen, mit Zitat und Zeile"], ["3", "Visualisierung", "Kommunikationsquadrat, Fokus Appell"]];
-    a.forEach(([n, k, e], i) => {
-      const y = 1.35 + i * 1.6;
-      rect(s, 0.5, y, 12.3, 1.4, i % 2 ? WHITE : LIGHT, { line: "D5DCEC", lw: 0.75 });
-      txt(s, [{ text: "Aufgabe " + n + ": " + k, options: { bold: true, breakLine: true } }, { text: e, options: { color: MUTED } }], { x: 0.8, y, w: 11.8, h: 1.4, valign: "middle" });
+  // Aufgaben 1–3 einzeln (Schritt für Schritt)
+  const aufgabeFolie = (nr, titel, zeit, kern, fn) => {
+    const s = base("Aufgabe " + nr + ": " + titel, { time: zeit });
+    rect(s, 0.5, 1.25, 12.3, 1.3, LIGHT);
+    txt(s, kern, { x: 0.8, y: 1.25, w: 11.8, h: 1.3, bold: true, valign: "middle" });
+    if (fn) fn(s);
+    txt(s, "Allein, direkt auf dem Arbeitsblatt.", { x: 0.5, y: 6.75, w: 12.3, h: 0.55, italic: true, color: MUTED });
+    return s;
+  };
+  aufgabeFolie(1, "Vorarbeit", "3 Min.", "Fasse den Auszug in einem Satz zusammen: Worum bittet Kafka seinen Vater?", (s) => {
+    txt(s, "Satzanfang:  „Kafka bittet seinen Vater, …“", { x: 0.8, y: 3.0, w: 11.8, h: 0.8, italic: true, color: MUTED });
+  }).addNotes("VERARBEITEN. Herumgehen. Wer hängt: „Was soll der Vater nach diesem Satz anders machen?“ Danach zwei Sätze vorlesen lassen, den treffendsten an die Tafel (②).");
+  aufgabeFolie(2, "Analyse", "6 Min.", "Beantworte die drei Leitfragen – mit Zitat und Zeile.", (s) => {
+    rect(s, 0.5, 2.8, 12.3, 3.8, "FFF8EC");
+    txt(s, "Formulierungshilfen", { x: 0.8, y: 2.9, w: 11.8, h: 0.6, fontFace: HEAD, bold: true, color: GOLD });
+    txt(s, FORMULIERUNGSHILFEN.map((x, i) => ({ text: x, options: { bullet: { indent: 24 }, breakLine: i < FORMULIERUNGSHILFEN.length - 1, paraSpaceAfter: 8 } })), { x: 0.8, y: 3.5, w: 11.8, h: 3.0, italic: true });
+  }).addNotes("Leitfragen stehen auf dem Arbeitsblatt. Formulierungshilfen hier stehen lassen – auch für die Besprechung: Antworten in ganzen Sätzen einfordern. Kurz prüfen, bevor es mit Aufgabe 3 weitergeht.");
+  aufgabeFolie(3, "Visualisierung", "6 Min.", "Trage deine Ergebnisse in das Kommunikationsquadrat ein – vor allem in den Quadranten Appell.", (s) => {
+    const q = [["Sachinhalt", LIGHT, NAVY], ["Selbstkundgabe", LIGHT, NAVY], ["Beziehung", LIGHT, NAVY], ["Appell", "FDECEA", RED]];
+    q.forEach(([k, fill, col], i) => {
+      const x = 2.4 + (i % 2) * 4.3, y = 2.85 + Math.floor(i / 2) * 1.9;
+      rect(s, x, y, 4.15, 1.75, fill, { line: col === RED ? RED : "D5DCEC", lw: col === RED ? 2.5 : 0.75, r: 0.04 });
+      txt(s, k, { x, y, w: 4.15, h: 1.75, bold: true, color: col, align: "center", valign: "middle" });
     });
-    txt(s, "Allein, direkt auf dem Arbeitsblatt. Formulierungshilfen stehen dort.", { x: 0.5, y: 6.3, w: 12.3, h: 0.6, italic: true, color: MUTED });
-    s.addNotes("VERARBEITEN. Herumgehen. Wer bei Aufgabe 1 hängt: „Was soll der Vater nach diesem Satz anders machen?“");
-  }
-  {
-    const s = base("Formulierungshilfen", { phase: "AUSWERTEN" });
-    txt(s, FORMULIERUNGSHILFEN.map((x, i) => ({ text: x, options: { bullet: { indent: 24 }, breakLine: i < FORMULIERUNGSHILFEN.length - 1, paraSpaceAfter: 16 } })), { x: 0.8, y: 1.4, w: 11.8, h: 5.0, italic: true });
-    s.addNotes("Während der Besprechung stehen lassen: Antworten in ganzen Sätzen einfordern. Ergebnisse ins Quadrat an der Tafel (Appell groß). Achtung Komma: „…, dass der Vater …“ – Regel 2!");
-  }
+  }).addNotes("Danach Auswertung im Unterrichtsgespräch: Leitfragen der Reihe nach, Ergebnisse ins Quadrat an der Tafel (③), Appell zuletzt und groß.");
   dark((s) => {
     rect(s, 0.9, 1.4, 3.2, 0.6, RED, { r: 0.3 });
     txt(s, "REFLEXION", { x: 0.9, y: 1.4, w: 3.2, h: 0.6, bold: true, color: WHITE, align: "center", valign: "middle" });
     txt(s, "Kafka hat den Brief nie übergeben.", { x: 0.9, y: 2.4, w: 11.4, h: 0.9, fontFace: HEAD, fontSize: 32, bold: true, color: WHITE });
     txt(s, [{ text: "Warum appelliert er so vorsichtig und versteckt?", options: { breakLine: true } }, { text: "Angenommen, der Vater hätte den Brief gelesen: Hätte er verstanden, worum Kafka ihn bittet?" }], { x: 0.9, y: 3.6, w: 11.4, h: 2.6, color: ICE, paraSpaceAfter: 10 });
   }).addNotes("Aufgabe 4 im Gespräch. Ziel: Furcht → verdeckter, abgesicherter Appell. Merksatz an die Tafel.");
-  redeFolie(d, "Aufgabe 5. Überleitung: „Max Brods Brief war erfolgreich – der Vater hört zu. Jetzt spricht Franz selbst, und zwar offen.“ Timer 10 Minuten, danach ein bis zwei Reden ohne Unterbrechung vortragen und nach den Kriterien auswerten. Wer nicht fertig ist, schreibt nächste Stunde weiter (keine Hausaufgabe). Hinweis: Substantive groß, Komma vor dass – auch bei „Ich hoffe, …“!");
+  redeFolie(d, "Aufgabe 5. Überleitung: „Max Brods Brief war erfolgreich – der Vater hört zu. Jetzt spricht Franz selbst, und zwar offen.“ In der Stunde beginnen; ein bis zwei Reden werden in der nächsten Stunde ohne Unterbrechung vorgetragen und nach den Kriterien ausgewertet (keine Hausaufgabe). Hinweis: Substantive groß, Komma vor dass – auch bei „Ich hoffe, …“!");
 
   pres.writeFile({ fileName: "Praesentation_Kafkas_Appell.pptx" });
 
