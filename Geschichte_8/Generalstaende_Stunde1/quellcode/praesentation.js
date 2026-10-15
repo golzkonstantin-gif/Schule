@@ -234,7 +234,7 @@ function stackBar(s, x, y, w, h, parts, labelColors) {
 
 // ============ 9 Antrag 1789 ============
 {
-  const s = blank("V · Verarbeiten · Historisches Beispiel", "Antrag in den Generalständen", 3, "Modellannahme: Klerus und Adel stimmen geschlossen Nein, der Dritte Stand Ja. Die Klasse rechnet: nach Ständen und nach Köpfen. Ergebnis erst auf Folie 10 zeigen. Hinweis: Die Annahme ist vereinfacht, tatsächlich unterstützten manche Geistliche und einzelne Adlige den Dritten Stand.");
+  const s = blank("V · Verarbeiten · Gedankenspiel 1789", "Was wäre, wenn man abgestimmt hätte?", 3, "WICHTIG: Nach Köpfen wurde 1789 nicht abgestimmt. Das ist ein Gedankenspiel (Modell). Modellannahme: Klerus und Adel stimmen geschlossen Nein, der Dritte Stand Ja. Die Klasse rechnet: nach Ständen und nach Köpfen. Ergebnis erst auf Folie 10 zeigen. Hinweis: Die Annahme ist vereinfacht, tatsächlich unterstützten manche Geistliche und einzelne Adlige den Dritten Stand.");
   s.addShape(pres.shapes.ROUNDED_RECTANGLE, { x: 0.6, y: 1.65, w: 12.15, h: 1.9, rectRadius: 0.08, fill: { color: WHITE }, line: { color: RED, width: 3 } });
   txt(s, "Auch Adel und Klerus zahlen künftig Steuern.", { x: 0.95, y: 1.7, w: 11.45, h: 1.8, fontFace: HEAD, fontSize: 34, bold: true, valign: "middle" });
   [["Klerus", "Nein", KLERUS, NEIN], ["Adel", "Nein", ADEL, NEIN], ["Dritter Stand", "Ja", DRITTER, JA]].forEach(([n, v, c, vc], i) => {
@@ -244,12 +244,12 @@ function stackBar(s, x, y, w, h, parts, labelColors) {
     txt(s, n, { x: xx + 0.3, y: 3.9, w: 2.2, h: 1.5, fontFace: HEAD, fontSize: 24, bold: true, valign: "middle" });
     txt(s, v, { x: xx + 2.3, y: 3.9, w: 1.5, h: 1.5, fontSize: 30, bold: true, color: vc, align: "center", valign: "middle" });
   });
-  bar(s, [{ text: "Frage: ", options: { bold: true } }, { text: "Wer gewinnt nach Ständen? Wer gewinnt nach Köpfen?", options: {} }]);
+  bar(s, [{ text: "Frage: ", options: { bold: true } }, { text: "Wer hätte gewonnen: nach Ständen? Nach Köpfen?", options: {} }]);
 }
 
 // ============ 10 Ergebnis 1789 ============
 {
-  const s = blank("V · Verarbeiten · Ergebnis", "Zwei Regeln, zwei Ergebnisse", 3, "Nach Ständen: 2:1, abgelehnt. Nach Köpfen: Ja 580, Nein 290 + 270 = 560, knapp angenommen. Kernaussage: Dieselben Stimmen führen je nach Regel zu zwei verschiedenen Ergebnissen. Frage: Wie wichtig ist die Abstimmungsregel für den Dritten Stand (Bauern und Bürger)?");
+  const s = blank("V · Verarbeiten · Ergebnis des Gedankenspiels", "Zwei Regeln, zwei mögliche Ergebnisse", 3, "Gedankenspiel, keine historische Abstimmung. Nach Ständen wäre der Antrag 2:1 abgelehnt worden, nach Köpfen mit Ja 580 gegen Nein 290 + 270 = 560 knapp angenommen. Tatsächlich wurde 1789 nicht nach Köpfen abgestimmt: Adel und Klerus bestanden auf der Abstimmung nach Ständen, der Dritte Stand (Bauern und Bürger) forderte die Abstimmung nach Köpfen. Der Streit darum blockierte die Generalstände und führte zur Nationalversammlung (Stunde nach den Ferien). Kernaussage: Dieselben Stimmen führen je nach Regel zu zwei verschiedenen Ergebnissen. Frage: Wie wichtig ist die Abstimmungsregel für den Dritten Stand (Bauern und Bürger)?");
   txt(s, "Nach Ständen", { x: 0.6, y: 1.6, w: 5.8, h: 0.5, fontFace: HEAD, fontSize: 26, bold: true, color: NAVY });
   [["Klerus", "Nein", KLERUS, NEIN], ["Adel", "Nein", ADEL, NEIN], ["Dritter Stand", "Ja", DRITTER, JA]].forEach(([n, v, c, vc], i) => {
     const y = 2.2 + i * 0.85;
@@ -265,7 +265,7 @@ function stackBar(s, x, y, w, h, parts, labelColors) {
   txt(s, "Nein: Klerus 290 + Adel 270", { x: 6.95, y: 3.4, w: 5.8, h: 0.5, fontSize: 24, color: MUTED });
   box(s, 6.95, 4.85, 5.8, 1.05, NAVY);
   txt(s, "580 : 560  →  angenommen", { x: 6.95, y: 4.85, w: 5.8, h: 1.05, fontFace: HEAD, fontSize: 24, bold: true, color: WHITE, align: "center", valign: "middle" });
-  bar(s, [{ text: "Merke: ", options: { bold: true } }, { text: "Die Regel entscheidet, nicht die Mehrheit der Menschen.", options: {} }]);
+  bar(s, [{ text: "Tatsächlich: ", options: { bold: true } }, { text: "Es wurde nicht nach Köpfen abgestimmt. Der Streit um die Regel begann.", options: {} }]);
 }
 
 // ============ 11 Antrag Schule ============

@@ -39,11 +39,11 @@ const sollbruch = (txt) => table([TW], [row([cell(p([t("SOLLBRUCHSTELLE  ", { bo
 
 const d = [];
 d.push(kicker("Tafelskript für die Lehrkraft · Einzelstunde (45 Min.) · 12 Schülerinnen und Schüler · zwei Lehrkräfte"), h1("Generalstände, Stunde 1: Wie unfair ist die Abstimmung?"));
-d.push(p(t("Ziel: Die Klasse bekommt den Test zurück und reflektiert ihre Vorbereitung. Sie erarbeitet den Verlauf bis zu den Generalständen als Zeitleiste und erlebt zuerst an einem historischen Beispiel und dann in einer Mini-Abstimmung in der Schule, wie unfair die Abstimmung nach Ständen ist. Aufbau nach AVIVA. Es gibt keinen Hörtext, der Text wird gelesen. Rollen der beiden Lehrkräfte: L1 moderiert, L2 spielt in der Abstimmung den Adel und unterstützt an der Tafel.", { size: 21 }), { after: 80 }));
+d.push(p(t("Ziel: Die Klasse bekommt den Test zurück und reflektiert ihre Vorbereitung. Sie erarbeitet den Verlauf bis zu den Generalständen als Zeitleiste und rechnet zuerst in einem Gedankenspiel zu 1789 nach und erlebt dann in einer Mini-Abstimmung in der Schule, wie unfair die Abstimmung nach Ständen ist. Aufbau nach AVIVA. Es gibt keinen Hörtext, der Text wird gelesen. Rollen der beiden Lehrkräfte: L1 moderiert, L2 spielt in der Abstimmung den Adel und unterstützt an der Tafel.", { size: 21 }), { after: 80 }));
 
 d.push(table([800, 2300, 4300, 2806], [
   row([th("Min.", 800), th("AVIVA", 2300), th("Phase", 4300), th("Arbeitsform", 2806)], 320),
-  ...[["8", "Ankommen", "0  Test zurück, Reflexion", "gemeinsam, mündlich"], ["3", "Vorwissen", "1  Probleme Frankreichs sammeln", "gemeinsam, mündlich"], ["12", "Informieren", "2  Text lesen, Zeitstrahl ausfüllen, kontrollieren", "allein, gemeinsam"], ["14", "Verarbeiten", "3  Zahlen, Abstimmung 1789, Schulbeispiel, Rechnung, Merksatz", "gemeinsam, abschreiben"], ["5", "Auswerten", "4  Satz „unfair, weil …“, Ausblick", "allein, mündlich"], ["3", "—", "Puffer (Abschreiben der Zeitleiste entfällt)", "—"]].map((r) => row(r.map((v, i) => tc(v, [800, 2300, 4300, 2806][i], { bold: i < 3 })), 320)),
+  ...[["8", "Ankommen", "0  Test zurück, Reflexion", "gemeinsam, mündlich"], ["3", "Vorwissen", "1  Probleme Frankreichs sammeln", "gemeinsam, mündlich"], ["12", "Informieren", "2  Text lesen, Zeitstrahl ausfüllen, kontrollieren", "allein, gemeinsam"], ["14", "Verarbeiten", "3  Zahlen, Gedankenspiel 1789, Schulbeispiel, Rechnung, Merksatz", "gemeinsam, abschreiben"], ["5", "Auswerten", "4  Satz „unfair, weil …“, Ausblick", "allein, mündlich"], ["3", "—", "Puffer (Abschreiben der Zeitleiste entfällt)", "—"]].map((r) => row(r.map((v, i) => tc(v, [800, 2300, 4300, 2806][i], { bold: i < 3 })), 320)),
 ]));
 
 d.push(h3("Eindeutige Ansagen (wörtlich)"));
@@ -102,7 +102,7 @@ d.push(step("kommt an die Tafel", {
 }));
 
 // Phase 3
-d.push(phase("3", "Abstimmung: erst 1789, dann die Schule", 14, "AVIVA: Verarbeiten"));
+d.push(phase("3", "Abstimmung: erst Gedankenspiel 1789, dann die Schule", 14, "AVIVA: Verarbeiten"));
 d.push(step("meldet sich", {
   say: "Meldet euch. Ihr schreibt noch nichts auf. Was fällt euch an diesen Zahlen auf?",
   do: ["3a  Folie 8 zeigen (3 Minuten, Balken). Zahlen vergleichen: Wie viele Menschen, wie viele Abgeordnete, wie viele Stimmen?"],
@@ -116,12 +116,13 @@ d.push(p(t(""), { after: 20 }));
 d.push(step("rechnet mit, meldet sich", {
   say: "Meldet euch. Ihr schreibt noch nichts auf. Stellt euch vor, 1789 stimmt man über diesen Antrag ab.",
   do: [
-    "3b  Historisches Beispiel (3 Minuten). Folie 9: Antrag „Auch Adel und Klerus zahlen künftig Steuern.“ Ergebnis auf Folie 10. Modellannahme: Klerus und Adel stimmen geschlossen mit Nein, der Dritte Stand mit Ja.",
+    "3b  Gedankenspiel zu 1789 (3 Minuten). Wichtig vorab: Nach Köpfen wurde 1789 nicht abgestimmt. Wir rechnen, was wäre, wenn. Folie 9: Antrag „Auch Adel und Klerus zahlen künftig Steuern.“ Ergebnis auf Folie 10. Modellannahme: Klerus und Adel stimmen geschlossen mit Nein, der Dritte Stand mit Ja.",
     "Schritt 1, Abstimmung nach Ständen: Die Klasse rechnet. Klerus Nein, Adel Nein, Dritter Stand Ja. Ergebnis 2:1, der Antrag ist abgelehnt. Ein Schüler schreibt das Ergebnis an die Tafel.",
     "Schritt 2, Abstimmung nach Köpfen: Ja 580, Nein 290 + 270 = 560. Der Antrag wäre knapp angenommen. Die Klasse bemerkt: Es entscheidet also der Abstimmungsmodus, nicht die Mehrheit der Menschen.",
-    "Frage: „Wie wichtig wäre die Abstimmungsregel für den Dritten Stand?“",
+    "Frage: „Wie wichtig wäre die Abstimmungsregel für den Dritten Stand?“ Dann klarstellen: Tatsächlich wurde nicht nach Köpfen abgestimmt. Adel und Klerus bestanden auf der Abstimmung nach Ständen, der Dritte Stand (Bauern und Bürger) forderte die nach Köpfen. Dieser Streit blockierte die Generalstände (Fortsetzung nach den Ferien).",
   ],
-  extra: [boardBox("Mitte · Abstimmung 1789 (Modell)", [
+  extra: [boardBox("Mitte · Gedankenspiel 1789 (Modell)", [
+    bl("Gedankenspiel (keine echte Abstimmung):", { after: 40 }),
     bl("nach Ständen:   Klerus Nein · Adel Nein · Dritter Stand Ja   →   2 : 1   →   abgelehnt"),
     bl("nach Köpfen:    Ja 580 · Nein 290 + 270 = 560   →   knapp angenommen", { after: 0 }),
   ]), gapP()],
@@ -139,7 +140,7 @@ d.push(step("spielt mit, meldet sich", {
   sol: "Die Regeln sind das Problem, nicht die Personen. Betonen Sie die Rollen („Wir spielen“), damit es nicht persönlich wird. Unterschied zu 1789: In der Schule ist das Ergebnis deutlich (12 gegen 2), 1789 knapp (580 gegen 560), weil der Dritte Stand mehr Abgeordnete bekam.",
 }));
 d.push(p(t(""), { after: 20 }));
-d.push(sollbruch("Wenn die Zeit knapp wird, entfällt 3c (das Schulbeispiel) und beginnt Stunde 2 (4 Minuten). Das historische Beispiel 3b und der Merksatz bleiben in Stunde 1. Phase 4 wird dann mündlich."));
+d.push(sollbruch("Wenn die Zeit knapp wird, entfällt 3c (das Schulbeispiel) und beginnt Stunde 2 (4 Minuten). Das Gedankenspiel 3b und der Merksatz bleiben in Stunde 1. Phase 4 wird dann mündlich."));
 d.push(p(t(""), { after: 20 }));
 d.push(step("rechnet mit, schreibt ab", {
   say: "Meldet euch. Ihr schreibt noch nichts auf. Wie viel zählt eine Stimme?",
