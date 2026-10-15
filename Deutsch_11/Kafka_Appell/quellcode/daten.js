@@ -72,7 +72,20 @@ const KRITERIEN = [
   ["Ton", "ehrlich, mutig, respektvoll – keine Vorwürfe"],
 ];
 
+// Musterrede zu Aufgabe 5: [Satz, erfülltes Kriterium (0 = keins)]
+const MUSTERREDE = [
+  ["Vater, danke, dass Du mir heute zuhörst.", 1],
+  ["Ich will Dir keine Vorwürfe machen – Du hast mich so erzogen, wie Du es für richtig gehalten hast.", 5],
+  ["Aber wenn Du laut wirst oder über das lachst, was mir wichtig ist, fühle ich mich klein und bringe kein Wort mehr heraus.", 2],
+  ["Wenn Du mein Schweigen für Trotz hältst, verletzt mich das, denn ich schweige nicht aus Bosheit, sondern aus Angst.", 2],
+  ["Ich war ein ängstliches Kind, und manchmal bin ich es heute noch.", 0],
+  ["Darum bitte ich Dich: Hör auf, mein Verhalten als Bosheit zu deuten.", 3],
+  ["Sag mir ab und zu ein freundliches Wort und sieh mich an, wenn ich Dir etwas erzähle.", 4],
+  ["Ich wünsche mir, dass wir in Zukunft miteinander reden können, ohne dass einer von uns Angst haben muss.", 3],
+];
+
 module.exports = {
+  MUSTERREDE,
   TEXT, QUELLE, GLOSSAR, KONTEXT, KONTEXT_ZITAT, APPELL,
   TEST, LERNZIELE, VERLAUF,
   LEITFRAGEN, FORMULIERUNGSHILFEN, REDE_SITUATION, REDE_AUFTRAG, REDE_UMFANG, KRITERIEN,

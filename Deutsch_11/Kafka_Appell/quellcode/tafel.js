@@ -5,7 +5,7 @@ const {
   Document, Packer, Paragraph, TextRun, Table, TableRow, TableCell, WidthType, BorderStyle,
   ShadingType, AlignmentType, VerticalAlign, HeightRule, Footer, PageNumber, PageOrientation,
 } = require("docx");
-const { LEITFRAGEN, REDE_SITUATION, REDE_AUFTRAG, REDE_UMFANG, KRITERIEN } = require("./daten");
+const { MUSTERREDE, LEITFRAGEN, REDE_SITUATION, REDE_AUFTRAG, REDE_UMFANG, KRITERIEN } = require("./daten");
 
 const NAVY = "1E2761", MUTED = "5B6B8C", LIGHT = "F4F7FD", LIGHT2 = "EAF0FA", RED = "D9534F";
 const BOARD = "2E4A3B", BOARD2 = "3A5A48", CHALK = "F3F1EA", DIM = "C9C3A8", YEL = "F5D76E", APP = "F29A8E";
@@ -111,16 +111,7 @@ const erwartung = [
   "Kafka entlastet den Vater ausdrücklich, damit dieser die Bitte nicht als Angriff versteht. Der Appell ist vorsichtig abgesichert – ein Zeichen seiner Furcht und der komplementären Beziehung.",
 ];
 const REFLEXION = ["Reflexion (Aufgabe 4): Warum so vorsichtig und versteckt?", "Aus Furcht vor Zorn und Vorwürfen wagt Kafka keinen direkten Appell. Der Vater, der laut und direkt spricht, hätte die versteckte Bitte wohl überhört – darum bleibt der Brief ein Versuch, der den Vater nie erreicht."];
-const ROTE = [
-  ["Vater, danke, dass Du mir heute zuhörst.", 1],
-  ["Ich will Dir keine Vorwürfe machen – Du hast mich so erzogen, wie Du es für richtig gehalten hast.", 5],
-  ["Aber wenn Du laut wirst oder über das lachst, was mir wichtig ist, fühle ich mich klein und bringe kein Wort mehr heraus.", 2],
-  ["Wenn Du mein Schweigen für Trotz hältst, verletzt mich das, denn ich schweige nicht aus Bosheit, sondern aus Angst.", 2],
-  ["Ich war ein ängstliches Kind, und manchmal bin ich es heute noch.", 0],
-  ["Darum bitte ich Dich: Hör auf, mein Verhalten als Bosheit zu deuten.", 3],
-  ["Sag mir ab und zu ein freundliches Wort und sieh mich an, wenn ich Dir etwas erzähle.", 4],
-  ["Ich wünsche mir, dass wir in Zukunft miteinander reden können, ohne dass einer von uns Angst haben muss.", 3],
-];
+const ROTE = MUSTERREDE;
 const page3 = [
   kicker("TAFELSCRIPT · ERWARTUNGSHORIZONT", true),
   h1("Erwartungshorizont zu den Aufgaben 2, 4 und 5"),
