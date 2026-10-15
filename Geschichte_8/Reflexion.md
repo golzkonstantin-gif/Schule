@@ -54,8 +54,8 @@
 
 ### Generalstände, Stunde 1 (geplant, 45 Min., 12 Schülerinnen und Schüler, zwei Lehrkräfte)
 - **Material:** `Generalstaende_Stunde1/` (Tafelskript, Text zum Lesen, fünf Folien)
-- **Inhalt:** Test zurück (Hälfte hat gelernt, Hälfte nicht: Verteilung anonym, Berichtigung bis zur nächsten Stunde), Probleme sammeln, Zeitleiste bis 5. Mai 1789 erarbeiten, Zahlen (Menschen, Abgeordnete, Stimmen), Mini-Abstimmung mit den beiden Lehrkräften als Klerus und Adel und den Schülern als Dritter Stand (Antrag: nur Schüler putzen, Lehrkräfte befreit), Rechnung (Stimme wiegt 133-mal so viel), Merksatz, Satz „unfair, weil …“.
-- **Planungsentscheidungen:** AVIVA als Phasenmodell, Verlauf als Zeitstrahl statt Gruppenpuzzle (Zeitnot): Blatt mit Text (Blocksatz) und Zeitstrahl auf der Rückseite, die Ereignisse stehen drauf, die Schüler tragen die Daten ein, Sollbruchstelle: Mini-Abstimmung kann in Stunde 2 verschoben werden, nur fünf Folien, Schrift 24 Punkt.
+- **Inhalt:** Test zurück (Hälfte hat gelernt, Hälfte nicht: Verteilung anonym, Berichtigung bis zur nächsten Stunde), Probleme sammeln, Zeitleiste bis 5. Mai 1789 erarbeiten, Zahlen (Menschen, Abgeordnete, Stimmen), Abstimmung erst am historischen Beispiel (Antrag „Auch Adel und Klerus zahlen Steuern“: nach Ständen 2:1 abgelehnt, nach Köpfen 580:560 knapp angenommen), dann als Schulspiel mit den beiden Lehrkräften als Klerus und Adel und den Schülern als Dritter Stand (Antrag: nur Schüler putzen, Lehrkräfte befreit), Rechnung (Stimme wiegt 133-mal so viel), Merksatz, Satz „unfair, weil …“.
+- **Planungsentscheidungen:** AVIVA als Phasenmodell, Verlauf als Zeitstrahl statt Gruppenpuzzle (Zeitnot): Blatt mit Text (Blocksatz) und Zeitstrahl auf der Rückseite, die Ereignisse stehen drauf, die Schüler tragen die Daten ein, Sollbruchstelle: das Schulbeispiel kann in Stunde 2 verschoben werden, nur sechs Folien, Schrift 24 Punkt.
 - **Rückmeldung der Lehrkraft:** *(steht noch aus)*
 
 ## Hospitationsfeedback (gesammelt)

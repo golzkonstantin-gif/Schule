@@ -39,11 +39,11 @@ const sollbruch = (txt) => table([TW], [row([cell(p([t("SOLLBRUCHSTELLE  ", { bo
 
 const d = [];
 d.push(kicker("Tafelskript für die Lehrkraft · Einzelstunde (45 Min.) · 12 Schülerinnen und Schüler · zwei Lehrkräfte"), h1("Generalstände, Stunde 1: Wie unfair ist die Abstimmung?"));
-d.push(p(t("Ziel: Die Klasse bekommt den Test zurück und reflektiert ihre Vorbereitung. Sie erarbeitet den Verlauf bis zu den Generalständen als Zeitleiste und erlebt in einer Mini-Abstimmung, wie unfair die Abstimmung nach Ständen ist. Aufbau nach AVIVA. Es gibt keinen Hörtext, der Text wird gelesen. Rollen der beiden Lehrkräfte: L1 moderiert, L2 spielt in der Abstimmung den Adel und unterstützt an der Tafel.", { size: 21 }), { after: 80 }));
+d.push(p(t("Ziel: Die Klasse bekommt den Test zurück und reflektiert ihre Vorbereitung. Sie erarbeitet den Verlauf bis zu den Generalständen als Zeitleiste und erlebt zuerst an einem historischen Beispiel und dann in einer Mini-Abstimmung in der Schule, wie unfair die Abstimmung nach Ständen ist. Aufbau nach AVIVA. Es gibt keinen Hörtext, der Text wird gelesen. Rollen der beiden Lehrkräfte: L1 moderiert, L2 spielt in der Abstimmung den Adel und unterstützt an der Tafel.", { size: 21 }), { after: 80 }));
 
 d.push(table([800, 2300, 4300, 2806], [
   row([th("Min.", 800), th("AVIVA", 2300), th("Phase", 4300), th("Arbeitsform", 2806)], 320),
-  ...[["8", "Ankommen", "0  Test zurück, Reflexion", "gemeinsam, mündlich"], ["3", "Vorwissen", "1  Probleme Frankreichs sammeln", "gemeinsam, mündlich"], ["12", "Informieren", "2  Text lesen, Zeitstrahl ausfüllen, kontrollieren", "allein, gemeinsam"], ["14", "Verarbeiten", "3  Zahlen, Mini-Abstimmung, Rechnung, Merksatz", "gemeinsam, abschreiben"], ["5", "Auswerten", "4  Satz „unfair, weil …“, Ausblick", "allein, mündlich"], ["3", "—", "Puffer (Abschreiben der Zeitleiste entfällt)", "—"]].map((r) => row(r.map((v, i) => tc(v, [800, 2300, 4300, 2806][i], { bold: i < 3 })), 320)),
+  ...[["8", "Ankommen", "0  Test zurück, Reflexion", "gemeinsam, mündlich"], ["3", "Vorwissen", "1  Probleme Frankreichs sammeln", "gemeinsam, mündlich"], ["12", "Informieren", "2  Text lesen, Zeitstrahl ausfüllen, kontrollieren", "allein, gemeinsam"], ["14", "Verarbeiten", "3  Zahlen, Abstimmung 1789, Schulbeispiel, Rechnung, Merksatz", "gemeinsam, abschreiben"], ["5", "Auswerten", "4  Satz „unfair, weil …“, Ausblick", "allein, mündlich"], ["3", "—", "Puffer (Abschreiben der Zeitleiste entfällt)", "—"]].map((r) => row(r.map((v, i) => tc(v, [800, 2300, 4300, 2806][i], { bold: i < 3 })), 320)),
 ]));
 
 d.push(h3("Eindeutige Ansagen (wörtlich)"));
@@ -55,7 +55,7 @@ d.push(table([4700, 5506], [
   ["„Wer drankommt, schreibt an die Tafel. Alle prüfen mit.“", "Zeitleiste oder Ergebnis an der Tafel."],
   ["„Vergleicht und verbessert mit Grün.“", "Kontrolle im eigenen Heft."],
 ].map(([a, b]) => row([tc(a, 4700, { fill: LIGHT, bold: true }), tc(b, 5506)], 340))));
-d.push(p(S("Material: Text „Wie kam es zu den Generalständen?“ mit Zeitstrahl unten auf demselben Blatt (ein Blatt pro Person, Datenfelder leer), Tests (verdeckt), Folien 1 bis 5, Grün zum Verbessern. Vorab an der Tafel vorbereiten: Strichliste der Noten (ohne Namen) und die Erfolgsquote je Test-Aufgabe in Prozent.", { italics: true, color: MUTED }), { before: 80, after: 40 }));
+d.push(p(S("Material: Text „Wie kam es zu den Generalständen?“ mit Zeitstrahl unten auf demselben Blatt (ein Blatt pro Person, Datenfelder leer), Tests (verdeckt), Folien 1 bis 6, Grün zum Verbessern. Vorab an der Tafel vorbereiten: Strichliste der Noten (ohne Namen) und die Erfolgsquote je Test-Aufgabe in Prozent.", { italics: true, color: MUTED }), { before: 80, after: 40 }));
 
 // Phase 0
 d.push(phase("0", "Test zurück, Reflexion", 8, "AVIVA: Ankommen"));
@@ -102,7 +102,7 @@ d.push(step("kommt an die Tafel", {
 }));
 
 // Phase 3
-d.push(phase("3", "Zahlen, Mini-Abstimmung, Rechnung", 14, "AVIVA: Verarbeiten"));
+d.push(phase("3", "Abstimmung: erst 1789, dann die Schule", 14, "AVIVA: Verarbeiten"));
 d.push(step("meldet sich", {
   say: "Meldet euch. Ihr schreibt noch nichts auf. Was fällt euch an diesen Zahlen auf?",
   do: ["3a  Folie 2 zeigen (3 Minuten). Zahlen vergleichen: Wie viele Menschen, wie viele Abgeordnete, wie viele Stimmen?"],
@@ -113,28 +113,43 @@ d.push(step("meldet sich", {
   sol: "Erwartet: Der Dritte Stand (Bauern und Bürger) ist fast die ganze Bevölkerung und stellt etwa die Hälfte der Abgeordneten, hat aber nur eine von drei Stimmen. Klerus und Adel zusammen (ca. 3 %) haben zwei von drei Stimmen und können ihn immer überstimmen.",
 }));
 d.push(p(t(""), { after: 20 }));
-d.push(step("spielt mit, meldet sich", {
-  say: "Wir spielen jetzt eine Abstimmung. Das ist nur ein Spiel, es gilt nicht. Die Lehrkräfte sind Klerus und Adel, ihr seid der Dritte Stand (Bauern und Bürger).",
+d.push(step("rechnet mit, meldet sich", {
+  say: "Meldet euch. Ihr schreibt noch nichts auf. Stellt euch vor, 1789 stimmt man über diesen Antrag ab.",
   do: [
-    "3b  Folie 3 zeigen (5 Minuten): Antrag „Nur Schüler putzen künftig das Klassenzimmer und räumen die Tische auf. Lehrkräfte sind davon befreit.“",
-    "Schritt 1, Abstimmung nach Ständen: Jeder Stand hat eine Stimme. Die Schüler beraten 30 Sekunden und stimmen als Gruppe ab. L1 (Klerus) Ja, L2 (Adel) Ja, Dritter Stand Nein. Ergebnis 2:1, der Antrag ist angenommen. Ein Schüler schreibt das Ergebnis an die Tafel.",
-    "Reaktion der Klasse abwarten: „Wir sind doch viel mehr!“ Dann Schritt 2, Abstimmung nach Köpfen: 2 Ja, 12 Nein. Ergebnis 2:12, der Antrag ist abgelehnt.",
-    "Fragen: Wie fühlt sich das an? Was war unfair? Was ist das Problem: die Lehrkräfte oder die Regeln?",
+    "3b  Historisches Beispiel (3 Minuten). Folie 3: Antrag „Auch Adel und Klerus zahlen künftig Steuern.“ Modellannahme: Klerus und Adel stimmen geschlossen mit Nein, der Dritte Stand mit Ja.",
+    "Schritt 1, Abstimmung nach Ständen: Die Klasse rechnet. Klerus Nein, Adel Nein, Dritter Stand Ja. Ergebnis 2:1, der Antrag ist abgelehnt. Ein Schüler schreibt das Ergebnis an die Tafel.",
+    "Schritt 2, Abstimmung nach Köpfen: Ja 580, Nein 290 + 270 = 560. Der Antrag wäre knapp angenommen. Die Klasse bemerkt: Es entscheidet also der Abstimmungsmodus, nicht die Mehrheit der Menschen.",
+    "Frage: „Wie wichtig wäre die Abstimmungsregel für den Dritten Stand?“",
   ],
-  sol: "Die Regeln sind das Problem, nicht die Personen. Betonen Sie die Rollen („Wir spielen“), damit es nicht persönlich wird.",
+  extra: [boardBox("Mitte · Abstimmung 1789 (Modell)", [
+    bl("nach Ständen:   Klerus Nein · Adel Nein · Dritter Stand Ja   →   2 : 1   →   abgelehnt"),
+    bl("nach Köpfen:    Ja 580 · Nein 290 + 270 = 560   →   knapp angenommen", { after: 0 }),
+  ]), gapP()],
+  sol: "Hinweis: Die Annahme „geschlossen“ ist vereinfacht. Tatsächlich unterstützten manche Geistliche (vor allem Pfarrer) und einzelne Adlige den Dritten Stand, nach Köpfen wäre das Ergebnis also deutlicher. Wichtig bleibt: Dieselben Stimmen führen je nach Regel zu zwei verschiedenen Ergebnissen.",
 }));
 d.push(p(t(""), { after: 20 }));
-d.push(sollbruch("Wenn die Zeit knapp wird, entfällt 3b (die Mini-Abstimmung) und beginnt Stunde 2 (5 Minuten). Stunde 1 endet dann nach 3a mit der Frage: „Wie würdet ihr abstimmen lassen?“ Phase 4 wird mündlich."));
+d.push(step("spielt mit, meldet sich", {
+  say: "Jetzt spielen wir dasselbe in der Schule. Das ist nur ein Spiel, es gilt nicht. Die Lehrkräfte sind Klerus und Adel, ihr seid der Dritte Stand (Bauern und Bürger).",
+  do: [
+    "3c  Schulbeispiel (4 Minuten). Folie 4: Antrag „Nur Schüler putzen künftig das Klassenzimmer und räumen die Tische auf. Lehrkräfte sind davon befreit.“",
+    "Schritt 1, Abstimmung nach Ständen: Jeder Stand eine Stimme. Die Schüler beraten 30 Sekunden und stimmen als Gruppe ab. L1 (Klerus) Ja, L2 (Adel) Ja, Dritter Stand Nein. Ergebnis 2:1, angenommen. Ein Schüler schreibt es an die Tafel.",
+    "Reaktion der Klasse abwarten: „Wir sind doch viel mehr!“ Dann Schritt 2, Abstimmung nach Köpfen: 2 Ja, 12 Nein, abgelehnt.",
+    "Fragen: Wie fühlt sich das an? Was war unfair? Sind die Lehrkräfte das Problem oder die Regeln?",
+  ],
+  sol: "Die Regeln sind das Problem, nicht die Personen. Betonen Sie die Rollen („Wir spielen“), damit es nicht persönlich wird. Unterschied zu 1789: In der Schule ist das Ergebnis deutlich (12 gegen 2), 1789 knapp (580 gegen 560), weil der Dritte Stand mehr Abgeordnete bekam.",
+}));
+d.push(p(t(""), { after: 20 }));
+d.push(sollbruch("Wenn die Zeit knapp wird, entfällt 3c (das Schulbeispiel) und beginnt Stunde 2 (4 Minuten). Das historische Beispiel 3b und der Merksatz bleiben in Stunde 1. Phase 4 wird dann mündlich."));
 d.push(p(t(""), { after: 20 }));
 d.push(step("rechnet mit, schreibt ab", {
   say: "Meldet euch. Ihr schreibt noch nichts auf. Wie viel zählt eine Stimme?",
   do: [
-    "3c  Rechnung (3 Minuten) an der Tafel: Im Klassenspiel zählt eine Lehrerstimme wie 1 Person, die Schülerstimme nur wie 1 von 12. Die Lehrerstimme wiegt zwölfmal so viel.",
+    "3d  Rechnung und Merksatz (4 Minuten): Im Klassenspiel zählt eine Lehrerstimme wie 1 Person, die Schülerstimme nur wie 1 von 12. Die Lehrerstimme wiegt zwölfmal so viel.",
     "Übertragung: In Frankreich stehen hinter einer Stimme des Klerus 150 000 Menschen, hinter einer Stimme des Dritten Standes (Bauern und Bürger) 20 000 000. 20 000 000 : 150 000 ≈ 133. Beim Adel: 20 000 000 : 500 000 = 40.",
     "Frage: „Was würdet ihr als Dritter Stand in Frankreich fordern?“ Erwartung: Abstimmung nach Köpfen. Das ist genau, was die Abgeordneten 1789 fordern (Brücke zu Stunde 2).",
-    "3d  Merksatz: „Jetzt schreibt ihr von der Folie ab: Merksatz 1. Rahmt ihn rot ein.“ (Folie 4)",
+    "„Jetzt schreibt ihr von der Folie ab: Merksatz 1. Rahmt ihn rot ein.“ (Folie 5)",
   ],
-  extra: [folieBox("4 · Merksatz 1 – abschreiben, rot umrahmen", [
+  extra: [folieBox("5 · Merksatz 1 – abschreiben, rot umrahmen", [
     p(t("Abstimmung nach Ständen", { bold: true, color: RED, font: "Cambria", size: 22 }), { after: 40 }),
     p(t("Bei den Generalständen hat jeder Stand eine Stimme. Klerus und Adel (zusammen ca. 3 % der Bevölkerung) haben damit zwei von drei Stimmen und können den Dritten Stand (Bauern und Bürger, ca. 97 %) immer überstimmen.", { font: "Cambria", size: 22 }), { after: 50 }),
     p(t("Beispiel: Eine Stimme des Klerus wiegt rund 133-mal so viel wie eine Stimme des Dritten Standes (Bauern und Bürger).", { size: 20, color: MUTED }), { after: 50 }),
@@ -146,7 +161,7 @@ d.push(step("rechnet mit, schreibt ab", {
 d.push(phase("4", "Auswerten", 5, "AVIVA: Auswerten"));
 d.push(step("arbeitet allein", {
   say: "Jetzt arbeitet ihr allein. Die Aufgabe steht rechts.",
-  extra: [folieBox("5 · Ü2 Unfair?", [p(t("Ü2 Die Abstimmung nach Ständen", { font: "Cambria", size: 22, bold: true, color: NAVY }), { after: 40 }), bl("1. Schreibe Ü2 ins Heft."), bl("2. Beende den Satz: „Die Abstimmung nach Ständen ist unfair, weil …“"), bl("3. Begründe mit mindestens einer Zahl.", { after: 40 }), p([t("Zeit: ", { bold: true, size: 19 }), t("4 Minuten · allein · leise     ", { size: 19 }), t("Fertig? Stift hinlegen.", { size: 19, italics: true })], { after: 0 })]), gapP()],
+  extra: [folieBox("6 · Ü2 Unfair?", [p(t("Ü2 Die Abstimmung nach Ständen", { font: "Cambria", size: 22, bold: true, color: NAVY }), { after: 40 }), bl("1. Schreibe Ü2 ins Heft."), bl("2. Beende den Satz: „Die Abstimmung nach Ständen ist unfair, weil …“"), bl("3. Begründe mit mindestens einer Zahl.", { after: 40 }), p([t("Zeit: ", { bold: true, size: 19 }), t("4 Minuten · allein · leise     ", { size: 19 }), t("Fertig? Stift hinlegen.", { size: 19, italics: true })], { after: 0 })]), gapP()],
   do: ["Danach 1 bis 2 Sätze vorlesen lassen. Ausblick: „Was passiert, wenn der Dritte Stand nach Köpfen fordert und der König ablehnt? Das sehen wir in der nächsten Stunde.“"],
   sol: "Beispiel: „Die Abstimmung nach Ständen ist unfair, weil der Dritte Stand (Bauern und Bürger) ca. 97 % der Menschen stellt, aber nur eine von drei Stimmen hat und immer überstimmt wird.“",
 }));

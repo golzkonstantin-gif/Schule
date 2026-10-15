@@ -120,19 +120,34 @@ taskSlide("Übung 1 · Text und Zeitstrahl", "Wie kam es zu den Generalständen?
   s.addNotes("Ansage: „Meldet euch. Ihr schreibt noch nichts auf. Was fällt euch an diesen Zahlen auf?“ Erwartung: Der Dritte Stand (Bauern und Bürger) ist fast die ganze Bevölkerung und stellt etwa die Hälfte der Abgeordneten, hat aber nur eine von drei Stimmen. Klerus und Adel (ca. 3 %) haben zusammen zwei von drei Stimmen. Zahlen der Abgeordneten bitte gegen das Buch prüfen. Die Anzahl der Menschen stammt aus dem Gruppenpuzzle-Material.");
 }
 
-// ============ 3 Antrag ============
+// ============ 3 Antrag 1789 ============
+{
+  const s = pres.addSlide();
+  pageNo++;
+  s.background = { color: WHITE };
+  txt(s, "ABSTIMMUNG 1789 · MODELL", { x: 0.6, y: 0.35, w: 10, h: 0.3, fontSize: 13, color: RED, charSpacing: 2, bold: true });
+  txt(s, "Antrag in den Generalständen", { x: 0.6, y: 0.65, w: 12.1, h: 0.75, fontFace: HEAD, fontSize: 34, bold: true });
+  s.addShape(pres.shapes.ROUNDED_RECTANGLE, { x: 0.6, y: 1.55, w: 12.15, h: 2.2, rectRadius: 0.08, fill: { color: WHITE }, line: { color: RED, width: 3 } });
+  txt(s, "Auch Adel und Klerus zahlen künftig Steuern.", { x: 0.95, y: 1.6, w: 11.45, h: 2.1, fontFace: HEAD, fontSize: 34, bold: true, valign: "middle" });
+  txt(s, "Klerus und Adel stimmen mit Nein, der Dritte Stand (Bauern und Bürger) mit Ja. Wer gewinnt: nach Ständen? Nach Köpfen?", { x: 0.6, y: 4.0, w: 12.15, h: 1.9, fontFace: HEAD, fontSize: 24, color: MUTED });
+  bar(s, [{ text: "Jetzt: ", options: { bold: true } }, { text: "Meldet euch. Wir rechnen gemeinsam.", options: {} }]);
+  footer(s);
+  s.addNotes("Modellannahme: Klerus und Adel stimmen geschlossen Nein, der Dritte Stand Ja. Nach Ständen: 2:1, abgelehnt. Nach Köpfen: Ja 580, Nein 290 + 270 = 560, knapp angenommen. Hinweis: Die Annahme ist vereinfacht, tatsächlich unterstützten manche Geistliche und einzelne Adlige den Dritten Stand. Frage: Wie wichtig ist die Abstimmungsregel?");
+}
+
+// ============ 4 Antrag Schule ============
 {
   const s = pres.addSlide();
   pageNo++;
   s.background = { color: WHITE };
   txt(s, "ABSTIMMUNG · NUR EIN SPIEL", { x: 0.6, y: 0.35, w: 10, h: 0.3, fontSize: 13, color: RED, charSpacing: 2, bold: true });
-  txt(s, "Antrag", { x: 0.6, y: 0.65, w: 12.1, h: 0.75, fontFace: HEAD, fontSize: 34, bold: true });
+  txt(s, "Antrag in der Schule", { x: 0.6, y: 0.65, w: 12.1, h: 0.75, fontFace: HEAD, fontSize: 34, bold: true });
   s.addShape(pres.shapes.ROUNDED_RECTANGLE, { x: 0.6, y: 1.55, w: 12.15, h: 3.0, rectRadius: 0.08, fill: { color: WHITE }, line: { color: RED, width: 3 } });
   txt(s, "Nur Schüler putzen künftig das Klassenzimmer und räumen die Tische auf. Lehrkräfte sind davon befreit.", { x: 0.95, y: 1.6, w: 11.45, h: 2.9, fontFace: HEAD, fontSize: 32, bold: true, valign: "middle" });
   txt(s, "Klerus: Lehrkraft 1 · Adel: Lehrkraft 2 · Dritter Stand (Bauern und Bürger): die Schüler", { x: 0.6, y: 4.8, w: 12.15, h: 0.9, fontFace: HEAD, fontSize: 24, color: MUTED });
   bar(s, [{ text: "Hinweis: ", options: { bold: true } }, { text: "Das ist nur ein Spiel. Der Antrag gilt nicht.", options: {} }]);
   footer(s);
-  s.addNotes("Ansage: „Wir spielen jetzt eine Abstimmung. Das ist nur ein Spiel, es gilt nicht.“ Schritt 1, nach Ständen: Jede Gruppe eine Stimme. Klerus (L1) Ja, Adel (L2) Ja, Dritter Stand (Schüler) Nein: 2:1, angenommen. Schritt 2, nach Köpfen: 2 Ja, 12 Nein: abgelehnt. Fragen: Wie fühlt sich das an? Was ist unfair? Sind die Lehrkräfte das Problem oder die Regeln? Sollbruchstelle: Bei Zeitnot entfällt die Abstimmung und beginnt Stunde 2.");
+  s.addNotes("Ansage: „Jetzt spielen wir dasselbe in der Schule. Das ist nur ein Spiel, es gilt nicht.“ Schritt 1, nach Ständen: Klerus (L1) Ja, Adel (L2) Ja, Dritter Stand (Schüler) Nein: 2:1, angenommen. Schritt 2, nach Köpfen: 2 Ja, 12 Nein: abgelehnt. Fragen: Wie fühlt sich das an? Was ist unfair? Sind die Lehrkräfte das Problem oder die Regeln? Sollbruchstelle: Bei Zeitnot entfällt das Schulbeispiel und beginnt Stunde 2.");
 }
 
 // ============ 4 Merksatz ============
