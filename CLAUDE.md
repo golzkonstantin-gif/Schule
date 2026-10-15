@@ -36,7 +36,7 @@ Dieses Repo enthält Unterrichtsmaterial (Deutsch 7A, Geschichte 8). Die Vorlieb
 - **Folien:** pro Folie nur das Nötigste, Schrift mindestens 24 Punkt. In Geschichte sind mehr Folien in Ordnung, wenn sie unterstützen und sinnvoll visualisieren (Zeitstrahl, Balken, Ergebnisfolien). Bei AVIVA-Stunden gehören Lernziele, Ablauf nach AVIVA, Phasenanzeige und Lernziel-Check dazu.
 - **Tests:** höchstens 2 Seiten, Stoff nicht aus dem Kopf abfragen, der zu schwer ist (z. B. Zahlen der Stände vorgeben), viele Wahr-oder-falsch-Aussagen (bei „falsch“ begründen), Sätze als Buchstaben zuordnen, Zusatzaufgabe nur 1 Punkt (aktuell: Wirtschaftssystem/Merkantilismus erklären).
 - **Kein Vorlese- und Heraushör-Text mehr** als Einstieg oder Erarbeitung (hat funktioniert, die Lehrkraft will es nicht wiederholen). Stattdessen selbst erarbeiten lassen, z. B. Gruppenpuzzle mit Texten.
-- **Texte im Blocksatz** (Expertentexte, Lesetexte), Zeitstrahl als Blatt mit vorgegebenen Ereignissen, Schüler tragen die Daten ein.
+- **Texte im Blocksatz** (Expertentexte, Lesetexte), Zeitstrahl als Blatt (unten auf dem Textblatt) mit vorgegebenen Daten, Schüler ergänzen die Ereignisse.
 - **AVIVA** (Ankommen, Vorwissen, Informieren, Verarbeiten, Auswerten) als Stundenaufbau bei der Französischen Revolution; zwei Lehrkräfte im Raum, 12 Schülerinnen und Schüler, Stunden à 45 Minuten.
 - **Karikatur** als Impuls bei „Im Absolutismus fühle ich mich …“ (gibt Hinweise auf Vorrechte und Lasten).
 

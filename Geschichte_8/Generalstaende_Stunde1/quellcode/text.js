@@ -37,15 +37,16 @@ ABSAETZE.forEach((a) => c.push(p(t(a, { font: "Cambria", size: 24 }), { after: 1
 // Wörter erklärt (zwei Spalten, kompakt)
 c.push(new Table({ width: { size: W, type: WidthType.DXA }, columnWidths: [W / 2, W / 2], rows: [0, 2].map((i) => new TableRow({ cantSplit: true, children: [WOERTER[i], WOERTER[i + 1]].map((x) => new TableCell({ width: { size: W / 2, type: WidthType.DXA }, shading: { fill: LIGHT2, type: ShadingType.CLEAR, color: "auto" }, borders: all(noB), margins: { top: 40, bottom: 40, left: 120, right: 120 }, children: [p([t(x[0] + ": ", { bold: true, size: 18 }), t(x[1], { size: 18 })], { after: 0 })] })) })) }));
 c.push(p(t(""), { after: 40 }));
-c.push(box([p([t("Deine Aufgabe  ", { bold: true, color: RED, size: 20 }), t("1  Lies den Text und unterstreiche alle Jahreszahlen.   2  Trage die Daten unten im Zeitstrahl ein.   3  Überlege: Warum ruft der König die Generalstände ein, obwohl er sie 175 Jahre nicht gebraucht hat?", { size: 20 })], { after: 0 })], "FFFFFF", all(solid("B9C6E8", 6))));
+c.push(box([p([t("Deine Aufgabe  ", { bold: true, color: RED, size: 20 }), t("1  Lies den Text und unterstreiche alle Jahreszahlen.   2  Schreibe zu jedem Datum das Ereignis in den Zeitstrahl (Stichworte).   3  Überlege: Warum ruft der König die Generalstände ein, obwohl er sie 175 Jahre nicht gebraucht hat?", { size: 20 })], { after: 0 })], "FFFFFF", all(solid("B9C6E8", 6))));
 
-// Zeitstrahl (unten auf demselben Blatt)
+// Zeitstrahl (unten auf demselben Blatt): Daten vorgegeben, Ereignisse eintragen
 c.push(p(t("Zeitstrahl: Der Weg zu den Generalständen", { font: "Cambria", size: 26, bold: true, color: NAVY }), { before: 140, after: 40 }));
-const ZW = [2000, 500, 7706];
-c.push(new Table({ width: { size: W, type: WidthType.DXA }, columnWidths: ZW, rows: EREIGNISSE.map((e, i) => new TableRow({ cantSplit: true, height: { value: 680, rule: "atLeast" }, children: [
-  new TableCell({ width: { size: ZW[0], type: WidthType.DXA }, verticalAlign: VerticalAlign.BOTTOM, borders: { top: noB, left: noB, right: noB, bottom: solid("8A96B5", 8) }, margins: { top: 20, bottom: 20, left: 80, right: 120 }, children: [p(t("", { size: 22 }), { after: 0 })] }),
-  new TableCell({ width: { size: ZW[1], type: WidthType.DXA }, verticalAlign: VerticalAlign.CENTER, borders: all(noB), margins: { top: 0, bottom: 0, left: 0, right: 0 }, children: [p(t(i === 0 ? "▼" : i === EREIGNISSE.length - 1 ? "▲" : "│", { size: 22, color: NAVY, bold: true }), { after: 0, align: AlignmentType.CENTER })] }),
-  new TableCell({ width: { size: ZW[2], type: WidthType.DXA }, verticalAlign: VerticalAlign.CENTER, shading: { fill: i % 2 ? LIGHT : LIGHT2, type: ShadingType.CLEAR, color: "auto" }, borders: all(solid("B9C6E8", 6)), margins: { top: 30, bottom: 30, left: 140, right: 140 }, children: [p(t(e, { size: 22 }), { after: 0 })] }),
+const DATEN = ["1614", "1778–1783", "1787", "1788", "August 1788", "Frühjahr 1789", "5. Mai 1789"];
+const ZW = [2300, 500, 7406];
+c.push(new Table({ width: { size: W, type: WidthType.DXA }, columnWidths: ZW, rows: DATEN.map((dat, i) => new TableRow({ cantSplit: true, height: { value: 700, rule: "atLeast" }, children: [
+  new TableCell({ width: { size: ZW[0], type: WidthType.DXA }, verticalAlign: VerticalAlign.CENTER, shading: { fill: i % 2 ? LIGHT : LIGHT2, type: ShadingType.CLEAR, color: "auto" }, borders: all(solid("B9C6E8", 6)), margins: { top: 30, bottom: 30, left: 140, right: 100 }, children: [p(t(dat, { size: 24, bold: true, color: RED }), { after: 0 })] }),
+  new TableCell({ width: { size: ZW[1], type: WidthType.DXA }, verticalAlign: VerticalAlign.CENTER, borders: all(noB), margins: { top: 0, bottom: 0, left: 0, right: 0 }, children: [p(t(i === 0 ? "▼" : i === DATEN.length - 1 ? "▲" : "│", { size: 22, color: NAVY, bold: true }), { after: 0, align: AlignmentType.CENTER })] }),
+  new TableCell({ width: { size: ZW[2], type: WidthType.DXA }, verticalAlign: VerticalAlign.BOTTOM, borders: { top: noB, left: noB, right: noB, bottom: solid("8A96B5", 8) }, margins: { top: 20, bottom: 20, left: 120, right: 80 }, children: [p(t("", { size: 22 }), { after: 0 })] }),
 ] })) }));
 
 (async () => {

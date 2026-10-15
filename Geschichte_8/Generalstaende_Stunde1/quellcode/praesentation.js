@@ -196,14 +196,14 @@ function stackBar(s, x, y, w, h, parts, labelColors) {
 
 // ============ 6 Informieren: Aufgabe ============
 {
-  const { s } = taskSlide("I · Informieren · Übung 1", "Text und Zeitstrahl", ["Lies den Text. Unterstreiche die Jahreszahlen.", "Trage die Daten in den Zeitstrahl ein.", "Prüfe: Passt jedes Datum zum Ereignis?"], "5 Minuten · allein · leise",
-    "Ansage: „Ich teile das Blatt aus. Jetzt arbeitet ihr allein. Die Aufgabe steht rechts.“ Oben der Text, unten der Zeitstrahl mit leeren Datenfeldern. Danach Kontrolle (Folie 7): „Wer drankommt, schreibt an die Tafel. Alle prüfen mit.“ Dann „Vergleicht und verbessert mit Grün.“");
+  const { s } = taskSlide("I · Informieren · Übung 1", "Text und Zeitstrahl", ["Lies den Text. Unterstreiche die Jahreszahlen.", "Schreibe zu jedem Datum das Ereignis in den Zeitstrahl.", "Prüfe: Passt jedes Ereignis zum Datum?"], "5 Minuten · allein · leise",
+    "Ansage: „Ich teile das Blatt aus. Jetzt arbeitet ihr allein. Die Aufgabe steht rechts.“ Oben der Text, unten der Zeitstrahl mit vorgegebenen Daten und leeren Ereignisfeldern. Danach Kontrolle (Folie 7): „Wer drankommt, schreibt an die Tafel. Alle prüfen mit.“ Dann „Vergleicht und verbessert mit Grün.“");
   phaseTag(s, 2);
 }
 
 // ============ 7 Zeitstrahl ============
 {
-  const s = blank("I · Informieren · Kontrolle", "Der Weg zu den Generalständen", 2, "Erst zeigen, wenn die Klasse die Daten genannt hat („Wer drankommt, schreibt an die Tafel. Alle prüfen mit.“). Dann „Vergleicht und verbessert mit Grün.“ Leitfrage: Warum ruft der König die Generalstände ein, obwohl er sie 175 Jahre nicht brauchte? Antwort: Geldnot, Reformen scheitern, Krise (Hunger, drohender Bankrott). Der Zeitstrahl ist nicht maßstabsgetreu.");
+  const s = blank("I · Informieren · Kontrolle", "Der Weg zu den Generalständen", 2, "Erst zeigen, wenn die Klasse die Ereignisse genannt hat („Wer drankommt, schreibt an die Tafel. Alle prüfen mit.“). Dann „Vergleicht und verbessert mit Grün.“ Leitfrage: Warum ruft der König die Generalstände ein, obwohl er sie 175 Jahre nicht brauchte? Antwort: Geldnot, Reformen scheitern, Krise (Hunger, drohender Bankrott). Der Zeitstrahl ist nicht maßstabsgetreu.");
   const ev = [["1614", "Letzte Generalstände"], ["1778–1783", "Krieg in Amerika, Schulden"], ["1787", "Steuerplan scheitert"], ["1788", "Missernte, Brotpreis"], ["August 1788", "König kündigt an"], ["Frühjahr 1789", "Wahlen, Beschwerdehefte"], ["5. Mai 1789", "Eröffnung in Versailles"]];
   s.addShape(pres.shapes.RECTANGLE, { x: 0.7, y: 3.72, w: 11.7, h: 0.1, fill: { color: NAVY }, line: { type: "none" } });
   txt(s, "▶", { x: 12.4, y: 3.5, w: 0.5, h: 0.5, fontSize: 24, color: NAVY, align: "center", valign: "middle" });
