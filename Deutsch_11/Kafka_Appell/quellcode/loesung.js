@@ -88,7 +88,7 @@ const inhalt = [
 
   aufgabe("Aufgabe 4: Reflexion"),
   p([t("Warum so vorsichtig und versteckt? ", { bold: true }), t("Kafka hat Furcht vor dem Vater: Er kennt das Redeverbot, Zorn und Vorwürfe. Deshalb wagt er keinen direkten Appell, sondern entlastet den Vater und formuliert seine Wünsche als Rückblick im Konjunktiv. Schon dass er schreibt statt spricht, zeigt die gestörte, komplementäre Beziehung.")], { after: 60, line: 290 }),
-  p([t("Hätte der Vater die Bitte verstanden? ", { bold: true }), t("Eher nicht: Der Vater spricht laut und direkt und hört nicht zu – eine versteckte Bitte hätte er wohl überhört oder als Vorwurf verstanden. Zudem hat er den Brief nie erhalten; der Appell erreicht ihn nicht. Auch eine „Ja, aber“-Antwort ist gut begründbar: Die offenen Bitten („sollst Du aufhören“) sind deutlich.")], { after: 0, line: 290 }),
+  p([t("Hätte er verstanden, worum Kafka ihn bittet (angenommen, er hätte den Brief gelesen)? ", { bold: true }), t("Die offenen Bitten („sollst Du aufhören“) hätte er wohl verstanden. Die versteckte Bitte um Freundlichkeit (Wort, Hand, Blick) hätte er eher überhört oder als Vorwurf aufgefasst: Er spricht laut und direkt und hört nicht zu. Auch eine „Ja, aber“-Antwort ist gut begründbar.")], { after: 0, line: 290 }),
 
   aufgabe("Aufgabe 5: Transfer – Musterrede"),
   p(t(REDE_SITUATION + " " + REDE_AUFTRAG, { size: 18, italics: true, color: MUTED }), { after: 60 }),

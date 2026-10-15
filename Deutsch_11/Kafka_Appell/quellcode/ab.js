@@ -122,11 +122,11 @@ const seite2 = [
   p(t("Trage deine Ergebnisse in das Kommunikationsquadrat ein. Konzentriere dich vor allem auf den Quadranten Appell.", { size: 21 }), { after: 80 }),
   quadrat,
   aufgabe(4, "Reflexion"),
-  p(t("Kafka hat den Brief seinem Vater nie übergeben. Warum appelliert er so vorsichtig und versteckt? Hätte der Vater die Bitte verstanden?", { size: 21 }), { after: 40 }),
+  p(t("Kafka hat den Brief nie übergeben. Warum appelliert er so vorsichtig und versteckt? Angenommen, der Vater hätte den Brief gelesen: Hätte er verstanden, worum Kafka ihn bittet? Begründe.", { size: 21 }), { after: 40 }),
   aufgabe(5, "Transfer: Kafkas Rede an den Vater", "allein"),
   p([t("Situation: ", { bold: true, size: 21 }), t(REDE_SITUATION, { size: 21 })], { after: 30 }),
   p([t("Deine Aufgabe: ", { bold: true, size: 21 }), t(REDE_AUFTRAG + " Umfang: " + REDE_UMFANG.split(" · ")[0] + ".", { size: 21 })], { after: 50 }),
-  p([t("Kriterien: ", { bold: true, size: 20 }), ...KRITERIEN.flatMap(([k, e], i) => [t((i ? "  ·  " : "") + k + ": ", { bold: true, size: 19, color: NAVY }), t(e, { size: 19 })])], { after: 0, line: 280 }),
+  p([t("Kriterien: ", { bold: true, size: 20 }), t("Anrede · zwei Ich-Botschaften · offener Appell · Bezug zum Text (Wort, Hand, Blick) · respektvoller Ton", { size: 20 })], { after: 0 }),
 ];
 
 const doc = new Document({

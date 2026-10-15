@@ -166,7 +166,7 @@ if (require.main === module) {
     rect(s, 0.9, 1.4, 3.2, 0.6, RED, { r: 0.3 });
     txt(s, "REFLEXION", { x: 0.9, y: 1.4, w: 3.2, h: 0.6, bold: true, color: WHITE, align: "center", valign: "middle" });
     txt(s, "Kafka hat den Brief nie übergeben.", { x: 0.9, y: 2.4, w: 11.4, h: 0.9, fontFace: HEAD, fontSize: 32, bold: true, color: WHITE });
-    txt(s, [{ text: "Warum appelliert er so vorsichtig und versteckt?", options: { breakLine: true } }, { text: "Hätte der Vater die Bitte verstanden?" }], { x: 0.9, y: 3.6, w: 11.4, h: 1.6, color: ICE, paraSpaceAfter: 10 });
+    txt(s, [{ text: "Warum appelliert er so vorsichtig und versteckt?", options: { breakLine: true } }, { text: "Angenommen, der Vater hätte den Brief gelesen: Hätte er verstanden, worum Kafka ihn bittet?" }], { x: 0.9, y: 3.6, w: 11.4, h: 2.6, color: ICE, paraSpaceAfter: 10 });
   }).addNotes("Aufgabe 4 im Gespräch. Ziel: Furcht → verdeckter, abgesicherter Appell. Merksatz an die Tafel.");
   redeFolie(d, "Aufgabe 5. Überleitung: „Max Brods Brief war erfolgreich – der Vater hört zu. Jetzt spricht Franz selbst, und zwar offen.“ Timer 10 Minuten, danach ein bis zwei Reden ohne Unterbrechung vortragen und nach den Kriterien auswerten. Wer nicht fertig ist, schreibt nächste Stunde weiter (keine Hausaufgabe). Hinweis: Substantive groß, Komma vor dass – auch bei „Ich hoffe, …“!");
 
