@@ -36,6 +36,7 @@ Dieses Repo enthält Unterrichtsmaterial (Deutsch 7A, Geschichte 8). Die Vorlieb
 - **Weniger Text auf den Folien** (Zukunftsregel der Lehrkraft): pro Folie nur das Nötigste, Erklärungen mündlich, Schrift mindestens 24 Punkt.
 - **Tests:** höchstens 2 Seiten, Stoff nicht aus dem Kopf abfragen, der zu schwer ist (z. B. Zahlen der Stände vorgeben), viele Wahr-oder-falsch-Aussagen (bei „falsch“ begründen), Sätze als Buchstaben zuordnen, Zusatzaufgabe nur 1 Punkt (aktuell: Wirtschaftssystem/Merkantilismus erklären).
 - **Kein Vorlese- und Heraushör-Text mehr** als Einstieg oder Erarbeitung (hat funktioniert, die Lehrkraft will es nicht wiederholen). Stattdessen selbst erarbeiten lassen, z. B. Gruppenpuzzle mit Texten.
+- **AVIVA** (Ankommen, Vorwissen, Informieren, Verarbeiten, Auswerten) als Stundenaufbau bei der Französischen Revolution; zwei Lehrkräfte im Raum, 12 Schülerinnen und Schüler, Stunden à 45 Minuten.
 - **Karikatur** als Impuls bei „Im Absolutismus fühle ich mich …“ (gibt Hinweise auf Vorrechte und Lasten).
 
 ## Gestaltung
@@ -56,4 +57,4 @@ Keine Klarnamen von Schülerinnen, Schülern oder Kolleginnen und Kollegen ins R
 - `Deutsch_7A/Reflexion.md` – Lernstand, Stundenlog, Hospitationsfeedback, offene Baustellen
 - `Geschichte_8/` – Material der Klasse 8 (Geschichte), gleiche Struktur; Reflexionslog: `Geschichte_8/Reflexion.md`
 - `Geschichte_8/Test_Staendegesellschaft_Absolutismus/` – Test-Entwurf mit Erwartungshorizont und Notenschlüssel
-- `Geschichte_8/Ausblick_Muenze/` und `Geschichte_8/Franzoesische_Revolution/` – Ausblick und Gruppenpuzzle zur Französischen Revolution
+- `Geschichte_8/Ausblick_Muenze/`, `Geschichte_8/Franzoesische_Revolution/`, `Geschichte_8/Generalstaende_Stunde1/` – Ausblick, Gruppenpuzzle und Generalstände zur Französischen Revolution

@@ -52,6 +52,12 @@
 - **Planungsentscheidungen:** drei statt vier Themen (45 Minuten), kein Hörtext, kein Zusatztext, Raster ins Heft (kein Arbeitsblatt außer den Expertentexten), nur wenige Folien.
 - **Rückmeldung der Lehrkraft:** *(steht noch aus)*
 
+### Generalstände, Stunde 1 (geplant, 45 Min., 12 Schülerinnen und Schüler, zwei Lehrkräfte)
+- **Material:** `Generalstaende_Stunde1/` (Tafelskript, Text zum Lesen, fünf Folien)
+- **Inhalt:** Test zurück (Hälfte hat gelernt, Hälfte nicht: Verteilung anonym, Berichtigung bis zur nächsten Stunde), Probleme sammeln, Zeitleiste bis 5. Mai 1789 erarbeiten, Zahlen (Menschen, Abgeordnete, Stimmen), Mini-Abstimmung mit den beiden Lehrkräften als Klerus und Adel und den Schülern als Dritter Stand (Antrag: nur Schüler putzen, Lehrkräfte befreit), Rechnung (Stimme wiegt 133-mal so viel), Merksatz, Satz „unfair, weil …“.
+- **Planungsentscheidungen:** AVIVA als Phasenmodell, Verlauf als Zeitleiste statt Gruppenpuzzle (Zeitnot), Sollbruchstelle: Mini-Abstimmung kann in Stunde 2 verschoben werden, nur fünf Folien, Schrift 24 Punkt.
+- **Rückmeldung der Lehrkraft:** *(steht noch aus)*
+
 ## Hospitationsfeedback (gesammelt)
 
 *(noch keine Einträge)*

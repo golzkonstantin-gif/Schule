@@ -1,0 +1,174 @@
+const fs = require("fs");
+const { Document, Packer, Paragraph, TextRun, Table, TableRow, TableCell, WidthType, BorderStyle, ShadingType, AlignmentType, VerticalAlign, Header, Footer, PageNumber } = require("docx");
+
+const NAVY = "1E2761", MUTED = "5B6B8C", LIGHT = "F4F7FD", BOARD = "F3F6F1", RED = "D9534F", DARK = "3D4A3F", GOLD = "FFF6E0";
+const W = 10206;
+const t = (text, o = {}) => new TextRun({ text, font: o.font || "Calibri", size: o.size || 22, bold: o.bold, italics: o.italics, color: o.color || "000000" });
+const p = (runs, o = {}) => new Paragraph({ children: Array.isArray(runs) ? runs : [runs], alignment: o.align, spacing: { before: o.before ?? 0, after: o.after ?? 100 }, keepNext: o.keepNext, indent: o.indent });
+const solid = (c, s = 8) => ({ style: BorderStyle.SINGLE, size: s, color: c });
+const all = (b) => ({ top: b, bottom: b, left: b, right: b });
+function cell(children, o = {}) {
+  return new TableCell({ children: Array.isArray(children) ? children : [children], width: { size: o.w, type: WidthType.DXA }, shading: o.fill ? { fill: o.fill, type: ShadingType.CLEAR, color: "auto" } : undefined, borders: o.borders || all(solid("B9C6E8", 6)), verticalAlign: o.valign || VerticalAlign.CENTER, margins: { top: o.m ?? 70, bottom: o.m ?? 70, left: 110, right: 110 } });
+}
+const table = (widths, rows) => new Table({ width: { size: widths.reduce((a, b) => a + b, 0), type: WidthType.DXA }, columnWidths: widths, rows });
+const row = (cells, h) => new TableRow({ children: cells, height: h ? { value: h, rule: "atLeast" } : undefined, cantSplit: true });
+const th = (txt, w, fill = DARK, size = 19) => cell(p(t(txt, { bold: true, color: "FFFFFF", size }), { after: 0, align: AlignmentType.CENTER }), { w, fill, borders: all(solid(DARK, 8)) });
+const tc = (txt, w, o = {}) => cell(p(t(txt, { size: o.size || 20, bold: o.bold }), { after: 0 }), { w, fill: o.fill });
+const kicker = (s) => p(t(s.toUpperCase(), { size: 18, color: MUTED, bold: true }), { after: 20 });
+const h1 = (s) => p(t(s, { font: "Cambria", size: 38, bold: true, color: NAVY }), { after: 60 });
+const h3 = (s) => p(t(s, { font: "Cambria", size: 24, bold: true, color: NAVY }), { before: 160, after: 60, keepNext: true });
+const S = (s, o = {}) => t(s, Object.assign({ size: 21 }, o));
+const header = new Header({ children: [new Paragraph({ tabStops: [{ type: "right", position: W }], children: [t("Geschichte · Klasse 8 · Generalstände, Stunde 1", { size: 17, color: MUTED }), t("\tfür die Lehrkraft", { size: 17, color: MUTED })] })] });
+const footer = new Footer({ children: [new Paragraph({ alignment: AlignmentType.RIGHT, children: [new TextRun({ font: "Calibri", size: 16, color: MUTED, children: ["Tafelskript · Seite ", PageNumber.CURRENT] })] })] });
+
+const BW = 1700, CW = W - BW, TW = CW - 340;
+function step(klasse, parts) {
+  const ch = [];
+  if (parts.say) ch.push(p([t("Ansage: ", { bold: true, size: 20, color: RED }), t("„" + parts.say + "“", { italics: true, size: 21 })], { after: 60 }));
+  (parts.do || []).forEach((x) => ch.push(p(S(x), { after: 50 })));
+  if (parts.extra) ch.push(...parts.extra);
+  if (parts.sol) ch.push(p([t("Erwartung: ", { bold: true, size: 19, color: MUTED }), t(parts.sol, { size: 19, color: MUTED })], { after: 0 }));
+  return table([BW, CW], [row([cell([p(t("Klasse", { size: 16, color: MUTED }), { after: 10 }), p(t(klasse, { bold: true, color: NAVY, size: 20 }), { after: 0 })], { w: BW, fill: LIGHT, valign: VerticalAlign.TOP }), cell(ch, { w: CW, valign: VerticalAlign.TOP })])]);
+}
+const gapP = () => p(t(""), { after: 30 });
+const phase = (nr, title, min, tag) => p([t(`${nr}  `, { font: "Cambria", size: 28, bold: true, color: RED }), t(title, { font: "Cambria", size: 28, bold: true, color: NAVY }), t(`   ${min} Min.`, { size: 20, bold: true, color: "C77C12" }), ...(tag ? [t(`   ${tag}`, { size: 18, color: MUTED, italics: true })] : [])], { before: 180, after: 90, keepNext: true });
+const boardBox = (title, children) => table([TW], [row([cell(p(t("TAFEL · " + title, { bold: true, color: "FFFFFF", size: 16 }), { after: 0 }), { w: TW, fill: DARK, borders: all(solid(DARK, 12)), m: 40 })]), row([cell(children, { w: TW, fill: BOARD, borders: all(solid(DARK, 12)), valign: VerticalAlign.TOP, m: 100 })])]);
+const folieBox = (title, children) => table([TW], [row([cell(p(t("FOLIE · " + title, { bold: true, color: "FFFFFF", size: 16 }), { after: 0 }), { w: TW, fill: NAVY, borders: all(solid(NAVY, 12)), m: 40 })]), row([cell(children, { w: TW, fill: LIGHT, borders: all(solid(NAVY, 12)), valign: VerticalAlign.TOP, m: 100 })])]);
+const bl = (s, o = {}) => p(t(s, { font: "Cambria", size: 20 }), Object.assign({ after: 30 }, o));
+const sollbruch = (txt) => table([TW], [row([cell(p([t("SOLLBRUCHSTELLE  ", { bold: true, size: 19, color: "B03A36" }), t(txt, { size: 19 })], { after: 0 }), { w: TW, fill: GOLD, borders: all(solid("E8A33D", 8)) })])]);
+
+const d = [];
+d.push(kicker("Tafelskript für die Lehrkraft · Einzelstunde (45 Min.) · 12 Schülerinnen und Schüler · zwei Lehrkräfte"), h1("Generalstände, Stunde 1: Wie unfair ist die Abstimmung?"));
+d.push(p(t("Ziel: Die Klasse bekommt den Test zurück und reflektiert ihre Vorbereitung. Sie erarbeitet den Verlauf bis zu den Generalständen als Zeitleiste und erlebt in einer Mini-Abstimmung, wie unfair die Abstimmung nach Ständen ist. Aufbau nach AVIVA. Es gibt keinen Hörtext, der Text wird gelesen. Rollen der beiden Lehrkräfte: L1 moderiert, L2 spielt in der Abstimmung den Adel und unterstützt an der Tafel.", { size: 21 }), { after: 80 }));
+
+d.push(table([800, 2300, 4300, 2806], [
+  row([th("Min.", 800), th("AVIVA", 2300), th("Phase", 4300), th("Arbeitsform", 2806)], 320),
+  ...[["8", "Ankommen", "0  Test zurück, Reflexion", "gemeinsam, mündlich"], ["3", "Vorwissen", "1  Probleme Frankreichs sammeln", "gemeinsam, mündlich"], ["12", "Informieren", "2  Text lesen, Zeitleiste erarbeiten", "allein, gemeinsam, abschreiben"], ["14", "Verarbeiten", "3  Zahlen, Mini-Abstimmung, Rechnung, Merksatz", "gemeinsam, abschreiben"], ["5", "Auswerten", "4  Satz „unfair, weil …“, Ausblick", "allein, mündlich"], ["3", "—", "Puffer", "—"]].map((r) => row(r.map((v, i) => tc(v, [800, 2300, 4300, 2806][i], { bold: i < 3 })), 320)),
+]));
+
+d.push(h3("Eindeutige Ansagen (wörtlich)"));
+d.push(table([4700, 5506], [
+  ["„Stifte liegen. Ihr hört nur zu.“", "Sie erklären oder fragen, niemand schreibt."],
+  ["„Meldet euch. Ihr schreibt noch nichts auf.“", "Gemeinsames Gespräch."],
+  ["„Jetzt schreibt ihr ab: …“", "Zeitleiste oder Merksatz ins Heft."],
+  ["„Jetzt arbeitet ihr allein. Die Aufgabe steht rechts.“", "Einzelarbeit."],
+  ["„Wer drankommt, schreibt an die Tafel. Alle prüfen mit.“", "Zeitleiste oder Ergebnis an der Tafel."],
+  ["„Vergleicht und verbessert mit Grün.“", "Kontrolle im eigenen Heft."],
+].map(([a, b]) => row([tc(a, 4700, { fill: LIGHT, bold: true }), tc(b, 5506)], 340))));
+d.push(p(S("Material: Text „Wie kam es zu den Generalständen?“ (ein Blatt pro Person), Tests (verdeckt), Folien 1 bis 5, Grün zum Verbessern. Vorab an der Tafel vorbereiten: Strichliste der Noten (ohne Namen) und die Erfolgsquote je Test-Aufgabe in Prozent.", { italics: true, color: MUTED }), { before: 80, after: 40 }));
+
+// Phase 0
+d.push(phase("0", "Test zurück, Reflexion", 8, "AVIVA: Ankommen"));
+d.push(step("hört zu, meldet sich", {
+  say: "Stifte liegen. Ihr bekommt jetzt euren Test zurück. Schaut ihn noch nicht an.",
+  do: [
+    "1  Tests verdeckt austeilen. Niemand nennt Noten laut.",
+    "2  Ihre Rückmeldung (Vorschlag): „Die Ergebnisse zeigen zwei Hälften. Eine Hälfte hat erkennbar gelernt, und das zahlt sich aus. Die andere Hälfte hat offensichtlich nicht oder kaum gelernt. Der Stoff war derselbe, die Merksätze und der Lückentext lagen bei allen im Heft. Das ist keine Frage von Begabung, sondern von Vorbereitung.“",
+    "3  Strichliste der Noten (ohne Namen) und die Erfolgsquote je Aufgabe an der Tafel zeigen. Fragen: Welche Aufgabe lief am besten, welche am schlechtesten?",
+    "4  „Meldet euch. Ihr schreibt noch nichts auf. Was haben die gemacht, die gut abgeschnitten haben? Was macht ihr beim nächsten Mal anders?“ Drei Stichworte an die Tafel sammeln (z. B. Merksätze wiederholen, Lückentext ohne Wortspeicher üben, Begriffe abfragen).",
+    "5  „Vergleicht und verbessert mit Grün. Die falschen Aufgaben berichtigt ihr bis zur nächsten Stunde.“",
+  ],
+  sol: "Hinweis: keine Namen, keine Noten laut. Die zweite Lehrkraft kann die Strichliste vorab auszählen. Die Berichtigung ist Hausaufgabe.",
+}));
+
+// Phase 1
+d.push(phase("1", "Probleme Frankreichs sammeln", 3, "AVIVA: Vorwissen aktivieren"));
+d.push(step("meldet sich", {
+  say: "Meldet euch. Ihr schreibt noch nichts auf. Welche Probleme hatte Frankreich?",
+  do: ["Stichworte aus der Münzgeschichte an die Tafel (bleiben stehen): leere Staatskasse · ungleiche Steuerlast · Hunger und Brotpreis · keine Mitsprache des Dritten Standes (Bauern und Bürger) · Entfremdung zwischen Adel und Dorf.", "Leitfragen an die Tafel (bleiben stehen): „Wie kommt es zu den Generalständen? Wie fair ist die Abstimmung?“"],
+}));
+
+// Phase 2
+d.push(phase("2", "Text lesen, Zeitleiste erarbeiten", 12, "AVIVA: Informieren"));
+d.push(step("arbeitet allein, dann gemeinsam", {
+  say: "Ich teile den Text aus. Jetzt arbeitet ihr allein. Die Aufgabe steht rechts.",
+  do: ["Folie 1. Text austeilen. 3 Minuten lesen, Jahreszahlen unterstreichen, Stichworte an den Rand."],
+  extra: [folieBox("1 · Ü1 Text lesen", [p(t("Ü1 Wie kam es zu den Generalständen?", { font: "Cambria", size: 22, bold: true, color: NAVY }), { after: 40 }), bl("1. Lies den Text."), bl("2. Unterstreiche alle Jahreszahlen."), bl("3. Schreibe zu jeder Jahreszahl ein Stichwort.", { after: 40 }), p([t("Zeit: ", { bold: true, size: 19 }), t("3 Minuten · allein · leise     ", { size: 19 }), t("Fertig? Stift hinlegen.", { size: 19, italics: true })], { after: 0 })]), gapP()],
+}));
+d.push(p(t(""), { after: 20 }));
+d.push(step("kommt an die Tafel", {
+  say: "Wer drankommt, schreibt an die Tafel. Alle prüfen mit.",
+  do: ["Zeitleiste gemeinsam entwickeln, 5 Minuten. Schüler nennen Zahl und Stichwort, einer oder eine schreibt an. Leitfrage danach:"],
+  extra: [boardBox("Mitte · Zeitleiste", [
+    bl("1614    letzte Generalstände (danach 175 Jahre nicht mehr)"),
+    bl("1778–1783    Krieg in Amerika, hohe Schulden"),
+    bl("1787    Plan „Steuern auch für Adel und Klerus“ scheitert"),
+    bl("1788    Missernte, Brotpreis steigt, Staatsbankrott droht"),
+    bl("August 1788    König kündigt Generalstände an"),
+    bl("Frühjahr 1789    Wahlen, Beschwerdehefte"),
+    bl("5. Mai 1789    Eröffnung in Versailles", { after: 0 }),
+  ]), gapP()],
+  sol: "Leitfrage: „Warum ruft der König die Generalstände ein, obwohl er sie 175 Jahre nicht brauchte?“ Antwort: Er braucht Geld, die Privilegierten blockieren Reformen, dazu kommen Hunger und drohender Bankrott. Danach: „Jetzt schreibt ihr ab: die Zeitleiste.“ (4 Minuten)",
+}));
+
+// Phase 3
+d.push(phase("3", "Zahlen, Mini-Abstimmung, Rechnung", 14, "AVIVA: Verarbeiten"));
+d.push(step("meldet sich", {
+  say: "Meldet euch. Ihr schreibt noch nichts auf. Was fällt euch an diesen Zahlen auf?",
+  do: ["3a  Folie 2 zeigen (3 Minuten). Zahlen vergleichen: Wie viele Menschen, wie viele Abgeordnete, wie viele Stimmen?"],
+  extra: [folieBox("2 · Wer hat wie viel Gewicht?", [table([2900, 1500, 1500, 2326], [
+    row([th("", 2900, NAVY), th("Klerus", 1500, NAVY), th("Adel", 1500, NAVY), th("Dritter Stand (Bauern und Bürger)", 2326, NAVY)], 340),
+    ...[["Menschen", "150 000", "500 000", "20 000 000"], ["Anteil", "ca. 1 %", "ca. 2 %", "ca. 97 %"], ["Abgeordnete", "ca. 290", "ca. 270", "ca. 580"], ["Stimmen bei der Abstimmung nach Ständen", "1", "1", "1"]].map((r) => row(r.map((v, i) => tc(v, [2900, 1500, 1500, 2326][i], { bold: i === 0, fill: i === 0 ? LIGHT : undefined, size: 19 })), 360)),
+  ])]), gapP()],
+  sol: "Erwartet: Der Dritte Stand (Bauern und Bürger) ist fast die ganze Bevölkerung und stellt etwa die Hälfte der Abgeordneten, hat aber nur eine von drei Stimmen. Klerus und Adel zusammen (ca. 3 %) haben zwei von drei Stimmen und können ihn immer überstimmen.",
+}));
+d.push(p(t(""), { after: 20 }));
+d.push(step("spielt mit, meldet sich", {
+  say: "Wir spielen jetzt eine Abstimmung. Das ist nur ein Spiel, es gilt nicht. Die Lehrkräfte sind Klerus und Adel, ihr seid der Dritte Stand (Bauern und Bürger).",
+  do: [
+    "3b  Folie 3 zeigen (5 Minuten): Antrag „Nur Schüler putzen künftig das Klassenzimmer und räumen die Tische auf. Lehrkräfte sind davon befreit.“",
+    "Schritt 1, Abstimmung nach Ständen: Jeder Stand hat eine Stimme. Die Schüler beraten 30 Sekunden und stimmen als Gruppe ab. L1 (Klerus) Ja, L2 (Adel) Ja, Dritter Stand Nein. Ergebnis 2:1, der Antrag ist angenommen. Ein Schüler schreibt das Ergebnis an die Tafel.",
+    "Reaktion der Klasse abwarten: „Wir sind doch viel mehr!“ Dann Schritt 2, Abstimmung nach Köpfen: 2 Ja, 12 Nein. Ergebnis 2:12, der Antrag ist abgelehnt.",
+    "Fragen: Wie fühlt sich das an? Was war unfair? Was ist das Problem: die Lehrkräfte oder die Regeln?",
+  ],
+  sol: "Die Regeln sind das Problem, nicht die Personen. Betonen Sie die Rollen („Wir spielen“), damit es nicht persönlich wird.",
+}));
+d.push(p(t(""), { after: 20 }));
+d.push(sollbruch("Wenn die Zeit knapp wird, entfällt 3b (die Mini-Abstimmung) und beginnt Stunde 2 (5 Minuten). Stunde 1 endet dann nach 3a mit der Frage: „Wie würdet ihr abstimmen lassen?“ Phase 4 wird mündlich."));
+d.push(p(t(""), { after: 20 }));
+d.push(step("rechnet mit, schreibt ab", {
+  say: "Meldet euch. Ihr schreibt noch nichts auf. Wie viel zählt eine Stimme?",
+  do: [
+    "3c  Rechnung (3 Minuten) an der Tafel: Im Klassenspiel zählt eine Lehrerstimme wie 1 Person, die Schülerstimme nur wie 1 von 12. Die Lehrerstimme wiegt zwölfmal so viel.",
+    "Übertragung: In Frankreich stehen hinter einer Stimme des Klerus 150 000 Menschen, hinter einer Stimme des Dritten Standes (Bauern und Bürger) 20 000 000. 20 000 000 : 150 000 ≈ 133. Beim Adel: 20 000 000 : 500 000 = 40.",
+    "Frage: „Was würdet ihr als Dritter Stand in Frankreich fordern?“ Erwartung: Abstimmung nach Köpfen. Das ist genau, was die Abgeordneten 1789 fordern (Brücke zu Stunde 2).",
+    "3d  Merksatz: „Jetzt schreibt ihr von der Folie ab: Merksatz 1. Rahmt ihn rot ein.“ (Folie 4)",
+  ],
+  extra: [folieBox("4 · Merksatz 1 – abschreiben, rot umrahmen", [
+    p(t("Abstimmung nach Ständen", { bold: true, color: RED, font: "Cambria", size: 22 }), { after: 40 }),
+    p(t("Bei den Generalständen hat jeder Stand eine Stimme. Klerus und Adel (zusammen ca. 3 % der Bevölkerung) haben damit zwei von drei Stimmen und können den Dritten Stand (Bauern und Bürger, ca. 97 %) immer überstimmen.", { font: "Cambria", size: 22 }), { after: 50 }),
+    p(t("Beispiel: Eine Stimme des Klerus wiegt rund 133-mal so viel wie eine Stimme des Dritten Standes (Bauern und Bürger).", { size: 20, color: MUTED }), { after: 50 }),
+    p(t("Test: Wie viele Menschen stehen hinter einer Stimme?", { size: 20, color: MUTED }), { after: 0 }),
+  ]), gapP()],
+}));
+
+// Phase 4
+d.push(phase("4", "Auswerten", 5, "AVIVA: Auswerten"));
+d.push(step("arbeitet allein", {
+  say: "Jetzt arbeitet ihr allein. Die Aufgabe steht rechts.",
+  extra: [folieBox("5 · Ü2 Unfair?", [p(t("Ü2 Die Abstimmung nach Ständen", { font: "Cambria", size: 22, bold: true, color: NAVY }), { after: 40 }), bl("1. Schreibe Ü2 ins Heft."), bl("2. Beende den Satz: „Die Abstimmung nach Ständen ist unfair, weil …“"), bl("3. Begründe mit mindestens einer Zahl.", { after: 40 }), p([t("Zeit: ", { bold: true, size: 19 }), t("4 Minuten · allein · leise     ", { size: 19 }), t("Fertig? Stift hinlegen.", { size: 19, italics: true })], { after: 0 })]), gapP()],
+  do: ["Danach 1 bis 2 Sätze vorlesen lassen. Ausblick: „Was passiert, wenn der Dritte Stand nach Köpfen fordert und der König ablehnt? Das sehen wir in der nächsten Stunde.“"],
+  sol: "Beispiel: „Die Abstimmung nach Ständen ist unfair, weil der Dritte Stand (Bauern und Bürger) ca. 97 % der Menschen stellt, aber nur eine von drei Stimmen hat und immer überstimmt wird.“",
+}));
+
+d.push(h3("So sieht das Heft am Ende der Stunde aus"));
+d.push(table([2300, 7906], [
+  ["Überschrift", "Generalstände 1789 (mit Lineal unterstrichen) · Datum rechts"],
+  ["Berichtigung", "Falsche Testaufgaben mit Grün verbessert (bis zur nächsten Stunde)"],
+  ["Zeitleiste", "1614 bis 5. Mai 1789 mit Stichworten"],
+  ["Merksatz 1", "Abstimmung nach Ständen – rot umrahmt"],
+  ["Ü2", "Satz „Die Abstimmung nach Ständen ist unfair, weil …“"],
+].map(([a, b]) => row([tc(a, 2300, { bold: true, fill: LIGHT }), tc(b, 7906)], 340))));
+
+d.push(h3("Zum Prüfen"));
+[
+  "Zahlen und Daten (Abgeordnete 290/270/580, Krieg in Amerika, 1787, August 1788, Zinslast) stammen aus meinem Wissen, bitte gegen Ihr Buch lesen. Die Anzahl der Menschen (150 000 / 500 000 / 20 000 000) stammt aus Ihrem Gruppenpuzzle-Material.",
+  "Die Analogie zeigt das Verhältnis der Bevölkerung (wenige Privilegierte, viele Menschen). Bei den Abgeordneten stellt der Dritte Stand ca. die Hälfte, nicht 97 %. Beides steht auf Folie 2 und lässt sich im Gespräch trennen.",
+  "Die Test-Rückgabe hängt von Ihren Ergebnissen ab. Der Rückmeldungstext ist ein Vorschlag, bitte in Ihren Worten anpassen.",
+].forEach((x) => d.push(p([S("• "), S(x)], { after: 40, indent: { left: 240 } })));
+
+(async () => {
+  const doc = new Document({ styles: { default: { document: { run: { font: "Calibri", size: 22 } } } }, sections: [{ properties: { page: { size: { width: 11906, height: 16838 }, margin: { top: 1000, bottom: 850, left: 850, right: 850 } } }, headers: { default: header }, footers: { default: footer }, children: d }] });
+  fs.writeFileSync("../Tafelskript_Generalstaende_Stunde1.docx", await Packer.toBuffer(doc));
+  console.log("ok");
+})();
