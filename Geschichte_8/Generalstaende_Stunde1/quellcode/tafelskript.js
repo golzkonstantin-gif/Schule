@@ -105,7 +105,7 @@ d.push(step("kommt an die Tafel", {
 d.push(phase("3", "Abstimmung: erst Gedankenspiel 1789, dann die Schule", 14, "AVIVA: Verarbeiten"));
 d.push(step("meldet sich", {
   say: "Meldet euch. Ihr schreibt noch nichts auf. Was fällt euch an diesen Zahlen auf?",
-  do: ["3a  Folie 8 zeigen (3 Minuten, Balken). Zahlen vergleichen: Wie viele Menschen, wie viele Abgeordnete, wie viele Stimmen?"],
+  do: ["3a  Folie 8 zeigen (3 Minuten, Balken). Die Abstimmungsregel (früher eine Stimme pro Stand, der Dritte Stand fordert eine Stimme pro Abgeordnetem) steht im letzten Absatz des Textes. Zahlen vergleichen: Wie viele Menschen, wie viele Abgeordnete, wie viele Stimmen?"],
   extra: [folieBox("8 · Wer hat wie viel Gewicht?", [table([2900, 1500, 1500, 2326], [
     row([th("", 2900, NAVY), th("Klerus", 1500, NAVY), th("Adel", 1500, NAVY), th("Dritter Stand (Bauern und Bürger)", 2326, NAVY)], 340),
     ...[["Menschen", "150 000", "500 000", "20 000 000"], ["Anteil", "ca. 1 %", "ca. 2 %", "ca. 97 %"], ["Abgeordnete", "ca. 290", "ca. 270", "ca. 580"], ["Stimmen bei der Abstimmung nach Ständen", "1", "1", "1"]].map((r) => row(r.map((v, i) => tc(v, [2900, 1500, 1500, 2326][i], { bold: i === 0, fill: i === 0 ? LIGHT : undefined, size: 19 })), 360)),
