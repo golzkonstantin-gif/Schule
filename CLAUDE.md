@@ -33,7 +33,7 @@ Dieses Repo enthält Unterrichtsmaterial (Deutsch 7A, Geschichte 8). Die Vorlieb
 - **„Dritter Stand“ immer mit Klammer:** „Dritter Stand (Bauern und Bürger)“, damit klar ist, wer gemeint ist.
 - **Wahr-oder-falsch-Einstieg einzeln nacheinander:** Aussage, Unterrichtsgespräch, dann die Antwort mit Begründung auf der Folie (je eine Folie).
 - **Säulen-Einstieg:** erst fragen, wie ein König ein Land regieren kann, dann „Ihr erinnert euch: fünf Säulen. Welche?“, dann Merksatz und Lückentext.
-- **Weniger Text auf den Folien** (Zukunftsregel der Lehrkraft): pro Folie nur das Nötigste, Erklärungen mündlich, Schrift mindestens 24 Punkt.
+- **Folien:** pro Folie nur das Nötigste, Schrift mindestens 24 Punkt. In Geschichte sind mehr Folien in Ordnung, wenn sie unterstützen und sinnvoll visualisieren (Zeitstrahl, Balken, Ergebnisfolien). Bei AVIVA-Stunden gehören Lernziele, Ablauf nach AVIVA, Phasenanzeige und Lernziel-Check dazu.
 - **Tests:** höchstens 2 Seiten, Stoff nicht aus dem Kopf abfragen, der zu schwer ist (z. B. Zahlen der Stände vorgeben), viele Wahr-oder-falsch-Aussagen (bei „falsch“ begründen), Sätze als Buchstaben zuordnen, Zusatzaufgabe nur 1 Punkt (aktuell: Wirtschaftssystem/Merkantilismus erklären).
 - **Kein Vorlese- und Heraushör-Text mehr** als Einstieg oder Erarbeitung (hat funktioniert, die Lehrkraft will es nicht wiederholen). Stattdessen selbst erarbeiten lassen, z. B. Gruppenpuzzle mit Texten.
 - **Texte im Blocksatz** (Expertentexte, Lesetexte), Zeitstrahl als Blatt mit vorgegebenen Ereignissen, Schüler tragen die Daten ein.
