@@ -274,6 +274,7 @@ Die Lehrkraft möchte das weiterverfolgen, noch ohne Material. Die Satzklammer (
   - Mit *: Epik und Dramatik (Ur-Ei-Schnipsel Nr. 4–8). Sie werden nach den Ferien aufgegriffen, falls sie nicht geschafft werden.
 - **Lernwortschatz Deutsch – Polnisch (16.10.):** Für eine Schülerin mit Polnisch als Herkunftssprache gibt es ein zweiseitiges Lernblatt mit allen Begriffen der Einheit: Grundbegriffe, Lyrik (inkl. Reimarten), Epik, Dramatik, Lesetechniken und Textarbeit, die drei Bewertungen, Arbeitsaufträge und Wörter aus Paddy Fingal. Begriffe auf Deutsch, Erklärungen auf Polnisch.
 - **Vokabelliste Deutsch – Polnisch (16.10.):** Für dieselbe Schülerin gibt es eine dreiseitige Vokabelliste über den bisherigen Unterricht. Sie hat vier Abschnitte (Im Unterricht, Arbeitsaufträge, Verben und Zeitformen mit Farbcode, Balladen) und leere Zeilen für eigene Wörter (`Wortschatz_Polnisch/`).
+- **Entscheidung der Lehrkraft (16.10.):** S-PL (Polnisch als Herkunftssprache) wird in Deutsch 7A immer berücksichtigt. Ab jetzt bekommt sie zu jeder Stunde eine Handreichung: Fachbegriffe und Aufträge auf Deutsch, Erklärungen auf Polnisch. Vokabelliste und Lernwortschatz werden fortgeführt (siehe `CLAUDE.md`).
 - **Rückmeldung der Lehrkraft (Fr):** *(steht noch aus)*
 
 ## Hospitationsfeedback (gesammelt)

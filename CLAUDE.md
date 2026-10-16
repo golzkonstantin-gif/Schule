@@ -6,6 +6,7 @@ Dieses Repo enthält Unterrichtsmaterial (Deutsch). Die Lehrkraft plant hier gem
 
 1. Das Reflexionslog der Klasse lesen (z. B. `Deutsch_7A/Reflexion.md`): Lernstand, offene Baustellen, Rückmeldungen zu vergangenen Stunden, Hospitationsfeedback.
 2. Die Planung ausdrücklich darauf beziehen („Letztes Mal hing die Klasse bei …, deshalb …“).
+   - In Deutsch 7A gehört zu jeder Stunde auch die Handreichung auf Polnisch für S-PL (siehe Klassenspezifisch).
 3. Wenn die Lehrkraft Rückmeldung zu einer Stunde oder Hospitationsfeedback gibt: im Reflexionslog eintragen (Vorlage steht dort) und mitcommitten. Dauerhafte neue Vorlieben zusätzlich hier in `CLAUDE.md` ergänzen.
 
 ## Vorlieben der Lehrkraft (gelten für alle Klassen und Fächer)
@@ -70,7 +71,14 @@ Die folgenden Vorlieben und Reflexionen gelten für die gesamte weitere Planung,
 
 - **Einheit Verben und Zeitformen** wird mit einem Test abgeschlossen (Stand 12.10., Test folgt später). Danach folgt laut schulinternem Curriculum die Einheit **Balladen** („Leute, höret die Geschicht’“, ca. 9 Wochen, siehe `Deutsch_7A/Balladen/SchiC_Balladen.md`), nicht Kurzgeschichten. Die Einheit wird am SchiC und am RLP Teil C ausgerichtet, einschließlich der dort vorgegebenen Leistungsbewertung.
 - **Balladen (Stand 13.10.):** Gearbeitet wird mit dem **Lehrbuch** (z. B. „Paddy Fingal“, LB S. 136 f.) und im **Heft**, **ohne Übungs-Schnipsel**. Ausnahme: Merksätze bei Bedarf als Schnipsel. Aufgaben stehen auf der Folie bzw. Tafel, die Schüler schreiben ins Heft. Die Einheit startet mit „Paddy Fingal“, weil die Ballade für den ersten Eindruck zugänglicher ist; „John Maynard“ folgt nach den Herbstferien.
-- **Zweisprachiger Lernwortschatz (Stand 16.10.):** Eine Schülerin hat Polnisch als Herkunftssprache. Für sie gibt es ein Lernblatt mit den Fachbegriffen und Arbeitsaufträgen: Begriffe und Beispiele auf Deutsch (mit Artikel und Plural), Erklärungen auf Polnisch (`Deutsch_7A/Balladen/Lernwortschatz_Balladen_Deutsch_Polnisch`). Dazu gibt es eine Vokabelliste über den gesamten Unterricht: Unterrichtswörter, Arbeitsaufträge, Verben und Zeitformen, Balladen, jeweils mit Beispiel (`Deutsch_7A/Wortschatz_Polnisch/Vokabelliste_Deutsch_Polnisch`). Bei neuen Fachbegriffen oder Arbeitsaufträgen beides ergänzen oder für die nächste Einheit ein neues Blatt anlegen.
+- **Schülerin mit Polnisch als Herkunftssprache – immer berücksichtigen (Stand 16.10.).** Eine Schülerin der 7A hat Polnisch als Herkunftssprache. Ihre Unterstützung gehört zu jeder Planung in Deutsch 7A.
+  - **Zu jeder Stunde gibt es eine Handreichung für sie**, ohne dass die Lehrkraft eigens danach fragt. Die Handreichung umfasst ein halbes bis ganzes A4-Blatt und wird mit dem übrigen Material erstellt, im Stundenordner als `Handreichung_Polnisch_<Datum>`.
+    - Deutsches bleibt deutsch: Fachbegriffe (mit Artikel und Plural), Arbeitsaufträge im Wortlaut der Tafel bzw. des Schnipsels und Beispiele.
+    - Auf Polnisch stehen die Erklärungen: das Stundenziel, der Ablauf in Stichpunkten, die Bedeutung der neuen Fachbegriffe, was in jeder Aufgabe zu tun ist, und Hinweise zu schwierigen Wörtern im Text (z. B. Worterklärungen aus dem Lehrbuch).
+    - Keine Lösungen, sie bearbeitet die Aufgaben selbst. Sie bekommt dasselbe Material wie die Klasse, die Handreichung ergänzt es nur.
+    - Im Tafelskript beim Material vermerken: „Handreichung Polnisch für S-PL“.
+  - **Wortschatz fortführen:** Neue Fachbegriffe und Arbeitsaufträge kommen in die Vokabelliste (`Deutsch_7A/Wortschatz_Polnisch/Vokabelliste_Deutsch_Polnisch`, Quellcode dort). Zu jeder Einheit gibt es ein Lernblatt mit ausführlichen polnischen Erklärungen, z. B. `Deutsch_7A/Balladen/Lernwortschatz_Balladen_Deutsch_Polnisch`.
+  - Polnische Texte sorgfältig formulieren und der Lehrkraft empfehlen, sie gegenlesen zu lassen. Im Repo heißt die Schülerin nur „S-PL“, nie mit Namen.
 - Für die Verb-Einheit galt:
   - **Markieren statt Klammer (Deutsch 7A, bis alle Tempora behandelt sind):** Hilfsverb rot und Partizip II gelb (bzw. Infinitiv blau) markieren. Noch keine Satzklammer-Bögen und kein Merksatz zur Satzklammer – das kommt erst am Schluss der Tempus-Einheit.
   - **Modalverben** sind nach hinten verschoben (nach den Tempora).
