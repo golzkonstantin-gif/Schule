@@ -273,6 +273,7 @@ Die Lehrkraft möchte das weiterverfolgen, noch ohne Material. Die Satzklammer (
   - Ablauf: A 3′ → V 8′ LB 1 a → I 8′ Reime an Strophe 1 erschließen → V 7′ Reim-Schnipsel → I 3′ Ur-Ei → V 10′ Ur-Ei-Schnipsel Nr. 1–3 (Lyrik) → A 6′.
   - Mit *: Epik und Dramatik (Ur-Ei-Schnipsel Nr. 4–8). Sie werden nach den Ferien aufgegriffen, falls sie nicht geschafft werden.
 - **Lernwortschatz Deutsch – Polnisch (16.10.):** Für eine Schülerin mit Polnisch als Herkunftssprache gibt es ein zweiseitiges Lernblatt mit allen Begriffen der Einheit: Grundbegriffe, Lyrik (inkl. Reimarten), Epik, Dramatik, Lesetechniken und Textarbeit, die drei Bewertungen, Arbeitsaufträge und Wörter aus Paddy Fingal. Begriffe auf Deutsch, Erklärungen auf Polnisch.
+- **Vokabelliste Deutsch – Polnisch (16.10.):** Für dieselbe Schülerin gibt es eine dreiseitige Vokabelliste über den bisherigen Unterricht. Sie hat vier Abschnitte (Im Unterricht, Arbeitsaufträge, Verben und Zeitformen mit Farbcode, Balladen) und leere Zeilen für eigene Wörter (`Wortschatz_Polnisch/`).
 - **Rückmeldung der Lehrkraft (Fr):** *(steht noch aus)*
 
 ## Hospitationsfeedback (gesammelt)
