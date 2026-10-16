@@ -175,7 +175,7 @@ doc.push(grid([900, 1300, 3400, 4606], ["Zeit", "AVIVA", "Phase", "Alle Schüler
 ], { bold: [true, true, true, false], colors: [C.hv, C.hv, NAVY, null], h: 340 }));
 doc.push(p([S("Puffer: ", { bold: true, color: C.hv }), S("keiner – deshalb klar markiert. Mit *: Nr. 4–8 auf dem Ur-Ei-Schnipsel (Epik, Dramatik) und der Ausblick auf „John Maynard“. Was offen bleibt, ist nach den Ferien der Einstieg (Wiederholung). Wenn es eng wird: in der Wiederholung nur Frage 3 vergleichen.")], { before: 80, after: 60 }));
 doc.push(p([S("Heft: ", { bold: true }), S("Überschrift „Paddy Fingal – Reime und Merkmale der Ballade“ · LB 1 a (drei Antworten in Sätzen, mit Strophe) · Schnipsel „Reime erkennen“ · Schnipsel „Ur-Ei“ (Nr. 1–3, * 4–8), mit Grün verbessert · „Heute habe ich gelernt, …“")], { after: 40 }));
-doc.push(p([S("Material: ", { bold: true }), S("Lehrbuch S. 136 f. · Schnipsel „Reime erkennen“ und „Die Ballade – ein Ur-Ei“ (je 2 pro A4) · Kleber · Kreide in zwei Farben für a und b, wenn vorhanden.")], { after: 40 }));
+doc.push(p([S("Material: ", { bold: true }), S("Lehrbuch S. 136 f. · Schnipsel „Reime erkennen“ und „Die Ballade – ein Ur-Ei“ (je 2 pro A4) · Kleber · Kreide in zwei Farben für a und b, wenn vorhanden · Handreichung Polnisch für S-PL (beide Schnipsel zweisprachig auf einer Seite).")], { after: 40 }));
 doc.push(p([S("Tipp: ", { bold: true, color: C.hv }), S("Ziel und Ablauf vor der Stunde an die Seitentafel schreiben, die Fragen zu 1 a an die Mitteltafel. Strophe 1 (nur die Versenden) und das Ei erst in der Stunde anschreiben.")], { after: 60 }));
 
 doc.push(avivaPhase("A", "Ankommen: Ziel und Ablauf", 3));
