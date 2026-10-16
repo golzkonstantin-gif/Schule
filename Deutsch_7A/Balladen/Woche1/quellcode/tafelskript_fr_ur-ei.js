@@ -155,30 +155,33 @@ const zielTafel = (ziel, ablauf) => board("Seitentafel links · vor der Stunde a
   ...ablauf.map((a, i) => p(t(`${i + 1}  ${a}`, { size: 20 }), { after: 10 })),
 ]);
 const GC = { ly: "2A8C8C", ep: "7A5BA6", dr: "C77C12" };
-const ZIEL = "Ich kann an einer Ballade lyrische, epische und dramatische Merkmale nachweisen.";
+const ZIEL = "Ich kann Reime und das Reimschema bestimmen und an einer Ballade lyrische Merkmale nachweisen.";
 const doc = [];
-doc.push(kicker("Tafelskript für die Lehrkraft · Fr 16.10. · Einzelstunde (45 Min.) · AVIVA · ohne Präsentation"), h1("Paddy Fingal – Inhalt sichern und Merkmale der Ballade"));
-doc.push(box([p([S("Bezug: ", { bold: true }), S("Am Donnerstag wurde nach der Testrückgabe nur die erste Aufgabe (Ü1, Wiederholung Lesetechniken) geschafft. LB-Aufgabe 1 a ist deshalb heute die Wiederholung. Sie sichert den Inhalt, den die Klasse für die Analyse braucht. Danach wird die Ballade zum ersten Mal formal untersucht. Der Analyse-Schnipsel bündelt das „Ur-Ei“ und die Belegstellen, abgeschrieben wird nichts. Es ist die letzte Stunde vor den Herbstferien, nach den Ferien wird das Ur-Ei an „John Maynard“ wiederholt.")], { after: 0 })], LIGHT2));
+doc.push(kicker("Tafelskript für die Lehrkraft · Fr 16.10. · Einzelstunde (45 Min.) · AVIVA · ohne Präsentation"), h1("Paddy Fingal – Reime und Merkmale der Ballade"));
+doc.push(box([p([S("Bezug: ", { bold: true }), S("Am Donnerstag wurde nach der Testrückgabe nur die erste Aufgabe (Ü1, Wiederholung Lesetechniken) geschafft. LB-Aufgabe 1 a ist deshalb heute die Wiederholung. Sie sichert den Inhalt, den die Klasse für die Analyse braucht. Danach wird die Ballade zum ersten Mal formal untersucht. Reime und Reimschema sind dafür neu und werden zuerst erschlossen (Schnipsel „Reime erkennen“). Erst dann folgt das „Ur-Ei“: Heute steht die Lyrik im Mittelpunkt, Epik und Dramatik sind mit * markiert. Abgeschrieben wird nichts. Es ist die letzte Stunde vor den Herbstferien, nach den Ferien wird das Ur-Ei an „John Maynard“ wiederholt.")], { after: 0 })], LIGHT2));
 doc.push(p([S("Lernziel: ", { bold: true }), S(ZIEL, { italics: true })], { before: 120, after: 40 }));
-doc.push(p([S("Antwort auf „Was habt ihr heute gelernt?“: ", { bold: true }), S("„Eine Ballade ist ein Gedicht mit Strophen, Reim und Kehrreim. Sie erzählt eine Geschichte mit Figuren und Handlung, und die Figuren sprechen wie im Theater. Das habe ich an Paddy Fingal mit Strophen belegt.“")], { after: 100 }));
+doc.push(p([S("Antwort auf „Was habt ihr heute gelernt?“: ", { bold: true }), S("„Wörter reimen sich, wenn sie ab dem letzten betonten Vokal gleich klingen. Mit Buchstaben bestimme ich das Reimschema: Paarreim aabb, Kreuzreim abab, umarmender Reim abba. Paddy Fingal hat Paarreime und einen Kehrreim – das sind Merkmale eines Gedichts.“")], { after: 100 }));
+doc.push(zielTafel(ZIEL, ["Wiederholung: Paddy Fingal, LB-Aufgabe 1 a", "Reime erkennen", "Die Ballade als „Ur-Ei“: Lyrik (* Epik, Dramatik)", "Ziel erreicht? Heute habe ich gelernt, …", "* Ausblick: John Maynard"]));
+doc.push(p(t(""), { after: 40 }));
 doc.push(h3("Ablauf"));
 doc.push(grid([900, 1300, 3400, 4606], ["Zeit", "AVIVA", "Phase", "Alle Schüler …"], [
   ["3′", "A", "Ankommen: Ziel und Ablauf", "lesen Ziel und Ablauf, schreiben die Überschrift"],
-  ["11′", "V", "Wiederholung: LB-Aufgabe 1 a", "lesen genau im Tandem, beantworten drei Fragen im Heft, prüfen in der Kreide-Kette mit"],
-  ["8′", "I", "Die Ballade als „Ur-Ei“", "hören zu, lesen Strophe 1 im Chor, finden Verse und Reime gemeinsam"],
-  ["15′", "V", "Schnipsel: Merkmale nachweisen", "tragen allein Belege ein, vergleichen zu zweit"],
+  ["8′", "V", "Wiederholung: LB-Aufgabe 1 a", "lesen genau im Tandem, beantworten drei Fragen im Heft, prüfen in der Kreide-Kette mit"],
+  ["8′", "I", "Reime erschließen", "lesen Strophe 1 im Chor, finden Reimwörter, lesen den Merkkasten auf dem Schnipsel"],
+  ["7′", "V", "Schnipsel „Reime erkennen“", "bestimmen allein drei Reimschemata, vergleichen zu zweit"],
+  ["3′", "I", "Die Ballade als „Ur-Ei“", "hören zu, Tafelbild entsteht"],
+  ["10′", "V", "Schnipsel „Ur-Ei“: Lyrik", "tragen allein Nr. 1–3 ein; * Nr. 4–8 (Epik, Dramatik)"],
   ["6′", "A", "Auswerten: Ziel erreicht?", "tragen Belege in der Kreide-Kette ins Tafel-Ei ein, alle prüfen; „Heute habe ich gelernt, …“"],
-], { bold: [true, true, true, false], colors: [C.hv, C.hv, NAVY, null], h: 360 }));
-doc.push(p([S("Puffer: ", { bold: true, color: C.hv }), S("2 Minuten. Mit * markiert: Nr. 8 auf dem Schnipsel (Spannung) und der Ausblick auf „John Maynard“. Was offen bleibt, ist nach den Ferien der Einstieg (Wiederholung).")], { before: 80, after: 60 }));
-doc.push(p([S("Heft: ", { bold: true }), S("Überschrift „Paddy Fingal – Merkmale der Ballade“ · LB 1 a (drei Antworten in Sätzen, mit Strophe) · Schnipsel „Ur-Ei“ eingeklebt und ausgefüllt, mit Grün verbessert · „Heute habe ich gelernt, …“")], { after: 40 }));
-doc.push(p([S("Material: ", { bold: true }), S("Lehrbuch S. 136 f. · Schnipsel „Die Ballade – ein Ur-Ei“ (2 pro A4, eine Hälfte pro Schüler) · Kleber · Kreide in drei Farben, wenn vorhanden (Lyrik, Epik, Dramatik).")], { after: 40 }));
-doc.push(p([S("Tipp: ", { bold: true, color: C.hv }), S("Ziel und Ablauf vor der Stunde an die Seitentafel schreiben, die Fragen zu 1 a an die Mitteltafel. Das Ei erst in Phase I zeichnen.")], { after: 60 }));
-doc.push(zielTafel(ZIEL, ["Wiederholung: Paddy Fingal, LB-Aufgabe 1 a", "Die Ballade als „Ur-Ei“", "Schnipsel: Merkmale nachweisen", "Ziel erreicht? Heute habe ich gelernt, …", "* Ausblick: John Maynard"]));
+], { bold: [true, true, true, false], colors: [C.hv, C.hv, NAVY, null], h: 340 }));
+doc.push(p([S("Puffer: ", { bold: true, color: C.hv }), S("keiner – deshalb klar markiert. Mit *: Nr. 4–8 auf dem Ur-Ei-Schnipsel (Epik, Dramatik) und der Ausblick auf „John Maynard“. Was offen bleibt, ist nach den Ferien der Einstieg (Wiederholung). Wenn es eng wird: in der Wiederholung nur Frage 3 vergleichen.")], { before: 80, after: 60 }));
+doc.push(p([S("Heft: ", { bold: true }), S("Überschrift „Paddy Fingal – Reime und Merkmale der Ballade“ · LB 1 a (drei Antworten in Sätzen, mit Strophe) · Schnipsel „Reime erkennen“ · Schnipsel „Ur-Ei“ (Nr. 1–3, * 4–8), mit Grün verbessert · „Heute habe ich gelernt, …“")], { after: 40 }));
+doc.push(p([S("Material: ", { bold: true }), S("Lehrbuch S. 136 f. · Schnipsel „Reime erkennen“ und „Die Ballade – ein Ur-Ei“ (je 2 pro A4) · Kleber · Kreide in zwei Farben für a und b, wenn vorhanden.")], { after: 40 }));
+doc.push(p([S("Tipp: ", { bold: true, color: C.hv }), S("Ziel und Ablauf vor der Stunde an die Seitentafel schreiben, die Fragen zu 1 a an die Mitteltafel. Strophe 1 (nur die Versenden) und das Ei erst in der Stunde anschreiben.")], { after: 60 }));
 
 doc.push(avivaPhase("A", "Ankommen: Ziel und Ablauf", 3));
-doc.push(...steps([["zuhoeren", { say: "Stifte liegen. Ihr hört nur zu. Links steht unser Ziel und der Ablauf. Zuerst wiederholen wir, worum es in Paddy Fingal geht. Danach schauen wir, wie die Ballade gebaut ist. Jetzt schreibt ihr die Überschrift ab: Paddy Fingal – Merkmale der Ballade." }]]));
+doc.push(...steps([["zuhoeren", { say: "Stifte liegen. Ihr hört nur zu. Links steht unser Ziel und der Ablauf. Zuerst wiederholen wir, worum es in Paddy Fingal geht. Danach untersuchen wir die Reime und schauen, wie die Ballade gebaut ist. Jetzt schreibt ihr die Überschrift ab: Paddy Fingal – Reime und Merkmale der Ballade." }]]));
 
-doc.push(avivaPhase("V", "Vorwissen aktivieren: LB-Aufgabe 1 a als Wiederholung", 11));
+doc.push(avivaPhase("V", "Vorwissen aktivieren: LB-Aufgabe 1 a als Wiederholung", 8));
 doc.push(board("Mitteltafel · LB-Aufgabe 1 a", [
   bl([N("1 a  ", { bold: true }), N("Lest genau. Beantwortet im Heft in ganzen Sätzen, mit Strophe:")]),
   bl("    1  Wie sieht Paddy Fingal aus?"),
@@ -187,11 +190,33 @@ doc.push(board("Mitteltafel · LB-Aufgabe 1 a", [
 ]));
 doc.push(p(t(""), { after: 60 }));
 doc.push(...steps([
-  ["partner", { say: "Jetzt arbeitet ihr im Tandem. Lest die Ballade genau, Strophe für Strophe abwechselnd. Dann schreibt jeder die drei Antworten in sein Heft. Sieben Minuten. Fertig? Stift hinlegen.", sol: "1 Ein Riese mit einem schwarzen Bart, sechs Ellen lang, Fäuste so groß wie Tonnen; er wirft mit einem Mastbaum (Str. 1). · 2 Der Schotte will herausfinden, wer von beiden stärker ist (Str. 2). · 3 Schaya steckt Paddy ins Bett, türmt die Kissen hoch und gibt ihn als ihr Baby aus. Der Schotte sieht nur die riesige Nase, denkt an einen riesigen Vater und flieht (Str. 5–10).", do: ["Methodenkarte „Tandemlesen“ (Tandems wie festgelegt)."] }],
+  ["partner", { say: "Jetzt arbeitet ihr im Tandem. Lest die Ballade genau, Strophe für Strophe abwechselnd. Dann schreibt jeder die drei Antworten in sein Heft. Sechs Minuten. Fertig? Stift hinlegen.", sol: "1 Ein Riese mit einem schwarzen Bart, sechs Ellen lang, Fäuste so groß wie Tonnen; er wirft mit einem Mastbaum (Str. 1). · 2 Der Schotte will herausfinden, wer von beiden stärker ist (Str. 2). · 3 Schaya steckt Paddy ins Bett, türmt die Kissen hoch und gibt ihn als ihr Baby aus. Der Schotte sieht nur die riesige Nase, denkt an einen riesigen Vater und flieht (Str. 5–10).", do: ["Methodenkarte „Tandemlesen“ (Tandems wie festgelegt)."] }],
   ["tafel", { say: "Wer drankommt, schreibt die Antwort in Stichworten mit Strophe an die Tafel. Alle prüfen mit und verbessern mit Grün.", do: ["Kreide-Kette: drei Schüler, je eine Frage. Bei Frage 3 nachfragen: „Welche Lesetechnik hast du gebraucht?“ (genau)."] }],
 ]));
 
-doc.push(avivaPhase("I", "Informieren: Die Ballade als „Ur-Ei“", 8));
+doc.push(avivaPhase("I", "Informieren: Reime erschließen", 8));
+doc.push(board("Mitteltafel · Strophe 1, nur die Versenden (rechts Platz für die Buchstaben)", [
+  bl([N("… von Riesen"), N("art", { bold: true }), N("        "), N("a", { bold: true, color: "2A8C8C" })]),
+  bl([N("… schwarzer B"), N("art", { bold: true }), N("        "), N("a", { bold: true, color: "2A8C8C" })]),
+  bl([N("… wie Tonnen gr"), N("oß", { bold: true }), N("        "), N("b", { bold: true, color: "C77C12" })]),
+  bl([N("… als Wurfgesch"), N("oss", { bold: true }), N("        "), N("b", { bold: true, color: "C77C12" })]),
+  bl([N("… so ein Kerl war Paddy Fingal!        "), N("x  → Kehrreim", { bold: true })]),
+  bl([N("aabb = Paarreim", { bold: true, color: NAVY })], { before: 40 }),
+]));
+doc.push(p(t(""), { after: 60 }));
+doc.push(...steps([
+  ["gemeinsam", { say: "Lehrbuch S. 136. Wir lesen Strophe 1 zusammen im Chor. … Hört auf die Enden der Verse. Welche Wörter klingen gleich?", do: ["Methodenkarte „Chorisches Lesen“.", "Versenden an die Tafel schreiben, die gleich klingenden Silben unterstreichen. Nachfragen: „Ab wo klingen Bart und Riesenart gleich?“ – ab dem betonten Vokal: -art."] }],
+  ["gemeinsam", { say: "Damit wir Reime beschreiben können, geben wir ihnen Buchstaben. Was sich reimt, bekommt denselben Buchstaben. Welchen Buchstaben bekommt Vers 3? Und Vers 5?", sol: "aabb = Paarreim · Vers 5 reimt sich nicht (x), kehrt aber in jeder Strophe wieder: Kehrreim (Refrain)." }],
+  ["zuhoeren", { say: "Stifte liegen. Ihr hört nur zu. Ich teile den Schnipsel „Reime erkennen“ aus. Klebt ihn ein. Wir lesen den Kasten oben zusammen: Paarreim, Kreuzreim, umarmender Reim.", do: ["Zur Kontrolle kurz fragen: „Wie heißt das Muster, wenn sich Vers 1 und 3 reimen?“ (abab, Kreuzreim) – „und wenn sich Vers 1 und 4 reimen?“ (abba, umarmender Reim)."] }],
+]));
+
+doc.push(avivaPhase("V", "Verarbeiten: Schnipsel „Reime erkennen“", 7));
+doc.push(...steps([
+  ["luecken", { say: "Jetzt arbeitet ihr allein. Bestimmt bei 1 bis 3 das Reimschema und die Reimart. Lest die Versenden halblaut. Fünf Minuten. Fertig? Stift hinlegen.", sol: "1 Schreck a · Versteck a · daher b · sehr b → Paarreim · *Paddy Fingal x (Kehrreim) · 2 leer a · da b · schwer a · Ja b → Kreuzreim · 3 zu a · Kragen b · wagen b · Ruh a → umarmender Reim" }],
+  ["kontrolle", { say: "Vergleicht mit eurem Nachbarn und verbessert mit Grün.", do: ["Nur Nr. 3 kurz im Plenum klären (umarmender Reim ist am schwersten)."] }],
+]));
+
+doc.push(avivaPhase("I", "Informieren: Die Ballade als „Ur-Ei“", 3));
 doc.push(board("Mitteltafel · Tafelbild (Ei in drei Teile geteilt, bleibt bis zur Auswertung stehen)", [
   p([N("Die Ballade – ein „Ur-Ei“ (Goethe)", { bold: true, color: NAVY })], { after: 60, align: AlignmentType.CENTER }),
   bl([N("Lyrik", { bold: true, color: GC.ly }), N(" – wie ein Gedicht: Strophen, Verse, Reim, Kehrreim")]),
@@ -201,22 +226,20 @@ doc.push(board("Mitteltafel · Tafelbild (Ei in drei Teile geteilt, bleibt bis z
 ]));
 doc.push(p(t(""), { after: 60 }));
 doc.push(...steps([
-  ["zuhoeren", { say: "Stifte liegen. Ihr hört nur zu. Goethe hat die Ballade ein Ur-Ei genannt. In einem Ei steckt schon alles, was später daraus wird. In der Ballade stecken alle drei großen Gattungen: Lyrik, also Gedichte, Epik, also Erzählungen, und Dramatik, also Theater. Heute weisen wir das an Paddy Fingal nach.", do: ["Beim Sprechen das Ei zeichnen und die drei Teile beschriften. Relevanz nennen: Die Merkmale braucht ihr für die erste Bewertung (Analyse)."] }],
-  ["gemeinsam", { say: "Lehrbuch S. 136. Wir lesen Strophe 1 zusammen im Chor. … Zählt die Verse. Welche Wörter reimen sich?", sol: "5 Verse · Riesenart – Bart (a a), groß – Wurfgeschoss (b b) = Paarreim · 5. Vers eingerückt: „so ein Kerl war Paddy Fingal!“ = Kehrreim", do: ["Methodenkarte „Chorisches Lesen“.", "Reimwörter an der Tafel mit a a b b beschriften. Nachfragen: „Kommt der letzte Vers noch einmal vor?“ – Ja, jede Strophe endet mit „Paddy Fingal“."] }],
-  ["zuhoeren", { say: "Ich teile jetzt den Schnipsel aus. Klebt ihn unter die Antworten von 1 a. Nummer 1 tragen wir gemeinsam ein.", sol: "1  11 Strophen mit je 5 Versen" }],
+  ["zuhoeren", { say: "Stifte liegen. Ihr hört nur zu. Reime kennt ihr aus Gedichten. Eine Ballade ist aber mehr: Goethe hat sie ein Ur-Ei genannt. In ihr stecken alle drei großen Gattungen – Lyrik, also Gedichte, Epik, also Erzählungen, und Dramatik, also Theater. Heute weisen wir vor allem die Lyrik nach.", do: ["Beim Sprechen das Ei zeichnen und die drei Teile beschriften. Relevanz: Die Merkmale braucht ihr für die erste Bewertung (Analyse).", "Schnipsel „Ur-Ei“ austeilen und unter den Reim-Schnipsel kleben lassen."] }],
 ]));
 
-doc.push(avivaPhase("V", "Verarbeiten: Schnipsel – Merkmale nachweisen", 15));
+doc.push(avivaPhase("V", "Verarbeiten: Schnipsel „Ur-Ei“ – Lyrik (* Epik, Dramatik)", 10));
 doc.push(...steps([
-  ["luecken", { say: "Jetzt arbeitet ihr allein. Füllt Nummer 2 bis 7 aus und notiert immer die Strophe. Zehn Minuten. Wer fertig ist, macht Nummer 8 mit Stern. Fertig? Stift hinlegen.", sol: "2 Paarreim (aabb), z. B. Riesenart / Bart (Str. 1) · 3 „… Paddy Fingal“ (5. Vers, wird abgewandelt) · 4 Paddy Fingal, Schaya, der Schotte (*die Nachbarn) · 5 Anfang Str. 1–3, Höhepunkt Str. 8–9 (der Schotte sieht die Nase), Ende Str. 10–11 (Flucht, Siegesgeschrei); andere begründete Grenzen gelten · 6 Präteritum, z. B. „Paddy Fingal war von Riesenart“ (Str. 1), „Ins Bette Paddy Fingal kroch“ (Str. 5) · 7 Paddy (Str. 4), der Schotte (Str. 6, 9), Schaya (Str. 7) · *8 Paddy gegen den Schotten; Frage: Findet der Schotte Paddy? / Wer ist stärker?", do: ["Herumgehen. Typische Hürde bei Nr. 5: Höhepunkt = die Stelle, an der sich alles entscheidet (der Schotte steht vor dem Bett).", "Bei Nr. 6 Bezug zur Verb-Einheit: Woran erkennst du das Präteritum? (war, kroch, lief)"] }],
-  ["kontrolle", { say: "Vergleicht mit eurem Nachbarn und verbessert mit Grün. Drei Minuten." }],
+  ["luecken", { say: "Jetzt arbeitet ihr allein. Füllt Nummer 1 bis 3 aus und notiert die Strophe. Wer fertig ist, macht weiter mit Nummer 4 bis 8 – die haben heute einen Stern. Fertig? Stift hinlegen.", sol: "1 11 Strophen mit je 5 Versen · 2 Paarreim (aabb), z. B. Riesenart / Bart (Str. 1) · 3 „… Paddy Fingal“ (5. Vers, wird abgewandelt) · *4 Paddy Fingal, Schaya, der Schotte (die Nachbarn) · *5 Anfang Str. 1–3, Höhepunkt Str. 8–9 (der Schotte sieht die Nase), Ende Str. 10–11; andere begründete Grenzen gelten · *6 Präteritum, z. B. „Paddy Fingal war von Riesenart“ (Str. 1), „Ins Bette Paddy Fingal kroch“ (Str. 5) · *7 Paddy (Str. 4), der Schotte (Str. 6, 9), Schaya (Str. 7) · *8 Paddy gegen den Schotten; Frage: Findet der Schotte Paddy?", do: ["Herumgehen. Bei Nr. 2 auf den Reim-Schnipsel verweisen. Bei *6 Bezug zur Verb-Einheit: Woran erkennst du das Präteritum? (war, kroch, lief)"] }],
+  ["kontrolle", { say: "Vergleicht mit eurem Nachbarn und verbessert mit Grün." }],
 ]));
 
 doc.push(avivaPhase("A", "Auswerten: Ziel erreicht?", 6));
 doc.push(...steps([
-  ["tafel", { say: "Wer drankommt, schreibt einen Beleg mit Strophe in den passenden Teil des Eis. Alle prüfen mit und verbessern mit Grün.", do: ["Kreide-Kette: je ein Schüler für Lyrik, Epik und Dramatik (z. B. Paarreim Str. 1 · Präteritum „kroch“ Str. 5 · wörtliche Rede Schaya Str. 7)."] }],
+  ["tafel", { say: "Wer drankommt, schreibt einen Beleg mit Strophe in den passenden Teil des Eis. Alle prüfen mit und verbessern mit Grün.", do: ["Kreide-Kette: zuerst drei Schüler für die Lyrik (Strophen/Verse · Paarreim · Kehrreim), dann – falls bearbeitet – je einer für Epik und Dramatik (z. B. Präteritum „kroch“ Str. 5 · wörtliche Rede Schaya Str. 7)."] }],
   ["luecken", { say: "Schaut auf unser Ziel links. Schreibt ins Heft: Heute habe ich gelernt, …", do: ["Zwei Schüler lesen vor. Auf den Ablauf zurückgreifen: Ziel erreicht? Was mit * offen ist, kommt nach den Ferien als Wiederholung.", "* Ausblick: „Nach den Ferien hört ihr John Maynard. Dann prüft ihr: Ist das auch ein Ur-Ei?“"] }],
 ]));
 const pageProps = { page: { size: { width: 11906, height: 16838 }, margin: { top: 900, bottom: 800, left: 850, right: 850, header: 400, footer: 400 } } };
 const styles = { default: { document: { run: { font: "Calibri", size: 22 } } } };
-Packer.toBuffer(new Document({ styles, sections: [{ properties: pageProps, headers: { default: header("Balladen · Fr 16.10.") }, footers: { default: footer("Tafelskript") }, children: doc }] })).then((buf) => fs.writeFileSync("Tafelskript_Fr_16-10_Paddy_Fingal_Ur-Ei.docx", buf));
+Packer.toBuffer(new Document({ styles, sections: [{ properties: pageProps, headers: { default: header("Balladen · Fr 16.10.") }, footers: { default: footer("Tafelskript") }, children: doc }] })).then((buf) => fs.writeFileSync("Tafelskript_Fr_16-10_Paddy_Fingal_Reime_Ur-Ei.docx", buf));

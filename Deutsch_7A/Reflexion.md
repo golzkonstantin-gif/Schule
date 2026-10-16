@@ -268,6 +268,10 @@ Die Lehrkraft möchte das weiterverfolgen, noch ohne Material. Die Satzklammer (
   - Ziel: Ich kann an einer Ballade lyrische, epische und dramatische Merkmale nachweisen.
   - Ablauf: A 3′ → V 11′ LB 1 a als Wiederholung (Tandem, Kreide-Kette) → I 8′ Ur-Ei-Tafelbild, Strophe 1 im Chor, Verse und Reim gemeinsam → V 15′ Schnipsel allein, Partnervergleich → A 6′ Belege in der Kreide-Kette ins Tafel-Ei, „Heute habe ich gelernt, …“.
   - Mit *: Nr. 8 (Spannung) und der Ausblick auf John Maynard. Nach den Ferien das Ur-Ei an „John Maynard“ wiederholen.
+- **Ergänzung (16.10.):** Die Lehrkraft möchte vorher Reime erschließen, weil Reim und Reimschema neu sind. Neuer Schnipsel „Reime erkennen“ (Merkkasten Reim, Reimschema, Paarreim/Kreuzreim/umarmender Reim; Übung: Paddy Fingal Str. 4, Heben-Text, Judo-Text). Das Tafelskript heißt jetzt `Tafelskript_Fr_16-10_Paddy_Fingal_Reime_Ur-Ei`.
+  - Neues Ziel: Ich kann Reime und das Reimschema bestimmen und an einer Ballade lyrische Merkmale nachweisen.
+  - Ablauf: A 3′ → V 8′ LB 1 a → I 8′ Reime an Strophe 1 erschließen → V 7′ Reim-Schnipsel → I 3′ Ur-Ei → V 10′ Ur-Ei-Schnipsel Nr. 1–3 (Lyrik) → A 6′.
+  - Mit *: Epik und Dramatik (Ur-Ei-Schnipsel Nr. 4–8). Sie werden nach den Ferien aufgegriffen, falls sie nicht geschafft werden.
 - **Rückmeldung der Lehrkraft (Fr):** *(steht noch aus)*
 
 ## Hospitationsfeedback (gesammelt)
