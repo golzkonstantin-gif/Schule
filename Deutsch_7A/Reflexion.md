@@ -262,7 +262,13 @@ Die Lehrkraft möchte das weiterverfolgen, noch ohne Material. Die Satzklammer (
   - Ziel: Ich kann mit den Lesetechniken Informationen in der Ballade finden und Fragen zum Inhalt mit Textbeleg beantworten.
   - Ablauf: A 10′ Ziel/Ablauf und Testrückgabe (Notenschlüssel an der Seitentafel, alle verbessern einen Fehler mit Grün) → V 9′ Wiederholung Lesetechniken (Situationen A–C) und Ü1 a/b → I 2′ Auftrag LB-Aufgabe 1 → V 15′ Tandemlesen und LB 1 a im Heft → A 5′ Kreide-Kette zu 1 a, „Heute habe ich gelernt, …“.
   - Mit *: Frage 5 in Ü1 b, LB 1 b (nacherzählen im Tandem, A Str. 1–5, B Str. 6–11). Nicht Geschafftes wird am Freitag als Wiederholung aufgegriffen.
-- **Rückmeldung der Lehrkraft (Do):** *(steht noch aus)*
+- **Rückmeldung der Lehrkraft (Do 15.10.):** Nach der Testrückgabe wurde nur die erste Aufgabe (Ü1, Wiederholung Lesetechniken) geschafft. LB-Aufgabe 1 a ist noch offen.
+- **Fr 16.10. geplant: „Paddy Fingal – Inhalt sichern und Merkmale der Ballade“** (Tafelskript ohne Präsentation, Schnipsel „Die Ballade – ein Ur-Ei“, 2 pro A4)
+  - Wunsch der Lehrkraft: inhaltlich mit Paddy Fingal weitermachen, dann die Merkmale der Ballade formal analysieren, mit einem Schnipsel.
+  - Ziel: Ich kann an einer Ballade lyrische, epische und dramatische Merkmale nachweisen.
+  - Ablauf: A 3′ → V 11′ LB 1 a als Wiederholung (Tandem, Kreide-Kette) → I 8′ Ur-Ei-Tafelbild, Strophe 1 im Chor, Verse und Reim gemeinsam → V 15′ Schnipsel allein, Partnervergleich → A 6′ Belege in der Kreide-Kette ins Tafel-Ei, „Heute habe ich gelernt, …“.
+  - Mit *: Nr. 8 (Spannung) und der Ausblick auf John Maynard. Nach den Ferien das Ur-Ei an „John Maynard“ wiederholen.
+- **Rückmeldung der Lehrkraft (Fr):** *(steht noch aus)*
 
 ## Hospitationsfeedback (gesammelt)
 
