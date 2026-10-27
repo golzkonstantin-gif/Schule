@@ -29,7 +29,7 @@ Die Lehrkraft hat Literatur eingespeist (überwiegend Geschichtsdidaktik, Studie
 
 - Struktur und Ziel transparent (Seitentafel, AVIVA, Überblicksfolie).
 - Fehlerkultur: Fehleranalyse statt Rätsel, Verbessern mit Grün.
-- Sicherung: Exit-Ticket, „Heute habe ich gelernt, …“.
+- Sicherung: Exit-Ticket; seit 27.10. eine konkrete Abschlussaufgabe zu den Zielen statt der Floskel „Heute habe ich gelernt, …“.
 - Lebenswelt (Leistungssport), vielfältige Methoden (Satzstreifen, Zeitstrahl, Tandemlesen).
 - Rückmeldungen der Klasse fließen sofort in die Planung (Tabellen, Platz auf Schnipseln).
 - Kleinschrittig bei Vorwissenslücken. Das deckt sich mit der Literatur (einfache Aktivierung zuerst).
@@ -40,7 +40,7 @@ Die Lehrkraft hat Literatur eingespeist (überwiegend Geschichtsdidaktik, Studie
 2. **Anteil echter Lernzeit:** Am 12.10. war nur ein Schüler aktiv (seit AVIVA behoben, noch nicht durch Hospitationsfeedback bestätigt).
 3. **Redeanteil der Schüler:** Die Kreide-Kette bringt Ruhe, aber wenig Sprechen.
 4. **Differenzierung:** Bisher außer S-PL kaum vorhanden.
-5. **Überprüfbarkeit:** „Heute habe ich gelernt“ ist eine Selbstaussage. Ein Vorher-Nachher-Vergleich fehlt.
+5. **Überprüfbarkeit:** Die Floskel „Heute habe ich gelernt“ war eine Selbstaussage (seit 27.10. ersetzt durch eine konkrete Abschlussaufgabe, die die Ziele prüft). Ein Vorher-Nachher-Vergleich fehlt noch.
 6. **Schüler-Feedback an die Lehrkraft** und **Bewegung** kommen kaum vor.
 
 ## Bewusst nicht übernommen
@@ -111,7 +111,7 @@ Er ergänzt das bisherige Muster (AVIVA, Ziel und Ablauf an der Tafel, feste Ans
 Dazu gelten:
 - Ergebnissicherung nicht in die Hausaufgabe schieben. Die Leistungsbewertung folgt erst danach.
 - Material vorab bereitlegen oder verteilen lassen, damit keine Austeilaktionen Zeit kosten.
-- **Die Phase „Auswerten“ wird nie gestrichen** (AVIVA: alle fünf Phasen in jeder Lerneinheit, auch in 45 Minuten). Das Stern-Verfahren (*) trifft nur Stoff in „Verarbeiten“, nie das Stundenende. Das Ziel „Haben wir es erreicht?“ und „Heute habe ich gelernt, …“ bleiben fester Teil jeder Stunde.
+- **Die Phase „Auswerten“ wird nie gestrichen** (AVIVA: alle fünf Phasen in jeder Lerneinheit, auch in 45 Minuten). Das Stern-Verfahren (*) trifft nur Stoff in „Verarbeiten“, nie das Stundenende. Das Ziel „Haben wir es erreicht?“ und eine inhaltliche Abschlussaufgabe zu den Zielen bleiben fester Teil jeder Stunde (nicht die Floskel „Heute habe ich gelernt, …“).
 - **Direkt oder indirekt wird pro Phase entschieden, nicht für die ganze Stunde.** Im Skript steht bei „Warum“, ob eine Phase von der Lehrkraft geführt (direkt) oder von den Schülern gesteuert wird (indirekt), z. B. direkte Erklärung in „Informieren“, selbstständige Anwendung am Ende von „Verarbeiten“.
 - Laufzettel, Portfolio und Daumenprobe werden nicht eingeführt (wenige Arbeitsblätter, keine Selbsteinschätzung). Die Lern-Landkarte kann als Heftseite am Ende der Balladen sinnvoll sein.
 
