@@ -6,8 +6,8 @@ Stand 27.10.2026 (Entwurf zur Abnahme). 1 Stunde pro Woche bis Halbjahresende, 1
 
 - **Leitfrage der Reihe:** Wie kam es zur Französischen Revolution, und war sie ein Erfolg?
 - **Übergreifende Intention:** Die Klasse rekonstruiert Ursachen und Verlauf (1789 bis 1815) und beurteilt am Ende die Revolution mit Sachurteil und Werturteil.
-- **Eingangsdiagnose (Vorher-Nachher):** Stunde 2, Ankommen: Im Heft in zwei Sätzen „Was ist eine Revolution? Ist sie gut oder schlecht? Warum?“ Die Seite bleibt im Heft und wird in Stunde 10 mit der begründeten Urteilsaufgabe verglichen. Das ist Lehrerdiagnose, keine Selbsteinschätzung.
-- **Methodenaufbau (SchiC):** Karikatur in Stunde 2 (Modell, dann angeleitet; wieder in Test 1), Verfassungsschaubild in Stunde 4 (Modell, dann Fehler im Schaubild finden), Zusammenhänge rekonstruieren in Stunde 6 und 8 (Ursache-Folge-Kette), Sach- und Werturteil in Stunde 7 (Modell), 10 (angeleitet), Test 2 (selbstständig).
+- **Eingangsdiagnose (Vorher-Nachher):** Stunde 2, Ankommen: Im Heft in zwei Sätzen „Was ist eine Revolution? Ist sie gut oder schlecht? Warum?“ Die Seite bleibt im Heft und wird in Stunde 11 mit dem begründeten Gesamturteil verglichen. Das ist Lehrerdiagnose, keine Selbsteinschätzung.
+- **Methodenaufbau (SchiC):** Karikatur in Stunde 2 (Modell, dann angeleitet; wieder in Test 1), Verfassungsschaubild in Stunde 4 (Modell, dann Fehler im Schaubild finden), Zusammenhänge rekonstruieren in Stunde 6 und 8 (Ursache-Folge-Kette), Sach- und Werturteil in Stunde 7 (Modell), 9 (angeleitet), Test 2 in Stunde 10 (selbstständig), Gesamturteil in Stunde 11.
 - **Urteilsaufbau:** Sachurteil zuerst mit Beleg, dann Werturteil mit offengelegtem Maßstab („Ich bewerte das nach …“). Formulierungshilfen als Satzanfänge in drei Stufen, keine fertigen Sätze. Kriterien („Ich kann …“-Stufen) stehen vor der Leistung auf der Folie. Keine Selbsteinschätzung der Schüler.
 - **Differenzierung:** Höchstens eine Aufgabe pro Stunde mit gestuften Hilfen (drei Karten am Pult): Stunde 2 (Karikatur), Stunde 7 (Urteil).
 - **Vorgehen je Phase:** Direkt (Lehrkraft erklärt in Portionen, modelliert), wo etwas Neues aufgebaut wird (Stunde 2 Karikatur, Stunde 4 Schaubild, Stunde 7 Urteil). Indirekt (Selbsterarbeitung aus Text, Ordnen, Spiel), wo das Vorwissen vorhanden ist.
@@ -30,12 +30,12 @@ Status: geplant · gelaufen · Rückmeldung (R) im Reflexionslog.
 | 7 | 16.12. | 11.12. | Jakobinerherrschaft und Terror | **Sach- und Werturteil** (Modell) | offen | offen |
 | – | | | Weihnachtsferien | | | |
 | 8 | 06.01. | 18.12. | Ende der Revolution 1795–1799, Aufstieg Napoleons | Zusammenhänge rekonstruieren | offen | offen |
-| 9 | 13.01. | 08.01. | Napoleon: Reformen und Fall | | offen | offen |
-| 10 | 20.01. | 15.01. | Wiener Kongress*, Zeitstrahl, Wiederholung; Urteil „War die Revolution ein Erfolg?“ | Urteil (angeleitet) | offen | offen |
-| 11 | 27.01. | 22.01. | **Test 2** mit Urteilsaufgabe | Urteil (selbstständig) | offen | offen |
+| 9 | 13.01. | 08.01. | Napoleon: Reformen und Fall; Urteil angeleitet („Erbe der Revolution oder Verrat?“) | Urteil (angeleitet) | offen | offen |
+| 10 | 20.01. | 15.01. | **Test 2** (Stunden 6–9) mit Urteilsaufgabe | Urteil (selbstständig) | offen | offen |
+| 11 | 27.01. | 22.01. | Rückgabe und Berichtigung Test 2; Wiener Kongress; Gesamturteil „War die Revolution ein Erfolg?“ | Urteil (Reihenabschluss) | offen | offen |
 | R | – | 29.01. | 8C: Reserve, Rückgabe, Ausblick Industrielle Revolution (8D hat keine Reserve) | | | |
 
-**Risiko:** Test 2 liegt bei der 8D auf dem 27.01., kurz vor dem Halbjahresende. Je nach Notenschluss ist die Rückgabe knapp. Der Wiener Kongress (mit *) wird deshalb in Modul 3 verschoben, wenn eine Stunde ausfällt oder die Klasse langsamer ist.
+**Entscheidung 27.10.:** Test 2 liegt am 20.01. (Stunde 10), damit die Rückgabe vor dem Halbjahresende möglich ist. Die Urteilsstunde und der Wiener Kongress rücken dadurch auf Stunde 11 (27.01.), der Wiener Kongress bleibt mit *.
 
 ## Die Stunden im Einzelnen
 
@@ -57,16 +57,16 @@ Je Stunde: Ich-kann-Ziel, Prüfaufgabe („Woran erkenne ich es?“), Mindestzie
 
 **8 Ende der Revolution und Aufstieg Napoleons.** Ich kann erklären, warum viele Menschen 1799 einen starken Mann akzeptierten (Sturz Robespierres 1794, Direktorium 1795–1799, Staatsstreich 1799). Prüfaufgabe: zwei begründete Ursachen. Mindestziel: zwei Ursachen. Vorgehen: indirekt (Text und Zeitstrahl wie in Stunde 1). Gelenk: Was macht Napoleon aus der Revolution?
 
-**9 Napoleon: Reformen und Fall.** Ich kann zwei Reformen Napoleons (z. B. Code civil) und zwei Gründe für sein Ende (Russland 1812, Leipzig 1813, Waterloo 1815) nennen. Prüfaufgabe: Zeitstrahl ergänzen und zwei Gründe nennen. Mindestziel: Reformen und ein Grund; Fall kann kurz bleiben. Vorgehen: indirekt (Text, Zeitstrahl). Gelenk: Wer ordnet Europa danach neu?
+**9 Napoleon: Reformen und Fall, Urteil angeleitet.** Ich kann zwei Reformen Napoleons (z. B. Code civil) und zwei Gründe für sein Ende (Russland 1812, Leipzig 1813, Waterloo 1815) nennen. Prüfaufgabe: Zeitstrahl ergänzen und zwei Gründe nennen. Mindestziel: Reformen, ein Grund für das Ende und das angeleitete Urteil; Fall kann kurz bleiben. Vorgehen: indirekt (Text, Zeitstrahl). Zusätzlich: Ich kann zu „Erbe der Revolution oder Verrat?“ ein Sachurteil mit Beleg und ein Werturteil mit Maßstab schreiben (angeleitet, Kriterien für Test 2 auf der Folie). Gelenk: Das üben wir im Test selbstständig.
 
-**10 Wiener Kongress, Wiederholung, Urteil.** Ich kann ein begründetes Urteil zu „War die Französische Revolution ein Erfolg?“ schreiben (zwei Perspektiven, Sachurteil vor Werturteil). Prüfaufgabe: das Urteil mit Vorher-Nachher-Vergleich zur Eingangsseite. Mindestziel: Urteil und Wiederholung; Wiener Kongress mit * (bei Zeitnot an den Anfang von Modul 3). Vorgehen: Kriterien vorab auf Folie (Stufen „Ich kann …“), angeleitetes Schreiben mit Satzanfängen.
+**10 Test 2** (Stunden 6–9, Zeitstrahl, Urteilsaufgabe zu Terror oder Napoleon mit vorab bekannten Kriterien, kurze Rückfrage zum Verfassungsschaubild als Wiederholung). Gleiches Format wie Test 1. Kriterien der Urteilsaufgabe stehen in Stunde 9 auf der Folie.
 
-**11 Test 2** (Stunden 6–10, Zeitstrahl, Urteilsaufgabe mit bekannten Kriterien, kurze Rückfrage zum Verfassungsschaubild als Wiederholung). Gleiches Format wie Test 1.
+**11 Rückgabe, Wiener Kongress, Gesamturteil.** Ich kann ein begründetes Urteil zu „War die Französische Revolution ein Erfolg?“ schreiben (zwei Perspektiven, Sachurteil vor Werturteil) und mit meiner Eingangsseite aus Stunde 2 vergleichen. Prüfaufgabe: das Gesamturteil. Mindestziel: Berichtigung Test 2 und Gesamturteil; Wiener Kongress mit * (Ausblick auf Modul 3, falls die Zeit fehlt). Vorgehen: Berichtigung mit Grün, angeleitetes Schreiben mit Satzanfängen.
 
 **Reserve** (nur 8C, 29.01.): Rückgabe und Berichtigung, Ausblick auf die Industrielle Revolution (SchiC Modul 3). Bei der 8D entfällt sie.
 
 ## Streichkandidaten bei Ausfall
-1. Wiener Kongress an den Anfang von Modul 3 verschieben.
+1. Wiener Kongress nach Modul 3 verschieben.
 2. Napoleons Fall nur kurz behandeln.
 3. Bastille in Stunde 2 oder 3 verkürzen (Zeitstrahl statt eigener Erarbeitung).
 
