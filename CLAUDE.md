@@ -85,6 +85,17 @@ Die folgenden Vorlieben und Reflexionen gelten für die gesamte weitere Planung,
   - **Im „Wofür?“ der Merksätze den Bezug zu den Tempora herstellen**, wenn es passt (z. B. Partizip II und Hilfsverb braucht man für die Tempora).
 - Futur II, Hilfsverb oder Vollverb, Modalverben und die Satzklammer wurden nicht mehr behandelt. Bei einer späteren Wiederaufnahme der Grammatik dort ansetzen.
 
+## Geschichte (Stand 27.10.)
+
+Gilt für Geschichte 8C und 8D. Die 8C-Planung liegt auf dem Branch `claude/peaceful-gauss-hccvav` (`Geschichte_8/`).
+
+- **PowerPoint gehört in Geschichte dazu** (Folien, Schrift mindestens 24 Punkt, Phasenanzeige A V I V A, Lernziele, Ablauf, Lernziel-Check). Merksätze stehen auf der Folie (Kernsatz im roten Rahmen, Beispiel, Test), kein „Wofür brauche ich das?“. Abschreiben und rot umrahmen. Mehr Folien sind in Ordnung, wenn sie visualisieren (Zeitstrahl, Balken).
+- **„Dritter Stand“ immer mit Klammer:** „Dritter Stand (Bauern und Bürger)“.
+- **Kein Vorlese- und Heraushör-Text** als Einstieg oder Erarbeitung. Selbst erarbeiten lassen. Texte im Blocksatz, Zeitstrahl als Blatt mit vorgegebenen Daten (hat in der 8C gut funktioniert).
+- **Tests:** höchstens 2 Seiten, nichts abfragen, was zu schwer ist (Zahlen vorgeben), viele Wahr-oder-falsch-Aussagen mit Begründung, Zusatzaufgabe 1 Punkt.
+- **Zu abstrakte Beispiele vermeiden (27.10.):** Statt Schulbeispiel lieber ein Spiel, in dem die Klasse selbst die Rollen erlebt (Ständeversammlung mit Absprache, Stimmzettel, Zählen nach Ständen und nach Köpfen).
+- **Deutlich weniger Unterrichtsgespräch bei lauten Klassen (27.10., 8D):** Aufträge schriftlich, per Folie oder Kreide-Kette, Gespräch nur kurz. Ruhig wird es, wenn alle beim Ankommen, in Einzel- oder Gruppenarbeit etwas zu tun haben. Lautstärke mit wörtlicher Ansage („Flüsterstufe. Nur dein Partner hört dich.“), feste Zeiten, wenig Bewegung.
+
 ## Gestaltung
 
 - Formate: Word (`.docx`) für Skripte/Arbeitsblätter, PowerPoint (`.pptx`) für Folien, jeweils zusätzlich als PDF.
@@ -102,4 +113,5 @@ Keine Klarnamen von Schülerinnen, Schülern oder Kolleginnen und Kollegen ins R
 - `Deutsch_7A/` – Material der Klasse 7A, ein Unterordner pro Stunde/Einheit
 - `Deutsch_7A/Reflexion.md` – Lernstand, Stundenlog, Hospitationsfeedback, offene Baustellen
 - `Methoden/` – Methodenmaterial der Schule, das für alle Klassen gilt (z. B. Methodenkarten Lesetraining, Kriterien für mündliche Noten)
+- `Geschichte_8D/` – Material der Klasse 8D (Geschichte); Reflexionslog: `Geschichte_8D/Reflexion.md`; Stunde Generalstände in `Geschichte_8D/Generalstaende/`
 - Weitere Klassen und Fächer bekommen einen eigenen Ordner nach demselben Muster (`<Fach>_<Klasse>/`) mit eigenem `Reflexion.md`, z. B. Klassenprofil, Sportarten und Lernstand. Die Vorlieben oben gelten dort genauso.

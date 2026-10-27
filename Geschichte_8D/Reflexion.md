@@ -1,0 +1,56 @@
+# Geschichte 8D – Reflexion und Lernstand
+
+## Klassenprofil
+
+- 25 Schülerinnen und Schüler, Leistungssportler (Sportarten: noch eintragen), eine Lehrkraft.
+- **Sehr laut.** Unterrichtsgespräch daher reduzieren. Ruhig geht es, wenn die Klasse beim Ankommen, in Einzel- oder Gruppenarbeit etwas zu tun hat (Rückmeldung 27.10.).
+- Parallelklasse 8C hat eine Stunde Vorsprung. Deren Planung und Rückmeldungen stehen in `Geschichte_8/Reflexion.md` (Branch `claude/peaceful-gauss-hccvav`).
+
+## Lernstand (aktueller Stand)
+
+- Gleiche Vorerfahrung wie 8C: Absolutismus (Ludwig XIV., fünf Säulen), Ständegesellschaft (Anzahl, Vorrechte, Pflichten, Mitbestimmung). Test dazu geschrieben.
+- Nächste Einheit: Französische Revolution, Einstieg über die Generalstände.
+
+## Offene Baustellen
+
+- [ ] Testrückgabe und Berichtigung (falls noch nicht erfolgt)
+- [ ] Sportarten der Klasse für Beispiele eintragen
+- [ ] Lautstärke: Welche Phasen kippen? Nach der ersten Stunde ergänzen
+
+## Stundenlog
+
+### Rückmeldung zur 8C (Generalstände, Stunde 1) – 27.10.
+- **Material der 8C:** `Geschichte_8/Generalstaende_Stunde1/` (Branch `claude/peaceful-gauss-hccvav`)
+- **Was hat funktioniert:** Der Text „Wie kam es zu den Generalständen?“ mit Zeitstrahl war gut.
+- **Wo hing es:** Die Stunde war unterrichtsgesprächslastig. Das Schulbeispiel (Lehrkräfte putzen nicht) war zu abstrakt.
+- **Konsequenz:** Lieber die Klasse in Stände teilen und merken lassen, dass Stände untereinander mauscheln und den Dritten Stand überstimmen können.
+
+### Generalstände (8D, geplant, 45 Min., 25 Schülerinnen und Schüler)
+- **Material:** `Generalstaende/` (Tafelskript, 17 Folien, Text mit Zeitstrahl, Druckvorlage Standeskarten und Stimmzettel mit Absprache-Zettel)
+- **Inhalt (AVIVA):** Ankommen (3, still) · Wiederholung Ständegesellschaft (6, Ü1 allein, Lösungsfolie) · Text und Zeitstrahl (11, allein, dann Kreide-Kette ohne Kommentar) · Ständeversammlung (17: 3 Klerus, 4 Adel, 18 Dritter Stand; Klerus und Adel sprechen sich schriftlich am Tisch vorn ab, der Dritte Stand schreibt Argumente und eine Beobachtung auf; Abstimmung mit Stimmzettel auf der Karte, gezählt nach Ständen 2 : 1 abgelehnt und nach Köpfen angenommen; Ü3 mit drei Sätzen) · Auswerten (5: Merksatz, „Heute habe ich gelernt, …“, Ausblick) · 3 Minuten Puffer.
+- **Planungsentscheidungen:**
+  - Gespräch im Plenum nur zweimal unter einer Minute, sonst schriftlich, per Folie oder Kreide-Kette.
+  - Wörtliche Lautstärke-Ansage („Flüsterstufe. Nur dein Partner hört dich.“) statt Symbolkarten, eine einzige Bewegungsphase.
+  - Schulbeispiel der 8C ersetzt durch das Ständespiel. 1789 wurde nicht über genau diesen Antrag abgestimmt; der Streit ging um die Abstimmungsregel (im Tafelskript vermerkt).
+  - Zusatz (Sportverein, 3 Abteilungen) nur bei Zeit.
+  - Sollbruchstellen: Wiederholung kürzen (Lösungsfolie sofort), Ü3 Satz 3 mit Stern.
+- **Rückmeldung der Lehrkraft:** *(steht noch aus)*
+
+## Hospitationsfeedback (gesammelt)
+
+*(noch keine Einträge)*
+
+---
+
+## Vorlage für neue Einträge
+
+```
+### <Stundenthema> (<Datum>)
+- Material: <Ordner>
+- Was hat funktioniert:
+- Wo hing die Klasse (konkretes Beispiel):
+- Eigene Beobachtungen (Timing, Ansagen, Lautstärke, Tafelarbeit …):
+- Exit-Ticket / Ergebnisse:
+- Hospitationsfeedback (anonymisiert):
+- Nächster Schritt / neue Baustellen:
+```
