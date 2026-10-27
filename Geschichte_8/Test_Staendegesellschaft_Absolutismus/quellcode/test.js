@@ -1,0 +1,241 @@
+const fs = require("fs");
+const { Document, Packer, Paragraph, TextRun, Table, TableRow, TableCell, WidthType, BorderStyle, ShadingType, AlignmentType, VerticalAlign, Footer, PageNumber } = require("docx");
+
+const NAVY = "1E2761", MUTED = "5B6B8C", LIGHT = "F4F7FD", LIGHT2 = "EAF0FA", RED = "D9534F";
+const W = 10206;
+const t = (text, o = {}) => new TextRun({ text, font: o.font || "Calibri", size: o.size || 24, bold: o.bold, italics: o.italics, color: o.color || "000000" });
+const p = (runs, o = {}) => new Paragraph({ children: Array.isArray(runs) ? runs : [runs], alignment: o.align, spacing: { before: o.before ?? 0, after: o.after ?? 100, line: o.line }, keepNext: o.keepNext, indent: o.indent });
+const none = { style: BorderStyle.NONE, size: 0, color: "FFFFFF" };
+const solid = (c, s = 8) => ({ style: BorderStyle.SINGLE, size: s, color: c });
+const all = (b) => ({ top: b, bottom: b, left: b, right: b });
+const thin = all(solid("8A96B5", 6));
+function cell(children, o = {}) {
+  return new TableCell({ children: Array.isArray(children) ? children : [children], width: { size: o.w, type: WidthType.DXA }, shading: o.fill ? { fill: o.fill, type: ShadingType.CLEAR, color: "auto" } : undefined, borders: o.borders || thin, verticalAlign: o.valign || VerticalAlign.CENTER, margins: { top: o.m ?? 80, bottom: o.m ?? 80, left: 120, right: 120 } });
+}
+const table = (widths, rows) => new Table({ width: { size: widths.reduce((a, b) => a + b, 0), type: WidthType.DXA }, columnWidths: widths, rows });
+const row = (cells, h) => new TableRow({ children: cells, height: h ? { value: h, rule: "atLeast" } : undefined, cantSplit: true });
+const line = (last) => new Paragraph({ children: [t("\t", { color: "9AA5C0" })], tabStops: [{ type: "right", position: 10200, leader: "underscore" }], spacing: { before: 0, after: 0, line: 480 }, keepNext: !last });
+const lines = (n) => Array.from({ length: n }, (_, i) => line(i === n - 1));
+const aufgabe = (nr, title, pts) => p([t(`Aufgabe ${nr}  `, { font: "Cambria", size: 28, bold: true, color: RED }), t(title, { font: "Cambria", size: 28, bold: true, color: NAVY }), t(`   (${pts} Punkte)`, { size: 22, color: MUTED })], { before: 240, after: 100, keepNext: true });
+const footer = (label) => new Footer({ children: [new Paragraph({ alignment: AlignmentType.RIGHT, children: [new TextRun({ font: "Calibri", size: 16, color: MUTED, children: [label + " · Seite ", PageNumber.CURRENT] })] })] });
+
+// ---------- Inhalte ----------
+const STAENDE = [
+  ["Klerus", "ca. 150 000", "keine Steuern · eigene Gerichte · vom Wehrdienst befreit · Kirchenzehnt (10 %)", "Fürsorge für die Armen"],
+  ["Adel", "ca. 500 000", "keine Steuern · alleiniges Jagdrecht · ranghohe Posten in der Armee", "verwaltende Aufgaben im Staat · ehrenhaftes Verhalten"],
+  ["Dritter Stand (Bauern und Bürger)", "ca. 20 000 000", "keine Vorrechte (ausgeschlossen von der Mitbestimmung)", "Steuern und hohe Abgaben (u. a. Pachtgebühren) · im Krieg Soldaten stellen"],
+];
+const SAEULEN = [
+  ["Verwaltung und Justiz", "Beamte (z. B. Intendanten in den Provinzen) handeln im Namen des Königs; er ist oberster Richter und kann ohne Gerichtsverfahren verhaften lassen („lettres de cachet“). → Kontrolle über das ganze Land."],
+  ["Adel und Hof von Versailles", "Der Adel behält Vorrechte (Steuerfreiheit, Jagdrecht) und wird mit Festen, Theater und Geschenken am Hof gehalten. → Er leistet keinen Widerstand."],
+  ["Wirtschaft (Merkantilismus)", "Der Staat lenkt die Wirtschaft: Manufakturen, hohe Zölle, Kolonien als Rohstoffquellen und Absatzmärkte; mehr verkaufen als einführen. → Geld für Hof, Beamte und Heer."],
+  ["Religion (Gottesgnadentum)", "Der König ist von Gott ausgewählt; 1685 Ende der religiösen Toleranz: ein König, ein Glaube. → Herrschaft ist von Gott gewollt, Einheit im Land."],
+  ["Heer (stehendes Heer)", "Berufssoldaten statt Söldner, einheitlich bewaffnet, in Kasernen, dem König unterstellt (bis 400 000 Mann). → Macht nach innen und außen durchsetzen."],
+];
+
+// ---------- Test (Schüler) ----------
+// Sätze zum Zuordnen (Aufgabe 2b)
+const SAETZE = [
+  ["A", "keine Steuern zahlen"],
+  ["B", "eigene Gerichte haben"],
+  ["C", "das alleinige Jagdrecht haben"],
+  ["D", "für die Armen sorgen"],
+  ["E", "verwaltende Aufgaben im Staat übernehmen"],
+  ["F", "Steuern und hohe Abgaben zahlen"],
+  ["G", "im Krieg Soldaten stellen"],
+];
+const ZAHLEN = [["H", "ca. 150 000"], ["I", "ca. 500 000"], ["J", "ca. 20 000 000"]];
+// Wahr oder falsch (Aufgabe 5)
+const WF = [
+  ["Ludwig XIV. verzichtete auf Söldner und baute ein stehendes Heer auf.", true, ""],
+  ["Der Klerus musste den Kirchenzehnt an den Dritten Stand (Bauern und Bürger) zahlen.", false, "Umgekehrt: Der Dritte Stand (Bauern und Bürger) musste dem Klerus den Kirchenzehnt (10 % vom Einkommen) zahlen."],
+  ["Der Adel hatte das alleinige Jagdrecht.", true, ""],
+  ["Ludwig XIV. erlaubte den Protestanten die freie Religionsausübung.", false, "1685 beendete er die religiöse Toleranz: Wie nur einen König sollte es auch nur einen Glauben geben (Gottesgnadentum)."],
+  ["Der Dritte Stand (Bauern und Bürger) musste hohe Pachtgebühren an die Grundherren zahlen.", true, ""],
+  ["Der Adel musste hohe Steuern an den König zahlen.", false, "Der Adel war steuerfrei (Vorrecht). Steuern und hohe Abgaben zahlte der Dritte Stand (Bauern und Bürger)."],
+  ["Ranghohe Posten in der Armee erhielten ausschließlich Adlige.", true, ""],
+  ["Die Beamten Ludwigs XIV. waren dem Adel zum Gehorsam verpflichtet.", false, "Die Beamten handelten im Namen des Königs und waren ihm zum Gehorsam verpflichtet."],
+];
+const checkbox = (w) => cell(p(t("☐", { size: 28 }), { after: 0, align: AlignmentType.CENTER }), { w });
+const th = (txt, w, fill = NAVY) => cell(p(t(txt, { bold: true, size: 22, color: "FFFFFF" }), { after: 0, align: AlignmentType.CENTER }), { w, fill });
+
+// ---------- Test (Schüler) ----------
+function testDoc() {
+  const c = [];
+  c.push(p(t("ENTWURF · GESCHICHTE · KLASSE 8", { size: 18, bold: true, color: MUTED }), { after: 20 }));
+  c.push(p(t("Test: Ständegesellschaft und Absolutismus", { font: "Cambria", size: 38, bold: true, color: NAVY }), { after: 120 }));
+  c.push(table([4800, 2400, 3006], [row([
+    cell(p(t("Name:", { size: 22, color: MUTED }), { after: 0 }), { w: 4800, m: 160 }),
+    cell(p(t("Datum:", { size: 22, color: MUTED }), { after: 0 }), { w: 2400, m: 160 }),
+    cell(p(t("Punkte:        / 32 (+1)", { size: 22, color: MUTED }), { after: 0 }), { w: 3006, m: 160 }),
+  ])]));
+  c.push(p(t("Arbeitszeit: 35 Minuten. Schreibe in ganzen Sätzen und verwende Fachbegriffe.", { size: 22, italics: true, color: MUTED }), { before: 80, after: 40 }));
+
+  // 1
+  c.push(aufgabe(1, "Absolutismus", 3));
+  c.push(p([t("a) ", { bold: true }), t("Erkläre den Begriff „Absolutismus“.")], { after: 40, keepNext: true }), ...lines(3));
+  c.push(p([t("b) ", { bold: true }), t("Passt die Aussage zum Absolutismus? Kreuze an und begründe.")], { before: 100, after: 60, keepNext: true }));
+  c.push(table([4400, 1100, 1300, 3406], [
+    row([th("Aussage", 4400), th("passt", 1100), th("passt nicht", 1300), th("Begründung", 3406)]),
+    row([cell(p(t("Ein Parlament muss jeder Steuererhöhung des Königs zustimmen.", { size: 22 }), { after: 0 }), { w: 4400 }), checkbox(1100), checkbox(1300), cell(p(t(""), { after: 0 }), { w: 3406 })], 1100),
+  ]));
+
+  // 2
+  c.push(aufgabe(2, "Die drei Stände", 7));
+  c.push(p(t("Ordne zu: Trage die Buchstaben in das passende Kästchen ein. Ein Satz kann zu mehr als einem Stand passen."), { after: 80, keepNext: true }));
+  c.push(table([6700, 3506], [row([
+    cell([p(t("Vorrechte und Pflichten", { bold: true, size: 20, color: MUTED }), { after: 30 }), ...SAETZE.map(([l, x]) => p([t(l + "  ", { bold: true, color: RED, size: 22 }), t(x, { size: 22 })], { after: 20 }))], { w: 6700, fill: LIGHT, valign: VerticalAlign.TOP, m: 80 }),
+    cell([p(t("Anzahl der Mitglieder", { bold: true, size: 20, color: MUTED }), { after: 30 }), ...ZAHLEN.map(([l, x]) => p([t(l + "  ", { bold: true, color: RED, size: 22 }), t(x, { size: 22 })], { after: 20 }))], { w: 3506, fill: LIGHT, valign: VerticalAlign.TOP, m: 80 }),
+  ])]));
+  c.push(p(t(""), { after: 40 }));
+  const wd = [2900, 1600, 2850, 2856];
+  c.push(table(wd, [
+    row([th("Stand", wd[0]), th("Anzahl", wd[1]), th("Vorrechte", wd[2]), th("Pflichten", wd[3])]),
+    ...["Klerus", "Adel", "Dritter Stand (Bauern und Bürger)"].map((s, i) => row([cell(p(t(s, { bold: true, size: 22 }), { after: 0 }), { w: wd[0], fill: LIGHT }), cell(p(t(""), { after: 0 }), { w: wd[1] }), cell(p(t(i === 2 ? "keine" : "", { size: 22, italics: true, color: MUTED }), { after: 0, align: AlignmentType.CENTER }), { w: wd[2] }), cell(p(t(""), { after: 0 }), { w: wd[3] })], 700)),
+  ]));
+
+  // 3
+  c.push(aufgabe(3, "Mitbestimmung", 2));
+  c.push(p(t("Nenne, wer in der Ständegesellschaft politisch mitbestimmen durfte und wer davon ausgeschlossen war."), { after: 60, keepNext: true }), ...lines(2));
+
+  // 4
+  c.push(aufgabe(4, "Die fünf Säulen", 8));
+  c.push(p([t("a) ", { bold: true }), t("Nenne die fünf Säulen, auf die Ludwig XIV. seine Macht stützte.")], { after: 60, keepNext: true }));
+  c.push(table([W], [row([cell([1, 2, 3, 4, 5].map((n) => p([t(`${n}  `, { bold: true, color: RED }), t("_______________________________________________________")], { after: 30 })), { w: W, borders: all(none), valign: VerticalAlign.TOP })])]));
+  c.push(p([t("b) ", { bold: true }), t("Wähle eine Säule aus und erkläre, wie der König damit seine Macht sichert.")], { before: 100, after: 40, keepNext: true }), ...lines(4));
+
+  // 5 Wahr oder falsch
+  c.push(aufgabe(5, "Wahr oder falsch?", 12));
+  c.push(p(t("Kreuze an. Bei „falsch“ musst du die Aussage begründen oder verbessern."), { after: 60, keepNext: true }));
+  c.push(table([4300, 1000, 1150, 3756], [
+    row([th("Aussage", 4300), th("wahr", 1000), th("falsch", 1150), th("Begründung (nur bei falsch)", 3756)]),
+    ...WF.map(([a]) => row([cell(p(t(a, { size: 22 }), { after: 0 }), { w: 4300 }), checkbox(1000), checkbox(1150), cell(p(t(""), { after: 0 }), { w: 3756 })], 640)),
+  ]));
+
+  // Zusatz
+  c.push(p([t("Zusatzaufgabe  ", { font: "Cambria", size: 28, bold: true, color: "C98A1E" }), t("(1 Zusatzpunkt)", { size: 22, color: MUTED })], { before: 240, after: 100, keepNext: true }));
+  c.push(p(t("Erkläre das Wirtschaftssystem, das Finanzminister Colbert in Frankreich einführte (Merkantilismus)."), { after: 60, keepNext: true }), ...lines(2));
+
+  return new Document({ styles: { default: { document: { run: { font: "Calibri", size: 24 } } } }, sections: [{ properties: { page: { size: { width: 11906, height: 16838 }, margin: { top: 700, bottom: 650, left: 850, right: 850 } } }, footers: { default: footer("Geschichte 8 · Test Entwurf") }, children: c }] });
+}
+
+// ---------- Erwartungshorizont ----------
+function loesungDoc() {
+  const c = [];
+  const S = (s, o = {}) => t(s, Object.assign({ size: 22 }, o));
+  const pt = (n) => t(`  [${n} P]`, { bold: true, color: RED, size: 20 });
+  const bullet = (runs) => p([S("• "), ...[].concat(runs)], { after: 50, indent: { left: 240 } });
+  const sub = (x) => p(S(x, { size: 20, color: "333333" }), { after: 30, indent: { left: 600 } });
+  c.push(p(t("ENTWURF · FÜR DIE LEHRKRAFT", { size: 18, bold: true, color: MUTED }), { after: 20 }));
+  c.push(p(t("Erwartungshorizont zum Test", { font: "Cambria", size: 38, bold: true, color: NAVY }), { after: 120 }));
+  c.push(p(S("Gesamtpunktzahl: 32 Punkte plus 1 Zusatzpunkt. Formulierungen dürfen abweichen, entscheidend ist der Inhalt. Folgefehler werden nicht doppelt bestraft. Die Angaben stammen aus den Gruppenpuzzle-Texten (Stände, Säulen) und den Merksätzen der Wiederholungsstunde."), { after: 80 }));
+
+  c.push(aufgabe(1, "Absolutismus", 3));
+  c.push(bullet([S("a) Herrschaftsform in Europa im 17. und 18. Jahrhundert, in der ein einzelner Monarch (König oder Fürst) uneingeschränkt (absolut) herrscht."), pt("2")]));
+  c.push(sub("1 P für „Herrschaftsform / Monarch herrscht allein“, 1 P für „uneingeschränkt / niemand kann ihn stoppen“ (oder 17./18. Jahrhundert)."));
+  c.push(bullet([S("b) Passt nicht: Ein Parlament könnte den König stoppen, seine Macht wäre begrenzt (Entscheidung und Begründung)."), pt("1")]));
+
+  c.push(aufgabe(2, "Die drei Stände", 7));
+  c.push(bullet([S("a) Anzahl: Klerus H (ca. 150 000) · Adel I (ca. 500 000) · Dritter Stand (Bauern und Bürger) J (ca. 20 000 000)."), pt("3 (je 1)")]));
+  c.push(bullet([S("b) Vorrechte und Pflichten: Je 2 richtig eingetragene Buchstaben ergeben 1 Punkt (insgesamt 8 richtige Eintragungen). Falsch eingetragene Buchstaben heben je eine richtige Eintragung auf."), pt("4")]));
+  const wd = [2900, 2300, 2500, 2506];
+  c.push(table(wd, [
+    row([th("Stand", wd[0], "3D4A3F"), th("Anzahl", wd[1], "3D4A3F"), th("Vorrechte", wd[2], "3D4A3F"), th("Pflichten", wd[3], "3D4A3F")]),
+    ...[["Klerus", "H (ca. 150 000)", "A, B", "D"], ["Adel", "I (ca. 500 000)", "A, C", "E"], ["Dritter Stand (Bauern und Bürger)", "J (ca. 20 000 000)", "keine (vorgegeben)", "F, G"]].map((r) => row(r.map((v, i) => cell(p(t(v, { size: 22, bold: i === 0 }), { after: 0 }), { w: wd[i], fill: i === 0 ? LIGHT : undefined })), 500)),
+  ]));
+
+  c.push(aufgabe(3, "Mitbestimmung", 2));
+  c.push(bullet([S("Der Adel bestimmte das politische Geschehen mit (der Text nennt den Klerus nicht, deshalb nur der Adel erforderlich)."), pt("1")]));
+  c.push(bullet([S("Der Dritte Stand (Bauern und Bürger) war von der politischen Mitbestimmung ausgeschlossen."), pt("1")]));
+
+  c.push(aufgabe(4, "Die fünf Säulen", 8));
+  c.push(bullet([S("a) Verwaltung und Justiz · Adel und Hof (Versailles) · Wirtschaft (Merkantilismus) · Religion (Gottesgnadentum) · Heer (stehendes Heer)."), pt("5 (je 1)")]));
+  c.push(bullet([S("b) Je nach gewählter Säule, 3 P: 1 P für ein zutreffendes Merkmal, 2 P für die Erklärung der Machtsicherung (Wirkung begründen). Beispiele:"), pt("3")]));
+  SAEULEN.forEach(([h, b]) => c.push(p([S(h + ": ", { bold: true, size: 20 }), S(b, { size: 20, color: "333333" })], { after: 40, indent: { left: 600 } })));
+
+  c.push(aufgabe(5, "Wahr oder falsch?", 12));
+  c.push(p(S("Wahre Aussagen: 1 P für das richtige Kreuz. Falsche Aussagen: 1 P für das richtige Kreuz, 1 P für die zutreffende Begründung oder Verbesserung.", { color: MUTED }), { after: 60 }));
+  WF.forEach(([a, w, b], i) => c.push(bullet([S(`${i + 1}  ${a}  `, { size: 21 }), t(w ? "→ wahr" : "→ falsch", { bold: true, color: w ? "2E9E6B" : RED, size: 21 }), pt(w ? "1" : "2")]), ...(w ? [] : [sub("Begründung: " + b)])));
+
+  c.push(p([t("Zusatzaufgabe  ", { font: "Cambria", size: 28, bold: true, color: "C98A1E" }), t("(1 Zusatzpunkt)", { size: 22, color: MUTED })], { before: 240, after: 100, keepNext: true }));
+  c.push(bullet([S("Merkantilismus: Der Staat lenkt die Wirtschaft; es sollen mehr fertige Waren (aus Manufakturen) teuer ins Ausland verkauft als billig von dort eingeführt werden. Mindestens dieser Kerngedanke (Staat lenkt, mehr verkaufen als einführen)."), pt("1")]));
+  c.push(sub("Weitere Elemente (nicht erforderlich): hohe Zölle auf ausländische Waren, Förderung von Manufakturen, Kolonien als Rohstoffquellen und Absatzmärkte; Ziel: Geld für Hof, Beamte und Heer."));
+  c.push(p(S("Der Zusatzpunkt wird zur Gesamtpunktzahl addiert. Maximal erreichbar: 31 Punkte.", { color: MUTED }), { before: 40, after: 100 }));
+
+  c.push(p(t("Notenschlüssel (32 Punkte)", { font: "Cambria", size: 26, bold: true, color: NAVY }), { before: 200, after: 80, keepNext: true }));
+  const nw = [1500, 2600, 2600];
+  c.push(table(nw, [
+    row([th("Note", nw[0]), th("Punkte", nw[1]), th("Prozent", nw[2])]),
+    ...[["1", "32 – 30", "ab 92 %"], ["2", "29 – 26", "ab 81 %"], ["3", "25 – 22", "ab 67 %"], ["4", "21 – 16", "ab 50 %"], ["5", "15 – 10", "ab 30 %"], ["6", "9 – 0", "unter 30 %"]].map((r) => row(r.map((v, i) => cell(p(t(v, { size: 22, bold: i === 0 }), { after: 0, align: AlignmentType.CENTER }), { w: nw[i], fill: i === 0 ? LIGHT : undefined })))),
+  ]));
+  c.push(p(S("Hinweis: Der Schlüssel ist ein Vorschlag (üblicher Prozentschlüssel) und kann an Ihre schulinterne Vorgabe angepasst werden.", { italics: true, color: MUTED }), { before: 80, after: 0 }));
+
+  return new Document({ styles: { default: { document: { run: { font: "Calibri", size: 22 } } } }, sections: [{ properties: { page: { size: { width: 11906, height: 16838 }, margin: { top: 900, bottom: 800, left: 850, right: 850 } } }, footers: { default: footer("Geschichte 8 · Erwartungshorizont Test") }, children: c }] });
+}
+
+// ---------- Korrekturblatt (kompakt, zum Abhaken beim Korrigieren) ----------
+function korrekturDoc() {
+  const c = [];
+  const ans = (s, o = {}) => t(s, Object.assign({ size: 19, color: "B03A36" }, o));
+  const lab = (s, o = {}) => t(s, Object.assign({ size: 19 }, o));
+  const KW = [1700, 6406, 800, 1300];
+  const hdrRow = row([th("Aufgabe", KW[0]), th("Richtige Antwort / Erwartung", KW[1]), th("max.", KW[2]), th("erreicht", KW[3])]);
+  const rowK = (a, runs, max, o = {}) => row([
+    cell(p(lab(a, { bold: true }), { after: 0 }), { w: KW[0], fill: LIGHT, valign: VerticalAlign.TOP }),
+    cell(Array.isArray(runs) && runs[0] instanceof Paragraph ? runs : p(runs, { after: 0 }), { w: KW[1], valign: VerticalAlign.TOP }),
+    cell(p(lab(String(max), { bold: true }), { after: 0, align: AlignmentType.CENTER }), { w: KW[2], valign: VerticalAlign.TOP, fill: o.zusatz ? "FFF6E0" : undefined }),
+    cell(p(lab(""), { after: 0 }), { w: KW[3] }),
+  ], o.h || 420);
+  const section = (nr, title) => row([cell(p([t(`Aufgabe ${nr}  `, { font: "Cambria", bold: true, color: RED, size: 22 }), t(title, { font: "Cambria", bold: true, color: NAVY, size: 22 })], { after: 0 }), { w: W, fill: LIGHT2 })].map((x) => x), 340);
+  // Abschnittszeilen über alle Spalten
+  const sec = (nr, title) => new TableRow({ cantSplit: true, children: [new TableCell({ columnSpan: 4, width: { size: W, type: WidthType.DXA }, shading: { fill: LIGHT2, type: ShadingType.CLEAR, color: "auto" }, borders: all(solid("8A96B5", 6)), margins: { top: 50, bottom: 50, left: 120, right: 120 }, children: [p([t(nr ? `Aufgabe ${nr}  ` : "", { font: "Cambria", bold: true, color: RED, size: 22 }), t(title, { font: "Cambria", bold: true, color: NAVY, size: 22 })], { after: 0 })] })] });
+  const wfRows = WF.map(([a, w, b], i) => rowK(`${i + 1}  ${w ? "wahr" : "falsch"}`, w ? [lab(a, { size: 18 }), ans("   → nur Kreuz bei „wahr“ nötig", { size: 18 })] : [lab(a, { size: 18 }), ans("   → Begründung: " + b, { size: 18 })], w ? 1 : 2, { h: 380 }));
+
+  c.push(p(t("FÜR DIE LEHRKRAFT · KORREKTURBLATT", { size: 18, bold: true, color: MUTED }), { after: 20 }));
+  c.push(p(t("Test: Ständegesellschaft und Absolutismus", { font: "Cambria", size: 34, bold: true, color: NAVY }), { after: 60 }));
+  c.push(p(lab("Rote Schrift = richtige Antwort. Spalte „erreicht“ beim Korrigieren ausfüllen. Gleichwertige Formulierungen gelten.", { italics: true, color: MUTED }), { after: 80 }));
+  c.push(table(KW, [
+    hdrRow,
+    sec(1, "Absolutismus (3 P)"),
+    rowK("1a  Begriff", [ans("Herrschaftsform in Europa im 17./18. Jahrhundert, in der ein einzelner Monarch uneingeschränkt (absolut) herrscht. "), lab("(1 P Herrschaftsform / Monarch allein, 1 P uneingeschränkt, niemand kann ihn stoppen)")], 2),
+    rowK("1b  Parlament", [ans("passt nicht"), lab(": Ein Parlament könnte den König stoppen, seine Macht wäre begrenzt.")], 1),
+    sec(2, "Die drei Stände (7 P)"),
+    rowK("2a  Anzahl", [ans("Klerus H · Adel I · Dritter Stand (Bauern und Bürger) J"), lab("  (je 1 P)")], 3),
+    rowK("2b  Vorrechte", [ans("Klerus A, B · Adel A, C · Dritter Stand: keine (vorgegeben)"), lab("  je 2 richtige Buchstaben = 1 P, falsche heben richtige auf")], 2),
+    rowK("2b  Pflichten", [ans("Klerus D · Adel E · Dritter Stand F, G"), lab("  je 2 richtige Buchstaben = 1 P")], 2),
+    sec(3, "Mitbestimmung (2 P)"),
+    rowK("3", [ans("Der Adel bestimmte das politische Geschehen mit (1 P). Der Dritte Stand (Bauern und Bürger) war ausgeschlossen (1 P).")], 2),
+    sec(4, "Die fünf Säulen (8 P)"),
+    rowK("4a  Nennen", [ans("Verwaltung und Justiz · Adel und Hof (Versailles) · Wirtschaft (Merkantilismus) · Religion (Gottesgnadentum) · Heer (stehendes Heer)"), lab("  (je 1 P)")], 5),
+    rowK("4b  Erklären", [lab("1 P Merkmal, 2 P Machtsicherung. Beispiele: ", { bold: true }), ...SAEULEN.map(([h, b], i) => lab(`${i ? " · " : ""}${h}: `, { size: 17, bold: true })).flatMap((r, i) => [r, ans(SAEULEN[i][1].split(" → ")[1].replace(/\.$/, "") , { size: 17 })])], 3, { h: 700 }),
+    sec(5, "Wahr oder falsch? (12 P: wahr 1 P, falsch 2 P)"),
+    ...wfRows,
+    sec("", "Zusatzaufgabe (+1 P)"),
+    rowK("Zusatz", [ans("Der Staat lenkt die Wirtschaft; es sollen mehr fertige Waren teuer ins Ausland verkauft als billig von dort eingeführt werden "), lab("(Kerngedanke genügt; weitere Elemente: Zölle, Manufakturen, Kolonien)")], "+1", { zusatz: true }),
+  ]));
+
+  c.push(p(t(""), { after: 80 }));
+  c.push(p(t("Auswertung", { font: "Cambria", size: 26, bold: true, color: NAVY }), { before: 80, after: 60, keepNext: true }));
+  const AW = [2000, 1300, 1300, 1300, 1300, 1300, 1706];
+  c.push(table(AW, [
+    row(["", "Aufgabe 1", "Aufgabe 2", "Aufgabe 3", "Aufgabe 4", "Aufgabe 5", "Zusatz"].map((h, i) => th(h, AW[i]))),
+    row(["maximal", "3", "7", "2", "8", "12", "+1"].map((v, i) => cell(p(lab(v, { bold: true }), { after: 0, align: AlignmentType.CENTER }), { w: AW[i], fill: i ? undefined : LIGHT })), 360),
+    row(["erreicht", "", "", "", "", "", ""].map((v, i) => cell(p(lab(v, { bold: true }), { after: 0, align: AlignmentType.CENTER }), { w: AW[i], fill: i ? undefined : LIGHT })), 420),
+  ]));
+  c.push(p(lab("Gesamt: ______ / 32 (+1)      Note: ______", { bold: true }), { before: 100, after: 80 }));
+  const NW = [1100, 1500, 1500, 1100, 1500, 1500, 1006];
+  c.push(table([2400, 1300, 1300, 1300, 1300, 1300, 1306], [
+    row(["Note", "1", "2", "3", "4", "5", "6"].map((h, i) => th(h, [2400, 1300, 1300, 1300, 1300, 1300, 1306][i]))),
+    row(["Punkte (von 32)", "32–30", "29–26", "25–22", "21–16", "15–10", "9–0"].map((v, i) => cell(p(lab(v, { bold: i === 0 }), { after: 0, align: AlignmentType.CENTER }), { w: [2400, 1300, 1300, 1300, 1300, 1300, 1306][i], fill: i === 0 ? LIGHT : undefined })), 340),
+  ]));
+  c.push(p(lab("Der Zusatzpunkt wird zur Gesamtpunktzahl addiert (höchstens 33 Punkte). Schlüssel: Vorschlag, bitte an die schulinterne Vorgabe anpassen.", { italics: true, color: MUTED }), { before: 60, after: 0 }));
+
+  return new Document({ styles: { default: { document: { run: { font: "Calibri", size: 20 } } } }, sections: [{ properties: { page: { size: { width: 11906, height: 16838 }, margin: { top: 700, bottom: 650, left: 850, right: 850 } } }, footers: { default: footer("Geschichte 8 · Korrekturblatt Test") }, children: c }] });
+}
+
+(async () => {
+  fs.writeFileSync("../Korrekturblatt_Test.docx", await Packer.toBuffer(korrekturDoc()));
+  fs.writeFileSync("../Test_Staendegesellschaft_Absolutismus.docx", await Packer.toBuffer(testDoc()));
+  fs.writeFileSync("../Erwartungshorizont_Test.docx", await Packer.toBuffer(loesungDoc()));
+  console.log("ok");
+})();

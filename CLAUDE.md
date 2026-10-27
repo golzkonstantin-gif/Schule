@@ -87,13 +87,18 @@ Die folgenden Vorlieben und Reflexionen gelten für die gesamte weitere Planung,
 
 ## Geschichte (Stand 27.10.)
 
-Gilt für Geschichte 8C und 8D. Die 8C-Planung liegt auf dem Branch `claude/peaceful-gauss-hccvav` (`Geschichte_8/`).
+Gilt für Geschichte 8C (`Geschichte_8/`, 12 Schülerinnen und Schüler, zwei Lehrkräfte) und 8D (`Geschichte_8D/`, 25, laut, eine Lehrkraft). Beide Klassen laufen in einem Repo; die 8C liegt immer eine Stunde vorn.
 
 - **PowerPoint gehört in Geschichte dazu** (Folien, Schrift mindestens 24 Punkt, Phasenanzeige A V I V A, Lernziele, Ablauf, Lernziel-Check). Merksätze stehen auf der Folie (Kernsatz im roten Rahmen, Beispiel, Test), kein „Wofür brauche ich das?“. Abschreiben und rot umrahmen. Mehr Folien sind in Ordnung, wenn sie visualisieren (Zeitstrahl, Balken).
 - **„Dritter Stand“ immer mit Klammer:** „Dritter Stand (Bauern und Bürger)“.
 - **Kein Vorlese- und Heraushör-Text** als Einstieg oder Erarbeitung. Selbst erarbeiten lassen. Texte im Blocksatz, Zeitstrahl als Blatt mit vorgegebenen Daten (hat in der 8C gut funktioniert).
 - **Tests:** höchstens 2 Seiten, nichts abfragen, was zu schwer ist (Zahlen vorgeben), viele Wahr-oder-falsch-Aussagen mit Begründung, Zusatzaufgabe 1 Punkt.
 - **Zu abstrakte Beispiele vermeiden (27.10.):** Statt Schulbeispiel lieber ein Spiel, in dem die Klasse selbst die Rollen erlebt (Ständeversammlung mit Absprache, Stimmzettel, Zählen nach Ständen und nach Köpfen).
+- **Wahr-oder-falsch-Einstieg einzeln nacheinander:** Aussage, kurzes Gespräch, dann Antwort mit Begründung auf der Folie. **Säulen-Einstieg:** erst fragen, wie ein König regieren kann, dann Merksatz und Lückentext.
+- **Karikatur** eignet sich als Impuls (Beispiel: „Im Absolutismus fühle ich mich …“); Methode laut SchiC auch als eigene Analyse.
+- **Folien in Geschichte:** pro Folie nur das Nötigste, Ergebnisfolien und Visualisierungen (Zeitstrahl, Balken) sind erwünscht.
+- **Sequenz Französische Revolution (Stand 27.10.):** 1 Stunde pro Woche bis Halbjahresende (KW 44 bis 4), 11 Stunden plus 1 Reserve, 2 Tests (Stunde 5 und 11), Ausrichtung am SchiC Klasse 8 Modul 2. Details: `Geschichte_8D/Sequenz_Franzoesische_Revolution.md`.
+- **Kopplung 8C und 8D:** Beide Klassen nutzen dieselben Stundennummern der Sequenz. **Vor jeder 8D-Planung das Reflexionslog der 8C (`Geschichte_8/Reflexion.md`) lesen** und die Rückmeldung zur Parallelstunde einbeziehen; umgekehrt Rückmeldungen der 8D bei der 8C-Planung nutzen. Der Status je Stunde steht in der Sequenztabelle.
 - **Deutlich weniger Unterrichtsgespräch bei lauten Klassen (27.10., 8D):** Aufträge schriftlich, per Folie oder Kreide-Kette, Gespräch nur kurz. Ruhig wird es, wenn alle beim Ankommen, in Einzel- oder Gruppenarbeit etwas zu tun haben. Lautstärke mit wörtlicher Ansage („Flüsterstufe. Nur dein Partner hört dich.“), feste Zeiten, wenig Bewegung.
 
 ## Gestaltung
@@ -113,5 +118,6 @@ Keine Klarnamen von Schülerinnen, Schülern oder Kolleginnen und Kollegen ins R
 - `Deutsch_7A/` – Material der Klasse 7A, ein Unterordner pro Stunde/Einheit
 - `Deutsch_7A/Reflexion.md` – Lernstand, Stundenlog, Hospitationsfeedback, offene Baustellen
 - `Methoden/` – Methodenmaterial der Schule, das für alle Klassen gilt (z. B. Methodenkarten Lesetraining, Kriterien für mündliche Noten)
+- `Geschichte_8/` – Material der Klasse 8C (Geschichte); Reflexionslog: `Geschichte_8/Reflexion.md`
 - `Geschichte_8D/` – Material der Klasse 8D (Geschichte); Reflexionslog: `Geschichte_8D/Reflexion.md`; Stunde Generalstände in `Geschichte_8D/Generalstaende/`
 - Weitere Klassen und Fächer bekommen einen eigenen Ordner nach demselben Muster (`<Fach>_<Klasse>/`) mit eigenem `Reflexion.md`, z. B. Klassenprofil, Sportarten und Lernstand. Die Vorlieben oben gelten dort genauso.
