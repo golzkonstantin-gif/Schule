@@ -100,3 +100,19 @@ Stand 27.10. Nach Rückmeldung der Lehrkraft: Das Buch dient nur als Orientierun
 - Karikatur-Methode: Stunde 2 mit dem Satirebild „Für die Mühsal geboren – der Mann des Dorfes“ (S. 111, Q3) und dem Dreischritt von S. 116 (beschreiben, deuten, beurteilen), „kann man probieren“. In Stunde 7 wird die Methode mit „Robespierre als Henker“ (S. 121, Q3) wiederholt. Für Test 1 eine ungesehene Karikatur wählen oder ein Bild aus Stunde 2.
 - Marsch der Frauen nach Versailles: nicht aufnehmen.
 - Flucht nach Varennes: bleibt in Stunde 6.
+
+## Abschlussfragen (Orientierung, kein festes Muster)
+
+Stand 27.10. Offene Abschlussfrage mit mehreren guten Antworten, bevorzugt im Berater-Format („Du bist Berater von X, und er fragt dich Y“, Satzanfang „Ich rate dir, …, weil …“). Geprüft wird: Position, ein Sachargument aus der Stunde, ein „weil“. Die Form (Blitzlicht, schriftlich mit Vorlesen, Berater-Duell) wird je Stunde nach Zeit und Lautstärke gewählt. Die Fragen müssen mit dem Wissen der Stunde beantwortbar sein.
+
+| Stunde | Du bist Berater von … | Er fragt dich … |
+|---|---|---|
+| 1 | König Ludwig XVI. | Soll ich erlauben, dass der Dritte Stand (Bauern und Bürger) nach Köpfen abstimmt? (so geplant) |
+| 2 | den Abgeordneten des Dritten Standes (Bauern und Bürger) | Sollen wir nach Hause gehen oder schwören, zusammenzubleiben? |
+| 3 | einem Adligen | Soll ich auf meine Vorrechte verzichten? |
+| 4 | der Nationalversammlung | Wer soll wählen dürfen? |
+| 6 | Ludwig XVI. | Soll ich aus Paris fliehen? |
+| 7 | Robespierre oder einem Abgeordneten | Soll der Wohlfahrtsausschuss noch mehr Macht bekommen? |
+| 8 | dem Direktorium | Sollen wir General Bonaparte um Hilfe bitten? |
+| 9 | Napoleon | Soll ich 1812 nach Russland marschieren? |
+| 11 | den Fürsten in Wien | Soll Frankreich bestraft werden? |

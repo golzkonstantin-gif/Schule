@@ -168,7 +168,7 @@ pageNo = 0;
 // ============ 3 Ablauf ============
 {
   const s = blank("Ablauf", "So arbeiten wir heute", undefined, "Ablauf zeigen. Die Kreise oben rechts zeigen die Phase: A V I V A. Der Stern * bedeutet: wird eventuell nicht mehr geschafft (Ü3 Satz 3).");
-  const ph = [["A", "Ankommen", "Ziele", "3 Min."], ["V", "Vorwissen", "Stände", "6 Min."], ["I", "Informieren", "Text und Zeitstrahl", "11 Min."], ["V", "Verarbeiten", "Spiel", "17 Min."], ["A", "Auswerten", "Merksatz, Ich kann …*", "5 Min."]];
+  const ph = [["A", "Ankommen", "Ziele", "3 Min."], ["V", "Vorwissen", "Stände", "6 Min."], ["I", "Informieren", "Text und Zeitstrahl", "11 Min."], ["V", "Verarbeiten", "Spiel", "18 Min."], ["A", "Auswerten", "Merksatz, Abschlussfrage", "6 Min."]];
   ph.forEach(([l, n, x, m], i) => {
     const xx = 0.6 + i * 2.45;
     box(s, xx, 1.9, 2.3, 3.6, i % 2 ? LIGHT : LIGHT2);
@@ -314,22 +314,21 @@ pageNo = 0;
   phaseTag(s, 4);
 }
 
-// ============ 15 Abschlussaufgabe ============
+// ============ 15 Abschlussfrage ============
 {
-  const s = blank("A · Auswerten", "Abschlussaufgabe: Das Wichtigste der Stunde", 4, "Ansage: „Stifte liegen. Ihr hört nur zu. Schaut auf die Ziele. Jetzt arbeitet ihr allein. Die Aufgabe steht rechts.“ Die Klasse prüft zuerst still die Lernziele (Folie 2) und löst dann die Abschlussaufgabe im Heft. Erwartung 1: z. B. 1614 letzte Generalstände, 1788 Missernte oder 1787 Steuerplan scheitert, August 1788 König kündigt an, 5. Mai 1789 Eröffnung. Erwartung 2: Beim Abstimmen nach Ständen hat jeder Stand nur eine Stimme. Klerus und Adel haben zwei von drei Stimmen und stimmen sich ab, deshalb überstimmen sie den Dritten Stand (Bauern und Bürger), obwohl er fast alle Menschen vertritt. Stichprobe: Beim Durchgehen bei 4 bis 6 Heften unterschiedlichen Niveaus mitlesen, nicht kommentieren (unbenotet).");
+  const s = blank("A · Auswerten", "Abschlussfrage: Du bist Berater", 4, "Ansage: „Stifte liegen. Ihr hört nur zu. Schaut kurz auf die Ziele. Jetzt arbeitet ihr allein. Die Aufgabe steht rechts.“ Die Klasse prüft still die Lernziele (Folie 2), dann zehn Sekunden denken, dann schreiben. Es gibt mehrere gute Antworten, geprüft wird die Begründung: eine Position, ein Sachargument aus der Stunde, ein „weil“. Erwartung (Auswahl, keine Musterlösung): FÜR Erlauben: Der Staat braucht Geld, Steuern gehen nur mit dem Dritten Stand (Bauern und Bürger); er stellt fast alle Menschen, sonst droht Unruhe; Hunger und Staatsbankrott sind nah. GEGEN Erlauben: Adel und Klerus sind wütend (der Steuerplan scheiterte 1787), der König verliert Rückhalt und Macht; der Dritte Stand wäre zu mächtig; seit 1614 wurde nach Ständen abgestimmt. Auch eine Zwischenlösung ist gut begründbar. Form nach Verlauf: Blitzlicht (je eine Stimme „erlauben“, eine „nicht erlauben“, gezielt aufgerufen), schriftlich mit Vorlesen oder Berater-Duell zu zweit. Stichprobe: bei 4 bis 6 Heften unterschiedlichen Niveaus mitlesen, nicht kommentieren (unbenotet).");
   [["Ich kann den Weg bis zu den Generalständen am Zeitstrahl erklären."], ["Ich kann erklären, wie die Stände den Dritten Stand überstimmen konnten."], ["Ich kann begründen, warum die Abstimmung nach Ständen unfair war.*"]].forEach(([x], i) => {
-    const y = 1.55 + i * 0.85;
-    box(s, 0.6, y, 12.15, 0.75, i % 2 ? LIGHT : LIGHT2);
-    s.addShape(pres.shapes.OVAL, { x: 0.85, y: y + 0.18, w: 0.4, h: 0.4, fill: { color: WHITE }, line: { color: NAVY, width: 2 } });
-    txt(s, x, { x: 1.55, y, w: 11.0, h: 0.75, fontFace: HEAD, fontSize: 24, valign: "middle" });
+    const y = 1.5 + i * 0.68;
+    box(s, 0.6, y, 12.15, 0.58, i % 2 ? LIGHT : LIGHT2);
+    s.addShape(pres.shapes.OVAL, { x: 0.85, y: y + 0.12, w: 0.34, h: 0.34, fill: { color: WHITE }, line: { color: NAVY, width: 2 } });
+    txt(s, x, { x: 1.45, y, w: 11.1, h: 0.58, fontFace: HEAD, fontSize: 24, valign: "middle" });
   });
-  box(s, 0.6, 4.2, 12.15, 1.9, NAVY);
-  txt(s, "Abschlussaufgabe", { x: 0.9, y: 4.25, w: 11.6, h: 0.4, fontFace: HEAD, fontSize: 24, bold: true, color: ICE, valign: "middle" });
-  [["1", "Nenne zwei Ereignisse bis zu den Generalständen, mit Jahr.", 4.75, 0.5], ["2", "Erkläre in einem Satz, warum der Dritte Stand (Bauern und Bürger) überstimmt wurde, obwohl er fast alle Menschen vertrat.", 5.35, 0.7]].forEach(([n, x, y, h]) => {
-    numCircle(s, n, 0.95, y + (h - 0.42) / 2, 0.42, RED);
-    txt(s, x, { x: 1.6, y, w: 10.9, h, fontSize: 24, bold: true, color: WHITE, valign: "middle" });
-  });
-  bar(s, [{ text: "Zeit: ", options: { bold: true } }, { text: "2 Minuten · allein · leise      ", options: {} }, { text: "Fertig? Stift hinlegen.", options: { italic: true, color: ICE } }]);
+  box(s, 0.6, 3.65, 12.15, 2.45, NAVY);
+  txt(s, "Du bist Berater von König Ludwig XVI. Er fragt dich:", { x: 0.9, y: 3.7, w: 11.6, h: 0.45, fontFace: HEAD, fontSize: 24, bold: true, color: ICE, valign: "middle" });
+  txt(s, "„Soll ich erlauben, dass der Dritte Stand (Bauern und Bürger) nach Köpfen abstimmt?“", { x: 0.9, y: 4.15, w: 11.6, h: 0.95, fontSize: 24, bold: true, color: WHITE, valign: "middle" });
+  txt(s, "Dein Rat:  „Ich rate dir, … , weil …“", { x: 0.9, y: 5.1, w: 11.6, h: 0.45, fontFace: HEAD, fontSize: 24, bold: true, color: WHITE, valign: "middle" });
+  txt(s, "Das gehört hinein: eine Position · ein Sachargument aus der Stunde · ein „weil“", { x: 0.9, y: 5.55, w: 11.6, h: 0.45, fontSize: 24, color: ICE, valign: "middle" });
+  bar(s, [{ text: "Zeit: ", options: { bold: true } }, { text: "3 Minuten · allein · leise      ", options: {} }, { text: "Fertig? Stift hinlegen.", options: { italic: true, color: ICE } }]);
 }
 
 // ============ 16 Ausblick ============
