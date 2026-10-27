@@ -2,6 +2,8 @@
 
 Stand 27.10.2026 (Entwurf zur Abnahme). 1 Stunde pro Woche bis Halbjahresende, 11 Stunden (8D, ohne Reserve) bzw. 11 plus 1 Reserve (8C), 2 Tests. Gilt für 8C und 8D mit denselben Stundennummern; die 8C liegt eine Stunde vorn. Termine siehe Übersicht.
 
+Anschauliche Fassung zum Ausdrucken: `Sequenz_Franzoesische_Revolution_8D.docx` und `.pdf` (Zeitleiste, Stundenübersicht, Kompetenzmatrix; Quellcode `quellcode/sequenz.js`). Diese Datei bleibt die pflegbare Statusübersicht.
+
 ## Reihenebene
 
 - **Leitfrage der Reihe:** Wie kam es zur Französischen Revolution, und war sie ein Erfolg?
