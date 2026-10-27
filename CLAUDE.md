@@ -105,6 +105,7 @@ Gilt für Geschichte 8C (`Geschichte_8/`, 12 Schülerinnen und Schüler, zwei Le
 - **„Dritter Stand“ immer mit Klammer:** „Dritter Stand (Bauern und Bürger)“.
 - **Kein Vorlese- und Heraushör-Text** als Einstieg oder Erarbeitung. Selbst erarbeiten lassen. Texte im Blocksatz, Zeitstrahl als Blatt mit vorgegebenen Daten (hat in der 8C gut funktioniert).
 - **Tests:** höchstens 2 Seiten, nichts abfragen, was zu schwer ist (Zahlen vorgeben), viele Wahr-oder-falsch-Aussagen mit Begründung, Zusatzaufgabe 1 Punkt.
+- **Lehrbuch nur indirekt (27.10.):** Das Buch (Seiten zur Französischen Revolution, S. 110–129) dient als Inspiration. Die Lehrkraft nutzt **bearbeitete (gekürzte, vereinfachte) Buchtexte als Arbeitsblatt** statt der Buchseiten selbst. Bilder, Quellen und Schaubilder werden per Seitenangabe genutzt. Zahlen und Daten bleiben zwischen 8C und 8D gleich (Vergleichbarkeit, Test); Abweichungen zum Buch werden in der Reflexion notiert.
 - **Zu abstrakte Beispiele vermeiden (27.10.):** Statt Schulbeispiel lieber ein Spiel, in dem die Klasse selbst die Rollen erlebt (Ständeversammlung mit Absprache, Stimmzettel, Zählen nach Ständen und nach Köpfen).
 - **Wahr-oder-falsch-Einstieg einzeln nacheinander:** Aussage, kurzes Gespräch, dann Antwort mit Begründung auf der Folie. **Säulen-Einstieg:** erst fragen, wie ein König regieren kann, dann Merksatz und Lückentext.
 - **Karikatur** eignet sich als Impuls (Beispiel: „Im Absolutismus fühle ich mich …“); Methode laut SchiC auch als eigene Analyse.
