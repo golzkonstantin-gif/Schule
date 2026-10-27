@@ -16,6 +16,13 @@ Die Lehrkraft hat Literatur eingespeist (überwiegend Geschichtsdidaktik, Studie
 | Geschichtserzählungen (Analysekriterien) | Personifizierung, Perspektivität, Imagination, Medienkompetenz (Held kritisch prüfen) |
 | Beispielentwurf einer Stunde, Planungsassistent (KI) | Entwurf als Muster für schriftliche Planung; KI-Plan als Gegenbeispiel |
 | Einführungstext „Unterrichtsreihen konzipieren“ | Reihe mit übergreifender Intention, Texte im Vergleich, aufeinander aufbauende Teilziele |
+| Hospitationskriterien Brandenburg (April 2023) und „Hinweise und Erläuterungen“ (2026, teils KI-gestützt formuliert, daher als Orientierung lesen) | Drei Tiefenstrukturen: kognitive Aktivierung, konstruktive Unterstützung, Klassenführung. Erläuterungen zu jedem Indikator, u. a. Zeitmanagement, Anteil echter Lernzeit, Fehlerkultur, Rückmeldekultur, Transparenz, Arbeitsaufträge, Heterogenität |
+| Planungsmodell AVIVA (Folie, Buch „Kompetenzorientiert unterrichten“, nur Einführung gelesen) | Phasen beschreiben Lernfunktionen, nicht feste Methoden. Direktes Vorgehen bei wenig Vorwissen, schrittweise Öffnung zum selbstgesteuerten Lernen |
+| Planungsmatrix AVIVA, Checkliste zum Unterrichtsentwurf, Schaubild Unterrichtsstruktur | Je Phase Wer, Was, Wie, Womit, Warum; Selbstreflexion; 16 Prüffragen (u. a. überprüfbares Ziel, begründetes Lernarrangement, hohe Lernzeit, didaktische Funktion der Reserven); Gelenkstellen als Sollbruchstellen |
+| Gelenkstellen (Schaubild und Text) | Planung von der Mitte (Gegenstand, Kompetenz) nach außen. Gute Gelenkstellen sind inhaltlich eingebunden, schlechte sind isolierte Organisationsansagen |
+| Ergebnissicherung (Kurzvorlage), Leistungsbewertung (Mindmap), Fördern und Fordern, Classroom Management, Intelligentes Üben | Ergebnissicherung nicht in die Hausaufgabe verlagern, Leistungsbewertung erst danach, Kriterien vorab; gestufte Hilfen, Selbstkontrolle mit Musterlösungen, Lernfortschritt sichtbar machen |
+| Gehirngerecht lernen (Broschüre, Fachtext) | Überblick zu Beginn, kurze Wiederholungen, Konsolidierung braucht Zeit, Beziehung, Bewegung. Neuro-Begründungen sind vereinfacht, übernommen wird nur der Praxiskern |
+| Schaubild „Lernkulturwandel“ (fünf Dimensionen) | Zusammenarbeit, Lernbegleitung und offene Lernformen, eigenständiges Handeln, Digitalität, Lernorte. Für den Unterricht der 7A bisher kaum relevant |
 
 ## Was bei der Lehrkraft schon gelingt
 
@@ -58,6 +65,24 @@ Die Lehrkraft hat Literatur eingespeist (überwiegend Geschichtsdidaktik, Studie
 4. **Reihenebene:** Für die Balladen ein verbindendes Thema (z. B. Mut, Treue, Verantwortung) und eine Eingangsdiagnose („Was ist eine Ballade?“), die am Ende der Einheit mit Beleg wiederholt wird (Vorher-Nachher).
 5. **Optional:** Gestufte Hilfen (drei Karten am Pult) bei genau einer Aufgabe, z. B. Nacherzählen. Mündlichkeit: vor der Kreide-Kette 2 Minuten „Begründe deinem Partner …“.
 
+## Planungsstandard ab 2.11. (Stand 27.10., aus der gesamten Literatur)
+
+Er ergänzt das bisherige Muster (AVIVA, Ziel und Ablauf an der Tafel, feste Ansagen) und ersetzt es nicht. Die Punkte 1–4 gelten sofort, die Punkte 5–8 werden nach und nach eingeführt.
+
+1. **Kopf der Planung:** Ziel als „Ich kann …“, Prüfaufgabe („Woran erkenne ich es?“), ein Satz „Beitrag zur Reihe“ und Mindestziel. Alles Weitere ist mit * markiert.
+2. **Je AVIVA-Phase eine Warum-Zeile** (didaktische Funktion der Phase), dazu Zeit, Arbeitsform, Material und die wörtliche Ansage wie bisher. So lässt sich „keine Phase nur zum Beschäftigen“ schon beim Planen prüfen.
+3. **Gelenkstellen mit Sinn:** Die festen Ansagen bleiben. Dazu kommt ein Satz, der die vorige Phase mit der nächsten verbindet, nicht nur eine Organisationsansage.
+4. **Partnerphase vor jeder Kreide-Kette:** Alle sprechen und begründen zuerst zu zweit, die Tafel dient nur dem Vergleichen. Das erhöht den Redeanteil.
+5. **Differenzierung klein halten:** Höchstens eine Aufgabe pro Stunde mit gestuften Hilfen (drei Karten am Pult) oder mit Pflicht- und Wahlteil. Die Handreichung für S-PL bleibt.
+6. **Pro Reihe mindestens eine Urteilsaufgabe** mit vorab bekannten Kriterien (Sachurteil mit Textbeleg, dann Werturteil mit offengelegtem Maßstab).
+7. **Rückmeldung der Klasse** als ein Satz im Exit-Ticket („Das war klar / Das hat gefehlt“).
+8. **Reflexion nach der Stunde** im Reflexionslog: Passten Ziel, Inhalt und Methode zusammen? Zeit? Sozialformen? Wie viel echte Lernzeit? (Zeile „Selbstreflexion“ der Planungsmatrix.)
+
+Dazu gelten:
+- Ergebnissicherung nicht in die Hausaufgabe schieben. Die Leistungsbewertung folgt erst danach.
+- Material vorab bereitlegen oder verteilen lassen, damit keine Austeilaktionen Zeit kosten.
+- Laufzettel, Portfolio und Daumenprobe werden nicht eingeführt (wenige Arbeitsblätter, keine Selbsteinschätzung). Die Lern-Landkarte kann als Heftseite am Ende der Balladen sinnvoll sein.
+
 ## Hinweis für schriftliche Entwürfe
 
 Falls bei einer Hospitation ein schriftlicher Entwurf verlangt wird, lässt sich das Tafelskript in dieses Muster überführen: Lehr- und Lernbedingungen, Sequenzplanung, didaktisch-methodisches Konzept, Verlaufsplanung (Phase, Zeit, Inhalt, Impulse, erwartetes Schülerverhalten, Organisationsform, Medien), didaktische Reserve (bei uns: Phasen mit *).
@@ -65,4 +90,5 @@ Falls bei einer Hospitation ein schriftlicher Entwurf verlangt wird, lässt sich
 ## Offen
 
 - Hospitationsfeedback steht noch aus. Dann die Lücken oben prüfen und aktualisieren.
-- Quellen teils nur auszugsweise gelesen: Handreichung Kompetenzraster (Kap. 1–6), Erprobung (ohne die zwei Unterrichtsbeispiele), Geschichtserzählungen (3 von 24 Seiten).
+- Quellen teils nur auszugsweise gelesen: Handreichung Kompetenzraster (Kap. 1–6), Erprobung (ohne die zwei Unterrichtsbeispiele), Geschichtserzählungen (3 von 24 Seiten), AVIVA-Buch (nur Einführung, ohne die Kapitel zu den Phasen und Methoden), Artikel bei forumbd und Bildungsserver (nur das Schaubild bzw. gar nicht, Host war gesperrt).
+- Die Wirkung des Planungsstandards nach den ersten Stunden prüfen und im Reflexionslog festhalten.
