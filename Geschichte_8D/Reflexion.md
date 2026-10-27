@@ -36,6 +36,7 @@
   - Sollbruchstellen: Wiederholung kürzen (Lösungsfolie sofort), Ü3 Satz 3 mit Stern.
 - **Überarbeitung 27.10. nach Planungsstandard und Direkter Instruktion** (nur 8D, die 8C hatte die Stunde schon): Kopf mit Ziel, Prüfaufgabe, Mindestziel, Beitrag zur Reihe; Warum-Zeile und Gelenkstelle je Phase; Modell, „Warnung vor dem Fehler“ und gezielte Abfragen in der Ständeversammlung; Stichprobe im Heft bei Ü3; Reflexionsfragen für nach der Stunde. Zeit: Phase 3a braucht 1 Minute aus dem Puffer.
 - **Entscheidung der Lehrkraft:** Stichproben im Plenum als gezielte Abfrage (kein Gespräch) oder im Heft, im Wechsel.
+- **Sequenzentscheidungen 27.10.:** Karikatur-Methode in Stunde 2 mit „Für die Mühsal geboren“ (Lehrbuch S. 111) probieren, in Stunde 7 an der Robespierre-Karikatur (S. 121) wiederholen. Marsch der Frauen entfällt, Flucht nach Varennes bleibt in Stunde 6. Das Buch dient nur als Inspiration (S. 110–129).
 - **Rückmeldung der Lehrkraft:** *(steht noch aus)*
 
 ## Hospitationsfeedback (gesammelt)

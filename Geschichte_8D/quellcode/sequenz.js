@@ -21,7 +21,7 @@ const S = [
   { n: 1, d8: "Mi 04.11.", d8c: "Fr 16.10.", title: "Generalstände", sub: "Weg zu 1789, Abstimmung nach Ständen", ty: "i",
     ich: "… den Weg bis zu den Generalständen am Zeitstrahl erklären. Ich kann erklären, wie die Stände den Dritten Stand überstimmen konnten. Ich kann begründen, warum die Abstimmung nach Ständen unfair war.", pruef: "Zeitstrahl; Satz „unfair, weil …“", vor: "Text selbst erarbeiten, Ständespiel", komp: "Ursachen; Rekonstruktion" },
   { n: 2, d8: "Mi 11.11.", d8c: "Fr 06.11.", title: "Dritter Stand handelt", sub: "Nationalversammlung, Ballhausschwur", ty: "m", tag: "Karikatur",
-    ich: "… erklären, warum sich der Dritte Stand 1789 zur Nationalversammlung erklärte und was er im Ballhausschwur versprach. Ich kann eine Karikatur analysieren: beschreiben, deuten, beurteilen.", pruef: "Kurzanalyse einer Karikatur", vor: "Methode direkt (Modell, dann angeleitet); Eingangsdiagnose", komp: "Epochenjahr 1789; Karikatur" },
+    ich: "… erklären, warum sich der Dritte Stand 1789 zur Nationalversammlung erklärte und was er im Ballhausschwur versprach. Ich kann eine Karikatur analysieren: beschreiben, deuten, beurteilen.", pruef: "Kurzanalyse einer Karikatur", vor: "Methode direkt (Modell, dann angeleitet) an „Für die Mühsal geboren“ (Buch S. 111); Eingangsdiagnose", komp: "Epochenjahr 1789; Karikatur" },
   { n: 3, d8: "Mi 18.11.", d8c: "Fr 13.11.", title: "Bastille, Vorrechte, Menschenrechte", sub: "14. Juli, 4. August, 26. August", ty: "i",
     ich: "… erklären, warum der Sturm auf die Bastille zum Symbol wurde. Ich kann zwei Artikel der Menschenrechtserklärung mit eigenen Worten wiedergeben.", pruef: "Zwei Artikel erklären und einem Stand zuordnen", vor: "Textauszüge, Rollenkarten (Standeskarten)", komp: "Menschenrechtserklärung" },
   { n: 4, d8: "Mi 25.11.", d8c: "Fr 20.11.", title: "Verfassung 1791", sub: "konstitutionelle Monarchie", ty: "m", tag: "Schaubild",
@@ -31,7 +31,7 @@ const S = [
   { n: 6, d8: "Mi 09.12.", d8c: "Fr 04.12.", title: "Vom König zur Republik", sub: "Flucht, Krieg, Hinrichtung", ty: "i",
     ich: "… erklären, warum die konstitutionelle Monarchie 1792 scheiterte. Ich kann die Ereignisse von 1791 bis 1793 in der richtigen Reihenfolge nennen.", pruef: "Ursache-Folge-Kette in eigenen Sätzen", vor: "Ereignisse erst zu zweit ordnen, dann vergleichen; Berichtigung Test 1", komp: "Zusammenhänge rekonstruieren" },
   { n: 7, d8: "Mi 16.12.", d8c: "Fr 11.12.", title: "Jakobinerherrschaft, Terror", sub: "Wohlfahrtsausschuss, Guillotine", ty: "u", tag: "Urteil",
-    ich: "… ein Sachurteil zum Terror der Jakobiner mit Beleg formulieren. Ich kann ein Werturteil dazu mit offengelegtem Maßstab begründen.", pruef: "Zwei Sätze: Sachurteil mit Beleg, Werturteil mit Maßstab", vor: "Urteil direkt (Modell, Satzanfänge in 3 Stufen)", komp: "Sach- und Werturteil" },
+    ich: "… ein Sachurteil zum Terror der Jakobiner mit Beleg formulieren. Ich kann ein Werturteil dazu mit offengelegtem Maßstab begründen.", pruef: "Zwei Sätze: Sachurteil mit Beleg, Werturteil mit Maßstab", vor: "Urteil direkt (Modell, Satzanfänge in 3 Stufen); Statistik S. 121; Karikatur-Methode wiederholt (Robespierre als Henker)", komp: "Sach- und Werturteil" },
   { n: 8, d8: "Mi 06.01.", d8c: "Fr 18.12.", title: "Ende der Revolution, Napoleon", sub: "1794–1799, Staatsstreich", ty: "i",
     ich: "… den Weg vom Ende des Terrors 1794 bis zum Staatsstreich 1799 am Zeitstrahl darstellen. Ich kann zwei Gründe nennen, warum viele Menschen 1799 einen starken Mann akzeptierten.", pruef: "Zwei begründete Ursachen", vor: "Text und Zeitstrahl", komp: "Zusammenhänge rekonstruieren" },
   { n: 9, d8: "Mi 13.01.", d8c: "Fr 08.01.", title: "Napoleon: Reformen und Fall", sub: "Erbe der Revolution oder Verrat?", ty: "u", tag: "Urteil",
@@ -111,7 +111,7 @@ const mw = [LW, ...Array(10).fill(MW), MLAST];
 const MARK = { M: ["M", GOLD, "000000"], a: ["a", "CADCFC", "000000"], s: ["s", NAVY, WHITE] };
 const MAT = [
   ["Ursachen / Zusammenhänge rekonstruieren", { 1: "a", 6: "a", 8: "s", 10: "s" }],
-  ["Karikatur analysieren", { 2: "M", 5: "s" }],
+  ["Karikatur analysieren", { 2: "M", 5: "s", 7: "a" }],
   ["Quelle lesen: Menschenrechte", { 3: "a" }],
   ["Verfassungsschaubild lesen", { 4: "M", 10: "s" }],
   ["Sachurteil und Werturteil", { 1: "a", 7: "M", 9: "a", 10: "s", 11: "s" }],
