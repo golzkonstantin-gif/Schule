@@ -56,7 +56,8 @@
 - **Material:** `Generalstaende_Stunde1/` (Tafelskript, Text zum Lesen, fünf Folien)
 - **Inhalt:** Test zurück (Hälfte hat gelernt, Hälfte nicht: Verteilung anonym, Berichtigung bis zur nächsten Stunde), Probleme sammeln, Zeitleiste bis 5. Mai 1789 erarbeiten, Zahlen (Menschen, Abgeordnete, Stimmen), Abstimmung erst als Gedankenspiel zu 1789 (Antrag „Auch Adel und Klerus zahlen Steuern“: nach Ständen 2:1 abgelehnt, nach Köpfen 580:560 knapp angenommen; wichtig: Es wurde 1789 nicht nach Köpfen abgestimmt, der Streit um die Regel blockierte die Generalstände), dann als Schulspiel mit den beiden Lehrkräften als Klerus und Adel und den Schülern als Dritter Stand (Antrag: nur Schüler putzen, Lehrkräfte befreit), Rechnung (Stimme wiegt 133-mal so viel), Merksatz, Satz „unfair, weil …“.
 - **Planungsentscheidungen:** AVIVA als Phasenmodell, Verlauf als Zeitstrahl statt Gruppenpuzzle (Zeitnot): Blatt mit Text (Blocksatz) und Zeitstrahl auf der Rückseite, die Daten stehen drauf, die Schüler tragen die Ereignisse ein, Sollbruchstelle: das Schulbeispiel kann in Stunde 2 verschoben werden, Folien nach AVIVA mit Lernzielen, Ablauf und Visualisierungen (16 Folien, Schrift 24 Punkt, Phasenanzeige A V I V A oben rechts).
-- **Rückmeldung der Lehrkraft:** *(steht noch aus)*
+- **Rückmeldung der Lehrkraft (27.10.):** Der Text war gut. Die Stunde war unterrichtsgesprächslastig, das Schulbeispiel zu abstrakt. Lieber die Klasse in Stände teilen und merken lassen, dass die Stände untereinander mauscheln und den Dritten Stand überstimmen können.
+- **Konsequenz:** Für die 8D wurde daraus ein Ständespiel (`Geschichte_8D/Generalstaende/`). Bei Bedarf kann die 8C es übernehmen.
 
 ## Hospitationsfeedback (gesammelt)
 

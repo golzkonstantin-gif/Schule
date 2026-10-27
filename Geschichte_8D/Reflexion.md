@@ -4,7 +4,7 @@
 
 - 25 Schülerinnen und Schüler, Leistungssportler (Sportarten: noch eintragen), eine Lehrkraft.
 - **Sehr laut.** Unterrichtsgespräch daher reduzieren. Ruhig geht es, wenn die Klasse beim Ankommen, in Einzel- oder Gruppenarbeit etwas zu tun hat (Rückmeldung 27.10.).
-- Parallelklasse 8C hat eine Stunde Vorsprung. Deren Planung und Rückmeldungen stehen in `Geschichte_8/Reflexion.md` (Branch `claude/peaceful-gauss-hccvav`).
+- Parallelklasse 8C hat eine Stunde Vorsprung. Deren Planung und Rückmeldungen stehen in `Geschichte_8/Reflexion.md`. Sequenz und Abgleich: `Sequenz_Franzoesische_Revolution.md`.
 
 ## Lernstand (aktueller Stand)
 
@@ -20,7 +20,7 @@
 ## Stundenlog
 
 ### Rückmeldung zur 8C (Generalstände, Stunde 1) – 27.10.
-- **Material der 8C:** `Geschichte_8/Generalstaende_Stunde1/` (Branch `claude/peaceful-gauss-hccvav`)
+- **Material der 8C:** `Geschichte_8/Generalstaende_Stunde1/` 
 - **Was hat funktioniert:** Der Text „Wie kam es zu den Generalständen?“ mit Zeitstrahl war gut.
 - **Wo hing es:** Die Stunde war unterrichtsgesprächslastig. Das Schulbeispiel (Lehrkräfte putzen nicht) war zu abstrakt.
 - **Konsequenz:** Lieber die Klasse in Stände teilen und merken lassen, dass Stände untereinander mauscheln und den Dritten Stand überstimmen können.
