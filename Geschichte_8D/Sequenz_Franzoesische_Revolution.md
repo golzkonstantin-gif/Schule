@@ -77,3 +77,25 @@ Je Stunde: Ich-kann-Ziel, Prüfaufgabe („Woran erkenne ich es?“), Mindestzie
 - Methoden stecken in den Stunden, kein eigener Methodentermin.
 - Vor jeder 8D-Planung: Reflexionslog der 8C lesen (`Geschichte_8/Reflexion.md`) und die Parallelstunde einbeziehen. Danach die Spalten 8C und 8D hier aktualisieren.
 - Planung jeder Stunde nach Planungsstandard (`CLAUDE.md`): Kopf mit Ziel, Prüfaufgabe, Mindestziel, Beitrag zur Reihe; Warum-Zeile und Gelenkstelle je Phase.
+
+## Lehrbuch als Inspiration (Seiten 110–129, Kapitel „Zeitalter der Revolutionen“)
+
+Stand 27.10. Nach Rückmeldung der Lehrkraft: Das Buch dient nur als Orientierung, wie man inhaltlich vorgehen kann, nicht als Pflicht. Die Texte im Buch sind dicht; für die 8D werden kürzere eigene Texte erstellt und Bilder, Quellen und Schaubilder per Seitenzahl aus dem Buch genutzt. Seiten 126/127 lagen nicht im Scan (vermutlich Napoleon in Europa und Niederlage).
+
+| Stunde | Buchseiten | Brauchbar |
+|---|---|---|
+| 1 | 110/111 | Staatsausgaben 1774/1788 (Kreisdiagramme), Beschwerdebrief der Bauern (Q2), Forderungen einer Stadt (Q4), Kupferstich „Für die Mühsal geboren – der Mann des Dorfes“ (Q3) |
+| 2 | 112/113 | Sieyès „Was ist der Dritte Stand?“ (Q3: ALLES – NICHTS – ETWAS), Ballhausschwur (Zeichnung von David, Q4), Kokarde, Weg 9. Juli bis Bastille |
+| 3 | 112/113 | Bastille (Q1), Aufstände in Paris und auf dem Land, Beschlüsse der Nationalversammlung 4./5. August 1789 (M1, Liste der aufgehobenen Vorrechte), Marsch der Frauen nach Versailles 5. Oktober 1789 |
+| 4 | 114/115 | Verfassung 1791, Schaubild M2 (Gewaltenteilung, Aktivbürger ca. 4,3 Mio., Passivbürger ca. 22 Mio.), konstitutionelle Monarchie (M3), Verfassungsauszug Artikel 1 bis 3 (Q1), Flucht nach Varennes Juni 1791 |
+| 6 | 118/119 | Sansculotten, Medienrevolution, Ende der Monarchie August 1792, Hinrichtung des Königs, Augenzeugenbericht Q3 (kürzen), Vergleich Q2 und Q3 |
+| 7 | 120/121 | Wohlfahrtsausschuss, Robespierre-Rede (Q1), **Statistik der Todesurteile März 1793 bis August 1794 (M2: Lohnempfänger 31,25 %, Bauern 28,5 %, Adlige 8,25 %, Geistliche 6,5 % …)**, Kritik von Lavater (Q2), **Karikatur „Robespierre als Henker“ (Q3, Aufgabe 5: Absicht des Zeichners)** |
+| 8 | 124/125 | Staatsstreich 1799, Konsulat, Kaiserkrönung 1804 |
+| 9 | 124/125, 128 | Reformen Napoleons (M1: Code civil, Verwaltung, Konkordat …), Verfassung Westphalen (Q3), Vergleich Napoleon und Ludwig XIV. (Aufgabe 5), Niederlage Russland 1812/13 |
+| 11 | 128/129 | Wiener Kongress, Volkssouveränität und Nation, Wirkungen auf Europa (Büttner, Q1), Aufgabe „Bereiche langfristiger Folgen“ |
+| Methode | 116/117 | Historienbilder: Beschreibe – Erkläre die Zusammenhänge – Bewerte, mit Formulierungshilfen. Passt zum Dreischritt beschreiben, deuten, beurteilen der Karikatur-Analyse |
+| Zusatz* | 122/123 | Revolution auf dem Land, Vendée (Gegenrevolution), Bauernführer Henri de la Rochejaquelein |
+
+**Entscheidungen offen (27.10.):**
+- Karikatur-Methode: Das Buch bringt als eigentliche Karikatur nur „Robespierre als Henker“ (S. 121, Stunde 7) und das Satirebild „Für die Mühsal geboren“ (S. 111). Die Methodenseite (S. 116) behandelt Historienbilder, keine Karikatur.
+- Marsch der Frauen nach Versailles (Okt. 1789) steht im Buch, fehlt in der Sequenz.
