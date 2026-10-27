@@ -62,7 +62,7 @@ d.push(...bullets([
 
 d.push(table([800, 2300, 4300, 2806], [
   row([th("Min.", 800), th("AVIVA", 2300), th("Phase", 4300), th("Arbeitsform", 2806)], 320),
-  ...[["3", "Ankommen", "0  Ankommen, Lernziele, Test", "still, allein"], ["6", "Vorwissen", "1  Wiederholung: Ständegesellschaft", "allein, Kontrolle per Folie"], ["11", "Informieren", "2  Text, Zeitstrahl, Kreide-Kette", "allein, Tafel mit Mitschreiben"], ["18", "Verarbeiten", "3  Ständeversammlung: Absprache, Abstimmung, Auswertung", "Stände, allein, Partner"], ["6", "Auswerten", "4  Merksatz, Abschlussfrage (Berater), Ausblick", "allein, abschreiben"], ["1", "—", "Puffer", "—"]].map((r) => row(r.map((v, i) => tc(v, [800, 2300, 4300, 2806][i], { bold: i < 3 })), 320)),
+  ...[["3", "Ankommen", "0  Ankommen, Lernziele, Test", "still, allein"], ["6", "Vorwissen", "1  Wiederholung: Fehlertext Absolutismus und Stände", "allein, Kontrolle per Folie"], ["11", "Informieren", "2  Text, Zeitstrahl, Kreide-Kette", "allein, Tafel mit Mitschreiben"], ["18", "Verarbeiten", "3  Ständeversammlung: Absprache, Abstimmung, Auswertung", "Stände, allein, Partner"], ["6", "Auswerten", "4  Merksatz, Abschlussfrage (Berater), Ausblick", "allein, abschreiben"], ["1", "—", "Puffer", "—"]].map((r) => row(r.map((v, i) => tc(v, [800, 2300, 4300, 2806][i], { bold: i < 3 })), 320)),
 ]));
 
 d.push(h3("Lautstärke und Gesprächsanteil: so läuft die Stunde"));
@@ -116,14 +116,14 @@ d.push(step("kommt an, arbeitet leise", {
 }));
 
 // Phase 1
-d.push(phase("1", "Wiederholung: Ständegesellschaft", 6, "AVIVA: Vorwissen aktivieren"));
-d.push(warum("Zahlen und Vorrechte der drei Stände aktiv abrufen, denn ohne sie ist die Abstimmung im Spiel nicht zu verstehen (direkt: erst allein, Kontrolle per Folie).", "„Klerus und Adel zahlen keine Steuern. Wie es dazu kam, dass der König ihre Zustimmung doch wieder brauchte, lest ihr jetzt.“"));
+d.push(phase("1", "Wiederholung: Fehlertext", 6, "AVIVA: Vorwissen aktivieren"));
+d.push(warum("Wissen aus dem Absolutismus-Test aktiv anwenden: Falsches erkennen und verbessern. Zahlen und Vorrechte der Stände braucht die Klasse gleich im Spiel (direkt: allein, Kontrolle per Folie). Die Generalstände kennt die Klasse noch nicht, deshalb kommen sie im Fehlertext nicht vor.", "„Klerus und Adel zahlen keine Steuern. Wie es dazu kam, dass der König ihre Zustimmung doch wieder brauchte, lest ihr jetzt.“"));
 d.push(sp());
 d.push(step("arbeitet allein, kontrolliert", {
   say: "Jetzt arbeitet ihr allein. Die Aufgabe steht rechts.",
-  do: ["Folie 4 (Ü1). 4 Minuten schriftlich im Heft, danach Folie 5 zeigen (Lösung), 2 Minuten „Vergleicht und verbessert mit Grün.“ Kein Plenumsgespräch. Partnercheck nach Ü1 (1 Minute, flüstern) nur, wenn die Klasse ruhig ist; sonst entfällt er. Der Inhalt knüpft an die letzte Stunde an: Die Zahlen und Vorrechte brauchen die Schülerinnen und Schüler gleich im Spiel."],
-  extra: [folieBox("4 · Ü1 Ständegesellschaft", [p(t("Ü1 Die drei Stände", { font: "Cambria", size: 22, bold: true, color: NAVY }), { after: 40 }), bl("1. Schreibe die drei Stände untereinander ins Heft."), bl("2. Schreibe dazu die Zahl der Menschen: 150 000 · 500 000 · 20 000 000."), bl("3. Schreibe hinter die beiden Stände mit Vorrechten: „zahlt keine Steuern“."), bl("4. Beende: „Die Steuern zahlt der …“", { after: 40 }), p([t("Zeit: ", { bold: true, size: 19 }), t("4 Minuten · allein · leise     ", { size: 19 }), t("Fertig? Stift hinlegen.", { size: 19, italics: true })], { after: 0 })]), gapP()],
-  sol: "Klerus 150 000 · Adel 500 000 · Dritter Stand (Bauern und Bürger) 20 000 000. Klerus und Adel zahlen keine Steuern. Die Steuern zahlt der Dritte Stand (Bauern und Bürger).",
+  do: ["Folie 4 (Ü1, Fehlertext). 4 Minuten schriftlich im Heft, danach Folie 5 zeigen (Lösung), 2 Minuten „Vergleicht und verbessert mit Grün.“ Kein Plenumsgespräch. Partnercheck nach Ü1 (1 Minute, flüstern) nur, wenn die Klasse ruhig ist; sonst entfällt er. Der Inhalt knüpft an die letzte Stunde an: Die Zahlen und Vorrechte brauchen die Schülerinnen und Schüler gleich im Spiel."],
+  extra: [folieBox("4 · Ü1 Fehlertext", [p(t("Ü1 Absolutismus und Stände", { font: "Cambria", size: 22, bold: true, color: NAVY }), { after: 40 }), bl("1. Ludwig XIV. war der Sonnenkönig und regierte im Absolutismus gemeinsam mit den Ständen."), bl("2. Seine Macht komme vom Volk, sagte er (Gottesgnadentum)."), bl("3. Zum Klerus gehörten etwa 20 Millionen Menschen, zum Adel etwa 500 000."), bl("4. Klerus und Adel zahlten die meisten Steuern."), bl("5. Der Dritte Stand (Bauern und Bürger) hatte kaum Vorrechte.", { after: 40 }), bl("Aufgabe: Vier Sätze enthalten einen Fehler. Unterstreiche die Fehler und schreibe diese Sätze richtig ins Heft.", { after: 40 }), p([t("Zeit: ", { bold: true, size: 19 }), t("4 Minuten · allein · leise     ", { size: 19 }), t("Fertig? Stift hinlegen.", { size: 19, italics: true })], { after: 0 })]), gapP()],
+  sol: "Fehler in 1 (der König regiert allein, ohne die Stände), 2 (die Macht kommt von Gott), 3 (der Klerus hat etwa 150 000 Mitglieder), 4 (Klerus und Adel zahlen keine Steuern). Satz 5 ist richtig. Die Zahlen stammen aus dem Gruppenpuzzle (150 000 / 500 000 / 20 000 000).",
 }));
 d.push(sp());
 d.push(note("SOLLBRUCHSTELLE", "Läuft die Klasse langsam oder laut an, wird Folie 5 sofort ohne Besprechung gezeigt (2 Minuten gewonnen)."));
@@ -235,7 +235,7 @@ d.push(note("ZUSATZ (Puffer, nur bei Zeit)", "Folie 18: Sportverein-Beispiel (Ü
 d.push(h3("So sieht das Heft am Ende der Stunde aus"));
 d.push(table([2300, 7906], [
   ["Überschrift", "Generalstände 1789 · Datum"],
-  ["Ü1", "Drei Stände mit Zahlen, Vorrechte, „Die Steuern zahlt der …“ (Verbesserungen grün)"],
+  ["Ü1", "Fehlertext: vier verbesserte Sätze (Verbesserungen grün)"],
   ["Zeitstrahl", "Blatt eingeklebt, Ereignisse zu den Daten eingetragen (1614 bis 5. Mai 1789), Verbesserungen grün"],
   ["Ständeversammlung", "Zwei Argumente, eine Beobachtung, Vermutung zum Ausgang, Ergebnis (Zahlen von der Tafel)"],
   ["Ü3", "Drei Sätze (Satz 3 optional)"],

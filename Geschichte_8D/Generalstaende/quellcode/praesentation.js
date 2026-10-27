@@ -181,22 +181,37 @@ pageNo = 0;
   bar(s, [{ text: "Wichtig: ", options: { bold: true } }, { text: "Wir arbeiten leise. Gesprochen wird nur, wenn es auf der Folie steht.", options: {} }]);
 }
 
-// ============ 4 Ü1 ============
+// ============ 4 Ü1 Fehlertext ============
 {
-  const { s } = taskSlide("V · Vorwissen aktivieren · Übung 1", "Die drei Stände", ["Schreibe die drei Stände untereinander ins Heft.", "Schreibe dazu die Zahl der Menschen: 150 000 · 500 000 · 20 000 000.", "Schreibe hinter die beiden Stände mit Vorrechten: „zahlt keine Steuern“.", "Beende: „Die Steuern zahlt der …“"], "4 Minuten · allein · leise",
-    "Ansage: „Jetzt arbeitet ihr allein. Die Aufgabe steht rechts.“ Kein Plenumsgespräch. Nach 4 Minuten Folie 5 zeigen. Wiederholung der letzten Stunde (Test): Zahlen und Vorrechte braucht die Klasse gleich im Spiel.");
-  phaseTag(s, 1);
+  const s = blank("V · Vorwissen aktivieren · Übung 1", "Fehlertext: Absolutismus und Stände", 1, "Ansage: „Jetzt arbeitet ihr allein. Die Aufgabe steht rechts.“ Kein Plenumsgespräch. Vier Sätze enthalten je einen Fehler, ein Satz ist richtig. Fehler: 1 (der König regiert allein, nicht mit den Ständen), 2 (die Macht kommt von Gott, Gottesgnadentum), 3 (der Klerus hat etwa 150 000 Mitglieder, nicht 20 Millionen), 4 (Klerus und Adel zahlen keine Steuern). Satz 5 ist richtig. Die Zahlen stammen aus dem Gruppenpuzzle (150 000 / 500 000 / 20 000 000). Wiederholung der letzten Stunde (Test). Die Generalstände kennt die Klasse noch nicht, sie kommen deshalb nicht vor. Nach 4 Minuten Folie 5 zeigen.");
+  box(s, 0.6, 1.5, 12.15, 3.55, LIGHT2);
+  const sat = ["Ludwig XIV. war der Sonnenkönig und regierte im Absolutismus gemeinsam mit den Ständen.", "Seine Macht komme vom Volk, sagte er (Gottesgnadentum).", "Zum Klerus gehörten etwa 20 Millionen Menschen, zum Adel etwa 500 000.", "Klerus und Adel zahlten die meisten Steuern.", "Der Dritte Stand (Bauern und Bürger) hatte kaum Vorrechte."];
+  sat.forEach((x, i) => {
+    numCircle(s, i + 1, 0.85, 1.7 + i * 0.66, 0.4, NAVY);
+    txt(s, x, { x: 1.5, y: 1.62 + i * 0.66, w: 11.1, h: 0.58, fontFace: HEAD, fontSize: 24, valign: "middle" });
+  });
+  [["1", "Vier Sätze enthalten einen Fehler. Unterstreiche die Fehler."], ["2", "Schreibe diese Sätze richtig ins Heft."]].forEach(([n, x], i) => {
+    numCircle(s, n, 0.85, 5.3 + i * 0.45, 0.38, RED);
+    txt(s, x, { x: 1.5, y: 5.25 + i * 0.45, w: 11.1, h: 0.45, fontSize: 24, bold: true, valign: "middle" });
+  });
+  bar(s, [{ text: "Zeit: ", options: { bold: true } }, { text: "4 Minuten · allein · leise      ", options: {} }, { text: "Fertig? Stift hinlegen.", options: { italic: true, color: ICE } }]);
 }
 
 // ============ 5 Lösung Ü1 ============
 {
-  const s = blank("V · Vorwissen aktivieren · Kontrolle", "Die drei Stände", 1, "Ansage: „Vergleicht und verbessert mit Grün.“ 2 Minuten, nicht besprechen. Kontrolle: Klerus ca. 150 000, Adel ca. 500 000, Dritter Stand (Bauern und Bürger) ca. 20 000 000. Klerus und Adel zahlen keine Steuern, die Steuern zahlt der Dritte Stand.");
-  [["Erster Stand · Klerus", "ca. 150 000 · zahlt keine Steuern", KLERUS], ["Zweiter Stand · Adel", "ca. 500 000 · zahlt keine Steuern", ADEL], ["Dritter Stand (Bauern und Bürger)", "ca. 20 000 000 · zahlt die Steuern", DRITTER]].forEach(([n, x, c], i) => {
-    const y = 1.7 + i * 1.4;
-    box(s, 0.6, y, 12.15, 1.2, LIGHT);
-    s.addShape(pres.shapes.RECTANGLE, { x: 0.6, y, w: 0.14, h: 1.2, fill: { color: c }, line: { type: "none" } });
-    txt(s, n, { x: 1.0, y, w: 5.6, h: 1.2, fontFace: HEAD, fontSize: 24, bold: true, valign: "middle" });
-    txt(s, x, { x: 6.7, y, w: 5.9, h: 1.2, fontSize: 24, valign: "middle" });
+  const s = blank("V · Vorwissen aktivieren · Kontrolle", "Fehlertext: Lösung", 1, "Ansage: „Vergleicht und verbessert mit Grün.“ 2 Minuten, nicht besprechen. Die korrigierten Stellen stehen grün. Satz 5 war richtig. Kurz zum Mitnehmen für die nächste Phase: Klerus und Adel zahlen keine Steuern, der Dritte Stand (Bauern und Bürger) zahlt sie. Bei Unklarheit eine gezielte Abfrage (2 bis 3 Personen), kein Gespräch.");
+  box(s, 0.6, 1.5, 12.15, 4.45, LIGHT2);
+  const G = { bold: true, color: GREEN };
+  const lines = [
+    [{ text: "Ludwig XIV. war der Sonnenkönig und regierte im Absolutismus " }, { text: "allein, ohne die Stände", options: G }, { text: "." }],
+    [{ text: "Seine Macht komme " }, { text: "von Gott", options: G }, { text: ", sagte er (Gottesgnadentum)." }],
+    [{ text: "Zum Klerus gehörten etwa " }, { text: "150 000", options: G }, { text: " Menschen, zum Adel etwa 500 000." }],
+    [{ text: "Klerus und Adel zahlten " }, { text: "keine Steuern", options: G }, { text: "." }],
+    [{ text: "Der Dritte Stand (Bauern und Bürger) hatte kaum Vorrechte. " }, { text: "(war richtig)", options: { italic: true, color: MUTED } }],
+  ];
+  lines.forEach((runs, i) => {
+    numCircle(s, i + 1, 0.85, 1.75 + i * 0.85, 0.4, NAVY);
+    s.addText(runs.map((r) => ({ text: r.text, options: Object.assign({ fontFace: HEAD, fontSize: 24, color: NAVY }, r.options || {}) })), { isTextBox: true, x: 1.5, y: 1.65 + i * 0.85, w: 11.0, h: 0.8, valign: "middle", margin: 0 });
   });
   bar(s, [{ text: "Jetzt: ", options: { bold: true } }, { text: "Vergleiche und verbessere mit Grün.", options: {} }]);
 }

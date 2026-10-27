@@ -116,3 +116,7 @@ Stand 27.10. Offene Abschlussfrage mit mehreren guten Antworten, bevorzugt im Be
 | 8 | dem Direktorium | Sollen wir General Bonaparte um Hilfe bitten? |
 | 9 | Napoleon | Soll ich 1812 nach Russland marschieren? |
 | 11 | den Fürsten in Wien | Soll Frankreich bestraft werden? |
+
+## Vorwissen-Formate (Orientierung, kein festes Muster)
+
+Stand 27.10. Die Wiederholung am Stundenbeginn nutzt abwechselnd Fehlertext, Falschbehauptungen (schriftlich begründen) oder ein Bild. Nur Wissen verwenden, das die Klasse schon hat. Beispiele: Stunde 1 Fehlertext zu Absolutismus und Ständen (so geplant), Stunde 2 Fehlertext zur Stunde 1 (Ständeabstimmung), Stunde 4 Schaubild mit Fehlern, Stunde 7 Falschbehauptungen zum König.
