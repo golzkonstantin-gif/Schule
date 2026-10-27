@@ -19,27 +19,27 @@ const footer = new Footer({ children: [new Paragraph({ alignment: AlignmentType.
 // type: i = Inhalt, m = Methode im Mittelpunkt, t = Test, u = Urteil
 const S = [
   { n: 1, d8: "Mi 04.11.", d8c: "Fr 16.10.", title: "Generalstände", sub: "Weg zu 1789, Abstimmung nach Ständen", ty: "i",
-    ich: "… den Weg bis zu den Generalständen am Zeitstrahl erklären und die Abstimmung nach Ständen begründet beurteilen.", pruef: "Zeitstrahl; Satz „unfair, weil …“", vor: "Text selbst erarbeiten, Ständespiel", komp: "Ursachen; Rekonstruktion" },
+    ich: "… den Weg bis zu den Generalständen am Zeitstrahl erklären. Ich kann erklären, wie die Stände den Dritten Stand überstimmen konnten. Ich kann begründen, warum die Abstimmung nach Ständen unfair war.", pruef: "Zeitstrahl; Satz „unfair, weil …“", vor: "Text selbst erarbeiten, Ständespiel", komp: "Ursachen; Rekonstruktion" },
   { n: 2, d8: "Mi 11.11.", d8c: "Fr 06.11.", title: "Dritter Stand handelt", sub: "Nationalversammlung, Ballhausschwur", ty: "m", tag: "Karikatur",
     ich: "… erklären, warum sich der Dritte Stand 1789 zur Nationalversammlung erklärte und was er im Ballhausschwur versprach. Ich kann eine Karikatur analysieren: beschreiben, deuten, beurteilen.", pruef: "Kurzanalyse einer Karikatur", vor: "Methode direkt (Modell, dann angeleitet); Eingangsdiagnose", komp: "Epochenjahr 1789; Karikatur" },
   { n: 3, d8: "Mi 18.11.", d8c: "Fr 13.11.", title: "Bastille, Vorrechte, Menschenrechte", sub: "14. Juli, 4. August, 26. August", ty: "i",
-    ich: "… erklären, warum die Bastille zum Symbol wurde, und zwei Artikel der Menschenrechtserklärung wiedergeben.", pruef: "Zwei Artikel erklären und einem Stand zuordnen", vor: "Textauszüge, Rollenkarten (Standeskarten)", komp: "Menschenrechtserklärung" },
+    ich: "… erklären, warum der Sturm auf die Bastille zum Symbol wurde. Ich kann zwei Artikel der Menschenrechtserklärung mit eigenen Worten wiedergeben.", pruef: "Zwei Artikel erklären und einem Stand zuordnen", vor: "Textauszüge, Rollenkarten (Standeskarten)", komp: "Menschenrechtserklärung" },
   { n: 4, d8: "Mi 25.11.", d8c: "Fr 20.11.", title: "Verfassung 1791", sub: "konstitutionelle Monarchie", ty: "m", tag: "Schaubild",
-    ich: "… am Schaubild erklären, wer welche Macht hatte und wer wählen durfte (Aktiv- und Passivbürger).", pruef: "Fehler im Schaubild finden", vor: "Methode direkt; kurze Wahl mit Steuerkarten", komp: "Verfassungsschaubild" },
+    ich: "… am Schaubild erklären, wer in der konstitutionellen Monarchie welche Macht hatte. Ich kann erklären, wer 1791 wählen durfte und wer nicht.", pruef: "Fehler im Schaubild finden", vor: "Methode direkt; kurze Wahl mit Steuerkarten", komp: "Verfassungsschaubild" },
   { n: 5, d8: "Mi 02.12.", d8c: "Fr 27.11.", title: "Test 1", sub: "Stunden 1–4", ty: "t",
-    ich: "… Ursachen, Ereignisse von 1789, Menschenrechte und Verfassung 1791 richtig zuordnen und erklären.", pruef: "Test (max. 2 Seiten, 35 Min.)", vor: "Wahr/falsch mit Begründung, Zuordnung, Karikatur kurz", komp: "alle Bereiche" },
+    ich: "… die Ursachen, die Ereignisse von 1789, die Menschenrechte und die Verfassung 1791 erklären.", pruef: "Test (max. 2 Seiten, 35 Min.)", vor: "Wahr/falsch mit Begründung, Zuordnung, Karikatur kurz", komp: "alle Bereiche" },
   { n: 6, d8: "Mi 09.12.", d8c: "Fr 04.12.", title: "Vom König zur Republik", sub: "Flucht, Krieg, Hinrichtung", ty: "i",
-    ich: "… in einer Kette erklären, warum die konstitutionelle Monarchie 1792 scheiterte.", pruef: "Ursache-Folge-Kette in eigenen Sätzen", vor: "Ereignisse erst zu zweit ordnen, dann vergleichen; Berichtigung Test 1", komp: "Zusammenhänge rekonstruieren" },
+    ich: "… erklären, warum die konstitutionelle Monarchie 1792 scheiterte. Ich kann die Ereignisse von 1791 bis 1793 in der richtigen Reihenfolge nennen.", pruef: "Ursache-Folge-Kette in eigenen Sätzen", vor: "Ereignisse erst zu zweit ordnen, dann vergleichen; Berichtigung Test 1", komp: "Zusammenhänge rekonstruieren" },
   { n: 7, d8: "Mi 16.12.", d8c: "Fr 11.12.", title: "Jakobinerherrschaft, Terror", sub: "Wohlfahrtsausschuss, Guillotine", ty: "u", tag: "Urteil",
-    ich: "… ein Sachurteil zum Terror formulieren und ein Werturteil mit Maßstab begründen.", pruef: "Zwei Sätze: Sachurteil mit Beleg, Werturteil mit Maßstab", vor: "Urteil direkt (Modell, Satzanfänge in 3 Stufen)", komp: "Sach- und Werturteil" },
+    ich: "… ein Sachurteil zum Terror der Jakobiner mit Beleg formulieren. Ich kann ein Werturteil dazu mit offengelegtem Maßstab begründen.", pruef: "Zwei Sätze: Sachurteil mit Beleg, Werturteil mit Maßstab", vor: "Urteil direkt (Modell, Satzanfänge in 3 Stufen)", komp: "Sach- und Werturteil" },
   { n: 8, d8: "Mi 06.01.", d8c: "Fr 18.12.", title: "Ende der Revolution, Napoleon", sub: "1794–1799, Staatsstreich", ty: "i",
-    ich: "… erklären, warum viele Menschen 1799 einen starken Mann akzeptierten.", pruef: "Zwei begründete Ursachen", vor: "Text und Zeitstrahl", komp: "Zusammenhänge rekonstruieren" },
+    ich: "… den Weg vom Ende des Terrors 1794 bis zum Staatsstreich 1799 am Zeitstrahl darstellen. Ich kann zwei Gründe nennen, warum viele Menschen 1799 einen starken Mann akzeptierten.", pruef: "Zwei begründete Ursachen", vor: "Text und Zeitstrahl", komp: "Zusammenhänge rekonstruieren" },
   { n: 9, d8: "Mi 13.01.", d8c: "Fr 08.01.", title: "Napoleon: Reformen und Fall", sub: "Erbe der Revolution oder Verrat?", ty: "u", tag: "Urteil",
-    ich: "… zwei Reformen und zwei Gründe für den Fall nennen und ein Urteil angeleitet schreiben.", pruef: "Zeitstrahl; Urteil mit Kriterien", vor: "Text; angeleitetes Urteil (Kriterien für Test 2)", komp: "Urteil (angeleitet)" },
+    ich: "… zwei Reformen Napoleons nennen. Ich kann zwei Gründe für sein Ende erklären. Ich kann mit Hilfen ein Urteil zu „Erbe der Revolution oder Verrat?“ schreiben.", pruef: "Zeitstrahl; Urteil mit Kriterien", vor: "Text; angeleitetes Urteil (Kriterien für Test 2)", komp: "Urteil (angeleitet)" },
   { n: 10, d8: "Mi 20.01.", d8c: "Fr 15.01.", title: "Test 2", sub: "Stunden 6–9, Urteilsaufgabe", ty: "t",
-    ich: "… Ereignisse von 1792 bis 1815 erklären und ein begründetes Urteil schreiben.", pruef: "Test mit Urteilsaufgabe (Kriterien bekannt)", vor: "Wie Test 1, plus Verfassungsschaubild als Wiederholung", komp: "Urteil (selbstständig)" },
+    ich: "… die Ereignisse von 1792 bis 1815 erklären. Ich kann ein begründetes Urteil schreiben.", pruef: "Test mit Urteilsaufgabe (Kriterien bekannt)", vor: "Wie Test 1, plus Verfassungsschaubild als Wiederholung", komp: "Urteil (selbstständig)" },
   { n: 11, d8: "Mi 27.01.", d8c: "Fr 22.01.", title: "Rückgabe, Gesamturteil", sub: "Wiener Kongress*", ty: "u", tag: "Urteil",
-    ich: "… ein begründetes Urteil zu „War die Revolution ein Erfolg?“ schreiben und mit meiner Eingangsseite vergleichen.", pruef: "Gesamturteil; Vorher-Nachher-Vergleich", vor: "Berichtigung mit Grün, angeleitetes Schreiben", komp: "Urteil (Reihenabschluss)" },
+    ich: "… ein begründetes Urteil zu „War die Revolution ein Erfolg?“ schreiben. Ich kann es mit meiner Eingangsseite aus Stunde 2 vergleichen.", pruef: "Gesamturteil; Vorher-Nachher-Vergleich", vor: "Berichtigung mit Grün, angeleitetes Schreiben", komp: "Urteil (Reihenabschluss)" },
 ];
 const FILL = { i: LIGHT2, m: "FDF1D8", t: "F8D9D7", u: "E3F3EC" };
 const EDGE = { i: NAVY, m: GOLD, t: RED, u: "2E9E6B" };
@@ -61,7 +61,7 @@ const order = [1, 2, 3, 4, 5, 6, 7, "F", 8, 9, 10, 11];
 const CWID = Math.floor(W / 12);
 const widths = order.map((o) => (o === "F" ? W - CWID * 11 : CWID));
 const cellsRow = order.map((o, i) => {
-  if (o === "F") return cell([p(t("Weihnachts-ferien", { bold: true, size: 18, color: MUTED }), { align: AlignmentType.CENTER, after: 20 }), p(t("23.12. bis 02.01.", { size: 16, color: MUTED }), { align: AlignmentType.CENTER, after: 0 })], { w: widths[i], fill: GREY, valign: VerticalAlign.CENTER });
+  if (o === "F") return cell([p(t("Weihnachts-ferien", { bold: true, size: 18, color: MUTED }), { align: AlignmentType.CENTER, after: 20 }), p(t("23.12. bis 02.01.", { size: 16, color: MUTED }), { align: AlignmentType.CENTER, after: 0 })], { w: widths[i], fill: GREY, valign: VerticalAlign.CENTER, borders: all(solid("5B6B8C", 8)) });
   const s = S.find((x) => x.n === o);
   return cell([
     p([t(String(s.n), { font: "Cambria", size: 40, bold: true, color: EDGE[s.ty] })], { after: 0 }),
@@ -70,7 +70,7 @@ const cellsRow = order.map((o, i) => {
     p(t(s.title.replace("Generalstände","General\u00ADstände").replace("Menschenrechte","Menschen\u00ADrechte").replace("Jakobinerherrschaft","Jakobiner\u00ADherrschaft").replace("Verfassung","Verfas\u00ADsung"), { font: "Cambria", bold: true, size: 17, color: NAVY }), { after: 30 }),
     p(t(s.sub.replace("Nationalversammlung","National\u00ADversammlung").replace("Wohlfahrtsausschuss","Wohlfahrts\u00ADausschuss").replace("konstitutionelle","konstitu\u00ADtionelle"), { size: 15 }), { after: 40 }),
     p(t(s.tag ? KIND[s.ty] + ": " + s.tag : KIND[s.ty], { bold: true, size: 15, color: EDGE[s.ty] }), { after: 0 }),
-  ], { w: widths[i], fill: FILL[s.ty], borders: { top: solid(EDGE[s.ty], 28), bottom: solid(WHITE, 12), left: solid(WHITE, 12), right: solid(WHITE, 12) }, m: 90, ml: 60 });
+  ], { w: widths[i], fill: FILL[s.ty], borders: { top: solid(EDGE[s.ty], 36), bottom: solid("5B6B8C", 8), left: solid("5B6B8C", 8), right: solid("5B6B8C", 8) }, m: 90, ml: 60 });
 });
 d.push(table(widths, [row(cellsRow, 4300)]));
 d.push(p(t(""), { after: 40 }));
@@ -87,18 +87,18 @@ d.push(table([7600, 7838], [row([
 // ---- Seite 2: Detailtabelle ----
 d.push(new Paragraph({ children: [new PageBreak()] }));
 d.push(h2("Die Stunden im Überblick"));
-const DW = [800, 1650, 4400, 2850, 3100, 2638];
+const DW = [700, 1400, 5900, 2400, 2800, 2238];
 const hdr = ["Nr.", "Termin 8D", "Ich kann …", "Woran erkenne ich es?", "Vorgehen", "SchiC / Kompetenz"];
-const dRows = [row(hdr.map((x, i) => cell(p(t(x, { bold: true, color: WHITE, size: 18 }), { after: 0 }), { w: DW[i], fill: NAVY, valign: VerticalAlign.CENTER, m: 60 })), 330)];
+const dRows = [row(hdr.map((x, i) => cell(p(t(x, { bold: true, color: WHITE, size: 18 }), { after: 0 }), { w: DW[i], fill: NAVY, valign: VerticalAlign.CENTER, m: 60, borders: all(solid(NAVY, 8)) })), 330)];
 S.forEach((s) => {
   const f = s.ty === "t" ? "FCEFEE" : s.n % 2 ? WHITE : LIGHT; const mm = 40;
   dRows.push(row([
-    cell(p(t(String(s.n), { font: "Cambria", size: 26, bold: true, color: EDGE[s.ty] }), { after: 0 }), { w: DW[0], fill: f, borders: { top: solid("B9C6E8", 4), bottom: solid("B9C6E8", 4), left: solid(EDGE[s.ty], 24), right: solid("B9C6E8", 4) }, m: mm }),
-    cell([p(t(s.d8, { bold: true, size: 18 }), { after: 0 }), p(t("8C: " + s.d8c, { size: 15, color: MUTED }), { after: 0 })], { w: DW[1], fill: f, m: mm }),
-    cell([p(t(s.title, { font: "Cambria", bold: true, size: 19, color: NAVY }), { after: 20 }), p(t("Ich kann " + s.ich.replace(/^… /, ""), { size: 16 }), { after: 0 })], { w: DW[2], fill: f, m: mm }),
-    cell(p(t(s.pruef, { size: 16 }), { after: 0 }), { w: DW[3], fill: f, m: mm }),
-    cell(p(t(s.vor, { size: 16 }), { after: 0 }), { w: DW[4], fill: f, m: mm }),
-    cell(p(t(s.komp, { size: 16 }), { after: 0 }), { w: DW[5], fill: f, m: mm }),
+    cell(p(t(String(s.n), { font: "Cambria", size: 26, bold: true, color: EDGE[s.ty] }), { after: 0 }), { w: DW[0], fill: f, borders: { top: solid("5B6B8C", 8), bottom: solid("5B6B8C", 8), left: solid(EDGE[s.ty], 36), right: solid("5B6B8C", 8) }, m: mm }),
+    cell([p(t(s.d8, { bold: true, size: 18 }), { after: 0 }), p(t("8C: " + s.d8c, { size: 15, color: MUTED }), { after: 0 })], { w: DW[1], fill: f, m: mm, borders: all(solid("5B6B8C", 8)) }),
+    cell([p(t(s.title, { font: "Cambria", bold: true, size: 19, color: NAVY }), { after: 20 }), p(t("Ich kann " + s.ich.replace(/^… /, ""), { size: 16 }), { after: 0 })], { w: DW[2], fill: f, m: mm, borders: all(solid("5B6B8C", 8)) }),
+    cell(p(t(s.pruef, { size: 16 }), { after: 0 }), { w: DW[3], fill: f, m: mm, borders: all(solid("5B6B8C", 8)) }),
+    cell(p(t(s.vor, { size: 16 }), { after: 0 }), { w: DW[4], fill: f, m: mm, borders: all(solid("5B6B8C", 8)) }),
+    cell(p(t(s.komp, { size: 16 }), { after: 0 }), { w: DW[5], fill: f, m: mm, borders: all(solid("5B6B8C", 8)) }),
   ]));
 });
 d.push(table(DW, dRows));
@@ -116,14 +116,14 @@ const MAT = [
   ["Verfassungsschaubild lesen", { 4: "M", 10: "s" }],
   ["Sachurteil und Werturteil", { 1: "a", 7: "M", 9: "a", 10: "s", 11: "s" }],
 ];
-const mRows = [row([cell(p(t("Kompetenz", { bold: true, color: WHITE, size: 18 }), { after: 0 }), { w: LW, fill: NAVY, valign: VerticalAlign.CENTER, m: 60 }), ...S.map((s, i) => cell(p(t(String(s.n), { bold: true, color: WHITE, size: 20 }), { align: AlignmentType.CENTER, after: 0 }), { w: mw[i + 1], fill: s.ty === "t" ? RED : NAVY, valign: VerticalAlign.CENTER, m: 60 }))], 340)];
+const mRows = [row([cell(p(t("Kompetenz", { bold: true, color: WHITE, size: 18 }), { after: 0 }), { w: LW, fill: NAVY, valign: VerticalAlign.CENTER, m: 60, borders: all(solid(NAVY, 8)) }), ...S.map((s, i) => cell(p(t(String(s.n), { bold: true, color: WHITE, size: 20 }), { align: AlignmentType.CENTER, after: 0 }), { w: mw[i + 1], fill: s.ty === "t" ? RED : NAVY, valign: VerticalAlign.CENTER, m: 60, borders: all(solid(WHITE, 8)) }))], 340)];
 MAT.forEach(([lab, m], r) => mRows.push(row([
-  cell(p(t(lab, { size: 19, bold: true }), { after: 0 }), { w: LW, fill: r % 2 ? WHITE : LIGHT, valign: VerticalAlign.CENTER, m: 80 }),
+  cell(p(t(lab, { size: 19, bold: true }), { after: 0 }), { w: LW, fill: r % 2 ? WHITE : LIGHT, valign: VerticalAlign.CENTER, m: 80, borders: all(solid("5B6B8C", 8)) }),
   ...S.map((s, i) => {
     const mk = m[s.n];
-    if (!mk) return cell(p(t(" ", { size: 18 }), { after: 0 }), { w: mw[i + 1], fill: s.ty === "t" ? "FCEFEE" : r % 2 ? WHITE : LIGHT, m: 80 });
+    if (!mk) return cell(p(t(" ", { size: 18 }), { after: 0 }), { w: mw[i + 1], fill: s.ty === "t" ? "FCEFEE" : r % 2 ? WHITE : LIGHT, m: 80, borders: all(solid("5B6B8C", 8)) });
     const [lbl, fill, col] = MARK[mk];
-    return cell(p(t(lbl, { bold: true, size: 24, color: col }), { align: AlignmentType.CENTER, after: 0 }), { w: mw[i + 1], fill, valign: VerticalAlign.CENTER, m: 80 });
+    return cell(p(t(lbl, { bold: true, size: 24, color: col }), { align: AlignmentType.CENTER, after: 0 }), { w: mw[i + 1], fill, valign: VerticalAlign.CENTER, m: 80, borders: all(solid("5B6B8C", 8)) });
   }),
 ], 480)));
 d.push(table(mw, mRows));
