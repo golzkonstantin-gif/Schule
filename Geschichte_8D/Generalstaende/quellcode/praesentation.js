@@ -314,17 +314,21 @@ pageNo = 0;
   phaseTag(s, 4);
 }
 
-// ============ 15 Lernziele prüfen ============
+// ============ 15 Abschlussaufgabe ============
 {
-  const s = blank("A · Auswerten", "Heute habe ich gelernt, …", 4, "Die Klasse prüft still die Lernziele (Folie 2). Dann schreibt jede und jeder in einem Satz: „Heute habe ich gelernt, …“. Beispiel: „… dass bei den Generalständen jeder Stand nur eine Stimme hatte und Klerus und Adel den Dritten Stand überstimmen konnten, obwohl er fast alle Menschen vertrat.“ Keine Antworten ins Plenum (außer ein bis zwei freiwillige).");
+  const s = blank("A · Auswerten", "Abschlussaufgabe: Das Wichtigste der Stunde", 4, "Ansage: „Stifte liegen. Ihr hört nur zu. Schaut auf die Ziele. Jetzt arbeitet ihr allein. Die Aufgabe steht rechts.“ Die Klasse prüft zuerst still die Lernziele (Folie 2) und löst dann die Abschlussaufgabe im Heft. Erwartung 1: z. B. 1614 letzte Generalstände, 1788 Missernte oder 1787 Steuerplan scheitert, August 1788 König kündigt an, 5. Mai 1789 Eröffnung. Erwartung 2: Beim Abstimmen nach Ständen hat jeder Stand nur eine Stimme. Klerus und Adel haben zwei von drei Stimmen und stimmen sich ab, deshalb überstimmen sie den Dritten Stand (Bauern und Bürger), obwohl er fast alle Menschen vertritt. Stichprobe: Beim Durchgehen bei 4 bis 6 Heften unterschiedlichen Niveaus mitlesen, nicht kommentieren (unbenotet).");
   [["Ich kann den Weg bis zu den Generalständen am Zeitstrahl erklären."], ["Ich kann erklären, wie die Stände den Dritten Stand überstimmen konnten."], ["Ich kann begründen, warum die Abstimmung nach Ständen unfair war.*"]].forEach(([x], i) => {
-    const y = 1.6 + i * 1.18;
-    box(s, 0.6, y, 12.15, 1.05, i % 2 ? LIGHT : LIGHT2);
-    s.addShape(pres.shapes.OVAL, { x: 0.85, y: y + 0.25, w: 0.55, h: 0.55, fill: { color: WHITE }, line: { color: NAVY, width: 2 } });
-    txt(s, x, { x: 1.7, y, w: 10.8, h: 1.05, fontFace: HEAD, fontSize: 24, valign: "middle" });
+    const y = 1.55 + i * 0.85;
+    box(s, 0.6, y, 12.15, 0.75, i % 2 ? LIGHT : LIGHT2);
+    s.addShape(pres.shapes.OVAL, { x: 0.85, y: y + 0.18, w: 0.4, h: 0.4, fill: { color: WHITE }, line: { color: NAVY, width: 2 } });
+    txt(s, x, { x: 1.55, y, w: 11.0, h: 0.75, fontFace: HEAD, fontSize: 24, valign: "middle" });
   });
-  box(s, 0.6, 5.2, 12.15, 0.9, NAVY);
-  txt(s, "Schreibe in einem Satz: „Heute habe ich gelernt, …“", { x: 0.9, y: 5.2, w: 11.6, h: 0.9, fontFace: HEAD, fontSize: 24, bold: true, color: WHITE, valign: "middle" });
+  box(s, 0.6, 4.2, 12.15, 1.9, NAVY);
+  txt(s, "Abschlussaufgabe", { x: 0.9, y: 4.25, w: 11.6, h: 0.4, fontFace: HEAD, fontSize: 24, bold: true, color: ICE, valign: "middle" });
+  [["1", "Nenne zwei Ereignisse bis zu den Generalständen, mit Jahr.", 4.75, 0.5], ["2", "Erkläre in einem Satz, warum der Dritte Stand (Bauern und Bürger) überstimmt wurde, obwohl er fast alle Menschen vertrat.", 5.35, 0.7]].forEach(([n, x, y, h]) => {
+    numCircle(s, n, 0.95, y + (h - 0.42) / 2, 0.42, RED);
+    txt(s, x, { x: 1.6, y, w: 10.9, h, fontSize: 24, bold: true, color: WHITE, valign: "middle" });
+  });
   bar(s, [{ text: "Zeit: ", options: { bold: true } }, { text: "2 Minuten · allein · leise      ", options: {} }, { text: "Fertig? Stift hinlegen.", options: { italic: true, color: ICE } }]);
 }
 

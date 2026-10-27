@@ -47,7 +47,7 @@ d.push(p(t("Ziel: Die Klasse erarbeitet den Weg zu den Generalständen am Zeitst
 d.push(h3("Kopf der Planung"));
 d.push(table([2600, 7606], [
   ["Ziel (Ich kann …)", "… den Weg bis zu den Generalständen am Zeitstrahl erklären. … erklären, wie die Stände den Dritten Stand überstimmen konnten. … begründen, warum die Abstimmung nach Ständen unfair war."],
-  ["Prüfaufgabe: Woran erkenne ich es?", "Zeitstrahl ausgefüllt (Ziel 1). Ü3 Satz 1 und 2 (Ziel 2). Ü3 Satz 3 mit einer Zahl (Ziel 3). „Heute habe ich gelernt, …“ im Heft."],
+  ["Prüfaufgabe: Woran erkenne ich es?", "Zeitstrahl ausgefüllt (Ziel 1). Ü3 Satz 1 und 2 (Ziel 2). Ü3 Satz 3 mit einer Zahl (Ziel 3). Abschlussaufgabe im Heft (zwei Ereignisse mit Jahr, ein Erklärsatz zum Überstimmen)."],
   ["Mindestziel", "Ziel 1 und 2. Alles, was mit * steht, ist Zusatz (Ü3 Satz 3, Sportverein-Beispiel). „Auswerten“ bleibt immer."],
   ["Beitrag zur Reihe", "Stunde 1 von 11 (Sequenz Französische Revolution). Sie legt die Ursachen und den Streit um die Abstimmungsregel. Daran knüpft Stunde 2 an: Der Dritte Stand fordert die Abstimmung nach Köpfen und gründet die Nationalversammlung."],
   ["Vorgehen", "Direktes Vorgehen in Phase 1 bis 2 (Vorwissen gering, Zahlen und Regel werden vorgegeben), Öffnung in Phase 3 (Spiel) erst nach dem Modell. Direkt oder indirekt wird je Phase entschieden."],
@@ -62,7 +62,7 @@ d.push(...bullets([
 
 d.push(table([800, 2300, 4300, 2806], [
   row([th("Min.", 800), th("AVIVA", 2300), th("Phase", 4300), th("Arbeitsform", 2806)], 320),
-  ...[["3", "Ankommen", "0  Ankommen, Lernziele, Test", "still, allein"], ["6", "Vorwissen", "1  Wiederholung: Ständegesellschaft", "allein, Kontrolle per Folie"], ["11", "Informieren", "2  Text, Zeitstrahl, Kreide-Kette", "allein, Tafel mit Mitschreiben"], ["17", "Verarbeiten", "3  Ständeversammlung: Absprache, Abstimmung, Auswertung", "Stände, allein, Partner"], ["5", "Auswerten", "4  Merksatz, „Heute habe ich gelernt“, Ausblick", "allein, abschreiben"], ["3", "—", "Puffer", "—"]].map((r) => row(r.map((v, i) => tc(v, [800, 2300, 4300, 2806][i], { bold: i < 3 })), 320)),
+  ...[["3", "Ankommen", "0  Ankommen, Lernziele, Test", "still, allein"], ["6", "Vorwissen", "1  Wiederholung: Ständegesellschaft", "allein, Kontrolle per Folie"], ["11", "Informieren", "2  Text, Zeitstrahl, Kreide-Kette", "allein, Tafel mit Mitschreiben"], ["17", "Verarbeiten", "3  Ständeversammlung: Absprache, Abstimmung, Auswertung", "Stände, allein, Partner"], ["5", "Auswerten", "4  Merksatz, Abschlussaufgabe, Ausblick", "allein, abschreiben"], ["3", "—", "Puffer", "—"]].map((r) => row(r.map((v, i) => tc(v, [800, 2300, 4300, 2806][i], { bold: i < 3 })), 320)),
 ]));
 
 d.push(h3("Lautstärke und Gesprächsanteil: so läuft die Stunde"));
@@ -153,7 +153,7 @@ d.push(step("Kreide-Kette, alle prüfen mit", {
     bl("Frühjahr 1789    Wahlen, Beschwerdehefte"),
     bl("5. Mai 1789    Eröffnung in Versailles", { after: 0 }),
   ]), gapP()],
-  sol: "Die Frage „Warum ruft der König die Generalstände ein, obwohl er sie 175 Jahre nicht brauchte?“ nicht ins Plenum stellen, sie steht im Text als Aufgabe 3 und wird in Phase 4 beantwortet (Satz „Heute habe ich gelernt …“). Antwort: Er braucht Geld, die Privilegierten blockieren Steuern, dazu kommen Hunger und drohender Bankrott.",
+  sol: "Die Frage „Warum ruft der König die Generalstände ein, obwohl er sie 175 Jahre nicht brauchte?“ nicht ins Plenum stellen, sie steht im Text als Aufgabe 3 und kann bei Zeit schriftlich im Heft beantwortet werden (*), nicht im Plenum. Antwort: Er braucht Geld, die Privilegierten blockieren Steuern, dazu kommen Hunger und drohender Bankrott.",
 }));
 
 // Phase 3
@@ -213,20 +213,20 @@ d.push(step("arbeitet allein", {
   sol: "1: …jeder Stand nur eine Stimme hat. 2: …sich abgesprochen und gemeinsam mit Nein gestimmt. 3.*: …der Dritte Stand ca. 97 % der Menschen stellt, aber nur 1 von 3 Stimmen hat.",
 }));
 d.push(sp());
-d.push(note("SOLLBRUCHSTELLE", "Wenn die Zeit knapp wird, entfällt Satz 3 (*). Phase 3d bleibt, Phase 4 wird dann auf Merksatz und „Heute habe ich gelernt“ gekürzt. Satz 3 kann in der nächsten Stunde als Wiederholung wieder aufgegriffen werden."));
+d.push(note("SOLLBRUCHSTELLE", "Wenn die Zeit knapp wird, entfällt Satz 3 (*). Phase 3d bleibt, Phase 4 wird dann auf Merksatz und Abschlussaufgabe gekürzt. Satz 3 kann in der nächsten Stunde als Wiederholung wieder aufgegriffen werden."));
 
 // Phase 4
 d.push(phase("4", "Auswerten", 5, "AVIVA: Auswerten"));
-d.push(warum("Der Lernzuwachs wird gesichert und überprüft: Merksatz, Lernziele, „Heute habe ich gelernt, …“. Diese Phase wird nie gestrichen.", "„Nächste Stunde: Was macht der Dritte Stand, wenn er überstimmt wird?“"));
+d.push(warum("Der Lernzuwachs wird gesichert und überprüft: Merksatz, Lernziele, Abschlussaufgabe zu den Zielen. Diese Phase wird nie gestrichen.", "„Nächste Stunde: Was macht der Dritte Stand, wenn er überstimmt wird?“"));
 d.push(sp());
 d.push(step("schreibt ab", {
   say: "Jetzt schreibt ihr ab: Merksatz 1. Rahmt ihn rot ein.",
   do: [
     "Folie 14 (Merksatz, 2 Minuten): Kernsatz im roten Rahmen, Beispiel, Test. Alle schreiben ab. Danach „Vergleicht und verbessert mit Grün.“",
-    "Folie 15 (2 Minuten): Lernziele prüfen (still). Dann schreiben alle in einem Satz ins Heft: „Heute habe ich gelernt, …“.",
+    "Folie 15 (2 Minuten): Lernziele prüfen (still), dann Abschlussaufgabe allein im Heft: (1) Nenne zwei Ereignisse bis zu den Generalständen, mit Jahr. (2) Erkläre in einem Satz, warum der Dritte Stand (Bauern und Bürger) überstimmt wurde, obwohl er fast alle Menschen vertrat. Stichprobe im Heft bei 4 bis 6 Schülerinnen und Schülern, nicht kommentieren (unbenotet).",
     "Folie 16 (1 Minute, nur lesen): Ausblick und Hausaufgabe. „Was passiert, wenn der Dritte Stand fordert, dass nach Köpfen abgestimmt wird, und der König ablehnt? Das sehen wir in der nächsten Stunde.“ Hausaufgabe: Testaufgaben mit Grün berichtigen (falls der Test zurückgegeben wurde).",
   ],
-  sol: "Z. B. „Heute habe ich gelernt, dass bei den Generalständen jeder Stand nur eine Stimme hatte und Klerus und Adel den Dritten Stand überstimmen konnten, obwohl er fast alle Menschen vertrat.“",
+  sol: "Zu (1): z. B. 1614 letzte Generalstände, 1787 Steuerplan scheitert, 1788 Missernte, August 1788 Ankündigung, 5. Mai 1789 Eröffnung. Zu (2): Bei der Abstimmung nach Ständen hat jeder Stand eine Stimme. Klerus und Adel haben zwei von drei Stimmen und sprechen sich ab, deshalb überstimmen sie den Dritten Stand (Bauern und Bürger), obwohl er fast alle Menschen vertritt.",
 }));
 d.push(sp());
 d.push(note("ZUSATZ (Puffer, nur bei Zeit)", "Folie 17: Sportverein-Beispiel (Übertragung): Ein Verein hat drei Abteilungen: Fußball 200 Mitglieder, Tischtennis 20, Schach 10. Jede Abteilung hat bei der Abstimmung eine Stimme. Was ist unfair? Einzelarbeit, Heft, 2 Minuten.", "F4F7FD", NAVY, "B9C6E8"));
@@ -239,11 +239,11 @@ d.push(table([2300, 7906], [
   ["Ständeversammlung", "Zwei Argumente, eine Beobachtung, Vermutung zum Ausgang, Ergebnis (Zahlen von der Tafel)"],
   ["Ü3", "Drei Sätze (Satz 3 optional)"],
   ["Merksatz 1", "Abstimmung nach Ständen – rot umrahmt"],
-  ["Lernzuwachs", "„Heute habe ich gelernt, …“"],
+  ["Abschlussaufgabe", "Zwei Ereignisse mit Jahr, ein Erklärsatz zum Überstimmen"],
 ].map(([a, b]) => row([tc(a, 2300, { bold: true, fill: LIGHT }), tc(b, 7906)], 340))));
 
 d.push(h3("Nach der Stunde festhalten (Reflexionslog)"));
-d.push(...bullets(["Passten Ziel, Inhalt und Methode zusammen? Wie lief die Zeit? Wie viel echte Lernzeit hatte die Klasse?", "Wo wurde es laut, und welche Ansage half? Welche Abfrage funktionierte, welche nicht?", "Wie viele konnten „Heute habe ich gelernt, …“ sinnvoll beenden?", "Rückmeldung der Klasse: ein Satz im Heft „Das war klar / Das hat gefehlt“ (nur falls Zeit)."]));
+d.push(...bullets(["Passten Ziel, Inhalt und Methode zusammen? Wie lief die Zeit? Wie viel echte Lernzeit hatte die Klasse?", "Wo wurde es laut, und welche Ansage half? Welche Abfrage funktionierte, welche nicht?", "Wie viele konnten die Abschlussaufgabe richtig lösen (Stichprobe im Heft)?", "Rückmeldung der Klasse: ein Satz im Heft „Das war klar / Das hat gefehlt“ (nur falls Zeit)."]));
 d.push(h3("Zum Prüfen"));
 d.push(...bullets([
   "Zahlen und Daten (Abgeordnete 290/270/580, Krieg in Amerika, 1787, August 1788) stammen aus dem Text der 8C und sind gegen das Schulbuch zu lesen. Die Anzahl der Menschen (150 000 / 500 000 / 20 000 000) stammt aus Ihrem Gruppenpuzzle-Material.",

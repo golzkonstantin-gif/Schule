@@ -29,7 +29,7 @@ Die folgenden Vorlieben und Reflexionen gelten für die gesamte weitere Planung,
 - **Konkreter Lernzuwachs in jeder Stunde (Stand 12.10.).**
   - Vorab ein überprüfbares Stundenziel formulieren, als Schülersatz „Ich kann …“.
   - Wenn jemand die Schüler fragt, was sie heute gelernt haben, muss eine klare Antwort kommen.
-  - Die Sicherung zielt genau darauf und macht den Lernzuwachs ausdrücklich, z. B. mit dem Satz „Heute habe ich gelernt, …“.
+  - Die Sicherung zielt genau darauf und macht den Lernzuwachs ausdrücklich. **Seit 27.10. keine Floskel „Heute habe ich gelernt, …“** (wirkt albern, Rückmeldung der Lehrkraft), sondern eine **konkrete Abschlussaufgabe**, die genau die Ziele der Stunde prüft (z. B. „Nenne zwei Ereignisse, mit Jahr“, „Erkläre in einem Satz, warum …“), mit Lösung im Tafelskript und Stichprobe im Heft. Gilt für neue Planungen in allen Fächern; bestehendes Material bleibt.
   - Keine Phase nur zum Beschäftigen.
 - **Alle Schüler in jeder Phase aktiv (Stand 12.10.).**
   - Wenn ein Schüler an der Tafel arbeitet, brauchen alle anderen einen eigenen Auftrag, z. B. dasselbe am Platz oder zu zweit lösen, mitschreiben oder prüfen.
@@ -45,7 +45,7 @@ Die folgenden Vorlieben und Reflexionen gelten für die gesamte weitere Planung,
 - **Direkte Instruktion als Grundlage der AVIVA-Phasen (Stand 27.10., von der Lehrkraft als besonders wichtig markiert).** Bei geringem Vorwissen und beim Aufbau neuer Kompetenzen wird im direkten Vorgehen geplant: Thema und Ziel nennen; Vorwissen erst allein, dann Partner, dann Plenum wiederholen; in 2–3 Portionen erklären und modellieren (Lehrkraft denkt laut); danach erste Anwendung, angeleitetes Üben mit Hilfen und selbstständiges Üben mit Teillösungen als Progression. Zusätzlich im Tafelskript:
   - eine Zeile „Warnung vor dem Fehler“ je Erklär-Portion,
   - Prüffragen nach jeder Portion mit Stichproben bei 4–6 Schülern unterschiedlichen Niveaus (unbenotet, getrennt von den mündlichen Noten),
-  - die Übungsphase endet 5 Minuten vor Schluss, das Stundenende (Wiederholung, „Heute habe ich gelernt, …“) ist fest eingeplant, und es wird nicht weitergegangen, wenn etwas nicht verstanden ist,
+  - die Übungsphase endet 5 Minuten vor Schluss, das Stundenende (Wiederholung, inhaltliche Abschlussaufgabe) ist fest eingeplant, und es wird nicht weitergegangen, wenn etwas nicht verstanden ist,
   - Wiederholung am Stundenbeginn möglichst als „allein, Partnercheck, Plenum“ (Partnercheck nur, wo es sich anbietet und die Zeit reicht),
   - bei „Warum“ steht die Begründung „Direktes Vorgehen, weil das Vorwissen gering ist“; direkt oder indirekt wird **pro Phase** entschieden, nicht für die ganze Stunde,
   - die Phase „Auswerten“ wird **nie gestrichen** (alle fünf AVIVA-Phasen kommen in jeder Stunde vor); das Stern-Verfahren (*) trifft nur Stoff in „Verarbeiten“.
