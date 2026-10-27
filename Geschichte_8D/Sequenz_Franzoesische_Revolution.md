@@ -80,7 +80,7 @@ Je Stunde: Ich-kann-Ziel, Prüfaufgabe („Woran erkenne ich es?“), Mindestzie
 
 ## Lehrbuch als Inspiration (Seiten 110–129, Kapitel „Zeitalter der Revolutionen“)
 
-Stand 27.10. Nach Rückmeldung der Lehrkraft: Das Buch dient nur als Orientierung, wie man inhaltlich vorgehen kann, nicht als Pflicht. Die Texte im Buch sind dicht; für die 8D werden kürzere eigene Texte erstellt und Bilder, Quellen und Schaubilder per Seitenzahl aus dem Buch genutzt. Seiten 126/127 lagen nicht im Scan (vermutlich Napoleon in Europa und Niederlage).
+Stand 27.10. Nach Rückmeldung der Lehrkraft: Das Buch dient nur als Orientierung, wie man inhaltlich vorgehen kann, nicht als Pflicht. Die Texte im Buch sind dicht; für die 8D werden kürzere eigene Texte erstellt und Bilder, Quellen und Schaubilder per Seitenzahl aus dem Buch genutzt. Die Seiten 126/127 gehören laut Lehrkraft zu einem anderen Kontext und werden nicht gebraucht. Napoleons Niederlage (Russland 1812/13, Waterloo 1815) steht im Buch auf S. 128.
 
 | Stunde | Buchseiten | Brauchbar |
 |---|---|---|
@@ -99,3 +99,4 @@ Stand 27.10. Nach Rückmeldung der Lehrkraft: Das Buch dient nur als Orientierun
 **Entscheidungen offen (27.10.):**
 - Karikatur-Methode: Das Buch bringt als eigentliche Karikatur nur „Robespierre als Henker“ (S. 121, Stunde 7) und das Satirebild „Für die Mühsal geboren“ (S. 111). Die Methodenseite (S. 116) behandelt Historienbilder, keine Karikatur.
 - Marsch der Frauen nach Versailles (Okt. 1789) steht im Buch, fehlt in der Sequenz.
+- Flucht nach Varennes: Buch bei der Verfassung (Stunde 4), Sequenz in Stunde 6.
