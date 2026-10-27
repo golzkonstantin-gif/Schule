@@ -28,7 +28,7 @@ const druck = [
 // Vorbereitung
 const prep = [
   ["Tafelskript ausdrucken oder auf dem Tablet bereithalten", "`Tafelskript_Generalstaende_8D.pdf`, 7 Seiten"],
-  ["Folien öffnen und einmal durchklicken", "`Praesentation_Generalstaende_8D.pptx`, 17 Folien; Folie 1 steht beim Betreten da"],
+  ["Folien öffnen und einmal durchklicken", "`Praesentation_Generalstaende_8D.pptx`, 18 Folien; Folie 1 steht beim Betreten da"],
   ["Rollen verteilen und Karten verdeckt auf die Plätze legen", "Klerus 3 und Adel 4 gezielt wählen (ruhige, zuverlässige Schülerinnen und Schüler), Rest Dritter Stand; Tabelle unten ausfüllen (ohne Namen, nur Platznummern)"],
   ["Tisch vorn (Hinterzimmer) mit 7 Stühlen aufstellen", "Absprache-Zettel dort ablegen"],
   ["Kreide und Grün zum Verbessern bereitlegen", "Kreide-Kette: 1 Stück Kreide, das weitergegeben wird"],

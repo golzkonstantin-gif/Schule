@@ -155,7 +155,7 @@ pageNo = 0;
 
 // ============ 2 Lernziele ============
 {
-  const s = blank("Lernziele", "Das kannst du am Ende der Stunde", undefined, "Lernziele vorlesen (1 Minute, Klasse hört nur zu). Am Ende der Stunde (Folie 15) prüft die Klasse still, ob sie erreicht sind. Was nicht geschafft wird, hat einen Stern.");
+  const s = blank("Lernziele", "Das kannst du am Ende der Stunde", undefined, "Lernziele vorlesen (1 Minute, Klasse hört nur zu). Am Ende der Stunde (Folie 16) prüft die Klasse still, ob sie erreicht sind. Was nicht geschafft wird, hat einen Stern.");
   [["1", "Ich kann den Weg bis zu den Generalständen am Zeitstrahl erklären."], ["2", "Ich kann erklären, wie die Stände den Dritten Stand überstimmen konnten."], ["3", "Ich kann begründen, warum die Abstimmung nach Ständen unfair war."]].forEach(([n, x], i) => {
     const y = 1.75 + i * 1.5;
     box(s, 0.6, y, 12.15, 1.25, i % 2 ? LIGHT : LIGHT2);
@@ -314,21 +314,47 @@ pageNo = 0;
   phaseTag(s, 4);
 }
 
-// ============ 15 Abschlussfrage ============
+// ============ 15 Abschlussfrage (Berater) ============
+// Sprechblase: Rechteck mit Dreieck-Spitze (Spitze zeigt zur Figur)
+function bubble(s, x, y, w, h, fill, line, side, tipY) {
+  box(s, x, y, w, h, fill, { line, lw: 3, r: 0.18 });
+  const L = 0.42, B = 0.5;
+  if (side === "left") {
+    s.addShape(pres.shapes.ISOSCELES_TRIANGLE, { x: x - L / 2 - B / 2 + 0.06, y: tipY - L / 2, w: B, h: L, rotate: 270, fill: { color: fill }, line: { color: line, width: 3 } });
+    s.addShape(pres.shapes.RECTANGLE, { x: x - 0.02, y: tipY - B / 2 + 0.05, w: 0.1, h: B - 0.1, fill: { color: fill }, line: { type: "none" } });
+  } else {
+    s.addShape(pres.shapes.ISOSCELES_TRIANGLE, { x: x + w + L / 2 - B / 2 - 0.06, y: tipY - L / 2, w: B, h: L, rotate: 90, fill: { color: fill }, line: { color: line, width: 3 } });
+    s.addShape(pres.shapes.RECTANGLE, { x: x + w - 0.08, y: tipY - B / 2 + 0.05, w: 0.1, h: B - 0.1, fill: { color: fill }, line: { type: "none" } });
+  }
+}
 {
-  const s = blank("A · Auswerten", "Abschlussfrage: Du bist Berater", 4, "Ansage: „Stifte liegen. Ihr hört nur zu. Schaut kurz auf die Ziele. Jetzt arbeitet ihr allein. Die Aufgabe steht rechts.“ Die Klasse prüft still die Lernziele (Folie 2), dann zehn Sekunden denken, dann schreiben. Es gibt mehrere gute Antworten, geprüft wird die Begründung: eine Position, ein Sachargument aus der Stunde, ein „weil“. Erwartung (Auswahl, keine Musterlösung): FÜR Erlauben: Der Staat braucht Geld, Steuern gehen nur mit dem Dritten Stand (Bauern und Bürger); er stellt fast alle Menschen, sonst droht Unruhe; Hunger und Staatsbankrott sind nah. GEGEN Erlauben: Adel und Klerus sind wütend (der Steuerplan scheiterte 1787), der König verliert Rückhalt und Macht; der Dritte Stand wäre zu mächtig; seit 1614 wurde nach Ständen abgestimmt. Auch eine Zwischenlösung ist gut begründbar. Form nach Verlauf: Blitzlicht (je eine Stimme „erlauben“, eine „nicht erlauben“, gezielt aufgerufen), schriftlich mit Vorlesen oder Berater-Duell zu zweit. Stichprobe: bei 4 bis 6 Heften unterschiedlichen Niveaus mitlesen, nicht kommentieren (unbenotet).");
-  [["Ich kann den Weg bis zu den Generalständen am Zeitstrahl erklären."], ["Ich kann erklären, wie die Stände den Dritten Stand überstimmen konnten."], ["Ich kann begründen, warum die Abstimmung nach Ständen unfair war.*"]].forEach(([x], i) => {
-    const y = 1.5 + i * 0.68;
-    box(s, 0.6, y, 12.15, 0.58, i % 2 ? LIGHT : LIGHT2);
-    s.addShape(pres.shapes.OVAL, { x: 0.85, y: y + 0.12, w: 0.34, h: 0.34, fill: { color: WHITE }, line: { color: NAVY, width: 2 } });
-    txt(s, x, { x: 1.45, y, w: 11.1, h: 0.58, fontFace: HEAD, fontSize: 24, valign: "middle" });
-  });
-  box(s, 0.6, 3.65, 12.15, 2.45, NAVY);
-  txt(s, "Du bist Berater von König Ludwig XVI. Er fragt dich:", { x: 0.9, y: 3.7, w: 11.6, h: 0.45, fontFace: HEAD, fontSize: 24, bold: true, color: ICE, valign: "middle" });
-  txt(s, "„Soll ich erlauben, dass der Dritte Stand (Bauern und Bürger) nach Köpfen abstimmt?“", { x: 0.9, y: 4.15, w: 11.6, h: 0.95, fontSize: 24, bold: true, color: WHITE, valign: "middle" });
-  txt(s, "Dein Rat:  „Ich rate dir, … , weil …“", { x: 0.9, y: 5.1, w: 11.6, h: 0.45, fontFace: HEAD, fontSize: 24, bold: true, color: WHITE, valign: "middle" });
-  txt(s, "Das gehört hinein: eine Position · ein Sachargument aus der Stunde · ein „weil“", { x: 0.9, y: 5.55, w: 11.6, h: 0.45, fontSize: 24, color: ICE, valign: "middle" });
+  const s = blank("A · Auswerten", "Abschlussfrage: Du bist Berater", 4, "Ansage: „Stifte liegen. Ihr hört nur zu. Das ist die letzte Aufgabe. Jetzt arbeitet ihr allein. Die Aufgabe steht rechts.“ Zehn Sekunden denken, dann schreiben. Es gibt mehrere gute Antworten, geprüft wird die Begründung: eine Position, ein Sachargument aus der Stunde, ein „weil“. Erwartung (Auswahl, keine Musterlösung): FÜR Erlauben: Der Staat braucht Geld, Steuern gehen nur mit dem Dritten Stand (Bauern und Bürger); er stellt fast alle Menschen, sonst droht Unruhe; Hunger und Staatsbankrott sind nah. GEGEN Erlauben: Adel und Klerus sind wütend (der Steuerplan scheiterte 1787), der König verliert Rückhalt und Macht; der Dritte Stand wäre zu mächtig; seit 1614 wurde nach Ständen abgestimmt. Auch eine Zwischenlösung ist gut begründbar. Form nach Verlauf: Blitzlicht (je eine Stimme „erlauben“, eine „nicht erlauben“, gezielt aufgerufen), schriftlich mit Vorlesen oder Berater-Duell zu zweit. Stichprobe: bei 4 bis 6 Heften unterschiedlichen Niveaus mitlesen, nicht kommentieren (unbenotet). Die Figuren sind Zeichnungen, keine historischen Porträts.");
+  s.addImage({ path: "../material/koenig.png", x: 0.55, y: 1.45, w: 3.1, h: 4.0 });
+  txt(s, "König Ludwig XVI.", { x: 0.55, y: 5.5, w: 3.1, h: 0.4, fontFace: HEAD, fontSize: 24, bold: true, align: "center" });
+  bubble(s, 4.2, 1.5, 8.55, 1.95, WHITE, NAVY, "left", 2.5);
+  txt(s, "„Soll ich erlauben, dass der Dritte Stand (Bauern und Bürger) nach Köpfen abstimmt?“", { x: 4.5, y: 1.5, w: 8.0, h: 1.95, fontFace: HEAD, fontSize: 26, bold: true, color: NAVY, valign: "middle" });
+  bubble(s, 4.2, 3.75, 6.9, 1.6, "FDF1D8", GOLD, "right", 4.55);
+  txt(s, "Dein Rat:  „Ich rate dir, … , weil …“", { x: 4.5, y: 3.75, w: 6.4, h: 1.6, fontFace: HEAD, fontSize: 26, bold: true, color: NAVY, valign: "middle" });
+  s.addImage({ path: "../material/berater.png", x: 11.75, y: 3.4, w: 1.3, h: 1.8 });
+  txt(s, "Du", { x: 11.75, y: 5.2, w: 1.3, h: 0.4, fontFace: HEAD, fontSize: 24, bold: true, align: "center" });
+  [["Position", 2.3], ["Sachargument", 3.3], ["„weil“", 2.1]].reduce((xx, [lab, ww], i) => {
+    box(s, xx, 5.55, ww, 0.62, i % 2 ? LIGHT : LIGHT2);
+    s.addText([{ text: lab, options: { bold: true, fontFace: HEAD, fontSize: 24, color: NAVY } }], { isTextBox: true, x: xx + 0.1, y: 5.55, w: ww - 0.2, h: 0.62, valign: "middle", align: "center", margin: 0 });
+    return xx + ww + 0.2;
+  }, 4.2);
   bar(s, [{ text: "Zeit: ", options: { bold: true } }, { text: "3 Minuten · allein · leise      ", options: {} }, { text: "Fertig? Stift hinlegen.", options: { italic: true, color: ICE } }]);
+}
+
+// ============ 16 Ziele prüfen ============
+{
+  const s = blank("A · Auswerten", "Haben wir die Ziele erreicht?", 4, "Die Klasse prüft still: Kann ich das? Danach Folie 17. Ziel 3 hat einen Stern (*): Es kann sein, dass es nicht mehr geschafft wurde, dann kommt es nächste Stunde als Wiederholung. Keine Antworten ins Plenum, keine Abfrage von Selbsteinschätzungen.");
+  [["Ich kann den Weg bis zu den Generalständen am Zeitstrahl erklären."], ["Ich kann erklären, wie die Stände den Dritten Stand überstimmen konnten."], ["Ich kann begründen, warum die Abstimmung nach Ständen unfair war.*"]].forEach(([x], i) => {
+    const y = 1.7 + i * 1.4;
+    box(s, 0.6, y, 12.15, 1.15, i % 2 ? LIGHT : LIGHT2);
+    s.addShape(pres.shapes.OVAL, { x: 0.9, y: y + 0.3, w: 0.55, h: 0.55, fill: { color: WHITE }, line: { color: NAVY, width: 2 } });
+    txt(s, x, { x: 1.75, y, w: 10.8, h: 1.15, fontFace: HEAD, fontSize: 26, valign: "middle" });
+  });
+  bar(s, [{ text: "Jetzt: ", options: { bold: true } }, { text: "Schau auf die Ziele. Haben wir sie erreicht?", options: {} }]);
 }
 
 // ============ 16 Ausblick ============

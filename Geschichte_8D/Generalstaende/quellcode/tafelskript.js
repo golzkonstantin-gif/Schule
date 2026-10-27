@@ -94,7 +94,7 @@ d.push(...bullets([
   "Wenn Schülerinnen oder Schüler fehlen: Klerus bleibt 3, Adel 4, die Reserve-Karten gleichen den Dritten Stand aus (die beiden privilegierten Stände dürfen zusammen nie mehr als ein Drittel der Klasse sein).",
   "Falls die Tests noch nicht zurückgegeben sind: verdeckt auf die Plätze legen, keine Besprechung, Berichtigung mit Grün bis zur nächsten Stunde. Falls schon zurückgegeben, entfällt der Punkt.",
   "Tafel (Seitentafel): Stundenziel „Ich kann …“ (3 Sätze) und Ablauf in Stichpunkten mit * für Phase 4, Satz 3 (siehe Phase 0). Mitte der Tafel leer lassen (Zeitstrahl, Ergebnis der Abstimmung).",
-  "Folien 1 bis 17 (Schrift mindestens 24 Punkt), Kreide, Grün zum Verbessern, ein Stapel Heftpapier für die Absprache-Zettel falls nötig.",
+  "Folien 1 bis 18 (Schrift mindestens 24 Punkt), Kreide, Grün zum Verbessern, ein Stapel Heftpapier für die Absprache-Zettel falls nötig.",
 ]));
 
 // Phase 0
@@ -223,14 +223,14 @@ d.push(step("schreibt ab", {
   say: "Jetzt schreibt ihr ab: Merksatz 1. Rahmt ihn rot ein.",
   do: [
     "Folie 14 (Merksatz, 2 Minuten): Kernsatz im roten Rahmen, Beispiel, Test. Alle schreiben ab. Danach „Vergleicht und verbessert mit Grün.“",
-    "Folie 15 (3 Minuten): Lernziele still prüfen, dann die Abschlussfrage: „Du bist Berater von König Ludwig XVI. Er fragt dich: Soll ich erlauben, dass der Dritte Stand (Bauern und Bürger) nach Köpfen abstimmt?“ Rat im Heft: „Ich rate dir, …, weil …“. Es gibt mehrere gute Antworten, geprüft werden Position, ein Sachargument aus der Stunde und ein „weil“. Erst zehn Sekunden denken, dann schreiben.",
+    "Folie 15 (3 Minuten): Abschlussfrage mit Zeichnung (König Ludwig XVI. mit Sprechblase, Berater mit „Ich rate dir, …, weil …“): „Du bist Berater von König Ludwig XVI. Er fragt dich: Soll ich erlauben, dass der Dritte Stand (Bauern und Bürger) nach Köpfen abstimmt?“ Rat im Heft: „Ich rate dir, …, weil …“. Es gibt mehrere gute Antworten, geprüft werden Position, ein Sachargument aus der Stunde und ein „weil“. Erst zehn Sekunden denken, dann schreiben.",
     "Form nach Verlauf wählen: (a) Blitzlicht: je eine Stimme „erlauben“ und eine „nicht erlauben“ gezielt aufrufen, kein Kommentar (wenig Zeit, Klasse hört gut zu). (b) Schriftlich, dann zwei bis drei Sätze vorlesen (Klasse unruhig, Heft-Stichprobe bei 4 bis 6 Personen). (c) Berater-Duell zu zweit: A rät dafür, B dagegen, leise (Ruhe und Zeit). Unbenotet.",
-    "Folie 16 (1 Minute, nur lesen): Ausblick und Hausaufgabe. „Was passiert, wenn der Dritte Stand fordert, dass nach Köpfen abgestimmt wird, und der König ablehnt? Das sehen wir in der nächsten Stunde.“ Hausaufgabe: Testaufgaben mit Grün berichtigen (falls der Test zurückgegeben wurde).",
+    "Folie 16 (30 Sekunden, still): Haben wir die Ziele erreicht? Keine Antworten ins Plenum. Folie 17 (30 Sekunden, nur lesen): Ausblick und Hausaufgabe. „Was passiert, wenn der Dritte Stand fordert, dass nach Köpfen abgestimmt wird, und der König ablehnt? Das sehen wir in der nächsten Stunde.“ Hausaufgabe: Testaufgaben mit Grün berichtigen (falls der Test zurückgegeben wurde).",
   ],
   sol: "Mögliche Argumente (Auswahl, keine Musterlösung). Erlauben: Der Staat braucht Geld, Steuern gehen nur mit dem Dritten Stand (Bauern und Bürger); er stellt fast alle Menschen, sonst droht Unruhe; Hunger und Staatsbankrott sind nah. Nicht erlauben: Adel und Klerus sind wütend (Steuerplan 1787 gescheitert), der König verliert Rückhalt und Macht; der Dritte Stand wäre zu mächtig; seit 1614 wurde nach Ständen abgestimmt. Zwischenlösungen (erlauben, aber nur für die Steuerfrage) sind gut begründbar. Ein Hinweis, falls gefragt: Historisch lehnte der König ab. Kriterien: Position, ein Sachargument aus der Stunde, ein „weil“.",
 }));
 d.push(sp());
-d.push(note("ZUSATZ (Puffer, nur bei Zeit)", "Folie 17: Sportverein-Beispiel (Übertragung): Ein Verein hat drei Abteilungen: Fußball 200 Mitglieder, Tischtennis 20, Schach 10. Jede Abteilung hat bei der Abstimmung eine Stimme. Was ist unfair? Einzelarbeit, Heft, 2 Minuten.", "F4F7FD", NAVY, "B9C6E8"));
+d.push(note("ZUSATZ (Puffer, nur bei Zeit)", "Folie 18: Sportverein-Beispiel (Übertragung): Ein Verein hat drei Abteilungen: Fußball 200 Mitglieder, Tischtennis 20, Schach 10. Jede Abteilung hat bei der Abstimmung eine Stimme. Was ist unfair? Einzelarbeit, Heft, 2 Minuten.", "F4F7FD", NAVY, "B9C6E8"));
 
 d.push(h3("So sieht das Heft am Ende der Stunde aus"));
 d.push(table([2300, 7906], [
