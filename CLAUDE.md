@@ -111,6 +111,7 @@ Gilt für Geschichte 8C (`Geschichte_8/`, 12 Schülerinnen und Schüler, zwei Le
 - **Folien in Geschichte:** pro Folie nur das Nötigste, Ergebnisfolien und Visualisierungen (Zeitstrahl, Balken) sind erwünscht.
 - **Sequenz Französische Revolution (Stand 27.10.):** 1 Stunde pro Woche bis Halbjahresende (KW 44 bis 4), 11 Stunden plus 1 Reserve, 2 Tests (Stunde 5 und 11), Ausrichtung am SchiC Klasse 8 Modul 2. Details: `Geschichte_8D/Sequenz_Franzoesische_Revolution.md`.
 - **Kopplung 8C und 8D:** Beide Klassen nutzen dieselben Stundennummern der Sequenz. **Vor jeder 8D-Planung das Reflexionslog der 8C (`Geschichte_8/Reflexion.md`) lesen** und die Rückmeldung zur Parallelstunde einbeziehen; umgekehrt Rückmeldungen der 8D bei der 8C-Planung nutzen. Der Status je Stunde steht in der Sequenztabelle.
+- **Stichproben statt Gespräch (27.10., 8D):** Die Lehrkraft fragt gezielt ab (kurze Antworten bei 3 bis 6 Personen unterschiedlichen Niveaus, unbenotet, kein Gespräch). Das ist gleichwertig mit der Heft-Stichprobe (durch die Reihen gehen und mitlesen). Beide Formen im Wechsel einplanen.
 - **Deutlich weniger Unterrichtsgespräch bei lauten Klassen (27.10., 8D):** Aufträge schriftlich, per Folie oder Kreide-Kette, Gespräch nur kurz. Ruhig wird es, wenn alle beim Ankommen, in Einzel- oder Gruppenarbeit etwas zu tun haben. Lautstärke mit wörtlicher Ansage („Flüsterstufe. Nur dein Partner hört dich.“), feste Zeiten, wenig Bewegung.
 
 ## Gestaltung

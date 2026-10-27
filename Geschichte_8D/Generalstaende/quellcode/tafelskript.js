@@ -38,11 +38,20 @@ const bl = (s, o = {}) => p(t(s, { font: "Cambria", size: 20 }), Object.assign({
 const note = (label, txt, fill = GOLD, col = "B03A36", border = "E8A33D") => table([W - 20], [row([cell(p([t(label + "  ", { bold: true, size: 19, color: col }), t(txt, { size: 19 })], { after: 0 }), { w: W - 20, fill, borders: all(solid(border, 8)) })])]);
 const bullets = (arr) => arr.map((x) => p([S("• "), S(x)], { after: 40, indent: { left: 240 } }));
 const sp = () => p(t(""), { after: 20 });
+const warum = (why, gelenk) => table([W - 20], [row([cell([p([t("Warum  ", { bold: true, size: 19, color: NAVY }), t(why, { size: 19 })], { after: gelenk ? 40 : 0 }), ...(gelenk ? [p([t("Gelenk  ", { bold: true, size: 19, color: NAVY }), t(gelenk, { size: 19, italics: true })], { after: 0 })] : [])], { w: W - 20, fill: "EAF0FA", borders: all(solid("B9C6E8", 6)) })])]);
 
 const d = [];
 d.push(kicker("Tafelskript für die Lehrkraft · Einzelstunde (45 Min.) · 25 Schülerinnen und Schüler · eine Lehrkraft"), h1("Generalstände: Wie können die Stände den Dritten Stand überstimmen?"));
 d.push(p(t("Ziel: Die Klasse erarbeitet den Weg zu den Generalständen am Zeitstrahl (Text aus der 8C, hat gut funktioniert). Danach erlebt sie in einer Ständeversammlung selbst, wie Klerus und Adel sich hinter dem Rücken des Dritten Standes absprechen und ihn trotz Mehrheit überstimmen. Das Spiel ersetzt das Schulbeispiel aus der 8C (zu abstrakt) und den Gesprächsanteil (zu lastig). Aufbau nach AVIVA.", { size: 21 }), { after: 80 }));
 
+d.push(h3("Kopf der Planung"));
+d.push(table([2600, 7606], [
+  ["Ziel (Ich kann …)", "… den Weg bis zu den Generalständen am Zeitstrahl erklären. … erklären, wie die Stände den Dritten Stand überstimmen konnten. … begründen, warum die Abstimmung nach Ständen unfair war."],
+  ["Prüfaufgabe: Woran erkenne ich es?", "Zeitstrahl ausgefüllt (Ziel 1). Ü3 Satz 1 und 2 (Ziel 2). Ü3 Satz 3 mit einer Zahl (Ziel 3). „Heute habe ich gelernt, …“ im Heft."],
+  ["Mindestziel", "Ziel 1 und 2. Alles, was mit * steht, ist Zusatz (Ü3 Satz 3, Sportverein-Beispiel). „Auswerten“ bleibt immer."],
+  ["Beitrag zur Reihe", "Stunde 1 von 11 (Sequenz Französische Revolution). Sie legt die Ursachen und den Streit um die Abstimmungsregel. Daran knüpft Stunde 2 an: Der Dritte Stand fordert die Abstimmung nach Köpfen und gründet die Nationalversammlung."],
+  ["Vorgehen", "Direktes Vorgehen in Phase 1 bis 2 (Vorwissen gering, Zahlen und Regel werden vorgegeben), Öffnung in Phase 3 (Spiel) erst nach dem Modell. Direkt oder indirekt wird je Phase entschieden."],
+].map(([a, b]) => row([tc(a, 2600, { fill: LIGHT, bold: true }), tc(b, 7606)], 340))));
 d.push(h3("Was aus der 8C übernommen und geändert wurde"));
 d.push(...bullets([
   "Übernommen: Text „Wie kam es zu den Generalständen?“ mit Zeitstrahl auf demselben Blatt (hat gut funktioniert), Daten vorgegeben, Ereignisse eintragen.",
@@ -90,6 +99,8 @@ d.push(...bullets([
 
 // Phase 0
 d.push(phase("0", "Ankommen", 3, "AVIVA: Ankommen"));
+d.push(warum("Die Klasse wird ruhig, kennt Ziel und Ablauf und weiß, was am Ende gekonnt werden soll (direkt, von der Lehrkraft geführt).", "„Zuerst schauen wir, was ihr aus dem Absolutismus noch wisst, denn das braucht ihr gleich.“"));
+d.push(sp());
 d.push(step("kommt an, arbeitet leise", {
   say: "Stifte liegen. Ihr hört nur zu. Auf dem Platz liegt eine Karte. Lasst sie verdeckt liegen. Schreibt Datum und Überschrift „Generalstände 1789“ ins Heft.",
   do: [
@@ -106,9 +117,11 @@ d.push(step("kommt an, arbeitet leise", {
 
 // Phase 1
 d.push(phase("1", "Wiederholung: Ständegesellschaft", 6, "AVIVA: Vorwissen aktivieren"));
+d.push(warum("Zahlen und Vorrechte der drei Stände aktiv abrufen, denn ohne sie ist die Abstimmung im Spiel nicht zu verstehen (direkt: erst allein, Kontrolle per Folie).", "„Klerus und Adel zahlen keine Steuern. Wie es dazu kam, dass der König ihre Zustimmung doch wieder brauchte, lest ihr jetzt.“"));
+d.push(sp());
 d.push(step("arbeitet allein, kontrolliert", {
   say: "Jetzt arbeitet ihr allein. Die Aufgabe steht rechts.",
-  do: ["Folie 4 (Ü1). 4 Minuten schriftlich im Heft, danach Folie 5 zeigen (Lösung), 2 Minuten „Vergleicht und verbessert mit Grün.“ Kein Plenumsgespräch. Der Inhalt knüpft an die letzte Stunde an: Die Zahlen und Vorrechte brauchen die Schülerinnen und Schüler gleich im Spiel."],
+  do: ["Folie 4 (Ü1). 4 Minuten schriftlich im Heft, danach Folie 5 zeigen (Lösung), 2 Minuten „Vergleicht und verbessert mit Grün.“ Kein Plenumsgespräch. Partnercheck nach Ü1 (1 Minute, flüstern) nur, wenn die Klasse ruhig ist; sonst entfällt er. Der Inhalt knüpft an die letzte Stunde an: Die Zahlen und Vorrechte brauchen die Schülerinnen und Schüler gleich im Spiel."],
   extra: [folieBox("4 · Ü1 Ständegesellschaft", [p(t("Ü1 Die drei Stände", { font: "Cambria", size: 22, bold: true, color: NAVY }), { after: 40 }), bl("1. Schreibe die drei Stände untereinander ins Heft."), bl("2. Schreibe dazu die Zahl der Menschen: 150 000 · 500 000 · 20 000 000."), bl("3. Schreibe hinter die beiden Stände mit Vorrechten: „zahlt keine Steuern“."), bl("4. Beende: „Die Steuern zahlt der …“", { after: 40 }), p([t("Zeit: ", { bold: true, size: 19 }), t("4 Minuten · allein · leise     ", { size: 19 }), t("Fertig? Stift hinlegen.", { size: 19, italics: true })], { after: 0 })]), gapP()],
   sol: "Klerus 150 000 · Adel 500 000 · Dritter Stand (Bauern und Bürger) 20 000 000. Klerus und Adel zahlen keine Steuern. Die Steuern zahlt der Dritte Stand (Bauern und Bürger).",
 }));
@@ -117,6 +130,8 @@ d.push(note("SOLLBRUCHSTELLE", "Läuft die Klasse langsam oder laut an, wird Fol
 
 // Phase 2
 d.push(phase("2", "Text, Zeitstrahl, Kreide-Kette", 11, "AVIVA: Informieren"));
+d.push(warum("Der Verlauf bis 1789 wird selbst aus dem Text erarbeitet, damit Ursachen und Reihenfolge klar sind (indirekt: Lesen allein, Kreide-Kette als Kontrolle). Die Kreide-Kette bringt Ruhe und lässt alle mitprüfen; ein Partnervergleich vorher wäre bei dieser Klasse zu laut.", "„Der König braucht Geld und ruft die Generalstände. Aber wie wird dort abgestimmt? Das erlebt ihr jetzt selbst.“"));
+d.push(sp());
 d.push(step("arbeitet allein", {
   say: "Ich teile den Text aus. Jetzt arbeitet ihr allein. Die Aufgabe steht rechts.",
   do: ["Folie 6 (Ü2). Blatt austeilen: oben der Text, unten der Zeitstrahl mit Daten, aber leeren Ereignisfeldern. 6 Minuten: lesen, Jahreszahlen unterstreichen, zu jedem Datum das Ereignis als Stichwort eintragen. Währenddessen leise durch die Reihen gehen, nichts erklären."],
@@ -143,12 +158,17 @@ d.push(step("Kreide-Kette, alle prüfen mit", {
 
 // Phase 3
 d.push(phase("3", "Ständeversammlung (Spiel)", 17, "AVIVA: Verarbeiten"));
+d.push(warum("Die Regel wird erst vorgesprochen und modelliert (direkt), dann erlebt die Klasse sie selbst im Spiel (indirekt, handelnd) und wertet sie schriftlich aus. So entsteht das Sachurteil „unfair, weil …“ aus eigener Erfahrung.", "„Ihr habt erlebt, dass die Regel den Ausgang bestimmt. Jetzt halten wir fest, was das für Frankreich 1789 hieß.“"));
+d.push(sp());
 d.push(note("SPIELIDEE", "Die Klasse wird in Stände geteilt. Klerus und Adel sprechen sich ab, der Dritte Stand beobachtet. Beide Regeln werden anschließend mit denselben Stimmzetteln gezählt: nach Ständen (jeder Stand eine Stimme) und nach Köpfen (jede Person eine Stimme). Die Klasse sieht, dass dieselben Stimmen zu zwei Ergebnissen führen. Das Spiel gilt nur für die Stunde.", "EAF0FA", NAVY, "B9C6E8"));
 d.push(sp());
 d.push(step("dreht Karte um, Stände gehen an ihre Plätze", {
   say: "Stifte liegen. Ihr hört nur zu. Dreht jetzt eure Karte um. Lest sie leise. Zeigt sie niemandem.",
   do: [
-    "3a  (2 Min.) Folie 8: Antrag „Auch Adel und Klerus zahlen künftig Steuern.“ und die Regel: Jeder Stand hat eine Stimme (so war es bei den Generalständen, siehe Text). Sprechen Sie die Regel einmal vor.",
+    "3a  (3 Min., eine Minute kommt aus dem Puffer) Folie 8: Antrag „Auch Adel und Klerus zahlen künftig Steuern.“ und die Regel: Jeder Stand hat eine Stimme (so war es bei den Generalständen, siehe Text). Sprechen Sie die Regel einmal vor.",
+    "Modell (30 Sekunden, laut denken): „Es gibt drei Stände, jeder hat eine Stimme. Zwei Stimmen reichen. Wenn Klerus und Adel beide Nein sagen, ist der Antrag durch, egal, was der Dritte Stand sagt.“",
+    "Warnung vor dem Fehler: Viele denken, der Dritte Stand habe bei der Abstimmung nach Ständen mehr Stimmen, weil er mehr Menschen hat. Es ist eine Stimme für den ganzen Stand, nicht eine pro Person.",
+    "Gezielte Abfrage (Stichprobe bei 3 Schülerinnen und Schülern unterschiedlichen Niveaus, unbenotet, getrennt von den mündlichen Noten, kein Gespräch): „Wie viele Stimmen hat der Dritte Stand?“ – „Wie viele braucht man zum Sieg?“ – „Wer hätte schon gewonnen?“ Neutral reagieren, kurz bestätigen oder korrigieren.",
     "Ansage: „Erster und Zweiter Stand, ihr geht jetzt leise an den Tisch vorn. Dritter Stand, ihr bleibt sitzen.“ Die sieben Personen setzen sich an den Tisch vorn. Absprache-Zettel dort ablegen.",
   ],
   sol: "Nur dieser eine Platzwechsel. Falls es unruhig wird: Karten zuerst lesen lassen, dann erst wechseln.",
@@ -181,13 +201,14 @@ d.push(step("schaut zu, Stände gehen zurück", {
   do: [
     "3d  (3 Min., Folien 11 und 12) Ergebnis an der Tafel zeigen (nach Ständen, dann nach Köpfen), je ein Satz: „Nach Ständen: abgelehnt, 2 zu 1.“ „Nach Köpfen: angenommen.“",
     "Absprache-Zettel vorlesen (Plenum, unter einer Minute). Dabei Folie 11 zeigen: „Zwei Regeln. Dieselben Stimmen. Zwei Ergebnisse.“ Danach Folie 12 (Frankreich): Im Spiel sind die Verhältnisse gröber als in Frankreich; die echten Zahlen stehen auf Folie 12. Klerus und Adel sind etwa 3 %, aber sie haben 2 von 3 Stimmen.",
+    "Gezielte Abfrage (2 bis 3 Personen, kurz): „Warum hat der Antrag nach Ständen verloren, obwohl 18 Personen dafür waren?“ – „Was ist anders nach Köpfen?“ Das ersetzt das Gespräch.",
     "Zweiter Gesprächsmoment, ebenfalls unter einer Minute: „Wer will, schreibt jetzt auf, was ihn am meisten überrascht hat.“ Keine Antworten ins Plenum.",
   ],
 }));
 d.push(sp());
 d.push(step("arbeitet allein", {
   say: "Jetzt arbeitet ihr allein. Die Aufgabe steht rechts.",
-  do: ["3e  (4 Min., Folie 13) Ü3 im Heft: drei Sätze. Satz 3 ist mit * markiert und darf entfallen, wenn die Zeit knapp wird. Zeit angeben, nach 3 Minuten „Noch eine Minute.“"],
+  do: ["3e  (4 Min., Folie 13) Ü3 im Heft: drei Sätze. Satz 3 ist mit * markiert und darf entfallen, wenn die Zeit knapp wird. Zeit angeben, nach 3 Minuten „Noch eine Minute.“ Stichprobe im Heft: durch die Reihen gehen und bei 4 bis 6 Personen unterschiedlichen Niveaus mitlesen, nicht kommentieren. Im Wechsel mit der gezielten Abfrage einsetzbar."],
   extra: [folieBox("13 · Ü3 Was ist passiert?", [p(t("Ü3 Die Abstimmung", { font: "Cambria", size: 22, bold: true, color: NAVY }), { after: 40 }), bl("1. Der Dritte Stand wurde überstimmt, weil …"), bl("2. Klerus und Adel haben …"), bl("3.* Die Abstimmung nach Ständen ist unfair, weil … (nenne eine Zahl)", { after: 40 }), p([t("Zeit: ", { bold: true, size: 19 }), t("4 Minuten · allein · leise     ", { size: 19 }), t("Fertig? Stift hinlegen.", { size: 19, italics: true })], { after: 0 })]), gapP()],
   sol: "1: …jeder Stand nur eine Stimme hat. 2: …sich abgesprochen und gemeinsam mit Nein gestimmt. 3.*: …der Dritte Stand ca. 97 % der Menschen stellt, aber nur 1 von 3 Stimmen hat.",
 }));
@@ -196,6 +217,8 @@ d.push(note("SOLLBRUCHSTELLE", "Wenn die Zeit knapp wird, entfällt Satz 3 (*). 
 
 // Phase 4
 d.push(phase("4", "Auswerten", 5, "AVIVA: Auswerten"));
+d.push(warum("Der Lernzuwachs wird gesichert und überprüft: Merksatz, Lernziele, „Heute habe ich gelernt, …“. Diese Phase wird nie gestrichen.", "„Nächste Stunde: Was macht der Dritte Stand, wenn er überstimmt wird?“"));
+d.push(sp());
 d.push(step("schreibt ab", {
   say: "Jetzt schreibt ihr ab: Merksatz 1. Rahmt ihn rot ein.",
   do: [
@@ -219,6 +242,8 @@ d.push(table([2300, 7906], [
   ["Lernzuwachs", "„Heute habe ich gelernt, …“"],
 ].map(([a, b]) => row([tc(a, 2300, { bold: true, fill: LIGHT }), tc(b, 7906)], 340))));
 
+d.push(h3("Nach der Stunde festhalten (Reflexionslog)"));
+d.push(...bullets(["Passten Ziel, Inhalt und Methode zusammen? Wie lief die Zeit? Wie viel echte Lernzeit hatte die Klasse?", "Wo wurde es laut, und welche Ansage half? Welche Abfrage funktionierte, welche nicht?", "Wie viele konnten „Heute habe ich gelernt, …“ sinnvoll beenden?", "Rückmeldung der Klasse: ein Satz im Heft „Das war klar / Das hat gefehlt“ (nur falls Zeit)."]));
 d.push(h3("Zum Prüfen"));
 d.push(...bullets([
   "Zahlen und Daten (Abgeordnete 290/270/580, Krieg in Amerika, 1787, August 1788) stammen aus dem Text der 8C und sind gegen das Schulbuch zu lesen. Die Anzahl der Menschen (150 000 / 500 000 / 20 000 000) stammt aus Ihrem Gruppenpuzzle-Material.",

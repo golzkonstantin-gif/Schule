@@ -34,6 +34,8 @@
   - Schulbeispiel der 8C ersetzt durch das Ständespiel. 1789 wurde nicht über genau diesen Antrag abgestimmt; der Streit ging um die Abstimmungsregel (im Tafelskript vermerkt).
   - Zusatz (Sportverein, 3 Abteilungen) nur bei Zeit.
   - Sollbruchstellen: Wiederholung kürzen (Lösungsfolie sofort), Ü3 Satz 3 mit Stern.
+- **Überarbeitung 27.10. nach Planungsstandard und Direkter Instruktion** (nur 8D, die 8C hatte die Stunde schon): Kopf mit Ziel, Prüfaufgabe, Mindestziel, Beitrag zur Reihe; Warum-Zeile und Gelenkstelle je Phase; Modell, „Warnung vor dem Fehler“ und gezielte Abfragen in der Ständeversammlung; Stichprobe im Heft bei Ü3; Reflexionsfragen für nach der Stunde. Zeit: Phase 3a braucht 1 Minute aus dem Puffer.
+- **Entscheidung der Lehrkraft:** Stichproben im Plenum als gezielte Abfrage (kein Gespräch) oder im Heft, im Wechsel.
 - **Rückmeldung der Lehrkraft:** *(steht noch aus)*
 
 ## Hospitationsfeedback (gesammelt)
