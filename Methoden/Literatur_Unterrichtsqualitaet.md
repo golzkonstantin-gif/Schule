@@ -64,7 +64,7 @@ Die Lehrkraft hat Literatur eingespeist (überwiegend Geschichtsdidaktik, Studie
    - Bei Balladen mit Heldenfigur den Helden kritisch prüfen („Was hat es ihn gekostet?“).
 3. **Zeit:** Material vorab bereitlegen oder verteilen, ein festes Mindestziel pro Stunde, alles Weitere mit *.
 4. **Reihenebene:** Für die Balladen ein verbindendes Thema (z. B. Mut, Treue, Verantwortung) und eine Eingangsdiagnose („Was ist eine Ballade?“), die am Ende der Einheit mit Beleg wiederholt wird (Vorher-Nachher).
-5. **Optional:** Gestufte Hilfen (drei Karten am Pult) bei genau einer Aufgabe, z. B. Nacherzählen. Mündlichkeit: vor der Kreide-Kette 2 Minuten „Begründe deinem Partner …“.
+5. **Optional:** Gestufte Hilfen (drei Karten am Pult) bei genau einer Aufgabe, z. B. Nacherzählen. Mündlichkeit: wo es sich anbietet, vor der Kreide-Kette 2 Minuten „Begründe deinem Partner …“, sofern die Zeit reicht.
 
 ## Direkte Instruktion als Grundlage (Stand 27.10., von der Lehrkraft als besonders wichtig markiert)
 
@@ -84,7 +84,7 @@ Die Direkte Instruktion (DI) ist die Grundlage der AVIVA-Phasen im **direkten Vo
 3. **Modellieren bei Kompetenzen** (Lesen, Rezitieren, Analysieren, Urteilen): Die Lehrkraft zeigt das Zielprodukt und denkt laut, bevor die Schüler arbeiten. Beispiele für lautes Denken beim Lesen: innere Bilder („Ich stelle mir vor …“), Fragen („Unklar ist mir noch …“), Vorhersagen („Ich glaube, im nächsten Abschnitt …“).
 4. **Übungsfolge mit Teillösungen:** erste Anwendung, dann angeleitet mit Hilfen, dann selbstständig. Die Progression läuft über Aufgaben, die zuerst ganz, dann halb gelöst sind und zuletzt selbst bearbeitet werden. Die ersten Aufgaben sind so leicht, dass alle sie schaffen.
 5. **Zeit:** Die Übungsphase endet 5 Minuten vor Schluss (Uhr stellen), das Stundenende ist fest eingeplant. Wenn etwas nicht verstanden ist, wird nicht weitergegangen. Statt weiteren Stoffs steht Reserve für erneutes Erklären im Plan.
-6. **Wiederholungsformat am Stundenbeginn:** erst allein, dann Partnercheck (zwei Minuten abfragen, dann Rollenwechsel), dann kurz im Plenum. Erinnerungshilfen (Regelheft, Merksatz-Schnipsel) bleiben sichtbar.
+6. **Wiederholungsformat am Stundenbeginn:** möglichst erst allein, dann Partnercheck (zwei Minuten abfragen, dann Rollenwechsel), dann kurz im Plenum. Der Partnercheck nur, wo es sich anbietet und die Zeit reicht. Erinnerungshilfen (Regelheft, Merksatz-Schnipsel) bleiben sichtbar.
 
 **Zusammenhänge mit früheren Entscheidungen:**
 - Das **Entdecken** („gemeinsam entdecken, dann Merksatz“) funktioniert nur mit Vorwissen. Bei dünnem Vorwissen kommt zuerst das Modell, dann ein kurzes, stark geführtes Entdecken. So erklärt sich, warum die Bastelstunde und das Präteritum nicht trugen.
@@ -102,7 +102,7 @@ Er ergänzt das bisherige Muster (AVIVA, Ziel und Ablauf an der Tafel, feste Ans
 1. **Kopf der Planung:** Ziel als „Ich kann …“, Prüfaufgabe („Woran erkenne ich es?“), ein Satz „Beitrag zur Reihe“ und Mindestziel. Alles Weitere ist mit * markiert.
 2. **Je AVIVA-Phase eine Warum-Zeile** (didaktische Funktion der Phase), dazu Zeit, Arbeitsform, Material und die wörtliche Ansage wie bisher. So lässt sich „keine Phase nur zum Beschäftigen“ schon beim Planen prüfen.
 3. **Gelenkstellen mit Sinn:** Die festen Ansagen bleiben. Dazu kommt ein Satz, der die vorige Phase mit der nächsten verbindet, nicht nur eine Organisationsansage.
-4. **Partnerphase vor jeder Kreide-Kette:** Alle sprechen und begründen zuerst zu zweit, die Tafel dient nur dem Vergleichen. Das erhöht den Redeanteil.
+4. **Partnerphase, wo es sich anbietet** (z. B. vor einer Kreide-Kette): Alle sprechen und begründen zuerst zu zweit, die Tafel dient nur dem Vergleichen. Das erhöht den Redeanteil. Die Kreide-Kette selbst wird nur eingesetzt, wo es sich anbietet, weil sie nicht alle aktiviert. Die Zeit hat Vorrang (Entscheidung der Lehrkraft, 27.10.).
 5. **Differenzierung klein halten:** Höchstens eine Aufgabe pro Stunde mit gestuften Hilfen (drei Karten am Pult) oder mit Pflicht- und Wahlteil. Die Handreichung für S-PL bleibt.
 6. **Pro Reihe mindestens eine Urteilsaufgabe** mit vorab bekannten Kriterien (Sachurteil mit Textbeleg, dann Werturteil mit offengelegtem Maßstab).
 7. **Rückmeldung der Klasse** als ein Satz im Exit-Ticket („Das war klar / Das hat gefehlt“).
