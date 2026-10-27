@@ -21,7 +21,7 @@ const S = [
   { n: 1, d8: "Mi 04.11.", d8c: "Fr 16.10.", title: "Generalstände", sub: "Weg zu 1789, Abstimmung nach Ständen", ty: "i",
     ich: "… den Weg bis zu den Generalständen am Zeitstrahl erklären und die Abstimmung nach Ständen begründet beurteilen.", pruef: "Zeitstrahl; Satz „unfair, weil …“", vor: "Text selbst erarbeiten, Ständespiel", komp: "Ursachen; Rekonstruktion" },
   { n: 2, d8: "Mi 11.11.", d8c: "Fr 06.11.", title: "Dritter Stand handelt", sub: "Nationalversammlung, Ballhausschwur", ty: "m", tag: "Karikatur",
-    ich: "… erklären, wie sich der Dritte Stand zur Nationalversammlung erklärt, und eine Karikatur in drei Schritten analysieren.", pruef: "Kurzanalyse einer Karikatur", vor: "Methode direkt (Modell, dann angeleitet); Eingangsdiagnose", komp: "Epochenjahr 1789; Karikatur" },
+    ich: "… erklären, warum sich der Dritte Stand 1789 zur Nationalversammlung erklärte und was er im Ballhausschwur versprach. Ich kann eine Karikatur analysieren: beschreiben, deuten, beurteilen.", pruef: "Kurzanalyse einer Karikatur", vor: "Methode direkt (Modell, dann angeleitet); Eingangsdiagnose", komp: "Epochenjahr 1789; Karikatur" },
   { n: 3, d8: "Mi 18.11.", d8c: "Fr 13.11.", title: "Bastille, Vorrechte, Menschenrechte", sub: "14. Juli, 4. August, 26. August", ty: "i",
     ich: "… erklären, warum die Bastille zum Symbol wurde, und zwei Artikel der Menschenrechtserklärung wiedergeben.", pruef: "Zwei Artikel erklären und einem Stand zuordnen", vor: "Textauszüge, Rollenkarten (Standeskarten)", komp: "Menschenrechtserklärung" },
   { n: 4, d8: "Mi 25.11.", d8c: "Fr 20.11.", title: "Verfassung 1791", sub: "konstitutionelle Monarchie", ty: "m", tag: "Schaubild",
