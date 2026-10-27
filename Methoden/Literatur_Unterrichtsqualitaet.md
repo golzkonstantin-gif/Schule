@@ -17,7 +17,7 @@ Die Lehrkraft hat Literatur eingespeist (überwiegend Geschichtsdidaktik, Studie
 | Beispielentwurf einer Stunde, Planungsassistent (KI) | Entwurf als Muster für schriftliche Planung; KI-Plan als Gegenbeispiel |
 | Einführungstext „Unterrichtsreihen konzipieren“ | Reihe mit übergreifender Intention, Texte im Vergleich, aufeinander aufbauende Teilziele |
 | Hospitationskriterien Brandenburg (April 2023) und „Hinweise und Erläuterungen“ (2026, teils KI-gestützt formuliert, daher als Orientierung lesen) | Drei Tiefenstrukturen: kognitive Aktivierung, konstruktive Unterstützung, Klassenführung. Erläuterungen zu jedem Indikator, u. a. Zeitmanagement, Anteil echter Lernzeit, Fehlerkultur, Rückmeldekultur, Transparenz, Arbeitsaufträge, Heterogenität |
-| Planungsmodell AVIVA (Folie, Buch „Kompetenzorientiert unterrichten“, nur Einführung gelesen) | Phasen beschreiben Lernfunktionen, nicht feste Methoden. Direktes Vorgehen bei wenig Vorwissen, schrittweise Öffnung zum selbstgesteuerten Lernen |
+| Planungsmodell AVIVA (Folie, Kurzinformation, Buch „Kompetenzorientiert unterrichten“ nur mit Einführung gelesen) | Phasen beschreiben Lernfunktionen, nicht feste Methoden. Alle fünf Phasen kommen in jeder Lerneinheit vor, unabhängig von der Dauer. Direkt oder indirekt wird je Phase entschieden. Direktes Vorgehen bei wenig Vorwissen, schrittweise Öffnung zum selbstgesteuerten Lernen. Sozialformen abwechseln, Methodenwahl nach dem Ziel der Phase |
 | Planungsmatrix AVIVA, Checkliste zum Unterrichtsentwurf, Schaubild Unterrichtsstruktur | Je Phase Wer, Was, Wie, Womit, Warum; Selbstreflexion; 16 Prüffragen (u. a. überprüfbares Ziel, begründetes Lernarrangement, hohe Lernzeit, didaktische Funktion der Reserven); Gelenkstellen als Sollbruchstellen |
 | Gelenkstellen (Schaubild und Text) | Planung von der Mitte (Gegenstand, Kompetenz) nach außen. Gute Gelenkstellen sind inhaltlich eingebunden, schlechte sind isolierte Organisationsansagen |
 | Ergebnissicherung (Kurzvorlage), Leistungsbewertung (Mindmap), Fördern und Fordern, Classroom Management, Intelligentes Üben | Ergebnissicherung nicht in die Hausaufgabe verlagern, Leistungsbewertung erst danach, Kriterien vorab; gestufte Hilfen, Selbstkontrolle mit Musterlösungen, Lernfortschritt sichtbar machen |
@@ -111,6 +111,8 @@ Er ergänzt das bisherige Muster (AVIVA, Ziel und Ablauf an der Tafel, feste Ans
 Dazu gelten:
 - Ergebnissicherung nicht in die Hausaufgabe schieben. Die Leistungsbewertung folgt erst danach.
 - Material vorab bereitlegen oder verteilen lassen, damit keine Austeilaktionen Zeit kosten.
+- **Die Phase „Auswerten“ wird nie gestrichen** (AVIVA: alle fünf Phasen in jeder Lerneinheit, auch in 45 Minuten). Das Stern-Verfahren (*) trifft nur Stoff in „Verarbeiten“, nie das Stundenende. Das Ziel „Haben wir es erreicht?“ und „Heute habe ich gelernt, …“ bleiben fester Teil jeder Stunde.
+- **Direkt oder indirekt wird pro Phase entschieden, nicht für die ganze Stunde.** Im Skript steht bei „Warum“, ob eine Phase von der Lehrkraft geführt (direkt) oder von den Schülern gesteuert wird (indirekt), z. B. direkte Erklärung in „Informieren“, selbstständige Anwendung am Ende von „Verarbeiten“.
 - Laufzettel, Portfolio und Daumenprobe werden nicht eingeführt (wenige Arbeitsblätter, keine Selbsteinschätzung). Die Lern-Landkarte kann als Heftseite am Ende der Balladen sinnvoll sein.
 
 ## Hinweis für schriftliche Entwürfe
@@ -120,5 +122,5 @@ Falls bei einer Hospitation ein schriftlicher Entwurf verlangt wird, lässt sich
 ## Offen
 
 - Hospitationsfeedback steht noch aus. Dann die Lücken oben prüfen und aktualisieren.
-- Quellen teils nur auszugsweise gelesen: Handreichung Kompetenzraster (Kap. 1–6), Erprobung (ohne die zwei Unterrichtsbeispiele), Geschichtserzählungen (3 von 24 Seiten), AVIVA-Buch (nur Einführung, ohne die Kapitel zu den Phasen und Methoden), Artikel bei forumbd und Bildungsserver (nur das Schaubild bzw. gar nicht, Host war gesperrt).
+- Quellen teils nur auszugsweise gelesen: Handreichung Kompetenzraster (Kap. 1–6), Erprobung (ohne die zwei Unterrichtsbeispiele), Geschichtserzählungen (3 von 24 Seiten), AVIVA-Buch (nur Einführung, vermutlich Verlags-Leseprobe; die Phasenkapitel bleiben ungelesen, ein Scan ist nicht nötig), Artikel bei forumbd und Bildungsserver (nur das Schaubild bzw. gar nicht, Host war gesperrt).
 - Die Wirkung des Planungsstandards nach den ersten Stunden prüfen und im Reflexionslog festhalten.

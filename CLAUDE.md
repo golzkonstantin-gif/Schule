@@ -47,7 +47,8 @@ Die folgenden Vorlieben und Reflexionen gelten für die gesamte weitere Planung,
   - Prüffragen nach jeder Portion mit Stichproben bei 4–6 Schülern unterschiedlichen Niveaus (unbenotet, getrennt von den mündlichen Noten),
   - die Übungsphase endet 5 Minuten vor Schluss, das Stundenende (Wiederholung, „Heute habe ich gelernt, …“) ist fest eingeplant, und es wird nicht weitergegangen, wenn etwas nicht verstanden ist,
   - Wiederholung am Stundenbeginn möglichst als „allein, Partnercheck, Plenum“ (Partnercheck nur, wo es sich anbietet und die Zeit reicht),
-  - bei „Warum“ steht die Begründung „Direktes Vorgehen, weil das Vorwissen gering ist“.
+  - bei „Warum“ steht die Begründung „Direktes Vorgehen, weil das Vorwissen gering ist“; direkt oder indirekt wird **pro Phase** entschieden, nicht für die ganze Stunde,
+  - die Phase „Auswerten“ wird **nie gestrichen** (alle fünf AVIVA-Phasen kommen in jeder Stunde vor); das Stern-Verfahren (*) trifft nur Stoff in „Verarbeiten“.
 
   Offene Formen (Standbild, Szene, eigene Texte) folgen erst nach dem Modell in der selbstständigen Phase. Keine Ja/Nein-Farbkarten. Details in `Methoden/Literatur_Unterrichtsqualitaet.md`.
 - **Planungsstandard (Stand 27.10., ab 2.11.):** Jede Planung beginnt mit Ziel („Ich kann …“), Prüfaufgabe („Woran erkenne ich es?“), einem Satz „Beitrag zur Reihe“ und Mindestziel (Rest mit *). Je AVIVA-Phase gibt es eine Warum-Zeile (didaktische Funktion), und Gelenkstellen verbinden die Phasen inhaltlich (nicht nur Organisationsansage). Partnerphasen (z. B. vor einer Kreide-Kette) nur, wo es sich anbietet, damit alle sprechen. Auf die Zeit achten, sie hat Vorrang. Weitere Punkte (Differenzierung mit gestuften Hilfen, Urteilsaufgabe pro Reihe, Rückmeldung der Klasse, Reflexionszeile nach der Stunde) stehen in `Methoden/Literatur_Unterrichtsqualitaet.md`.
