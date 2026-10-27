@@ -22,6 +22,7 @@ Die Lehrkraft hat Literatur eingespeist (überwiegend Geschichtsdidaktik, Studie
 | Gelenkstellen (Schaubild und Text) | Planung von der Mitte (Gegenstand, Kompetenz) nach außen. Gute Gelenkstellen sind inhaltlich eingebunden, schlechte sind isolierte Organisationsansagen |
 | Ergebnissicherung (Kurzvorlage), Leistungsbewertung (Mindmap), Fördern und Fordern, Classroom Management, Intelligentes Üben | Ergebnissicherung nicht in die Hausaufgabe verlagern, Leistungsbewertung erst danach, Kriterien vorab; gestufte Hilfen, Selbstkontrolle mit Musterlösungen, Lernfortschritt sichtbar machen |
 | Gehirngerecht lernen (Broschüre, Fachtext) | Überblick zu Beginn, kurze Wiederholungen, Konsolidierung braucht Zeit, Beziehung, Bewegung. Neuro-Begründungen sind vereinfacht, übernommen wird nur der Praxiskern |
+| Buch zur Direkten Instruktion (45 S. Auszüge, Scan, per Texterkennung gelesen, teils lückenhaft) | Lehrergesteuert und schülerorientiert; drei Phasen (Vermittlung, angeleitetes Üben, selbstständiges Üben); Erklären in kleinen Portionen mit Verständnisprüfung; Modellieren und lautes Denken; Stichproben statt Freiwillige; Teillösungen und Hilfen; Wiederholung am Stundenanfang und -ende; offene Formen erst danach. **Von der Lehrkraft als besonders wichtig markiert (27.10.)** |
 | Schaubild „Lernkulturwandel“ (fünf Dimensionen) | Zusammenarbeit, Lernbegleitung und offene Lernformen, eigenständiges Handeln, Digitalität, Lernorte. Für den Unterricht der 7A bisher kaum relevant |
 
 ## Was bei der Lehrkraft schon gelingt
@@ -64,6 +65,35 @@ Die Lehrkraft hat Literatur eingespeist (überwiegend Geschichtsdidaktik, Studie
 3. **Zeit:** Material vorab bereitlegen oder verteilen, ein festes Mindestziel pro Stunde, alles Weitere mit *.
 4. **Reihenebene:** Für die Balladen ein verbindendes Thema (z. B. Mut, Treue, Verantwortung) und eine Eingangsdiagnose („Was ist eine Ballade?“), die am Ende der Einheit mit Beleg wiederholt wird (Vorher-Nachher).
 5. **Optional:** Gestufte Hilfen (drei Karten am Pult) bei genau einer Aufgabe, z. B. Nacherzählen. Mündlichkeit: vor der Kreide-Kette 2 Minuten „Begründe deinem Partner …“.
+
+## Direkte Instruktion als Grundlage (Stand 27.10., von der Lehrkraft als besonders wichtig markiert)
+
+Die Direkte Instruktion (DI) ist die Grundlage der AVIVA-Phasen im **direkten Vorgehen** (AVIVA-Folie: „Lehrperson strukturiert und führt“). Sie gilt, solange das Vorwissen gering ist oder eine neue Kompetenz aufgebaut wird. Offene und handlungsorientierte Formen (Standbild, Szene, eigene Texte, Gruppenarbeit) folgen erst danach, in der selbstständigen Phase.
+
+| AVIVA | Umsetzung in der DI |
+|---|---|
+| Ankommen | Thema und Ziel nennen (nicht von den Schülern herausfinden lassen), Bedeutung erklären |
+| Vorwissen aktivieren | Notwendiges Vorwissen aktiv wiederholen: erst allein, dann Partner, dann Plenum. Dass sich einige erinnern, reicht nicht |
+| Informieren | Erklären in 2–3 Portionen (je ca. 2 Minuten); Modell zeigen und laut denken; typische Fehler vorab ansprechen |
+| Verarbeiten | Erste Anwendung (einfach, nach dem Muster der Erklärung, allein, Partner, Plenum), angeleitetes Üben mit Hilfen, selbstständiges Üben; Standortbestimmung nach jeder Phase |
+| Auswerten | Wiederholung und „Was habt ihr heute gelernt?“ spätestens 5 Minuten vor Schluss |
+
+**Sechs Ergänzungen für Planung und Tafelskript:**
+1. **Typische Fehler vorab ansprechen:** Im Skript je Erklär-Portion eine Zeile „Warnung vor dem Fehler“.
+2. **Prüffragen nach jeder Portion** mit Stichproben bei 4–6 Schülern unterschiedlichen Niveaus. Neutral reagieren und erst danach kommentieren. Diese Diagnose-Fragen sind **unbenotet** und von den mündlichen Noten getrennt.
+3. **Modellieren bei Kompetenzen** (Lesen, Rezitieren, Analysieren, Urteilen): Die Lehrkraft zeigt das Zielprodukt und denkt laut, bevor die Schüler arbeiten. Beispiele für lautes Denken beim Lesen: innere Bilder („Ich stelle mir vor …“), Fragen („Unklar ist mir noch …“), Vorhersagen („Ich glaube, im nächsten Abschnitt …“).
+4. **Übungsfolge mit Teillösungen:** erste Anwendung, dann angeleitet mit Hilfen, dann selbstständig. Die Progression läuft über Aufgaben, die zuerst ganz, dann halb gelöst sind und zuletzt selbst bearbeitet werden. Die ersten Aufgaben sind so leicht, dass alle sie schaffen.
+5. **Zeit:** Die Übungsphase endet 5 Minuten vor Schluss (Uhr stellen), das Stundenende ist fest eingeplant. Wenn etwas nicht verstanden ist, wird nicht weitergegangen. Statt weiteren Stoffs steht Reserve für erneutes Erklären im Plan.
+6. **Wiederholungsformat am Stundenbeginn:** erst allein, dann Partnercheck (zwei Minuten abfragen, dann Rollenwechsel), dann kurz im Plenum. Erinnerungshilfen (Regelheft, Merksatz-Schnipsel) bleiben sichtbar.
+
+**Zusammenhänge mit früheren Entscheidungen:**
+- Das **Entdecken** („gemeinsam entdecken, dann Merksatz“) funktioniert nur mit Vorwissen. Bei dünnem Vorwissen kommt zuerst das Modell, dann ein kurzes, stark geführtes Entdecken. So erklärt sich, warum die Bastelstunde und das Präteritum nicht trugen.
+- **Urteilen** wird schrittweise aufgebaut: Die Lehrkraft zeigt an einer Ballade ein Sachurteil und ein Werturteil als Beispiel (mit Satzanfängen), die Schüler üben angeleitet und erst danach selbstständig.
+- **Rezitation:** Modellrezitation, danach Raster vorstellen, danach angeleitet üben (Tandem), danach Vortrag.
+- **Im Skript bei „Warum“ begründen:** „Direktes Vorgehen, weil das Vorwissen gering ist; Öffnung erst in der selbstständigen Phase.“ Das macht die Entscheidung gegenüber den Hospitationskriterien nachvollziehbar.
+- **Nicht übernommen:** Farbkarten für Ja/Nein-Antworten (Symbolkarten abgelehnt). Stattdessen Stichproben und Kurzantworten im Heft.
+
+**Quellenkritik:** Das Buch wirbt für die DI und wertet andere Formen teilweise ab. Seine Belege stützen sich stark auf Hattie, dessen Effektstärken methodisch umstritten sind. Das Buch selbst betont, entscheidend sei die Passung zum Vorwissen. Wir übernehmen die Praxisschritte, nicht die Rhetorik.
 
 ## Planungsstandard ab 2.11. (Stand 27.10., aus der gesamten Literatur)
 
