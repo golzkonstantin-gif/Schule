@@ -25,7 +25,7 @@
 - **Wo hing es:** Die Stunde war unterrichtsgesprächslastig. Das Schulbeispiel (Lehrkräfte putzen nicht) war zu abstrakt.
 - **Konsequenz:** Lieber die Klasse in Stände teilen und merken lassen, dass Stände untereinander mauscheln und den Dritten Stand überstimmen können.
 
-### Generalstände (8D, geplant, 45 Min., 25 Schülerinnen und Schüler)
+### Generalstände (8D, geplant für Mi 04.11., 45 Min., 25 Schülerinnen und Schüler)
 - **Material:** `Generalstaende/` (Tafelskript, 17 Folien, Text mit Zeitstrahl, Druckvorlage Standeskarten und Stimmzettel mit Absprache-Zettel)
 - **Inhalt (AVIVA):** Ankommen (3, still) · Wiederholung Ständegesellschaft (6, Ü1 allein, Lösungsfolie) · Text und Zeitstrahl (11, allein, dann Kreide-Kette ohne Kommentar) · Ständeversammlung (17: 3 Klerus, 4 Adel, 18 Dritter Stand; Klerus und Adel sprechen sich schriftlich am Tisch vorn ab, der Dritte Stand schreibt Argumente und eine Beobachtung auf; Abstimmung mit Stimmzettel auf der Karte, gezählt nach Ständen 2 : 1 abgelehnt und nach Köpfen angenommen; Ü3 mit drei Sätzen) · Auswerten (5: Merksatz, „Heute habe ich gelernt, …“, Ausblick) · 3 Minuten Puffer.
 - **Planungsentscheidungen:**

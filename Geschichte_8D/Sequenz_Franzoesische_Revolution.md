@@ -1,6 +1,6 @@
 # Sequenz Französische Revolution (Geschichte 8, SchiC Klasse 8 Modul 2)
 
-Stand 27.10.2026 (Entwurf zur Abnahme). 1 Stunde pro Woche bis Halbjahresende (KW 44 bis KW 4), 11 Stunden plus 1 Reserve, 2 Tests. Gilt für 8C und 8D mit denselben Stundennummern; die 8C liegt eine Stunde vorn. Ferientermine aus dem Gedächtnis angesetzt, bitte prüfen. Datum je Stunde: nachtragen, sobald der Wochentag feststeht.
+Stand 27.10.2026 (Entwurf zur Abnahme). 1 Stunde pro Woche bis Halbjahresende, 11 Stunden (8D, ohne Reserve) bzw. 11 plus 1 Reserve (8C), 2 Tests. Gilt für 8C und 8D mit denselben Stundennummern; die 8C liegt eine Stunde vorn. Termine siehe Übersicht.
 
 ## Reihenebene
 
@@ -15,23 +15,27 @@ Stand 27.10.2026 (Entwurf zur Abnahme). 1 Stunde pro Woche bis Halbjahresende (K
 
 ## Übersicht und Status
 
+8D: Mittwoch. 8C: Freitag, jeweils eine Stunde (und eine Woche) vorn, die 8C-Stunde n liegt also vor der 8D-Stunde n. Herbstferien 17.10.–2.11., Weihnachtsferien ab 23.12. (laut `Deutsch_7A/Reflexion.md`; Winterferien und Notenschluss prüfen). Für die 8D ergeben sich 7 Stunden vor und 4 nach den Weihnachtsferien, also **11 Stunden ohne Reserve**.
+
 Status: geplant · gelaufen · Rückmeldung (R) im Reflexionslog.
 
-| Nr. | KW (8D) | Thema | SchiC-Bezug, Kompetenz | 8C | 8D |
-|---|---|---|---|---|---|
-| 1 | 44 | Generalstände: Weg zu 1789, Abstimmung nach Ständen | Ursachen; Rekonstruktion | gelaufen (R: UG-lastig, Schulbeispiel zu abstrakt, Text gut) | geplant (`Geschichte_8D/Generalstaende/`) |
-| 2 | 45 | Dritter Stand handelt: Nationalversammlung, Ballhausschwur; Karikatur analysieren | Epochenjahr 1789; **Karikatur** | offen | offen |
-| 3 | 46 | Bastille, Ende der Vorrechte, Menschen- und Bürgerrechte | Epochenjahr 1789; Menschenrechtserklärung | offen | offen |
-| 4 | 47 | Verfassung 1791: konstitutionelle Monarchie | **Verfassungsschaubild** | offen | offen |
-| 5 | 48 | **Test 1** | | offen | offen |
-| 6 | 49 | Vom König zur Republik: Flucht, Krieg, Hinrichtung | Zusammenhänge rekonstruieren | offen | offen |
-| 7 | 50 | Jakobinerherrschaft und Terror | **Sach- und Werturteil** (Modell) | offen | offen |
-| 8 | 51 | Ende der Revolution 1795–1799, Aufstieg Napoleons | Zusammenhänge rekonstruieren | offen | offen |
-| – | 52/53 | Weihnachtsferien | | | |
-| 9 | 1 | Napoleon: Reformen und Fall | | offen | offen |
-| 10 | 2 | Wiener Kongress, Zeitstrahl, Wiederholung; Urteil „War die Revolution ein Erfolg?“ | Urteil (angeleitet) | offen | offen |
-| 11 | 3 | **Test 2** mit Urteilsaufgabe | Urteil (selbstständig) | offen | offen |
-| R | 4 | Reserve oder Rückgabe, Ausblick Industrielle Revolution | | | |
+| Nr. | 8D (Mi) | 8C (Fr) | Thema | SchiC-Bezug, Kompetenz | 8C | 8D |
+|---|---|---|---|---|---|---|
+| 1 | 04.11. | 16.10. | Generalstände: Weg zu 1789, Abstimmung nach Ständen | Ursachen; Rekonstruktion | gelaufen (R: UG-lastig, Schulbeispiel zu abstrakt, Text gut) | geplant (`Geschichte_8D/Generalstaende/`) |
+| 2 | 11.11. | 06.11. | Dritter Stand handelt: Nationalversammlung, Ballhausschwur; Karikatur analysieren | Epochenjahr 1789; **Karikatur** | offen | offen |
+| 3 | 18.11. | 13.11. | Bastille, Ende der Vorrechte, Menschen- und Bürgerrechte | Epochenjahr 1789; Menschenrechtserklärung | offen | offen |
+| 4 | 25.11. | 20.11. | Verfassung 1791: konstitutionelle Monarchie | **Verfassungsschaubild** | offen | offen |
+| 5 | 02.12. | 27.11. | **Test 1** | | offen | offen |
+| 6 | 09.12. | 04.12. | Vom König zur Republik: Flucht, Krieg, Hinrichtung | Zusammenhänge rekonstruieren | offen | offen |
+| 7 | 16.12. | 11.12. | Jakobinerherrschaft und Terror | **Sach- und Werturteil** (Modell) | offen | offen |
+| – | | | Weihnachtsferien | | | |
+| 8 | 06.01. | 18.12. | Ende der Revolution 1795–1799, Aufstieg Napoleons | Zusammenhänge rekonstruieren | offen | offen |
+| 9 | 13.01. | 08.01. | Napoleon: Reformen und Fall | | offen | offen |
+| 10 | 20.01. | 15.01. | Wiener Kongress*, Zeitstrahl, Wiederholung; Urteil „War die Revolution ein Erfolg?“ | Urteil (angeleitet) | offen | offen |
+| 11 | 27.01. | 22.01. | **Test 2** mit Urteilsaufgabe | Urteil (selbstständig) | offen | offen |
+| R | – | 29.01. | 8C: Reserve, Rückgabe, Ausblick Industrielle Revolution (8D hat keine Reserve) | | | |
+
+**Risiko:** Test 2 liegt bei der 8D auf dem 27.01., kurz vor dem Halbjahresende. Je nach Notenschluss ist die Rückgabe knapp. Der Wiener Kongress (mit *) wird deshalb in Modul 3 verschoben, wenn eine Stunde ausfällt oder die Klasse langsamer ist.
 
 ## Die Stunden im Einzelnen
 
@@ -59,7 +63,7 @@ Je Stunde: Ich-kann-Ziel, Prüfaufgabe („Woran erkenne ich es?“), Mindestzie
 
 **11 Test 2** (Stunden 6–10, Zeitstrahl, Urteilsaufgabe mit bekannten Kriterien, kurze Rückfrage zum Verfassungsschaubild als Wiederholung). Gleiches Format wie Test 1.
 
-**Reserve** (KW 4): Rückgabe und Berichtigung, Ausblick auf die Industrielle Revolution (SchiC Modul 3).
+**Reserve** (nur 8C, 29.01.): Rückgabe und Berichtigung, Ausblick auf die Industrielle Revolution (SchiC Modul 3). Bei der 8D entfällt sie.
 
 ## Streichkandidaten bei Ausfall
 1. Wiener Kongress an den Anfang von Modul 3 verschieben.
