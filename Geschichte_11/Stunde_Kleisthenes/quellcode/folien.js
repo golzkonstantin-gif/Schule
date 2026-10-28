@@ -1,7 +1,6 @@
 const pptxgen = require("pptxgenjs");
 const { D, C, NR, nr } = require("./common.js");
 const OUT = process.argv[2];
-const PEI = "/home/user/Schule/Geschichte_11/Stunde_Peisistratos/";
 const pres = new pptxgen(); pres.layout = "LAYOUT_16x9"; pres.title = "Kleisthenes – Warum stimmt Lysias anders?";
 const H = "Cambria", B = "Calibri";
 const FOOT = "Kleisthenes – Warum stimmt Lysias anders?";
@@ -44,7 +43,7 @@ function steps(s, items, x, y, w, fs = 14, gap = 0.62) {
   txt(s, "GESCHICHTE · KLASSE 11", { x: 0.7, y: 1.1, w: 8.6, h: 0.3, fontSize: 12, bold: true, color: C.gold, charSpacing: 3 });
   txt(s, "Warum stimmt Lysias anders?", { x: 0.7, y: 1.45, w: 8.6, h: 0.8, fontSize: 36, bold: true, fontFace: H, color: C.white });
   txt(s, "Die Reformen des Kleisthenes (508/07 v. Chr.)", { x: 0.7, y: 2.35, w: 8.6, h: 0.5, fontSize: 18, color: "E8DFD0" });
-  s.addNotes("Titelfolie. Seitentafel vorbereitet: Ziel und Ablauf (Folie 2), daneben das leere Peisistratos-Gerüst (Skizze in der Handreichung).");
+  s.addNotes("Titelfolie. Seitentafel vorbereitet: Ziel und Ablauf (Folie 2).");
 }
 
 // 2 Ziel und Ablauf
@@ -54,38 +53,52 @@ function steps(s, items, x, y, w, fs = 14, gap = 0.62) {
   card(s, 0.5, 1.35, 9, 1.05, C.dark);
   txt(s, [{ text: "Ich kann erklären, ", options: {} }, { text: "wie Kleisthenes mit der neuen Phylenordnung die Macht der Adelsfamilien brach.", options: { bold: true, color: C.gold } }],
     { x: 0.75, y: 1.35, w: 8.5, h: 1.05, fontSize: 19, color: C.white, valign: "middle" });
-  const A = [["V", "Wiederholung: Peisistratos – und was danach geschah"], ["I", "Eine rätselhafte Frage und zwei neue Begriffe"], ["V", "Mystery: Warum stimmt Lysias anders?"], ["V", "Die Lösung und die neue Ordnung Attikas (Ostrakismos*)"], ["A", "Abschlussaufgabe: Kleisthenes und Solon"]];
+  const A = [["V", "Wiederholung: Wer regierte Athen bisher? Fehler finden"], ["I", "Eine rätselhafte Frage und zwei neue Begriffe"], ["V", "Mystery: Warum stimmt Lysias anders?"], ["V", "Die Lösung und die neue Ordnung Attikas (Ostrakismos*)"], ["A", "Abschlussaufgabe: Kleisthenes und Solon"]];
   A.forEach(([l, t], i) => { chip(s, l, 0.5, 2.62 + i * 0.5, 0.42, 0.38, C.sand, C.terra, 13); txt(s, t, { x: 1.1, y: 2.62 + i * 0.5, w: 8.2, h: 0.38, fontSize: 15, valign: "middle" }); });
   footer(s);
   s.addNotes("0–2 Min. Ziel vorlesen, steht auch an der Seitentafel. * = wird bei Zeitnot nur kurz gestreift. Im Auswerten auf das Ziel zurückkommen.");
 }
 
-// 3 Wiederholung Peisistratos
+// 3 Wiederholung: Fehler-Übersicht
+const UEB = [
+  ["vor 600", "Aristokratie", "Adelsfamilien", [["Die Macht liegt bei wenigen Adelsfamilien; aus ihnen kommen die Archonten.", null], ["Recht sprechen gewählte Richter aus dem Volk.", "Recht spricht der Adel – geschriebene Gesetze gibt es nicht."]]],
+  ["624/621", "Aristokratie", "Drakon", [["Er schreibt das Recht erstmals auf; staatliche Richter ersetzen die Blutrache.", null], ["Er schafft die Schuldknechtschaft ab.", "Die Schuldknechtschaft bleibt bestehen."]]],
+  ["594/93", "Timokratie", "Solon", [["Er streicht die Schulden und verteilt das Land der Großgrundbesitzer neu.", "Er streicht die Schulden – verteilt aber kein Land neu."], ["Die Rechte richten sich nach der Herkunft; auch Theten dürfen Archont werden.", "Die Rechte richten sich nach dem Besitz; Theten dürfen nur abstimmen und klagen."]]],
+  ["546–528/27", "Tyrannis", "Peisistratos", [["Die Volksversammlung wählt ihn zum Alleinherrscher.", "Er erobert die Macht mit Söldnern (Akropolis)."], ["Er schafft Solons Verfassung ab, fördert aber Bauern und Handwerk.", "Die Verfassung bleibt – die Ämter bekommen seine Anhänger."]]],
+];
+function uebersicht(s, solved) {
+  const X = [0.5, 1.55, 2.95, 4.45], Wc = [1.0, 1.35, 1.45, 5.05];
+  ["Zeit", "Herrschaftsform", "Protagonist", "Was geschah?"].forEach((h, c) => chip(s, h, X[c], 1.2, Wc[c], 0.3, C.dark, C.white, 11.5));
+  UEB.forEach(([z, f, pr, st], r) => {
+    const y = 1.56 + r * 0.8;
+    card(s, X[0], y, 9.0, 0.76, r % 2 ? C.white : C.pale);
+    txt(s, z, { x: X[0] + 0.05, y, w: Wc[0], h: 0.76, fontSize: 12, bold: true, valign: "middle" });
+    txt(s, f, { x: X[1], y, w: Wc[1], h: 0.76, fontSize: 12.5, bold: true, color: C.terra, valign: "middle" });
+    txt(s, pr, { x: X[2], y, w: Wc[2], h: 0.76, fontSize: 13, bold: true, fontFace: H, valign: "middle" });
+    st.forEach(([t, fix], k) => {
+      const yy = y + 0.03 + k * 0.36;
+      if (!solved || !fix) txt(s, (solved ? "✓ " : "• ") + t, { x: X[3], y: yy, w: Wc[3], h: 0.36, fontSize: 11.5, valign: "middle", color: solved ? C.green : C.dark });
+      else txt(s, [{ text: "✗ ", options: { color: C.terra, bold: true } }, { text: fix, options: { color: C.terra, bold: true } }], { x: X[3], y: yy, w: Wc[3], h: 0.36, fontSize: 11.5, valign: "middle" });
+    });
+  });
+}
 {
   const s = pres.addSlide(); s.background = { color: C.white };
-  head(s, 1, "Wiederholung · allein, dann zu zweit", "Was wisst ihr noch über Peisistratos?"); timeChip(s, "5 Min.");
-  card(s, 0.5, 1.35, 9, 0.5, C.terra);
-  txt(s, "Buch und Hefter bleiben zu.", { x: 0.75, y: 1.35, w: 8.5, h: 0.5, fontSize: 16, bold: true, color: C.white, valign: "middle" });
-  steps(s, ["Schau dir das leere Gerüst an der Tafel an. Notiere im Heft zu jedem der vier Felder ein Stichwort: Wer profitiert, und wovon?",
-    "Vergleiche mit deinem Nachbarn und ergänze, was dir fehlt.",
-    "Wer aufgerufen wird, nennt ein Feld und eine Maßnahme. Die Lehrkraft trägt ein."], 0.5, 2.1, 5.3, 13.5, 0.85);
-  s.addImage({ path: PEI + "Tafelbild_stumm.png", x: 6.1, y: 2.05, w: 3.2, h: 3.18 });
-  footer(s);
-  s.addNotes("2–7 Min. Direkt: Wiederholung allein (2) – Partnercheck (1) – Stichproben bei 4 Schülern (2), du trägst ein. Warum: Der Abruf aus dem Gedächtnis fehlte letzte Stunde; die Phylen-Idee baut darauf auf (Peisistratos schwächte den Adel nur teilweise).");
+  head(s, 1, "Wiederholung · allein, dann zu zweit · Heft", "Hier stimmt etwas nicht!"); timeChip(s, "5 Min.");
+  uebersicht(s, false);
+  card(s, 0.5, 4.8, 9.0, 0.36, C.terra);
+  txt(s, "Finde die 6 Fehler und berichtige sie im Heft. Dann vergleiche mit deinem Nachbarn.", { x: 0.65, y: 4.8, w: 8.7, h: 0.36, fontSize: 11.5, bold: true, color: C.white, valign: "middle" });
+  s.addNotes("2–7 Min. Direkt: Vorwissen aktivieren über einen Fehlertext. Allein (2), Partnercheck (1), Stichproben bei 4–6 Schülern unterschiedlichen Niveaus (2). Buch und Hefter zu – nur das Heft für die Berichtigung. Die Fehler: Recht beim Adel; Schuldknechtschaft bleibt bei Drakon; Solon ohne Landverteilung; Rechte nach Besitz, Theten kein Archont; Peisistratos mit Söldnern; Verfassung bleibt.");
 }
 
-// 4 Lösung + Leitfrage nachholen
+// 4 Lösung Fehler-Übersicht + Leitfrage Peisistratos
 {
   const s = pres.addSlide(); s.background = { color: C.white };
-  head(s, 1, "Wiederholung · Lösung", "Peisistratos: Wegbereiter der Demokratie?"); solChip(s);
-  s.addImage({ path: PEI + "Tafelbild_Loesung.png", x: 0.4, y: 1.3, w: 5.2, h: 3.45 });
-  card(s, 5.85, 1.3, 3.65, 3.6, C.sand);
-  txt(s, "Ja – ungewollt:", { x: 6.05, y: 1.4, w: 3.3, h: 0.35, fontSize: 15, bold: true, fontFace: H, color: C.terra });
-  txt(s, "Bauern und Mittelstand werden unabhängiger, das Volk wächst zusammen, die mächtigsten Gegner aus dem Adel verlieren.", { x: 6.05, y: 1.8, w: 3.3, h: 1.4, fontSize: 13 });
-  txt(s, "Aber:", { x: 6.05, y: 3.2, w: 3.3, h: 0.3, fontSize: 15, bold: true, fontFace: H, color: C.terra });
-  txt(s, "Die Macht hängt an einem Mann – und die Adelsfamilien bestimmen weiter über ihre Anhänger.", { x: 6.05, y: 3.55, w: 3.3, h: 1.2, fontSize: 13 });
-  footer(s);
-  s.addNotes("7–9 Min. Die offene Leitfrage der letzten Stunde: zwei Schüler antworten in einem Satz, dann die Folie. Das „Aber“ ist die Gelenkstelle zur heutigen Stunde.");
+  head(s, 1, "Wiederholung · Lösung", "Die richtige Übersicht"); solChip(s);
+  uebersicht(s, true);
+  card(s, 0.5, 4.8, 9.0, 0.36, C.dark);
+  txt(s, "Peisistratos – Wegbereiter der Demokratie? Ja, ungewollt. Aber: Der Adel bestimmt weiter über seine Anhänger.", { x: 0.65, y: 4.8, w: 8.7, h: 0.36, fontSize: 11.5, bold: true, color: C.gold, valign: "middle" });
+  s.addNotes("7–9 Min. Lösung vergleichen, Fehler im Heft grün verbessern. Dann die offene Leitfrage der letzten Stunde: zwei Schüler antworten in einem Satz, danach der Satz unten auf der Folie. Das „Aber“ ist die Gelenkstelle zu heute.");
 }
 
 // 5 Gelenkstelle: Sturz

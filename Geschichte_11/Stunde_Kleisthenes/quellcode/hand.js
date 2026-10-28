@@ -3,7 +3,6 @@ const { Document, Packer, Paragraph, TextRun, Table, TableRow, TableCell, WidthT
   Header, Footer, PageNumber, ImageRun } = require("docx");
 const { D, C, NR, card, nr } = require("./common.js");
 const OUT = process.argv[2];
-const PEI = "/home/user/Schule/Geschichte_11/Stunde_Peisistratos/";
 const W = 9638;
 function runs(text, o = {}) {
   return text.split(/(\*\*[^*]+\*\*)/).filter(Boolean).map(t => new TextRun({ text: t.startsWith("**") ? t.slice(2, -2) : t, bold: t.startsWith("**") || o.bold, size: o.size, color: o.color, italics: o.italics, font: o.font }));
@@ -32,8 +31,8 @@ const img = (f, w, h) => new Paragraph({ alignment: AlignmentType.CENTER, spacin
 
 const VERLAUF = [
   ["0–2", "**A** Ankommen", "Ziel und Ablauf (Seitentafel + Folie). „Heute klären wir, wie Kleisthenes die Macht der Adelsfamilien brach – ohne ihnen Land wegzunehmen.“", "Transparenz: Die Klasse weiß, worauf alles hinausläuft (direkt).", "Plenum", "1–2"],
-  ["2–7", "**V** Wiederholung", "Peisistratos-Gerüst an der Tafel: allein ein Stichwort pro Feld ins Heft (2), Partnercheck (1), Stichproben bei 4 Schülern, du trägst ein (2).", "Abruf aus dem Gedächtnis (fehlte letzte Stunde); die Idee „Adel schwächen“ wird gebraucht (direkt).", "EA → PA → Stichproben", "3"],
-  ["7–9", "**V** Leitfrage nachholen", "„Peisistratos – Wegbereiter der Demokratie?“ Zwei Schüler antworten in einem Satz, dann Lösungsfolie mit dem „Aber“.", "Offene Frage der letzten Stunde schließen; das „Aber“ ist die Gelenkstelle zu heute.", "Stichproben", "4"],
+  ["2–7", "**V** Wiederholung", "Fehler-Übersicht zu Herrschaftsformen und Protagonisten (Aristokratie, Drakon, Solon, Peisistratos): allein 6 Fehler finden und im Heft berichtigen (2), Partnercheck (1), Stichproben bei 4–6 Schülern (2).", "Abruf aus dem Gedächtnis über die ganze Reihe (Klausur!) und Fehleranalyse statt Abfrage (direkt).", "EA → PA → Stichproben", "3"],
+  ["7–9", "**V** Lösung + Leitfrage", "Lösungsfolie, Fehler grün verbessern. Dann die offene Leitfrage „Peisistratos – Wegbereiter der Demokratie?“: zwei Schüler antworten in einem Satz, danach der Satz unten auf der Folie.", "Offene Frage der letzten Stunde schließen; das „Aber“ (Adel bestimmt weiter über seine Anhänger) ist die Gelenkstelle zu heute.", "EA, Stichproben", "4"],
   ["9–10", "**V→I** Gelenkstelle", "Sturz der Tyrannis 514/510 kurz erzählen. „Jetzt kämpfen wieder die Adelsfamilien – wie kann man ihre Macht brechen, ohne Land zu nehmen?“", "Inhaltliche Brücke vom Sturz zur Reform (direkt).", "Lehrkraft", "5"],
   ["10–11", "**I** Rätsel", "Mystery-Frage vorlesen, jeder schreibt eine Vermutung ins Heft.", "Festlegen für den Aha-Moment; Leitfrage der Stunde.", "EA", "6"],
   ["11–13", "**I** Begriffe", "Demos und Trittys (Phyle ist bekannt). Prüffrage: „Was ist größer – Demos oder Trittys?“", "Begriffs-Check: Ohne die Begriffe sind die Schnipsel nicht lesbar (direkt).", "Plenum, Stichproben", "7"],
@@ -53,7 +52,7 @@ const content = [
     p("**Mindestziel:** Phylenordnung und ihre Wirkung (Mystery bis zur Lösungskette). Mit *: Schaubild ausführlich, Ostrakismos.", { size: 19 }),
     p("**Beitrag zur Reihe:** Solon gab Rechte (timokratisch mit demokratischen Zügen), Peisistratos schwächte den Adel teilweise, Kleisthenes bricht die Bindungen an die Adelsfamilien – Perikles vollendet die Demokratie. Klausur am 25.11.", { size: 19, after: 0 }),
   ]),
-  p("**Bezug zur letzten Stunde:** Die Leitfrage „Ein Tyrann als Wegbereiter?“ wurde nicht mehr geschafft, und der Abruf aus dem Gedächtnis fehlte – beides steht am Anfang. Vorstellen läuft vom Platz aus, du trägst ein (Rückmeldung Peisistratos).", { size: 19, before: 100 }),
+  p("**Bezug zur letzten Stunde:** Die Leitfrage „Ein Tyrann als Wegbereiter?“ wurde nicht mehr geschafft, und der Abruf aus dem Gedächtnis fehlte – beides steht am Anfang (Fehler-Übersicht zur ganzen Reihe, Wunsch der Lehrkraft). Vorstellen läuft vom Platz aus, du trägst ein (Rückmeldung Peisistratos).", { size: 19, before: 100 }),
 
   h2("Begriffs-Check"),
   table([2600, 7038], ["Begriff", "Status"], [
@@ -69,7 +68,7 @@ const content = [
     [["**Gestufte Hilfen**", "dieselbe Datei, Seite 2"], "1–2 ×", "Schneiden, am Pult auslegen."],
     ["Scheren", "1 pro Gruppe", "Falls die Gruppen selbst schneiden."],
   ]),
-  bullet("Seitentafel: Ziel und Ablauf (wie Folie 2). Daneben das leere Peisistratos-Gerüst (Mitte, vier Felder, Pfeile hin und zurück).", { box: true }),
+  bullet("Seitentafel: Ziel und Ablauf (wie Folie 2).", { box: true }),
   bullet("Hauptfläche frei lassen für die Erklärungskette (Folie 10) und die Phylen-Skizze (Folie 11).", { box: true }),
 
   h2("2. Verlauf nach AVIVA"),
@@ -80,7 +79,17 @@ const content = [
   box([p(`„Ich nehme zwei Schnipsel. Nummer ${NR.B} sagt: Seit Solon darf Lysias abstimmen – er hat also das Recht. Nummer ${NR.C} sagt: Sein Nachbar hat ihm Saatgut geliehen, seine Familie ist die mächtigste weit und breit. Wie passt das zusammen? Er hat das Recht, aber er ist abhängig. Ich lege die beiden nebeneinander und schreibe ‚aber‘ dazwischen. So baut ihr eure Kette: Was hängt womit zusammen – weil, deshalb, aber?“`, { size: 18, italics: true, after: 60 }),
     p("**Warnung vor dem Fehler:** „Kleisthenes nimmt niemandem Land weg und ändert Solons Vermögensklassen nicht. Die Lösung liegt woanders.“", { size: 18, after: 0 })]),
 
-  h2("4. Erwartungshorizont: die Erklärungskette"),
+  h2("4. Erwartungshorizont"),
+  p("**Fehler-Übersicht (Folie 3) – die 6 Fehler:**", { size: 18, keepNext: true }),
+  table([2400, 3600, 3638], ["Protagonist", "Falsch", "Richtig"], [
+    ["Aristokratie", "Recht sprechen gewählte Richter aus dem Volk.", "Recht spricht der Adel; geschriebene Gesetze gibt es nicht."],
+    ["Drakon", "Er schafft die Schuldknechtschaft ab.", "Die Schuldknechtschaft bleibt bestehen."],
+    ["Solon", "… und verteilt das Land der Großgrundbesitzer neu.", "Schulden gestrichen, aber keine Landverteilung."],
+    ["Solon", "Rechte nach der Herkunft; Theten dürfen Archont werden.", "Rechte nach dem Besitz; Theten nur abstimmen und klagen."],
+    ["Peisistratos", "Die Volksversammlung wählt ihn.", "Er erobert die Macht mit Söldnern, besetzt die Akropolis (546)."],
+    ["Peisistratos", "Er schafft Solons Verfassung ab.", "Die Verfassung bleibt, die Ämter bekommen seine Anhänger."],
+  ], { firstFill: true }),
+  p("**Mystery – die Erklärungskette:**", { size: 18, before: 100, keepNext: true }),
   table([1500, 1500, 6638], ["Schritt", "Schnipsel", "Inhalt"], D.kette.map(([t, ids, d]) => [t, ids ? nr(ids) : "–", d]), { firstFill: true }),
   p(`**Ablenker:** Schnipsel ${nr("Q, R")} (Oliven, Großvater in Sikyon) sind wahr, helfen aber nicht. Sie dürfen aussortiert werden – das ist Teil der Methode.`, { size: 18, before: 80 }),
   p("**Musterantwort (Heft):** „Vorher war Lysias von seinem adligen Nachbarn abhängig und stimmte deshalb mit dessen Familie, obwohl er seit Solon abstimmen durfte. Nach dem Sturz des Hippias setzte Kleisthenes mit Hilfe des Volkes eine Reform durch: Er teilte Attika in drei Gebiete und bildete zehn neue Phylen, die Stadt, Küste und Binnenland mischten. Dadurch wurden die Anhänger des Adligen auf verschiedene Phylen verteilt, und Lysias saß im Rat und im Heer mit Fremden zusammen. Deshalb kann er sein Stimmrecht jetzt frei nutzen.“", { size: 18 }),
@@ -96,8 +105,6 @@ const content = [
   p(`**Gestufte Hilfen am Pult:** Hilfe 1 – in drei Stapel sortieren (Vorher, Wende, Nachher). Hilfe 2 – Schnipsel ${NR.D} und ${NR.J} vergleichen (alte und neue Phylen). Hilfe 3 – Schnipsel ${NR.K} und ${NR.L}: Wo landen die Anhänger des Nachbarn, mit wem ist Lysias zusammen?`, { size: 18, before: 80 }),
 
   h2("6. Tafelskizze"),
-  p("**Wiederholung (Seitentafel):** das leere Peisistratos-Gerüst.", { size: 18, keepNext: true }),
-  img(PEI + "Tafelbild_stumm.png", 260, 258),
   p("**Hauptfläche:** zuerst die Kette Ausgangslage → Wende → Reform → Folge → Ergebnis (Stichworte der Gruppen), dann die Phylen-Skizze:", { size: 18, keepNext: true }),
   img(__dirname + "/schaubild-11.png", 520, 293),
   p("Schnell zu zeichnen: drei Reihen à 10 Kästchen (Stadt, Küste, Binnenland, in drei Kreidefarben), Pfeil „per Los“, zehn Säulen aus je drei farbigen Kästchen, darunter „× 50 = Rat der 500“.", { size: 17, color: C.muted }),
