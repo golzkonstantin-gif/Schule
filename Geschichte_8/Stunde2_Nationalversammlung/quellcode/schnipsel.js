@@ -16,8 +16,8 @@ function schnipsel() {
     ...bul(["Auf dem Bild sehe ich …", "Im Vordergrund / im Hintergrund …", "Die Person trägt / hält …", "Die Beischrift lautet …"]),
     p([t("2 Deuten ", { font: "Cambria", size: 22, bold: true, color: NAVY }), t("Was soll es bedeuten?", { size: 19, italics: true })], { before: 40, after: 20 }),
     ...bul(["… steht für …", "Der Zeichner will zeigen, dass …", "Die Beischrift sagt …", "Das Bild gehört zu den Ereignissen von …"]),
-    p([t("3 Beurteilen ", { font: "Cambria", size: 22, bold: true, color: NAVY }), t("Ist das berechtigt?", { size: 19, italics: true })], { before: 40, after: 20 }),
-    ...bul(["Die Darstellung ist (nicht) berechtigt, weil …", "Der Zeichner übertreibt, indem …", "Er steht auf der Seite von …", "Er will erreichen, dass …"]),
+    p([t("3 Beurteilen ", { font: "Cambria", size: 22, bold: true, color: NAVY }), t("Stimmt das Bild? Was will er?", { size: 19, italics: true })], { before: 40, after: 20 }),
+    ...bul(["Das stimmt (nicht) mit unserem Wissen überein, weil …", "Der Zeichner übertreibt, indem …", "Er steht auf der Seite von …", "Er will erreichen, dass …"]),
   ];
   return new TableCell({ children: ch, width: { size: W / 2, type: WidthType.DXA }, borders: all(dash), margins: { top: 90, bottom: 60, left: 170, right: 170 }, verticalAlign: VerticalAlign.TOP });
 }
@@ -47,12 +47,12 @@ const seite2 = new Table({ width: { size: W, type: WidthType.DXA }, columnWidths
   hilfe("Stufe 2: Satzanfänge", "Ergänze die Sätze mit deinen eigenen Beobachtungen.", [
     [t("1 ", { bold: true, size: 22 }), t("Auf dem Bild sehe ich …  Die große Figur trägt …  Im Hintergrund …", { size: 22 })],
     [t("2 ", { bold: true, size: 22 }), t("Die Figur steht für …  Die Beischrift sagt, dass …  Das passt zu den Steuern, denn …", { size: 22 })],
-    [t("3 ", { bold: true, size: 22 }), t("Der Zeichner will, dass …  Er übertreibt, weil …  Das Bild ist (nicht) berechtigt, denn der Dritte Stand (Bauern und Bürger) …", { size: 22 })],
+    [t("3 ", { bold: true, size: 22 }), t("Der Zeichner will, dass …  Er übertreibt, weil …  Das stimmt (nicht) mit unserem Wissen überein, denn der Dritte Stand (Bauern und Bürger) …", { size: 22 })],
   ], "F4F7FD"),
   hilfe("Stufe 3: Teilanalyse zum Ergänzen", "Eine halbe Analyse. Ergänze die Lücken in deinem Heft.", [
     [t("1 Beschreiben: ", { bold: true, size: 22 }), t("In der Mitte steht ein ______ mit Hut. Er trägt ______ und hält einen ______. Im Hintergrund sieht man ______.", { size: 22 })],
     [t("2 Deuten: ", { bold: true, size: 22 }), t("Der Bauer steht für den ______ Stand (Bauern und Bürger). Die Beischrift sagt, dass er das ganze Jahr arbeitet, um ______ zu bezahlen.", { size: 22 })],
-    [t("3 Beurteilen: ", { bold: true, size: 22 }), t("Der Zeichner will, dass die Betrachter ______ empfinden. Das ist (nicht) berechtigt, weil ______ und ______ keine Steuern zahlten.", { size: 22 })],
+    [t("3 Beurteilen: ", { bold: true, size: 22 }), t("Der Zeichner will, dass die Betrachter ______ empfinden. Das stimmt mit unserem Wissen überein, weil ______ und ______ keine Steuern zahlten. Er übertreibt, weil ______.", { size: 22 })],
   ], "EAF0FA"),
 ] });
 (async () => {

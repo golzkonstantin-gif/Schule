@@ -54,7 +54,7 @@ d.push(...bullets([
 d.push(h3("Kopf der Planung"));
 d.push(table([2600, 7606], [
   ["Ziel (Ich kann …)", "… erklären, warum sich der Dritte Stand (Bauern und Bürger) 1789 zur Nationalversammlung erklärte. … erklären, was die Abgeordneten im Ballhausschwur versprachen. … eine Karikatur analysieren: beschreiben, deuten, beurteilen.*"],
-  ["Prüfaufgabe: Woran erkenne ich es?", "Zeitstrahl ausgefüllt, Merksatz im Heft (Ziel 1 und 2). Kurzanalyse der Karikatur „Für die Mühsal geboren“ mit Dreischritt (Ziel 3). Abschlussfrage im Berater-Format."],
+  ["Prüfaufgabe: Woran erkenne ich es?", "Zeitstrahl ausgefüllt, Merksatz im Heft (Ziel 1 und 2). Kurzanalyse der Karikatur „Für die Mühsal geboren“ mit Dreischritt (Ziel 3). Abschlussfrage im Berater-Format (mit persönlichem Risiko)."],
   ["Mindestziel", "Ziel 1 und 2 und die Schritte 1 und 2 der Karikatur-Analyse. Alles mit * (Schritt 3 „Beurteilen“) nur bei Zeit; er kann in Stunde 3 wiederholt werden. „Auswerten“ bleibt immer."],
   ["Beitrag zur Reihe", "Stunde 2 von 11 (Sequenz Französische Revolution). Der Dritte Stand wird handelnde Kraft, der Streit um die Abstimmung führt zur Nationalversammlung. Gelenk zu Stunde 3: Der König zieht Soldaten zusammen, in Paris wächst die Angst (Bastille). Die Karikatur-Methode wird in Stunde 7 an „Robespierre als Henker“ wiederholt."],
   ["Vorgehen", "Direkt bei der neuen Methode (Karikatur, Modell laut denken), indirekt beim Text und beim Zeitstrahl (Selbsterarbeitung), angeleitet in der Partnerarbeit mit Hilfekarten. Direkt oder indirekt wird je Phase entschieden."],
@@ -94,12 +94,12 @@ d.push(...bullets([
 
 // Phase 0
 d.push(phase("0", "Ankommen", 3, "AVIVA: Ankommen"));
-d.push(warum("Die Klasse wird ruhig, kennt Ziel und Ablauf und beantwortet zu Beginn die Reihenfrage, die in Stunde 11 wieder aufgegriffen wird (Eingangsdiagnose, direkt, von der Lehrkraft geführt).", "„Zuerst schauen wir, was ihr aus der letzten Stunde noch wisst, denn damit beginnt der Streit, um den es heute geht.“"));
+d.push(warum("Die Klasse wird ruhig, kennt Ziel und Ablauf und nimmt zu Beginn eine Meinung ohne Fachbegriff ein (Darf sich das Volk wehren?), die in Stunde 11 wieder aufgegriffen wird (Eingangsdiagnose, direkt, von der Lehrkraft geführt).", "„Zuerst schauen wir, was ihr aus der letzten Stunde noch wisst, denn damit beginnt der Streit, um den es heute geht.“"));
 d.push(sp());
 d.push(step("kommt an, schreibt leise", {
   say: "Stifte liegen. Ihr hört nur zu. Schaut auf die Folie. Schreibt Datum und Überschrift ins Heft und beantwortet dann die Frage in zwei Sätzen.",
   do: [
-    "Folie 1 steht beim Betreten da. Zwei Sätze im Heft: „Was ist eine Revolution? Ist sie gut oder schlecht? Warum?“ Die Seite bleibt im Heft und wird in Stunde 11 mit dem Gesamturteil verglichen (Vorher-Nachher, keine Selbsteinschätzung). Sie lesen die Sätze beim Durchgehen mit, nicht kommentieren.",
+    "Folie 1 steht beim Betreten da. Frage auf der Folie: „Darf sich das Volk gegen einen König wehren, der allein regiert? Schreibe: Ich finde …, weil …“ Der Begriff „Revolution“ wird bewusst nicht gefragt, weil die Klasse ihn noch nicht kennt. Es gibt keine richtige Antwort. Die Seite bleibt im Heft und wird in Stunde 11 mit dem Gesamturteil verglichen (Vorher-Nachher, keine Selbsteinschätzung). Sie lesen beim Durchgehen mit, nicht kommentieren. Der Begriff Revolution wird später eingeführt (Stunde 3).",
     "Folie 2 (Ziele) und Folie 3 (Ablauf nach AVIVA) vorlesen, 1 Minute. Hinweis: „Was wir eventuell nicht schaffen, hat einen Stern.“",
   ],
   extra: [boardBox("Seitentafel · Ziel und Ablauf", [
@@ -173,7 +173,7 @@ d.push(step("arbeitet zu zweit, Flüsterstufe", {
     "3c  (7 Minuten, Folie 13) Partnerarbeit an „Für die Mühsal geboren“. Hilfekarten Stufe 1 bis 3 liegen am Pult und werden nur auf Nachfrage geholt. Sie gehen durch die Reihen und lesen bei 4 bis 6 Paaren mit (unbenotet).",
     "Warnung vor dem Fehler: Schritt 2 nicht überspringen. Nicht alle Bildelemente sind sicher zu deuten (z. B. der Hahn auf dem Stock). Offen lassen ist besser als raten.",
   ],
-  extra: [folieBox("13 · Ü3 „Für die Mühsal geboren“", [p(t("Ü3 Ihr analysiert die Karikatur", { font: "Cambria", size: 22, bold: true, color: NAVY }), { after: 40 }), bl("1. Beschreibe die Karikatur in drei Sätzen."), bl("2. Deute: Wofür steht der Bauer? Was sagt der Bildtext?"), bl("3.* Beurteile: Ist die Darstellung berechtigt?", { after: 40 }), p([t("Zeit: ", { bold: true, size: 19 }), t("7 Minuten · zu zweit · Flüsterstufe     ", { size: 19 }), t("Fertig? Stift hinlegen.", { size: 19, italics: true })], { after: 0 })]), gapP()],
+  extra: [folieBox("13 · Ü3 „Für die Mühsal geboren“", [p(t("Ü3 Ihr analysiert die Karikatur", { font: "Cambria", size: 22, bold: true, color: NAVY }), { after: 40 }), bl("1. Beschreibe die Karikatur in drei Sätzen."), bl("2. Deute: Wofür steht der Bauer? Was sagt der Bildtext?"), bl("3.* Beurteile: Stimmt das Bild mit unserem Wissen über Steuern und Stände überein? Wo übertreibt der Zeichner?", { after: 40 }), p([t("Zeit: ", { bold: true, size: 19 }), t("7 Minuten · zu zweit · Flüsterstufe     ", { size: 19 }), t("Fertig? Stift hinlegen.", { size: 19, italics: true })], { after: 0 })]), gapP()],
   sol: "Bildtext (Buch S. 111, Q3): „Jeden Tag mitten auf dem Feld – in Hitze und Kälte – sieht man den armen Bauern – arbeitend das ganze Jahr über – um mit seiner Arbeit das Geld zu verdienen – und damit den Steuereintreiber zu bezahlen.“ Titel: „Ne pour la peine“ (Für die Mühsal geboren), Unterschrift: „L'Homme de Village“.",
 }));
 d.push(sp());
@@ -185,7 +185,7 @@ d.push(step("schaut zu, vergleicht", {
   sol: "Erwartung (Auswahl): 1 großer Bauer mit Hut, Stock, Sack und Werkzeug, Dorf mit Kirche, Tiere, ein weiterer Arbeiter, Titel und Bildtext. 2 Der Bauer steht für alle Bauern und den Dritten Stand (Bauern und Bürger), er arbeitet das ganze Jahr, um Steuern zu zahlen. 3 Der Zeichner will Mitleid und Veränderung; das passt zu den Beschwerden, übertreibt aber, weil nicht alle Bauern gleich arm waren. Gesamtbild: Dritter Stand zahlt, Klerus und Adel zahlen kaum.",
 }));
 d.push(sp());
-d.push(note("SOLLBRUCHSTELLE", "Wird die Zeit knapp, entfällt Schritt 3 „Beurteilen“ (*) in der Partnerarbeit und wird in 1 Minute gemeinsam gemacht oder in Stunde 3 wiederholt. Schritt 1 und 2 und die Sicherung bleiben."));
+d.push(note("SOLLBRUCHSTELLE", "Wird die Zeit knapp, entfällt Schritt 3 „Beurteilen“ (*; gemeint ist: Stimmt das Bild mit unserem Wissen überein, wo übertreibt es, was will der Zeichner erreichen?) in der Partnerarbeit und wird in 1 Minute gemeinsam gemacht oder in Stunde 3 wiederholt. Schritt 1 und 2 und die Sicherung bleiben."));
 
 // Phase 4
 d.push(phase("4", "Auswerten", 6, "AVIVA: Auswerten"));
@@ -194,22 +194,22 @@ d.push(sp());
 d.push(step("arbeitet allein", {
   say: "Stifte liegen. Ihr hört nur zu. Das ist die letzte Aufgabe. Jetzt arbeitet ihr allein. Die Aufgabe steht rechts.",
   do: [
-    "Folie 15 (3 Minuten): Abschlussfrage mit Zeichnung (Abgeordneter mit Sprechblase, Berater „Du“): „Du bist Berater der Abgeordneten des Dritten Standes (Bauern und Bürger). Sie fragen dich: Der König hat den Saal sperren lassen. Sollen wir nach Hause gehen oder schwören, zusammenzubleiben?“ Rat im Heft: „Ich rate euch, …, weil …“. Es gibt mehrere gute Antworten, geprüft werden Position, ein Sachargument aus der Stunde und ein „weil“. Erst zehn Sekunden denken, dann schreiben.",
-    "Form nach Verlauf wählen: (a) Blitzlicht: je eine Stimme „bleiben und schwören“ und eine „nach Hause“ gezielt aufrufen, kein Kommentar. (b) Schriftlich, dann zwei bis drei Sätze vorlesen, Heft-Stichprobe bei 4 bis 6 Personen. (c) Berater-Duell zu zweit: A rät dafür, B dagegen, leise. Unbenotet.",
+    "Folie 15 (3 Minuten): Abschlussfrage mit Zeichnung (Abgeordneter mit Sprechblase, Berater „Du“): „Du bist Berater eines Abgeordneten des Dritten Standes (Bauern und Bürger). Er sagt: Draußen stehen Soldaten. Wenn ich schwöre, kann ich verhaftet werden, auch meine Familie ist in Gefahr. Soll ich trotzdem schwören?“ Rat im Heft: „Ich rate dir, …, weil …“. Es gibt mehrere gute Antworten, geprüft werden Position, ein Sachargument aus der Stunde und ein „weil“. Das Risiko (Verhaftung, Familie) macht die Frage persönlich, damit etwas auf dem Spiel steht. Erst zehn Sekunden denken, dann schreiben.",
+    "Form nach Verlauf wählen: (a) Blitzlicht: je eine Stimme „schwören“ und eine „nicht schwören“ gezielt aufrufen, kein Kommentar. (b) Schriftlich, dann zwei bis drei Sätze vorlesen, Heft-Stichprobe bei 4 bis 6 Personen. (c) Berater-Duell zu zweit: A rät dafür, B dagegen, leise. Unbenotet.",
     "Folie 16 (30 Sekunden, still): Haben wir die Ziele erreicht? Keine Antworten ins Plenum. Folie 17 (30 Sekunden): Ausblick auf die Bastille.",
   ],
-  sol: "Mögliche Argumente (Auswahl, keine Musterlösung). Bleiben und schwören: Sie vertreten fast alle Menschen (Sieyès: ALLES); nur gemeinsam sind sie stark; sonst bleibt alles beim Alten; ohne Verfassung kann der König weiter allein entscheiden. Nach Hause gehen: Der König hat den Saal gesperrt, Gefahr durch Soldaten, Unruhe vermeiden, später neu verhandeln. Zwischenlösung (bleiben, aber verhandeln) ist gut begründbar. Historisch trafen sich die Abgeordneten in der Ballhalle und schworen. Kriterien: Position, ein Sachargument aus der Stunde, ein „weil“.",
+  sol: "Mögliche Argumente (Auswahl, keine Musterlösung). Schwören: Die Abgeordneten vertreten fast alle Menschen (Sieyès: ALLES); wenn alle schwören, kann der König nicht alle verhaften; wer jetzt nachgibt, dem bleibt alles beim Alten; ohne Verfassung entscheidet der König weiter allein; Hunger und Steuern der Menschen. Nicht schwören: Die Familie ist in Gefahr; Gewalt vermeiden; allein ist man leicht zu verhaften; später verhandeln. Zwischenlösung (schwören, aber die Familie in Sicherheit bringen) ist begründbar. Historisch schworen fast alle Abgeordneten. Kriterien: Position, ein Sachargument aus der Stunde, ein „weil“.",
 }));
 
 d.push(h3("So sieht das Heft am Ende der Stunde aus"));
 d.push(table([2300, 7906], [
   ["Überschrift", "Der Dritte Stand handelt · Datum"],
-  ["Eingangsdiagnose", "Zwei Sätze zu „Was ist eine Revolution? Gut oder schlecht? Warum?“ (bleibt bis Stunde 11)"],
+  ["Eingangsdiagnose", "Meinung „Darf sich das Volk gegen einen König wehren, der allein regiert? Ich finde …, weil …“ (bleibt bis Stunde 11)"],
   ["Ü1", "Fehlertext: vier verbesserte Sätze (Verbesserungen grün)"],
   ["Arbeitsblatt", "Eingeklebt: Text, Zeitstrahl ausgefüllt, ein Satz zu ALLES mit einer Zahl"],
   ["Merksatz 1", "Nationalversammlung und Ballhausschwur – rot umrahmt"],
   ["Ü3", "Analyse „Für die Mühsal geboren“ (Beschreiben, Deuten, Beurteilen*), mit Grün verbessert"],
-  ["Abschlussfrage", "Rat an die Abgeordneten: „Ich rate euch, …, weil …“"],
+  ["Abschlussfrage", "Rat an den Abgeordneten: „Ich rate dir, …, weil …“"],
 ].map(([a, b]) => row([tc(a, 2300, { bold: true, fill: LIGHT }), tc(b, 7906)], 340))));
 
 d.push(h3("Nach der Stunde festhalten (Reflexionslog)"));

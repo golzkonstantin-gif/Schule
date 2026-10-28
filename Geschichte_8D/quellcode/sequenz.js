@@ -80,7 +80,7 @@ d.push(table([2500, 2500, 2500, 2500, 5438], [row([
 ])]));
 d.push(p(t(""), { after: 60 }));
 d.push(table([7600, 7838], [row([
-  cell([p(t("Eingangsdiagnose und Vorher-Nachher", { bold: true, size: 20, color: NAVY })), p(t("Stunde 2, Ankommen: zwei Sätze im Heft zu „Was ist eine Revolution? Ist sie gut oder schlecht? Warum?“ Stunde 11: Vergleich mit dem begründeten Gesamturteil.", { size: 19 }), { after: 0 })], { w: 7600, fill: LIGHT, borders: all(solid("B9C6E8", 8)), m: 90, ml: 140 }),
+  cell([p(t("Eingangsdiagnose und Vorher-Nachher", { bold: true, size: 20, color: NAVY })), p(t("Stunde 2, Ankommen: Meinung ohne Fachbegriff im Heft: „Darf sich das Volk gegen einen König wehren, der allein regiert? Ich finde …, weil …“ Stunde 11: Vergleich mit dem begründeten Gesamturteil.", { size: 19 }), { after: 0 })], { w: 7600, fill: LIGHT, borders: all(solid("B9C6E8", 8)), m: 90, ml: 140 }),
   cell([p(t("Rückfall bei Ausfall (Streichkandidaten)", { bold: true, size: 20, color: NAVY })), p(t("1. Wiener Kongress nach Modul 3 verschieben · 2. Napoleons Fall nur kurz · 3. Bastille als Zeitstrahl-Eintrag statt eigener Erarbeitung.", { size: 19 }), { after: 0 })], { w: 7838, fill: LIGHT, borders: all(solid("B9C6E8", 8)), m: 90, ml: 140 }),
 ])]));
 

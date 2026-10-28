@@ -8,7 +8,7 @@ Anschauliche Fassung zum Ausdrucken: `Sequenz_Franzoesische_Revolution_8D.docx` 
 
 - **Leitfrage der Reihe:** Wie kam es zur Französischen Revolution, und war sie ein Erfolg?
 - **Übergreifende Intention:** Die Klasse rekonstruiert Ursachen und Verlauf (1789 bis 1815) und beurteilt am Ende die Revolution mit Sachurteil und Werturteil.
-- **Eingangsdiagnose (Vorher-Nachher):** Stunde 2, Ankommen: Im Heft in zwei Sätzen „Was ist eine Revolution? Ist sie gut oder schlecht? Warum?“ Die Seite bleibt im Heft und wird in Stunde 11 mit dem begründeten Gesamturteil verglichen. Das ist Lehrerdiagnose, keine Selbsteinschätzung.
+- **Eingangsdiagnose (Vorher-Nachher):** Stunde 2, Ankommen: Meinung im Heft ohne Fachbegriff (die Klasse kennt „Revolution“ noch nicht): „Darf sich das Volk gegen einen König wehren, der allein regiert? Ich finde …, weil …“ Der Begriff Revolution wird später eingeführt (Stunde 3). Die Seite bleibt im Heft und wird in Stunde 11 mit dem begründeten Gesamturteil verglichen. Das ist Lehrerdiagnose, keine Selbsteinschätzung.
 - **Methodenaufbau (SchiC):** Karikatur in Stunde 2 (Modell, dann angeleitet; wieder in Test 1), Verfassungsschaubild in Stunde 4 (Modell, dann Fehler im Schaubild finden), Zusammenhänge rekonstruieren in Stunde 6 und 8 (Ursache-Folge-Kette), Sach- und Werturteil in Stunde 7 (Modell), 9 (angeleitet), Test 2 in Stunde 10 (selbstständig), Gesamturteil in Stunde 11.
 - **Urteilsaufbau:** Sachurteil zuerst mit Beleg, dann Werturteil mit offengelegtem Maßstab („Ich bewerte das nach …“). Formulierungshilfen als Satzanfänge in drei Stufen, keine fertigen Sätze. Kriterien („Ich kann …“-Stufen) stehen vor der Leistung auf der Folie. Keine Selbsteinschätzung der Schüler.
 - **Differenzierung:** Höchstens eine Aufgabe pro Stunde mit gestuften Hilfen (drei Karten am Pult): Stunde 2 (Karikatur), Stunde 7 (Urteil).
@@ -103,12 +103,12 @@ Stand 27.10. Nach Rückmeldung der Lehrkraft: Das Buch dient nur als Orientierun
 
 ## Abschlussfragen (Orientierung, kein festes Muster)
 
-Stand 27.10. Offene Abschlussfrage mit mehreren guten Antworten, bevorzugt im Berater-Format („Du bist Berater von X, und er fragt dich Y“, Satzanfang „Ich rate dir, …, weil …“). Geprüft wird: Position, ein Sachargument aus der Stunde, ein „weil“. Die Form (Blitzlicht, schriftlich mit Vorlesen, Berater-Duell) wird je Stunde nach Zeit und Lautstärke gewählt. Die Fragen müssen mit dem Wissen der Stunde beantwortbar sein.
+Stand 27.10. Offene Abschlussfrage mit mehreren guten Antworten, bevorzugt im Berater-Format („Du bist Berater von X, und er fragt dich Y“, Satzanfang „Ich rate dir, …, weil …“). Geprüft wird: Position, ein Sachargument aus der Stunde, ein „weil“. Die Form (Blitzlicht, schriftlich mit Vorlesen, Berater-Duell) wird je Stunde nach Zeit und Lautstärke gewählt. Die Fragen müssen mit dem Wissen der Stunde beantwortbar sein und **den Schülerinnen und Schülern etwas bedeuten**: Es muss etwas auf dem Spiel stehen (persönliches Risiko, Gerechtigkeit, Lebenswelt), sonst „zündet“ der Rat nicht (Rückmeldung 28.10.).
 
 | Stunde | Du bist Berater von … | Er fragt dich … |
 |---|---|---|
 | 1 | König Ludwig XVI. | Soll ich erlauben, dass der Dritte Stand (Bauern und Bürger) nach Köpfen abstimmt? (so geplant) |
-| 2 | den Abgeordneten des Dritten Standes (Bauern und Bürger) | Sollen wir nach Hause gehen oder schwören, zusammenzubleiben? |
+| 2 | einem Abgeordneten des Dritten Standes (Bauern und Bürger) | Draußen stehen Soldaten. Wenn ich schwöre, kann ich verhaftet werden, auch meine Familie ist in Gefahr. Soll ich trotzdem schwören? |
 | 3 | einem Adligen | Soll ich auf meine Vorrechte verzichten? |
 | 4 | der Nationalversammlung | Wer soll wählen dürfen? |
 | 6 | Ludwig XVI. | Soll ich aus Paris fliehen? |
