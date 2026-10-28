@@ -52,6 +52,12 @@
 - Wo hing es: Klasse träge; Tafel-Puzzle (Paare kommen nach vorne) dauerte zu lange; Schaubild fertig, Leitfrage nicht geschafft.
 - Konsequenz: Lehrkraft trägt selbst ins Tafelbild ein, Paare nennen Lösung vom Platz. Auswerten zeitlich schützen (AVIVA), lieber weniger Fälle.
 
+### Kleisthenes – Warum stimmt Lysias anders? (Mo, Einzelstunde, 10. Stunde, geplant)
+- Material: `Stunde_Kleisthenes/` (13 Folien mit AVIVA-Phasenanzeige, Mystery-Schnipsel + gestufte Hilfen, Handreichung mit Kopf, Warum-Zeilen, Sachinformationen; Quellcode in `quellcode/`)
+- Methode: **Mystery** statt Personenkarten (Wunsch der Lehrkraft nach Methodenvielfalt). Leitfrage A: Bauer Lysias (erfunden) stimmt 507 erstmals anders als sein Adelsherr.
+- Planungsentscheidungen: Wiederholung Peisistratos aus dem Gedächtnis + Leitfrage nachgeholt; Begriffe Demos/Trittys vorab; Vormachen (zwei Schnipsel verbinden); 2 Ablenker-Schnipsel; Lösung vom Platz, Lehrkraft trägt ein; Abschlussaufgabe „Kleisthenes und Solon“ (nie kürzen); Ostrakismos mit *.
+- Rückmeldung der Lehrkraft: *(steht noch aus)*
+
 ## Hospitationsfeedback (gesammelt)
 
 *(noch keine Einträge)*
