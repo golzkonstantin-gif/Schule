@@ -90,6 +90,7 @@ Vorbild: Stunde „Bürgeramt Athen“ (`Geschichte_11/Stunde_Buergeramt_Athen/`
 - **Arbeitsgrundlage an die Wand:** Das Material, mit dem gearbeitet wird, direkt nach der Auftragsfolie groß projizieren, damit die Schüler das Buch nicht brauchen.
 - **Fachbegriffe vor der Anwendung klären:** Begriffsfolie mit schülerfreundlicher Definition, Wortherkunft, kurzem Merksatz, großer Schrift (ca. 27 pt).
 - **Foliennummern automatisch**, nicht als festen Text, weil die Lehrkraft Folien einfügt.
+- **Schriftgröße auf Folien mindestens 27 pt – übergreifend für alle PowerPoints (Stand 28.10.).** Gilt für jeden Text, den die Klasse lesen soll (Aufträge, Inhalte, Lösungen, Zeit- und Lösungsschilder). Lieber Inhalte auf mehrere Folien verteilen und Sprechtext der Lehrkraft (lautes Denken, Erklärungen) in die Notizen. Nur die automatische Foliennummer darf kleiner sein.
 - Zu jeder Stunde: **Folien (pptx)**, **Druckmaterial (docx)**, jeweils auch als PDF, und eine kurze **Handreichung** mit Kopf (Ziel, Prüfaufgabe, Mindestziel, Beitrag zur Reihe), Druckliste, Verlauf nach AVIVA mit Warum-Zeilen und Foliennummern, Erwartungshorizont.
 
 ## Gestaltung der Materialien
