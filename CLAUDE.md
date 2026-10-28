@@ -136,6 +136,7 @@ Keine Klarnamen von Schülerinnen, Schülern oder Kolleginnen und Kollegen ins R
 - `Deutsch_7A/` – Material der Klasse 7A, ein Unterordner pro Stunde/Einheit
 - `Deutsch_7A/Reflexion.md` – Lernstand, Stundenlog, Hospitationsfeedback, offene Baustellen
 - `Methoden/` – Methodenmaterial der Schule, das für alle Klassen gilt (z. B. Methodenkarten Lesetraining, Kriterien für mündliche Noten)
+- `Methoden/Methoden_Texterschliessung.md` – Methodensammlung (Mystery, Entscheidungsfälle, Diamond Nine, Fehlertext u. a.) aus Geschichte 11 mit Erfahrungen; bei der Planung als Orientierung nutzen (Stand 28.10.). Vorgaben dort (z. B. „keine Rollenspiele“) stammen aus Klasse 11 und sind für die 8C/8D noch zu klären.
 - `Geschichte_8/` – Material der Klasse 8C (Geschichte); Reflexionslog: `Geschichte_8/Reflexion.md`
 - `Geschichte_8D/` – Material der Klasse 8D (Geschichte); Reflexionslog: `Geschichte_8D/Reflexion.md`; Stunde Generalstände in `Geschichte_8D/Generalstaende/`
 - Weitere Klassen und Fächer bekommen einen eigenen Ordner nach demselben Muster (`<Fach>_<Klasse>/`) mit eigenem `Reflexion.md`, z. B. Klassenprofil, Sportarten und Lernstand. Die Vorlieben oben gelten dort genauso.
