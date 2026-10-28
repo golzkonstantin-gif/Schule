@@ -159,7 +159,7 @@ function uebersicht(s, solved) {
   const s = pres.addSlide(); s.background = { color: C.white };
   head(s, 2, "So geht's – ein Beispiel", "Zwei Abschnitte verbinden"); chip(s, "Lehrkraft", 6.35, 0.12, 1.25, 0.28, C.dark, C.white, 11);
   const ex = [[NR.A, "Lysias und sein Nachbar: „Seit Solon darf jeder Bürger über 20 … abstimmen – auch ein armer Bauer wie er. Sein Nachbar ist ein reicher Adliger …“"],
-    [NR.B, "Die alte Ordnung: „… Dort gaben die großen Adelsfamilien den Ton an: Wer zu einer Familie hielt, stimmte mit ihr …“"]];
+    [NR.B, "Die alte Ordnung: „________ die großen Adelsfamilien geben in den vier alten Phylen den Ton an …“"]];
   ex.forEach(([n, t], i) => {
     const x = 0.5 + i * 4.9;
     card(s, x, 1.35, 4.1, 1.35, C.pale);
@@ -168,7 +168,7 @@ function uebersicht(s, solved) {
   });
   chip(s, "aber", 4.68, 1.82, 0.64, 0.4, C.terra, C.white, 13);
   card(s, 0.5, 2.95, 9, 0.95, C.sand);
-  txt(s, [{ text: "Laut gedacht: ", options: { bold: true, color: C.terra } }, { text: "„Abschnitt " + NR.A + " sagt: Er hat das Recht. Abschnitt " + NR.B + " sagt: Die Adelsfamilien bestimmen, wie man stimmt. Zusammen: Er hat das Stimmrecht, aber er nutzt es nicht frei. Die beiden lege ich nebeneinander und schreibe ‚aber‘ dazwischen.“", options: { italic: true } }],
+  txt(s, [{ text: "Laut gedacht: ", options: { bold: true, color: C.terra } }, { text: "„Abschnitt " + NR.A + " sagt: Er hat das Recht. Abschnitt " + NR.B + " sagt: Die Adelsfamilien bestimmen, wie man stimmt. Das ist ein Gegensatz – also passt ‚Aber‘ in die Lücke: ‚Aber die großen Adelsfamilien geben … den Ton an.‘ Der Satz stimmt, ich streiche ‚aber‘ unten ab.“", options: { italic: true } }],
     { x: 0.75, y: 2.95, w: 8.5, h: 0.95, fontSize: 14, valign: "middle" });
   card(s, 0.5, 4.1, 9, 0.85, C.dark);
   txt(s, [{ text: "Achtung, typischer Fehler: ", options: { bold: true, color: C.gold } }, { text: "Kleisthenes nimmt niemandem Land weg und ändert Solons Vermögensklassen nicht. Sucht die Lösung woanders!", options: { color: C.white } }],
@@ -183,7 +183,7 @@ function uebersicht(s, solved) {
   head(s, 3, "Mystery · Gruppen zu dritt · Heft", "Warum stimmt Lysias anders?"); timeChip(s, "14 Min.");
   steps(s, ["Schneidet die acht Abschnitte aus und verteilt sie. Jeder liest seine laut vor.",
     "Klärt: Was sagt jeder Abschnitt über Lysias und seinen Nachbarn?",
-    "Legt die Abschnitte zu einer Erklärungskette. Schreibt die Verbindungswörter von unten auf dem Blatt dazwischen und streicht sie ab.",
+    "Legt die Abschnitte zu einer Erklärungskette. Schreibt die passenden Verbindungswörter (unten auf dem Blatt) in die Lücken am Anfang der Abschnitte und streicht sie ab.",
     "Jeder schreibt die Antwort in 3–4 Sätzen ins Heft.",
     "Ihr kommt nicht weiter? Holt euch Hilfe 1, 2 oder 3 vom Pult – der Reihe nach."], 0.5, 1.35, 5.6, 13.5, 0.68);
   card(s, 6.3, 1.35, 3.2, 3.55, C.sand);
@@ -204,7 +204,7 @@ function uebersicht(s, solved) {
     txt(s, ids ? "Abschnitt " + nr(ids) : "", { x: 2.2, y, w: 1.6, h: 0.58, fontSize: 10.5, color: C.soft, valign: "middle" });
     txt(s, d, { x: 3.7, y, w: 5.8, h: 0.58, fontSize: 12.5, valign: "middle", bold: i === 4 });
     if (i < 4) s.addShape(pres.shapes.LINE, { x: 1.27, y: y + 0.58, w: 0, h: 0.12, line: { color: C.soft, width: 1.5, endArrowType: "triangle" } });
-    const V = ["aber", "doch dann", "daraufhin · danach · daraus", "dadurch · deshalb", ""];
+    const V = ["aber", "doch dann", "daraufhin · danach · daraus", "dadurch", "deshalb (Antwort)"];
     if (V[i]) txt(s, V[i], { x: 2.2, y: y + 0.36, w: 1.5, h: 0.2, fontSize: 9, italic: true, bold: true, color: C.terra });
   });
   txt(s, "* Abschnitt " + nr("H") + ": Gegen einen neuen Tyrannen hat das Volk jetzt den Ostrakismos (Scherbengericht).", { x: 0.5, y: 4.85, w: 9, h: 0.3, fontSize: 11, color: C.muted });

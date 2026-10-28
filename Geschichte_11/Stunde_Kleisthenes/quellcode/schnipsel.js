@@ -13,7 +13,7 @@ function chip(id) {
   const k = card(id);
   return new TableCell({ width: { size: HALF, type: WidthType.DXA }, verticalAlign: VerticalAlign.CENTER,
     borders: { top: dash, bottom: dash, left: dash, right: dash }, margins: { top: 140, bottom: 140, left: 180, right: 180 },
-    children: [P([R(String(NR[id]) + "  ", { bold: true, color: C.terra, size: 26, font: "Cambria" }), R(k.h, { bold: true, size: 23, font: "Cambria" })], { after: 80 }), P([R(k.t, { size: 21 })])] });
+    children: [P([R(String(NR[id]) + "  ", { bold: true, color: C.terra, size: 26, font: "Cambria" }), R(k.h, { bold: true, size: 23, font: "Cambria" })], { after: 80 }), P(k.t.startsWith("___ ") ? [R("____________ ", { bold: true, color: C.terra, size: 22 }), R(k.t.slice(4), { size: 21 })] : [R(k.t, { size: 21 })])] });
 }
 function set() {
   const rows = [];
@@ -26,8 +26,8 @@ function set() {
       children: [P([R("Warum stimmt Lysias anders?", { font: "Cambria", bold: true, size: 30 })], { after: 60 }), P([R(D.frage, { size: 21, italics: true })])] })] })] }),
     P([R("Schneidet die acht Abschnitte an den gestrichelten Linien aus.", { size: 17, color: C.muted, italics: true })], { before: 80, after: 80 }),
     new Table({ columnWidths: [HALF, HALF], width: { size: W, type: WidthType.DXA }, rows }),
-    P([R("Verbindungswörter: ", { bold: true, size: 21, color: C.terra }), R("Schreibt sie zwischen die Abschnitte und streicht sie hier ab.", { size: 19, italics: true, color: C.muted })], { before: 160, after: 80 }),
-    new Table({ columnWidths: Array(4).fill(W / 4), width: { size: W, type: WidthType.DXA }, rows: [0, 4].map(o => new TableRow({ children: D.verbinder.slice(o, o + 4).map(v =>
+    P([R("Verbindungswörter: ", { bold: true, size: 21, color: C.terra }), R("Schreibt das passende Wort in die Lücke am Anfang eines Abschnitts und streicht es hier ab. So entsteht ein richtiger Satz.", { size: 19, italics: true, color: C.muted })], { before: 160, after: 80 }),
+    new Table({ columnWidths: Array(4).fill(W / 4), width: { size: W, type: WidthType.DXA }, rows: [0, 4].map(o => new TableRow({ children: [...D.verbinder.slice(o, o + 4), ...(o === 4 ? [""] : [])].map(v =>
       new TableCell({ width: { size: W / 4, type: WidthType.DXA }, verticalAlign: VerticalAlign.CENTER, borders: { top: none, bottom: none, left: none, right: none },
         shading: { type: ShadingType.CLEAR, color: "auto", fill: C.sand }, margins: { top: 90, bottom: 90, left: 60, right: 60 },
         children: [P([R(v, { bold: true, size: 28, font: "Cambria" })], { align: AlignmentType.CENTER })] })) })) }),

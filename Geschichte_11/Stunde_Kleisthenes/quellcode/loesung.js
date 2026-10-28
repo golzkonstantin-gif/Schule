@@ -21,15 +21,16 @@ const children = [
 ];
 D.loesung.forEach(([v, id], i) => {
   if (v) children.push(link(v));
+  else if (id === "Ergebnis") children.push(link("deshalb (eure Antwort)"));
   if (id === "Ergebnis") {
-    children.push(one([P([R("Ergebnis: ", { bold: true, size: 22, color: C.gold, font: "Cambria" }), R("Lysias ist nicht mehr an seinen Adelsherrn gebunden – er kann sein Stimmrecht frei nutzen. Kleisthenes hat nicht die Rechte verändert (die gab schon Solon), sondern die Bindungen an die Adelsfamilien.", { size: 20, color: C.white, bold: true })])], { fill: C.dark, pad: 140 }));
+    children.push(one([P([R("Ergebnis: ", { bold: true, size: 22, color: C.gold, font: "Cambria" }), R("Deshalb ist Lysias nicht mehr an seinen Adelsherrn gebunden – er kann sein Stimmrecht frei nutzen. Kleisthenes hat nicht die Rechte verändert (die gab schon Solon), sondern die Bindungen an die Adelsfamilien.", { size: 20, color: C.white, bold: true })])], { fill: C.dark, pad: 140 }));
     return;
   }
   const k = card(id);
   const zusatz = id === "H";
   children.push(one([
     P([R(String(NR[id]) + "  ", { bold: true, color: C.terra, size: 24, font: "Cambria" }), R(k.h, { bold: true, size: 22, font: "Cambria" }), ...(zusatz ? [R("   (Zusatz)", { size: 18, italics: true, color: C.muted })] : [])], { after: 40 }),
-    P([R(k.t, { size: 19 })]),
+    P(k.t.startsWith("___ ") ? [R(v.charAt(0).toUpperCase() + v.slice(1) + " ", { size: 20, bold: true, color: C.terra }), R(k.t.slice(4), { size: 19 })] : [R(k.t, { size: 19 })]),
   ], { dash: true, fill: zusatz ? "FFFFFF" : C.pale }));
 });
 const doc = new Document({ sections: [{ properties: { page: { size: { width: 11906, height: 16838 }, margin: { top: 600, bottom: 500, left: 850, right: 850 } } }, children }] });
