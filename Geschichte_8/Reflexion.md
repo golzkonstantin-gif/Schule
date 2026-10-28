@@ -59,6 +59,13 @@
 - **Rückmeldung der Lehrkraft (27.10.):** Der Text war gut. Die Stunde war unterrichtsgesprächslastig, das Schulbeispiel zu abstrakt. Lieber die Klasse in Stände teilen und merken lassen, dass die Stände untereinander mauscheln und den Dritten Stand überstimmen können.
 - **Konsequenz:** Für die 8D wurde daraus ein Ständespiel (`Geschichte_8D/Generalstaende/`). Bei Bedarf kann die 8C es übernehmen.
 
+### Stunde 2: Der Dritte Stand handelt (geplant für Fr 06.11.2026, 45 Min., 12 Schülerinnen und Schüler, Lehrkraft 2 hospitiert nur)
+- **Material:** `Stunde2_Nationalversammlung/` (Tafelskript, 17 Folien, Arbeitsblatt mit Text, Quelle und Zeitstrahl, Schnipsel „Karikatur analysieren“ mit Hilfekarten)
+- **Bezug zu Stunde 1 (Rückmeldung 28.10.):** Stunde 1 lief inhaltlich, die Abstimmung nach Ständen und nach Köpfen ist noch nicht sicher. Deshalb Wiederholung als Fehlertext plus Merkbild, schriftlich, mit gezielter Abfrage statt Gespräch.
+- **Inhalt (AVIVA):** Ankommen (3, Eingangsdiagnose „Was ist eine Revolution? Gut oder schlecht? Warum?“) · Fehlertext Abstimmung (6) · Text, Sieyès-Quelle, Zeitstrahl, Bild Ballhausschwur, Merksatz (12) · Karikatur-Methode: Modell (Karikatur zu den drei Ständen, laut denken), Partnerarbeit „Für die Mühsal geboren“ mit Hilfekarten, Sicherung (15) · Abschlussfrage im Berater-Format „Sollen wir nach Hause gehen oder schwören, zusammenzubleiben?“ (6).
+- **Planungsentscheidungen:** Buchtexte nur bearbeitet als Arbeitsblatt, Bilder aus dem Scan (S. 111, S. 113) auf Folien. Karikatur-Dreischritt nach Buch S. 116, Schritt 3 „Beurteilen“ mit *. Datum Nationalversammlung 17. Juni (Buch nennt 20. Juni). Zahlen wie in Stunde 1 (580 zu 560).
+- **Rückmeldung der Lehrkraft:** *(steht noch aus)*
+
 ## Hospitationsfeedback (gesammelt)
 
 *(noch keine Einträge)*

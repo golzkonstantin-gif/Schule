@@ -101,7 +101,7 @@ Die folgenden Vorlieben und Reflexionen gelten für die gesamte weitere Planung,
 
 ## Geschichte (Stand 27.10.)
 
-Gilt für Geschichte 8C (`Geschichte_8/`, 12 Schülerinnen und Schüler, zwei Lehrkräfte) und 8D (`Geschichte_8D/`, 25, laut, eine Lehrkraft). Beide Klassen laufen in einem Repo; die 8C liegt immer eine Stunde vorn.
+Gilt für Geschichte 8C (`Geschichte_8/`, 12 Schülerinnen und Schüler, ab Stunde 2 unterrichtet eine Lehrkraft, die zweite hospitiert nur) und 8D (`Geschichte_8D/`, 25, laut, eine Lehrkraft). Beide Klassen laufen in einem Repo; die 8C liegt immer eine Stunde vorn.
 
 - **PowerPoint gehört in Geschichte dazu** (Folien, Schrift mindestens 24 Punkt, Phasenanzeige A V I V A, Lernziele, Ablauf, Lernziel-Check). Merksätze stehen auf der Folie (Kernsatz im roten Rahmen, Beispiel, Test), kein „Wofür brauche ich das?“. Abschreiben und rot umrahmen. Mehr Folien sind in Ordnung, wenn sie visualisieren (Zeitstrahl, Balken).
 - **„Dritter Stand“ immer mit Klammer:** „Dritter Stand (Bauern und Bürger)“.

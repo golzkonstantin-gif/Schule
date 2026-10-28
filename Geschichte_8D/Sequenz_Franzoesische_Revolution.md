@@ -24,7 +24,7 @@ Status: geplant · gelaufen · Rückmeldung (R) im Reflexionslog.
 | Nr. | 8D (Mi) | 8C (Fr) | Thema | SchiC-Bezug, Kompetenz | 8C | 8D |
 |---|---|---|---|---|---|---|
 | 1 | 04.11. | 16.10. | Generalstände: Weg zu 1789, Abstimmung nach Ständen | Ursachen; Rekonstruktion | gelaufen (R: UG-lastig, Schulbeispiel zu abstrakt, Text gut) | geplant (`Geschichte_8D/Generalstaende/`) |
-| 2 | 11.11. | 06.11. | Dritter Stand handelt: Nationalversammlung, Ballhausschwur; Karikatur analysieren | Epochenjahr 1789; **Karikatur** | offen | offen |
+| 2 | 11.11. | 06.11. | Dritter Stand handelt: Nationalversammlung, Ballhausschwur; Karikatur analysieren | Epochenjahr 1789; **Karikatur** | geplant (`Geschichte_8/Stunde2_Nationalversammlung/`) | offen |
 | 3 | 18.11. | 13.11. | Bastille, Ende der Vorrechte, Menschen- und Bürgerrechte | Epochenjahr 1789; Menschenrechtserklärung | offen | offen |
 | 4 | 25.11. | 20.11. | Verfassung 1791: konstitutionelle Monarchie | **Verfassungsschaubild** | offen | offen |
 | 5 | 02.12. | 27.11. | **Test 1** | | offen | offen |
