@@ -45,6 +45,7 @@ Die übergreifenden Standards unten gelten **für alle Klassen und Fächer** (En
 - **Stichproben statt Gespräch:** gezielt kurze Antworten bei 3–6 Personen unterschiedlichen Niveaus oder durch die Reihen gehen und im Heft mitlesen, im Wechsel.
 - **Feste, wörtliche Ansagen** bei jedem Wechsel. Aufträge im gleichen Format: nummerierte Schritte mit Verb am Anfang, Zeit, Arbeitsform.
 - **Keine Selbsteinschätzung der Schüler** (keine Ampel, keine Symbol- oder Farbkarten). Kompetenzraster nur als Zielbild und Lehrerrückmeldung vor bewerteten Leistungen.
+- **Methodenvielfalt bei der Texterschließung:** nicht immer dieselbe Form (z. B. Personenkarten). Sammlung mit Erfahrungen: `Methoden/Methoden_Texterschliessung.md` – bei jeder Planung dort nachsehen und neue Erfahrungen ergänzen.
 - **Erst fragen, was gewünscht ist:** Sagt die Lehrkraft „erst mal Ideen sammeln“, nur Ideen im Chat, kein Material.
 
 ## Kernprinzip Geschichte 11: „Puzzleteil“-Stunden (bewährt, bevorzugt)
