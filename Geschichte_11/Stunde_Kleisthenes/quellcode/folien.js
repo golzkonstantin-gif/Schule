@@ -183,7 +183,7 @@ function uebersicht(s, solved) {
   head(s, 3, "Mystery · Gruppen zu dritt · Heft", "Warum stimmt Lysias anders?"); timeChip(s, "14 Min.");
   steps(s, ["Schneidet die acht Abschnitte aus und verteilt sie. Jeder liest seine laut vor.",
     "Klärt: Was sagt jeder Abschnitt über Lysias und seinen Nachbarn?",
-    "Legt die Abschnitte zu einer Erklärungskette. Schreibt Pfeile oder „weil“, „deshalb“, „aber“ dazwischen.",
+    "Legt die Abschnitte zu einer Erklärungskette. Schreibt die Verbindungswörter von unten auf dem Blatt dazwischen und streicht sie ab.",
     "Jeder schreibt die Antwort in 3–4 Sätzen ins Heft.",
     "Ihr kommt nicht weiter? Holt euch Hilfe 1, 2 oder 3 vom Pult – der Reihe nach."], 0.5, 1.35, 5.6, 13.5, 0.68);
   card(s, 6.3, 1.35, 3.2, 3.55, C.sand);
@@ -204,6 +204,8 @@ function uebersicht(s, solved) {
     txt(s, ids ? "Abschnitt " + nr(ids) : "", { x: 2.2, y, w: 1.6, h: 0.58, fontSize: 10.5, color: C.soft, valign: "middle" });
     txt(s, d, { x: 3.7, y, w: 5.8, h: 0.58, fontSize: 12.5, valign: "middle", bold: i === 4 });
     if (i < 4) s.addShape(pres.shapes.LINE, { x: 1.27, y: y + 0.58, w: 0, h: 0.12, line: { color: C.soft, width: 1.5, endArrowType: "triangle" } });
+    const V = ["aber", "doch dann", "daraufhin · danach · daraus", "dadurch · deshalb", ""];
+    if (V[i]) txt(s, V[i], { x: 2.2, y: y + 0.36, w: 1.5, h: 0.2, fontSize: 9, italic: true, bold: true, color: C.terra });
   });
   txt(s, "* Abschnitt " + nr("H") + ": Gegen einen neuen Tyrannen hat das Volk jetzt den Ostrakismos (Scherbengericht).", { x: 0.5, y: 4.85, w: 9, h: 0.3, fontSize: 11, color: C.muted });
   footer(s);

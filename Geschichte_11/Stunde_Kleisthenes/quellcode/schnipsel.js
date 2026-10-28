@@ -26,6 +26,11 @@ function set() {
       children: [P([R("Warum stimmt Lysias anders?", { font: "Cambria", bold: true, size: 30 })], { after: 60 }), P([R(D.frage, { size: 21, italics: true })])] })] })] }),
     P([R("Schneidet die acht Abschnitte an den gestrichelten Linien aus.", { size: 17, color: C.muted, italics: true })], { before: 80, after: 80 }),
     new Table({ columnWidths: [HALF, HALF], width: { size: W, type: WidthType.DXA }, rows }),
+    P([R("Verbindungswörter: ", { bold: true, size: 21, color: C.terra }), R("Schreibt sie zwischen die Abschnitte und streicht sie hier ab.", { size: 19, italics: true, color: C.muted })], { before: 160, after: 80 }),
+    new Table({ columnWidths: Array(4).fill(W / 4), width: { size: W, type: WidthType.DXA }, rows: [0, 4].map(o => new TableRow({ children: D.verbinder.slice(o, o + 4).map(v =>
+      new TableCell({ width: { size: W / 4, type: WidthType.DXA }, verticalAlign: VerticalAlign.CENTER, borders: { top: none, bottom: none, left: none, right: none },
+        shading: { type: ShadingType.CLEAR, color: "auto", fill: C.sand }, margins: { top: 90, bottom: 90, left: 60, right: 60 },
+        children: [P([R(v, { bold: true, size: 28, font: "Cambria" })], { align: AlignmentType.CENTER })] })) })) }),
   ];
 }
 const HILFEN = [

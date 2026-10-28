@@ -64,7 +64,7 @@ const content = [
 
   h2("1. Druckliste und Vorbereitung"),
   table([2900, 2100, 4638], ["Material", "Menge", "Hinweis"], [
-    [["**Mystery-Abschnitte**", "Mystery_Schnipsel_und_Hilfen.docx, Seite 1"], "1 Blatt pro Dreiergruppe (ca. 6)", "8 Abschnitte mit Überschrift, gemischt nummeriert. Die Gruppen schneiden selbst (oder vorab schneiden und in Umschläge stecken, spart 2 Min.)."],
+    [["**Mystery-Abschnitte**", "Mystery_Schnipsel_und_Hilfen.docx, Seite 1"], "1 Blatt pro Dreiergruppe (ca. 6)", "8 Abschnitte mit Überschrift, gemischt nummeriert; unten 8 Verbindungswörter zum Abstreichen. Die Gruppen schneiden selbst (oder vorab schneiden und in Umschläge stecken, spart 2 Min.)."],
     [["**Gestufte Hilfen**", "dieselbe Datei, Seite 2"], "1–2 ×", "Schneiden, am Pult auslegen."],
     ["Scheren", "1 pro Gruppe", "Falls die Gruppen selbst schneiden."],
   ]),
@@ -91,6 +91,7 @@ const content = [
   ], { firstFill: true }),
   p("**Mystery – die Erklärungskette:**", { size: 18, before: 100, keepNext: true }),
   table([1500, 1500, 6638], ["Schritt", "Abschnitt", "Inhalt"], D.kette.map(([t, ids, d]) => [t, ids ? nr(ids) : "–", d]), { firstFill: true }),
+  p("**Kette mit Verbindungswörtern (eine mögliche Lösung):** " + D.loesung.map(([v, id]) => (v ? "**" + v + "** " : "") + (id === "Ergebnis" ? "Lysias stimmt frei" : "[" + NR[id] + "]")).join(" – ") + ". Andere Verbindungen sind richtig, wenn sie sinnvoll begründen.", { size: 18, before: 80 }),
   p("**Musterantwort (Heft):** „Vorher war Lysias von seinem adligen Nachbarn abhängig und stimmte deshalb mit dessen Familie, obwohl er seit Solon abstimmen durfte. Nach dem Sturz des Hippias setzte Kleisthenes mit Hilfe des Volkes eine Reform durch: Er teilte Attika in drei Gebiete und bildete zehn neue Phylen, die Stadt, Küste und Binnenland mischten. Dadurch wurden die Anhänger des Adligen auf verschiedene Phylen verteilt, und Lysias saß im Rat und im Heer mit Fremden zusammen. Deshalb kann er sein Stimmrecht jetzt frei nutzen.“", { size: 18 }),
 
   h2("5. Beim Umhergehen: Stolpersteine und gestufte Hilfen"),

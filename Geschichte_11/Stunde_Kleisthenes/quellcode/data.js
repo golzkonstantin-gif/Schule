@@ -13,6 +13,9 @@ module.exports = {
     { id: "G", h: "Lysias' neue Phyle", t: "Lysias gehört jetzt zur Phyle Pandionis, zusammen mit Fischern von der Küste und Handwerkern aus der Stadt, die seinen Nachbarn gar nicht kennen. Jede Phyle schickt 50 Männer in den neuen Rat der 500, der die Volksversammlung vorbereitet. Auch das Heer wird nach Phylen aufgestellt: Lysias kämpft Seite an Seite mit Männern aus allen Gebieten." },
     { id: "H", h: "Ein Mittel gegen Tyrannen", t: "Mit dem Ostrakismos (Scherbengericht) kann das Volk einen Mann, der zu mächtig wird, für zehn Jahre aus Athen verbannen. Jeder Bürger ritzt dazu einen Namen auf eine Tonscherbe. Vermögen und Bürgerrecht behält der Verbannte." },
   ],
+  // Verbindungswörter für die Wortleiste (gemischt gedruckt) und Lösung als Fließtext
+  verbinder: ["dadurch", "aber", "außerdem", "daraufhin", "deshalb", "doch dann", "daraus", "danach"],
+  loesung: [["", "A"], ["aber", "B"], ["Doch dann", "C"], ["Daraufhin", "D"], ["Danach", "E"], ["Daraus", "F"], ["Dadurch", "G"], ["deshalb", "Ergebnis"], ["Außerdem", "H"]],
   // Erwartete Erklärungskette (Lösung)
   kette: [
     ["Ausgangslage", "A, B", "Lysias hat seit Solon das Stimmrecht, ist aber von seinem adligen Nachbarn abhängig und an dessen Familie gebunden – und jeder sieht, wie er stimmt."],
