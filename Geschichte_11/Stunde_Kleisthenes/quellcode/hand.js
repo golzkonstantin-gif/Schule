@@ -66,6 +66,7 @@ const content = [
   table([2900, 2100, 4638], ["Material", "Menge", "Hinweis"], [
     [["**Mystery-Abschnitte**", "Mystery_Schnipsel_und_Hilfen.docx, Seite 1"], "1 Blatt pro Dreiergruppe (ca. 6)", "8 Abschnitte mit Überschrift, gemischt nummeriert; unten 8 Verbindungswörter zum Abstreichen. Die Gruppen schneiden selbst (oder vorab schneiden und in Umschläge stecken, spart 2 Min.)."],
     [["**Gestufte Hilfen**", "dieselbe Datei, Seite 2"], "1–2 ×", "Schneiden, am Pult auslegen."],
+    [["**Lösung: Abschnitte in Verbindung**", "Mystery_Loesung_Verbindungen.docx"], "1 × (Lehrkraft)", "Am Pult; zum Vergleichen auch projizierbar."],
     ["Scheren", "1 pro Gruppe", "Falls die Gruppen selbst schneiden."],
   ]),
   bullet("Seitentafel: Ziel und Ablauf (wie Folie 2).", { box: true }),
