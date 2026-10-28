@@ -34,7 +34,7 @@ Vorbild: Stunde „Bürgeramt Athen“ (`Geschichte_11/Stunde_Buergeramt_Athen/`
 ## Weitere Vorlieben
 
 - **Wenig Unterrichtsgespräch.** Aktivierung über Arbeitsaufträge, Kontrolle über Lösungsfolien, Lösungskarten oder die Schüler selbst – nicht über lange Plenumsphasen.
-- **Aha-Moment einplanen:** Schüler legen sich vorher fest (Abstimmung, Vermutung), die Auflösung überrascht. Gegenwartsbezüge nur, wenn sie wirklich zum Thema passen.
+- **Aha-Moment einplanen:** Schüler legen sich vorher fest (Abstimmung, Vermutung), die Auflösung überrascht. In Geschichte 11 ist die Daumenabfrage dafür erlaubt (Stand 28.10.): Sie ist eine Vermutung zum Sachverhalt, keine Selbsteinschätzung. Gegenwartsbezüge nur, wenn sie wirklich zum Thema passen.
 - **Keine Rollenspiele** (szenisch, historische Personen spielen), keine „albernen“ Formate (z. B. Zeugnisse für historische Personen).
 - **Konkrete Arbeitsaufträge** auf den Folien: nummerierte Schritte, Satzbausteine, Zeitangabe.
 - **Nach jeder Aufgabe eine Lösungsfolie.**
@@ -49,5 +49,6 @@ Vorbild: Stunde „Bürgeramt Athen“ (`Geschichte_11/Stunde_Buergeramt_Athen/`
 
 ## Gestaltung der Materialien
 
+- Design darf variieren, ist der Lehrkraft nicht so wichtig (Stand 28.10.). Für Geschichte 11 bleibt die bisherige Palette:
 - Farben: Dunkelbraun `2B2318`, Terrakotta `AD4426`, Sand `F4ECDE`, Gold `D9A441`, Graubraun `5A5044`.
 - Schriften: Cambria (Überschriften), Calibri (Text).
