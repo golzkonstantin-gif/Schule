@@ -61,19 +61,19 @@ function steps(s, items, x, y, w, fs = 14, gap = 0.62) {
 
 // 3 Wiederholung: Fehler-Übersicht
 const UEB = [
-  ["vor 600", "Aristokratie", "Adelsfamilien", [["Die Macht liegt bei wenigen Adelsfamilien; aus ihnen kommen die Archonten.", null], ["Recht sprechen gewählte Richter aus dem Volk.", "Recht spricht der Adel – geschriebene Gesetze gibt es nicht."]]],
-  ["624/621", "Aristokratie", "Drakon", [["Er schreibt das Recht erstmals auf; staatliche Richter ersetzen die Blutrache.", null], ["Er schafft die Schuldknechtschaft ab.", "Die Schuldknechtschaft bleibt bestehen."]]],
-  ["594/93", "Timokratie", "Solon", [["Er streicht die Schulden und verteilt das Land der Großgrundbesitzer neu.", "Er streicht die Schulden – verteilt aber kein Land neu."], ["Die Rechte richten sich nach der Herkunft; auch Theten dürfen Archont werden.", "Die Rechte richten sich nach dem Besitz; Theten dürfen nur abstimmen und klagen."]]],
-  ["546–528/27", "Tyrannis", "Peisistratos", [["Die Volksversammlung wählt ihn zum Alleinherrscher.", "Er erobert die Macht mit Söldnern (Akropolis)."], ["Er schafft Solons Verfassung ab, fördert aber Bauern und Handwerk.", "Die Verfassung bleibt – die Ämter bekommen seine Anhänger."]]],
+  ["vor 600", ["Aristokratie", "aristos = der Beste"], "Adelsfamilien", [["Die Macht liegt bei wenigen Adelsfamilien; aus ihnen kommen die Archonten.", null], ["Recht sprechen gewählte Richter aus dem Volk.", "Recht spricht der Adel – geschriebene Gesetze gibt es nicht."]]],
+  ["624/621", ["Aristokratie", "aristos = der Beste"], "Drakon", [["Er schreibt das Recht erstmals auf; staatliche Richter ersetzen die Blutrache.", null], ["Er schafft die Schuldknechtschaft ab.", "Die Schuldknechtschaft bleibt bestehen."]]],
+  ["594/93", ["Timokratie", "timē = Wert, Schätzung"], "Solon", [["Er streicht die Schulden und verteilt das Land der Großgrundbesitzer neu.", "Er streicht die Schulden – verteilt aber kein Land neu."], ["Die Rechte richten sich nach der Herkunft; auch Theten dürfen Archont werden.", "Die Rechte richten sich nach dem Besitz; Theten dürfen nur abstimmen und klagen."]]],
+  ["546–528/27", ["Tyrannis", "tyrannos = Alleinherrscher"], "Peisistratos", [["Die Volksversammlung wählt ihn zum Alleinherrscher.", "Er erobert die Macht mit Söldnern (Akropolis)."], ["Er schafft Solons Verfassung ab, fördert aber Bauern und Handwerk.", "Die Verfassung bleibt – die Ämter bekommen seine Anhänger."]]],
 ];
 function uebersicht(s, solved) {
-  const X = [0.5, 1.55, 2.95, 4.45], Wc = [1.0, 1.35, 1.45, 5.05];
-  ["Zeit", "Herrschaftsform", "Protagonist", "Was geschah?"].forEach((h, c) => chip(s, h, X[c], 1.2, Wc[c], 0.3, C.dark, C.white, 11.5));
+  const X = [0.5, 1.45, 3.3, 4.6], Wc = [0.9, 1.8, 1.25, 4.9];
+  ["Zeit", "Herrschaftsform (griech.)", "Protagonist", "Was geschah?"].forEach((h, c) => chip(s, h, X[c], 1.2, Wc[c], 0.3, C.dark, C.white, 11.5));
   UEB.forEach(([z, f, pr, st], r) => {
     const y = 1.56 + r * 0.8;
     card(s, X[0], y, 9.0, 0.76, r % 2 ? C.white : C.pale);
     txt(s, z, { x: X[0] + 0.05, y, w: Wc[0], h: 0.76, fontSize: 12, bold: true, valign: "middle" });
-    txt(s, f, { x: X[1], y, w: Wc[1], h: 0.76, fontSize: 12.5, bold: true, color: C.terra, valign: "middle" });
+    txt(s, [{ text: f[0] + "\n", options: { fontSize: 12.5, bold: true, color: C.terra } }, { text: f[1], options: { fontSize: 9.5, italic: true, color: C.muted } }], { x: X[1], y, w: Wc[1], h: 0.76, valign: "middle" });
     txt(s, pr, { x: X[2], y, w: Wc[2], h: 0.76, fontSize: 13, bold: true, fontFace: H, valign: "middle" });
     st.forEach(([t, fix], k) => {
       const yy = y + 0.03 + k * 0.36;
@@ -87,7 +87,7 @@ function uebersicht(s, solved) {
   head(s, 1, "Wiederholung · allein, dann zu zweit · Heft", "Hier stimmt etwas nicht!"); timeChip(s, "5 Min.");
   uebersicht(s, false);
   card(s, 0.5, 4.8, 9.0, 0.36, C.terra);
-  txt(s, "Finde die 6 Fehler und berichtige sie im Heft. Dann vergleiche mit deinem Nachbarn.", { x: 0.65, y: 4.8, w: 8.7, h: 0.36, fontSize: 11.5, bold: true, color: C.white, valign: "middle" });
+  txt(s, "Finde die 6 Fehler und berichtige sie im Heft. Dann vergleiche mit deinem Nachbarn.   (-kratie: kratein = herrschen)", { x: 0.65, y: 4.8, w: 8.7, h: 0.36, fontSize: 11.5, bold: true, color: C.white, valign: "middle" });
   s.addNotes("2–7 Min. Direkt: Vorwissen aktivieren über einen Fehlertext. Allein (2), Partnercheck (1), Stichproben bei 4–6 Schülern unterschiedlichen Niveaus (2). Buch und Hefter zu – nur das Heft für die Berichtigung. Die Fehler: Recht beim Adel; Schuldknechtschaft bleibt bei Drakon; Solon ohne Landverteilung; Rechte nach Besitz, Theten kein Archont; Peisistratos mit Söldnern; Verfassung bleibt.");
 }
 
