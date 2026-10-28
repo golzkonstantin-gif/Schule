@@ -12,26 +12,26 @@ const P = (runs, o = {}) => new Paragraph({ alignment: o.align, spacing: { after
 function chip(id) {
   const k = card(id);
   return new TableCell({ width: { size: HALF, type: WidthType.DXA }, verticalAlign: VerticalAlign.CENTER,
-    borders: { top: dash, bottom: dash, left: dash, right: dash }, margins: { top: 90, bottom: 90, left: 140, right: 140 },
-    children: [P([R(String(NR[id]) + "   ", { bold: true, color: C.terra, size: 24, font: "Cambria" }), R(k.t, { size: 21 })])] });
+    borders: { top: dash, bottom: dash, left: dash, right: dash }, margins: { top: 140, bottom: 140, left: 180, right: 180 },
+    children: [P([R(String(NR[id]) + "  ", { bold: true, color: C.terra, size: 26, font: "Cambria" }), R(k.h, { bold: true, size: 23, font: "Cambria" })], { after: 80 }), P([R(k.t, { size: 21 })])] });
 }
 function set() {
   const rows = [];
   for (let i = 0; i < ORDER.length; i += 2)
-    rows.push(new TableRow({ cantSplit: true, height: { value: 1150, rule: HeightRule.ATLEAST }, children: [chip(ORDER[i]), chip(ORDER[i + 1])] }));
+    rows.push(new TableRow({ cantSplit: true, height: { value: 2600, rule: HeightRule.ATLEAST }, children: [chip(ORDER[i]), chip(ORDER[i + 1])] }));
   return [
     P([R("GESCHICHTE · KLASSE 11 · MYSTERY", { bold: true, size: 16, color: C.terra })], { after: 60 }),
     new Table({ columnWidths: [W], width: { size: W, type: WidthType.DXA }, rows: [new TableRow({ children: [new TableCell({ width: { size: W, type: WidthType.DXA },
       shading: { type: ShadingType.CLEAR, color: "auto", fill: C.sand }, borders: { top: none, bottom: none, left: none, right: none }, margins: { top: 120, bottom: 120, left: 180, right: 180 },
       children: [P([R("Warum stimmt Lysias anders?", { font: "Cambria", bold: true, size: 30 })], { after: 60 }), P([R(D.frage, { size: 21, italics: true })])] })] })] }),
-    P([R("Schneidet die Schnipsel an den gestrichelten Linien aus.", { size: 17, color: C.muted, italics: true })], { before: 80, after: 80 }),
+    P([R("Schneidet die acht Abschnitte an den gestrichelten Linien aus.", { size: 17, color: C.muted, italics: true })], { before: 80, after: 80 }),
     new Table({ columnWidths: [HALF, HALF], width: { size: W, type: WidthType.DXA }, rows }),
   ];
 }
 const HILFEN = [
-  ["Hilfe 1", "Sortiert die Schnipsel zuerst in drei Stapel: VORHER (Lysias' Lage) – DIE WENDE (was passiert in Athen?) – NACHHER (was ist neu?)."],
-  ["Hilfe 2", `Legt Schnipsel ${NR.D} und Schnipsel ${NR.J} nebeneinander. Worin unterscheiden sich die alten und die neuen Phylen?`],
-  ["Hilfe 3", `Lest Schnipsel ${NR.K} und ${NR.L}: Wo landen die Anhänger des Nachbarn – und mit wem ist Lysias jetzt zusammen? Was bedeutet das für seine Abstimmung?`],
+  ["Hilfe 1", "Sortiert die Abschnitte zuerst in drei Stapel: VORHER (Lysias' Lage) – DIE WENDE (was passiert in Athen?) – NACHHER (was ist neu?)."],
+  ["Hilfe 2", `Legt Abschnitt ${NR.B} und Abschnitt ${NR.F} nebeneinander. Worin unterscheiden sich die alten und die neuen Phylen?`],
+  ["Hilfe 3", `Lest Abschnitt ${NR.F} (letzter Satz) und ${NR.G}: Wo landen die Anhänger des Nachbarn – und mit wem ist Lysias jetzt zusammen? Was bedeutet das für seine Abstimmung?`],
 ];
 function hilfen() {
   return [

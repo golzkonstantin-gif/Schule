@@ -35,8 +35,8 @@ const VERLAUF = [
   ["7–9", "**V** Lösung + Leitfrage", "Lösungsfolie, Fehler grün verbessern. Dann die offene Leitfrage „Peisistratos – Wegbereiter der Demokratie?“: zwei Schüler antworten in einem Satz, danach der Satz unten auf der Folie.", "Offene Frage der letzten Stunde schließen; das „Aber“ (Adel bestimmt weiter über seine Anhänger) ist die Gelenkstelle zu heute.", "EA, Stichproben", "4"],
   ["9–10", "**V→I** Gelenkstelle", "Sturz der Tyrannis 514/510 kurz erzählen. „Jetzt kämpfen wieder die Adelsfamilien – wie kann man ihre Macht brechen, ohne Land zu nehmen?“", "Inhaltliche Brücke vom Sturz zur Reform (direkt).", "Lehrkraft", "5"],
   ["10–11", "**I** Rätsel", "Mystery-Frage vorlesen, jeder schreibt eine Vermutung ins Heft.", "Festlegen für den Aha-Moment; Leitfrage der Stunde.", "EA", "6"],
-  ["11–13", "**I** Begriffe", "Demos und Trittys (Phyle ist bekannt). Prüffrage: „Was ist größer – Demos oder Trittys?“", "Begriffs-Check: Ohne die Begriffe sind die Schnipsel nicht lesbar (direkt).", "Plenum, Stichproben", "7"],
-  ["13–15", "**I** Vormachen", "Zwei Schnipsel laut denkend verbinden („aber“), Warnung vor dem Fehler. Gruppen zu dritt bilden, Sets liegen bereit.", "Modellieren: Die Methode Mystery ist neu (direkt).", "Lehrkraft", "8"],
+  ["11–13", "**I** Begriffe", "Demos und Trittys (Phyle ist bekannt). Prüffrage: „Was ist größer – Demos oder Trittys?“", "Begriffs-Check: Ohne die Begriffe sind die Abschnitte nicht lesbar (direkt).", "Plenum, Stichproben", "7"],
+  ["13–15", "**I** Vormachen", "Zwei Abschnitte laut denkend verbinden („aber“), Warnung vor dem Fehler. Gruppen zu dritt bilden, Sets liegen bereit.", "Modellieren: Die Methode Mystery ist neu (direkt).", "Lehrkraft", "8"],
   ["15–29", "**V** Mystery", "Gruppen legen die Erklärungskette, jeder schreibt die Antwort ins Heft. Gestufte Hilfen am Pult. Nach 10 Min.: „Noch 4 Minuten – jetzt schreibt jeder.“", "Selbstständige Erschließung neuer Informationen (indirekt); Zusammenhänge selbst herstellen.", "GA (3)", "9"],
   ["29–33", "**V** Lösung", "Zwei Gruppen lesen vom Platz vor, du trägst die Kette an der Tafel ein. Vergleich mit der Vermutung.", "Puzzleteile zum Gesamtbild fügen; Aha auflösen.", "Plenum", "10"],
   ["33–38", "**V** Schaubild", "Phylenordnung erklären (2 Min.), Prüffragen an 3–4 Schüler. *Ostrakismos nur bei Zeit.", "Sicherung des Kerns als Schaubild (Klausur: Schaubild erklären) (direkt).", "Lehrkraft, Stichproben", "11"],
@@ -58,13 +58,13 @@ const content = [
   table([2600, 7038], ["Begriff", "Status"], [
     ["Phyle", "bekannt (Lückentext Polis, Solon: Rat der 400 aus vier Phylen) – auf Folie 7 erinnert"],
     ["Demos (Demen), Trittys (Trittyen)", "**neu** – Begriffsfolie 7 vor dem Mystery"],
-    ["Rat der 500, Ostrakismos", "neu, aber auf den Schnipseln erklärt"],
+    ["Rat der 500, Ostrakismos", "neu, aber in den Abschnitten erklärt"],
     ["Tyrannis, Alkmeoniden, Akropolis, Vermögensklassen", "bekannt aus den letzten Stunden"],
   ], { firstFill: true }),
 
   h2("1. Druckliste und Vorbereitung"),
   table([2900, 2100, 4638], ["Material", "Menge", "Hinweis"], [
-    [["**Mystery-Schnipsel**", "Mystery_Schnipsel_und_Hilfen.docx, Seite 1"], "1 Blatt pro Dreiergruppe (ca. 6)", "Schnipsel sind gemischt nummeriert. Die Gruppen schneiden selbst (oder vorab schneiden und in Umschläge stecken, spart 2 Min.)."],
+    [["**Mystery-Abschnitte**", "Mystery_Schnipsel_und_Hilfen.docx, Seite 1"], "1 Blatt pro Dreiergruppe (ca. 6)", "8 Abschnitte mit Überschrift, gemischt nummeriert. Die Gruppen schneiden selbst (oder vorab schneiden und in Umschläge stecken, spart 2 Min.)."],
     [["**Gestufte Hilfen**", "dieselbe Datei, Seite 2"], "1–2 ×", "Schneiden, am Pult auslegen."],
     ["Scheren", "1 pro Gruppe", "Falls die Gruppen selbst schneiden."],
   ]),
@@ -76,7 +76,7 @@ const content = [
   p("**Bei Zeitnot kürzen:** Schaubild (Folie 11) nur zeigen, nicht erklären; Ostrakismos weglassen. **Nie kürzen:** Abschlussaufgabe (Folien 12–13).", { size: 18, before: 80 }),
 
   h2("3. Vormachen (Folie 8) – laut denken"),
-  box([p(`„Ich nehme zwei Schnipsel. Nummer ${NR.B} sagt: Seit Solon darf Lysias abstimmen – er hat also das Recht. Nummer ${NR.C} sagt: Sein Nachbar hat ihm Saatgut geliehen, seine Familie ist die mächtigste weit und breit. Wie passt das zusammen? Er hat das Recht, aber er ist abhängig. Ich lege die beiden nebeneinander und schreibe ‚aber‘ dazwischen. So baut ihr eure Kette: Was hängt womit zusammen – weil, deshalb, aber?“`, { size: 18, italics: true, after: 60 }),
+  box([p(`„Ich nehme zwei Abschnitte. Nummer ${NR.A} sagt: Seit Solon darf Lysias abstimmen – er hat also das Recht. Nummer ${NR.B} sagt: In den alten Phylen gaben die Adelsfamilien den Ton an, wer zu einer Familie hielt, stimmte mit ihr. Wie passt das zusammen? Er hat das Recht, aber er nutzt es nicht frei. Ich lege die beiden nebeneinander und schreibe ‚aber‘ dazwischen. So baut ihr eure Kette: Was hängt womit zusammen – weil, deshalb, aber?“`, { size: 18, italics: true, after: 60 }),
     p("**Warnung vor dem Fehler:** „Kleisthenes nimmt niemandem Land weg und ändert Solons Vermögensklassen nicht. Die Lösung liegt woanders.“", { size: 18, after: 0 })]),
 
   h2("4. Erwartungshorizont"),
@@ -90,19 +90,18 @@ const content = [
     ["Peisistratos", "Er schafft Solons Verfassung ab.", "Die Verfassung bleibt, die Ämter bekommen seine Anhänger."],
   ], { firstFill: true }),
   p("**Mystery – die Erklärungskette:**", { size: 18, before: 100, keepNext: true }),
-  table([1500, 1500, 6638], ["Schritt", "Schnipsel", "Inhalt"], D.kette.map(([t, ids, d]) => [t, ids ? nr(ids) : "–", d]), { firstFill: true }),
-  p(`**Ablenker:** Schnipsel ${nr("Q, R")} (Oliven, Großvater in Sikyon) sind wahr, helfen aber nicht. Sie dürfen aussortiert werden – das ist Teil der Methode.`, { size: 18, before: 80 }),
+  table([1500, 1500, 6638], ["Schritt", "Abschnitt", "Inhalt"], D.kette.map(([t, ids, d]) => [t, ids ? nr(ids) : "–", d]), { firstFill: true }),
   p("**Musterantwort (Heft):** „Vorher war Lysias von seinem adligen Nachbarn abhängig und stimmte deshalb mit dessen Familie, obwohl er seit Solon abstimmen durfte. Nach dem Sturz des Hippias setzte Kleisthenes mit Hilfe des Volkes eine Reform durch: Er teilte Attika in drei Gebiete und bildete zehn neue Phylen, die Stadt, Küste und Binnenland mischten. Dadurch wurden die Anhänger des Adligen auf verschiedene Phylen verteilt, und Lysias saß im Rat und im Heer mit Fremden zusammen. Deshalb kann er sein Stimmrecht jetzt frei nutzen.“", { size: 18 }),
 
   h2("5. Beim Umhergehen: Stolpersteine und gestufte Hilfen"),
   table([3300, 6338], ["Stolperstein", "Impuls"], [
-    ["Die Gruppe sucht eine Enteignung oder neue Rechte.", "„Steht auf einem Schnipsel, dass jemand Land verliert? Was ändert Kleisthenes stattdessen?“"],
+    ["Die Gruppe sucht eine Enteignung oder neue Rechte.", "„Steht in einem Abschnitt, dass jemand Land verliert? Was ändert Kleisthenes stattdessen?“"],
     ["Die Ereignisse 510/508 (Sturz, Isagoras, Sparta) werden als Lösung genommen.", "„Das erklärt, warum Kleisthenes an die Macht kommt. Aber warum stimmt Lysias anders?“"],
     ["„Phyle“ wird mit „Demos“ verwechselt.", "„Was ist kleiner: dein Dorf oder deine Phyle?“ (Folie 7)"],
-    ["Die Kette endet bei „Kleisthenes bildet zehn Phylen“.", `„Und was heißt das für Lysias und seinen Nachbarn? Lest ${NR.K} und ${NR.L}.“`],
+    ["Die Kette endet bei „Kleisthenes bildet zehn Phylen“.", `„Und was heißt das für Lysias und seinen Nachbarn? Lest Abschnitt ${NR.F} (letzter Satz) und ${NR.G}.“`],
     ["Ostrakismos wird zur Hauptursache.", "„Hilft das Scherbengericht Lysias bei der Abstimmung im Alltag – oder gegen wen ist es gedacht?“"],
   ], { firstFill: true }),
-  p(`**Gestufte Hilfen am Pult:** Hilfe 1 – in drei Stapel sortieren (Vorher, Wende, Nachher). Hilfe 2 – Schnipsel ${NR.D} und ${NR.J} vergleichen (alte und neue Phylen). Hilfe 3 – Schnipsel ${NR.K} und ${NR.L}: Wo landen die Anhänger des Nachbarn, mit wem ist Lysias zusammen?`, { size: 18, before: 80 }),
+  p(`**Gestufte Hilfen am Pult:** Hilfe 1 – in drei Stapel sortieren (Vorher, Wende, Nachher). Hilfe 2 – Abschnitt ${NR.B} und ${NR.F} vergleichen (alte und neue Phylen). Hilfe 3 – Abschnitt ${NR.F} (letzter Satz) und ${NR.G}: Wo landen die Anhänger des Nachbarn, mit wem ist Lysias zusammen?`, { size: 18, before: 80 }),
 
   h2("6. Tafelskizze"),
   p("**Hauptfläche:** zuerst die Kette Ausgangslage → Wende → Reform → Folge → Ergebnis (Stichworte der Gruppen), dann die Phylen-Skizze:", { size: 18, keepNext: true }),

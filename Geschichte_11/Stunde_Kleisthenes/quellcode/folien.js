@@ -157,9 +157,9 @@ function uebersicht(s, solved) {
 // 8 Vormachen
 {
   const s = pres.addSlide(); s.background = { color: C.white };
-  head(s, 2, "So geht's – ein Beispiel", "Zwei Schnipsel verbinden"); chip(s, "Lehrkraft", 6.35, 0.12, 1.25, 0.28, C.dark, C.white, 11);
-  const ex = [[NR.B, "Seit Solon darf jeder Bürger über 20 in der Volksversammlung abstimmen – auch ein armer Bauer wie Lysias."],
-    [NR.C, "Lysias' Nachbar ist ein reicher Adliger. In schlechten Jahren hat er Lysias Saatgut geliehen …"]];
+  head(s, 2, "So geht's – ein Beispiel", "Zwei Abschnitte verbinden"); chip(s, "Lehrkraft", 6.35, 0.12, 1.25, 0.28, C.dark, C.white, 11);
+  const ex = [[NR.A, "Lysias und sein Nachbar: „Seit Solon darf jeder Bürger über 20 … abstimmen – auch ein armer Bauer wie er. Sein Nachbar ist ein reicher Adliger …“"],
+    [NR.B, "Die alte Ordnung: „… Dort gaben die großen Adelsfamilien den Ton an: Wer zu einer Familie hielt, stimmte mit ihr …“"]];
   ex.forEach(([n, t], i) => {
     const x = 0.5 + i * 4.9;
     card(s, x, 1.35, 4.1, 1.35, C.pale);
@@ -168,7 +168,7 @@ function uebersicht(s, solved) {
   });
   chip(s, "aber", 4.68, 1.82, 0.64, 0.4, C.terra, C.white, 13);
   card(s, 0.5, 2.95, 9, 0.95, C.sand);
-  txt(s, [{ text: "Laut gedacht: ", options: { bold: true, color: C.terra } }, { text: "„Schnipsel " + NR.B + " sagt: Er hat das Recht. Schnipsel " + NR.C + " sagt: Er ist abhängig. Zusammen: Er hat das Stimmrecht, aber er nutzt es nicht frei. Die beiden lege ich nebeneinander und schreibe ‚aber‘ dazwischen.“", options: { italic: true } }],
+  txt(s, [{ text: "Laut gedacht: ", options: { bold: true, color: C.terra } }, { text: "„Abschnitt " + NR.A + " sagt: Er hat das Recht. Abschnitt " + NR.B + " sagt: Die Adelsfamilien bestimmen, wie man stimmt. Zusammen: Er hat das Stimmrecht, aber er nutzt es nicht frei. Die beiden lege ich nebeneinander und schreibe ‚aber‘ dazwischen.“", options: { italic: true } }],
     { x: 0.75, y: 2.95, w: 8.5, h: 0.95, fontSize: 14, valign: "middle" });
   card(s, 0.5, 4.1, 9, 0.85, C.dark);
   txt(s, [{ text: "Achtung, typischer Fehler: ", options: { bold: true, color: C.gold } }, { text: "Kleisthenes nimmt niemandem Land weg und ändert Solons Vermögensklassen nicht. Sucht die Lösung woanders!", options: { color: C.white } }],
@@ -181,16 +181,16 @@ function uebersicht(s, solved) {
 {
   const s = pres.addSlide(); s.background = { color: C.white };
   head(s, 3, "Mystery · Gruppen zu dritt · Heft", "Warum stimmt Lysias anders?"); timeChip(s, "14 Min.");
-  steps(s, ["Schneidet die Schnipsel aus und verteilt sie. Jeder liest seine vor.",
-    "Sortiert aus: Was hilft bei der Frage – was nicht?",
-    "Legt die Schnipsel zu einer Erklärungskette. Schreibt Pfeile oder „weil“, „deshalb“, „aber“ dazwischen.",
+  steps(s, ["Schneidet die acht Abschnitte aus und verteilt sie. Jeder liest seine laut vor.",
+    "Klärt: Was sagt jeder Abschnitt über Lysias und seinen Nachbarn?",
+    "Legt die Abschnitte zu einer Erklärungskette. Schreibt Pfeile oder „weil“, „deshalb“, „aber“ dazwischen.",
     "Jeder schreibt die Antwort in 3–4 Sätzen ins Heft.",
     "Ihr kommt nicht weiter? Holt euch Hilfe 1, 2 oder 3 vom Pult – der Reihe nach."], 0.5, 1.35, 5.6, 13.5, 0.68);
   card(s, 6.3, 1.35, 3.2, 3.55, C.sand);
   txt(s, "SATZANFÄNGE", { x: 6.5, y: 1.45, w: 2.9, h: 0.25, fontSize: 10, bold: true, color: C.terra, charSpacing: 2 });
   txt(s, "„Vorher war Lysias …, weil …“\n\n„Nach dem Sturz des Hippias …“\n\n„Kleisthenes teilte …“\n\n„Dadurch …, deshalb kann Lysias jetzt …“", { x: 6.5, y: 1.8, w: 2.9, h: 3.0, fontSize: 13, italic: true });
   footer(s);
-  s.addNotes("15–29 Min. Indirekt: Die Gruppen erschließen die neuen Informationen selbst (Text in Schnipseln). Umhergehen, zuhören. Stolpersteine und Hilfen in der Handreichung. Nach 10 Min. ansagen: „Noch 4 Minuten – jetzt schreibt jeder die Antwort.“ Zwei Schnipsel helfen nicht (Oliven, Großvater) – sie dürfen aussortiert werden.");
+  s.addNotes("15–29 Min. Indirekt: Die Gruppen erschließen die neuen Informationen selbst (Text in acht Abschnitten). Umhergehen, zuhören. Stolpersteine und Hilfen in der Handreichung. Nach 10 Min. ansagen: „Noch 4 Minuten – jetzt schreibt jeder die Antwort.“ Acht Abschnitte, keine Ablenker.");
 }
 
 // 10 Lösung: Erklärungskette
@@ -201,11 +201,11 @@ function uebersicht(s, solved) {
   D.kette.slice(0, 5).forEach(([t, ids, d], i) => {
     const y = 1.3 + i * 0.7;
     chip(s, t, 0.5, y, 1.55, 0.58, cols[i], C.white, 12.5);
-    txt(s, ids ? "Schnipsel " + nr(ids) : "", { x: 2.2, y, w: 1.6, h: 0.58, fontSize: 10.5, color: C.soft, valign: "middle" });
+    txt(s, ids ? "Abschnitt " + nr(ids) : "", { x: 2.2, y, w: 1.6, h: 0.58, fontSize: 10.5, color: C.soft, valign: "middle" });
     txt(s, d, { x: 3.7, y, w: 5.8, h: 0.58, fontSize: 12.5, valign: "middle", bold: i === 4 });
     if (i < 4) s.addShape(pres.shapes.LINE, { x: 1.27, y: y + 0.58, w: 0, h: 0.12, line: { color: C.soft, width: 1.5, endArrowType: "triangle" } });
   });
-  txt(s, "* Schnipsel " + nr("P") + ": Gegen einen neuen Tyrannen hat das Volk jetzt den Ostrakismos (Scherbengericht). Unwichtig: Schnipsel " + nr("Q, R") + ".", { x: 0.5, y: 4.85, w: 9, h: 0.3, fontSize: 11, color: C.muted });
+  txt(s, "* Abschnitt " + nr("H") + ": Gegen einen neuen Tyrannen hat das Volk jetzt den Ostrakismos (Scherbengericht).", { x: 0.5, y: 4.85, w: 9, h: 0.3, fontSize: 11, color: C.muted });
   footer(s);
   s.addNotes("29–33 Min. Zwei Gruppen lesen ihre Antwort vom Platz vor, du trägst die Kette an der Tafel ein. Dann diese Folie. Impuls: Vergleicht mit eurer Vermutung von vorhin – wie nah wart ihr dran?");
 }
