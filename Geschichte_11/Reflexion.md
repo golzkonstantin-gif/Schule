@@ -7,6 +7,13 @@
 - Einzelstunde = Inhalt, Doppelstunde = Methode (Quellenanalyse am Inhalt der Einzelstunde).
 - Klausur am 25.11.: Peisistratos – Kleisthenes – Perikles (plus Grundlagen Polis bis Solon).
 
+## Termine (Stand 28.10.)
+
+- **Mo:** Einzelstunde Kleisthenes (Inhalt).
+- **Mi:** erst Test, dann Doppelstunde Methode: Quellenanalyse, gemeinsam einen Schreibplan aufstellen.
+- **25.11.:** Klausur (Peisistratos – Kleisthenes – Perikles).
+- Lehrbuch: Zu Kleisthenes steht im Buch wenig (Doppelseite „Die antike Welt“ S. 16/17, M6a/b nicht gescannt) – Sachinformationen werden ergänzt.
+
 ## Lernstand (aktueller Stand)
 
 - Gesichert: Polis und Kolonisation, Krise um 600, Drakon, Solon (Sozial- und Verfassungsreform, Timokratie, Schaubild durchdrungen), Sach- und Werturteil mit Maßstäben 1–4.
