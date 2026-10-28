@@ -31,16 +31,16 @@ const img = (f, w, h) => new Paragraph({ alignment: AlignmentType.CENTER, spacin
 
 const VERLAUF = [
   ["0–2", "**A** Ankommen", "Ziel und Ablauf (Seitentafel + Folie). „Heute klären wir, wie Kleisthenes die Macht der Adelsfamilien brach – ohne ihnen Land wegzunehmen.“", "Transparenz: Die Klasse weiß, worauf alles hinausläuft (direkt).", "Plenum", "1–2"],
-  ["2–7", "**V** Wiederholung", "Fehler-Übersicht zu Herrschaftsformen und Protagonisten (Aristokratie, Drakon, Solon, Peisistratos): allein 6 Fehler finden und im Heft berichtigen (2), Partnercheck (1), Stichproben bei 4–6 Schülern (2).", "Abruf aus dem Gedächtnis über die ganze Reihe (Klausur!) und Fehleranalyse statt Abfrage (direkt).", "EA → PA → Stichproben", "3"],
-  ["7–9", "**V** Lösung + Leitfrage", "Lösungsfolie, Fehler grün verbessern. Dann die offene Leitfrage „Peisistratos – Wegbereiter der Demokratie?“: zwei Schüler antworten in einem Satz, danach der Satz unten auf der Folie.", "Offene Frage der letzten Stunde schließen; das „Aber“ (Adel bestimmt weiter über seine Anhänger) ist die Gelenkstelle zu heute.", "EA, Stichproben", "4"],
-  ["9–10", "**V→I** Gelenkstelle", "Sturz der Tyrannis 514/510 kurz erzählen. „Jetzt kämpfen wieder die Adelsfamilien – wie kann man ihre Macht brechen, ohne Land zu nehmen?“", "Inhaltliche Brücke vom Sturz zur Reform (direkt).", "Lehrkraft", "5"],
-  ["10–11", "**I** Rätsel", "Mystery-Frage vorlesen, jeder schreibt eine Vermutung ins Heft.", "Festlegen für den Aha-Moment; Leitfrage der Stunde.", "EA", "6"],
-  ["11–13", "**I** Begriffe", "Demos und Trittys (Phyle ist bekannt). Prüffrage: „Was ist größer – Demos oder Trittys?“", "Begriffs-Check: Ohne die Begriffe sind die Abschnitte nicht lesbar (direkt).", "Plenum, Stichproben", "7"],
-  ["13–15", "**I** Vormachen", "Zwei Abschnitte laut denkend verbinden („aber“), Warnung vor dem Fehler. Gruppen zu dritt bilden, Sets liegen bereit.", "Modellieren: Die Methode Mystery ist neu (direkt).", "Lehrkraft", "8"],
-  ["15–29", "**V** Mystery", "Gruppen legen die Erklärungskette, jeder schreibt die Antwort ins Heft. Gestufte Hilfen am Pult. Nach 10 Min.: „Noch 4 Minuten – jetzt schreibt jeder.“", "Selbstständige Erschließung neuer Informationen (indirekt); Zusammenhänge selbst herstellen.", "GA (3)", "9"],
-  ["29–33", "**V** Lösung", "Zwei Gruppen lesen vom Platz vor, du trägst die Kette an der Tafel ein. Vergleich mit der Vermutung.", "Puzzleteile zum Gesamtbild fügen; Aha auflösen.", "Plenum", "10"],
-  ["33–38", "**V** Schaubild", "Phylenordnung erklären (2 Min.), Prüffragen an 3–4 Schüler. *Ostrakismos nur bei Zeit.", "Sicherung des Kerns als Schaubild (Klausur: Schaubild erklären) (direkt).", "Lehrkraft, Stichproben", "11"],
-  ["38–45", "**A** Abschluss", "Abschlussaufgabe „Kleisthenes und Solon“ (4), zwei lesen vor, Rückbezug aufs Ziel, Ausblick Mittwoch.", "Prüft genau das Ziel; Verbindung zu Solon (Klausur). **Nie kürzen.**", "EA, Stichproben", "12–13"],
+  ["2–7", "**V** Wiederholung", "Fehler-Übersicht zu Herrschaftsformen und Protagonisten (Aristokratie, Drakon, Solon, Peisistratos): allein 6 Fehler finden und im Heft berichtigen (2), Partnercheck (1), Stichproben bei 4–6 Schülern (2).", "Abruf aus dem Gedächtnis über die ganze Reihe (Klausur!) und Fehleranalyse statt Abfrage (direkt).", "EA → PA → Stichproben", "3–4"],
+  ["7–9", "**V** Lösung + Leitfrage", "Lösungsfolie, Fehler grün verbessern. Dann die offene Leitfrage „Peisistratos – Wegbereiter der Demokratie?“: zwei Schüler antworten in einem Satz, danach der Satz unten auf der Folie.", "Offene Frage der letzten Stunde schließen; das „Aber“ (Adel bestimmt weiter über seine Anhänger) ist die Gelenkstelle zu heute.", "EA, Stichproben", "5–7"],
+  ["9–10", "**V→I** Gelenkstelle", "Sturz der Tyrannis 514/510 kurz erzählen. „Jetzt kämpfen wieder die Adelsfamilien – wie kann man ihre Macht brechen, ohne Land zu nehmen?“", "Inhaltliche Brücke vom Sturz zur Reform (direkt).", "Lehrkraft", "8"],
+  ["10–11", "**I** Rätsel", "Mystery-Frage vorlesen, jeder schreibt eine Vermutung ins Heft.", "Festlegen für den Aha-Moment; Leitfrage der Stunde.", "EA", "9"],
+  ["11–13", "**I** Begriffe", "Demos und Trittys (Phyle ist bekannt). Prüffrage: „Was ist größer – Demos oder Trittys?“", "Begriffs-Check: Ohne die Begriffe sind die Abschnitte nicht lesbar (direkt).", "Plenum, Stichproben", "10–11"],
+  ["13–15", "**I** Vormachen", "Zwei Abschnitte laut denkend verbinden („aber“), Warnung vor dem Fehler. Gruppen zu dritt bilden, Sets liegen bereit.", "Modellieren: Die Methode Mystery ist neu (direkt).", "Lehrkraft", "12"],
+  ["15–29", "**V** Mystery", "Gruppen legen die Erklärungskette, jeder schreibt die Antwort ins Heft. Gestufte Hilfen am Pult. Nach 10 Min.: „Noch 4 Minuten – jetzt schreibt jeder.“", "Selbstständige Erschließung neuer Informationen (indirekt); Zusammenhänge selbst herstellen.", "GA (3)", "13–14"],
+  ["29–33", "**V** Lösung", "Zwei Gruppen lesen vom Platz vor, du trägst die Kette an der Tafel ein. Vergleich mit der Vermutung.", "Puzzleteile zum Gesamtbild fügen; Aha auflösen.", "Plenum", "15"],
+  ["33–38", "**V** Schaubild", "Phylenordnung erklären (2 Min.), Prüffragen an 3–4 Schüler. *Ostrakismos nur bei Zeit.", "Sicherung des Kerns als Schaubild (Klausur: Schaubild erklären) (direkt).", "Lehrkraft, Stichproben", "16"],
+  ["38–45", "**A** Abschluss", "Abschlussaufgabe „Kleisthenes und Solon“ (4), zwei lesen vor, Rückbezug aufs Ziel, Ausblick Mittwoch.", "Prüft genau das Ziel; Verbindung zu Solon (Klausur). **Nie kürzen.**", "EA, Stichproben", "17–19"],
 ];
 
 const content = [
@@ -56,7 +56,7 @@ const content = [
 
   h2("Begriffs-Check"),
   table([2600, 7038], ["Begriff", "Status"], [
-    ["Phyle", "bekannt (Lückentext Polis, Solon: Rat der 400 aus vier Phylen) – auf Folie 7 erinnert"],
+    ["Phyle", "bekannt (Lückentext Polis, Solon: Rat der 400 aus vier Phylen) – auf Folie 11 erinnert"],
     ["Demos (Demen), Trittys (Trittyen)", "**neu** – Begriffsfolie 7 vor dem Mystery"],
     ["Rat der 500, Ostrakismos", "neu, aber in den Abschnitten erklärt"],
     ["Tyrannis, Alkmeoniden, Akropolis, Vermögensklassen", "bekannt aus den letzten Stunden"],
@@ -70,23 +70,23 @@ const content = [
     ["Scheren", "1 pro Gruppe", "Falls die Gruppen selbst schneiden."],
   ]),
   bullet("Seitentafel: Ziel und Ablauf (wie Folie 2).", { box: true }),
-  bullet("Hauptfläche frei lassen für die Erklärungskette (Folie 10) und die Phylen-Skizze (Folie 11).", { box: true }),
+  bullet("Hauptfläche frei lassen für die Erklärungskette (Folie 15) und die Phylen-Skizze (Folie 16).", { box: true }),
 
   h2("2. Verlauf nach AVIVA"),
   table([700, 1400, 3300, 2338, 1100, 800], ["Zeit", "Phase", "Ablauf", "Warum", "Form", "Folie"], VERLAUF.map(r => r.map(x => p(x, { size: 16, after: 0 }))), { firstFill: true }),
-  p("**Bei Zeitnot kürzen:** Schaubild (Folie 11) nur zeigen, nicht erklären; Ostrakismos weglassen. **Nie kürzen:** Abschlussaufgabe (Folien 12–13).", { size: 18, before: 80 }),
+  p("**Bei Zeitnot kürzen:** Schaubild (Folie 16) nur zeigen, nicht erklären; Ostrakismos weglassen. **Nie kürzen:** Abschlussaufgabe (Folien 17–19).", { size: 18, before: 80 }),
 
-  h2("3. Vormachen (Folie 8) – laut denken"),
+  h2("3. Vormachen (Folie 12) – laut denken"),
   box([p(`„Ich nehme zwei Abschnitte. Nummer ${NR.A} sagt: Seit Solon darf Lysias abstimmen – er hat also das Recht. Nummer ${NR.B} sagt: In den alten Phylen gaben die Adelsfamilien den Ton an, wer zu einer Familie hielt, stimmte mit ihr. Wie passt das zusammen? Er hat das Recht, aber er nutzt es nicht frei. Ich lege die beiden nebeneinander und schreibe ‚aber‘ dazwischen. So baut ihr eure Kette: Was hängt womit zusammen – weil, deshalb, aber?“`, { size: 18, italics: true, after: 60 }),
     p("**Warnung vor dem Fehler:** „Kleisthenes nimmt niemandem Land weg und ändert Solons Vermögensklassen nicht. Die Lösung liegt woanders.“", { size: 18, after: 0 })]),
 
   h2("4. Erwartungshorizont"),
-  p("**Fehler-Übersicht (Folie 3) – die 6 Fehler:**", { size: 18, keepNext: true }),
+  p("**Fehler-Übersicht (Folien 3–4, Lösung 5–6) – die 6 Fehler:**", { size: 18, keepNext: true }),
   table([2400, 3600, 3638], ["Protagonist", "Falsch", "Richtig"], [
     ["Aristokratie", "Recht sprechen gewählte Richter aus dem Volk.", "Recht spricht der Adel; geschriebene Gesetze gibt es nicht."],
     ["Drakon", "Er schafft die Schuldknechtschaft ab.", "Die Schuldknechtschaft bleibt bestehen."],
     ["Solon", "… und verteilt das Land der Großgrundbesitzer neu.", "Schulden gestrichen, aber keine Landverteilung."],
-    ["Solon", "Rechte nach der Herkunft; Theten dürfen Archont werden.", "Rechte nach dem Besitz; Theten nur abstimmen und klagen."],
+    ["Solon", "Die Rechte richten sich nach der Herkunft.", "nach dem Besitz (Timokratie); Theten nur abstimmen und klagen."],
     ["Peisistratos", "Die Volksversammlung wählt ihn.", "Er erobert die Macht mit Söldnern, besetzt die Akropolis (546)."],
     ["Peisistratos", "Er schafft Solons Verfassung ab.", "Die Verfassung bleibt, die Ämter bekommen seine Anhänger."],
   ], { firstFill: true }),
@@ -99,7 +99,7 @@ const content = [
   table([3300, 6338], ["Stolperstein", "Impuls"], [
     ["Die Gruppe sucht eine Enteignung oder neue Rechte.", "„Steht in einem Abschnitt, dass jemand Land verliert? Was ändert Kleisthenes stattdessen?“"],
     ["Die Ereignisse 510/508 (Sturz, Isagoras, Sparta) werden als Lösung genommen.", "„Das erklärt, warum Kleisthenes an die Macht kommt. Aber warum stimmt Lysias anders?“"],
-    ["„Phyle“ wird mit „Demos“ verwechselt.", "„Was ist kleiner: dein Dorf oder deine Phyle?“ (Folie 7)"],
+    ["„Phyle“ wird mit „Demos“ verwechselt.", "„Was ist kleiner: dein Dorf oder deine Phyle?“ (Folie 10–11)"],
     ["Die Kette endet bei „Kleisthenes bildet zehn Phylen“.", `„Und was heißt das für Lysias und seinen Nachbarn? Lest Abschnitt ${NR.F} (letzter Satz) und ${NR.G}.“`],
     ["Ostrakismos wird zur Hauptursache.", "„Hilft das Scherbengericht Lysias bei der Abstimmung im Alltag – oder gegen wen ist es gedacht?“"],
   ], { firstFill: true }),

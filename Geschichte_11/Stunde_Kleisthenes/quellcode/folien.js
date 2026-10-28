@@ -1,267 +1,167 @@
+// Folien Kleisthenes – alle Texte für die Klasse mindestens 27 pt (Vorgabe der Lehrkraft).
 const pptxgen = require("pptxgenjs");
-const { D, C, NR, nr } = require("./common.js");
+const { D, C, NR } = require("./common.js");
 const OUT = process.argv[2];
 const pres = new pptxgen(); pres.layout = "LAYOUT_16x9"; pres.title = "Kleisthenes – Warum stimmt Lysias anders?";
 const H = "Cambria", B = "Calibri";
-const FOOT = "Kleisthenes – Warum stimmt Lysias anders?";
-const PH = ["A", "V", "I", "V", "A"], PHN = ["Ankommen", "Vorwissen", "Informieren", "Verarbeiten", "Auswerten"];
+const MIN = 27, TITLE = 36;
+const PH = ["A", "V", "I", "V", "A"];
 
-function txt(s, text, o) { s.addText(text, { isTextBox: true, fontFace: B, color: C.dark, margin: 0, valign: "top", ...o }); }
+function txt(s, text, o) { s.addText(text, { isTextBox: true, fontFace: B, color: C.dark, margin: 0, valign: "top", fontSize: MIN, ...o }); }
+function num(s) { s.slideNumber = { x: 9.3, y: 5.3, w: 0.4, h: 0.25, fontFace: B, fontSize: 12, color: C.soft, align: "right" }; }
 function aviva(s, k, dark = false) {
-  PH.forEach((l, i) => {
-    const on = i === k;
-    s.addText(l, { isTextBox: true, shape: pres.shapes.ROUNDED_RECTANGLE, rectRadius: 0.05, x: 7.75 + i * 0.36, y: 0.1, w: 0.32, h: 0.28,
-      fill: { color: on ? C.terra : (dark ? "3A3024" : C.sand) }, color: on ? C.white : (dark ? "8C8170" : C.soft), fontFace: B, fontSize: 11, bold: true, align: "center", valign: "middle", margin: 0 });
-  });
-  txt(s, PHN[k], { x: 7.75, y: 0.4, w: 1.76, h: 0.2, fontSize: 9, color: dark ? C.gold : C.terra, bold: true, align: "center" });
+  PH.forEach((l, i) => s.addText(l, { isTextBox: true, shape: pres.shapes.ROUNDED_RECTANGLE, rectRadius: 0.06, x: 7.15 + i * 0.5, y: 0.12, w: 0.44, h: 0.44,
+    fill: { color: i === k ? C.terra : (dark ? "3A3024" : C.sand) }, color: i === k ? C.white : (dark ? "8C8170" : C.soft), fontFace: B, fontSize: MIN, bold: true, align: "center", valign: "middle", margin: 0 }));
 }
-function head(s, k, kicker, title) {
-  aviva(s, k);
-  txt(s, kicker.toUpperCase(), { x: 0.5, y: 0.3, w: 7.0, h: 0.25, fontSize: 11, bold: true, color: C.terra, charSpacing: 2 });
-  txt(s, title, { x: 0.5, y: 0.55, w: 7.2, h: 0.65, fontSize: 26, bold: true, fontFace: H });
+function tag(s, t, fill = C.dark, color = C.white) {
+  s.addText(t, { isTextBox: true, shape: pres.shapes.ROUNDED_RECTANGLE, rectRadius: 0.08, x: 7.15, y: 0.66, w: 2.4, h: 0.5, fill: { color: fill }, color, fontFace: B, fontSize: MIN, bold: true, align: "center", valign: "middle", margin: 0 });
 }
-function footer(s, dark = false) {
-  if (!dark) txt(s, FOOT, { x: 0.5, y: 5.22, w: 6, h: 0.2, fontSize: 9, color: C.soft });
-  s.slideNumber = { x: 9.0, y: 5.17, w: 0.5, h: 0.25, fontFace: B, fontSize: 9, color: C.soft, align: "right" };
-}
+function title(s, t, k, o = {}) { aviva(s, k, o.dark); txt(s, t, { x: 0.45, y: 0.15, w: o.w || 6.6, h: 1.05, fontSize: TITLE, bold: true, fontFace: H, valign: "middle", color: o.dark ? C.white : C.dark }); }
 function card(s, x, y, w, h, fill = C.sand) { s.addShape(pres.shapes.ROUNDED_RECTANGLE, { x, y, w, h, rectRadius: 0.08, fill: { color: fill }, line: { color: fill } }); }
-function circle(s, label, x, y, d = 0.42, fill = C.terra, fs = 14) {
-  s.addText(label, { isTextBox: true, shape: pres.shapes.OVAL, x, y, w: d, h: d, fill: { color: fill }, color: C.white, fontFace: H, fontSize: fs, bold: true, align: "center", valign: "middle", margin: 0 });
+function boxText(s, t, x, y, w, h, fill, color, o = {}) { card(s, x, y, w, h, fill); txt(s, t, { x: x + 0.2, y, w: w - 0.4, h, color, valign: "middle", ...o }); }
+function steps(s, items, y, gap) {
+  items.forEach((t, i) => {
+    s.addText(String(i + 1), { isTextBox: true, shape: pres.shapes.OVAL, x: 0.45, y: y + i * gap, w: 0.5, h: 0.5, fill: { color: C.terra }, color: C.white, fontFace: H, fontSize: MIN, bold: true, align: "center", valign: "middle", margin: 0 });
+    txt(s, t, { x: 1.1, y: y + i * gap - 0.02, w: 8.5, h: 0.55, valign: "middle" });
+  });
 }
-function chip(s, t, x, y, w, h, fill, color, fs = 12) {
-  s.addText(t, { isTextBox: true, shape: pres.shapes.ROUNDED_RECTANGLE, rectRadius: 0.08, x, y, w, h, fill: { color: fill }, color, fontFace: B, fontSize: fs, bold: true, align: "center", valign: "middle", margin: 0 });
-}
-function timeChip(s, t) { chip(s, t, 6.35, 0.12, 1.25, 0.28, C.dark, C.white, 11); }
-function solChip(s, t = "Lösung") { chip(s, t, 6.35, 0.12, 1.25, 0.28, C.gold, C.dark, 11); }
-function steps(s, items, x, y, w, fs = 14, gap = 0.62) {
-  items.forEach((t, i) => { circle(s, String(i + 1), x, y + i * gap, 0.4); txt(s, t, { x: x + 0.55, y: y + i * gap - 0.04, w: w - 0.55, h: gap - 0.04, fontSize: fs, valign: "middle" }); });
-}
+const slide = (bg = C.white) => { const s = pres.addSlide(); s.background = { color: bg }; return s; };
 
 // 1 Titel
-{
-  const s = pres.addSlide(); s.background = { color: C.dark };
-  txt(s, "GESCHICHTE · KLASSE 11", { x: 0.7, y: 1.1, w: 8.6, h: 0.3, fontSize: 12, bold: true, color: C.gold, charSpacing: 3 });
-  txt(s, "Warum stimmt Lysias anders?", { x: 0.7, y: 1.45, w: 8.6, h: 0.8, fontSize: 36, bold: true, fontFace: H, color: C.white });
-  txt(s, "Die Reformen des Kleisthenes (508/07 v. Chr.)", { x: 0.7, y: 2.35, w: 8.6, h: 0.5, fontSize: 18, color: "E8DFD0" });
-  s.addNotes("Titelfolie. Seitentafel vorbereitet: Ziel und Ablauf (Folie 2).");
-}
+{ const s = slide(C.dark);
+  txt(s, "GESCHICHTE · KLASSE 11", { x: 0.7, y: 1.0, w: 8.6, h: 0.5, bold: true, color: C.gold, charSpacing: 3 });
+  txt(s, "Warum stimmt Lysias anders?", { x: 0.7, y: 1.55, w: 8.6, h: 0.9, fontSize: 40, bold: true, fontFace: H, color: C.white });
+  txt(s, "Die Reformen des Kleisthenes (508/07 v. Chr.)", { x: 0.7, y: 2.55, w: 8.6, h: 0.6, color: "E8DFD0" });
+  s.addNotes("Titelfolie. Seitentafel: Ziel und Ablauf (Folie 2)."); }
 
 // 2 Ziel und Ablauf
-{
-  const s = pres.addSlide(); s.background = { color: C.white };
-  head(s, 0, "Ankommen", "Ziel und Ablauf"); timeChip(s, "2 Min.");
-  card(s, 0.5, 1.35, 9, 1.05, C.dark);
-  txt(s, [{ text: "Ich kann erklären, ", options: {} }, { text: "wie Kleisthenes mit der neuen Phylenordnung die Macht der Adelsfamilien brach.", options: { bold: true, color: C.gold } }],
-    { x: 0.75, y: 1.35, w: 8.5, h: 1.05, fontSize: 19, color: C.white, valign: "middle" });
-  const A = [["V", "Wiederholung: Wer regierte Athen bisher? Fehler finden"], ["I", "Eine rätselhafte Frage und zwei neue Begriffe"], ["V", "Mystery: Warum stimmt Lysias anders?"], ["V", "Die Lösung und die neue Ordnung Attikas (Ostrakismos*)"], ["A", "Abschlussaufgabe: Kleisthenes und Solon"]];
-  A.forEach(([l, t], i) => { chip(s, l, 0.5, 2.62 + i * 0.5, 0.42, 0.38, C.sand, C.terra, 13); txt(s, t, { x: 1.1, y: 2.62 + i * 0.5, w: 8.2, h: 0.38, fontSize: 15, valign: "middle" }); });
-  footer(s);
-  s.addNotes("0–2 Min. Ziel vorlesen, steht auch an der Seitentafel. * = wird bei Zeitnot nur kurz gestreift. Im Auswerten auf das Ziel zurückkommen.");
-}
+{ const s = slide(); title(s, "Ziel und Ablauf", 0); tag(s, "2 Min.");
+  boxText(s, "Ich kann erklären, wie Kleisthenes mit den neuen Phylen die Macht der Adelsfamilien brach.", 0.45, 1.3, 9.1, 1.25, C.dark, C.white, { bold: true });
+  ["Fehler finden: Wer regierte Athen?", "Rätsel und zwei neue Begriffe", "Mystery: Warum stimmt Lysias anders?", "Lösung und neue Ordnung*", "Abschlussaufgabe"].forEach((t, i) =>
+    txt(s, (i + 1) + "  " + t, { x: 0.6, y: 2.7 + i * 0.5, w: 9, h: 0.5, valign: "middle" }));
+  num(s); s.addNotes("0–2 Min. Ziel vorlesen (steht auch an der Seitentafel). * = bei Zeitnot nur kurz. Im Auswerten auf das Ziel zurückkommen."); }
 
-// 3 Wiederholung: Fehler-Übersicht
+// 3–6 Fehler-Übersicht in zwei Teilen + Lösung
 const UEB = [
-  ["vor 600", ["Aristokratie", "aristos = der Beste"], "Adelsfamilien", [["Die Macht liegt bei wenigen Adelsfamilien; aus ihnen kommen die Archonten.", null], ["Recht sprechen gewählte Richter aus dem Volk.", "Recht spricht der Adel – geschriebene Gesetze gibt es nicht."]]],
-  ["624/621", ["Aristokratie", "aristos = der Beste"], "Drakon", [["Er schreibt das Recht erstmals auf; staatliche Richter ersetzen die Blutrache.", null], ["Er schafft die Schuldknechtschaft ab.", "Die Schuldknechtschaft bleibt bestehen."]]],
-  ["594/93", ["Timokratie", "timē = Wert, Schätzung"], "Solon", [["Er streicht die Schulden und verteilt das Land der Großgrundbesitzer neu.", "Er streicht die Schulden – verteilt aber kein Land neu."], ["Die Rechte richten sich nach der Herkunft; auch Theten dürfen Archont werden.", "Die Rechte richten sich nach dem Besitz; Theten dürfen nur abstimmen und klagen."]]],
-  ["546–528/27", ["Tyrannis", "tyrannos = Alleinherrscher"], "Peisistratos", [["Die Volksversammlung wählt ihn zum Alleinherrscher.", "Er erobert die Macht mit Söldnern (Akropolis)."], ["Er schafft Solons Verfassung ab, fördert aber Bauern und Handwerk.", "Die Verfassung bleibt – die Ämter bekommen seine Anhänger."]]],
+  ["vor 600", "Adelsfamilien", "Aristokratie = Herrschaft der Besten", [["Wenige Adelsfamilien haben die Macht.", null], ["Recht sprechen gewählte Richter aus dem Volk.", "Recht spricht der Adel."]]],
+  ["624/621", "Drakon", "Aristokratie", [["Er schreibt das Recht erstmals auf.", null], ["Er schafft die Schuldknechtschaft ab.", "Die Schuldknechtschaft bleibt."]]],
+  ["594/93", "Solon", "Timokratie = Herrschaft nach dem Wert (Besitz)", [["Er streicht die Schulden und verteilt das Land neu.", "Schulden ja – kein neues Land."], ["Die Rechte richten sich nach der Herkunft.", "Die Rechte richten sich nach dem Besitz."]]],
+  ["546", "Peisistratos", "Tyrannis = Herrschaft eines Alleinherrschers", [["Die Volksversammlung wählt ihn.", "Er erobert die Macht mit Söldnern."], ["Er schafft Solons Verfassung ab.", "Die Verfassung bleibt."]]],
 ];
-function uebersicht(s, solved) {
-  const X = [0.5, 1.45, 3.3, 4.6], Wc = [0.9, 1.8, 1.25, 4.9];
-  ["Zeit", "Herrschaftsform (griech.)", "Protagonist", "Was geschah?"].forEach((h, c) => chip(s, h, X[c], 1.2, Wc[c], 0.3, C.dark, C.white, 11.5));
-  UEB.forEach(([z, f, pr, st], r) => {
-    const y = 1.56 + r * 0.8;
-    card(s, X[0], y, 9.0, 0.76, r % 2 ? C.white : C.pale);
-    txt(s, z, { x: X[0] + 0.05, y, w: Wc[0], h: 0.76, fontSize: 12, bold: true, valign: "middle" });
-    txt(s, [{ text: f[0] + "\n", options: { fontSize: 12.5, bold: true, color: C.terra } }, { text: f[1], options: { fontSize: 9.5, italic: true, color: C.muted } }], { x: X[1], y, w: Wc[1], h: 0.76, valign: "middle" });
-    txt(s, pr, { x: X[2], y, w: Wc[2], h: 0.76, fontSize: 13, bold: true, fontFace: H, valign: "middle" });
+function ueb(s, rows, solved) {
+  rows.forEach(([z, pr, form, st], r) => {
+    const y = 1.25 + r * 2.05;
+    card(s, 0.45, y, 9.1, 1.95, r % 2 ? C.white : C.pale);
+    txt(s, [{ text: pr + "  ", options: { bold: true, fontFace: H } }, { text: z, options: { color: C.muted } }], { x: 0.65, y: y + 0.03, w: 8.8, h: 0.45, valign: "middle" });
+    txt(s, form, { x: 0.65, y: y + 0.48, w: 8.8, h: 0.45, valign: "middle", color: C.terra, bold: true });
     st.forEach(([t, fix], k) => {
-      const yy = y + 0.03 + k * 0.36;
-      if (!solved || !fix) txt(s, (solved ? "✓ " : "• ") + t, { x: X[3], y: yy, w: Wc[3], h: 0.36, fontSize: 11.5, valign: "middle", color: solved ? C.green : C.dark });
-      else txt(s, [{ text: "✗ ", options: { color: C.terra, bold: true } }, { text: fix, options: { color: C.terra, bold: true } }], { x: X[3], y: yy, w: Wc[3], h: 0.36, fontSize: 11.5, valign: "middle" });
+      const yy = y + 0.95 + k * 0.48;
+      if (!solved) txt(s, "• " + t, { x: 0.65, y: yy, w: 8.8, h: 0.46, valign: "middle" });
+      else if (!fix) txt(s, "✓ " + t, { x: 0.65, y: yy, w: 8.8, h: 0.46, valign: "middle", color: C.green });
+      else txt(s, "✗ " + fix, { x: 0.65, y: yy, w: 8.8, h: 0.46, valign: "middle", color: C.terra, bold: true });
     });
   });
 }
-{
-  const s = pres.addSlide(); s.background = { color: C.white };
-  head(s, 1, "Wiederholung · allein, dann zu zweit · Heft", "Hier stimmt etwas nicht!"); timeChip(s, "5 Min.");
-  uebersicht(s, false);
-  card(s, 0.5, 4.8, 9.0, 0.36, C.terra);
-  txt(s, "Finde die 6 Fehler und berichtige sie im Heft. Dann vergleiche mit deinem Nachbarn.   (-kratie: kratein = herrschen)", { x: 0.65, y: 4.8, w: 8.7, h: 0.36, fontSize: 11.5, bold: true, color: C.white, valign: "middle" });
-  s.addNotes("2–7 Min. Direkt: Vorwissen aktivieren über einen Fehlertext. Allein (2), Partnercheck (1), Stichproben bei 4–6 Schülern unterschiedlichen Niveaus (2). Buch und Hefter zu – nur das Heft für die Berichtigung. Die Fehler: Recht beim Adel; Schuldknechtschaft bleibt bei Drakon; Solon ohne Landverteilung; Rechte nach Besitz, Theten kein Archont; Peisistratos mit Söldnern; Verfassung bleibt.");
-}
+[[0, 2], [2, 4]].forEach(([a, b], i) => { const s = slide(); title(s, `Finde die Fehler (${i + 1}/2)`, 1); tag(s, i === 0 ? "5 Min." : "6 Fehler");
+  ueb(s, UEB.slice(a, b), false); num(s);
+  s.addNotes(i === 0 ? "2–7 Min. Buch und Hefter zu, nur das Heft. Ansage: „Auf zwei Folien stehen 6 Fehler. Schreibt jede Berichtigung ins Heft.“ Allein (2), Partnercheck (1), Stichproben bei 4–6 Schülern unterschiedlichen Niveaus (2). Zwischen Folie 3 und 4 nach Bedarf wechseln." : "Weiter allein bzw. im Partnercheck."); });
+[[0, 2], [2, 4]].forEach(([a, b], i) => { const s = slide(); title(s, `Lösung (${i + 1}/2)`, 1); tag(s, "Lösung", C.gold, C.dark);
+  ueb(s, UEB.slice(a, b), true); num(s);
+  s.addNotes("7–8 Min. Vergleichen, Fehler im Heft grün verbessern."); });
 
-// 4 Lösung Fehler-Übersicht + Leitfrage Peisistratos
-{
-  const s = pres.addSlide(); s.background = { color: C.white };
-  head(s, 1, "Wiederholung · Lösung", "Die richtige Übersicht"); solChip(s);
-  uebersicht(s, true);
-  card(s, 0.5, 4.8, 9.0, 0.36, C.dark);
-  txt(s, "Peisistratos – Wegbereiter der Demokratie? Ja, ungewollt. Aber: Der Adel bestimmt weiter über seine Anhänger.", { x: 0.65, y: 4.8, w: 8.7, h: 0.36, fontSize: 11.5, bold: true, color: C.gold, valign: "middle" });
-  s.addNotes("7–9 Min. Lösung vergleichen, Fehler im Heft grün verbessern. Dann die offene Leitfrage der letzten Stunde: zwei Schüler antworten in einem Satz, danach der Satz unten auf der Folie. Das „Aber“ ist die Gelenkstelle zu heute.");
-}
+// 7 Leitfrage Peisistratos
+{ const s = slide(); title(s, "Peisistratos – Wegbereiter der Demokratie?", 1, { w: 6.6 }); tag(s, "Lösung", C.gold, C.dark);
+  boxText(s, "Ja – ungewollt: Bauern und Mittelstand werden unabhängiger, der mächtigste Adel verliert.", 0.45, 1.35, 9.1, 1.6, C.sand, C.dark);
+  boxText(s, "Aber: Die Adelsfamilien bestimmen weiter über ihre Anhänger.", 0.45, 3.15, 9.1, 1.3, C.dark, C.gold, { bold: true });
+  num(s); s.addNotes("8–9 Min. Offene Leitfrage der letzten Stunde: zwei Schüler antworten in einem Satz, dann aufdecken. Das „Aber“ ist die Gelenkstelle zu heute."); }
 
-// 5 Gelenkstelle: Sturz
-{
-  const s = pres.addSlide(); s.background = { color: C.white };
-  head(s, 1, "Und dann?", "Das Ende der Tyrannis");
-  const T = [["528/27 v. Chr.", "Peisistratos stirbt. Seine Söhne Hippias und Hipparchos herrschen weiter."], ["514 v. Chr.", "Hipparchos wird ermordet. Es kommt zu blutigen Aufständen."], ["510 v. Chr.", "Hippias wird verbannt. Athen hat keinen Herrscher mehr."]];
-  s.addShape(pres.shapes.LINE, { x: 0.7, y: 1.75, w: 8.6, h: 0, line: { color: C.light, width: 3 } });
-  T.forEach(([t, d], i) => {
-    const x = 0.5 + i * 3.05;
-    circle(s, String(i + 1), x + 0.05, 1.53, 0.45);
-    txt(s, t, { x, y: 2.1, w: 2.85, h: 0.4, fontSize: 18, bold: true, fontFace: H, color: C.terra });
-    txt(s, d, { x, y: 2.55, w: 2.85, h: 1.2, fontSize: 15 });
+// 8 Sturz
+{ const s = slide(); title(s, "Das Ende der Tyrannis", 1);
+  [["528/27", "Peisistratos stirbt, seine Söhne herrschen."], ["514", "Sein Sohn Hipparchos wird ermordet."], ["510", "Sein Sohn Hippias wird verbannt."]].forEach(([j, t], i) =>
+    txt(s, [{ text: j + " v. Chr.   ", options: { bold: true, color: C.terra, fontFace: H } }, { text: t }], { x: 0.6, y: 1.35 + i * 0.6, w: 9, h: 0.55, valign: "middle" }));
+  boxText(s, "Jetzt kämpfen wieder die Adelsfamilien. Wie bricht man ihre Macht – ohne Land wegzunehmen?", 0.45, 3.35, 9.1, 1.6, C.dark, C.gold, { bold: true });
+  num(s); s.addNotes("9–10 Min. Kurz selbst erzählen (direkt). Quelle: Lehrbuch S. 16."); }
+
+// 9 Rätsel
+{ const s = slide(C.dark); aviva(s, 2, true); tag(s, "1 Min.", C.gold, C.dark);
+  txt(s, "Das Rätsel", { x: 0.45, y: 0.15, w: 6.6, h: 1.05, fontSize: TITLE, bold: true, fontFace: H, color: C.white, valign: "middle" });
+  txt(s, D.frage, { x: 0.45, y: 1.3, w: 9.1, h: 2.9, italic: true, color: "E8DFD0" });
+  boxText(s, "Schreib ins Heft: „Ich vermute, Lysias stimmt anders, weil …“", 0.45, 4.3, 9.1, 0.95, C.terra, C.white, { bold: true });
+  num(s); s.addNotes("10–11 Min. Jeder legt sich fest (Aha vorbereiten). Nicht besprechen – die Vermutung wird am Ende mit der Lösung verglichen. Lysias ist erfunden, Paiania und die Phyle Pandionis gab es wirklich."); }
+
+// 10–11 Begriffe
+[["Demos", "griech. dēmos = Volk, Dorfgemeinde", "Eine Dorfgemeinde in Attika. Wer in der Liste seines Demos steht, ist Bürger.", "Mehrzahl: Demen (rund 139)"],
+ ["Trittys", "griech. „Drittel“", "Ein Bezirk aus mehreren Demen. Jede neue Phyle besteht aus drei Trittyen.", "Mehrzahl: Trittyen. Bekannt: Phyle = Stammesverband"]].forEach(([w, e, d, m], i) => {
+  const s = slide(); aviva(s, 2);
+  txt(s, w, { x: 0.45, y: 0.15, w: 6.6, h: 1.05, fontSize: 44, bold: true, fontFace: H, valign: "middle" });
+  txt(s, e, { x: 0.45, y: 1.2, w: 9, h: 0.5, italic: true, color: C.muted });
+  s.addShape(pres.shapes.RECTANGLE, { x: 0.45, y: 1.85, w: 0.08, h: 1.7, fill: { color: C.terra }, line: { color: C.terra } });
+  txt(s, d, { x: 0.75, y: 1.85, w: 8.8, h: 1.7, fontSize: 30 });
+  boxText(s, m, 0.45, 3.9, 9.1, 0.9, C.dark, C.gold, { bold: true });
+  num(s); s.addNotes(i === 0 ? "11–13 Min. Direkt: Begriffe vor dem Mystery klären." : "Prüffrage an zwei Schüler: „Was ist größer – Demos oder Trittys?“ (Trittys)."); });
+
+// 12 Vormachen
+{ const s = slide(); title(s, "So geht's – ein Beispiel", 2); tag(s, "Lehrkraft");
+  boxText(s, NR.A + "  … darf abstimmen – auch ein armer Bauer wie er …", 0.45, 1.3, 4.05, 1.5, C.pale, C.dark);
+  boxText(s, NR.B + "  ______ die großen Adelsfamilien geben den Ton an …", 5.5, 1.3, 4.05, 1.5, C.pale, C.dark);
+  s.addText("Aber", { isTextBox: true, shape: pres.shapes.ROUNDED_RECTANGLE, rectRadius: 0.08, x: 4.5, y: 1.8, w: 1.0, h: 0.5, fill: { color: C.terra }, color: C.white, fontFace: B, fontSize: MIN, bold: true, align: "center", valign: "middle", margin: 0 });
+  boxText(s, "Achtung: Kleisthenes nimmt niemandem Land weg und ändert Solons Klassen nicht.", 0.45, 3.1, 9.1, 1.4, C.dark, C.gold, { bold: true });
+  num(s); s.addNotes(`13–15 Min. Direkt: laut denken. „Abschnitt ${NR.A} sagt: Er hat das Recht. Abschnitt ${NR.B} sagt: Die Adelsfamilien bestimmen, wie man stimmt. Das ist ein Gegensatz – also passt ‚Aber‘ in die Lücke: ‚Aber die großen Adelsfamilien geben … den Ton an.‘ Der Satz stimmt, ich streiche ‚aber‘ unten auf dem Blatt ab.“ Dann die Warnung vorlesen. Gruppen zu dritt bilden, Sets liegen bereit.`); }
+
+// 13 Auftrag
+{ const s = slide(); title(s, "Mystery · zu dritt", 3); tag(s, "14 Min.");
+  steps(s, ["Ausschneiden – jeder liest seine Abschnitte vor.", "Kette legen: Was gehört zusammen?", "Wörter von unten in die Lücken, abstreichen.", "Jeder schreibt die Antwort ins Heft.", "Fest? Hilfe 1, 2, 3 vom Pult holen."], 1.35, 0.72);
+  num(s); s.addNotes("15–29 Min. Indirekt: Die Gruppen erschließen die neuen Informationen selbst. Umhergehen, zuhören; Stolpersteine und Hilfen in der Handreichung. Nach 10 Min. Folie 14 zeigen: „Noch 4 Minuten – jetzt schreibt jeder die Antwort.“"); }
+
+// 14 Satzanfänge
+{ const s = slide(); title(s, "Eure Antwort ins Heft", 3); tag(s, "4 Min.");
+  ["„Vorher war Lysias …, aber …“", "„Nach dem Sturz des Hippias …“", "„Kleisthenes teilte …“", "„Dadurch …, deshalb kann Lysias jetzt …“"].forEach((t, i) =>
+    boxText(s, t, 0.45, 1.35 + i * 0.95, 9.1, 0.8, i % 2 ? C.white : C.sand, C.dark, { italic: true }));
+  num(s); s.addNotes("25–29 Min. Während die Gruppen schreiben, stehen lassen."); }
+
+// 15 Lösungskette
+{ const s = slide(); title(s, "Die Lösung", 3); tag(s, "Lösung", C.gold, C.dark);
+  const K = [["Vorher", "Recht ja – aber an die Familie gebunden", C.muted], ["Wende", "Das Volk setzt sich durch", C.terra], ["Reform", "10 gemischte Phylen", C.blue], ["Folge", "Lysias ist unter Fremden", C.green], ["Ergebnis", "Er stimmt frei ab", C.dark]];
+  K.forEach(([l, t, col], i) => {
+    const y = 1.3 + i * 0.78;
+    s.addText(l, { isTextBox: true, shape: pres.shapes.ROUNDED_RECTANGLE, rectRadius: 0.08, x: 0.45, y, w: 2.3, h: 0.62, fill: { color: col }, color: C.white, fontFace: B, fontSize: MIN, bold: true, align: "center", valign: "middle", margin: 0 });
+    txt(s, t, { x: 2.95, y, w: 6.6, h: 0.62, valign: "middle", bold: i === 4 });
   });
-  card(s, 0.5, 4.0, 9, 0.9, C.dark);
-  txt(s, "Jetzt kämpfen wieder die Adelsfamilien um die Macht. Wie kann man ihre Macht brechen – ohne ihnen das Land wegzunehmen?", { x: 0.75, y: 4.0, w: 8.5, h: 0.9, fontSize: 16, bold: true, color: C.gold, valign: "middle" });
-  footer(s);
-  s.addNotes("9–10 Min. Kurz selbst erzählen (direkt). Quelle: Lehrbuch S. 16 (Hipparchos ermordet 514, Hippias verbannt 510).");
-}
+  num(s); s.addNotes(`29–33 Min. Zwei Gruppen lesen vom Platz vor, du trägst die Kette an der Tafel ein. Abschnitte: Vorher ${NR.A}+${NR.B}, Wende ${NR.C}+${NR.D}, Reform ${NR.E}+${NR.F}, Folge ${NR.G}; Zusatz ${NR.H} (Ostrakismos). Verbindungswörter: aber – doch dann – daraufhin – danach – daraus – dadurch – (deshalb) – außerdem. Vergleich mit der Vermutung: Wie nah wart ihr dran?`); }
 
-// 6 Mystery-Frage + Vermutung
-{
-  const s = pres.addSlide(); s.background = { color: C.dark };
-  aviva(s, 2, true);
-  txt(s, "DAS RÄTSEL · ALLEIN", { x: 0.5, y: 0.3, w: 7, h: 0.25, fontSize: 11, bold: true, color: C.gold, charSpacing: 2 });
-  chip(s, "1 Min.", 6.35, 0.12, 1.25, 0.28, C.gold, C.dark, 11);
-  txt(s, "Warum stimmt Lysias anders?", { x: 0.5, y: 0.65, w: 7, h: 0.6, fontSize: 28, bold: true, fontFace: H, color: C.white });
-  txt(s, D.frage, { x: 0.5, y: 1.45, w: 9, h: 1.9, fontSize: 19, italic: true, color: "E8DFD0" });
-  card(s, 0.5, 3.6, 9, 0.95, C.terra);
-  txt(s, "Schreib eine erste Vermutung ins Heft: „Ich vermute, Lysias stimmt anders, weil …“", { x: 0.75, y: 3.6, w: 8.5, h: 0.95, fontSize: 17, bold: true, color: C.white, valign: "middle" });
-  footer(s, true);
-  s.addNotes("10–11 Min. Jeder legt sich fest (Aha vorbereiten). Nicht besprechen – die Vermutung wird am Ende mit der Lösung verglichen. Lysias ist eine erfundene Figur, Paiania und die Phyle Pandionis gab es wirklich.");
-}
-
-// 7 Begriffe
-{
-  const s = pres.addSlide(); s.background = { color: C.white };
-  aviva(s, 2);
-  txt(s, "BEGRIFFE", { x: 0.5, y: 0.25, w: 6, h: 0.3, fontSize: 12, bold: true, color: C.terra, charSpacing: 3 });
-  const Bg = [["Demos", "griech. dēmos = Volk, auch: Dorfgemeinde", "Eine Dorf- oder Stadtteilgemeinde in Attika. Kleisthenes gliedert Attika in rund 139 Demen. Wer in der Liste seines Demos steht, ist Bürger."],
-    ["Trittys", "griech. „Drittel“ (Mehrzahl: Trittyen)", "Ein Bezirk aus mehreren Demen. Jede neue Phyle besteht aus drei Trittyen – daher der Name."]];
-  Bg.forEach(([t, e, d], i) => {
-    const x = 0.5 + i * 4.6;
-    txt(s, t, { x, y: 0.6, w: 4.3, h: 0.6, fontFace: H, fontSize: 34, bold: true });
-    txt(s, e, { x, y: 1.2, w: 4.3, h: 0.3, fontSize: 14, italic: true, color: C.muted });
-    s.addShape(pres.shapes.RECTANGLE, { x, y: 1.6, w: 0.07, h: 2.3, fill: { color: C.terra }, line: { color: C.terra } });
-    txt(s, d, { x: x + 0.25, y: 1.6, w: 4.05, h: 2.4, fontSize: 21 });
-  });
-  card(s, 0.5, 4.2, 9, 0.8, C.dark);
-  s.addText([{ text: "Schon bekannt: ", options: { bold: true, color: C.gold } }, { text: "Phyle = Stammesverband. Bisher gab es vier alte Phylen, in denen die Adelsfamilien den Ton angaben.", options: { color: C.white } }],
-    { x: 0.8, y: 4.2, w: 8.5, h: 0.8, fontFace: B, fontSize: 16, valign: "middle", margin: 0 });
-  footer(s);
-  s.addNotes("11–13 Min. Direkt: Begriffe vor dem Mystery klären (Begriffs-Check). Prüffrage an zwei Schüler: „Was ist größer – Demos oder Trittys?“ (Trittys).");
-}
-
-// 8 Vormachen
-{
-  const s = pres.addSlide(); s.background = { color: C.white };
-  head(s, 2, "So geht's – ein Beispiel", "Zwei Abschnitte verbinden"); chip(s, "Lehrkraft", 6.35, 0.12, 1.25, 0.28, C.dark, C.white, 11);
-  const ex = [[NR.A, "Lysias und sein Nachbar: „Seit Solon darf jeder Bürger über 20 … abstimmen – auch ein armer Bauer wie er. Sein Nachbar ist ein reicher Adliger …“"],
-    [NR.B, "Die alte Ordnung: „________ die großen Adelsfamilien geben in den vier alten Phylen den Ton an …“"]];
-  ex.forEach(([n, t], i) => {
-    const x = 0.5 + i * 4.9;
-    card(s, x, 1.35, 4.1, 1.35, C.pale);
-    s.addShape(pres.shapes.ROUNDED_RECTANGLE, { x, y: 1.35, w: 4.1, h: 1.35, rectRadius: 0.08, fill: { type: "none" }, line: { color: C.light, width: 1, dashType: "dash" } });
-    txt(s, [{ text: n + "  ", options: { bold: true, color: C.terra, fontFace: H } }, { text: t }], { x: x + 0.15, y: 1.45, w: 3.8, h: 1.2, fontSize: 13.5 });
-  });
-  chip(s, "aber", 4.68, 1.82, 0.64, 0.4, C.terra, C.white, 13);
-  card(s, 0.5, 2.95, 9, 0.95, C.sand);
-  txt(s, [{ text: "Laut gedacht: ", options: { bold: true, color: C.terra } }, { text: "„Abschnitt " + NR.A + " sagt: Er hat das Recht. Abschnitt " + NR.B + " sagt: Die Adelsfamilien bestimmen, wie man stimmt. Das ist ein Gegensatz – also passt ‚Aber‘ in die Lücke: ‚Aber die großen Adelsfamilien geben … den Ton an.‘ Der Satz stimmt, ich streiche ‚aber‘ unten ab.“", options: { italic: true } }],
-    { x: 0.75, y: 2.95, w: 8.5, h: 0.95, fontSize: 14, valign: "middle" });
-  card(s, 0.5, 4.1, 9, 0.85, C.dark);
-  txt(s, [{ text: "Achtung, typischer Fehler: ", options: { bold: true, color: C.gold } }, { text: "Kleisthenes nimmt niemandem Land weg und ändert Solons Vermögensklassen nicht. Sucht die Lösung woanders!", options: { color: C.white } }],
-    { x: 0.75, y: 4.1, w: 8.5, h: 0.85, fontSize: 15, valign: "middle" });
-  footer(s);
-  s.addNotes("13–15 Min. Direkt: modellieren und laut denken. Warnung vor dem Fehler vorlesen. Dann Gruppen zu dritt bilden und Sets austeilen (vorher bereitlegen).");
-}
-
-// 9 Auftrag Mystery
-{
-  const s = pres.addSlide(); s.background = { color: C.white };
-  head(s, 3, "Mystery · Gruppen zu dritt · Heft", "Warum stimmt Lysias anders?"); timeChip(s, "14 Min.");
-  steps(s, ["Schneidet die acht Abschnitte aus und verteilt sie. Jeder liest seine laut vor.",
-    "Klärt: Was sagt jeder Abschnitt über Lysias und seinen Nachbarn?",
-    "Legt die Abschnitte zu einer Erklärungskette. Schreibt die passenden Verbindungswörter (unten auf dem Blatt) in die Lücken am Anfang der Abschnitte und streicht sie ab.",
-    "Jeder schreibt die Antwort in 3–4 Sätzen ins Heft.",
-    "Ihr kommt nicht weiter? Holt euch Hilfe 1, 2 oder 3 vom Pult – der Reihe nach."], 0.5, 1.35, 5.6, 13.5, 0.68);
-  card(s, 6.3, 1.35, 3.2, 3.55, C.sand);
-  txt(s, "SATZANFÄNGE", { x: 6.5, y: 1.45, w: 2.9, h: 0.25, fontSize: 10, bold: true, color: C.terra, charSpacing: 2 });
-  txt(s, "„Vorher war Lysias …, weil …“\n\n„Nach dem Sturz des Hippias …“\n\n„Kleisthenes teilte …“\n\n„Dadurch …, deshalb kann Lysias jetzt …“", { x: 6.5, y: 1.8, w: 2.9, h: 3.0, fontSize: 13, italic: true });
-  footer(s);
-  s.addNotes("15–29 Min. Indirekt: Die Gruppen erschließen die neuen Informationen selbst (Text in acht Abschnitten). Umhergehen, zuhören. Stolpersteine und Hilfen in der Handreichung. Nach 10 Min. ansagen: „Noch 4 Minuten – jetzt schreibt jeder die Antwort.“ Acht Abschnitte, keine Ablenker.");
-}
-
-// 10 Lösung: Erklärungskette
-{
-  const s = pres.addSlide(); s.background = { color: C.white };
-  head(s, 3, "Mystery · Lösung", "Die Erklärungskette"); solChip(s);
-  const cols = [C.muted, C.terra, C.blue, C.green, C.dark];
-  D.kette.slice(0, 5).forEach(([t, ids, d], i) => {
-    const y = 1.3 + i * 0.7;
-    chip(s, t, 0.5, y, 1.55, 0.58, cols[i], C.white, 12.5);
-    txt(s, ids ? "Abschnitt " + nr(ids) : "", { x: 2.2, y, w: 1.6, h: 0.58, fontSize: 10.5, color: C.soft, valign: "middle" });
-    txt(s, d, { x: 3.7, y, w: 5.8, h: 0.58, fontSize: 12.5, valign: "middle", bold: i === 4 });
-    if (i < 4) s.addShape(pres.shapes.LINE, { x: 1.27, y: y + 0.58, w: 0, h: 0.12, line: { color: C.soft, width: 1.5, endArrowType: "triangle" } });
-    const V = ["aber", "doch dann", "daraufhin · danach · daraus", "dadurch", "deshalb (Antwort)"];
-    if (V[i]) txt(s, V[i], { x: 2.2, y: y + 0.36, w: 1.5, h: 0.2, fontSize: 9, italic: true, bold: true, color: C.terra });
-  });
-  txt(s, "* Abschnitt " + nr("H") + ": Gegen einen neuen Tyrannen hat das Volk jetzt den Ostrakismos (Scherbengericht).", { x: 0.5, y: 4.85, w: 9, h: 0.3, fontSize: 11, color: C.muted });
-  footer(s);
-  s.addNotes("29–33 Min. Zwei Gruppen lesen ihre Antwort vom Platz vor, du trägst die Kette an der Tafel ein. Dann diese Folie. Impuls: Vergleicht mit eurer Vermutung von vorhin – wie nah wart ihr dran?");
-}
-
-// 11 Schaubild Phylenordnung
-{
-  const s = pres.addSlide(); s.background = { color: C.white };
-  head(s, 3, "Die neue Ordnung Attikas", "Mischen statt enteignen"); solChip(s, "Ergebnis");
+// 16 Schaubild
+{ const s = slide(); title(s, "Mischen statt enteignen", 3); tag(s, "Ergebnis", C.gold, C.dark);
   const R = [["Stadt", "C9962A"], ["Küste", C.blue], ["Binnenland", C.green]];
   R.forEach(([n, col], r) => {
-    const y = 1.45 + r * 1.05;
-    txt(s, n, { x: 0.5, y, w: 1.3, h: 0.3, fontSize: 13, bold: true, color: col });
-    for (let i = 0; i < 10; i++) s.addShape(pres.shapes.RECTANGLE, { x: 0.5 + i * 0.29, y: y + 0.33, w: 0.24, h: 0.42, fill: { color: col }, line: { color: C.white, width: 1 } });
+    const y = 1.35 + r * 0.95;
+    txt(s, n, { x: 0.45, y, w: 1.95, h: 0.55, bold: true, color: col, valign: "middle" });
+    for (let i = 0; i < 10; i++) s.addShape(pres.shapes.RECTANGLE, { x: 2.45 + i * 0.19, y: y + 0.05, w: 0.15, h: 0.45, fill: { color: col }, line: { color: C.white, width: 0.5 } });
   });
-  txt(s, "3 Gebiete × 10 Trittyen = 30 Trittyen", { x: 0.5, y: 4.55, w: 3.2, h: 0.3, fontSize: 12, bold: true });
-  s.addShape(pres.shapes.LINE, { x: 3.65, y: 2.95, w: 0.75, h: 0, line: { color: C.dark, width: 3, endArrowType: "triangle" } });
-  txt(s, "per Los", { x: 3.6, y: 2.6, w: 0.9, h: 0.3, fontSize: 11, color: C.muted, align: "center" });
+  s.addShape(pres.shapes.LINE, { x: 4.4, y: 2.3, w: 0.5, h: 0, line: { color: C.dark, width: 3, endArrowType: "triangle" } });
   for (let p = 0; p < 10; p++) {
-    const x = 4.6 + (p % 5) * 0.98, y = 1.45 + Math.floor(p / 5) * 1.62;
-    R.forEach(([, col], r) => s.addShape(pres.shapes.RECTANGLE, { x, y: y + r * 0.36, w: 0.8, h: 0.34, fill: { color: col }, line: { color: C.white, width: 1 } }));
-    txt(s, "Phyle " + (p + 1), { x: x - 0.05, y: y + 1.1, w: 0.9, h: 0.25, fontSize: 9.5, align: "center", color: C.muted });
+    const x = 5.05 + (p % 5) * 0.9, y = 1.3 + Math.floor(p / 5) * 1.35;
+    R.forEach(([, col], r) => s.addShape(pres.shapes.RECTANGLE, { x, y: y + r * 0.38, w: 0.74, h: 0.36, fill: { color: col }, line: { color: C.white, width: 1 } }));
   }
-  txt(s, "10 neue Phylen – jede mit Stadt, Küste und Binnenland", { x: 4.6, y: 4.55, w: 4.9, h: 0.3, fontSize: 12, bold: true });
-  card(s, 0.5, 4.88, 9, 0.32, C.dark);
-  txt(s, "Jede Phyle schickt 50 Männer → Rat der 500 · Die Gefolgschaft eines Adligen ist über mehrere Phylen verteilt.", { x: 0.65, y: 4.88, w: 8.7, h: 0.32, fontSize: 12, bold: true, color: C.gold, valign: "middle" });
-  s.addNotes("33–38 Min. Schaubild erklären (direkt, 2 Min.), dann Prüffragen an 3–4 Schüler: „Warum mischt Kleisthenes gerade drei Gebiete?“ (damit keine Familie in einer Phyle die Mehrheit hat) – „Was verliert der Adlige, was behält er?“ (verliert die geschlossene Gefolgschaft, behält Land und Vermögensklasse). Tafelskizze in der Handreichung.");
-  s.slideNumber = { x: 9.0, y: 5.25, w: 0.5, h: 0.25, fontFace: B, fontSize: 9, color: C.soft, align: "right" };
-}
+  boxText(s, "3 Gebiete × 10 Trittyen → 10 gemischte Phylen → je 50 Männer im Rat der 500", 0.45, 4.15, 9.1, 1.0, C.dark, C.gold, { bold: true });
+  num(s); s.addNotes("33–38 Min. Links: Stadt, Küste, Binnenland mit je 10 Trittyen. Rechts: 10 neue Phylen, jede mit einem Stück aus jedem Gebiet (durch das Los). Prüffragen an 3–4 Schüler: „Warum gerade drei Gebiete mischen?“ (damit keine Familie eine Phyle beherrscht) – „Was verliert der Adlige, was behält er?“ (verliert die geschlossene Gefolgschaft, behält Land und Vermögensklasse). *Ostrakismos nur bei Zeit."); }
 
-// 12 Abschlussaufgabe
-{
-  const s = pres.addSlide(); s.background = { color: C.white };
-  head(s, 4, "Abschlussaufgabe · allein · Heft", "Kleisthenes und Solon"); timeChip(s, "4 Min.");
-  card(s, 0.5, 1.35, 9, 1.35, C.dark);
-  txt(s, "Kleisthenes änderte an Solons Vermögensklassen nichts – und trotzdem gilt er als „Wegbereiter der Demokratie“. Erkläre das in 3 Sätzen.", { x: 0.8, y: 1.35, w: 8.4, h: 1.35, fontSize: 19, bold: true, fontFace: H, color: C.white, valign: "middle" });
-  card(s, 0.5, 2.95, 9, 1.55, C.sand);
-  txt(s, "SATZANFÄNGE", { x: 0.75, y: 3.05, w: 4, h: 0.25, fontSize: 10, bold: true, color: C.terra, charSpacing: 2 });
-  txt(s, "„Solon gab den Bürgern …, aber …“     „Kleisthenes änderte nicht …, sondern …“     „Dadurch konnten die Bürger …“", { x: 0.75, y: 3.4, w: 8.5, h: 1.0, fontSize: 15, italic: true });
-  txt(s, "Danach: Zwei lesen vor. Haben wir das Ziel erreicht?", { x: 0.5, y: 4.65, w: 9, h: 0.35, fontSize: 14, bold: true, color: C.terra });
-  footer(s);
-  s.addNotes("38–43 Min. Prüfaufgabe zum Ziel. Gezielt zwei Schüler unterschiedlichen Niveaus vorlesen lassen, dann Folie 13 und Rückbezug aufs Ziel (Seitentafel). Diese Phase nie kürzen – bei Zeitnot Folie 11 nur kurz zeigen.");
-}
+// 17 Abschlussaufgabe
+{ const s = slide(); title(s, "Abschlussaufgabe", 4); tag(s, "4 Min.");
+  boxText(s, "Kleisthenes änderte Solons Vermögensklassen nicht – trotzdem gilt er als „Wegbereiter der Demokratie“. Erkläre in 3 Sätzen.", 0.45, 1.3, 9.1, 1.75, C.dark, C.white, { bold: true });
+  ["„Solon gab den Bürgern …, aber …“", "„Kleisthenes änderte nicht …, sondern …“", "„Dadurch konnten die Bürger …“"].forEach((t, i) =>
+    txt(s, t, { x: 0.6, y: 3.25 + i * 0.6, w: 9, h: 0.55, italic: true, valign: "middle" }));
+  num(s); s.addNotes("38–42 Min. Prüfaufgabe zum Ziel, allein ins Heft. Danach gezielt zwei Schüler unterschiedlichen Niveaus vorlesen lassen. Diese Phase nie kürzen."); }
 
-// 13 Lösung Abschluss
-{
-  const s = pres.addSlide(); s.background = { color: C.white };
-  head(s, 4, "Abschlussaufgabe · Beispiel", "So könnte die Antwort lauten"); solChip(s);
-  card(s, 0.5, 1.35, 9, 2.0, C.sand);
-  txt(s, "„Solon gab allen Bürgern das Stimmrecht, aber viele Bauern stimmten weiter so, wie ihr Adelsherr es wollte. Kleisthenes änderte nicht die Rechte, sondern die Bindungen: Die neuen Phylen mischten Stadt, Küste und Binnenland und verteilten die Gefolgschaft der Adligen. Dadurch konnten die Bürger ihr Stimmrecht zum ersten Mal frei nutzen.“", { x: 0.8, y: 1.45, w: 8.4, h: 1.8, fontSize: 15, italic: true, valign: "middle" });
-  card(s, 0.5, 3.6, 9, 1.3, C.dark);
-  txt(s, [{ text: "Haben wir das Ziel erreicht?\n", options: { bold: true, color: C.gold, fontSize: 15 } }, { text: "Ich kann erklären, wie Kleisthenes mit der neuen Phylenordnung die Macht der Adelsfamilien brach.", options: { color: C.white, fontSize: 16 } }],
-    { x: 0.8, y: 3.6, w: 8.4, h: 1.3, valign: "middle" });
-  footer(s);
-  s.addNotes("43–45 Min. Rückbezug zum Ziel. Ausblick: Am Mittwoch lesen wir, wie Aristoteles diese Reform beschreibt – und lernen, eine Quelle zu analysieren.");
-}
+// 18 Beispielantwort
+{ const s = slide(); title(s, "So könnte es lauten", 4); tag(s, "Lösung", C.gold, C.dark);
+  txt(s, "„Solon gab allen Bürgern das Stimmrecht, aber viele blieben an ihren Adelsherrn gebunden. Kleisthenes änderte nicht die Rechte, sondern die Bindungen: Er mischte die Bürger in neuen Phylen. Dadurch konnten sie frei abstimmen.“", { x: 0.45, y: 1.3, w: 9.1, h: 3.6, italic: true });
+  num(s); s.addNotes("42–44 Min. Vergleichen."); }
+
+// 19 Ziel erreicht?
+{ const s = slide(C.dark); aviva(s, 4, true);
+  txt(s, "Haben wir das Ziel erreicht?", { x: 0.45, y: 0.15, w: 6.6, h: 1.05, fontSize: TITLE, bold: true, fontFace: H, color: C.white, valign: "middle" });
+  txt(s, "Ich kann erklären, wie Kleisthenes mit den neuen Phylen die Macht der Adelsfamilien brach.", { x: 0.45, y: 1.5, w: 9.1, h: 1.6, color: C.gold, bold: true });
+  txt(s, "Mittwoch: Wie beschreibt Aristoteles diese Reform?", { x: 0.45, y: 3.6, w: 9.1, h: 0.8, color: "E8DFD0" });
+  num(s); s.addNotes("44–45 Min. Rückbezug aufs Ziel, Ausblick auf Mittwoch (Quellenanalyse)."); }
 
 pres.writeFile({ fileName: OUT }).then(() => console.log("done"));
