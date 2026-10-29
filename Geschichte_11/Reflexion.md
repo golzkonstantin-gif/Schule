@@ -60,12 +60,12 @@
 - Rückmeldung der Lehrkraft: *(steht noch aus)*
 
 ### Test + Quellenanalyse mit Schreibplan (Mi, Doppelstunde, geplant)
-- Material: `Doppelstunde_Test_Quellenanalyse/` (Test 40 + 1 P. mit Erwartungshorizont und Notenschlüssel in Notenpunkten; Blatt „Quelle und Schreibplan“ A4 doppelseitig; 26 Folien ≥ 27 pt, Folie 1 = Test; Handreichung; Quellcode in `quellcode/`)
+- Material: `Doppelstunde_Test_Quellenanalyse/` (Test 40 + 1 P. mit Erwartungshorizont und Notenschlüssel in Notenpunkten; Blatt „Quelle und Schreibplan“ A4 doppelseitig; 28 Folien ≥ 27 pt, Folie 1 = Test; Handreichung; Quellcode in `quellcode/`)
 - Test: Krise um 600, Drakon/Solon/Peisistratos (richtig/falsch mit Berichtigung), stummes Verfassungsschaubild, B/S/W erkennen, Sach- und Werturteil selbst; Kleisthenes nicht enthalten.
 - Quelle: Aristoteles, Athenaion politeia 20,1; 21,1–4 (eigene, vereinfachte Übertragung, 14 Zeilen) – derselbe Inhalt wie Montag, damit sich die Klasse auf die Methode konzentriert.
 - Planungsentscheidungen: DI (neue Kompetenz) mit drei Erklärportionen und je einer Warnung; Modell der Einleitung an Solons Gedicht (nimmt die Lösung nicht vorweg); Teillösungen im Schreibplan nehmen ab (Z. 1–4 vorgemacht, Z. 5–8 Satzanfang + Stichworte, Z. 9–12 Satzanfang, Z. 12–14 frei); Schritte 3 und 4 mit *; Abschlussaufgabe „Ich rate dir …, weil …“ zu einem fehlerhaften Klausur-Anfang.
 - Änderungen der Lehrkraft am Test: mehr Platz für Berichtigungen (eigene Spalte); Richtig/falsch um zwei Aussagen zu Herrschaftsformen ergänzt (Timokratie bleibt der Zusatzaufgabe vorbehalten); Urteile erkennen nur S/W ohne Beschreibung; Beispielaussagen dürfen keine spätere Aufgabe beantworten (Drakon/Peisistratos statt Solon). Daraus: Schaubild ist jetzt Aufgabe 4, Urteile erkennen Aufgabe 3.
-- Hinweis: Das hochgeladene Material der Lehrkraft zur Quellenanalyse lag nicht vor → üblicher Vierschritt; ggf. anpassen.
+- Material der Fachschaft nachgereicht (Arbeitsschritte Text-/Bildquelle, Musterlösung M11, Teil C, Formulierungshilfen) → Schreibplan, Folien und Handreichung auf dieses Schema umgestellt (Themenfrage – Analyse formal/inhaltlich – Kontext – Sach-/Werturteil); neue **Übersicht für den Hefter** (`Uebersicht_Quelleninterpretation`) mit Satzanfängen. Glaubwürdigkeit beim Sachurteil (wie in den Arbeitsschritten).
 - Rückmeldung der Lehrkraft: *(steht noch aus)*
 
 ## Hospitationsfeedback (gesammelt)

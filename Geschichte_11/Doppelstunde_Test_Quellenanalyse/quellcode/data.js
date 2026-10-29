@@ -37,14 +37,20 @@ const abschnitte = [
   ["Z. 12–14", "", "",
     "Schließlich habe er bestimmt, dass man sich nach seinem Demos und nicht mehr nach dem Vater benennt, damit man die neuen Bürger nicht erkennen konnte (Z. 12–14)."],
 ];
-// Einleitung (Schritt 1) – Lösung
+// Themenfrage (heute vorgegeben)
+const themenfrage = "Wie veränderte Kleisthenes laut Aristoteles die Ordnung Athens – und mit welchem Ziel?";
+// 2a Formale Aspekte – Lösung (Reihenfolge wie im Schema der Fachschaft)
 const einleitung = {
-  felder: [["Autor", "Aristoteles, griechischer Philosoph (384–322 v. Chr.), lebte in Athen, kein Bürger"], ["Quellenart", "Sachtext: Schrift über die Verfassung Athens"], ["Entstehungszeit", "um 330 v. Chr. (rund 180 Jahre nach den Reformen)"], ["Adressat", "seine Schüler und gebildete Leser"], ["Thema", "die Reformen des Kleisthenes (508/07 v. Chr.)"]],
-  satz: "Bei der Quelle handelt es sich um einen Auszug aus der Schrift „Der Staat der Athener“ des griechischen Philosophen Aristoteles, die um 330 v. Chr. entstand. Sie richtet sich an seine Schüler und gebildete Leser und behandelt die Reformen des Kleisthenes 508/07 v. Chr.",
+  felder: [["Autor", "Aristoteles, griechischer Philosoph (384–322 v. Chr.), lebte in Athen, kein Bürger"], ["Zeit und Ort", "um 330 v. Chr. in Athen (rund 180 Jahre nach den Reformen)"], ["Textart", "Sachtext: Schrift über die Geschichte der Verfassung Athens"], ["Thema", "die Reformen des Kleisthenes (508/07 v. Chr.)"], ["Adressat", "seine Schüler und gebildete Leser"]],
+  satz: "Bei der Quelle handelt es sich um einen Auszug aus der Schrift „Der Staat der Athener“ des griechischen Philosophen Aristoteles, die um 330 v. Chr. in Athen entstand. Sie richtet sich an seine Schüler und gebildete Leser und behandelt die Reformen des Kleisthenes 508/07 v. Chr.",
 };
+// 2b Inhaltliche Aspekte – Schlüsselbegriffe und Textsprache (Lösung)
+const begriffe = "Phylen – vermischen – Rat der 500 – Trittyen – Demos";
+const sprachen = ["sachlich", "emotional", "erklärend", "wertend", "auffordernd"];
+const sprache = "sachlich und erklärend: Aristoteles zählt die Maßnahmen geordnet auf und nennt mit „damit …“ jeweils ihren Zweck (Z. 7, 11, 13).";
 // Modell an einer anderen Quelle (wird nur vorgemacht)
 const modell = {
-  felder: [["Autor", "Solon, Archon und Gesetzgeber Athens"], ["Quellenart", "Gedicht"], ["Entstehungszeit", "um 590 v. Chr."], ["Adressat", "die Athener"], ["Thema", "Rechtfertigung seiner Reformen"]],
-  satz: "Bei der Quelle handelt es sich um ein Gedicht des athenischen Gesetzgebers Solon, das um 590 v. Chr. entstand. Er wendet sich an die Athener und rechtfertigt seine Reformen.",
+  felder: [["Autor", "Solon, Archon und Gesetzgeber Athens"], ["Zeit und Ort", "um 590 v. Chr. in Athen"], ["Textart", "Gedicht"], ["Thema", "Rechtfertigung seiner Reformen"], ["Adressat", "die Athener"]],
+  satz: "Bei der Quelle handelt es sich um ein Gedicht des athenischen Gesetzgebers Solon, das um 590 v. Chr. in Athen entstand. Er wendet sich an die Athener und rechtfertigt seine Reformen.",
 };
-module.exports = { zeilen, nachweis, info, abschnitte, einleitung, modell };
+module.exports = { zeilen, nachweis, info, abschnitte, themenfrage, einleitung, begriffe, sprachen, sprache, modell };

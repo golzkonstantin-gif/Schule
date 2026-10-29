@@ -75,6 +75,7 @@ Vorbild: Stunde „Bürgeramt Athen“ (`Geschichte_11/Stunde_Buergeramt_Athen/`
 - **Zeit für den Abschluss schützen:** Die Leitfrage bzw. Aha-Auflösung darf nicht hinten runterfallen (AVIVA: Auswerten nie streichen). Lieber weniger Fälle; in der Handreichung markieren, was bei Zeitnot gekürzt wird.
 - **Entscheider-Perspektive ist erwünscht:** Die Schüler entscheiden als Fachleute über Fälle (Sachbearbeiter, Gutachter, Richter). Das hat Spaß gemacht und ist kein „Rollenspiel“ im abgelehnten Sinn.
 - **Stundentypen Geschichte 11:** **Einzelstunde (45 Min.) = Inhalt** (Puzzle-Prinzip, kein Werturteil nötig). **Doppelstunde = Methode:** Sie greift den Inhalt der Einzelstunde auf und vertieft ihn **quellengestützt** (Quellenanalyse); kein neuer Stoff.
+- **Quelleninterpretation nach den Arbeitsschritten der Fachschaft:** 1 Themenfrage – 2 Analyse (a formal: Autor, Zeit und Ort, Textart, Thema, Adressat; b inhaltlich: Aussagen, Schlüsselbegriffe, Textsprache) – 3 historischer Kontext – 4 Urteilen (a Sachurteil inkl. Absicht und Glaubwürdigkeit, b Werturteil aus heutiger Sicht mit Maßstab). Klausuraufgabe meist „Interpretieren Sie …“. Schüler-Übersicht: `Geschichte_11/Doppelstunde_Test_Quellenanalyse/Uebersicht_Quelleninterpretation.*`.
 - **Klausur Geschichte 11 am 25.11.:** Themenblock Tyrannis des Peisistratos – Kleisthenes – Perikles.
 
 ## Weitere Vorlieben

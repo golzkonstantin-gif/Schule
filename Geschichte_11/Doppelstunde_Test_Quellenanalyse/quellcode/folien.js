@@ -3,7 +3,7 @@ const pptxgen = require("pptxgenjs");
 const D = require("./data.js");
 const OUT = process.argv[2];
 const C = { dark: "2B2318", terra: "AD4426", sand: "F4ECDE", gold: "D9A441", muted: "5A5044", soft: "998C77", white: "FFFFFF", pale: "FBF8F2", green: "3C783C", blue: "3E5C76" };
-const pres = new pptxgen(); pres.layout = "LAYOUT_16x9"; pres.title = "Test und Quellenanalyse – Aristoteles über Kleisthenes";
+const pres = new pptxgen(); pres.layout = "LAYOUT_16x9"; pres.title = "Test und Quelleninterpretation – Aristoteles über Kleisthenes";
 const H = "Cambria", B = "Calibri";
 const MIN = 27, TITLE = 36;
 const PH = ["A", "V", "I", "V", "A"];
@@ -28,7 +28,7 @@ function steps(s, items, y, gap, o = {}) {
 }
 const warn = (s, t, y = 4.15, h = 1.0) => boxText(s, "⚠ " + t, 0.45, y, 9.1, h, C.dark, C.gold, { bold: true });
 const slide = (bg = C.white) => { const s = pres.addSlide(); s.background = { color: bg }; return s; };
-const ZIEL = "Ich kann eine Textquelle mit dem Schreibplan analysieren: Einleitung schreiben und Inhalt wiedergeben.";
+const ZIEL = "Ich kann eine Textquelle nach den Arbeitsschritten analysieren: formale und inhaltliche Aspekte.";
 
 // 1 Test
 { const s = slide(C.dark);
@@ -41,14 +41,14 @@ const ZIEL = "Ich kann eine Textquelle mit dem Schreibplan analysieren: Einleitu
 // 2 Titel Teil 2
 { const s = slide(C.dark);
   txt(s, "TEIL 2 · GESCHICHTE · KLASSE 11", { x: 0.7, y: 1.0, w: 8.6, h: 0.5, bold: true, color: C.gold, charSpacing: 3 });
-  txt(s, "Wie analysiert man eine Quelle?", { x: 0.7, y: 1.55, w: 8.6, h: 0.9, fontSize: 40, bold: true, fontFace: H, color: C.white });
-  txt(s, "Aristoteles über die Reformen des Kleisthenes", { x: 0.7, y: 2.6, w: 8.6, h: 0.6, color: "E8DFD0" });
-  s.addNotes("Tests einsammeln. Arbeitsblatt „Quelle und Schreibplan“ austeilen (A4, doppelseitig)."); }
+  txt(s, "Wie interpretiert man eine Quelle?", { x: 0.7, y: 1.55, w: 8.6, h: 1.4, fontSize: 40, bold: true, fontFace: H, color: C.white });
+  txt(s, "Aristoteles über die Reformen des Kleisthenes", { x: 0.7, y: 3.15, w: 8.6, h: 0.6, color: "E8DFD0" });
+  s.addNotes("Tests einsammeln. Austeilen: Übersicht „So interpretierst du eine Textquelle“ (für den Hefter) und Arbeitsblatt „Quelle und Schreibplan“ (A4, doppelseitig)."); }
 
 // 3 Ziel und Ablauf
 { const s = slide(); title(s, "Ziel und Ablauf", 0); tag(s, "2 Min.");
   boxText(s, ZIEL, 0.45, 1.3, 9.1, 1.6, C.dark, C.white, { bold: true });
-  ["Richtig oder falsch? Kleisthenes", "Der Schreibplan in vier Schritten", "Schritt 1: Einleitung", "Schritt 2: Inhalt · Schritte 3 und 4*", "Abschlussaufgabe"].forEach((t, i) =>
+  ["Richtig oder falsch? Kleisthenes", "Die Arbeitsschritte im Überblick", "Analyse: formale Aspekte", "Analyse: Inhalt · Kontext und Urteil*", "Abschlussaufgabe"].forEach((t, i) =>
     txt(s, (i + 1) + "  " + t, { x: 0.6, y: 3.0 + i * 0.47, w: 9, h: 0.47, valign: "middle" }));
   num(s); s.addNotes("0–2 Min. (nach dem Test). Ziel vorlesen, es steht auch an der Seitentafel. „Heute lernt ihr, wie man in der Klausur mit einer Quelle umgeht – Schritt für Schritt.“ * = nur bei Zeit."); }
 
@@ -73,19 +73,25 @@ const RF = [
 
 // 6 Klausur
 { const s = slide(); title(s, "Warum das wichtig ist", 2); tag(s, "Klausur 25.11.");
-  boxText(s, "In der Klausur bekommst du eine Quelle. Die erste Aufgabe heißt meist: „Analysiere die Quelle.“", 0.45, 1.3, 9.1, 1.6, C.sand, C.dark);
-  boxText(s, "Mit einem Schreibplan weißt du immer, was als Nächstes kommt.", 0.45, 3.15, 9.1, 1.3, C.dark, C.gold, { bold: true });
-  num(s); s.addNotes("7–8 Min. Bedeutung erklären (direkt). Falls die Schule/Fachschaft eigene Operatorenlisten oder Aufgabenformate nutzt, hier einsetzen. „Analysieren“ heißt: Quelle beschreiben, Inhalt wiedergeben, einordnen – noch ohne eigenes Urteil; das Urteil folgt meist in einer eigenen Aufgabe."); }
+  boxText(s, "In der Klausur bekommst du eine Quelle. Die Aufgabe heißt oft: „Interpretieren Sie die Quelle.“", 0.45, 1.3, 9.1, 1.6, C.sand, C.dark);
+  boxText(s, "Mit den Arbeitsschritten weißt du immer, was als Nächstes kommt.", 0.45, 3.15, 9.1, 1.3, C.dark, C.gold, { bold: true });
+  num(s); s.addNotes("7–8 Min. Bedeutung erklären (direkt). Die Arbeitsschritte sind die der Fachschaft (Übersicht im Hefter). Operatoren: analysieren (Schritt 2), einordnen/erläutern (3), beurteilen = Sachurteil, bewerten/Stellung nehmen = Werturteil (4)"); }
 
-// 7 Schreibplan
-{ const s = slide(); title(s, "Der Schreibplan", 2); tag(s, "Portion 1");
-  steps(s, ["Einleitung – Wer? Was? Wann? Für wen?", "Inhalt – Was steht in der Quelle?", "Einordnen – Was geschah damals?", "Urteilen – Wie glaubwürdig ist sie?"], 1.35, 0.72);
-  warn(s, "Nicht einfach nacherzählen: Schritt für Schritt!", 4.3, 0.85);
-  num(s); s.addNotes("8–10 Min. Erklärportion 1 (ca. 2 Min.): Die vier Schritte sind wie ein Trichter – erst die Rahmendaten, dann der Inhalt, dann der Zusammenhang, erst zuletzt die eigene Meinung. Prüffragen an 4–6 Schüler: „Welcher Schritt kommt zuerst?“ – „In welchem Schritt darf ich sagen, was ich davon halte?“ (4) – „Was gehört in Schritt 2?“"); }
+// 7 Arbeitsschritte
+{ const s = slide(); title(s, "Die Arbeitsschritte", 2); tag(s, "Portion 1");
+  steps(s, ["Themenfrage – Was will ich herausfinden?", "Analyse – Wer schreibt? Was steht drin?", "Kontext – Was geschah damals?", "Urteilen – erst Sach-, dann Werturteil"], 1.35, 0.72);
+  warn(s, "Erst untersuchen, dann urteilen!", 4.3, 0.85);
+  num(s); s.addNotes("8–10 Min. Erklärportion 1 (ca. 2 Min.) mit der Übersicht im Hefter: Die Schritte sind wie ein Trichter – erst die Frage, dann die Quelle selbst, dann der Zusammenhang, zuletzt das Urteil. Die Glaubwürdigkeit gehört ins Sachurteil, die eigene Meinung mit Maßstab ins Werturteil. Prüffragen an 4–6 Schüler: „Was kommt nach der Themenfrage?“ – „In welchem Schritt darf ich sagen, was ich davon halte?“ (4b) – „Wohin gehört: Ist die Quelle glaubwürdig?“ (Sachurteil)."); }
+
+// 8 Themenfrage
+{ const s = slide(); title(s, "1 Unsere Themenfrage", 2); tag(s, "vorgegeben", C.sand, C.dark);
+  boxText(s, D.themenfrage, 0.45, 1.35, 9.1, 1.7, C.dark, C.white, { bold: true });
+  txt(s, "Sie steht über allem – am Ende beantworten wir sie.", { x: 0.45, y: 3.35, w: 9.1, h: 0.9, valign: "middle" });
+  num(s); s.addNotes("10 Min. Heute geben wir die Themenfrage vor. In der Klausur steht sie oft in der Aufgabe; sonst stellen die Schüler sie nach dem ersten Lesen selbst auf (Beispiel M11: „Ein Leben in katastrophalen Verhältnissen?“)."); }
 
 // 8 Einleitung
-{ const s = slide(); title(s, "Schritt 1: Einleitung", 2); tag(s, "Portion 2");
-  [["Autor", "Wer hat sie verfasst?"], ["Quellenart", "Brief, Gedicht, Rede, Sachtext …"], ["Entstehungszeit", "Wann ist sie entstanden?"], ["Adressat", "Für wen ist sie gedacht?"], ["Thema", "Worum geht es?"]].forEach(([a, b], i) => {
+{ const s = slide(); title(s, "2a Formale Aspekte", 2); tag(s, "Portion 2");
+  [["Autor", "Wer? Amt, Stellung?"], ["Zeit und Ort", "Wann und wo entstanden?"], ["Textart", "Brief, Rede, Bericht …"], ["Thema", "Worum geht es?"], ["Adressat", "Für wen gedacht?"]].forEach(([a, b], i) => {
     const y = 1.3 + i * 0.75;
     s.addText(a, { isTextBox: true, shape: pres.shapes.ROUNDED_RECTANGLE, rectRadius: 0.08, x: 0.45, y, w: 3.3, h: 0.62, fill: { color: C.terra }, color: C.white, fontFace: B, fontSize: MIN, bold: true, align: "center", valign: "middle", margin: 0 });
     txt(s, b, { x: 3.95, y, w: 5.6, h: 0.62, valign: "middle" });
@@ -106,8 +112,8 @@ const RF = [
   num(s); s.addNotes("12–13 Min. Satz vorlesen, Bausteine zeigen. Warnung vor dem Fehler: Viele schreiben „Augenzeuge“, obwohl der Autor viel später lebte. Prüffragen an 3–4 Schüler: „Woran erkennst du, ob der Autor dabei war?“ (Lebensdaten/Entstehungszeit mit dem Ereignis vergleichen)."); }
 
 // 11 Auftrag Einleitung
-{ const s = slide(); title(s, "Jetzt du: Einleitung", 3); tag(s, "4 Min.");
-  steps(s, ["Lies den Kasten „Zum Autor“ auf dem Blatt.", "Fülle die fünf Felder in Schritt 1 aus.", "Schreibe einen Einleitungssatz.", "Fertig? Lies die Quelle schon einmal."], 1.35, 0.85);
+{ const s = slide(); title(s, "Jetzt du: formale Aspekte", 3); tag(s, "4 Min.");
+  steps(s, ["Lies den Kasten „Zum Autor“ auf dem Blatt.", "Fülle die fünf Felder in 2a aus.", "Schreibe einen Einleitungssatz.", "Fertig? Lies die Quelle schon einmal."], 1.35, 0.85);
   num(s); s.addNotes("13–17 Min. Erste Anwendung, allein (leicht, alle schaffen sie). Durch die Reihen gehen und mitlesen: Steht „Augenzeuge“ da? Steht die Zeit drin? Folie 12 (Kasten) groß stehen lassen."); }
 
 // 12 Infokasten
@@ -117,13 +123,13 @@ const RF = [
   num(s); s.addNotes("Arbeitsgrundlage an die Wand (gekürzt; vollständig auf dem Blatt)."); }
 
 // 13 Lösung Einleitung
-{ const s = slide(); title(s, "Lösung: Einleitung", 3); tag(s, "Lösung", C.gold, C.dark);
+{ const s = slide(); title(s, "Lösung: formale Aspekte", 3); tag(s, "Lösung", C.gold, C.dark);
   txt(s, "„" + D.einleitung.satz + "“", { x: 0.45, y: 1.3, w: 9.1, h: 3.9, italic: true });
   num(s); s.addNotes("17–19 Min. Zwei Schüler lesen ihren Satz vor (unterschiedliches Niveau), dann aufdecken. Vergleichen, im Blatt ergänzen. Gelenkstelle: „Jetzt wissen wir, wer spricht. Als Nächstes: Was sagt er eigentlich?“ Ist etwas unklar, hier nachsteuern, nicht weitergehen."); }
 
 // 14 Inhalt – Regeln
-{ const s = slide(); title(s, "Schritt 2: Inhalt", 2); tag(s, "Portion 3");
-  steps(s, ["In Sinnabschnitte teilen.", "Kern in eigenen Worten.", "Indirekte Rede: „er habe …“", "Zeilen angeben: (Z. 6)"], 1.35, 0.72);
+{ const s = slide(); title(s, "2b Inhaltliche Aspekte", 2); tag(s, "Portion 3");
+  steps(s, ["Wesentliche Aussage je Abschnitt.", "Eigene Worte, indirekte Rede: „er habe …“", "Zeilen angeben: (Z. 6)", "Schlüsselbegriffe und Textsprache"], 1.35, 0.72);
   warn(s, "Noch keine Meinung – die kommt erst in Schritt 4.", 4.3, 0.85);
   num(s); s.addNotes("19–21 Min. Erklärportion 3: Indirekte Rede zeigt, dass ich wiedergebe, was der Autor sagt – nicht, was stimmt. Prüffragen an 4–6 Schüler: „Mach daraus indirekte Rede: Er teilte die Bürger ein.“ (Er habe die Bürger eingeteilt.) – „Darf ich schreiben: Das war klug von ihm?“ (Nein, erst in Schritt 4)."); }
 
@@ -134,7 +140,7 @@ const RF = [
 
 // 16 Auftrag Inhalt
 { const s = slide(); title(s, "Jetzt ihr: Inhalt", 3); tag(s, "10 Min.");
-  steps(s, ["Lest Z. 5–14 zu zweit.", "Schreibt Z. 5–8 mit dem Satzanfang.", "Schreibt Z. 9–12 mit dem Satzanfang.", "Schreibt Z. 12–14 ganz allein."], 1.35, 0.85);
+  steps(s, ["Lest Z. 5–14 zu zweit.", "Schreibt Z. 5–8 mit dem Satzanfang.", "Schreibt Z. 9–12 mit dem Satzanfang.", "Schreibt Z. 12–14 ganz allein.", "Notiert Begriffe, kreuzt die Sprache an."], 1.35, 0.75);
   num(s); s.addNotes("23–33 Min. Angeleitet → selbstständig (Teillösungen im Schreibplan werden weniger). Partnerarbeit, beide schreiben. Umhergehen, mitlesen; Stolpersteine und Hilfsimpulse in der Handreichung. Die Quelle steht auf den nächsten Folien groß an der Wand."); }
 
 // 17–19 Quelle
@@ -147,30 +153,36 @@ D.abschnitte.slice(1).forEach(([z, , , l]) => { const s = slide(); title(s, "Lö
   txt(s, "„" + l + "“", { x: 0.45, y: 1.3, w: 9.1, h: 3.9, italic: true });
   num(s); s.addNotes(z === "Z. 5–8" ? "33–36 Min. Je Abschnitt ein Paar vom Platz vorlesen lassen, dann aufdecken. Andere Formulierungen sind richtig, wenn Kern, indirekte Rede und Zeilen stimmen." : "Vergleichen, im Blatt ergänzen."); });
 
+// Lösung Schlüsselbegriffe und Textsprache
+{ const s = slide(); title(s, "Lösung: Begriffe, Sprache", 3); tag(s, "Lösung", C.gold, C.dark);
+  boxText(s, D.begriffe, 0.45, 1.3, 9.1, 1.2, C.sand, C.dark, { bold: true });
+  txt(s, "Sprache: sachlich und erklärend – er nennt mit „damit …“ den Zweck (Z. 7, 11, 13).", { x: 0.45, y: 2.75, w: 9.1, h: 1.6 });
+  num(s); s.addNotes("Kurz vergleichen. Gelenkstelle: „Aristoteles erklärt, was Kleisthenes wollte – aber konnte er das wissen? Das prüfen wir im Urteil.“"); }
+
 // 23 Einordnen und Urteilen*
-{ const s = slide(); title(s, "Schritte 3 und 4*", 3); tag(s, "nur bei Zeit", C.sand, C.dark);
-  boxText(s, "Einordnen: Nach dem Sturz der Tyrannis (510) wollte Kleisthenes das Volk beteiligen (Z. 6f.).", 0.45, 1.3, 9.1, 1.65, C.sand, C.dark);
-  boxText(s, "Urteilen: Aristoteles schrieb 180 Jahre später – er war nicht dabei.", 0.45, 3.15, 9.1, 1.4, C.dark, C.gold, { bold: true });
-  num(s); s.addNotes("*36–38 Min. Nur bei Zeit, sonst direkt zu Folie 24. Kurz direkt erklären, zwei Prüffragen: „Woher wusste Aristoteles das?“ (aus älteren Schriften) – „Ist die Quelle deshalb wertlos?“ (nein, aber kein Augenzeugenbericht; er deutet die Reform aus seiner Zeit). Schritte 3 und 4 werden in der nächsten Doppelstunde vertieft."); }
+{ const s = slide(); title(s, "Kontext und Urteil*", 3); tag(s, "nur bei Zeit", C.sand, C.dark);
+  boxText(s, "Kontext: Nach dem Sturz der Tyrannis (510) kämpfte der Adel wieder um die Macht.", 0.45, 1.3, 9.1, 1.65, C.sand, C.dark);
+  boxText(s, "Sachurteil: Aristoteles schrieb 180 Jahre später – er war nicht dabei.", 0.45, 3.15, 9.1, 1.4, C.dark, C.gold, { bold: true });
+  num(s); s.addNotes("*36–38 Min. Nur bei Zeit, sonst direkt zur Abschlussaufgabe. Kurz direkt erklären, zwei Prüffragen: „Woher wusste Aristoteles das?“ (aus älteren Schriften) – „Ist die Quelle deshalb wertlos?“ (nein, aber kein Augenzeugenbericht; er deutet die Reform aus seiner Zeit). Kontext, Sach- und Werturteil werden in der nächsten Doppelstunde vertieft."); }
 
 // 24 Abschlussaufgabe
 { const s = slide(); title(s, "Abschlussaufgabe", 4); tag(s, "4 Min.");
   txt(s, "Ein Mitschüler zeigt dir seinen Klausur-Anfang:", { x: 0.45, y: 1.25, w: 9.1, h: 0.5, valign: "middle" });
   boxText(s, "„Aristoteles war dabei, als Kleisthenes die Demokratie einführte. Kleisthenes teilte die Bürger in zehn Phylen ein. Das war eine sehr gute Idee.“", 0.45, 1.8, 9.1, 2.1, C.sand, C.dark, { italic: true });
   boxText(s, "Gib ihm drei Ratschläge: „Ich rate dir …, weil …“", 0.45, 4.1, 9.1, 0.9, C.dark, C.white, { bold: true });
-  num(s); s.addNotes("38/40–43 Min. Prüft genau das Ziel (Einleitung, Inhalt). Allein ins Heft, dann gezielt 3 Schüler unterschiedlichen Niveaus je einen Ratschlag vorlesen lassen. Diese Phase nie kürzen. Mögliche Ratschläge in der Handreichung."); }
+  num(s); s.addNotes("38/40–43 Min. Prüft genau das Ziel (formale und inhaltliche Aspekte). Allein ins Heft, dann gezielt 3 Schüler unterschiedlichen Niveaus je einen Ratschlag vorlesen lassen. Diese Phase nie kürzen. Mögliche Ratschläge in der Handreichung."); }
 
 // 25 Lösung Abschluss
 { const s = slide(); title(s, "So könnte es lauten", 4); tag(s, "Lösung", C.gold, C.dark);
   ["Ich rate dir, die Lebensdaten zu prüfen, weil Aristoteles 180 Jahre später schrieb.", "Ich rate dir, indirekte Rede und Zeilen zu nutzen, weil du wiedergibst, was er sagt.", "Ich rate dir, die Meinung wegzulassen, weil sie erst in Schritt 4 gehört."].forEach((t, i) =>
     boxText(s, t, 0.45, 1.3 + i * 1.3, 9.1, 1.15, i % 2 ? C.white : C.sand, C.dark));
-  num(s); s.addNotes("43–44 Min. Weitere gute Antworten: Quellenart, Zeit und Adressat fehlen; „Demokratie eingeführt“ steht so nicht in der Quelle."); }
+  num(s); s.addNotes("43–44 Min. Weitere gute Antworten: Textart, Zeit und Ort sowie Adressat fehlen; „Demokratie eingeführt“ steht so nicht in der Quelle."); }
 
 // 26 Ziel erreicht?
 { const s = slide(C.dark); aviva(s, 4, true);
   txt(s, "Haben wir das Ziel erreicht?", { x: 0.45, y: 0.15, w: 6.6, h: 1.05, fontSize: TITLE, bold: true, fontFace: H, color: C.white, valign: "middle" });
   txt(s, ZIEL, { x: 0.45, y: 1.5, w: 9.1, h: 1.6, color: C.gold, bold: true });
-  txt(s, "Nächstes Mal: Schritte 3 und 4 – einordnen und urteilen.", { x: 0.45, y: 3.6, w: 9.1, h: 0.9, color: "E8DFD0" });
-  num(s); s.addNotes("44–45 Min. Rückbezug aufs Ziel. Schreibplan im Hefter aufbewahren – er ist die Vorlage für die Klausur."); }
+  txt(s, "Nächstes Mal: Kontext, Sach- und Werturteil.", { x: 0.45, y: 3.6, w: 9.1, h: 0.9, color: "E8DFD0" });
+  num(s); s.addNotes("44–45 Min. Rückbezug aufs Ziel. Übersicht und Schreibplan im Hefter aufbewahren – sie sind die Vorlage für die Klausur."); }
 
 pres.writeFile({ fileName: OUT }).then(() => console.log("done"));
