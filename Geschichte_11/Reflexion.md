@@ -25,7 +25,8 @@
 - [ ] Leitfrage Peisistratos nachholen (Wiederholung zu Beginn der Kleisthenes-Stunde)
 - [ ] Peisistratos-Schaubild einmal aus dem Gedächtnis (Abruf fehlte)
 - [ ] Sturz der Peisistratiden (510) und Kleisthenes – LB S. 23 ff. folgt
-- [ ] Perikles; Doppelstunde Quellenanalyse zu Peisistratos
+- [ ] Perikles
+- [ ] Quellenanalyse Schritte 3 und 4 (Einordnen, Urteilen) in der nächsten Doppelstunde vertiefen
 
 ## Stundenlog
 
@@ -56,6 +57,14 @@
 - Material: `Stunde_Kleisthenes/` (19 Folien mit AVIVA-Phasenanzeige, alle Texte ≥ 27 pt, Mystery-Schnipsel + gestufte Hilfen, Handreichung mit Kopf, Warum-Zeilen, Sachinformationen; Quellcode in `quellcode/`)
 - Methode: **Mystery** statt Personenkarten (Wunsch der Lehrkraft nach Methodenvielfalt). Leitfrage A: Bauer Lysias (erfunden) stimmt 507 erstmals anders als sein Adelsherr.
 - Planungsentscheidungen: Wiederholung als Fehler-Übersicht zu Herrschaftsformen (mit Übersetzung) und Protagonisten, Leitfrage Peisistratos nachgeholt; Begriffe Demos/Trittys vorab; Vormachen (zwei Abschnitte verbinden); **8 Textabschnitte mit Überschrift statt 18 Schnipsel, keine Ablenker** (Lehrkraft: 18 überfordert, Abschnitte dürfen mehr Text haben); Lösung vom Platz, Lehrkraft trägt ein; Abschlussaufgabe „Kleisthenes und Solon“ (nie kürzen); Ostrakismos mit *.
+- Rückmeldung der Lehrkraft: *(steht noch aus)*
+
+### Test + Quellenanalyse mit Schreibplan (Mi, Doppelstunde, geplant)
+- Material: `Doppelstunde_Test_Quellenanalyse/` (Test 37 + 1 P. mit Erwartungshorizont und Notenschlüssel in Notenpunkten; Blatt „Quelle und Schreibplan“ A4 doppelseitig; 26 Folien ≥ 27 pt, Folie 1 = Test; Handreichung; Quellcode in `quellcode/`)
+- Test: Krise um 600, Drakon/Solon/Peisistratos (richtig/falsch mit Berichtigung), stummes Verfassungsschaubild, B/S/W erkennen, Sach- und Werturteil selbst; Kleisthenes nicht enthalten.
+- Quelle: Aristoteles, Athenaion politeia 20,1; 21,1–4 (eigene, vereinfachte Übertragung, 14 Zeilen) – derselbe Inhalt wie Montag, damit sich die Klasse auf die Methode konzentriert.
+- Planungsentscheidungen: DI (neue Kompetenz) mit drei Erklärportionen und je einer Warnung; Modell der Einleitung an Solons Gedicht (nimmt die Lösung nicht vorweg); Teillösungen im Schreibplan nehmen ab (Z. 1–4 vorgemacht, Z. 5–8 Satzanfang + Stichworte, Z. 9–12 Satzanfang, Z. 12–14 frei); Schritte 3 und 4 mit *; Abschlussaufgabe „Ich rate dir …, weil …“ zu einem fehlerhaften Klausur-Anfang.
+- Hinweis: Das hochgeladene Material der Lehrkraft zur Quellenanalyse lag nicht vor → üblicher Vierschritt; ggf. anpassen.
 - Rückmeldung der Lehrkraft: *(steht noch aus)*
 
 ## Hospitationsfeedback (gesammelt)
