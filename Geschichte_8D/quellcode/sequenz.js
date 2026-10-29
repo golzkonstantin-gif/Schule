@@ -135,6 +135,28 @@ d.push(table([5000, 5200, 5238], [row([
   cell([p(t("Kopplung mit der 8C", { bold: true, size: 21, color: NAVY }), { after: 40 }), ...["Dieselben Stundennummern, 8C freitags eine Stunde vorn", "Vor jeder 8D-Planung: Reflexionslog der 8C lesen", "Status in der Sequenztabelle (Markdown-Datei)", "Reserve nur bei der 8C (29.01.)"].map((x) => p([t("• ", { size: 19 }), t(x, { size: 19 })], { after: 30 }))], { w: 5238, fill: LIGHT, borders: all(solid("B9C6E8", 8)), m: 100, ml: 150 }),
 ])]));
 
+
+// ---- Seite 4: Abschlussfragen, Vorwissen, Methoden, Buch (Orientierung) ----
+d.push(new Paragraph({ children: [new PageBreak()] }));
+d.push(h2("Orientierung je Stunde: Abschlussfrage, Vorwissen, Methode, Lehrbuch"));
+d.push(p(t("Alles hier ist Orientierung, kein festes Muster. Abschlussfragen müssen den Schülerinnen und Schülern etwas bedeuten (persönliches Risiko, Gerechtigkeit) und mit dem Wissen der Stunde beantwortbar sein. Methoden aus der Sammlung (Geschichte 11) sind Ideen, in Klasse 8 darf es spielerischer sein, in der 8D auf das Lernklima achten.", { size: 18, italics: true, color: MUTED }), { after: 60 }));
+const OW = [650, 4900, 2750, 3850, 3288];
+const OH = ["Nr.", "Abschlussfrage (Berater: „Du bist Berater von …“)", "Vorwissen (Wiederholung)", "Methode (Idee)", "Lehrbuch (nur indirekt)"];
+const OR = [
+  ["1", "König Ludwig XVI.: Soll ich erlauben, dass der Dritte Stand (Bauern und Bürger) nach Köpfen abstimmt? (so geplant)", "Fehlertext Absolutismus und Stände", "Ständespiel (8D), Zeitstrahl, Kreide-Kette", "S. 110/111"],
+  ["2", "Abgeordneter: Draußen stehen Soldaten. Wenn ich schwöre, kann ich verhaftet werden, auch meine Familie ist in Gefahr. Soll ich trotzdem schwören? (so geplant)", "Fehlertext: Abstimmung nach Ständen und nach Köpfen", "Karikatur direkt (Modell, dann Paare); Ideen: Zahlenjagd, Einordnen auf einer Linie (Beurteilen)", "S. 111 (Karikatur), 112/113 (Sieyès, Ballhausschwur), 116 (Dreischritt)"],
+  ["3", "Adliger: Soll ich auf meine Vorrechte verzichten? (Risiko prüfen)", "Falschbehauptungen zu Stunde 2", "Entscheidungsfälle zu den Artikeln der Menschenrechte; Begriff „Revolution“ einführen", "S. 112/113 (Bastille, 4./5. August, Menschenrechte)"],
+  ["4", "Nationalversammlung: Wer soll wählen dürfen? (Risiko prüfen)", "Schaubild mit Fehlern", "Stummes Schaubild, evtl. Fälle zur Wahlberechtigung", "S. 114/115 (Verfassung, Schaubild M2)"],
+  ["5", "Test 1: Karikatur-Teilaufgabe, Wahr/falsch mit Begründung, Zuordnung", "–", "Vorbereitung: Fehlertext, „Antwort gegeben – Frage gesucht“", "–"],
+  ["6", "Ludwig XVI.: Soll ich aus Paris fliehen?", "Fehlertext zu Stunde 5/Verfassung", "Mystery (erst nach der Rückmeldung zu Kleisthenes entscheiden); Ursache-Folge-Kette", "S. 114, 118/119"],
+  ["7", "Robespierre oder Abgeordneter: Soll der Wohlfahrtsausschuss noch mehr Macht bekommen?", "Falschbehauptungen zum König", "Diamond Nine zum Terror; Zahlenjagd Statistik; Karikatur-Methode wiederholen", "S. 120/121 (Statistik M2, Robespierre als Henker)"],
+  ["8", "Direktorium: Sollen wir General Bonaparte um Hilfe bitten?", "Fehlertext zu Terror und Ende", "Textpuzzle oder Wahr/falsch mit Beleg", "S. 124"],
+  ["9", "Napoleon: Soll ich 1812 nach Russland marschieren?", "Falschbehauptungen zu Napoleons Aufstieg", "Einordnen zwischen zwei Polen („Erbe der Revolution ↔ Verrat“) als angeleitetes Urteil", "S. 124/125, 128"],
+  ["10", "Test 2: Urteilsaufgabe mit bekannten Kriterien", "–", "Vorbereitung: Fehlertext, Zeitstrahl", "–"],
+  ["11", "Fürsten in Wien: Soll Frankreich bestraft werden?", "Test-Berichtigung", "Diamond Nine zum Gesamturteil „War die Revolution ein Erfolg?“", "S. 128/129"],
+];
+d.push(table(OW, [row(OH.map((x, i) => cell(p(t(x, { bold: true, color: WHITE, size: 17 }), { after: 0 }), { w: OW[i], fill: NAVY, valign: VerticalAlign.CENTER, m: 55, borders: all(solid(NAVY, 8)) })), 320), ...OR.map((r, k) => row(r.map((x, i) => cell(p(t(x, { size: 16, bold: i === 0, color: i === 0 ? NAVY : "000000" }), { after: 0 }), { w: OW[i], fill: r[0] === "5" || r[0] === "10" ? "FCEFEE" : k % 2 ? WHITE : LIGHT, m: 40, borders: all(solid("5B6B8C", 8)) })))) ]));
+
 (async () => {
   const doc = new Document({ styles: { default: { document: { run: { font: "Calibri", size: 20 } } } }, sections: [{ properties: { page: { size: { width: 11906, height: 16838, orientation: PageOrientation.LANDSCAPE }, margin: { top: 650, bottom: 600, left: 700, right: 700 } } }, footers: { default: footer }, children: d }] });
   fs.writeFileSync("../Sequenz_Franzoesische_Revolution_8D.docx", await Packer.toBuffer(doc));
