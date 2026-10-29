@@ -43,7 +43,7 @@ const content = [
 
   h("Teil 1: Test (45 Min.)"),
   li("Folie 1 zeigen. Tische auseinander, Test verdeckt austeilen, gemeinsam beginnen. Endzeit an die Tafel, 5 Minuten vor Schluss ansagen."),
-  li("37 Punkte + 1 Zusatzpunkt; Erwartungshorizont und Notenschlüssel (Notenpunkte) im eigenen Dokument."),
+  li("40 Punkte + 1 Zusatzpunkt; Erwartungshorizont und Notenschlüssel (Notenpunkte) im eigenen Dokument."),
   li("Wer früher fertig ist, dreht das Blatt um und bleibt sitzen; nach dem Einsammeln direkt Blatt „Quelle und Schreibplan“ austeilen."),
 
   h("Begriffs-Check Teil 2"),

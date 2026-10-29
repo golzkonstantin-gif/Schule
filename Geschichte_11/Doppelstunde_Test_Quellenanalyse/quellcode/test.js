@@ -1,4 +1,4 @@
-// Test Geschichte 11: Athen um 600 bis Peisistratos (45 Min., 37 Punkte + 1 Zusatzpunkt)
+// Test Geschichte 11: Athen um 600 bis Peisistratos (45 Min., 40 Punkte + 1 Zusatzpunkt)
 const fs = require("fs");
 const { Document, Packer, Paragraph, TextRun, Table, TableRow, TableCell, WidthType, BorderStyle, ShadingType, AlignmentType,
   TabStopType, ImageRun, HeightRule, PageBreak, Footer, PageNumber } = require("docx");
@@ -22,7 +22,7 @@ function grid(cw, rows, o = {}) {
 const children = [
   P([R("GESCHICHTE · KLASSE 11 · TEST", { bold: true, size: 17, color: C.terra }), R("\tName: ______________________   Datum: __________", { size: 19, color: C.muted })], { tabs: [{ type: TabStopType.RIGHT, position: W }], after: 60 }),
   P([R("Athen um 600 v. Chr. – Drakon, Solon, Peisistratos", { font: "Cambria", bold: true, size: 30 })], { after: 40 }),
-  P([R("Bearbeitungszeit 45 Minuten · 37 Punkte + 1 Zusatzpunkt · Hilfsmittel: keine", { size: 18, italics: true, color: C.muted })], { after: 60 }),
+  P([R("Bearbeitungszeit 45 Minuten · 40 Punkte + 1 Zusatzpunkt · Hilfsmittel: keine", { size: 18, italics: true, color: C.muted })], { after: 60 }),
 
   task("1", "Die Krise Athens um 600 v. Chr.", 6),
   P("a) Nenne vier Probleme, die Athen um 600 v. Chr. in eine Krise stürzten. (4 P.)", { size: 20 }),
@@ -30,7 +30,7 @@ const children = [
   P("b) Erkläre, wie ein Kleinbauer in die Schuldknechtschaft geraten konnte. (2 P.)", { size: 20, before: 80 }),
   lines(2),
 
-  task("2", "Drakon, Solon, Peisistratos: richtig oder falsch?", 9),
+  task("2", "Richtig oder falsch?", 12),
   P("Kreuze an. Berichtige jede falsche Aussage in einem Satz in der rechten Spalte. (je 1 P. fürs Kreuz, je 1 P. für die Berichtigung)", { size: 20 }),
   grid([4300, 750, 750, 4406], [
     ["Aussage", "richtig", "falsch", "Berichtigung (nur bei falschen Aussagen)"],
@@ -40,7 +40,9 @@ const children = [
     ["d) Solon verteilte das Land der Großgrundbesitzer an die Bauern.", "☐", "☐", ""],
     ["e) Peisistratos wurde von der Volksversammlung zum Herrscher gewählt.", "☐", "☐", ""],
     ["f) Peisistratos ließ Solons Verfassung bestehen, besetzte die Ämter aber mit seinen Anhängern.", "☐", "☐", ""],
-  ], { head: true, center: true, h: 840 }),
+    ["g) Aristokratie heißt übersetzt „Herrschaft der Besten“.", "☐", "☐", ""],
+    ["h) In einer Monarchie herrschen wenige Adelsfamilien gemeinsam.", "☐", "☐", ""],
+  ], { head: true, center: true, h: 700 }),
 
   task("3", "Sachurteil oder Werturteil?", 6),
   P("a) Ordne zu: S = Sachurteil, W = Werturteil. (je 1 P.)", { size: 20 }),
