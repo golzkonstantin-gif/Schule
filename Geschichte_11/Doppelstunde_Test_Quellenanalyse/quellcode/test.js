@@ -13,7 +13,7 @@ const lines = n => new Table({ columnWidths: [W], width: { size: W, type: WidthT
 const task = (nr, title, pts) => P([R(nr + "  ", { bold: true, color: C.terra, size: 23, font: "Cambria" }), R(title, { bold: true, size: 22, font: "Cambria" }), R("\t" + pts + " P.", { size: 19, color: C.muted, bold: true })],
   { tabs: [{ type: TabStopType.RIGHT, position: W }], before: 160, after: 60, keepNext: true });
 function grid(cw, rows, o = {}) {
-  return new Table({ columnWidths: cw, width: { size: W, type: WidthType.DXA }, rows: rows.map((r, ri) => new TableRow({ cantSplit: true, height: o.h ? { value: o.h, rule: HeightRule.ATLEAST } : undefined,
+  return new Table({ columnWidths: cw, width: { size: W, type: WidthType.DXA }, rows: rows.map((r, ri) => new TableRow({ cantSplit: true, height: o.h && !(ri === 0 && o.head) ? { value: o.h, rule: HeightRule.ATLEAST } : undefined,
     children: r.map((c, i) => new TableCell({ width: { size: cw[i], type: WidthType.DXA }, borders: { top: thin, bottom: thin, left: thin, right: thin },
       shading: ri === 0 && o.head ? { type: ShadingType.CLEAR, color: "auto", fill: C.sand } : undefined, margins: { top: 50, bottom: 50, left: 90, right: 90 },
       children: [P([R(c, { size: 19, bold: ri === 0 && o.head })], { after: 0, align: i > 0 && o.center ? AlignmentType.CENTER : undefined })] })) })) });
@@ -31,37 +31,35 @@ const children = [
   lines(2),
 
   task("2", "Drakon, Solon, Peisistratos: richtig oder falsch?", 9),
-  P("Kreuze an. Berichtige jede falsche Aussage in einem Satz. (je 1 P. fürs Kreuz, je 1 P. für die Berichtigung)", { size: 20 }),
-  grid([6700, 900, 900, 1706], [
-    ["Aussage", "richtig", "falsch", ""],
+  P("Kreuze an. Berichtige jede falsche Aussage in einem Satz in der rechten Spalte. (je 1 P. fürs Kreuz, je 1 P. für die Berichtigung)", { size: 20 }),
+  grid([4300, 750, 750, 4406], [
+    ["Aussage", "richtig", "falsch", "Berichtigung (nur bei falschen Aussagen)"],
     ["a) Drakon schrieb das Recht in Athen erstmals auf.", "☐", "☐", ""],
     ["b) Drakon schaffte die Schuldknechtschaft ab.", "☐", "☐", ""],
     ["c) Solon strich die Schulden und kaufte versklavte Bürger zurück.", "☐", "☐", ""],
     ["d) Solon verteilte das Land der Großgrundbesitzer an die Bauern.", "☐", "☐", ""],
     ["e) Peisistratos wurde von der Volksversammlung zum Herrscher gewählt.", "☐", "☐", ""],
     ["f) Peisistratos ließ Solons Verfassung bestehen, besetzte die Ämter aber mit seinen Anhängern.", "☐", "☐", ""],
-  ], { head: true, center: true }),
-  P("Berichtigungen:", { size: 19, bold: true, before: 60 }),
-  lines(3),
+  ], { head: true, center: true, h: 840 }),
 
-  task("3", "Solons Verfassung (594 v. Chr.)", 10),
-  P("Die vier Klassen von links: Fünfhundertscheffler, Ritter, Hopliten, Theten. Die Zeilen in den Klassen-Kästen musst du nicht ausfüllen.", { size: 18, italics: true, color: C.muted }),
-  P("a) Trage die vier Ämter (oben) und die Volksversammlung (unten) ein. (je 1 P.)", { size: 20 }),
-  P("b) Kreuze bei jeder Klasse an, was sie darf. (je vollständig richtige Klasse 1 P.)", { size: 20 }),
-  P("c) Zeichne Pfeile ein: Wer kann in welches Amt gewählt werden? (1 P.)", { size: 20 }),
-  new Paragraph({ alignment: AlignmentType.CENTER, spacing: { after: 40 }, children: [new ImageRun({ type: "png", data: fs.readFileSync(__dirname + "/stumm.png"), transformation: { width: 470, height: 317 } })] }),
-
-  task("4", "Beschreibung, Sachurteil oder Werturteil?", 6),
-  P("a) Ordne zu: B = Beschreibung, S = Sachurteil, W = Werturteil. (je 1 P.)", { size: 20 }),
+  task("3", "Sachurteil oder Werturteil?", 6),
+  P("a) Ordne zu: S = Sachurteil, W = Werturteil. (je 1 P.)", { size: 20 }),
   grid([8906, 1300], [
-    ["Aussage", "B / S / W"],
-    ["1) 594 v. Chr. erhielt Solon als Archon besondere Vollmachten.", ""],
-    ["2) Aus Sicht der damaligen Zeit verhinderte Solon einen Bürgerkrieg, weil er weder die Armen versklaven noch die Reichen enteignen ließ.", ""],
-    ["3) Gemessen an der Gleichheit aller Menschen halte ich Solons Verfassung für ungerecht, weil Frauen keine Rechte hatten.", ""],
+    ["Aussage", "S / W"],
+    ["1) Gemessen am Schutz der Schwachen halte ich Drakons Gesetze für ungerecht, weil schon kleine Vergehen sehr hart bestraft wurden.", ""],
+    ["2) Aus Sicht der damaligen Zeit waren Drakons Gesetze ein Fortschritt, weil nun jeder wissen konnte, welche Strafe drohte.", ""],
+    ["3) Aus Sicht der damaligen Zeit schwächte Peisistratos den Adel, weil er die Ämter mit seinen eigenen Anhängern besetzte.", ""],
     ["4) Die Tyrannis des Peisistratos war ein Fehler.", ""],
   ], { head: true, center: true }),
   P("b) Aussage 4 ist ein schwaches Werturteil. Verbessere es: Nenne einen Maßstab und begründe. (2 P.)", { size: 20, before: 80 }),
   lines(2),
+
+  task("4", "Solons Verfassung (594 v. Chr.)", 10),
+  P("Die vier Klassen von links: Fünfhundertscheffler, Ritter, Hopliten, Theten. Die Zeilen in den Klassen-Kästen musst du nicht ausfüllen.", { size: 18, italics: true, color: C.muted, keepNext: true }),
+  P("a) Trage die vier Ämter (oben) und die Volksversammlung (unten) ein. (je 1 P.)", { size: 20, keepNext: true }),
+  P("b) Kreuze bei jeder Klasse an, was sie darf. (je vollständig richtige Klasse 1 P.)", { size: 20, keepNext: true }),
+  P("c) Zeichne Pfeile ein: Wer kann in welches Amt gewählt werden? (1 P.)", { size: 20, keepNext: true }),
+  new Paragraph({ alignment: AlignmentType.CENTER, spacing: { after: 40 }, children: [new ImageRun({ type: "png", data: fs.readFileSync(__dirname + "/stumm.png"), transformation: { width: 470, height: 317 } })] }),
 
   task("5", "Selbst urteilen", 6),
   P("a) Sachurteil: Inwieweit gelang es Solon, die Krise Athens zu lösen? Beziehe Stellung und nenne zwei Belege. (3 P.)", { size: 20 }),

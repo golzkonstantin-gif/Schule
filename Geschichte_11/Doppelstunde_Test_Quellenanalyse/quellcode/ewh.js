@@ -27,17 +27,17 @@ const content = [
     ["f", "richtig", "–", "1"],
   ], { firstFill: true }),
 
-  h("Aufgabe 3 · Solons Verfassung (10 P.)"),
+  h("Aufgabe 3 · Urteile erkennen (6 P.)"),
+  table(W, [2300, 6338, 1000], ["Teil", "Erwartung", "Punkte"], [
+    ["a)", "1 = W (heutiger Maßstab „Schutz der Schwachen“ genannt) · 2 = S (Urteil aus Sicht der damaligen Zeit, begründet) · 3 = S (damalige Sicht, begründet) · 4 = W (wertet, aber ohne Maßstab und Begründung)", "je 1 = 4"],
+    ["b) verbessertes Werturteil", "Maßstab genannt (z. B. gleiche Regeln: Macht mit Gewalt erobert → nicht gerechtfertigt; Schutz der Schwachen: Land für Besitzlose → teilweise gerecht) und begründet.", "Maßstab 1, Begründung 1"],
+  ], { firstFill: true }),
+
+  h("Aufgabe 4 · Solons Verfassung (10 P.)"),
   table(W, [2300, 6338, 1000], ["Teil", "Erwartung", "Punkte"], [
     ["a) Ämter und Volksversammlung", "von links: Areopag – Archonten (Pfeil zum Areopag) – Rat der 400 – Geschworenengericht; unten: Volksversammlung", "je 1 = 5"],
     ["b) Rechte", "1. Klasse: alles · 2. und 3. Klasse: abstimmen, klagen, Rat – nicht Archont · Theten: nur abstimmen und klagen", "je Klasse 1 = 4"],
     ["c) Pfeile", "1. Klasse → Archonten und Rat der 400; 2. und 3. Klasse → Rat der 400; Theten → kein Amt", "1"],
-  ], { firstFill: true }),
-
-  h("Aufgabe 4 · Urteile erkennen (6 P.)"),
-  table(W, [2300, 6338, 1000], ["Teil", "Erwartung", "Punkte"], [
-    ["a)", "1 = B (überprüfbare Tatsache) · 2 = S (Urteil aus der damaligen Zeit, begründet) · 3 = W (heutiger Maßstab genannt) · 4 = W (wertet, aber ohne Maßstab und Begründung)", "je 1 = 4"],
-    ["b) verbessertes Werturteil", "Maßstab genannt (z. B. gleiche Regeln: Macht mit Gewalt erobert → nicht gerechtfertigt; Schutz der Schwachen: Land für Besitzlose → teilweise gerecht) und begründet.", "Maßstab 1, Begründung 1"],
   ], { firstFill: true }),
 
   h("Aufgabe 5 · Selbst urteilen (6 P.)"),
