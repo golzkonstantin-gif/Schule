@@ -37,10 +37,10 @@ const s2 = [
   step("1", "Themenfrage", "Welche Frage bestimmt die Untersuchung? (heute vorgegeben)"),
   box(W, [p("**" + D.themenfrage + "**", { size: 20, after: 0 })]),
 
-  step("2a", "Analyse: formale Aspekte", "Wer? Wann und wo? Welche Textart? Worüber? Für wen?"),
-  table(W, [2000, 7922], null, [["Autor", ""], ["Zeit und Ort", ""], ["Textart", ""], ["Thema", ""], ["Adressat", ""]], { firstFill: true, h: 360, size: 19 }),
-  p("**Satzbaustein:** Bei der Quelle handelt es sich um … von …, die/das … in … entstand. Sie richtet sich an … und behandelt …", { size: 18, before: 60, after: 40 }),
-  lines(W, 3, 360),
+  step("2a", "Analyse: formale Aspekte", "TATTE(A): Titel – Autor – Textsorte – Thema – Entstehung – Adressat"),
+  table(W, [2700, 7222], null, [["T  Titel", ""], ["A  Autor", ""], ["T  Textsorte", ""], ["T  Thema", ""], ["E  Entstehungszeit und -ort", ""], ["(A)  Adressat", ""]], { firstFill: true, h: 340, size: 19 }),
+  p("**Satzbaustein:** Bei der Quelle handelt es sich um [Textsorte] „…“ [Titel] von … [Autor], die/das … in … [Entstehung] entstand. Sie richtet sich an … [Adressat] und behandelt … [Thema].", { size: 18, before: 60, after: 40 }),
+  lines(W, 2, 360),
 
   step("2b", "Analyse: inhaltliche Aspekte", "eigene Worte · indirekte Rede · mit Zeilen · noch keine Meinung"),
   table(W, [1150, 8772], ["Zeilen", "Wesentliche Aussagen"], D.abschnitte.map(([z, , vorgabe], i) => [z, i === 0 ? "✓ Beispiel: " + vorgabe : [p(vorgabe || " ", { size: 19, after: 20, italics: !!vorgabe, color: C.muted }), p(" ", { size: 19, after: 20 }), p(" ", { size: 19, after: 20 })]]),

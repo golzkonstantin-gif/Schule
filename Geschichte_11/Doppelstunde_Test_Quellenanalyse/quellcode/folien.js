@@ -90,20 +90,20 @@ const RF = [
   num(s); s.addNotes("10 Min. Heute geben wir die Themenfrage vor. In der Klausur steht sie oft in der Aufgabe; sonst stellen die Schüler sie nach dem ersten Lesen selbst auf (Beispiel M11: „Ein Leben in katastrophalen Verhältnissen?“)."); }
 
 // 8 Einleitung
-{ const s = slide(); title(s, "2a Formale Aspekte", 2); tag(s, "Portion 2");
-  [["Autor", "Wer? Amt, Stellung?"], ["Zeit und Ort", "Wann und wo entstanden?"], ["Textart", "Brief, Rede, Bericht …"], ["Thema", "Worum geht es?"], ["Adressat", "Für wen gedacht?"]].forEach(([a, b], i) => {
-    const y = 1.3 + i * 0.75;
-    s.addText(a, { isTextBox: true, shape: pres.shapes.ROUNDED_RECTANGLE, rectRadius: 0.08, x: 0.45, y, w: 3.3, h: 0.62, fill: { color: C.terra }, color: C.white, fontFace: B, fontSize: MIN, bold: true, align: "center", valign: "middle", margin: 0 });
-    txt(s, b, { x: 3.95, y, w: 5.6, h: 0.62, valign: "middle" });
+{ const s = slide(); title(s, "2a TATTE(A)", 2); tag(s, "Portion 2");
+  [["T  Titel", "Wie heißt der Text?"], ["A  Autor", "Wer? Amt, Stellung?"], ["T  Textsorte", "Brief, Rede, Bericht …"], ["T  Thema", "Worum geht es?"], ["E  Entstehung", "Wann und wo?"], ["(A) Adressat", "Für wen gedacht?"]].forEach(([a, b], i) => {
+    const y = 1.28 + i * 0.66;
+    s.addText(a, { isTextBox: true, shape: pres.shapes.ROUNDED_RECTANGLE, rectRadius: 0.08, x: 0.45, y, w: 3.3, h: 0.58, fill: { color: C.terra }, color: C.white, fontFace: B, fontSize: MIN, bold: true, align: "left", valign: "middle", margin: [0, 0, 0, 8] });
+    txt(s, b, { x: 3.95, y, w: 5.6, h: 0.58, valign: "middle" });
   });
   num(s); s.addNotes("10–11 Min. Erklärportion 2: fünf Fragen, alle Antworten stehen im Kasten zum Autor oder unter der Quelle (Nachweis)."); }
 
 // 9–10 Modell Solon
 { const s = slide(); title(s, "So geht's – ein Beispiel", 2); tag(s, "Lehrkraft");
   D.modell.felder.forEach(([a, b], i) => {
-    const y = 1.3 + i * 0.75;
-    txt(s, a, { x: 0.45, y, w: 3.3, h: 0.62, valign: "middle", bold: true, color: C.terra });
-    txt(s, b, { x: 3.95, y, w: 5.6, h: 0.62, valign: "middle" });
+    const y = 1.28 + i * 0.66;
+    txt(s, a, { x: 0.45, y, w: 3.3, h: 0.58, valign: "middle", bold: true, color: C.terra });
+    txt(s, b, { x: 3.95, y, w: 5.6, h: 0.58, valign: "middle" });
   });
   num(s); s.addNotes("11–12 Min. Vormachen an einer anderen Quelle (Solon kennen sie): laut denken. „Wer hat das geschrieben? Solon selbst – also war er dabei. Was für ein Text? Ein Gedicht. Wann? Um 590, kurz nach seinen Reformen. Für wen? Für die Athener. Worüber? Er verteidigt seine Reformen.“"); }
 { const s = slide(); title(s, "Daraus wird ein Satz", 2); tag(s, "Lehrkraft");
@@ -113,7 +113,7 @@ const RF = [
 
 // 11 Auftrag Einleitung
 { const s = slide(); title(s, "Jetzt du: formale Aspekte", 3); tag(s, "4 Min.");
-  steps(s, ["Lies den Kasten „Zum Autor“ auf dem Blatt.", "Fülle die fünf Felder in 2a aus.", "Schreibe einen Einleitungssatz.", "Fertig? Lies die Quelle schon einmal."], 1.35, 0.85);
+  steps(s, ["Lies den Kasten „Zum Autor“ auf dem Blatt.", "Fülle die sechs TATTE(A)-Felder in 2a aus.", "Schreibe einen Einleitungssatz.", "Fertig? Lies die Quelle schon einmal."], 1.35, 0.85);
   num(s); s.addNotes("13–17 Min. Erste Anwendung, allein (leicht, alle schaffen sie). Durch die Reihen gehen und mitlesen: Steht „Augenzeuge“ da? Steht die Zeit drin? Folie 12 (Kasten) groß stehen lassen."); }
 
 // 12 Infokasten
@@ -176,7 +176,7 @@ D.abschnitte.slice(1).forEach(([z, , , l]) => { const s = slide(); title(s, "Lö
 { const s = slide(); title(s, "So könnte es lauten", 4); tag(s, "Lösung", C.gold, C.dark);
   ["Ich rate dir, die Lebensdaten zu prüfen, weil Aristoteles 180 Jahre später schrieb.", "Ich rate dir, indirekte Rede und Zeilen zu nutzen, weil du wiedergibst, was er sagt.", "Ich rate dir, die Meinung wegzulassen, weil sie erst in Schritt 4 gehört."].forEach((t, i) =>
     boxText(s, t, 0.45, 1.3 + i * 1.3, 9.1, 1.15, i % 2 ? C.white : C.sand, C.dark));
-  num(s); s.addNotes("43–44 Min. Weitere gute Antworten: Textart, Zeit und Ort sowie Adressat fehlen; „Demokratie eingeführt“ steht so nicht in der Quelle."); }
+  num(s); s.addNotes("43–44 Min. Weitere gute Antworten: TATTE(A)-Angaben fehlen (Titel, Textsorte, Entstehung, Adressat); „Demokratie eingeführt“ steht so nicht in der Quelle."); }
 
 // 26 Ziel erreicht?
 { const s = slide(C.dark); aviva(s, 4, true);

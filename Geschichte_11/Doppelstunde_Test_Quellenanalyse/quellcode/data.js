@@ -39,9 +39,9 @@ const abschnitte = [
 ];
 // Themenfrage (heute vorgegeben)
 const themenfrage = "Wie veränderte Kleisthenes laut Aristoteles die Ordnung Athens – und mit welchem Ziel?";
-// 2a Formale Aspekte – Lösung (Reihenfolge wie im Schema der Fachschaft)
+// 2a Formale Aspekte – Lösung (Reihenfolge nach der TATTE(A)-Formel)
 const einleitung = {
-  felder: [["Autor", "Aristoteles, griechischer Philosoph (384–322 v. Chr.), lebte in Athen, kein Bürger"], ["Zeit und Ort", "um 330 v. Chr. in Athen (rund 180 Jahre nach den Reformen)"], ["Textart", "Sachtext: Schrift über die Geschichte der Verfassung Athens"], ["Thema", "die Reformen des Kleisthenes (508/07 v. Chr.)"], ["Adressat", "seine Schüler und gebildete Leser"]],
+  felder: [["Titel", "„Der Staat der Athener“ (Athenaion politeia), Auszug"], ["Autor", "Aristoteles, griechischer Philosoph (384–322 v. Chr.), lebte in Athen, kein Bürger"], ["Textsorte", "Sachtext: Schrift über die Geschichte der Verfassung Athens"], ["Thema", "die Reformen des Kleisthenes (508/07 v. Chr.)"], ["Entstehung", "um 330 v. Chr. in Athen (rund 180 Jahre nach den Reformen)"], ["Adressat", "seine Schüler und gebildete Leser"]],
   satz: "Bei der Quelle handelt es sich um einen Auszug aus der Schrift „Der Staat der Athener“ des griechischen Philosophen Aristoteles, die um 330 v. Chr. in Athen entstand. Sie richtet sich an seine Schüler und gebildete Leser und behandelt die Reformen des Kleisthenes 508/07 v. Chr.",
 };
 // 2b Inhaltliche Aspekte – Schlüsselbegriffe und Textsprache (Lösung)
@@ -50,7 +50,7 @@ const sprachen = ["sachlich", "emotional", "erklärend", "wertend", "auffordernd
 const sprache = "sachlich und erklärend: Aristoteles zählt die Maßnahmen geordnet auf und nennt mit „damit …“ jeweils ihren Zweck (Z. 7, 11, 13).";
 // Modell an einer anderen Quelle (wird nur vorgemacht)
 const modell = {
-  felder: [["Autor", "Solon, Archon und Gesetzgeber Athens"], ["Zeit und Ort", "um 590 v. Chr. in Athen"], ["Textart", "Gedicht"], ["Thema", "Rechtfertigung seiner Reformen"], ["Adressat", "die Athener"]],
-  satz: "Bei der Quelle handelt es sich um ein Gedicht des athenischen Gesetzgebers Solon, das um 590 v. Chr. in Athen entstand. Er wendet sich an die Athener und rechtfertigt seine Reformen.",
+  felder: [["Titel", "ohne Titel (Fragment)"], ["Autor", "Solon, Gesetzgeber Athens"], ["Textsorte", "Gedicht"], ["Thema", "Rechtfertigung seiner Reformen"], ["Entstehung", "um 590 v. Chr. in Athen"], ["Adressat", "die Athener"]],
+  satz: "Bei der Quelle handelt es sich um ein Gedicht ohne Titel des athenischen Gesetzgebers Solon, das um 590 v. Chr. in Athen entstand. Er wendet sich an die Athener und rechtfertigt seine Reformen.",
 };
 module.exports = { zeilen, nachweis, info, abschnitte, themenfrage, einleitung, begriffe, sprachen, sprache, modell };
