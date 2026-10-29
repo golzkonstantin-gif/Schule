@@ -39,7 +39,7 @@ const abschnitte = [
 ];
 // Themenfrage (heute vorgegeben)
 const themenfrage = "Wie veränderte Kleisthenes laut Aristoteles die Ordnung Athens – und mit welchem Ziel?";
-// 2a Formale Aspekte – Lösung (Reihenfolge nach der TATTE(A)-Formel)
+// 2a Formale Aspekte – Lösung (Reihenfolge nach der TATTEA-Formel)
 const einleitung = {
   felder: [["Titel", "„Der Staat der Athener“ (Athenaion politeia), Auszug"], ["Autor", "Aristoteles, griechischer Philosoph (384–322 v. Chr.), lebte in Athen, kein Bürger"], ["Textsorte", "Sachtext: Schrift über die Geschichte der Verfassung Athens"], ["Thema", "die Reformen des Kleisthenes (508/07 v. Chr.)"], ["Entstehung", "um 330 v. Chr. in Athen (rund 180 Jahre nach den Reformen)"], ["Adressat", "seine Schüler und gebildete Leser"]],
   satz: "Bei der Quelle handelt es sich um einen Auszug aus der Schrift „Der Staat der Athener“ des griechischen Philosophen Aristoteles, die um 330 v. Chr. in Athen entstand. Sie richtet sich an seine Schüler und gebildete Leser und behandelt die Reformen des Kleisthenes 508/07 v. Chr.",

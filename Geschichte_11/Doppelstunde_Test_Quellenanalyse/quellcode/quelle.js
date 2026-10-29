@@ -37,8 +37,8 @@ const s2 = [
   step("1", "Themenfrage", "Welche Frage bestimmt die Untersuchung? (heute vorgegeben)"),
   box(W, [p("**" + D.themenfrage + "**", { size: 20, after: 0 })]),
 
-  step("2a", "Analyse: formale Aspekte", "TATTE(A): Titel – Autor – Textsorte – Thema – Entstehung – Adressat"),
-  table(W, [2700, 7222], null, [["T  Titel", ""], ["A  Autor", ""], ["T  Textsorte", ""], ["T  Thema", ""], ["E  Entstehungszeit und -ort", ""], ["(A)  Adressat", ""]], { firstFill: true, h: 340, size: 19 }),
+  step("2a", "Analyse: formale Aspekte", "TATTEA: Titel – Autor – Textsorte – Thema – Entstehung – Adressat"),
+  table(W, [2700, 7222], null, [["T  Titel", ""], ["A  Autor", ""], ["T  Textsorte", ""], ["T  Thema", ""], ["E  Entstehungszeit und -ort", ""], ["A  Adressat", ""]], { firstFill: true, h: 340, size: 19 }),
   p("**Satzbaustein:** Bei der Quelle handelt es sich um [Textsorte] „…“ [Titel] von … [Autor], die/das … in … [Entstehung] entstand. Sie richtet sich an … [Adressat] und behandelt … [Thema].", { size: 18, before: 60, after: 40 }),
   lines(W, 2, 360),
 
