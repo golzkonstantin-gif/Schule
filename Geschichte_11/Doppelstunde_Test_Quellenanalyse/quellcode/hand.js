@@ -36,7 +36,7 @@ const content = [
   h("Druckliste"),
   table(W, [5200, 2400, 2038], ["Material", "Format", "Menge"], [
     ["Test_Athen_bis_Peisistratos", "A4 doppelseitig", "1 je Schüler"],
-    ["Uebersicht_Quelleninterpretation (für den Hefter)", "A4", "1 je Schüler"],
+    ["Uebersicht_Quelleninterpretation (für den Hefter)", "A4 doppelseitig", "1 je Schüler"],
     ["Quelle_und_Schreibplan", "A4 doppelseitig", "1 je Schüler"],
     ["Test_Erwartungshorizont_Notenschluessel", "A4", "nur Lehrkraft"],
     ["Folien_Quellenanalyse (28 Folien, Teil 1 = Folie 1)", "Beamer", "–"],
