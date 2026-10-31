@@ -277,7 +277,17 @@ Die Lehrkraft möchte das weiterverfolgen, noch ohne Material. Die Satzklammer (
 - **Entscheidung der Lehrkraft (16.10.):** S-PL (Polnisch als Herkunftssprache) wird in Deutsch 7A immer berücksichtigt. Ab jetzt bekommt sie zu jeder Stunde eine Handreichung: Fachbegriffe und Aufträge auf Deutsch, Erklärungen auf Polnisch. Vokabelliste und Lernwortschatz werden fortgeführt (siehe `CLAUDE.md`).
 - **Handreichung Polnisch (Fr 16.10.):** Beide Schnipsel (Reime erkennen, Ur-Ei) stehen zweisprachig auf einer A4-Seite: Aufgaben und Lücken wie bei der Klasse, darunter die polnische Erklärung (`Handreichung_Polnisch_16-10_Schnipsel_Reime_Ur-Ei`). Im Tafelskript ist sie beim Material vermerkt.
 - **Reflexionsteil im Tafelskript (Wunsch 31.10.):** Das Tafelskript Fr 16.10. hat jetzt eine 5. Seite „Umsetzung der Erkenntnisse zur Unterrichtsverbesserung“. Sie behandelt AVIVA, Direkte Instruktion (Ich – Wir – Ihr), Differenzierung und Beobachtungsschwerpunkte. Künftig gehört dieser Teil zu jedem Tafelskript (siehe `CLAUDE.md`).
-- **Rückmeldung der Lehrkraft (Fr):** *(steht noch aus)*
+- **Rückmeldung der Lehrkraft (Fr 16.10.):** Die Stunde ist ausgefallen. Offen sind damit LB-Aufgabe 1 a zu Paddy Fingal, die Reime und die Merkmale der Ballade (Ur-Ei). Das Material dafür liegt fertig in `Woche1/` und wird nach den Ferien eingesetzt.
+
+### Woche 2 (nach den Herbstferien): Paddy Fingal und Merkmale der Ballade
+- **Entscheidungen der Lehrkraft (31.10.):**
+  - In der ersten Stunde bleiben nur etwa 15 Minuten. Darin werden die Lesetechniken wiederholt.
+  - In dieser Woche liegt der Schwerpunkt auf Paddy Fingal und den Merkmalen der Ballade, also dem, was am 16.10. ausgefallen ist.
+  - Künftig wird mit Balladen gearbeitet. Ab und an wird Grammatik integriert behandelt.
+- **Kurzeinheit „Lesetechniken wiederholen“ (15 Min.)**, Material in `Woche2/`: Tafelskript mit Reflexionsteil, Handreichung Polnisch für S-PL.
+  - Ziel: Ich kann die drei Lesetechniken unterscheiden und begründen, welche zu meinem Leseziel passt.
+  - Ablauf: A 1′ → V 4′ Techniken aus dem Gedächtnis, Vergleich mit dem Merksatz → I 1′ Leitfrage „Was ist mein Leseziel?“ → V 6′ Situationen A–D mit Begründung („weil“), * E Paddy Fingal überfliegen → A 3′ Kreide-Kette, „Heute habe ich gelernt, …“.
+- **Rückmeldung der Lehrkraft:** *(steht noch aus)*
 
 ## Hospitationsfeedback (gesammelt)
 
