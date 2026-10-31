@@ -292,6 +292,7 @@ Die Lehrkraft möchte das weiterverfolgen, noch ohne Material. Die Satzklammer (
   - Ziel: Ich kann an Paddy Fingal mit Belegen zeigen, dass eine Ballade Merkmale von Lyrik, Epik und Dramatik hat.
   - Ablauf: A 2′ → V 7′ Ü1 Reimschema Str. 11 und Fachbegriffe → I 8′ Ur-Ei, Vergleich mit der Lebenswelt (Song-Text = Lyrik, Roman/Spielbericht = Epik, Serienszene = Dramatik; erst Merkmale sammeln, dann aufdecken) → V 12′ Ü2 Ur-Ei-Schnipsel → A 6′ Aufdeck-Folien je Gattung → A 6′ Zielcheck (Riesenart – Bart = Lyrik, „Da lief er heim“ = Epik, „O Schaya, birg mich …“ = Dramatik).
   - Die Lehrkraft findet die Vergleiche aus der Lebenswelt gut („Abwechslung und Transfer“). Der Zielcheck bleibt beim Zuordnen mit Begründung.
+- **Korrektur der Lehrkraft (31.10., Material Fr):** Die Merkmale der drei Gattungen müssen geschärft werden. Wörtliche Rede gibt es auch in der Epik, das Merkmal der Dramatik muss konkreter werden. Die Umsetzung wird noch besprochen.
 - **Rückmeldung der Lehrkraft (Fr 6.11.):** *(steht noch aus)*
 - **Idee der Lehrkraft für Mo 9.11. (Hospitation):** Strophe, Vers und Reimschema wiederholen. Dann schreiben die Schüler selbst Reime nach einem vorgegebenen Schema, themenorientiert und mit Formulierungshilfen. Wird nach Freitag geplant.
 - **Rückmeldung der Lehrkraft (Mi 4.11.):** *(steht noch aus)*
