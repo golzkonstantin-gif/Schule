@@ -147,7 +147,25 @@ function phase(nr, title, min) {
 }
 
 
-// Schnipsel „Reime erkennen“ (2 pro A4): Merkkasten + Übung
+// Schnipsel „Reime erkennen“ – drei Fassungen (Gewichtheben, Judo, Handball), je 2 pro A4
+// Gleicher Aufbau: 1 Paddy Str. 4 (Paarreim + Kehrreim) · 2 Kreuzreim · 3 umarmender Reim · 4 Paarreim
+const SPORT = {
+  Gewichtheben: [
+    ["2  Beim Heben", ["Die Halle ist noch kalt und leer,", "die Hantel liegt schon da.", "Der erste Versuch fällt mir schwer,", "doch dann ruft jemand: „Ja!“"]],
+    ["3  Der letzte Versuch", ["Der letzte Versuch, die Halle schweigt,", "ich atme tief, ich bin bereit,", "der Trainer nickt, jetzt ist es Zeit –", "die Stange über meinem Kopf, sie steigt."]],
+    ["4  Rekord", ["Ich kreide meine Hände ein,", "heut soll der Rekord der meine sein.", "Ich reiße hoch und steh ganz still –", "drei weiße Lampen, genau, was ich will!"]],
+  ],
+  Judo: [
+    ["2  Der Griff", ["Wir grüßen uns, der Kampf beginnt,", "am Ärmel spür ich seinen Griff.", "Ich weiß genau, wer heut gewinnt:", "wer schneller ist mit seinem Kniff."]],
+    ["3  Auf der Matte", ["Der Kampf beginnt, ich greife zu,", "mein Gegner hält mich am Kragen,", "ich muss jetzt alles wagen –", "ein Wurf, und dann ist Ruh."]],
+    ["4  Ippon", ["Ich binde meinen Gürtel fest,", "jetzt kommt der Kampf, jetzt kommt der Test.", "Ich greife, drehe, ziehe an –", "Ippon! Gewonnen hab ich dann."]],
+  ],
+  Handball: [
+    ["2  Der Pass", ["Der Pass kommt flach, ich bin jetzt dran,", "die Abwehr steht ganz dicht.", "Ich täusche links, der Gegner kann", "mich halten – heute nicht!"]],
+    ["3  Das letzte Spiel", ["Die Halle bebt beim letzten Spiel,", "wir liegen hinten, nur ein Tor.", "Der Trainer ruft: „Jetzt alle vor!“", "Wir kämpfen bis zum Schluss ums Ziel."]],
+    ["4  Im Siebenmeterkreis", ["Zehn Sekunden noch, der Ball ist frei,", "ich zieh nach innen, schnell vorbei,", "ich steige hoch, der Wurf geht rein –", "die ganze Halle fängt an zu schrein!"]],
+  ],
+};
 const PW = 11906 - 1000;
 const gray = "9AA3B5";
 const s = (x, o = {}) => t(x, Object.assign({ size: 20 }, o));
@@ -163,9 +181,11 @@ const schema = (name, letters, w) => cell([
 const IW = PW - 300, SW = Math.floor(IW / 3), TW3 = Math.floor(IW / 3), HW2 = Math.floor(IW / 2);
 const vers = (text) => p([s(text), s("  "), gapL(5)], { after: 0, line: 370, indent: { left: 120 } });
 const reimart = () => p([s("Reimart: ", { bold: true }), gapL(18)], { before: 30, after: 50, indent: { left: 120 } });
-function schnipsel() {
+function schnipsel(sport) {
+  const T = SPORT[sport];
+  const blk = ([title, vs], w) => cell([p(s(title, { bold: true, color: NAVY }), { after: 0 }), ...vs.map(vers), reimart()], { w, borders: allBorders(none), m: 0, valign: VerticalAlign.TOP });
   const children = [
-    p([t("Reime erkennen", { font: "Cambria", bold: true, size: 26, color: NAVY }), t("      Lyrik · Paddy Fingal (LB S. 136 f.)", { size: 17, color: MUTED })], { after: 40 }),
+    p([t("Reime erkennen", { font: "Cambria", bold: true, size: 26, color: NAVY }), t("      Lyrik · Paddy Fingal (LB S. 136 f.)", { size: 17, color: MUTED }), t("      Fassung: " + sport, { size: 15, color: MUTED, italics: true })], { after: 40 }),
     p([s("Reim: ", { bold: true, color: C.hv }), s("Zwei Wörter reimen sich, wenn sie "), s("ab dem letzten betonten Vokal gleich klingen", { bold: true }), s(": Schr"), s("eck", { bold: true }), s(" – Verst"), s("eck", { bold: true }), s(", d"), s("aher", { bold: true }), s(" – s"), s("ehr", { bold: true }), s(".")], { after: 20 }),
     p([s("Reimschema: ", { bold: true, color: C.hv }), s("Versenden, die sich reimen, bekommen den gleichen Buchstaben (a, b, c …). Ein Vers ohne Reim bekommt ein x.")], { after: 60 }),
     table([SW, SW, IW - 2 * SW], [row([schema("Paarreim", "aabb", SW), schema("Kreuzreim", "abab", SW), schema("umarmender Reim", "abba", IW - 2 * SW)])]),
@@ -174,17 +194,17 @@ function schnipsel() {
     table([HW2, IW - HW2], [
       row([
         cell([p(s("1  Paddy Fingal, Strophe 4 (Versenden)", { bold: true, color: NAVY }), { after: 0 }), vers("… Schreck"), vers("… Versteck"), vers("… daher"), vers("… sehr"), vers("* … Paddy Fingal"), reimart()], { w: HW2, borders: allBorders(none), m: 0, valign: VerticalAlign.TOP }),
-        cell([p(s("2  Beim Heben", { bold: true, color: NAVY }), { after: 0 }), vers("Die Halle ist noch kalt und leer,"), vers("die Hantel liegt schon da."), vers("Der erste Versuch fällt mir schwer,"), vers("doch dann ruft jemand: „Ja!“"), reimart()], { w: IW - HW2, borders: allBorders(none), m: 0, valign: VerticalAlign.TOP }),
+        blk(T[0], IW - HW2),
       ]),
       row([
-        cell([p(s("3  Auf der Matte", { bold: true, color: NAVY }), { after: 0 }), vers("Der Kampf beginnt, ich greife zu,"), vers("mein Gegner hält mich am Kragen,"), vers("ich muss jetzt alles wagen –"), vers("ein Wurf, und dann ist Ruh."), reimart()], { w: HW2, borders: allBorders(none), m: 0, valign: VerticalAlign.TOP }),
-        cell([p(s("4  Im Siebenmeterkreis", { bold: true, color: NAVY }), { after: 0 }), vers("Zehn Sekunden noch, der Ball ist frei,"), vers("ich zieh nach innen, schnell vorbei,"), vers("ich steige hoch, der Wurf geht rein –"), vers("die ganze Halle fängt an zu schrein!"), reimart()], { w: IW - HW2, borders: allBorders(none), m: 0, valign: VerticalAlign.TOP }),
+        blk(T[1], HW2),
+        blk(T[2], IW - HW2),
       ]),
     ]),
   ];
   return table([PW], [row([cell(children, { w: PW, borders: allBorders(dashed), m: 100, ml: 150, valign: VerticalAlign.TOP })])]);
 }
-const doc = [schnipsel(), scissors(), schnipsel()];
+const doc = ["Gewichtheben", "Judo", "Handball"].flatMap((sp, i) => [...(i ? [p(new PageBreak())] : []), schnipsel(sp), scissors(), schnipsel(sp)]);
 const props = { page: { size: { width: 11906, height: 16838 }, margin: { top: 400, bottom: 300, left: 500, right: 500 } } };
 const styles = { default: { document: { run: { font: "Calibri", size: 20 } } } };
-Packer.toBuffer(new Document({ styles, sections: [{ properties: props, children: doc }] })).then((buf) => fs.writeFileSync("Schnipsel_Reime_erkennen.docx", buf));
+Packer.toBuffer(new Document({ styles, sections: [{ properties: props, children: doc }] })).then((buf) => fs.writeFileSync("Schnipsel_Reime_erkennen_3_Fassungen.docx", buf));

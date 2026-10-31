@@ -182,20 +182,22 @@ const doc = [
   hd("Reime", "rymy", VIO),
   wtab([
     ["der Reim · sich reimen", "rym · rymować się"], ["der Vers · das Versende", "wers · koniec wersu"],
-    ["betont · der Vokal", "akcentowany · samogłoska"], ["das Reimschema", "układ rymów (litery a, b, c …)"],
-    ["der Paarreim (aabb)", "rym parzysty"], ["der Kreuzreim (abab)", "rym krzyżowy"],
-    ["der umarmende Reim (abba)", "rym okalający"], ["der Kehrreim (x)", "refren – wers bez rymu, który się powtarza"],
+    ["betont · der Vokal", "akcentowany · samogłoska"], ["das Reimschema", "kolejność rymów zapisana literami"],
   ]),
-  pl2("Reguła: Słowa rymują się, gdy brzmią tak samo od ostatniej akcentowanej samogłoski (Schr-eck – Verst-eck). Końcówki wersów, które się rymują, dostają tę samą literę. Wers bez rymu = x. Przykład strofa 1: Riesenart – Bart (a a), groß – Wurfgeschoss (b b), „so ein Kerl war Paddy Fingal!“ (x) → Paarreim + Kehrreim.", { before: 40 }),
+  pl2("Reguła: Słowa rymują się, gdy brzmią tak samo od ostatniej akcentowanej samogłoski (Schr-eck – Verst-eck). Końcówki wersów, które się rymują, dostają tę samą literę. Wers bez rymu = x. Używamy niemieckich nazw:", { before: 40, after: 10 }),
+  de2([s("Paarreim (aabb)", { bold: true }), pls("  – rymują się wersy 1 i 2 oraz 3 i 4", { italics: false })]),
+  de2([s("Kreuzreim (abab)", { bold: true }), pls("  – rymują się wersy 1 i 3 oraz 2 i 4", { italics: false })]),
+  de2([s("umarmender Reim (abba)", { bold: true }), pls("  – rymują się wersy 1 i 4 oraz 2 i 3", { italics: false })]),
+  de2([s("Kehrreim (x)", { bold: true }), pls("  – wers bez rymu, który powtarza się w każdej strofie", { italics: false })], { after: 40 }),
   de2([s("Ü3: ", { bold: true }), s("Bestimme das Reimschema: Schreibe die Buchstaben hinter die Verse. Nenne die Reimart.")]),
-  pl2("Przeczytaj półgłosem końcówki wersów. Za każdym wersem wpisz literę (a, b … albo x) i nazwij rodzaj rymu (Paarreim, Kreuzreim, umarmender Reim)."),
-  pl2("O czym są teksty: 2 „Beim Heben“ – hala jest jeszcze zimna, sztanga już leży, pierwsza próba jest trudna, ale ktoś woła „Tak!“. 3 „Auf der Matte“ – walka judo: przeciwnik trzyma mnie za kołnierz, rzut i spokój. 4 „Im Siebenmeterkreis“ – piłka ręczna: 10 sekund do końca, wbiegam, rzucam, gol – cała hala krzyczy."),
+  pl2("Przeczytaj półgłosem końcówki wersów. Za każdym wersem wpisz literę (a, b … albo x) i podaj niemiecką nazwę rymu. Nr 1 to strofa 4 z ballady, nr 2–4 to teksty o piłce ręcznej."),
   wtab([
-    ["die Hantel", "sztanga"], ["der Versuch", "próba"],
-    ["der Kragen · wagen", "kołnierz · zaryzykować"], ["der Wurf · die Ruh(e)", "rzut · spokój"],
+    ["der Pass · die Abwehr", "podanie · obrona"], ["täuschen · der Gegner", "zrobić zwód · przeciwnik"],
+    ["die Halle bebt", "hala drży (z emocji)"], ["wir liegen hinten", "przegrywamy"],
+    ["das Tor · ums Ziel kämpfen", "bramka (gol) · walczyć o cel"], ["der Wurf · schrein (schreien)", "rzut · krzyczeć"],
   ]),
   de2([s("Zielcheck: ", { bold: true }), s("Bestimme das Reimschema von Strophe 6. Welche Reimart ist „Ball – Tor – Fall – vor“?")], { before: 40 }),
-  pl2("Sprawdzenie celu: określ układ rymów w strofie 6 (wersy 26–30), nazwij rodzaj rymu i wskaż refren. Potem: jaki to rym – „Ball – Tor – Fall – vor“? Porównaj z rozwiązaniem i popraw na zielono.", { after: 0 }),
+  pl2("Sprawdzenie celu: zapisz literami rymy w strofie 6 (wersy 26–30), podaj niemiecką nazwę rymu i wskaż Kehrreim. Potem: jaki to rym – „Ball – Tor – Fall – vor“? Porównaj z rozwiązaniem i popraw na zielono.", { after: 0 }),
 ];
 const props = { page: { size: { width: 11906, height: 16838 }, margin: { top: 450, bottom: 350, left: 400, right: 400 } } };
 const styles = { default: { document: { run: { font: "Calibri", size: f } } } };

@@ -201,17 +201,11 @@ uebung("Verarbeiten · Schnipsel", "Ü3  Reime erkennen", [
   "Lies die Versenden halblaut.",
   "Schreibe hinter jeden Vers den Buchstaben (a, b … oder x).",
   "Nenne die Reimart: Paarreim, Kreuzreim oder umarmender Reim.",
-], "6 Minuten · allein · 1 Paddy Fingal · 2 Beim Heben · 3 Auf der Matte · 4 Im Siebenmeterkreis", "Lösungen auf den folgenden Aufdeck-Folien. Jeder Text passt zu einer Sportart der Klasse (Gewichtheben, Judo, Handball). Wer fertig ist: * bei Nr. 1 den Kehrreim bestimmen.");
-// Ü3 Aufdeck-Folien
-const UE3R = [
-  ["1  Paddy Fingal, Str. 4", [["… Schreck", "a"], ["… Versteck", "a"], ["… daher", "b"], ["… sehr", "b"], ["* … Paddy Fingal", "x"]], "Paarreim (aabb) + Kehrreim (x)"],
-  ["2  Beim Heben", [["Die Halle ist noch kalt und leer,", "a"], ["die Hantel liegt schon da.", "b"], ["Der erste Versuch fällt mir schwer,", "a"], ["doch dann ruft jemand: „Ja!“", "b"]], "Kreuzreim (abab)"],
-  ["3  Auf der Matte", [["Der Kampf beginnt, ich greife zu,", "a"], ["mein Gegner hält mich am Kragen,", "b"], ["ich muss jetzt alles wagen –", "b"], ["ein Wurf, und dann ist Ruh.", "a"]], "umarmender Reim (abba)"],
-  ["4  Im Siebenmeterkreis", [["Zehn Sekunden noch, der Ball ist frei,", "a"], ["ich zieh nach innen, schnell vorbei,", "a"], ["ich steige hoch, der Wurf geht rein –", "b"], ["die ganze Halle fängt an zu schrein!", "b"]], "Paarreim (aabb)"],
-];
-UE3R.forEach(([title, vs, art], k) => {
-  const s = base("Verarbeiten · Ü3 gemeinsam prüfen", "Ü3  Lösung – " + title, "Erst einen Schüler die Buchstaben und die Reimart nennen lassen, dann diese Folie zeigen. Alle verbessern mit Grün." + (k === 0 ? " Der Kehrreim reimt sich nicht (x), wiederholt sich aber in jeder Strophe." : ""));
-  vs.forEach(([v, l], i) => {
+], "6 Minuten · allein · Nr. 1 Paddy Fingal, Nr. 2–4 aus deiner Sportart", "Drei Fassungen des Schnipsels: Gewichtheben, Judo, Handball – jeder bekommt seine Sportart. Aufbau überall gleich: 1 Paddy Str. 4, 2 Kreuzreim, 3 umarmender Reim, 4 Paarreim. Lösungen auf den Aufdeck-Folien (je Nummer alle drei Sportarten). Wer fertig ist: * bei Nr. 1 den Kehrreim bestimmen.");
+// Ü3 Aufdeck-Folien: Nr. 1 gemeinsam, Nr. 2–4 je Nummer alle drei Sportarten
+{
+  const s = base("Verarbeiten · Ü3 gemeinsam prüfen", "Ü3  Lösung – 1  Paddy Fingal, Str. 4", "Erst einen Schüler die Buchstaben und die Reimart nennen lassen, dann diese Folie zeigen. Alle verbessern mit Grün. Der Kehrreim reimt sich nicht (x), wiederholt sich aber in jeder Strophe.");
+  [["… Schreck", "a"], ["… Versteck", "a"], ["… daher", "b"], ["… sehr", "b"], ["* … Paddy Fingal", "x"]].forEach(([v, l], i) => {
     const y = 1.7 + i * 0.72;
     box(s, 0.6, y, 9.6, 0.6, LIGHT);
     txt(s, v, { x: 0.9, y: y + 0.1, w: 9.2, h: 0.45, fontSize: 22, fontFace: HEAD });
@@ -219,7 +213,31 @@ UE3R.forEach(([title, vs, art], k) => {
     txt(s, l, { x: 10.45, y: y + 0.05, w: 0.9, h: 0.5, fontSize: 22, bold: true, color: WHITE, align: "center", valign: "middle" });
   });
   box(s, 0.6, 5.55, 12.1, 0.85, LIGHT2);
-  txt(s, [{ text: "Reimart: ", options: { bold: true, color: RED } }, { text: art, options: { bold: true } }], { x: 0.9, y: 5.72, w: 11.6, h: 0.55, fontSize: 24 });
+  txt(s, [{ text: "Reimart: ", options: { bold: true, color: RED } }, { text: "Paarreim (aabb) + Kehrreim (x)", options: { bold: true } }], { x: 0.9, y: 5.72, w: 11.6, h: 0.55, fontSize: 24 });
+}
+const SP3 = {
+  2: ["Kreuzreim (abab)", "abab", [["Gewichtheben", ["Die Halle ist noch kalt und leer,", "die Hantel liegt schon da.", "Der erste Versuch fällt mir schwer,", "doch dann ruft jemand: „Ja!“"]], ["Judo", ["Wir grüßen uns, der Kampf beginnt,", "am Ärmel spür ich seinen Griff.", "Ich weiß genau, wer heut gewinnt:", "wer schneller ist mit seinem Kniff."]], ["Handball", ["Der Pass kommt flach, ich bin jetzt dran,", "die Abwehr steht ganz dicht.", "Ich täusche links, der Gegner kann", "mich halten – heute nicht!"]]]],
+  3: ["umarmender Reim (abba)", "abba", [["Gewichtheben", ["Der letzte Versuch, die Halle schweigt,", "ich atme tief, ich bin bereit,", "der Trainer nickt, jetzt ist es Zeit –", "die Stange über meinem Kopf, sie steigt."]], ["Judo", ["Der Kampf beginnt, ich greife zu,", "mein Gegner hält mich am Kragen,", "ich muss jetzt alles wagen –", "ein Wurf, und dann ist Ruh."]], ["Handball", ["Die Halle bebt beim letzten Spiel,", "wir liegen hinten, nur ein Tor.", "Der Trainer ruft: „Jetzt alle vor!“", "Wir kämpfen bis zum Schluss ums Ziel."]]]],
+  4: ["Paarreim (aabb)", "aabb", [["Gewichtheben", ["Ich kreide meine Hände ein,", "heut soll der Rekord der meine sein.", "Ich reiße hoch und steh ganz still –", "drei weiße Lampen, genau, was ich will!"]], ["Judo", ["Ich binde meinen Gürtel fest,", "jetzt kommt der Kampf, jetzt kommt der Test.", "Ich greife, drehe, ziehe an –", "Ippon! Gewonnen hab ich dann."]], ["Handball", ["Zehn Sekunden noch, der Ball ist frei,", "ich zieh nach innen, schnell vorbei,", "ich steige hoch, der Wurf geht rein –", "die ganze Halle fängt an zu schrein!"]]]],
+};
+[2, 3, 4].forEach((n) => {
+  const [art, letters, cols] = SP3[n];
+  const s = base("Verarbeiten · Ü3 gemeinsam prüfen", `Ü3  Lösung – Nr. ${n}: ${art}`, `Je einen Schüler aus jeder Sportart Buchstaben und Reimart nennen lassen, dann zeigen. Alle verbessern mit Grün. Gemeinsam festhalten: Nr. ${n} ist in allen drei Fassungen ein ${art}.` + (n === 3 ? " Typische Hürde: Vers 1 und 4 vergleichen." : ""));
+  cols.forEach(([sp, vs], c) => {
+    const x = 0.6 + c * 4.1;
+    box(s, x, 1.55, 3.95, 0.45, NAVY, { r: 0.05 });
+    txt(s, sp, { x, y: 1.55, w: 3.95, h: 0.45, fontSize: 15, bold: true, color: WHITE, align: "center", valign: "middle" });
+    vs.forEach((v, i) => {
+      const y = 2.15 + i * 0.78;
+      box(s, x, y, 3.95, 0.68, LIGHT, { r: 0.05 });
+      txt(s, v, { x: x + 0.1, y: y + 0.08, w: 3.25, h: 0.55, fontSize: 12.5, fontFace: HEAD, valign: "middle" });
+      const l = letters[i];
+      box(s, x + 3.42, y + 0.14, 0.45, 0.4, RC[l], { r: 0.2 });
+      txt(s, l, { x: x + 3.42, y: y + 0.14, w: 0.45, h: 0.4, fontSize: 16, bold: true, color: WHITE, align: "center", valign: "middle" });
+    });
+  });
+  box(s, 0.6, 5.45, 12.1, 0.85, LIGHT2);
+  txt(s, [{ text: "Reimart: ", options: { bold: true, color: RED } }, { text: art, options: { bold: true } }, { text: "  – in allen drei Fassungen" }], { x: 0.9, y: 5.62, w: 11.6, h: 0.55, fontSize: 24 });
 });
 // Zielcheck
 {

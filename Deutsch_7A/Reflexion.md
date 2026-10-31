@@ -281,7 +281,10 @@ Die Lehrkraft möchte das weiterverfolgen, noch ohne Material. Die Satzklammer (
   - Ablauf: A 2′ → V 5′ Ü1 Chat-Fehler → V 4′ Ü2 Belegen → I 9′ Reime an Strophe 1 entdecken, Merkkasten → V 12′ Ü3 Reim-Schnipsel mit Aufdeck-Folien → A 6′ Zielcheck (Str. 6: aabb + Kehrreim; „Ball – Tor – Fall – vor“: Kreuzreim) → * 7′ Puffer Nacherzählen.
 - **Korrekturen der Lehrkraft (31.10., Material Do):**
   - Bei der Handreichung für S-PL soll es beim deutschen Reimschema und den Buchstaben bleiben.
-  - Beim Reim-Schnipsel soll jeder Schüler seine eigene Sportart bekommen, nicht alle Sportarten. Es gibt also eine Fassung je Sportart. Die Umsetzung wird noch besprochen.
+  - Beim Reim-Schnipsel soll jeder Schüler seine eigene Sportart bekommen, nicht alle Sportarten. Es gibt also eine Fassung je Sportart. Umgesetzt (31.10.):
+    - `Schnipsel_Reime_erkennen_3_Fassungen` mit je einer Seite für Gewichtheben, Judo und Handball (2 pro A4). Der Aufbau ist gleich: 1 Paddy Str. 4, 2 Kreuzreim, 3 umarmender Reim, 4 Paarreim. Sechs neue Strophen sind dazugekommen.
+    - Die Präsentation zeigt die Aufdeck-Folien je Nummer mit allen drei Sportarten nebeneinander.
+    - Handreichung für S-PL: Fachbegriffe und Reimschema bleiben deutsch (Paarreim aabb usw.), auf Polnisch steht nur, welche Verse sich reimen. Die Übersetzungen der Übungstexte sind entfallen, dafür gibt es eine Wortliste passend zu ihrer Fassung.
 - **Rückmeldung der Lehrkraft (Do 5.11.):** *(steht noch aus)*
 - **Fr 6.11.:** Ur-Ei (Lyrik, Epik, Dramatik) mit dem Ur-Ei-Schnipsel aus `Woche1/`. Vorher die Wiederholung zu den Reimen.
 - **Rückmeldung der Lehrkraft (Mi 4.11.):** *(steht noch aus)*

@@ -154,7 +154,7 @@ const ZIEL = "Ich kann Reime erkennen und das Reimschema einer Strophe bestimmen
 const RA = "2A8C8C", RB = "C77C12";
 const doc = [];
 doc.push(kicker("Tafelskript für die Lehrkraft · Do 5.11. · Einzelstunde (45 Min.) · AVIVA · mit Präsentation (17 Folien)"), h1("Paddy Fingal – Reime erkennen"));
-doc.push(box([p([S("Bezug: ", { bold: true }), S("Am Mittwoch hat die Klasse den Aufbau der Ballade gelernt (Strophe, Vers, Belegen), Aussagen geprüft und Nebensätze mit Subjunktion geübt. Die Chat-Übung wurde dafür auf heute verschoben: Sie ist jetzt die Wiederholung des Sprachtrainings, dazu eine kurze Belegübung. Danach geht es um die Lyrik in der Ballade: Reim und Reimschema, kleinschrittig an Strophe 1 entdeckt. Der Reim-Schnipsel hat jetzt für jede Sportart der Klasse einen Text (Gewichtheben, Judo, Handball). Das Ur-Ei folgt am Freitag. Das Nacherzählen vom Mittwoch dient heute als Puffer.")], { after: 0 })], LIGHT2));
+doc.push(box([p([S("Bezug: ", { bold: true }), S("Am Mittwoch hat die Klasse den Aufbau der Ballade gelernt (Strophe, Vers, Belegen), Aussagen geprüft und Nebensätze mit Subjunktion geübt. Die Chat-Übung wurde dafür auf heute verschoben: Sie ist jetzt die Wiederholung des Sprachtrainings, dazu eine kurze Belegübung. Danach geht es um die Lyrik in der Ballade: Reim und Reimschema, kleinschrittig an Strophe 1 entdeckt. Der Reim-Schnipsel gibt es in drei Fassungen – jeder Schüler bekommt seine Sportart (Gewichtheben, Judo, Handball). Der Aufbau ist überall gleich (1 Paddy Str. 4, 2 Kreuzreim, 3 umarmender Reim, 4 Paarreim), so kann gemeinsam ausgewertet werden. Das Ur-Ei folgt am Freitag. Das Nacherzählen vom Mittwoch dient heute als Puffer.")], { after: 0 })], LIGHT2));
 doc.push(p([S("Lernziel: ", { bold: true }), S(ZIEL, { italics: true })], { before: 120, after: 40 }));
 doc.push(p([S("Antwort auf „Was habt ihr heute gelernt?“: ", { bold: true }), S("„Wörter reimen sich, wenn sie ab dem letzten betonten Vokal gleich klingen. Mit Buchstaben bestimme ich das Reimschema: Paarreim aabb, Kreuzreim abab, umarmender Reim abba. Paddy Fingal hat Paarreime und einen Kehrreim.“ Überprüft wird das im Zielcheck.")], { after: 80 }));
 doc.push(board("Seitentafel links · vor der Stunde anschreiben, bleibt stehen", [
@@ -180,7 +180,7 @@ doc.push(table([2300, 7906], [
   ["Reime", "Strophe 1: Versenden mit a a b b x · Schnipsel „Reime erkennen“ eingeklebt und ausgefüllt, mit Grün kontrolliert"],
   ["Zielcheck", "Str. 6: Reimschema, Reimart, Kehrreim · Reimart zu „Ball – Tor – Fall – vor“"],
 ].map(([a, b]) => row([tc(a, 2300, { bold: true, fill: LIGHT }), tc(b, 7906)]))));
-doc.push(p([S("Material: ", { bold: true }), S("Präsentation `Donnerstag_05-11_Deutsch_7A.pptx` (Lösungen in den Notizen und auf Aufdeck-Folien) · Lehrbuch S. 136 f. · Schnipsel „Reime erkennen“ (2 pro A4) · Handreichung Polnisch für S-PL.")], { before: 80, after: 60 }));
+doc.push(p([S("Material: ", { bold: true }), S("Präsentation `Donnerstag_05-11_Deutsch_7A.pptx` (Lösungen in den Notizen und auf Aufdeck-Folien) · Lehrbuch S. 136 f. · Schnipsel „Reime erkennen“ in drei Fassungen (je 2 pro A4: Seite 1 Gewichtheben, Seite 2 Judo, Seite 3 Handball – nach Sportarten der Klasse auszählen und drucken) · Handreichung Polnisch für S-PL (dazu der Schnipsel in ihrer Sportart).")], { before: 80, after: 60 }));
 
 doc.push(avivaPhase("A", "Ankommen: Ziel und Ablauf", 2));
 doc.push(...steps([["zuhoeren", { say: "Stifte liegen. Ihr hört nur zu. Am Mittwoch habt ihr geprüft, was in der Ballade passiert. Heute geht es darum, wie sie klingt: um Reime. Ziel und Ablauf stehen auf der Folie und links an der Tafel. Jetzt schreibt ihr die Überschrift ab: Reime erkennen." }]]));
@@ -214,8 +214,8 @@ doc.push(...steps([
 
 doc.push(avivaPhase("V", "Verarbeiten: Ü3 Reime erkennen (Schnipsel)", 12));
 doc.push(...steps([
-  ["luecken", { say: "Jetzt arbeitet ihr allein. Lest die Versenden halblaut, schreibt hinter jeden Vers den Buchstaben und nennt die Reimart. Sechs Minuten. Fertig? Stift hinlegen.", sol: "1 Schreck a, Versteck a, daher b, sehr b, *Paddy Fingal x → Paarreim + Kehrreim · 2 leer a, da b, schwer a, Ja b → Kreuzreim · 3 zu a, Kragen b, wagen b, Ruh a → umarmender Reim · 4 frei a, vorbei a, rein b, schrein b → Paarreim", do: ["Herumgehen. Typische Hürde: umarmender Reim (Nr. 3) – Tipp: Vers 1 und 4 vergleichen."] }],
-  ["gemeinsam", { say: "Wir prüfen gemeinsam, Text für Text. Wer drankommt, nennt die Buchstaben und die Reimart. Dann decke ich auf. Alle verbessern mit Grün.", do: ["Folie 11 bis 14. Jeweils einen anderen Schüler drannehmen, möglichst einen aus der jeweiligen Sportart. Niemand geht an die Tafel."] }],
+  ["luecken", { say: "Jetzt arbeitet ihr allein. Lest die Versenden halblaut, schreibt hinter jeden Vers den Buchstaben und nennt die Reimart. Sechs Minuten. Fertig? Stift hinlegen.", sol: "1 Schreck a, Versteck a, daher b, sehr b, *Paddy Fingal x → Paarreim + Kehrreim · 2 in allen Fassungen Kreuzreim (Heben: leer/schwer, da/Ja · Judo: beginnt/gewinnt, Griff/Kniff · Handball: dran/kann, dicht/nicht) · 3 umarmender Reim (Heben: schweigt/steigt, bereit/Zeit · Judo: zu/Ruh, Kragen/wagen · Handball: Spiel/Ziel, Tor/vor) · 4 Paarreim (Heben: ein/sein, still/will · Judo: fest/Test, an/dann · Handball: frei/vorbei, rein/schrein)", do: ["Herumgehen. Typische Hürde: umarmender Reim (Nr. 3) – Tipp: Vers 1 und 4 vergleichen."] }],
+  ["gemeinsam", { say: "Wir prüfen gemeinsam, Text für Text. Wer drankommt, nennt die Buchstaben und die Reimart. Dann decke ich auf. Alle verbessern mit Grün.", do: ["Folie 11: Paddy gemeinsam. Folie 12 bis 14: je Nummer alle drei Sportarten nebeneinander – aus jeder Sportart einen Schüler drannehmen. Festhalten: Die Nummer hat in allen Fassungen dieselbe Reimart. Niemand geht an die Tafel."] }],
 ]));
 
 doc.push(avivaPhase("A", "Auswerten: Zielcheck", 6));
@@ -229,8 +229,7 @@ doc.push(...steps([["partner", { say: "Erzählt die Ballade im Tandem nach. Auf 
 // ---------- Reflexion ----------
 const bul = (head, txt) => p([S("• ", { bold: true, color: C.hv }), ...(head ? [S(head + " ", { bold: true })] : []), S(txt)], { after: 40, indent: { left: 240, hanging: 240 } });
 const refHead = (txt, col) => p(t(txt, { font: "Cambria", size: 22, bold: true, color: col }), { before: 140, after: 50, keepNext: true });
-doc.push(p(new PageBreak()));
-doc.push(kicker("Für die Lehrkraft · Reflexion vor und nach der Stunde"), h3("Umsetzung der Erkenntnisse zur Unterrichtsverbesserung"));
+doc.push(new Paragraph({ pageBreakBefore: true, children: [t("FÜR DIE LEHRKRAFT · REFLEXION VOR UND NACH DER STUNDE", { size: 18, color: MUTED, bold: true })], spacing: { after: 20 } }), h3("Umsetzung der Erkenntnisse zur Unterrichtsverbesserung"));
 doc.push(refHead("1  AVIVA – Struktur und Transparenz", C.hv));
 doc.push(bul("Ankommen:", "Ziel und Ablauf auf Folie und Seitentafel, Rückgriff im Zielcheck."));
 doc.push(bul("Vorwissen aktivieren:", "Echte Wiederholung beider Teile vom Mittwoch: Sprachtraining (Chat-Fehler, die verschobene Übung) und Belegen."));
@@ -242,8 +241,8 @@ doc.push(bul("Ziel und Relevanz:", "Ein überprüfbares Ziel; „Wofür?“: Rei
 doc.push(bul("Ich – Wir – Ihr:", "Gemeinsam an Strophe 1 (Wir), Kontrollfragen zu abab/abba, dann vier Texte allein (Ihr)."));
 doc.push(bul("Rückmeldung:", "Lösungsfolien nach Ü1/Ü2, Aufdeck-Folien nach Ü3, Zielcheck mit Lösung; typische Hürde benannt: umarmender Reim."));
 doc.push(refHead("3  Differenzierung", "2A8C8C"));
-doc.push(bul("", "Übungstexte für jede Sportart der Klasse (Gewichtheben, Judo, Handball); * Kehrreim in Nr. 1; Puffer Nacherzählen mit Stichwörtern."));
-doc.push(bul("", "S-PL: Handreichung mit Ziel, Ablauf, Aufträgen und den Reimbegriffen auf Polnisch, dazu die Übungstexte sinngemäß übersetzt."));
+doc.push(bul("", "Jeder Schüler übt an Texten aus seiner eigenen Sportart (drei Fassungen mit gleichem Aufbau, Rückmeldung 31.10.); * Kehrreim in Nr. 1; Puffer Nacherzählen mit Stichwörtern."));
+doc.push(bul("", "S-PL: Handreichung mit Ziel, Ablauf und Aufträgen auf Polnisch; Reimschema und Fachbegriffe bleiben deutsch (Rückmeldung 31.10.), dazu eine kleine Wortliste zu ihren Übungstexten."));
 doc.push(refHead("4  Beobachtungsschwerpunkte", MUTED));
 doc.push(bul("", "Sitzt die Regel zu den Nebensätzen nach einem Tag (Ü1)? Sitzt das Belegen (Ü2)?"));
 doc.push(bul("", "Hören die Schüler den Reim ab dem betonten Vokal, oder schauen sie nur auf die letzten Buchstaben?"));
