@@ -51,6 +51,7 @@ Die folgenden Vorlieben und Reflexionen gelten für die gesamte weitere Planung,
   - Beispielsätze aus der Lebenswelt der Klasse (vor allem Leistungssport, daneben Serien, Handy, Klassenfahrt), keine Kinderbeispiele,
   - keine Finger- oder Handzeichenspiele; stattdessen z. B. Speed-Duell zu zweit mit Punkten,
   - Relevanz zeigen (wofür man es braucht, Bezug zum Englischen).
+  - Vergleiche aus der Lebenswelt beim Einführen neuer Begriffe (z. B. Lyrik wie ein Song-Text, Epik wie ein Spielbericht, Dramatik wie eine Serienszene) sind erwünscht, weil sie Abwechslung und Transfer bringen (Stand 31.10.).
 - **Wenige Arbeitsblätter.** Übungen laufen an der Tafel, die Klasse schreibt ins Heft ab und löst dort.
   - Erlaubt sind **kleine Arbeitsblatt-Schnipsel**: mehrere passen auf ein A4-Blatt, die Schüler tragen nur ein. Das spart die Zeit fürs Abschreiben. Grundsätzlich soll aber weiter geschrieben werden, weil die Klasse auch schreiben lernen muss. Eine sinnvolle Aufteilung: Merksätze und eigene Sätze ins Heft, längere Übungstexte als Schnipsel.
   - **Schnipsel mit großzügigen Lücken (Stand 09.10.):** Die Schüler hatten zu wenig Platz zum Eintragen. Lücken lang genug für Handschrift, ausreichend Zeilenabstand; lieber weniger Schnipsel pro A4.

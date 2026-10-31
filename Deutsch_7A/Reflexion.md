@@ -286,7 +286,13 @@ Die Lehrkraft möchte das weiterverfolgen, noch ohne Material. Die Satzklammer (
     - Die Präsentation zeigt die Aufdeck-Folien je Nummer mit allen drei Sportarten nebeneinander.
     - Handreichung für S-PL: Fachbegriffe und Reimschema bleiben deutsch (Paarreim aabb usw.), auf Polnisch steht nur, welche Verse sich reimen. Die Übersetzungen der Übungstexte sind entfallen, dafür gibt es eine Wortliste passend zu ihrer Fassung.
 - **Rückmeldung der Lehrkraft (Do 5.11.):** *(steht noch aus)*
-- **Fr 6.11.:** Ur-Ei (Lyrik, Epik, Dramatik) mit dem Ur-Ei-Schnipsel aus `Woche1/`. Vorher die Wiederholung zu den Reimen.
+- **Fr 6.11. geplant: „Paddy Fingal – die Ballade als Ur-Ei“** (Material in `Woche2/`):
+  - Präsentation mit 13 Folien, Tafelskript mit Reflexionsteil, Handreichung Polnisch
+  - Der Ur-Ei-Schnipsel aus `Woche1/` bleibt unverändert.
+  - Ziel: Ich kann an Paddy Fingal mit Belegen zeigen, dass eine Ballade Merkmale von Lyrik, Epik und Dramatik hat.
+  - Ablauf: A 2′ → V 7′ Ü1 Reimschema Str. 11 und Fachbegriffe → I 8′ Ur-Ei, Vergleich mit der Lebenswelt (Song-Text = Lyrik, Roman/Spielbericht = Epik, Serienszene = Dramatik; erst Merkmale sammeln, dann aufdecken) → V 12′ Ü2 Ur-Ei-Schnipsel → A 6′ Aufdeck-Folien je Gattung → A 6′ Zielcheck (Riesenart – Bart = Lyrik, „Da lief er heim“ = Epik, „O Schaya, birg mich …“ = Dramatik).
+  - Die Lehrkraft findet die Vergleiche aus der Lebenswelt gut („Abwechslung und Transfer“). Der Zielcheck bleibt beim Zuordnen mit Begründung.
+- **Rückmeldung der Lehrkraft (Fr 6.11.):** *(steht noch aus)*
 - **Idee der Lehrkraft für Mo 9.11. (Hospitation):** Strophe, Vers und Reimschema wiederholen. Dann schreiben die Schüler selbst Reime nach einem vorgegebenen Schema, themenorientiert und mit Formulierungshilfen. Wird nach Freitag geplant.
 - **Rückmeldung der Lehrkraft (Mi 4.11.):** *(steht noch aus)*
 
