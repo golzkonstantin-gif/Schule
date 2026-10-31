@@ -252,6 +252,7 @@ Die Lehrkraft möchte das weiterverfolgen, noch ohne Material. Die Satzklammer (
 - **Rückmeldung der Lehrkraft (31.10.):**
   - Das Wort „Grammatik“ schreckt die Klasse ab („die SuS machen zu“). Entscheidung: Gegenüber der Klasse heißt es „Sprachtraining“. Das Material für Mi 4.11. ist entsprechend angepasst.
   - Bei Korrekturen wird erst besprochen, dann wird Material erstellt.
+- **Rückmeldung der Lehrkraft (31.10., Teil 1 Mi 4.11.):** Statt Fragen zu beantworten, sollen die Schüler Aussagen prüfen und mit Belegen begründen, ob sie richtig oder falsch sind. Dafür gibt es ein Arbeitsblatt. In der Präsentation stehen die Aussagen, die Lösungen werden gemeinsam Schritt für Schritt überprüft. Niemand muss an die Tafel. Umsetzung wird noch besprochen.
 - **Rückmeldung der Lehrkraft (Mi 4.11.):** *(steht noch aus)*
 
 ### Woche 1: „Paddy Fingal – Lesetechniken“ (Mi 14.10., nach der Leistungskontrolle), „Paddy Fingal gliedern und nacherzählen“ (Do), „Ur-Ei“ (Fr) – AVIVA
