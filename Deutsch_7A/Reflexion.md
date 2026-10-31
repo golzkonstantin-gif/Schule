@@ -249,6 +249,9 @@ Die Lehrkraft möchte das weiterverfolgen, noch ohne Material. Die Satzklammer (
   - Kurzeinheit Lesetechniken: Selbstkontrolle mit aufgeklappter Lösung und eine Zielcheck-Aufgabe, keine Kreide-Kette.
   - Beide Handreichungen für S-PL sind angepasst.
   - Das Material für Do/Fr aus `Woche1/` (Reime, Ur-Ei) muss beim Anpassen ebenfalls umgestellt werden.
+- **Rückmeldung der Lehrkraft (31.10.):**
+  - Das Wort „Grammatik“ schreckt die Klasse ab („die SuS machen zu“). Es braucht eine andere Bezeichnung, die Auswahl ist noch offen.
+  - Bei Korrekturen wird erst besprochen, dann wird Material erstellt.
 - **Rückmeldung der Lehrkraft (Mi 4.11.):** *(steht noch aus)*
 
 ### Woche 1: „Paddy Fingal – Lesetechniken“ (Mi 14.10., nach der Leistungskontrolle), „Paddy Fingal gliedern und nacherzählen“ (Do), „Ur-Ei“ (Fr) – AVIVA
