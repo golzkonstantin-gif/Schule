@@ -261,7 +261,14 @@ Die Lehrkraft möchte das weiterverfolgen, noch ohne Material. Die Satzklammer (
   - * LB 1 b (nacherzählen) bleibt. Zielcheck Ziel 1 ist jetzt eine Aussage („Der Schotte flieht, weil Paddy ihn im Bett angreift.“).
   - Die Handreichung für S-PL enthält die Aussagen auf Polnisch, die Vokabelliste ist ergänzt (Aussage prüfen, richtig/falsch, Zitat).
   - Auf Wunsch der Lehrkraft gibt es das Arbeitsblatt zusätzlich zweisprachig für S-PL (`Handreichung_Polnisch_04-11_Ue1_Aussagen_pruefen`, Vorder- und Rückseite). Die Aussagen sind deutsch mit polnischer Übersetzung, dazu eine Wortliste. Gleiche Nummern und Lücken wie bei der Klasse.
-- **Rückmeldung der Lehrkraft (31.10., Aufbau vor Belegen):** Bevor die Klasse mit Strophe und Vers belegt, muss sie den Aufbau einer Ballade kennen. Deshalb kommt nach dem Inhalt (Tandemlesen) kurz der Aufbau dran (Strophe, Vers), dafür wird das Sprachtraining gekürzt. Ur-Ei und Reimschema folgen am Donnerstag. Die Umsetzung wird noch besprochen.
+- **Rückmeldung der Lehrkraft (31.10., Aufbau vor Belegen):** Bevor die Klasse mit Strophe und Vers belegt, muss sie den Aufbau einer Ballade kennen. Deshalb kommt nach dem Inhalt (Tandemlesen) kurz der Aufbau dran (Strophe, Vers), dafür wird das Sprachtraining gekürzt. Ur-Ei und Reimschema folgen am Donnerstag. Umgesetzt (31.10.):
+  - Neue Reihenfolge in Teil 1: Wiederholung Lesetechniken → Tandemlesen → Aufbau einer Ballade und Belegen (Folie mit Strophe 1) → Ü1 Belege finden (11 Strophen à 5 Verse, Str. 3, V. 14, „birg mich im Versteck“) → Ü2 Aussagen prüfen (Arbeitsblatt, Merkkasten „So belegst du“ oben) → gemeinsam aufdecken → * Ü3 nacherzählen.
+  - Neues Ziel 1: Ich kann mit Strophe und Vers belegen, ob Aussagen zur Ballade richtig oder falsch sind.
+  - Ü3 (nacherzählen) bekommt auf Wunsch der Lehrkraft Stichwörter für acht Abschnitte als Struktur, dazu einen Einstiegssatz und Verknüpfungswörter.
+  - Sprachtraining gekürzt: Die Chat-Übung (Fehler finden) wandert als Wiederholung auf Donnerstag. Der Folien-Code liegt in `Woche2/quellcode/folien_chat_fehler_fuer_donnerstag.js`.
+  - Neue Nummern: Ü4 entdecken, Ü5 Sätze verbinden, * Ü6 zurück zur Ballade. Die Präsentation hat 34 Folien, Pflicht sind 76 Minuten.
+  - Arbeitsblatt jetzt `Ue2_Paddy_Fingal_Aussagen_pruefen`, die zweisprachige Fassung ebenfalls Ü2. Handreichung und Vokabelliste (Verknüpfungswörter) sind angepasst.
+- **Plan Donnerstag:** Wiederholung mit den Chat-Fehlern und dem Belegen → Ur-Ei → Reime und Reimschema (Material aus `Woche1/` anpassen).
 - **Rückmeldung der Lehrkraft (Mi 4.11.):** *(steht noch aus)*
 
 ### Woche 1: „Paddy Fingal – Lesetechniken“ (Mi 14.10., nach der Leistungskontrolle), „Paddy Fingal gliedern und nacherzählen“ (Do), „Ur-Ei“ (Fr) – AVIVA

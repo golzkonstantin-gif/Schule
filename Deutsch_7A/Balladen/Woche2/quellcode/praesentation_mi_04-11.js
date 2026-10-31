@@ -77,7 +77,7 @@ function section(nr, title, sub, col) {
 }
 
 // ================= Präsentation Mi 4.11.: Teil 1 Paddy Fingal – Inhalt · Teil 2 Nebensätze mit Subjunktion =================
-const Z1 = "Ich kann Aussagen zur Ballade prüfen und mit Textbelegen begründen, ob sie richtig oder falsch sind.";
+const Z1 = "Ich kann mit Strophe und Vers belegen, ob Aussagen zur Ballade richtig oder falsch sind.";
 const Z2 = "Ich kann Nebensätze mit Subjunktion erkennen und richtig bilden: Das finite Verb steht am Ende.";
 const zeit = (s, meta) => { box(s, 0.6, 6.25, 12.1, 0.55, LIGHT2); txt(s, [{ text: "Zeit: ", options: { bold: true } }, { text: meta + "      " }, { text: "Fertig? Stift hinlegen.", options: { italic: true, color: MUTED } }], { x: 0.85, y: 6.33, w: 11.7, h: 0.4, fontSize: 16 }); };
 // Satz mit markierten Teilen: [text, kind] kind: sub (Subjunktion, violett, Kasten-Optik), fin (finites Verb, unterstrichen), hv (Hilfsverb finit, rot unterstrichen), bold
@@ -99,8 +99,8 @@ const runs = (parts, size = 22) => parts.map(([x, k]) => ({ text: x, options: Ob
 {
   const s = base("Überblick", "Unsere Doppelstunde: Ablauf und Ziele", "Am Anfang zeigen und am Ende noch einmal: Was haben wir geschafft? Ziele und Ablauf stehen zusätzlich an der Seitentafel.");
   const P = [
-    ["1", "Paddy Fingal – den Inhalt erschließen", "ca. 40 Min.", Z1, "Wiederholung Lesetechniken · Tandemlesen · Ü1 Aussagen prüfen und gemeinsam auswerten · * LB-Aufgabe 1 b (nacherzählen)", GREEN],
-    ["2", "Sprachtraining: Nebensätze mit Subjunktion", "ca. 45 Min.", Z2, "Ü2 Entdecken in der Ballade · Merksatz · Ü3 Sätze verbinden · Ü4 Fehler finden · * Ü5 zurück zur Ballade", VIO],
+    ["1", "Paddy Fingal – den Inhalt erschließen", "ca. 45 Min.", Z1, "Wiederholung Lesetechniken · Tandemlesen · Aufbau einer Ballade · Ü1 Belege finden · Ü2 Aussagen prüfen · * Ü3 nacherzählen", GREEN],
+    ["2", "Sprachtraining: Nebensätze mit Subjunktion", "ca. 40 Min.", Z2, "Ü4 Entdecken in der Ballade · Merksatz · Ü5 Sätze verbinden · * Ü6 zurück zur Ballade", VIO],
   ];
   P.forEach(([n, t, z, ziel, ab, c], i) => {
     const y = 1.7 + i * 2.25;
@@ -142,18 +142,59 @@ const AUS = [
   ["Auf der Flucht hätte der Schotte beinahe sein Leben verloren.", true, "Str. 10, V. 48: „fast wär ertrunken der gute Held“", ""],
   ["Paddy wird am Ende zu Recht als tapferer Held gefeiert, weil er den Schotten besiegt hat.", false, "Str. 11, V. 55: „den tapfern Paddy Fingal“", "Paddy hat nie gekämpft und gewinnt nur durch Schayas List – „tapfer“ ist ironisch gemeint."],
 ];
-uebung("Verarbeiten · Ü1 (Arbeitsblatt)", "Ü1  Paddy Fingal – Aussagen prüfen", [
+// Tandemlesen
+uebung("Verarbeiten · Lesen", "Paddy Fingal im Tandem lesen", [
   "Lest die Ballade im Tandem: abwechselnd Strophe für Strophe.",
-  "Prüft jede Aussage auf dem Arbeitsblatt allein: richtig oder falsch?",
-  "Belegt mit Strophe, Vers und Zitat.",
-  "Ist die Aussage falsch? Schreibt auf, was richtig ist.",
-], "8 Min. lesen (Tandem) + 10 Min. prüfen (allein) · Nr. 9 mit *", "Methodenkarte Tandemlesen. Arbeitsblatt austeilen. Die Aussagen sind bewusst in eigenen Worten formuliert: Die Schüler müssen die Stelle verstanden haben, um sie zu finden. Herumgehen; wer fertig ist, macht * Nr. 9. Lösungen auf den folgenden Aufdeck-Folien.", (s, y) => {
+  "Wer zuhört, liest leise mit und hilft bei Fehlern.",
+  "Achtet darauf: Was passiert? Wer handelt?",
+], "8 Minuten · Tandem", "Methodenkarte Tandemlesen (Tandems lesestärker/leseschwächer). Herumgehen und zuhören.");
+// Aufbau einer Ballade
+{
+  const s = base("Informieren · Aufbau", "Aufbau einer Ballade – und wie ich belege", "Ich – Wir: Lehrkraft zeigt an Strophe 1, was eine Strophe und was ein Vers ist, und zählt mit der Klasse die Verse. Im Lehrbuch auf die Verszählung am Rand hinweisen (5, 10, 15 …). Dann das Beleg-Format zeigen: Str. + V. + Zitat in Anführungszeichen. Der Merkkasten steht auch oben auf dem Arbeitsblatt zu Ü2.");
+  box(s, 0.6, 1.6, 6.6, 3.55, LIGHT);
+  txt(s, "Strophe 1", { x: 0.85, y: 1.7, w: 3, h: 0.35, fontSize: 15, bold: true, color: GREEN });
+  ["Paddy Fingal war von Riesenart:", "Sechs Ellen flog sein schwarzer Bart,", "seine Fäuste waren wie Tonnen groß,", "einen Mastbaum führt’ er als Wurfgeschoss –", "     so ein Kerl war Paddy Fingal!"].forEach((v, i) => {
+    txt(s, String(i + 1), { x: 0.75, y: 2.15 + i * 0.55, w: 0.4, h: 0.4, fontSize: 15, color: MUTED, align: "right" });
+    txt(s, v, { x: 1.3, y: 2.12 + i * 0.55, w: 5.8, h: 0.45, fontSize: 18, fontFace: HEAD });
+  });
+  s.addShape(pres.shapes.RECTANGLE, { x: 7.0, y: 2.1, w: 0.06, h: 2.8, fill: { color: GREEN }, line: { type: "none" } });
+  txt(s, "← Vers 2", { x: 6.0, y: 2.67, w: 1.0, h: 0.4, fontSize: 13, bold: true, color: RED });
+  [["Strophe", "ein Abschnitt der Ballade; zwischen zwei Strophen steht eine Leerzeile. Paddy Fingal hat 11 Strophen."],
+   ["Vers", "eine Zeile der Ballade. Im Lehrbuch sind die Verse am Rand gezählt: 5, 10, 15 …"]].forEach(([k, d], i) => {
+    box(s, 7.45, 1.6 + i * 1.8, 5.25, 1.6, LIGHT2);
+    txt(s, [{ text: k + ": ", options: { bold: true, color: GREEN } }, { text: d }], { x: 7.65, y: 1.75 + i * 1.8, w: 4.9, h: 1.35, fontSize: 17 });
+  });
+  box(s, 0.6, 5.4, 12.1, 1.3, WHITE, { line: RED, lw: 2.5, r: 0.05 });
+  txt(s, [{ text: "So belege ich: ", options: { bold: true, color: RED } }, { text: "Strophe + Vers + Zitat in Anführungszeichen\n" }, { text: "Str. 1, V. 2: „Sechs Ellen flog sein schwarzer Bart“", options: { fontFace: HEAD, bold: true } }], { x: 0.9, y: 5.55, w: 11.6, h: 1.05, fontSize: 19 });
+}
+// Ü1 Belege finden
+uebung("Verarbeiten · Aufbau", "Ü1  Belege finden", [
+  "Zähle: Wie viele Strophen hat die Ballade? Wie viele Verse hat jede Strophe?",
+  "Schlage nach: Was steht in Str. 3, V. 14? Schreibe das Zitat ab.",
+  "Suche: Wo steht „birg mich im Versteck“? Gib Strophe und Vers an.",
+], "3 Minuten · allein im Heft", "Lösung auf der nächsten Folie. Beim Vergleich darauf achten: Anführungszeichen beim Zitat, Strophe UND Vers.");
+{
+  const s = base("Verarbeiten · Aufbau", "Ü1  Lösung", "Mit Grün verbessern. Rückbezug zu den Lesetechniken: Bei 2 und 3 lest ihr orientierend – ihr sucht eine bestimmte Stelle.");
+  [["1", "11 Strophen mit je 5 Versen"], ["2", "Str. 3, V. 14: „dass der Fremdling zehn Schuh größer war“"], ["3", "Str. 4, V. 17: „O Schaya, birg mich im Versteck!“"]].forEach(([n, x], i) => {
+    const y = 1.8 + i * 1.2;
+    box(s, 0.6, y, 12.1, 1.0, LIGHT);
+    num(s, n, 0.9, y + 0.25, GREEN, 0.5);
+    txt(s, x, { x: 1.7, y: y + 0.27, w: 10.8, h: 0.5, fontSize: 22, fontFace: HEAD });
+  });
+  txt(s, "Vergleiche und verbessere mit Grün.", { x: 0.6, y: 5.6, w: 12.1, h: 0.5, fontSize: 20, bold: true, align: "center" });
+}
+// Ü2 Aussagen prüfen
+uebung("Verarbeiten · Ü2 (Arbeitsblatt)", "Ü2  Paddy Fingal – Aussagen prüfen", [
+  "Prüfe jede Aussage auf dem Arbeitsblatt allein: richtig oder falsch?",
+  "Belege mit Strophe, Vers und Zitat.",
+  "Ist die Aussage falsch? Schreibe auf, was richtig ist.",
+], "10 Minuten · allein · Nr. 9 mit *", "Arbeitsblatt austeilen. Die Aussagen sind bewusst in eigenen Worten formuliert: Die Schüler müssen die Stelle verstanden haben, um sie zu finden. Herumgehen; wer fertig ist, macht * Nr. 9. Lösungen auf den folgenden Aufdeck-Folien.", (s, y) => {
   box(s, 0.6, y, 12.1, 0.75, LIGHT2);
   txt(s, [{ text: "Beispiel: ", options: { bold: true, color: GREEN } }, { text: "„Paddy hat einen roten Bart.“ – falsch · Str. 1, V. 2, „Sechs Ellen flog sein schwarzer Bart“ · Richtig ist: Paddys Bart ist schwarz." }], { x: 0.85, y: y + 0.17, w: 11.6, h: 0.5, fontSize: 15 });
 });
 // Aufdeck-Folien Ü1: k Lösungen sichtbar
 for (let k = 0; k <= AUS.length; k++) {
-  const s = base("Auswerten · Teil 1 · gemeinsam prüfen", "Ü1  Richtig oder falsch?", k === 0
+  const s = base("Auswerten · Teil 1 · gemeinsam prüfen", "Ü2  Richtig oder falsch?", k === 0
     ? "Ansage: Wir prüfen jetzt gemeinsam, Aussage für Aussage. Wer drankommt, sagt: richtig oder falsch und den Beleg. Erst dann decke ich auf. Alle verbessern auf dem Arbeitsblatt mit Grün."
     : `Aussage ${k}: erst einen Schüler Urteil und Beleg nennen lassen, bei falschen Aussagen auch „Richtig ist …“. Dann diese Folie zeigen. Alle verbessern mit Grün.` + (k === 9 ? " Nr. 9 ist eine Deutungsfrage: Die Ballade ist ironisch – der Feigling wird als Held gefeiert." : ""));
   AUS.forEach(([a, ok], i) => {
@@ -178,15 +219,29 @@ for (let k = 0; k <= AUS.length; k++) {
     txt(s, "Wer drankommt, sagt: richtig oder falsch – und den Beleg. Erst dann wird aufgedeckt. Alle verbessern mit Grün.", { x: 0.6, y: 5.55, w: 12.1, h: 0.8, fontSize: 19, bold: true });
   }
 }
-// * 1b
-uebung("* Verarbeiten · LB-Aufgabe 1 b", "* Ü1 b  Erzählt die Ballade nach", [
-  "A erzählt Strophe 1–5 nach, B hört zu und hakt die Checkliste ab.",
-  "Wechselt: B erzählt Strophe 6–11, A prüft.",
-  "Nutzt euer Arbeitsblatt aus Ü1 als Spickzettel.",
-], "8 Minuten · Tandem", "Nur, wenn die Zeit reicht; sonst Einstieg am Donnerstag. Herumgehen, ein gelungenes Paar kurz vorerzählen lassen.", (s, y) => {
-  box(s, 0.6, y, 12.1, 1.3, LIGHT);
-  txt(s, [{ text: "Checkliste: ", options: { bold: true, color: GREEN } }, { text: "Titel und Autor  ·  richtige Reihenfolge  ·  nichts dazuerfinden  ·  alle wichtigen Details  ·  * spannend mit wörtlicher Rede" }], { x: 0.95, y: y + 0.2, w: 11.4, h: 0.9, fontSize: 19 });
-});
+// * Ü3 nacherzählen mit Stichwörtern
+{
+  const s = base("* Verarbeiten · LB-Aufgabe 1 b", "* Ü3  Erzählt die Ballade nach", "Nur, wenn die Zeit reicht; sonst Einstieg am Donnerstag. Die Stichwörter geben die Reihenfolge vor – keine fertigen Sätze. A erzählt Abschnitt 1–4, B Abschnitt 5–8, der andere hakt die Checkliste ab. Die Verknüpfungswörter (als, weil) knüpfen an Teil 2 an.");
+  box(s, 0.6, 1.5, 12.1, 0.55, LIGHT2);
+  txt(s, [{ text: "Einstieg: ", options: { bold: true, color: GREEN } }, { text: "In der Ballade „Paddy Fingal“ von Wilhelm Brandes geht es um …" }], { x: 0.85, y: 1.6, w: 11.6, h: 0.4, fontSize: 17 });
+  const AB = [
+    ["1", "Paddy – Riese – Bart – Mastbaum", "Str. 1"], ["2", "Hüne aus Schottland – Wer ist stärker?", "Str. 2"],
+    ["3", "Ufer – zehn Schuh größer – Schreck – Versteck", "Str. 3–4"], ["4", "Schaya – Bett – Kissen – nur die Nase", "Str. 5"],
+    ["5", "Schotte sucht – Schayas Warnung – „Kindlein“", "Str. 6–7"], ["6", "Nase – Baby? – riesiger Vater", "Str. 8–9"],
+    ["7", "Flucht – Sund – fast ertrunken", "Str. 10"], ["8", "Siegesgeschrei – Nachbarn – „tapfer“", "Str. 11"],
+  ];
+  AB.forEach(([n, w, st], i) => {
+    const col = i < 4 ? 0 : 1, r = i % 4;
+    const x = 0.6 + col * 6.15, y = 2.2 + r * 0.72;
+    box(s, x, y, 5.95, 0.62, LIGHT);
+    txt(s, n, { x: x + 0.12, y: y + 0.13, w: 0.35, h: 0.38, fontSize: 16, bold: true, color: GREEN });
+    txt(s, w, { x: x + 0.5, y: y + 0.14, w: 4.4, h: 0.38, fontSize: 15 });
+    txt(s, st, { x: x + 4.85, y: y + 0.15, w: 1.0, h: 0.35, fontSize: 12, color: MUTED, align: "right" });
+  });
+  txt(s, [{ text: "A: ", options: { bold: true } }, { text: "Abschnitt 1–4  ·  " }, { text: "B: ", options: { bold: true } }, { text: "Abschnitt 5–8  ·  " }, { text: "Verknüpfe: ", options: { bold: true, color: GREEN } }, { text: "zuerst · dann · als … · weil … · daraufhin · schließlich · am Ende" }], { x: 0.6, y: 5.15, w: 12.1, h: 0.4, fontSize: 15 });
+  txt(s, [{ text: "Checkliste: ", options: { bold: true, color: GREEN } }, { text: "Titel und Autor · richtige Reihenfolge · nichts dazuerfinden · alle wichtigen Details · * spannend mit wörtlicher Rede" }], { x: 0.6, y: 5.6, w: 12.1, h: 0.4, fontSize: 14, color: MUTED });
+  zeit(s, "7 Minuten · Tandem");
+}
 
 // ================= TEIL 2 =================
 FOOT = "Teil 2 · Sprachtraining: Nebensätze mit Subjunktion · Deutsch 7A";
@@ -206,7 +261,7 @@ section("2", "Sprachtraining an der Ballade", "Nebensätze mit Subjunktion", VIO
 }
 // Entdecken
 {
-  const s = base("Informieren · Entdecken in der Ballade", "Ü2  Was passiert mit dem finiten Verb?", "Lösung: dass … war · dass … erwacht · als … sah. Erstes Wort: dass, als (Subjunktion). Das finite Verb steht am Ende. Vor der Subjunktion steht ein Komma (im Gedicht teils am Versende). Überleitung: Das ist eine Regel – Merksatz-Schnipsel austeilen.");
+  const s = base("Informieren · Entdecken in der Ballade", "Ü4  Was passiert mit dem finiten Verb?", "Lösung: dass … war · dass … erwacht · als … sah. Erstes Wort: dass, als (Subjunktion). Das finite Verb steht am Ende. Vor der Subjunktion steht ein Komma (im Gedicht teils am Versende). Überleitung: Das ist eine Regel – Merksatz-Schnipsel austeilen.");
   const ex = [
     ["Str. 3", [["… und maß von ferne klipp und klar, ", "m"], ["dass der Fremdling zehn Schuh größer war", "b"]]],
     ["Str. 7", [["Tut leise, Fremder, und tretet sacht, ", "m"], ["dass Paddys Kindlein nicht erwacht", "b"], ["!", "m"]]],
@@ -240,7 +295,7 @@ section("2", "Sprachtraining an der Ballade", "Nebensätze mit Subjunktion", VIO
 }
 // Ü3 Sätze verbinden
 {
-  const s = base("Verarbeiten", "Ü3  Sätze verbinden", "Lösung: 1 Ich trainiere heute länger, weil am Samstag ein Wettkampf ist. 2 Der Trainer sagt, dass wir nach Frankfurt (Oder) fahren. 3 Ich war nervös, als ich auf der Matte stand. 4 Wir gewinnen, wenn wir als Team spielen. 5 Ich bin stolz, weil ich 80 kg gestoßen habe. *6 Der Trainer fragt, ob ich gut geschlafen habe. Danach gemeinsam auf den Aufdeck-Folien prüfen: Wer drankommt, liest seinen Satz vor und sagt, wo das finite Verb steht. Dann aufdecken, alle verbessern mit Grün.");
+  const s = base("Verarbeiten", "Ü5  Sätze verbinden", "Lösung: 1 Ich trainiere heute länger, weil am Samstag ein Wettkampf ist. 2 Der Trainer sagt, dass wir nach Frankfurt (Oder) fahren. 3 Ich war nervös, als ich auf der Matte stand. 4 Wir gewinnen, wenn wir als Team spielen. 5 Ich bin stolz, weil ich 80 kg gestoßen habe. *6 Der Trainer fragt, ob ich gut geschlafen habe. Danach gemeinsam auf den Aufdeck-Folien prüfen: Wer drankommt, liest seinen Satz vor und sagt, wo das finite Verb steht. Dann aufdecken, alle verbessern mit Grün.");
   [["1", "Verbinde die Sätze mit der Subjunktion in Klammern."], ["2", "Schreibe den ganzen Satz ins Heft. Denk an das Komma."], ["3", "Kreise die Subjunktion ein, unterstreiche das finite Verb."]].forEach(([n, x], i) => {
     num(s, n, 0.6, 1.55 + i * 0.5, VIO, 0.4);
     txt(s, x, { x: 1.15, y: 1.57 + i * 0.5, w: 11.4, h: 0.42, fontSize: 18, bold: true });
@@ -272,7 +327,7 @@ const UE3 = [
   ["* Der Trainer fragt. Hast du gut geschlafen? (ob)", [["Der Trainer fragt, ", ""], ["ob", "sub"], [" ich gut geschlafen ", ""], ["habe", "hv"], [".", ""]]],
 ];
 for (let k = 1; k <= UE3.length; k++) {
-  const s = base("Verarbeiten · Ü3 gemeinsam prüfen", "Ü3  Lösung – Satz für Satz", `Satz ${k}: erst einen Schüler vorlesen lassen und fragen, wo das finite Verb steht und wo das Komma hin muss. Dann aufdecken. Alle verbessern mit Grün.` + (k === 5 ? " Nachfragen: Welches Verb ist finit? habe – das Hilfsverb (rot) wandert ans Ende." : "") + (k === 6 ? " Auch richtig: …, ob du gut geschlafen hast." : ""));
+  const s = base("Verarbeiten · Ü5 gemeinsam prüfen", "Ü5  Lösung – Satz für Satz", `Satz ${k}: erst einen Schüler vorlesen lassen und fragen, wo das finite Verb steht und wo das Komma hin muss. Dann aufdecken. Alle verbessern mit Grün.` + (k === 5 ? " Nachfragen: Welches Verb ist finit? habe – das Hilfsverb (rot) wandert ans Ende." : "") + (k === 6 ? " Auch richtig: …, ob du gut geschlafen hast." : ""));
   UE3.forEach(([q, sol], i) => {
     const y = 1.5 + i * 0.78;
     box(s, 0.6, y, 12.1, 0.68, i === k - 1 ? "FFF4DE" : LIGHT, { r: 0.05 });
@@ -282,46 +337,9 @@ for (let k = 1; k <= UE3.length; k++) {
   });
   txt(s, "Subjunktion eingekreist (violett) · finites Verb unterstrichen · Hilfsverb rot · Komma vor der Subjunktion", { x: 0.6, y: 6.35, w: 12.1, h: 0.35, fontSize: 14, italic: true, color: MUTED });
 }
-// Ü4 Fehler finden
-{
-  const s = base("Verarbeiten · Fehler finden", "Ü4  Was stimmt im Chat nicht?", "Lösung: 1 …, weil ich noch duschen muss. 2 …, dass wir morgen frei haben. 3 Weißt du, ob der Neue auch kommt? 4 Ich freue mich, weil wir frei haben. (Komma fehlt). Reflexion: Beim Sprechen hört man oft „weil ich muss …“ – geschrieben ist das falsch.");
-  const msgs = [
-    ["l", "Komme später, weil ich muss noch duschen 🙈"],
-    ["r", "Trainer hat gesagt, dass wir haben morgen frei!"],
-    ["l", "Weißt du, ob kommt der Neue auch?"],
-    ["r", "Ich freue mich weil wir frei haben 💪"],
-  ];
-  box(s, 0.6, 1.55, 7.2, 4.5, "E9EEF6");
-  msgs.forEach(([side, m], i) => {
-    const y = 1.75 + i * 1.05;
-    const x = side === "l" ? 0.85 : 2.35;
-    box(s, x, y, 5.2, 0.8, side === "l" ? WHITE : "DCF3E4", { r: 0.18 });
-    txt(s, (i + 1) + "  " + m, { x: x + 0.2, y: y + 0.17, w: 4.9, h: 0.5, fontSize: 17 });
-  });
-  [["1", "Finde in jeder Nachricht den Fehler."], ["2", "Schreibe den Satz richtig ins Heft."], ["3", "Notiere: Verbstellung oder Komma?"]].forEach(([n, x], i) => {
-    num(s, n, 8.1, 1.8 + i * 1.0, VIO, 0.45);
-    txt(s, x, { x: 8.7, y: 1.8 + i * 1.0, w: 4.0, h: 0.9, fontSize: 18, bold: true });
-  });
-  zeit(s, "5 Minuten · zu zweit");
-}
-// Ü4 Lösung
-{
-  const s = base("Verarbeiten · Ü4 Lösung", "Ü4  So ist es richtig", "Vergleichen und mit Grün verbessern. Kurz reflektieren: Beim Sprechen hört man oft „weil ich muss …“ – geschrieben ist das falsch.");
-  [[[["Komme später, ", ""], ["weil", "sub"], [" ich noch duschen ", ""], ["muss", "fin"], [".", ""]], "Verbstellung"],
-   [[["Trainer hat gesagt, ", ""], ["dass", "sub"], [" wir morgen frei ", ""], ["haben", "fin"], ["!", ""]], "Verbstellung"],
-   [[["Weißt du, ", ""], ["ob", "sub"], [" der Neue auch ", ""], ["kommt", "fin"], ["?", ""]], "Verbstellung"],
-   [[["Ich freue mich", ""], [",", "b"], [" ", ""], ["weil", "sub"], [" wir frei ", ""], ["haben", "fin"], [".", ""]], "Komma"]].forEach(([r, typ], i) => {
-    const y = 1.6 + i * 1.05;
-    box(s, 0.6, y, 12.1, 0.85, LIGHT);
-    txt(s, String(i + 1), { x: 0.8, y: y + 0.22, w: 0.5, h: 0.4, fontSize: 18, bold: true, color: VIO });
-    txt(s, runs(r, 22), { x: 1.35, y: y + 0.2, w: 8.8, h: 0.5, fontFace: HEAD });
-    box(s, 10.4, y + 0.2, 2.1, 0.45, typ === "Komma" ? YEL : VIO, { r: 0.22 });
-    txt(s, typ, { x: 10.4, y: y + 0.2, w: 2.1, h: 0.45, fontSize: 15, bold: true, color: WHITE, align: "center", valign: "middle" });
-  });
-}
 // * Ü5 zurück zur Ballade
 {
-  const s = base("* Verarbeiten · zurück zur Ballade", "* Ü5  Erkläre die Ballade mit Nebensätzen", "Nur, wenn Zeit bleibt. Satzanfänge, keine fertigen Sätze. Mögliche Ergänzungen: … weil er Angst vor dem Schotten hat · … dass Paddy ein Baby sei/ist · … als er die riesige Nase sieht · … weil er glaubt, dass der Vater noch größer ist.");
+  const s = base("* Verarbeiten · zurück zur Ballade", "* Ü6  Erkläre die Ballade mit Nebensätzen", "Nur, wenn Zeit bleibt. Satzanfänge, keine fertigen Sätze. Mögliche Ergänzungen: … weil er Angst vor dem Schotten hat · … dass Paddy ein Baby sei/ist · … als er die riesige Nase sieht · … weil er glaubt, dass der Vater noch größer ist.");
   txt(s, "Schreibe mindestens drei Sätze ins Heft. Kreise die Subjunktion ein und unterstreiche das finite Verb.", { x: 0.6, y: 1.65, w: 12.1, h: 0.6, fontSize: 20, bold: true });
   ["Paddy versteckt sich im Bett, weil …", "Schaya erzählt dem Schotten, dass …", "Der Schotte erschrickt, als …", "Der Schotte flieht, weil …", "Die Nachbarn staunen, als …"].forEach((x, i) => {
     box(s, 0.6, 2.45 + i * 0.68, 12.1, 0.56, LIGHT);
@@ -334,7 +352,7 @@ for (let k = 1; k <= UE3.length; k++) {
   const s = base("Auswerten", "Zielcheck: Hast du die Ziele erreicht?", "Erst (*) Forscherfrage mündlich: In Str. 3 steht „als er stapfte durch den Sund“ – das Verb steht nicht am Ende, wegen Reim und Rhythmus (Sund – stund). Dichter dürfen abweichen, im Aufsatz gilt die Regel. Dann Zielcheck allein im Heft (4 Min.), danach Lösungsfolie: Selbstkontrolle mit Grün. Herumgehen und schauen, wer noch Fehler hat – am Donnerstag in der Wiederholung aufgreifen.");
   box(s, 0.6, 1.55, 12.1, 0.85, LIGHT2);
   txt(s, [{ text: "* Forscherfrage: ", options: { bold: true, color: VIO } }, { text: "Str. 3: „Und als er stapfte durch den Sund“ – was ist hier anders, und warum?" }], { x: 0.9, y: 1.7, w: 11.6, h: 0.6, fontSize: 18 });
-  [[GREEN, "Ziel 1", "Prüfe mit Beleg: „Der Schotte flieht, weil Paddy ihn im Bett angreift.“ – richtig oder falsch?"],
+  [[GREEN, "Ziel 1", "Prüfe mit Strophe und Vers: „Der Schotte flieht, weil Paddy ihn im Bett angreift.“ – richtig oder falsch?"],
    [VIO, "Ziel 2 a", "Verbinde: Der Schotte erschrickt. Er sieht die riesige Nase. (als)"],
    [VIO, "Ziel 2 b", "Richtig oder falsch? Begründe:  „Paddy versteckt sich, weil er hat Angst.“"]].forEach(([c, n, x], i) => {
     const y = 2.7 + i * 1.0;

@@ -152,69 +152,77 @@ function phase(nr, title, min) {
 const avivaPhase = (k, title, min) => p([t(`${k}  `, { font: "Cambria", size: 28, bold: true, color: C.hv }), t(title, { font: "Cambria", size: 28, bold: true, color: NAVY }), t(`   ${min} Min.`, { size: 20, bold: true, color: "C77C12" })], { before: 200, after: 100, keepNext: true });
 const teil = (nr, title, col) => p([t(`TEIL ${nr}  `, { size: 20, bold: true, color: col }), t(title, { font: "Cambria", size: 30, bold: true, color: col })], { before: 280, after: 80, keepNext: true, border: { bottom: { style: BorderStyle.SINGLE, size: 8, color: col, space: 4 } } });
 const VIO = "7A5BA6", GRN = "2E9E6B";
-const Z1 = "Ich kann Aussagen zur Ballade prüfen und mit Textbelegen begründen, ob sie richtig oder falsch sind.";
+const Z1 = "Ich kann mit Strophe und Vers belegen, ob Aussagen zur Ballade richtig oder falsch sind.";
 const Z2 = "Ich kann Nebensätze mit Subjunktion erkennen und richtig bilden: Das finite Verb steht am Ende.";
 const doc = [];
-doc.push(kicker("Tafelskript für die Lehrkraft · Mi 4.11. · Doppelstunde (90 Min.) · AVIVA · mit Präsentation (32 Folien)"), h1("Paddy Fingal: Inhalt und Sprachtraining an der Ballade"));
-doc.push(box([p([S("Bezug: ", { bold: true }), S("Die Stunde am 16.10. ist ausgefallen. Am Montag wurden in 15 Minuten die Lesetechniken wiederholt. Offen sind LB-Aufgabe 1 a zu Paddy Fingal, die Reime und die Merkmale der Ballade. Teil 1 holt den Inhalt nach und beginnt mit der Wiederholung vom Montag. Statt die LB-Fragen zu beantworten, prüfen die Schüler neun Aussagen auf einem Arbeitsblatt: richtig oder falsch, mit Beleg (Strophe, Vers, Zitat), falsche werden verbessert. Die Aussagen sind in eigenen Worten formuliert, teils mit falschem Detail oder als Schlussfolgerung – das ist die eigentliche Herausforderung im Textverständnis. Ausgewertet wird gemeinsam auf Aufdeck-Folien; niemand muss an die Tafel. Teil 2 integriert Grammatik nach dem neuen Prinzip, gegenüber der Klasse heißt sie „Sprachtraining“: Die Klasse entdeckt ein Phänomen in der Ballade (Nebensätze mit „dass“ und „als“), leitet daraus die Regel ab, übt sie an Sätzen aus dem Sportalltag und wendet sie wieder auf die Ballade an. Das knüpft an die Verb-Einheit an (finite Form, Hilfsverb). Reime und Ur-Ei folgen am Do/Fr (Material in Woche1/).")], { after: 0 })], LIGHT2));
+doc.push(kicker("Tafelskript für die Lehrkraft · Mi 4.11. · Doppelstunde (90 Min.) · AVIVA · mit Präsentation (34 Folien)"), h1("Paddy Fingal: Inhalt und Sprachtraining an der Ballade"));
+doc.push(box([p([S("Bezug: ", { bold: true }), S("Die Stunde am 16.10. ist ausgefallen. Am Montag wurden in 15 Minuten die Lesetechniken wiederholt. Offen sind LB-Aufgabe 1 a zu Paddy Fingal, die Reime und die Merkmale der Ballade. Teil 1 holt den Inhalt nach und beginnt mit der Wiederholung vom Montag. Nach dem Lesen lernt die Klasse den Aufbau einer Ballade (Strophe, Vers, Verszählung) und wie man belegt – das ist Voraussetzung fürs Belegen (Rückmeldung 31.10.). Danach prüfen die Schüler statt der LB-Fragen neun Aussagen auf einem Arbeitsblatt: richtig oder falsch, mit Beleg (Strophe, Vers, Zitat), falsche werden verbessert. Die Aussagen sind in eigenen Worten formuliert, teils mit falschem Detail oder als Schlussfolgerung – das ist die eigentliche Herausforderung im Textverständnis. Ausgewertet wird gemeinsam auf Aufdeck-Folien; niemand muss an die Tafel. Teil 2 ist gekürzt (Ü Chat-Fehler wandert als Wiederholung auf Donnerstag) und integriert Grammatik nach dem neuen Prinzip, gegenüber der Klasse heißt sie „Sprachtraining“: Die Klasse entdeckt ein Phänomen in der Ballade (Nebensätze mit „dass“ und „als“), leitet daraus die Regel ab, übt sie an Sätzen aus dem Sportalltag und wendet sie wieder auf die Ballade an. Das knüpft an die Verb-Einheit an (finite Form, Hilfsverb). Ur-Ei, Reime und Reimschema folgen am Donnerstag.")], { after: 0 })], LIGHT2));
 doc.push(p([S("Lernziele: ", { bold: true }), S("Teil 1: " + Z1 + "  Teil 2: " + Z2, { italics: true })], { before: 120, after: 40 }));
-doc.push(p([S("Antwort auf „Was habt ihr heute gelernt?“: ", { bold: true }), S("„Ich kann Aussagen zur Ballade mit Strophe, Vers und Zitat als richtig oder falsch belegen und falsche verbessern. Nach dass, als, weil, wenn steht das finite Verb am Ende, und davor kommt ein Komma.“ Überprüft wird das im Zielcheck am Ende.")], { after: 80 }));
+doc.push(p([S("Antwort auf „Was habt ihr heute gelernt?“: ", { bold: true }), S("„Eine Ballade besteht aus Strophen, jede Zeile ist ein Vers. Ich kann mit Strophe, Vers und Zitat belegen, ob eine Aussage richtig oder falsch ist. Nach dass, als, weil, wenn steht das finite Verb am Ende, und davor kommt ein Komma.“ Überprüft wird das im Zielcheck am Ende.")], { after: 80 }));
 doc.push(board("Seitentafel links · vor der Stunde anschreiben, bleibt stehen", [
-  p([t("Teil 1 (ca. 40 Min.): ", { bold: true, size: 20, color: GRN }), t(Z1, { size: 20, italics: true })], { after: 30 }),
-  p(t("1 Wiederholung Lesetechniken  2 Ü1 Aussagen prüfen  3 * LB 1 b nacherzählen", { size: 19 }), { after: 60 }),
-  p([t("Teil 2 (ca. 45 Min.): ", { bold: true, size: 20, color: VIO }), t(Z2, { size: 20, italics: true })], { after: 30 }),
-  p(t("4 Wo steht das finite Verb?  5 Ü2 Entdecken, Merksatz  6 Ü3, Ü4  7 * Ü5  8 Zielcheck", { size: 19 }), { after: 0 }),
+  p([t("Teil 1 (ca. 45 Min.): ", { bold: true, size: 20, color: GRN }), t(Z1, { size: 20, italics: true })], { after: 30 }),
+  p(t("1 Wiederholung Lesetechniken  2 Tandemlesen  3 Aufbau einer Ballade, Ü1  4 Ü2 Aussagen prüfen  5 * Ü3 nacherzählen", { size: 19 }), { after: 60 }),
+  p([t("Teil 2 (ca. 40 Min.): ", { bold: true, size: 20, color: VIO }), t(Z2, { size: 20, italics: true })], { after: 30 }),
+  p(t("6 Wo steht das finite Verb?  7 Ü4 Entdecken, Merksatz  8 Ü5  9 * Ü6  10 Zielcheck", { size: 19 }), { after: 0 }),
 ]));
 doc.push(p(t(""), { after: 40 }));
 doc.push(h3("Ablauf"));
 doc.push(grid([800, 900, 1200, 3300, 4006], ["Zeit", "AVIVA", "Folie", "Phase", "Alle Schüler …"], [
   ["4′", "A", "1–2", "Ankommen: Überblick, zwei Ziele", "lesen Ziele und Ablauf"],
-  ["6′", "V", "4", "T1 · Wiederholung Lesetechniken", "ordnen A–C zu, begründen mit „weil“"],
-  ["2′", "I", "5", "T1 · Auftrag Ü1, Tandemlesen", "hören zu"],
-  ["18′", "V", "5", "T1 · Tandemlesen, Ü1 Aussagen prüfen (AB)", "lesen im Tandem, prüfen allein, belegen, verbessern"],
-  ["7′", "A", "6–15", "T1 · Ü1 gemeinsam prüfen (Aufdeck-Folien)", "nennen Urteil und Beleg, verbessern auf dem AB mit Grün"],
-  ["* 7′", "V", "16", "T1 · * LB 1 b nacherzählen", "erzählen sich im Tandem nach, haken die Checkliste ab"],
-  ["4′", "V", "18", "T2 · Wo steht das finite Verb?", "schreiben zwei Sätze ab, unterstreichen"],
-  ["12′", "I", "19–20", "T2 · Ü2 entdecken, Merksatz", "untersuchen drei Stellen, kleben den Merksatz ein"],
-  ["18′", "V", "21–29", "T2 · Ü3 Sätze verbinden, Ü4 Fehler im Chat", "verbinden allein, prüfen gemeinsam (Aufdeck-Folien), korrigieren zu zweit"],
-  ["* 5′", "V", "30", "T2 · * Ü5 zurück zur Ballade", "schreiben Sätze mit Satzanfängen"],
-  ["6′", "A", "31–32", "Auswerten: Zielcheck", "* Forscherfrage; lösen drei Zielcheck-Aufgaben, kontrollieren mit der Lösungsfolie"],
+  ["5′", "V", "4", "T1 · Wiederholung Lesetechniken", "ordnen A–C zu, begründen mit „weil“"],
+  ["8′", "V", "5", "T1 · Tandemlesen", "lesen im Tandem, Strophe für Strophe"],
+  ["4′", "I", "6", "T1 · Aufbau einer Ballade, Belegen", "zählen an Strophe 1 mit, lernen das Beleg-Format"],
+  ["4′", "V", "7–8", "T1 · Ü1 Belege finden", "zählen, schlagen nach, suchen; verbessern mit der Lösungsfolie"],
+  ["10′", "V", "9", "T1 · Ü2 Aussagen prüfen (AB)", "prüfen allein, belegen, verbessern"],
+  ["7′", "A", "10–19", "T1 · Ü2 gemeinsam prüfen (Aufdeck-Folien)", "nennen Urteil und Beleg, verbessern auf dem AB mit Grün"],
+  ["* 7′", "V", "20", "T1 · * Ü3 nacherzählen mit Stichwörtern", "erzählen sich im Tandem nach (Abschnitt 1–4 / 5–8)"],
+  ["4′", "V", "22", "T2 · Wo steht das finite Verb?", "schreiben zwei Sätze ab, unterstreichen"],
+  ["12′", "I", "23–24", "T2 · Ü4 entdecken, Merksatz", "untersuchen drei Stellen, kleben den Merksatz ein"],
+  ["12′", "V", "25–31", "T2 · Ü5 Sätze verbinden", "verbinden allein, prüfen gemeinsam (Aufdeck-Folien)"],
+  ["* 5′", "V", "32", "T2 · * Ü6 zurück zur Ballade", "schreiben Sätze mit Satzanfängen"],
+  ["6′", "A", "33–34", "Auswerten: Zielcheck", "* Forscherfrage; lösen drei Zielcheck-Aufgaben, kontrollieren mit der Lösungsfolie"],
 ], { bold: [true, true, false, true, false], colors: [C.hv, C.hv, MUTED, NAVY, null], h: 320 }));
-doc.push(p([S("Zeit: ", { bold: true, color: C.hv }), S("77 Min. Pflicht, 12 Min. mit * (1 b, Ü5, Forscherfrage), 1 Min. Puffer. Wenn 1 b entfällt, ist es der Einstieg am Donnerstag. Wird es in Teil 1 eng: Aussage 9 (*) in der gemeinsamen Prüfung überspringen.")], { before: 80, after: 60 }));
+doc.push(p([S("Zeit: ", { bold: true, color: C.hv }), S("76 Min. Pflicht, 14 Min. mit * (Ü3, Ü6, Forscherfrage), kein Puffer. Was mit * nicht geschafft wird, ist Einstieg am Donnerstag (vor allem Ü3). Wird es in Teil 1 eng: Aussage 9 (*) überspringen.")], { before: 80, after: 60 }));
 doc.push(h3("So sieht das Heft am Ende aus"));
 doc.push(table([2300, 7906], [
-  ["Teil 1", "Überschrift „Paddy Fingal – den Inhalt erschließen“ · A–C mit Lesetechnik und „weil“ · Arbeitsblatt Ü1 (eingeklebt): neun Aussagen mit Urteil, Beleg und Verbesserung, mit Grün kontrolliert"],
-  ["Teil 2", "Überschrift „Nebensätze mit Subjunktion“ · zwei Sätze (finites Verb unterstrichen) · Ü2: drei Stellen aus der Ballade · Merksatz-Schnipsel eingeklebt · Ü3: sechs Sätze · Ü4: vier verbesserte Chat-Sätze · * Ü5"],
+  ["Teil 1", "Überschrift „Paddy Fingal – den Inhalt erschließen“ · A–C mit Lesetechnik und „weil“ · Ü1: drei Belege (Anzahl, Zitat, Fundstelle) · Arbeitsblatt Ü2 (eingeklebt): neun Aussagen mit Urteil, Beleg und Verbesserung, mit Grün kontrolliert"],
+  ["Teil 2", "Überschrift „Nebensätze mit Subjunktion“ · zwei Sätze (finites Verb unterstrichen) · Ü4: drei Stellen aus der Ballade · Merksatz-Schnipsel eingeklebt · Ü5: sechs Sätze · * Ü6"],
   ["Abschluss", "Zielcheck: Antwort zu Ziel 1, Satz zu Ziel 2 a, Begründung zu Ziel 2 b – mit Grün kontrolliert"],
 ].map(([a, b]) => row([tc(a, 2300, { bold: true, fill: LIGHT }), tc(b, 7906)]))));
-doc.push(p([S("Material: ", { bold: true }), S("Präsentation `Mittwoch_04-11_Deutsch_7A.pptx` (Lösungen in den Notizen und auf Aufdeck-Folien) · Lehrbuch S. 136 f. · Arbeitsblatt „Ü1 Paddy Fingal – Aussagen prüfen“ (1 A4 pro Schüler) · Merksatz-Schnipsel „Nebensätze mit Subjunktion“ (8 pro A4) · Tandems wie festgelegt · Handreichung Polnisch für S-PL.")], { before: 80, after: 60 }));
+doc.push(p([S("Material: ", { bold: true }), S("Präsentation `Mittwoch_04-11_Deutsch_7A.pptx` (Lösungen in den Notizen und auf Aufdeck-Folien) · Lehrbuch S. 136 f. · Arbeitsblatt „Ü2 Paddy Fingal – Aussagen prüfen“ mit Merkkasten zum Belegen (1 A4 pro Schüler) · Merksatz-Schnipsel „Nebensätze mit Subjunktion“ (8 pro A4) · Tandems wie festgelegt · Handreichung Polnisch für S-PL (Handreichung + Arbeitsblatt Ü2 zweisprachig).")], { before: 80, after: 60 }));
 
 doc.push(avivaPhase("A", "Ankommen: Überblick und Ziele", 4));
-doc.push(...steps([["zuhoeren", { say: "Stifte liegen. Ihr hört nur zu. Heute haben wir zwei Teile. In Teil 1 klären wir, worum es in Paddy Fingal genau geht. In Teil 2 ist Sprachtraining: Wir schauen uns die Sprache der Ballade an und lernen daraus eine Regel, mit der ihr besser schreibt. Die Ziele stehen auf der Folie und links an der Tafel.", do: ["Folie 2 zeigen, auf die Seitentafel verweisen. Folie 2 am Ende noch einmal zeigen."] }]]));
+doc.push(...steps([["zuhoeren", { say: "Stifte liegen. Ihr hört nur zu. Heute haben wir zwei Teile. In Teil 1 klären wir, worum es in Paddy Fingal genau geht, und lernen, wie man mit Strophe und Vers belegt. In Teil 2 ist Sprachtraining: Wir schauen uns die Sprache der Ballade an und lernen daraus eine Regel, mit der ihr besser schreibt. Die Ziele stehen auf der Folie und links an der Tafel.", do: ["Folie 2 zeigen, auf die Seitentafel verweisen. Folie 2 am Ende noch einmal zeigen."] }]]));
 
 doc.push(teil("1", "Paddy Fingal – den Inhalt erschließen", GRN));
-doc.push(avivaPhase("V", "Vorwissen aktivieren: Wiederholung Lesetechniken", 6));
+doc.push(avivaPhase("V", "Vorwissen aktivieren: Wiederholung Lesetechniken", 5));
 doc.push(...steps([
   ["luecken", { say: "Heft auf, Überschrift: Paddy Fingal – den Inhalt erschließen. Jetzt arbeitet ihr allein. Schreibt A, B, C, die Lesetechnik und eine Begründung mit weil. Drei Minuten. Fertig? Stift hinlegen.", sol: "A orientierend, weil ich nur eine Information suche · B überfliegend, weil ich nur wissen will, wie es ausgeht · C genau, weil ich etwas erklären soll" }],
   ["kontrolle", { say: "Vergleicht mit eurem Nachbarn und verbessert mit Grün.", do: ["Falls E (Überfliegen) am Montag nicht geschafft wurde: jetzt 1 Minute überfliegen, Satz „In der Ballade geht es um …“.", "Hinweis für später: „Merkt euch eure weil-Sätze – in Teil 2 schauen wir sie genauer an.“"] }],
 ]));
-doc.push(avivaPhase("I", "Informieren: Auftrag Ü1 und Tandemlesen", 2));
-doc.push(...steps([["zuhoeren", { say: "Stifte liegen. Ihr lest jetzt im Tandem: Einer liest eine Strophe vor, der andere liest leise mit und hilft bei Fehlern, dann Wechsel. Danach prüft jeder allein die Aussagen auf dem Arbeitsblatt: richtig oder falsch? Belegt mit Strophe, Vers und Zitat. Ist eine Aussage falsch, schreibt ihr auf, was richtig ist. Achtung: Die Aussagen sind in anderen Worten formuliert – ihr müsst die Stelle verstanden haben.", do: ["Methodenkarte „Tandemlesen“ (Tandems lesestärker/leseschwächer). Arbeitsblatt austeilen, das Beispiel oben gemeinsam lesen."] }]]));
-doc.push(avivaPhase("V", "Verarbeiten: Ü1 – Aussagen prüfen", 18));
+doc.push(avivaPhase("V", "Verarbeiten: Tandemlesen", 8));
+doc.push(...steps([["partner", { say: "Jetzt arbeitet ihr im Tandem. Einer liest eine Strophe vor, der andere liest leise mit und hilft bei Fehlern, dann Wechsel. Achtet darauf: Was passiert? Wer handelt? Acht Minuten.", do: ["Methodenkarte „Tandemlesen“ (Tandems lesestärker/leseschwächer). Folie 5. Herumgehen, zuhören."] }]]));
+doc.push(avivaPhase("I", "Informieren: Aufbau einer Ballade und Belegen", 4));
 doc.push(...steps([
-  ["partner", { say: "Jetzt arbeitet ihr im Tandem. Lest die Ballade Strophe für Strophe abwechselnd. Acht Minuten.", do: ["Herumgehen, beim Tandemlesen zuhören."] }],
-  ["luecken", { say: "Jetzt arbeitet ihr allein. Prüft die Aussagen auf dem Arbeitsblatt. Zehn Minuten. Nummer 9 hat einen Stern. Fertig? Stift hinlegen.", sol: "1 richtig – Str. 1, V. 4 „einen Mastbaum führt’ er als Wurfgeschoss“ · 2 falsch – Str. 2, V. 7–9; richtig: Er will herausfinden, wer stärker ist · 3 falsch – Str. 3, V. 14 „zehn Schuh größer“ · 4 falsch – Str. 4, V. 16–17; richtig: Er bekommt Angst und will sich verstecken · 5 richtig – Str. 7, V. 31–32 · 6 falsch – Str. 8, V. 37 „neugierig ans Lager ging“ · 7 falsch – Str. 9, V. 43–44; richtig: Er hält Paddy für ein Baby und fürchtet den Vater · 8 richtig – Str. 10, V. 48 „fast wär ertrunken“ · *9 falsch – Str. 11, V. 55; Paddy hat nie gekämpft, „tapfer“ ist ironisch", do: ["Typische Hürde: Aussagen, die plausibel klingen, aber ein falsches Detail haben (Nr. 3, 4, 6). Wer nur überfliegt, fällt darauf herein – Rückbezug zu den Lesetechniken: hier genau lesen."] }],
+  ["zuhoeren", { say: "Stifte liegen. Ihr hört nur zu. Bevor wir Aussagen über die Ballade prüfen, müsst ihr wissen, wie man eine Stelle genau angibt. Schaut auf Strophe 1.", do: ["Folie 6 (Ich): Strophe = Abschnitt, zwischen zwei Strophen eine Leerzeile. Vers = eine Zeile. Im Lehrbuch die Verszählung am Rand zeigen (5, 10, 15 …)."] }],
+  ["gemeinsam", { say: "Zählt mit: Wie viele Verse hat Strophe 1? Welcher Vers ist der mit dem Bart?", sol: "5 Verse; Vers 2 – Beleg: Str. 1, V. 2: „Sechs Ellen flog sein schwarzer Bart“", do: ["Wir: Das Beleg-Format zeigen: Strophe + Vers + Zitat in Anführungszeichen. Der Merkkasten steht auch oben auf dem Arbeitsblatt zu Ü2."] }],
 ]));
-doc.push(avivaPhase("A", "Auswerten Teil 1: Ü1 gemeinsam prüfen", 7));
-doc.push(...steps([["gemeinsam", { say: "Stifte bereit, grüner Stift. Wir prüfen jetzt gemeinsam, Aussage für Aussage. Wer drankommt, sagt: richtig oder falsch – und den Beleg. Bei falschen Aussagen auch: Richtig ist … Erst dann decke ich auf. Alle verbessern auf dem Arbeitsblatt mit Grün.", do: ["Folie 6 bis 15: Mit jedem Klick erscheint die Lösung zur nächsten Aussage (Urteil, Beleg, „Richtig ist …“). Jeweils einen anderen Schüler drannehmen, auch Nicht-Melder. Niemand geht an die Tafel.", "Bei Nr. 9 kurz die Ironie besprechen: Der Feigling wird als „tapferer“ Held gefeiert. Danach Ziel 1 auf Folie 2 ansprechen."] }]]));
-doc.push(avivaPhase("V", "* Verarbeiten: LB-Aufgabe 1 b nacherzählen", 7));
-doc.push(...steps([["partner", { say: "A erzählt Strophe 1 bis 5 nach, B hört zu und hakt die Checkliste ab. Dann Wechsel: B erzählt Strophe 6 bis 11. Euer Arbeitsblatt aus Ü1 ist euer Spickzettel.", do: ["Checkliste: Titel und Autor · richtige Reihenfolge · nichts dazuerfinden · alle wichtigen Details · * spannend mit wörtlicher Rede.", "Fällt 1 b weg: Einstieg am Donnerstag."] }]]));
+doc.push(avivaPhase("V", "Verarbeiten: Ü1 Belege finden", 4));
+doc.push(...steps([
+  ["luecken", { say: "Jetzt arbeitet ihr allein im Heft. Ü1 steht auf der Folie. Drei Minuten. Fertig? Stift hinlegen.", sol: "1 11 Strophen mit je 5 Versen · 2 Str. 3, V. 14: „dass der Fremdling zehn Schuh größer war“ · 3 Str. 4, V. 17: „O Schaya, birg mich im Versteck!“" }],
+  ["kontrolle", { say: "Vergleicht mit der Lösung auf der Folie und verbessert mit Grün.", do: ["Folie 8. Rückbezug: Bei 2 und 3 lest ihr orientierend – ihr sucht eine bestimmte Stelle."] }],
+]));
+doc.push(avivaPhase("V", "Verarbeiten: Ü2 Aussagen prüfen (Arbeitsblatt)", 10));
+doc.push(...steps([["luecken", { say: "Ich teile das Arbeitsblatt aus. Oben steht der Merkkasten, so wie eben. Jetzt arbeitet ihr allein. Prüft die Aussagen: richtig oder falsch? Belegt mit Strophe, Vers und Zitat. Ist eine Aussage falsch, schreibt auf, was richtig ist. Achtung: Die Aussagen sind in anderen Worten formuliert – ihr müsst die Stelle verstanden haben. Zehn Minuten. Nummer 9 hat einen Stern. Fertig? Stift hinlegen.", sol: "1 richtig – Str. 1, V. 4 „einen Mastbaum führt’ er als Wurfgeschoss“ · 2 falsch – Str. 2, V. 7–9; richtig: Er will herausfinden, wer stärker ist · 3 falsch – Str. 3, V. 14 „zehn Schuh größer“ · 4 falsch – Str. 4, V. 16–17; richtig: Er bekommt Angst und will sich verstecken · 5 richtig – Str. 7, V. 31–32 · 6 falsch – Str. 8, V. 37 „neugierig ans Lager ging“ · 7 falsch – Str. 9, V. 43–44; richtig: Er hält Paddy für ein Baby und fürchtet den Vater · 8 richtig – Str. 10, V. 48 „fast wär ertrunken“ · *9 falsch – Str. 11, V. 55; Paddy hat nie gekämpft, „tapfer“ ist ironisch", do: ["Typische Hürde: Aussagen, die plausibel klingen, aber ein falsches Detail haben (Nr. 3, 4, 6). Wer nur überfliegt, fällt darauf herein – hier genau lesen."] }]]));
+doc.push(avivaPhase("A", "Auswerten Teil 1: Ü2 gemeinsam prüfen", 7));
+doc.push(...steps([["gemeinsam", { say: "Grüner Stift bereit. Wir prüfen jetzt gemeinsam, Aussage für Aussage. Wer drankommt, sagt: richtig oder falsch – und den Beleg. Bei falschen Aussagen auch: Richtig ist … Erst dann decke ich auf. Alle verbessern auf dem Arbeitsblatt mit Grün.", do: ["Folie 10 bis 19: Mit jedem Klick erscheint die Lösung zur nächsten Aussage (Urteil, Beleg, „Richtig ist …“). Jeweils einen anderen Schüler drannehmen, auch Nicht-Melder. Niemand geht an die Tafel.", "Bei Nr. 9 kurz die Ironie besprechen: Der Feigling wird als „tapferer“ Held gefeiert. Danach Ziel 1 auf Folie 2 ansprechen."] }]]));
+doc.push(avivaPhase("V", "* Verarbeiten: Ü3 nacherzählen mit Stichwörtern (LB 1 b)", 7));
+doc.push(...steps([["partner", { say: "Ü3: Erzählt die Ballade im Tandem nach. Auf der Folie stehen der Einstieg und acht Abschnitte mit Stichwörtern – damit habt ihr die Reihenfolge. A erzählt Abschnitt 1 bis 4, B Abschnitt 5 bis 8. Verknüpft mit zuerst, dann, als, weil, schließlich. Wer zuhört, hakt die Checkliste ab.", do: ["Folie 20. Stichwörter statt fertiger Sätze: 1 Paddy – Riese – Bart – Mastbaum · 2 Hüne aus Schottland – Wer ist stärker? · 3 Ufer – zehn Schuh größer – Schreck – Versteck · 4 Schaya – Bett – Kissen – nur die Nase · 5 Schotte sucht – Schayas Warnung – „Kindlein“ · 6 Nase – Baby? – riesiger Vater · 7 Flucht – Sund – fast ertrunken · 8 Siegesgeschrei – Nachbarn – „tapfer“.", "Checkliste: Titel und Autor · richtige Reihenfolge · nichts dazuerfinden · alle wichtigen Details · * spannend mit wörtlicher Rede. Fällt Ü3 weg: Einstieg am Donnerstag."] }]]));
 
 doc.push(teil("2", "Sprachtraining: Nebensätze mit Subjunktion", VIO));
 doc.push(avivaPhase("V", "Vorwissen aktivieren: Wo steht das finite Verb?", 4));
 doc.push(...steps([["luecken", { say: "Neue Überschrift: Nebensätze mit Subjunktion. Jetzt arbeitet ihr allein. Schreibt die beiden Sätze von der Folie ab und unterstreicht das finite Verb. Wo steht es?", sol: "Paddy Fingal war von Riesenart. · Da lief er heim in jähem Schreck. → war, lief: an Position 2 (nach dem ersten Satzglied).", do: ["Kurz fragen: Woran erkennst du das finite Verb? – Es ändert sich mit der Person (ich war, du warst)."] }]]));
-doc.push(p(new PageBreak()));
-doc.push(avivaPhase("I", "Informieren: Ü2 entdecken und Merksatz", 12));
+doc.push(avivaPhase("I", "Informieren: Ü4 entdecken und Merksatz", 12));
 doc.push(board("Mitteltafel · Tafelbild (entsteht im Gespräch, bleibt stehen)", [
   bl([N("Hauptsatz:  ", { bold: true }), N("Da "), N("lief", { bold: true, underline: {} }), N(" er heim in jähem Schreck.        → finites Verb an Position 2", { color: MUTED })]),
   bl([N("Nebensatz:  ", { bold: true }), N("…, "), N("dass", { bold: true, color: VIO }), N(" der Fremdling zehn Schuh größer "), N("war", { bold: true, underline: {} }), N(".   → finites Verb am Ende", { color: MUTED })]),
@@ -226,21 +234,20 @@ doc.push(...steps([
   ["luecken", { say: "Jetzt arbeitet ihr allein. Auf der Folie stehen drei Stellen aus der Ballade. Schreibt die fett gedruckten Teile ins Heft. Unterstreicht das finite Verb und kreist das erste Wort ein. Vier Minuten.", sol: "dass der Fremdling zehn Schuh größer war · dass Paddys Kindlein nicht erwacht · als er die Nase ragen sah" }],
   ["partner", { say: "Vergleicht zu zweit: Was fällt euch auf, wenn ihr diese Sätze mit den Sätzen von eben vergleicht? Zwei Minuten.", do: ["Erwartet: Das finite Verb steht am Ende; vorne steht dass oder als; davor ein Komma."] }],
   ["gemeinsam", { say: "Wer drankommt, sagt, was er entdeckt hat. Alle prüfen mit.", do: ["Tafelbild entwickeln (siehe oben): Hauptsatz – Nebensatz. Fachbegriffe einführen: Subjunktion, Nebensatz."] }],
-  ["zuhoeren", { say: "Stifte liegen. Ihr hört nur zu. Was ihr entdeckt habt, ist eine feste Regel. Ich teile den Merksatz aus. Klebt ihn ein. Wir lesen ihn zusammen.", do: ["Folie 20. Auf das Perfekt-Beispiel hinweisen: Das Hilfsverb ist finit und wandert ans Ende (Bezug zur Verb-Einheit). Bezug Englisch: because he is afraid – dort bleibt das Verb vorne."] }],
+  ["zuhoeren", { say: "Stifte liegen. Ihr hört nur zu. Was ihr entdeckt habt, ist eine feste Regel. Ich teile den Merksatz aus. Klebt ihn ein. Wir lesen ihn zusammen.", do: ["Folie 24. Auf das Perfekt-Beispiel hinweisen: Das Hilfsverb ist finit und wandert ans Ende (Bezug zur Verb-Einheit). Bezug Englisch: because he is afraid – dort bleibt das Verb vorne."] }],
 ]));
-doc.push(avivaPhase("V", "Verarbeiten: Ü3 Sätze verbinden, Ü4 Fehler im Chat", 18));
+doc.push(avivaPhase("V", "Verarbeiten: Ü5 Sätze verbinden", 12));
 doc.push(...steps([
-  ["luecken", { say: "Jetzt arbeitet ihr allein. Ü3 steht auf der Folie. Verbindet die Sätze mit der Subjunktion in Klammern und schreibt den ganzen Satz ins Heft. Kreist die Subjunktion ein und unterstreicht das finite Verb. Acht Minuten. Nummer 6 hat einen Stern. Fertig? Stift hinlegen.", sol: "1 Ich trainiere heute länger, weil am Samstag ein Wettkampf ist. · 2 Der Trainer sagt, dass wir nach Frankfurt (Oder) fahren. · 3 Ich war nervös, als ich auf der Matte stand. · 4 Wir gewinnen, wenn wir als Team spielen. · 5 Ich bin stolz, weil ich 80 kg gestoßen habe. · *6 Der Trainer fragt, ob ich gut geschlafen habe." }],
-  ["gemeinsam", { say: "Wir prüfen gemeinsam, Satz für Satz. Wer drankommt, liest seinen Satz vor und sagt, wo das finite Verb steht und wo das Komma hin muss. Dann decke ich auf. Alle verbessern im Heft mit Grün.", do: ["Folie 22 bis 27: Mit jedem Klick erscheint der nächste Lösungssatz (Subjunktion violett, finites Verb unterstrichen, Hilfsverb rot). Bei Satz 5 nachfragen: Welches Verb ist hier finit? (habe – das Hilfsverb). Niemand geht an die Tafel."] }],
-  ["partner", { say: "Ü4: Im Chat stecken Fehler. Findet sie zu zweit und schreibt die Sätze richtig ins Heft. Notiert, ob es um die Verbstellung oder um das Komma geht. Fünf Minuten.", sol: "1 …, weil ich noch duschen muss. · 2 …, dass wir morgen frei haben. · 3 Weißt du, ob der Neue auch kommt? · 4 Ich freue mich, weil wir frei haben. (Komma fehlt)", do: ["Danach Folie 29 (Lösung) zeigen, alle verbessern mit Grün. Kurz besprechen: Beim Sprechen hört man oft „weil ich muss …“. Im Geschriebenen ist das falsch."] }],
+  ["luecken", { say: "Jetzt arbeitet ihr allein. Ü5 steht auf der Folie. Verbindet die Sätze mit der Subjunktion in Klammern und schreibt den ganzen Satz ins Heft. Kreist die Subjunktion ein und unterstreicht das finite Verb. Acht Minuten. Nummer 6 hat einen Stern. Fertig? Stift hinlegen.", sol: "1 Ich trainiere heute länger, weil am Samstag ein Wettkampf ist. · 2 Der Trainer sagt, dass wir nach Frankfurt (Oder) fahren. · 3 Ich war nervös, als ich auf der Matte stand. · 4 Wir gewinnen, wenn wir als Team spielen. · 5 Ich bin stolz, weil ich 80 kg gestoßen habe. · *6 Der Trainer fragt, ob ich gut geschlafen habe." }],
+  ["gemeinsam", { say: "Wir prüfen gemeinsam, Satz für Satz. Wer drankommt, liest seinen Satz vor und sagt, wo das finite Verb steht und wo das Komma hin muss. Dann decke ich auf. Alle verbessern im Heft mit Grün.", do: ["Folie 26 bis 31: Mit jedem Klick erscheint der nächste Lösungssatz (Subjunktion violett, finites Verb unterstrichen, Hilfsverb rot). Bei Satz 5 nachfragen: Welches Verb ist hier finit? (habe – das Hilfsverb). Niemand geht an die Tafel."] }],
 ]));
-doc.push(avivaPhase("V", "* Verarbeiten: Ü5 zurück zur Ballade", 5));
-doc.push(...steps([["luecken", { say: "Wer fertig ist: Ü5. Schreibt mindestens drei Sätze über die Ballade mit den Satzanfängen auf der Folie.", sol: "z. B. … weil er Angst vor dem Schotten hat · … dass Paddy ihr Baby ist · … als er die riesige Nase sieht · … weil er glaubt, dass der Vater noch größer ist" }]]));
+doc.push(avivaPhase("V", "* Verarbeiten: Ü6 zurück zur Ballade", 5));
+doc.push(...steps([["luecken", { say: "Wer fertig ist: Ü6. Schreibt mindestens drei Sätze über die Ballade mit den Satzanfängen auf der Folie.", sol: "z. B. … weil er Angst vor dem Schotten hat · … dass Paddy ihr Baby ist · … als er die riesige Nase sieht · … weil er glaubt, dass der Vater noch größer ist" }]]));
 doc.push(avivaPhase("A", "Auswerten: Zielcheck", 6));
 doc.push(...steps([
   ["gemeinsam", { say: "* Forscherfrage: In Strophe 3 steht: Und als er stapfte durch den Sund. Was ist hier anders – und warum macht der Dichter das?", sol: "Das finite Verb steht nicht am Ende. Der Dichter weicht wegen Reim und Rhythmus ab (Sund – stund). Im Gedicht ist das erlaubt, im Aufsatz gilt die Regel." }],
   ["luecken", { say: "Zielcheck. Jetzt arbeitet ihr allein. Löst die drei Aufgaben auf der Folie im Heft. Sie zeigen, ob ihr unsere Ziele erreicht habt. Vier Minuten. Fertig? Stift hinlegen.", sol: "Ziel 1: Falsch – Paddy greift nicht an. Der Schotte sieht die riesige Nase des „Babys“ und glaubt, der Vater müsse noch viel größer sein (Str. 8–10). · Ziel 2 a: Der Schotte erschrickt, als er die riesige Nase sieht. · Ziel 2 b: Falsch – im Nebensatz steht das finite Verb am Ende: …, weil er Angst hat." }],
-  ["kontrolle", { say: "Vergleicht mit der Lösung auf der Folie und verbessert mit Grün.", do: ["Folie 32. Herumgehen und schauen, wer bei 2 a oder 2 b noch Fehler hat – diese Fälle am Donnerstag in der Wiederholung aufgreifen. Folie 2 noch einmal zeigen: Was mit * offen ist, kommt am Donnerstag."] }],
+  ["kontrolle", { say: "Vergleicht mit der Lösung auf der Folie und verbessert mit Grün.", do: ["Folie 34. Herumgehen und schauen, wer bei 2 a oder 2 b noch Fehler hat – diese Fälle am Donnerstag in der Wiederholung aufgreifen. Folie 2 noch einmal zeigen: Was mit * offen ist, kommt am Donnerstag."] }],
 ]));
 
 // ---------- Reflexion ----------
@@ -253,22 +260,22 @@ doc.push(bul("Ankommen:", "Überblicksfolie mit zwei Teilen, Zeiten und je einem
 doc.push(bul("Vorwissen aktivieren:", "In beiden Teilen echte Wiederholung: Lesetechniken vom Montag (Teil 1), finite Form aus der Verb-Einheit (Teil 2)."));
 doc.push(bul("Informieren:", "In Teil 2 induktiv: erst entdecken, dann der Merksatz als Schnipsel, nicht abschreiben."));
 doc.push(bul("Verarbeiten und Auswerten:", "Immer erst allein oder zu zweit. Keine Tafelarbeit einzelner Schüler: Ausgewertet wird gemeinsam auf Aufdeck-Folien – ein Schüler nennt Urteil und Beleg, dann wird aufgedeckt, alle korrigieren mit Grün (Rückmeldung 31.10.). Sicherung als Zielcheck mit konkreten Aufgaben statt „Heute habe ich gelernt“ (Rückmeldung 31.10.)."));
-doc.push(bul("Zeit:", "77 Min. Pflicht, alles Weitere mit *, kaum Puffer – nach den bisherigen Erfahrungen bewusst knapp gehalten; Kürzungsoptionen sind benannt."));
+doc.push(bul("Zeit:", "76 Min. Pflicht, alles Weitere mit *, kein Puffer – nach den bisherigen Erfahrungen bewusst knapp gehalten; Kürzungsoptionen sind benannt."));
 doc.push(refHead("2  Direkte Instruktion (DI)", NAVY));
 doc.push(bul("Ziel und Relevanz:", "Zwei überprüfbare Ziele; „Wofür?“ im Merksatz: Begründen in jeder Analyse, Bezug zum Englischen."));
-doc.push(bul("Ich – Wir – Ihr:", "Lehrkraft entwickelt mit der Klasse das Tafelbild Hauptsatz/Nebensatz und modelliert am Perfekt-Beispiel (Wir/Ich), danach Ü3–Ü5 selbstständig (Ihr)."));
-doc.push(bul("Rückmeldung:", "Aufdeck-Folien nach Ü1 und Ü3, Partnerkorrektur und Lösungsfolie bei Ü4, Zielcheck mit Lösungsfolie; typische Hürden vorab benannt: Hilfsverb ans Ende (Ü3 Nr. 5), gesprochenes „weil ich muss …“ (Ü4)."));
+doc.push(bul("Ich – Wir – Ihr:", "Lehrkraft entwickelt mit der Klasse das Tafelbild Hauptsatz/Nebensatz und modelliert am Perfekt-Beispiel (Wir/Ich), danach Ü5–Ü5 selbstständig (Ihr)."));
+doc.push(bul("Rückmeldung:", "Lösungsfolie nach Ü1, Aufdeck-Folien nach Ü2 und Ü5, Zielcheck mit Lösungsfolie; typische Hürden vorab benannt: plausible Aussagen mit falschem Detail (Ü2), Hilfsverb ans Ende (Ü5 Nr. 5)."));
 doc.push(refHead("3  Grammatik integriert („Sprachtraining“) – aus der Ballade heraus", VIO));
-doc.push(bul("", "Phänomen in der Ballade entdecken (dass, als) → Regel ableiten → an Sätzen aus dem Sportalltag üben → Fehleranalyse im Chat → zurück zur Ballade (Ü5)."));
+doc.push(bul("", "Phänomen in der Ballade entdecken (dass, als) → Regel ableiten → an Sätzen aus dem Sportalltag üben → zurück zur Ballade (Ü5)."));
 doc.push(bul("", "Sprachreflexion: Forscherfrage zur dichterischen Abweichung (Str. 3) – die Klasse erfährt, warum ein Gedicht anders klingen darf."));
 doc.push(bul("", "Anschluss an die Verb-Einheit (finite Form, Hilfsverb rot) und an Montag (weil-Sätze)."));
 doc.push(refHead("4  Differenzierung", "2A8C8C"));
-doc.push(bul("", "Tandems lesestärker/leseschwächer; * 1 b, * Ü3 Nr. 6 (ob mit Personwechsel), * Ü5 und Forscherfrage für Schnelle; Satzanfänge in Ü5."));
+doc.push(bul("", "Tandems lesestärker/leseschwächer; * Ü3 mit Stichwörtern als Struktur fürs Nacherzählen, * Ü5 Nr. 6 (ob mit Personwechsel), * Ü6 und Forscherfrage für Schnelle; Satzanfänge in Ü6."));
 doc.push(bul("", "S-PL: Handreichung mit Zielen, Aufträgen und Fachbegriffen auf Polnisch. Hinweis zur Verbstellung, weil sie im Polnischen frei ist."));
 doc.push(refHead("5  Beobachtungsschwerpunkte", MUTED));
-doc.push(bul("", "Reicht die Zeit für Teil 1 ohne 1 b? Wo hakt das Tandemlesen?"));
+doc.push(bul("", "Reicht die Zeit für Teil 1 ohne Ü3? Sitzt das Belegen nach dem kurzen Input (Ü1), oder braucht es am Donnerstag noch eine Wiederholung?"));
 doc.push(bul("", "Entdecken die Schüler die Verbstellung selbst, oder braucht es mehr Lenkung?"));
-doc.push(bul("", "Gelingt Ü3 Nr. 5 (Hilfsverb ans Ende)? Bleibt das gesprochene „weil ich muss …“ hartnäckig?"));
+doc.push(bul("", "Gelingt Ü5 Nr. 5 (Hilfsverb ans Ende)? Die Chat-Fehler (gesprochenes „weil ich muss …“) kommen am Donnerstag als Wiederholung."));
 doc.push(bul("", "Welches Grammatikthema bietet sich als Nächstes an (z. B. Präteritum der starken Verben in der Ballade, indirekte Rede)?"));
 
 const pageProps = { page: { size: { width: 11906, height: 16838 }, margin: { top: 900, bottom: 800, left: 850, right: 850, header: 400, footer: 400 } } };

@@ -207,6 +207,7 @@ const rows = [
   r("prüfen · verbessern", "Prüfe! · Verbessere!", "**sprawdzić** · **poprawić**", "Verbessere mit Grün."),
   r("notieren", "Notiere …!", "**zanotować**", "Notiere die Strophe."),
   r("nacherzählen", "Erzähle nach!", "**opowiedzieć własnymi słowami**", "Erzählt die Ballade nach."),
+  r("zuerst · dann · schließlich", "daraufhin · am Ende", "**najpierw** · **potem** · **w końcu** (do łączenia zdań)", "Zuerst …, dann …, schließlich …"),
   r("Fertig? Stift hinlegen.", "", "**Gotowe? Odłóż długopis.**", ""),
 
   sec("3  Verben und Zeitformen", "czasowniki i czasy", C.hv),

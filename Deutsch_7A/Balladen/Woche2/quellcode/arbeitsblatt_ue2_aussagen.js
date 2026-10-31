@@ -148,26 +148,13 @@ function phase(nr, title, min) {
 
 
 
-// Arbeitsblatt Ü1 „Paddy Fingal – Aussagen prüfen“ (Mi 4.11.) – zweisprachige Fassung für S-PL
+// Arbeitsblatt Ü2 „Paddy Fingal – Aussagen prüfen“ (Mi 4.11.)
 const GRN = "2E9E6B";
 const PW = 11906 - 1100;
 const gray = "9AA3B5";
 const s = (x, o = {}) => t(x, Object.assign({ size: 21 }, o));
 const gapL = (n) => s("_".repeat(n), { color: gray });
 const bd = allBorders(solid("C9D3EA", 6));
-const PLC = "5B4A8A";
-const pls = (x, o = {}) => t(x, Object.assign({ size: 17, italics: true, color: PLC }, o));
-const PL = [
-  "Paddy jest tak silny, że rzuca masztem statku jak włócznią.",
-  "Szkot przychodzi do Paddy’ego, bo chce go pozyskać jako sojusznika przeciw wrogowi.",
-  "Kiedy Paddy widzi obcego z daleka, zauważa, że obaj są mniej więcej tego samego wzrostu.",
-  "Paddy chce stanąć do walki i prosi Schayę, żeby pomogła mu się przygotować.",
-  "Schaya prosi obcego, żeby był cicho, aby dziecko się nie obudziło.",
-  "Szkot słucha ostrzeżenia Schai i trzyma się z daleka od łóżka.",
-  "Szkot rozpoznaje Paddy’ego w łóżku i ucieka przed nim.",
-  "Podczas ucieczki Szkot prawie stracił życie.",
-  "Na końcu Paddy jest słusznie świętowany jako dzielny bohater, bo pokonał Szkota.",
-];
 const AUSSAGEN = [
   "Paddy ist so stark, dass er einen Schiffsmast wie einen Speer wirft.",
   "Der Schotte kommt zu Paddy, weil er ihn als Verbündeten gegen einen Feind gewinnen will.",
@@ -185,36 +172,24 @@ const item = (i, a) => {
   return [
     row([
       cell(p(s((star ? "* " : "") + (i + 1), { bold: true, color: GRN, size: 24 }), { after: 0, align: AlignmentType.CENTER }), { w: NW, borders: bd, fill: LIGHT, valign: VerticalAlign.CENTER, rowSpan: undefined }),
-      cell([p(s(a, { bold: true }), { after: 0 }), p(pls(PL[i]), { after: 0 })], { w: AW, borders: bd, m: 50, ml: 100 }),
-      cell([p([s("☐ richtig", { size: 20 }), s("   ", {}), s("☐ falsch", { size: 20 })], { after: 0, align: AlignmentType.CENTER }), p(pls("prawda · fałsz", { size: 15 }), { after: 0, align: AlignmentType.CENTER })], { w: KW, borders: bd, valign: VerticalAlign.CENTER }),
+      cell(p(s(a, { bold: true }), { after: 0 }), { w: AW, borders: bd, m: 60, ml: 100 }),
+      cell(p([s("☐ richtig", { size: 20 }), s("   ", {}), s("☐ falsch", { size: 20 })], { after: 0, align: AlignmentType.CENTER }), { w: KW, borders: bd, valign: VerticalAlign.CENTER }),
     ]),
     row([cell([
-      p([s("Beleg ", { bold: true, size: 19, color: MUTED }), pls("(dowód)", { size: 15 }), s(": Str. ", { size: 19 }), gapL(4), s("  V. ", { size: 19 }), gapL(5), s("  „", { size: 19 }), gapL(50), s("“", { size: 19 })], { after: 0, line: 470 }),
-      p([s("Richtig ist ", { bold: true, size: 19, color: MUTED }), pls("(poprawnie – po niemiecku)", { size: 15 }), s(": ", { size: 19 }), gapL(66)], { after: 0, line: 470 }),
+      p([s("Beleg: ", { bold: true, size: 19, color: MUTED }), s("Str. ", { size: 19 }), gapL(4), s("  V. ", { size: 19 }), gapL(5), s("  „", { size: 19 }), gapL(58), s("“", { size: 19 })], { after: 0, line: 440 }),
+      p([s("Richtig ist: ", { bold: true, size: 19, color: MUTED }), gapL(86)], { after: 0, line: 440 }),
     ], { w: PW, borders: bd, m: 50, ml: 130, span: 3 })]),
   ];
 };
 const doc = [
-  p([t("Ü1  Paddy Fingal – Aussagen prüfen", { font: "Cambria", bold: true, size: 30, color: NAVY }), pls("   Sprawdź stwierdzenia", { size: 20 }), t("    Name: ________________", { size: 18, color: MUTED })], { after: 60 }),
-  p([s("1  ", { bold: true, color: GRN }), s("Lies die Ballade im Tandem (LB S. 136 f.).   "), s("2  ", { bold: true, color: GRN }), s("Prüfe jede Aussage allein: Kreuze an.")], { after: 20 }),
-  p([s("3  ", { bold: true, color: GRN }), s("Belege mit Strophe, Vers und Zitat.   "), s("4  ", { bold: true, color: GRN }), s("Ist die Aussage falsch? Schreibe auf, was richtig ist.")], { after: 20 }),
-  p([pls("PL: ", { bold: true, italics: false }), pls("1 Czytajcie balladę w parze (podręcznik s. 136 n.). 2 Sama sprawdź każde zdanie: zaznacz prawda (richtig) albo fałsz (falsch). 3 Podaj dowód: strofa (Str.), wers (V.) i cytat. 4 Jeśli zdanie jest fałszywe, napisz po niemiecku, jak jest naprawdę. Uwaga: zdania są napisane innymi słowami niż w balladzie.")], { after: 80 }),
-  box([p([s("Beispiel: ", { bold: true, color: GRN, size: 19 }), s("„Paddy hat einen roten Bart.“  ", { size: 19, italics: true }), s("☒ falsch", { size: 19, bold: true }), s("  ·  Beleg: Str. 1, V. 2, „Sechs Ellen flog sein schwarzer Bart“  ·  Richtig ist: Paddys Bart ist schwarz.", { size: 19 })], { after: 0 }), p(pls("Przykład: „Paddy ma rudą brodę.“ – fałsz · dowód: strofa 1, wers 2 · poprawnie: Broda Paddy’ego jest czarna."), { after: 0 })], LIGHT2),
+  p([t("Ü2  Paddy Fingal – Aussagen prüfen", { font: "Cambria", bold: true, size: 30, color: NAVY }), t("      Name: ____________________   Datum: __________", { size: 18, color: MUTED })], { after: 60 }),
+  p([s("1  ", { bold: true, color: GRN }), s("Prüfe jede Aussage allein: Kreuze an.   "), s("2  ", { bold: true, color: GRN }), s("Belege mit Strophe, Vers und Zitat.   "), s("3  ", { bold: true, color: GRN }), s("Ist die Aussage falsch? Schreibe auf, was richtig ist.")], { after: 80 }),
+  box([p([s("So belegst du: ", { bold: true, color: C.hv, size: 19 }), s("Strophe", { bold: true, size: 19 }), s(" = ein Abschnitt, dazwischen eine Leerzeile · ", { size: 19 }), s("Vers", { bold: true, size: 19 }), s(" = eine Zeile, am Rand gezählt (5, 10, 15 …) · ", { size: 19 }), s("Beleg", { bold: true, size: 19 }), s(" = Str. + V. + Zitat in Anführungszeichen", { size: 19 })], { after: 30 }),
+         p([s("Beispiel: ", { bold: true, color: GRN, size: 19 }), s("„Paddy hat einen roten Bart.“  ", { size: 19, italics: true }), s("☒ falsch", { size: 19, bold: true }), s("  ·  Beleg: Str. 1, V. 2, „Sechs Ellen flog sein schwarzer Bart“  ·  Richtig ist: Paddys Bart ist schwarz.", { size: 19 })], { after: 0 })], LIGHT2),
   p(t(""), { after: 60 }),
-  table([NW, AW, KW], AUSSAGEN.slice(0, 5).flatMap((a, i) => item(i, a))),
-  p(new PageBreak()),
-  p([t("Ü1  Paddy Fingal – Aussagen prüfen (Rückseite)", { font: "Cambria", bold: true, size: 26, color: NAVY }), pls("   ciąg dalszy", { size: 18 })], { after: 100 }),
-  table([NW, AW, KW], AUSSAGEN.slice(5).flatMap((a, i) => item(i + 5, a))),
-  p([t("Wichtige Wörter", { bold: true, size: 22, color: NAVY, font: "Cambria" }), pls("   ważne słowa", { size: 18 })], { before: 200, after: 40 }),
-  table([2600, 2850, 2600, PW - 8050], [
-    ["der Schiffsmast · der Speer", "maszt statku · włócznia", "der Verbündete · der Feind", "sojusznik · wróg"],
-    ["sich dem Kampf stellen", "stanąć do walki", "von Weitem", "z daleka"],
-    ["die Warnung · sich halten an", "ostrzeżenie · stosować się do", "erkennen · fliehen", "rozpoznać · uciekać"],
-    ["beinahe · das Leben verlieren", "prawie · stracić życie", "zu Recht · feiern", "słusznie · świętować"],
-    ["der Beleg · das Zitat", "dowód · cytat", "die Aussage · richtig · falsch", "stwierdzenie · prawda · fałsz"],
-  ].map((r) => row(r.map((x, i) => cell(p(i % 2 ? pls(x, { italics: false, color: "333333", size: 18 }) : s(x, { bold: true, size: 18, color: NAVY }), { after: 0 }), { w: [2600, 2850, 2600, PW - 8050][i], borders: bd, m: 30, ml: 70, fill: i % 2 ? "FBFCFF" : undefined }))))),
-  p([s("Zeit: ", { bold: true, size: 18 }), s("8 Min. lesen (Tandem) + 10 Min. prüfen (allein)      ", { size: 18 }), s("Fertig? Stift hinlegen.", { size: 18, italics: true, color: MUTED })], { before: 80, after: 0 }),
+  table([NW, AW, KW], AUSSAGEN.flatMap((a, i) => item(i, a))),
+  p([s("Zeit: ", { bold: true, size: 18 }), s("10 Minuten · allein · Nr. 9 mit *      ", { size: 18 }), s("Fertig? Stift hinlegen.", { size: 18, italics: true, color: MUTED })], { before: 80, after: 0 }),
 ];
-const props = { page: { size: { width: 11906, height: 16838 }, margin: { top: 400, bottom: 300, left: 550, right: 550 } } };
+const props = { page: { size: { width: 11906, height: 16838 }, margin: { top: 500, bottom: 400, left: 550, right: 550 } } };
 const styles = { default: { document: { run: { font: "Calibri", size: 21 } } } };
-Packer.toBuffer(new Document({ styles, sections: [{ properties: props, children: doc }] })).then((buf) => fs.writeFileSync("Handreichung_Polnisch_04-11_Ue1_Aussagen_pruefen.docx", buf));
+Packer.toBuffer(new Document({ styles, sections: [{ properties: props, children: doc }] })).then((buf) => fs.writeFileSync("Ue2_Paddy_Fingal_Aussagen_pruefen.docx", buf));

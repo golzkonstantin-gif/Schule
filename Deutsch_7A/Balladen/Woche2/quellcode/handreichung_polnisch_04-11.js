@@ -169,17 +169,22 @@ const wtab = (pairs, w1 = 2300) => {
 };
 const doc = [
   p([t("Mittwoch, 4.11. · Paddy Fingal: Inhalt und Sprachtraining", { font: "Cambria", bold: true, size: 26, color: NAVY }), pls("   Środa, 4.11. – pomoc do lekcji", { size: 18 })], { after: 30 }),
-  de2([s("Teil 1: ", { bold: true, color: GRN }), s("Ich kann Aussagen zur Ballade prüfen und mit Textbelegen begründen, ob sie richtig oder falsch sind.", { italics: true })]),
-  pl2("Cel 1: Potrafię sprawdzić stwierdzenia o balladzie i uzasadnić dowodem z tekstu, czy są prawdziwe, czy fałszywe."),
+  de2([s("Teil 1: ", { bold: true, color: GRN }), s("Ich kann mit Strophe und Vers belegen, ob Aussagen zur Ballade richtig oder falsch sind.", { italics: true })]),
+  pl2("Cel 1: Potrafię za pomocą strofy i wersu udowodnić, czy stwierdzenia o balladzie są prawdziwe, czy fałszywe."),
   de2([s("Teil 2: ", { bold: true, color: VIO }), s("Ich kann Nebensätze mit Subjunktion erkennen und richtig bilden: Das finite Verb steht am Ende.", { italics: true })]),
   pl2("Cel 2: Potrafię rozpoznać i poprawnie utworzyć zdanie podrzędne ze spójnikiem: czasownik w formie osobowej stoi na końcu."),
 
   hd("Teil 1 · Paddy Fingal – den Inhalt erschließen", "treść ballady", GRN),
   de2([s("Wiederholung: ", { bold: true }), s("Welche Lesetechnik brauchst du? Begründe mit „weil“.")]),
   pl2("Która technika czytania jest potrzebna? Uzasadnij zdaniem z „weil“. A – chcesz wiedzieć, skąd przybywa obcy. B – chcesz wiedzieć, czy ballada dobrze się kończy. C – masz wyjaśnić, jakiego podstępu używa żona Paddy’ego."),
-  de2([s("Ü1 (Arbeitsblatt): ", { bold: true }), s("Prüfe jede Aussage: richtig oder falsch? Belege mit Strophe, Vers und Zitat. Ist sie falsch, schreibe: Richtig ist …")]),
-  pl2("Najpierw czytajcie w parze na zmianę (jedna osoba czyta strofę na głos, druga czyta po cichu i pomaga). Potem sama sprawdź każde zdanie na karcie pracy: prawda (richtig) czy fałsz (falsch)? Zapisz dowód: strofa (Str.), wers (V.), cytat. Jeśli zdanie jest fałszywe, napisz po niemiecku „Richtig ist: …“. Uwaga: zdania są napisane innymi słowami niż w balladzie.", { after: 10 }),
-  pl2("1 Paddy jest tak silny, że rzuca masztem statku jak włócznią. · 2 Szkot przychodzi do Paddy’ego, bo chce go pozyskać jako sojusznika przeciw wrogowi. · 3 Kiedy Paddy widzi obcego z daleka, zauważa, że obaj są mniej więcej tego samego wzrostu. · 4 Paddy chce stanąć do walki i prosi Schayę, żeby pomogła mu się przygotować. · 5 Schaya prosi obcego, żeby był cicho, aby dziecko się nie obudziło. · 6 Szkot słucha ostrzeżenia Schai i trzyma się z daleka od łóżka. · 7 Szkot rozpoznaje Paddy’ego w łóżku i ucieka przed nim. · 8 Podczas ucieczki Szkot prawie stracił życie. · *9 Na końcu Paddy jest słusznie świętowany jako dzielny bohater, bo pokonał Szkota."),
+  de2([s("Tandemlesen: ", { bold: true }), s("Lest die Ballade im Tandem, Strophe für Strophe.")]),
+  pl2("Czytajcie w parze na zmianę: jedna osoba czyta strofę na głos, druga czyta po cichu i pomaga. Zwróć uwagę: co się dzieje? Kto działa?"),
+  de2([s("Aufbau: ", { bold: true }), s("Strophe = ein Abschnitt · Vers = eine Zeile · Beleg: Str. 1, V. 2: „Sechs Ellen flog sein schwarzer Bart“")]),
+  pl2("Budowa ballady: strofa (Strophe) to fragment, między strofami jest pusta linijka. Wers (Vers) to jedna linijka – w podręczniku numery wersów są na marginesie (5, 10, 15 …). Dowód (Beleg) = strofa + wers + cytat w cudzysłowie."),
+  de2([s("Ü1: ", { bold: true }), s("Belege finden: Zähle Strophen und Verse. Schlage Str. 3, V. 14 nach. Suche „birg mich im Versteck“.")]),
+  pl2("Policz strofy i wersy w strofie. Sprawdź, co jest w strofie 3, wersie 14, i przepisz cytat. Znajdź „birg mich im Versteck“ i podaj strofę i wers."),
+  de2([s("Ü2 (Arbeitsblatt): ", { bold: true }), s("Prüfe jede Aussage: richtig oder falsch? Belege mit Strophe, Vers und Zitat. Ist sie falsch, schreibe: Richtig ist …")]),
+  pl2("Masz kartę pracy w dwóch językach. Sama sprawdź każde zdanie: prawda (richtig) czy fałsz (falsch)? Podaj dowód. Jeśli zdanie jest fałszywe, napisz po niemiecku „Richtig ist: …“."),
   wtab([
     ["der Riese · der Hüne", "olbrzym · bardzo duży mężczyzna"], ["die Elle", "łokieć (dawna miara długości)"],
     ["der Mastbaum", "maszt statku"], ["der Sund · die Furt", "cieśnina · bród (płytkie miejsce w rzece)"],
@@ -187,8 +192,8 @@ const doc = [
     ["das Kindlein · erwachen", "dzieciątko · obudzić się"], ["die List · fliehen", "podstęp · uciekać"],
     ["der Verbündete · der Speer", "sojusznik · włócznia"], ["ertrinken · zu Recht", "utonąć · słusznie"],
   ]),
-  de2([s("* Ü1 b: ", { bold: true }), s("Erzählt die Ballade nach (A: Str. 1–5, B: Str. 6–11).")], { before: 40 }),
-  pl2("Opowiedzcie balladę własnymi słowami (kartę pracy możesz wykorzystać jako ściągę). Lista kontrolna: tytuł i autor · właściwa kolejność · niczego nie wymyślać · wszystkie ważne szczegóły."),
+  de2([s("* Ü3: ", { bold: true }), s("Erzählt die Ballade nach. Nutzt die Stichwörter auf der Folie (A: Abschnitt 1–4, B: 5–8).")], { before: 40 }),
+  pl2("Opowiedzcie balladę własnymi słowami. Na prezentacji jest początek („In der Ballade … geht es um …“) i 8 części ze słowami-kluczami – one wyznaczają kolejność. Łącz zdania słowami: zuerst (najpierw), dann (potem), als (kiedy), weil (ponieważ), schließlich (w końcu). Lista kontrolna: tytuł i autor · właściwa kolejność · niczego nie wymyślać · wszystkie ważne szczegóły."),
 
   hd("Teil 2 · Sprachtraining: Nebensätze mit Subjunktion", "trening językowy: zdania podrzędne ze spójnikiem", VIO),
   wtab([
@@ -198,18 +203,16 @@ const doc = [
     ["ob · obwohl", "czy · chociaż"], ["während · nachdem", "podczas gdy · po tym, jak"],
   ]),
   pl2("Reguła: Po spójniku (dass, als, weil …) czasownik w formie osobowej idzie na sam koniec zdania. Przed spójnikiem stawiamy przecinek. Uwaga: po polsku szyk jest swobodny („bo boi się ojca“), po niemiecku nie: „…, weil er Angst vor dem Vater hat.“ W czasie Perfekt na koniec idzie czasownik posiłkowy: „…, weil ich 80 kg gestoßen habe.“", { before: 40 }),
-  de2([s("Ü2: ", { bold: true }), s("Schreibe die fett gedruckten Teile ins Heft. Unterstreiche das finite Verb. Kreise das erste Wort ein. Was fällt dir auf?")]),
+  de2([s("Ü4: ", { bold: true }), s("Schreibe die fett gedruckten Teile ins Heft. Unterstreiche das finite Verb. Kreise das erste Wort ein. Was fällt dir auf?")]),
   pl2("Przepisz pogrubione fragmenty ballady. Podkreśl czasownik w formie osobowej, zakreśl pierwsze słowo. Co zauważasz?"),
-  de2([s("Ü3: ", { bold: true }), s("Verbinde die Sätze mit der Subjunktion in Klammern. Schreibe den ganzen Satz ins Heft.")]),
+  de2([s("Ü5: ", { bold: true }), s("Verbinde die Sätze mit der Subjunktion in Klammern. Schreibe den ganzen Satz ins Heft.")]),
   pl2("Połącz dwa zdania spójnikiem z nawiasu i napisz całe zdanie w zeszycie (przecinek!). Słowa: der Wettkampf – zawody · nervös – zdenerwowana · stolz – dumna · gestoßen – podrzucony (podrzut)."),
-  de2([s("Ü4: ", { bold: true }), s("Finde im Chat die Fehler. Schreibe die Sätze richtig. Notiere: Verbstellung oder Komma?")]),
-  pl2("W czacie są błędy. Napisz zdania poprawnie i zanotuj, czy błąd dotyczy szyku czasownika (Verbstellung), czy przecinka (Komma)."),
-  de2([s("* Ü5: ", { bold: true }), s("Schreibe Sätze über die Ballade mit den Satzanfängen.")]),
+  de2([s("* Ü6: ", { bold: true }), s("Schreibe Sätze über die Ballade mit den Satzanfängen.")]),
   pl2("Dokończ zdania o balladzie, np. „Der Schotte flieht, weil …“ (Szkot ucieka, ponieważ …). Pamiętaj: czasownik na końcu."),
   de2([s("Gemeinsam prüfen: ", { bold: true }), s("Wer drankommt, sagt: richtig oder falsch – und den Beleg. Dann wird aufgedeckt.")]),
   pl2("Sprawdzamy razem na prezentacji, zdanie po zdaniu. Osoba wywołana mówi: prawda czy fałsz i podaje dowód. Potem nauczyciel pokazuje rozwiązanie. Wszyscy poprawiają na zielono."),
   de2([s("Zielcheck: ", { bold: true }), s("Löse die drei Aufgaben auf der Folie im Heft. Vergleiche dann mit der Lösung.")]),
-  pl2("Sprawdzenie celu: rozwiąż w zeszycie trzy krótkie zadania z prezentacji (1: czy zdanie „Der Schotte flieht, weil Paddy ihn im Bett angreift“ jest prawdziwe? Podaj dowód. 2 a: połącz zdania spójnikiem „als“; 2 b: czy zdanie jest poprawne? Uzasadnij). Potem porównaj z rozwiązaniem i popraw na zielono.", { after: 0 }),
+  pl2("Sprawdzenie celu: rozwiąż w zeszycie trzy krótkie zadania z prezentacji (1: czy zdanie „Der Schotte flieht, weil Paddy ihn im Bett angreift“ jest prawdziwe? Podaj strofę i wers. 2 a: połącz zdania spójnikiem „als“; 2 b: czy zdanie jest poprawne? Uzasadnij). Potem porównaj z rozwiązaniem i popraw na zielono.", { after: 0 }),
 ];
 const props = { page: { size: { width: 11906, height: 16838 }, margin: { top: 450, bottom: 350, left: 400, right: 400 } } };
 const styles = { default: { document: { run: { font: "Calibri", size: f } } } };
