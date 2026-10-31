@@ -241,6 +241,14 @@ Die Lehrkraft möchte das weiterverfolgen, noch ohne Material. Die Satzklammer (
   - Teil 2, Ziel: Ich kann Nebensätze mit Subjunktion erkennen und richtig bilden: Das finite Verb steht am Ende.
     - Ablauf: finites Verb in zwei Hauptsätzen → Ü2 dass/als in Str. 3, 7, 8 entdecken → Merksatz → Ü3 Sätze verbinden (Sport) → Ü4 Fehler im Chat → * Ü5 zurück zur Ballade → * Forscherfrage Str. 3 („als er stapfte durch den Sund“).
   - Reime und Ur-Ei folgen am Do/Fr mit dem Material aus `Woche1/`.
+- **Rückmeldung der Lehrkraft (31.10., zur Planung):**
+  - „Heute habe ich gelernt, …“ ist zu abstrakt. Stattdessen gibt es am Ende einen Zielcheck mit konkreten Aufgaben und Lösungskontrolle.
+  - Kreide-Ketten bieten sich seltener an, weil der Rest der Klasse dabei nichts macht. Wenn sie eingesetzt werden, dann als Prüf-Kette: An der Tafel wird abgestrichen (ja/nein + Begründung), während die anderen ihr Heft korrigieren oder mitschreiben.
+- **Umgesetzt (31.10.):**
+  - Mi 4.11.: Prüf-Kette nach Ü1 und Ü3, Zielcheck mit drei Aufgaben und Lösungsfolie. Die Präsentation hat jetzt 16 Folien.
+  - Kurzeinheit Lesetechniken: Selbstkontrolle mit aufgeklappter Lösung und eine Zielcheck-Aufgabe, keine Kreide-Kette.
+  - Beide Handreichungen für S-PL sind angepasst.
+  - Das Material für Do/Fr aus `Woche1/` (Reime, Ur-Ei) muss beim Anpassen ebenfalls umgestellt werden.
 - **Rückmeldung der Lehrkraft (Mi 4.11.):** *(steht noch aus)*
 
 ### Woche 1: „Paddy Fingal – Lesetechniken“ (Mi 14.10., nach der Leistungskontrolle), „Paddy Fingal gliedern und nacherzählen“ (Do), „Ur-Ei“ (Fr) – AVIVA

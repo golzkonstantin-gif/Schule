@@ -205,8 +205,10 @@ const doc = [
   pl2("W czacie są błędy. Napisz zdania poprawnie i zanotuj, czy błąd dotyczy szyku czasownika (Verbstellung), czy przecinka (Komma)."),
   de2([s("* Ü5: ", { bold: true }), s("Schreibe Sätze über die Ballade mit den Satzanfängen.")]),
   pl2("Dokończ zdania o balladzie, np. „Der Schotte flieht, weil …“ (Szkot ucieka, ponieważ …). Pamiętaj: czasownik na końcu."),
-  de2([s("Zum Schluss: ", { bold: true }), s("Heute habe ich gelernt, …")]),
-  pl2("Na koniec zapisz w zeszycie: „Heute habe ich gelernt, …“ (Dziś nauczyłam się, …).", { after: 0 }),
+  de2([s("Prüf-Kette: ", { bold: true }), s("Wer drankommt, prüft zuerst die Antwort davor (✓/✗ + Begründung) und schreibt dann die nächste an.")]),
+  pl2("Kto jest wywołany, najpierw sprawdza odpowiedź poprzednika na tablicy (✓ albo ✗ + krótkie uzasadnienie), potem pisze następną. Wszyscy inni porównują ze swoim zeszytem i poprawiają na zielono."),
+  de2([s("Zielcheck: ", { bold: true }), s("Löse die drei Aufgaben auf der Folie im Heft. Vergleiche dann mit der Lösung.")]),
+  pl2("Sprawdzenie celu: rozwiąż w zeszycie trzy krótkie zadania z prezentacji (1: dlaczego Szkot ucieka? 2 a: połącz zdania spójnikiem „als“; 2 b: czy zdanie jest poprawne? Uzasadnij). Potem porównaj z rozwiązaniem i popraw na zielono.", { after: 0 }),
 ];
 const props = { page: { size: { width: 11906, height: 16838 }, margin: { top: 450, bottom: 350, left: 400, right: 400 } } };
 const styles = { default: { document: { run: { font: "Calibri", size: f } } } };

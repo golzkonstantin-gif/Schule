@@ -29,7 +29,8 @@ Die folgenden Vorlieben und Reflexionen gelten für die gesamte weitere Planung,
 - **Konkreter Lernzuwachs in jeder Stunde (Stand 12.10.).**
   - Vorab ein überprüfbares Stundenziel formulieren, als Schülersatz „Ich kann …“.
   - Wenn jemand die Schüler fragt, was sie heute gelernt haben, muss eine klare Antwort kommen.
-  - Die Sicherung zielt genau darauf und macht den Lernzuwachs ausdrücklich, z. B. mit dem Satz „Heute habe ich gelernt, …“.
+  - Die Sicherung zielt genau darauf und macht den Lernzuwachs ausdrücklich.
+  - **Kein „Heute habe ich gelernt, …“ (Stand 31.10.: zu abstrakt).** Am Ende steht ein **Zielcheck**: ein bis drei kurze, konkrete Aufgaben genau zum Ziel. Sie werden allein im Heft gelöst und dann mit Lösungsfolie oder aufgeklappter Lösung mit Grün kontrolliert. Die Lehrkraft geht herum; wer noch Fehler hat, wird in der Wiederholung der nächsten Stunde gezielt aufgegriffen.
   - Keine Phase nur zum Beschäftigen.
 - **Alle Schüler in jeder Phase aktiv (Stand 12.10.).**
   - Wenn ein Schüler an der Tafel arbeitet, brauchen alle anderen einen eigenen Auftrag, z. B. dasselbe am Platz oder zu zweit lösen, mitschreiben oder prüfen.
@@ -57,11 +58,14 @@ Die folgenden Vorlieben und Reflexionen gelten für die gesamte weitere Planung,
 - **Transparenz durch die Lehrkraft, nicht durch Hilfsmittel.** Keine Modus- oder Symbolkarten (ausdrücklich abgelehnt). Stattdessen:
   - feste, wörtliche Ansagen bei jedem Wechsel („Stifte liegen. Ihr hört nur zu.“ / „Jetzt schreibt ihr ab: …“ / „Jetzt arbeitet ihr allein. Die Aufgabe steht rechts.“ / „Wer drankommt, schreibt an die Tafel. Alle prüfen mit.“ / „Vergleicht und verbessert mit Grün.“),
   - Übungen immer im gleichen Format: Nummer + Titel, nummerierte Arbeitsschritte mit Verb am Anfang, Zeit, Arbeitsform, „Fertig? Stift hinlegen“.
-- **Bewährt: „Kreide-Kette“.** Die Schüler kommen nacheinander an die Tafel, lösen eine Aufgabe und geben die Kreide an den Nächsten weiter. Das sorgt für eine konzentrierte Atmosphäre und soll bei Tafelübungen standardmäßig eingeplant werden. Sie funktioniert nur, wenn die übrigen Schüler dabei etwas zu tun haben, z. B. im Heft mitschreiben. Ohne Auftrag für alle (z. B. beim reinen Sortieren von Magnetstreifen) wird es chaotisch.
+- **Kreide-Kette nur noch selten, und nur als Prüf-Kette (Stand 31.10.).** Bei der klassischen Kreide-Kette macht der Rest der Klasse zu wenig. Wenn sie eingesetzt wird, dann so:
+  - **An der Tafel wird abgestrichen:** Wer drankommt, prüft zuerst die Lösung des Vorgängers (✓/✗ + Begründung in Stichworten) und schreibt dann die nächste Lösung an.
+  - **Alle anderen haben gleichzeitig einen Auftrag:** Sie korrigieren ihre eigene Lösung im Heft mit Grün oder schreiben mit.
+  - Sonst lieber Selbstkontrolle mit Lösungsfolie oder Partnervergleich. Ohne Auftrag für alle (z. B. beim reinen Sortieren von Magnetstreifen) wird es chaotisch.
 - **Abwechslung bei Tafelübungen (Stand 08.10.):** Die Schüler sind genervt davon, ständig Tabellen an der Tafel auszufüllen. Tafel-Tabellen nur dort einsetzen, wo sie wirklich nötig sind (z. B. Konjugation fürs Heft), und dann kurz halten. Sonst variieren: Fehler finden statt Lücken füllen, Satzstreifen ordnen, ganze Sätze statt einzelner Zellen, Partnerarbeit, eigene Texte.
 - **Zeit realistisch planen.** Kreide-Kette und Mitschreiben brauchen mehr Zeit als gedacht. Die ersten beiden Stunden wurden nicht ganz geschafft. Lieber weniger Inhalt pro Stunde und eine klar markierte optionale Phase am Ende.
 - **Wiederholung ist extrem wichtig (Stand 14.10.).** Jede Stunde beginnt mit einer echten Wiederholung der letzten Stunde (AVIVA-Phase „Vorwissen aktivieren“), nicht nur mit einem kurzen Anriss. Was in der letzten Stunde nicht geschafft wurde, wird dort als Wiederholung aufgegriffen, bevor Neues kommt.
-- **Gleicher Ablauf je Phase:** gemeinsam entdecken → Merksatz abschreiben → allein üben → an der Tafel vergleichen → mit Grün verbessern.
+- **Gleicher Ablauf je Phase:** gemeinsam entdecken → Merksatz (als Schnipsel) → allein üben → vergleichen (Lösungsfolie, Partner oder Prüf-Kette) → mit Grün verbessern.
 - **Merksätze** immer mit „Wofür brauche ich das?“, dazu ein Erkennungstrick/Test. **Seit 14.10. vorerst nicht mehr abschreiben lassen.** Wenn ein Merksatz nötig ist, gibt es ihn als Schnipsel zum Einkleben.
 - **Tafelskript** für die Lehrkraft: pro Schritt, was die Klasse tut, die wörtliche Ansage, der Tafelanschrieb, die Lösung. Dazu eine Übersicht, wie das Heft am Ende aussieht.
   - **Reflexionsteil am Ende (Stand 31.10.):** Jedes Tafelskript schließt mit „Umsetzung der Erkenntnisse zur Unterrichtsverbesserung“. Dort steht, wie die bisherigen Rückmeldungen umgesetzt sind:

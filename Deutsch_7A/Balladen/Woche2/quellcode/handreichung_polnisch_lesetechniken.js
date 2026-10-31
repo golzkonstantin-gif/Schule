@@ -165,7 +165,7 @@ function blatt() {
     de2([s("Ziel: ", { bold: true }), s("Ich kann die drei Lesetechniken unterscheiden und begründen, welche zu meinem Leseziel passt.", { italics: true })]),
     pl2("Cel: Potrafię rozróżnić trzy techniki czytania i uzasadnić, która pasuje do mojego celu czytania."),
     hd("Ablauf", "przebieg lekcji"),
-    pl2("1 Techniki czytania z pamięci · 2 Która technika pasuje? (A–D) · 3 * Przejrzyj „Paddy Fingal“ (tylko jeśli starczy czasu) · 4 Czy osiągnęliśmy cel?"),
+    pl2("1 Techniki czytania z pamięci · 2 Która technika pasuje? (A–D) · 3 * Przejrzyj „Paddy Fingal“ (tylko jeśli starczy czasu) · 4 Sprawdzenie celu (Zielcheck)"),
     hd("Wichtige Wörter", "ważne słowa"),
     table(WW, [
       wrow("das Leseziel", "cel czytania – co chcę wyczytać z tekstu"),
@@ -186,8 +186,8 @@ function blatt() {
     pl2("D – masz wyjaśnić, dlaczego Szkot w „Paddy Fingal“ na końcu ucieka.", { after: 40 }),
     hd("* E  Paddy Fingal überfliegen (1 Min.)", "przejrzyj balladę"),
     pl2("Przejrzyj balladę w podręczniku (s. 136) przez 1 minutę. Napisz: „In der Ballade geht es um …“ (Ballada opowiada o …)."),
-    de2([s("Zum Schluss: ", { bold: true }), s("Heute habe ich gelernt, …")]),
-    pl2("Na koniec zapisz w zeszycie: „Heute habe ich gelernt, …“ (Dziś nauczyłam się, …).", { after: 0 }),
+    de2([s("Zielcheck: ", { bold: true }), s("Welche Lesetechnik brauchst du? Begründe mit „weil“.")]),
+    pl2("Sprawdzenie celu: masz znaleźć strofę, w której Szkot widzi nos. Jakiej techniki czytania potrzebujesz? Zapisz ją w zeszycie z uzasadnieniem „…, weil …“.", { after: 0 }),
   ], { w: PW, borders: allBorders(dashed), m: 80, ml: 130, valign: VerticalAlign.TOP })])]);
 }
 const props = { page: { size: { width: 11906, height: 16838 }, margin: { top: 450, bottom: 300, left: 450, right: 450 } } };

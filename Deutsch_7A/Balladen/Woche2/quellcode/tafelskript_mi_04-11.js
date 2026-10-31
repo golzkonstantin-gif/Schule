@@ -155,15 +155,15 @@ const VIO = "7A5BA6", GRN = "2E9E6B";
 const Z1 = "Ich kann Fragen zum Inhalt der Ballade mit Textbeleg beantworten.";
 const Z2 = "Ich kann Nebensätze mit Subjunktion erkennen und richtig bilden: Das finite Verb steht am Ende.";
 const doc = [];
-doc.push(kicker("Tafelskript für die Lehrkraft · Mi 4.11. · Doppelstunde (90 Min.) · AVIVA · mit Präsentation (15 Folien)"), h1("Paddy Fingal: Inhalt und Grammatik in der Ballade"));
+doc.push(kicker("Tafelskript für die Lehrkraft · Mi 4.11. · Doppelstunde (90 Min.) · AVIVA · mit Präsentation (16 Folien)"), h1("Paddy Fingal: Inhalt und Grammatik in der Ballade"));
 doc.push(box([p([S("Bezug: ", { bold: true }), S("Die Stunde am 16.10. ist ausgefallen. Am Montag wurden in 15 Minuten die Lesetechniken wiederholt. Offen sind LB-Aufgabe 1 a zu Paddy Fingal, die Reime und die Merkmale der Ballade. Teil 1 holt den Inhalt nach und beginnt mit der Wiederholung vom Montag. Teil 2 integriert Grammatik nach dem neuen Prinzip: Die Klasse entdeckt ein Phänomen in der Ballade (Nebensätze mit „dass“ und „als“), leitet daraus die Regel ab, übt sie an Sätzen aus dem Sportalltag und wendet sie wieder auf die Ballade an. Das knüpft an die Verb-Einheit an (finite Form, Hilfsverb). Reime und Ur-Ei folgen am Do/Fr (Material in Woche1/).")], { after: 0 })], LIGHT2));
 doc.push(p([S("Lernziele: ", { bold: true }), S("Teil 1: " + Z1 + "  Teil 2: " + Z2, { italics: true })], { before: 120, after: 40 }));
-doc.push(p([S("Antwort auf „Was habt ihr heute gelernt?“: ", { bold: true }), S("„Ich kann mit Strophen belegen, wie Paddy aussieht, was der Schotte will und welche List Schaya anwendet. Nach dass, als, weil, wenn steht das finite Verb am Ende, und davor kommt ein Komma.“")], { after: 80 }));
+doc.push(p([S("Antwort auf „Was habt ihr heute gelernt?“: ", { bold: true }), S("„Ich kann mit Strophen belegen, wie Paddy aussieht, was der Schotte will und welche List Schaya anwendet. Nach dass, als, weil, wenn steht das finite Verb am Ende, und davor kommt ein Komma.“ Überprüft wird das im Zielcheck am Ende.")], { after: 80 }));
 doc.push(board("Seitentafel links · vor der Stunde anschreiben, bleibt stehen", [
   p([t("Teil 1 (ca. 40 Min.): ", { bold: true, size: 20, color: GRN }), t(Z1, { size: 20, italics: true })], { after: 30 }),
   p(t("1 Wiederholung Lesetechniken  2 Ü1 Tandemlesen, LB 1 a  3 * LB 1 b nacherzählen", { size: 19 }), { after: 60 }),
   p([t("Teil 2 (ca. 45 Min.): ", { bold: true, size: 20, color: VIO }), t(Z2, { size: 20, italics: true })], { after: 30 }),
-  p(t("4 Wo steht das finite Verb?  5 Ü2 Entdecken, Merksatz  6 Ü3, Ü4  7 * Ü5  8 Heute habe ich gelernt, …", { size: 19 }), { after: 0 }),
+  p(t("4 Wo steht das finite Verb?  5 Ü2 Entdecken, Merksatz  6 Ü3, Ü4  7 * Ü5  8 Zielcheck", { size: 19 }), { after: 0 }),
 ]));
 doc.push(p(t(""), { after: 40 }));
 doc.push(h3("Ablauf"));
@@ -172,20 +172,20 @@ doc.push(grid([800, 900, 1200, 3300, 4006], ["Zeit", "AVIVA", "Folie", "Phase", 
   ["6′", "V", "4", "T1 · Wiederholung Lesetechniken", "ordnen A–C zu, begründen mit „weil“"],
   ["2′", "I", "5", "T1 · Auftrag Ü1, Tandemlesen", "hören zu"],
   ["16′", "V", "5", "T1 · Tandemlesen, LB 1 a", "lesen im Tandem, beantworten drei Fragen im Heft"],
-  ["5′", "A", "6", "T1 · Kreide-Kette, Ziel 1 erreicht?", "prüfen mit, verbessern mit Grün"],
+  ["5′", "A", "6", "T1 · Prüf-Kette", "an der Tafel: prüfen (✓/✗ + Begründung) und anschreiben; alle anderen korrigieren ihr Heft mit Grün"],
   ["* 8′", "V", "7", "T1 · * LB 1 b nacherzählen", "erzählen sich im Tandem nach, haken die Checkliste ab"],
   ["4′", "V", "9", "T2 · Wo steht das finite Verb?", "schreiben zwei Sätze ab, unterstreichen"],
   ["12′", "I", "10–11", "T2 · Ü2 entdecken, Merksatz", "untersuchen drei Stellen, kleben den Merksatz ein"],
-  ["19′", "V", "12–13", "T2 · Ü3 Sätze verbinden, Ü4 Fehler im Chat", "verbinden allein, korrigieren zu zweit, Kreide-Kette"],
+  ["19′", "V", "12–13", "T2 · Ü3 Sätze verbinden, Ü4 Fehler im Chat", "verbinden allein, Prüf-Kette mit Heftkorrektur, korrigieren zu zweit"],
   ["* 5′", "V", "14", "T2 · * Ü5 zurück zur Ballade", "schreiben Sätze mit Satzanfängen"],
-  ["6′", "A", "15", "Auswerten: Ziele erreicht?", "* Forscherfrage, „Heute habe ich gelernt, …“"],
+  ["6′", "A", "15–16", "Auswerten: Zielcheck", "* Forscherfrage; lösen drei Zielcheck-Aufgaben, kontrollieren mit der Lösungsfolie"],
 ], { bold: [true, true, false, true, false], colors: [C.hv, C.hv, MUTED, NAVY, null], h: 320 }));
 doc.push(p([S("Zeit: ", { bold: true, color: C.hv }), S("74 Min. Pflicht, 13 Min. mit * (1 b, Ü5, Forscherfrage), 3 Min. Puffer. Wenn 1 b entfällt, ist es der Einstieg am Donnerstag.")], { before: 80, after: 60 }));
 doc.push(h3("So sieht das Heft am Ende aus"));
 doc.push(table([2300, 7906], [
   ["Teil 1", "Überschrift „Paddy Fingal – den Inhalt erschließen“ · A–C mit Lesetechnik und „weil“ · Ü1: drei Antworten in Sätzen, mit Strophe, mit Grün verbessert"],
   ["Teil 2", "Überschrift „Nebensätze mit Subjunktion“ · zwei Sätze (finites Verb unterstrichen) · Ü2: drei Stellen aus der Ballade · Merksatz-Schnipsel eingeklebt · Ü3: sechs Sätze · Ü4: vier verbesserte Chat-Sätze · * Ü5"],
-  ["Abschluss", "„Heute habe ich gelernt, …“"],
+  ["Abschluss", "Zielcheck: Antwort zu Ziel 1, Satz zu Ziel 2 a, Begründung zu Ziel 2 b – mit Grün kontrolliert"],
 ].map(([a, b]) => row([tc(a, 2300, { bold: true, fill: LIGHT }), tc(b, 7906)]))));
 doc.push(p([S("Material: ", { bold: true }), S("Präsentation `Mittwoch_04-11_Deutsch_7A.pptx` (Lösungen in den Notizen) · Lehrbuch S. 136 f. · Merksatz-Schnipsel „Nebensätze mit Subjunktion“ (8 pro A4) · Tandems wie festgelegt · Handreichung Polnisch für S-PL.")], { before: 80, after: 60 }));
 
@@ -202,8 +202,8 @@ doc.push(avivaPhase("I", "Informieren: Auftrag Ü1 und Tandemlesen", 2));
 doc.push(...steps([["zuhoeren", { say: "Stifte liegen. Ihr lest jetzt im Tandem: Einer liest eine Strophe vor, der andere liest leise mit und hilft bei Fehlern, dann Wechsel. Danach schreibt jeder die drei Antworten in sein Heft, mit Strophe.", do: ["Methodenkarte „Tandemlesen“ (Tandems lesestärker/leseschwächer)."] }]]));
 doc.push(avivaPhase("V", "Verarbeiten: Ü1 – LB-Aufgabe 1 a", 16));
 doc.push(...steps([["partner", { say: "Jetzt arbeitet ihr im Tandem. Die Aufgabe steht auf der Folie. Acht Minuten lesen, dann acht Minuten schreiben. Fertig? Stift hinlegen.", sol: "1 Ein Riese mit einem schwarzen Bart, sechs Ellen lang, Fäuste so groß wie Tonnen; er wirft mit einem Mastbaum (Str. 1). · 2 Der Schotte will herausfinden, wer von beiden stärker ist (Str. 2). · 3 Schaya steckt Paddy ins Bett, türmt die Kissen hoch und gibt ihn als ihr Baby aus. Der Schotte sieht nur die riesige Nase, denkt an einen riesigen Vater und flieht (Str. 5–10).", do: ["Herumgehen, beim Tandemlesen zuhören. Wer fertig ist, beginnt mit * 1 b (Folie 7)."] }]]));
-doc.push(avivaPhase("A", "Auswerten Teil 1: Kreide-Kette, Ziel 1 erreicht?", 5));
-doc.push(...steps([["tafel", { say: "Wer drankommt, schreibt die Antwort in Stichworten mit Strophe an die Tafel. Alle anderen prüfen mit und verbessern im Heft mit Grün.", do: ["Drei Schüler, je eine Frage. Bei Frage 3: „Welche Lesetechnik hast du gebraucht?“ (genau). Dann Ziel 1 auf Folie 6 vorlesen: erreicht?"] }]]));
+doc.push(avivaPhase("A", "Auswerten Teil 1: Prüf-Kette", 5));
+doc.push(...steps([["tafel", { say: "Prüf-Kette. Wer drankommt, prüft zuerst die Antwort davor: Haken oder Kreuz und ein Stichwort zur Begründung. Dann schreibt er die nächste Antwort mit Strophe an. Alle anderen vergleichen mit ihrem Heft und verbessern mit Grün.", do: ["S1 schreibt Antwort 1. S2 prüft 1 und schreibt 2. S3 prüft 2 und schreibt 3. S4 prüft 3. Bei Frage 3 nachfragen: Welche Lesetechnik hast du gebraucht? (genau)."] }]]));
 doc.push(avivaPhase("V", "* Verarbeiten: LB-Aufgabe 1 b nacherzählen", 8));
 doc.push(...steps([["partner", { say: "A erzählt Strophe 1 bis 5 nach, B hört zu und hakt die Checkliste ab. Dann Wechsel: B erzählt Strophe 6 bis 11. Eure Antworten aus Ü1 sind euer Spickzettel.", do: ["Checkliste: Titel und Autor · richtige Reihenfolge · nichts dazuerfinden · alle wichtigen Details · * spannend mit wörtlicher Rede.", "Fällt 1 b weg: Einstieg am Donnerstag."] }]]));
 
@@ -227,15 +227,16 @@ doc.push(...steps([
 doc.push(avivaPhase("V", "Verarbeiten: Ü3 Sätze verbinden, Ü4 Fehler im Chat", 19));
 doc.push(...steps([
   ["luecken", { say: "Jetzt arbeitet ihr allein. Ü3 steht auf der Folie. Verbindet die Sätze mit der Subjunktion in Klammern und schreibt den ganzen Satz ins Heft. Kreist die Subjunktion ein und unterstreicht das finite Verb. Acht Minuten. Nummer 6 hat einen Stern. Fertig? Stift hinlegen.", sol: "1 Ich trainiere heute länger, weil am Samstag ein Wettkampf ist. · 2 Der Trainer sagt, dass wir nach Frankfurt (Oder) fahren. · 3 Ich war nervös, als ich auf der Matte stand. · 4 Wir gewinnen, wenn wir als Team spielen. · 5 Ich bin stolz, weil ich 80 kg gestoßen habe. · *6 Der Trainer fragt, ob ich gut geschlafen habe." }],
-  ["tafel", { say: "Wer drankommt, schreibt einen Satz an die Tafel und markiert Subjunktion und finites Verb. Alle prüfen mit und verbessern mit Grün.", do: ["Kreide-Kette: fünf Schüler, je ein Satz. Bei Satz 5 nachfragen: Welches Verb ist hier finit? (habe – das Hilfsverb, rot)."] }],
+  ["tafel", { say: "Prüf-Kette. Wer drankommt, prüft zuerst den Satz davor: Haken oder Kreuz, Begründung – Verb am Ende? Komma? Dann schreibt er den nächsten Satz an und markiert Subjunktion und finites Verb. Alle anderen vergleichen mit ihrem Heft und verbessern mit Grün.", do: ["Sechs Schüler: S1 schreibt Satz 1, S2 prüft 1 und schreibt 2 … S6 prüft 5. Bei Satz 5 nachfragen: Welches Verb ist hier finit? (habe – das Hilfsverb, rot)."] }],
   ["partner", { say: "Ü4: Im Chat stecken Fehler. Findet sie zu zweit und schreibt die Sätze richtig ins Heft. Notiert, ob es um die Verbstellung oder um das Komma geht. Fünf Minuten.", sol: "1 …, weil ich noch duschen muss. · 2 …, dass wir morgen frei haben. · 3 Weißt du, ob der Neue auch kommt? · 4 Ich freue mich, weil wir frei haben. (Komma fehlt)", do: ["Kurz besprechen: Beim Sprechen hört man oft „weil ich muss …“. Im Geschriebenen ist das falsch."] }],
 ]));
 doc.push(avivaPhase("V", "* Verarbeiten: Ü5 zurück zur Ballade", 5));
 doc.push(...steps([["luecken", { say: "Wer fertig ist: Ü5. Schreibt mindestens drei Sätze über die Ballade mit den Satzanfängen auf der Folie.", sol: "z. B. … weil er Angst vor dem Schotten hat · … dass Paddy ihr Baby ist · … als er die riesige Nase sieht · … weil er glaubt, dass der Vater noch größer ist" }]]));
-doc.push(avivaPhase("A", "Auswerten: Ziele erreicht?", 6));
+doc.push(avivaPhase("A", "Auswerten: Zielcheck", 6));
 doc.push(...steps([
   ["gemeinsam", { say: "* Forscherfrage: In Strophe 3 steht: Und als er stapfte durch den Sund. Was ist hier anders – und warum macht der Dichter das?", sol: "Das finite Verb steht nicht am Ende. Der Dichter weicht wegen Reim und Rhythmus ab (Sund – stund). Im Gedicht ist das erlaubt, im Aufsatz gilt die Regel." }],
-  ["luecken", { say: "Schaut auf unsere beiden Ziele. Schreibt ins Heft: Heute habe ich gelernt, …", do: ["Zwei Schüler lesen vor. Folie 2 noch einmal zeigen: Was haben wir geschafft? Was mit * offen ist, kommt am Donnerstag als Wiederholung."] }],
+  ["luecken", { say: "Zielcheck. Jetzt arbeitet ihr allein. Löst die drei Aufgaben auf der Folie im Heft. Sie zeigen, ob ihr unsere Ziele erreicht habt. Vier Minuten. Fertig? Stift hinlegen.", sol: "Ziel 1: Er sieht die riesige Nase des „Babys“ und glaubt, der Vater müsse noch viel größer sein (Str. 8–10). · Ziel 2 a: Der Schotte erschrickt, als er die riesige Nase sieht. · Ziel 2 b: Falsch – im Nebensatz steht das finite Verb am Ende: …, weil er Angst hat." }],
+  ["kontrolle", { say: "Vergleicht mit der Lösung auf der Folie und verbessert mit Grün.", do: ["Folie 16. Herumgehen und schauen, wer bei 2 a oder 2 b noch Fehler hat – diese Fälle am Donnerstag in der Wiederholung aufgreifen. Folie 2 noch einmal zeigen: Was mit * offen ist, kommt am Donnerstag."] }],
 ]));
 
 // ---------- Reflexion ----------
@@ -247,12 +248,12 @@ doc.push(refHead("1  AVIVA – Struktur und Transparenz", C.hv));
 doc.push(bul("Ankommen:", "Überblicksfolie mit zwei Teilen, Zeiten und je einem „Ich kann …“-Ziel (Rückmeldung 14.10.: „hilft sehr“), zusätzlich an der Seitentafel. Am Ende Rückgriff auf beide Ziele."));
 doc.push(bul("Vorwissen aktivieren:", "In beiden Teilen echte Wiederholung: Lesetechniken vom Montag (Teil 1), finite Form aus der Verb-Einheit (Teil 2)."));
 doc.push(bul("Informieren:", "In Teil 2 induktiv: erst entdecken, dann der Merksatz als Schnipsel, nicht abschreiben."));
-doc.push(bul("Verarbeiten und Auswerten:", "Immer erst allein oder zu zweit, dann Kreide-Kette mit Auftrag für alle (mitprüfen, mit Grün verbessern)."));
+doc.push(bul("Verarbeiten und Auswerten:", "Immer erst allein oder zu zweit. Statt der klassischen Kreide-Kette eine Prüf-Kette: An der Tafel wird geprüft (✓/✗ + Begründung) und angeschrieben, alle anderen korrigieren gleichzeitig ihr Heft. Sicherung als Zielcheck mit konkreten Aufgaben statt „Heute habe ich gelernt“ (Rückmeldung 31.10.)."));
 doc.push(bul("Zeit:", "74 Min. Pflicht, alles Weitere mit *, kleiner Puffer – nach den bisherigen Erfahrungen bewusst knapp gehalten."));
 doc.push(refHead("2  Direkte Instruktion (DI)", NAVY));
 doc.push(bul("Ziel und Relevanz:", "Zwei überprüfbare Ziele; „Wofür?“ im Merksatz: Begründen in jeder Analyse, Bezug zum Englischen."));
 doc.push(bul("Ich – Wir – Ihr:", "Lehrkraft entwickelt mit der Klasse das Tafelbild Hauptsatz/Nebensatz und modelliert am Perfekt-Beispiel (Wir/Ich), danach Ü3–Ü5 selbstständig (Ihr)."));
-doc.push(bul("Rückmeldung:", "Kreide-Kette nach Ü1 und Ü3, Partnerkorrektur bei Ü4; typische Hürden vorab benannt: Hilfsverb ans Ende (Ü3 Nr. 5), gesprochenes „weil ich muss …“ (Ü4)."));
+doc.push(bul("Rückmeldung:", "Prüf-Kette nach Ü1 und Ü3, Partnerkorrektur bei Ü4, Zielcheck mit Lösungsfolie; typische Hürden vorab benannt: Hilfsverb ans Ende (Ü3 Nr. 5), gesprochenes „weil ich muss …“ (Ü4)."));
 doc.push(refHead("3  Grammatik integriert – aus der Ballade heraus", VIO));
 doc.push(bul("", "Phänomen in der Ballade entdecken (dass, als) → Regel ableiten → an Sätzen aus dem Sportalltag üben → Fehleranalyse im Chat → zurück zur Ballade (Ü5)."));
 doc.push(bul("", "Sprachreflexion: Forscherfrage zur dichterischen Abweichung (Str. 3) – die Klasse erfährt, warum ein Gedicht anders klingen darf."));

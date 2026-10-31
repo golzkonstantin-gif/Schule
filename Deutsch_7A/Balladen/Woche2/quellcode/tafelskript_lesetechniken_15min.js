@@ -161,7 +161,7 @@ doc.push(kicker("Tafelskript für die Lehrkraft · erste Stunde nach den Herbstf
 doc.push(box([p([S("Bezug: ", { bold: true }), S("Die letzte Stunde vor den Ferien (Fr 16.10.) ist ausgefallen. Offen sind LB-Aufgabe 1 a zu Paddy Fingal, die Reime und die Merkmale der Ballade (Ur-Ei) – darauf konzentriert sich diese Woche. Nach zweieinhalb Wochen Pause werden in den 15 Minuten die Lesetechniken aufgefrischt (eingeführt am 14.10., wiederholt am 15.10.). Die Kurzeinheit endet mit einem einminütigen Überfliegen von Paddy Fingal und baut so die Brücke zur nächsten Stunde.")], { after: 0 })], LIGHT2));
 doc.push(p([S("Lernziel: ", { bold: true }), S(ZIEL, { italics: true })], { before: 120, after: 40 }));
 doc.push(p([S("Antwort auf „Was habt ihr heute gelernt?“: ", { bold: true }), S("„Ich wähle die Lesetechnik nach meinem Leseziel: Will ich wissen, worum es geht, lese ich überfliegend. Suche ich eine bestimmte Information, lese ich orientierend. Will ich alles verstehen, lese ich genau.“")], { after: 80 }));
-doc.push(zielTafel(ZIEL, ["Lesetechniken aus dem Gedächtnis", "Welche Technik passt? (A–D)", "* Paddy Fingal überfliegen", "Ziel erreicht? Heute habe ich gelernt, …"]));
+doc.push(zielTafel(ZIEL, ["Lesetechniken aus dem Gedächtnis", "Welche Technik passt? (A–D)", "* Paddy Fingal überfliegen", "Zielcheck"]));
 doc.push(p(t(""), { after: 40 }));
 doc.push(h3("Ablauf"));
 doc.push(grid([900, 1300, 3400, 4606], ["Zeit", "AVIVA", "Phase", "Alle Schüler …"], [
@@ -169,12 +169,12 @@ doc.push(grid([900, 1300, 3400, 4606], ["Zeit", "AVIVA", "Phase", "Alle Schüler
   ["4′", "V", "Lesetechniken aus dem Gedächtnis", "notieren allein die drei Techniken, vergleichen mit dem Nachbarn"],
   ["1′", "I", "Leitfrage: Was ist mein Leseziel?", "hören zu"],
   ["6′", "V", "Situationen A–D zuordnen und begründen; * Paddy Fingal überfliegen", "ordnen allein zu, begründen mit „weil“; * überfliegen 1 Min."],
-  ["3′", "A", "Auswerten: Ziel erreicht?", "vergleichen in der Kreide-Kette, schreiben „Heute habe ich gelernt, …“"],
+  ["3′", "A", "Auswerten: Lösung und Zielcheck", "verbessern A–D mit Grün, lösen eine Zielcheck-Aufgabe"],
 ], { bold: [true, true, true, false], colors: [C.hv, C.hv, NAVY, null], h: 340 }));
 doc.push(p([S("Puffer: ", { bold: true, color: C.hv }), S("keiner. Mit * markiert: Paddy Fingal überfliegen – fällt es weg, ist es der Einstieg der nächsten Stunde.")], { before: 80, after: 60 }));
-doc.push(p([S("Heft: ", { bold: true }), S("Überschrift „Lesetechniken wiederholen“ · drei Lesetechniken mit „Ich lese so, wenn …“ · A–D mit Technik und Begründung · * „In der Ballade geht es um …“ · „Heute habe ich gelernt, …“")], { after: 40 }));
+doc.push(p([S("Heft: ", { bold: true }), S("Überschrift „Lesetechniken wiederholen“ · drei Lesetechniken mit „Ich lese so, wenn …“ · A–D mit Technik und Begründung · * „In der Ballade geht es um …“ · Zielcheck (Technik + weil-Satz)")], { after: 40 }));
 doc.push(p([S("Material: ", { bold: true }), S("Lehrbuch S. 136 f. · Schnipsel „Merksatz Lesetechniken“ (Woche 1) für alle, die ihn nicht mehr im Heft haben · Handreichung Polnisch für S-PL.")], { after: 40 }));
-doc.push(p([S("Tipp: ", { bold: true, color: C.hv }), S("Ziel, Ablauf und die Situationen A–D vor der Stunde anschreiben, A–D zunächst zugeklappt.")], { after: 60 }));
+doc.push(p([S("Tipp: ", { bold: true, color: C.hv }), S("Ziel, Ablauf und die Situationen A–D vor der Stunde anschreiben, A–D zunächst zugeklappt. Die Lösungen A–D auf der Innenseite der Tafel vorbereiten.")], { after: 60 }));
 
 doc.push(avivaPhase("A", "Ankommen: Ziel und Ablauf", 1));
 doc.push(...steps([["zuhoeren", { say: "Stifte liegen. Ihr hört nur zu. Willkommen zurück. Wir beschäftigen uns weiter mit Balladen. Heute frischen wir in einer Viertelstunde die Lesetechniken auf – links stehen Ziel und Ablauf. Jetzt schreibt ihr die Überschrift ab: Lesetechniken wiederholen." }]]));
@@ -203,10 +203,10 @@ doc.push(...steps([
   ["luecken", { say: "Jetzt arbeitet ihr allein. Die Aufgabe steht an der Tafel. Schreibt A bis D, die Lesetechnik und eine Begründung mit weil. Vier Minuten. Wer fertig ist, macht E mit Stern. Fertig? Stift hinlegen.", sol: "A orientierend, weil ich nur eine Uhrzeit suche · B überfliegend, weil ich nur wissen will, worum es geht · C genau, weil ich jede Regel verstehen muss · D genau, weil ich etwas erklären soll · *E z. B. … um den Riesen Paddy Fingal und einen noch größeren Schotten, vor dem er sich mit einer List seiner Frau rettet.", do: ["Für E: Lehrbuch S. 136 auf, Zeit laut stoppen. E ist zugleich der Einstieg in die Arbeit an Paddy Fingal in dieser Woche."] }],
 ]));
 
-doc.push(avivaPhase("A", "Auswerten: Ziel erreicht?", 3));
+doc.push(avivaPhase("A", "Auswerten: Lösung und Zielcheck", 3));
 doc.push(...steps([
-  ["tafel", { say: "Wer drankommt, schreibt den Buchstaben und die Lesetechnik an die Tafel und sagt die Begründung. Alle prüfen mit und verbessern mit Grün.", do: ["Kreide-Kette: vier Schüler, je eine Situation. Bei D nachfragen: „Warum reicht orientierend nicht?“"] }],
-  ["luecken", { say: "Schaut auf unser Ziel links. Schreibt ins Heft: Heute habe ich gelernt, …", do: ["Ein bis zwei Schüler lesen vor. Ausblick: „In den nächsten Stunden arbeiten wir mit Paddy Fingal weiter – dafür braucht ihr die Lesetechniken.“"] }],
+  ["kontrolle", { say: "Ich klappe die Lösung auf. Vergleicht mit eurem Heft und verbessert mit Grün. Achtet auch auf die Begründung.", do: ["Lösung A–D aufklappen (siehe oben). Bei D kurz nachfragen: Warum reicht orientierend nicht? – Weil ich etwas erklären soll und dafür alles verstehen muss."] }],
+  ["luecken", { say: "Zielcheck. Jetzt arbeitet ihr allein. Ihr sollt herausfinden, in welcher Strophe der Schotte die Nase sieht. Welche Lesetechnik brauchst du? Schreibe sie mit einer Begründung mit weil ins Heft. Eine Minute.", sol: "orientierend, weil ich nur eine bestimmte Stelle suche (Str. 8)", do: ["Herumgehen und schauen. Wer hier noch unsicher ist, wird am Mittwoch in der Wiederholung gezielt drangenommen. Ausblick: „Am Mittwoch arbeiten wir mit Paddy Fingal weiter.“"] }],
 ]));
 
 // ---------- Reflexion ----------
@@ -221,7 +221,7 @@ doc.push(bul("Zeit:", "Bewusst wenig Inhalt; der einzige Zusatz (E) ist mit * ma
 doc.push(refHead("2  Direkte Instruktion (DI)", NAVY));
 doc.push(bul("Ziel und Relevanz:", "Das Leseziel bestimmt die Technik – mit Situationen aus Training und Wettkampf und aus der Ballade."));
 doc.push(bul("Abruf statt Wiederholung durch die Lehrkraft:", "Die Schüler rufen das Wissen selbst ab (Abrufübung), der Merksatz dient zur Selbstkontrolle."));
-doc.push(bul("Ihr und Rückmeldung:", "Zuordnung mit Begründung allein, Vergleich in der Kreide-Kette mit Auftrag für alle."));
+doc.push(bul("Ihr und Rückmeldung:", "Zuordnung mit Begründung allein, Selbstkontrolle mit Grün, Zielcheck mit einer neuen Aufgabe statt „Heute habe ich gelernt“ (Rückmeldung 31.10.). Keine Kreide-Kette, weil dabei in 15 Minuten der Rest der Klasse zu lange wartet."));
 doc.push(refHead("3  Differenzierung", "2A8C8C"));
 doc.push(bul("", "* E für Schnelle; Merksatz-Schnipsel für alle, denen er fehlt; Handreichung Polnisch für S-PL."));
 doc.push(refHead("4  Beobachtungsschwerpunkte", MUTED));

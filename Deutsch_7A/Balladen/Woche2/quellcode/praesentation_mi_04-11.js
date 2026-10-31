@@ -112,7 +112,7 @@ const runs = (parts, size = 22) => parts.map(([x, k]) => ({ text: x, options: Ob
     txt(s, [{ text: "Ziel: ", options: { bold: true, color: c } }, { text: ziel, options: { italic: true } }], { x: 1.8, y: y + 0.72, w: 10.7, h: 0.5, fontSize: 17 });
     txt(s, ab, { x: 1.8, y: y + 1.32, w: 10.7, h: 0.5, fontSize: 15, color: MUTED });
   });
-  txt(s, "* = nur, wenn die Zeit reicht. Am Ende: „Heute habe ich gelernt, …“", { x: 0.6, y: 6.4, w: 12.1, h: 0.35, fontSize: 14, italic: true, color: MUTED });
+  txt(s, "* = nur, wenn die Zeit reicht. Am Ende: Zielcheck – zwei kurze Aufgaben zu unseren Zielen.", { x: 0.6, y: 6.4, w: 12.1, h: 0.35, fontSize: 14, italic: true, color: MUTED });
 }
 
 // ================= TEIL 1 =================
@@ -139,13 +139,15 @@ uebung("Verarbeiten · LB-Aufgabe 1 a", "Ü1  Wovon handelt die Ballade?", [
   box(s, 0.6, y, 12.1, 1.75, LIGHT);
   ["1  Wie sieht Paddy Fingal aus?", "2  Was möchte der Riese aus Schottland von Paddy?", "3  Welche List wendet Paddys Frau an?"].forEach((q, i) => txt(s, q, { x: 0.95, y: y + 0.15 + i * 0.52, w: 11.4, h: 0.45, fontSize: 20 }));
 });
-// Vergleich
+// Vergleich: Prüf-Kette
 {
-  const s = base("Auswerten · Teil 1", "Vergleich in der Kreide-Kette", "Drei Schüler schreiben je eine Antwort in Stichworten mit Strophe an die Tafel. Alle prüfen mit und verbessern mit Grün. Bei Frage 3 nachfragen: Welche Lesetechnik hast du gebraucht? (genau). Lösungen siehe Folie davor.");
-  txt(s, "Wer drankommt, schreibt die Antwort in Stichworten mit Strophe an die Tafel.", { x: 0.6, y: 1.8, w: 12.1, h: 0.6, fontSize: 24, bold: true });
-  txt(s, "Alle anderen prüfen mit und verbessern im Heft mit Grün.", { x: 0.6, y: 2.5, w: 12.1, h: 0.6, fontSize: 24 });
-  box(s, 0.6, 3.5, 12.1, 1.6, LIGHT2);
-  txt(s, [{ text: "Teil 1 – Ziel erreicht?  ", options: { bold: true, color: GREEN } }, { text: Z1, options: { italic: true } }], { x: 0.9, y: 3.75, w: 11.5, h: 1.2, fontSize: 20 });
+  const s = base("Auswerten · Teil 1", "Prüf-Kette: Stimmt die Antwort?", "Ablauf: S1 schreibt Antwort 1 in Stichworten mit Strophe an. S2 prüft sie zuerst (✓ oder ✗ + Stichwort zur Begründung) und schreibt dann Antwort 2. S3 prüft 2 und schreibt 3. S4 prüft 3. Alle anderen vergleichen mit ihrem Heft und verbessern mit Grün. Lösungen siehe Folie davor.");
+  [["1", "Wer drankommt, prüft zuerst die Antwort davor:  ✓ oder ✗  +  Begründung in Stichworten."], ["2", "Dann schreibt er die nächste Antwort in Stichworten mit Strophe an."], ["3", "Alle anderen vergleichen mit ihrem Heft und verbessern mit Grün."]].forEach(([n, x], i) => {
+    num(s, n, 0.6, 1.8 + i * 0.85, GREEN, 0.5);
+    txt(s, x, { x: 1.3, y: 1.84 + i * 0.85, w: 11.3, h: 0.7, fontSize: 21, bold: i < 2 });
+  });
+  box(s, 0.6, 4.6, 12.1, 1.0, LIGHT2);
+  txt(s, [{ text: "Beispiel:  ", options: { bold: true, color: GREEN } }, { text: "✓ – Strophe 1 stimmt, alle Merkmale genannt   ·   ✗ – die List steht in Str. 5–10, nicht in Str. 2" }], { x: 0.9, y: 4.85, w: 11.5, h: 0.6, fontSize: 18 });
 }
 // * 1b
 uebung("* Verarbeiten · LB-Aufgabe 1 b", "* Ü1 b  Erzählt die Ballade nach", [
@@ -209,7 +211,7 @@ section("2", "Grammatik in der Ballade", "Nebensätze mit Subjunktion", VIO);
 }
 // Ü3 Sätze verbinden
 {
-  const s = base("Verarbeiten", "Ü3  Sätze verbinden", "Lösung: 1 Ich trainiere heute länger, weil am Samstag ein Wettkampf ist. 2 Der Trainer sagt, dass wir nach Frankfurt (Oder) fahren. 3 Ich war nervös, als ich auf der Matte stand. 4 Wir gewinnen, wenn wir als Team spielen. 5 Ich bin stolz, weil ich 80 kg gestoßen habe. *6 Der Trainer fragt, ob ich gut geschlafen habe. Vergleich in der Kreide-Kette: Wer drankommt, schreibt einen Satz an, alle prüfen mit.");
+  const s = base("Verarbeiten", "Ü3  Sätze verbinden", "Lösung: 1 Ich trainiere heute länger, weil am Samstag ein Wettkampf ist. 2 Der Trainer sagt, dass wir nach Frankfurt (Oder) fahren. 3 Ich war nervös, als ich auf der Matte stand. 4 Wir gewinnen, wenn wir als Team spielen. 5 Ich bin stolz, weil ich 80 kg gestoßen habe. *6 Der Trainer fragt, ob ich gut geschlafen habe. Prüf-Kette: S1 schreibt Satz 1 an. S2 prüft ihn (✓/✗ + Begründung: Verb am Ende? Komma?) und schreibt Satz 2 usw. Alle anderen vergleichen mit ihrem Heft und verbessern mit Grün.");
   [["1", "Verbinde die Sätze mit der Subjunktion in Klammern."], ["2", "Schreibe den ganzen Satz ins Heft. Denk an das Komma."], ["3", "Kreise die Subjunktion ein, unterstreiche das finite Verb."]].forEach(([n, x], i) => {
     num(s, n, 0.6, 1.55 + i * 0.5, VIO, 0.4);
     txt(s, x, { x: 1.15, y: 1.57 + i * 0.5, w: 11.4, h: 0.42, fontSize: 18, bold: true });
@@ -263,17 +265,31 @@ section("2", "Grammatik in der Ballade", "Nebensätze mit Subjunktion", VIO);
   });
   zeit(s, "5 Minuten · allein");
 }
-// Auswerten: Sprachreflexion + Ziel
+// Auswerten: Forscherfrage + Zielcheck
 {
-  const s = base("Auswerten", "Ziel erreicht?", "Kurz die Forscherfrage stellen (*): In Str. 3 steht „als er stapfte durch den Sund“ – das Verb steht nicht am Ende. Warum? Wegen Reim und Rhythmus (Sund – stund): Dichter dürfen von der Regel abweichen. Im Aufsatz gilt die Regel. Dann „Heute habe ich gelernt, …“ ins Heft, zwei Schüler lesen vor.");
-  [[GREEN, "Teil 1", Z1], [VIO, "Teil 2", Z2]].forEach(([c, n, z], i) => {
-    const y = 1.6 + i * 1.05;
-    box(s, 0.6, y, 12.1, 0.9, LIGHT);
-    s.addShape(pres.shapes.RECTANGLE, { x: 0.6, y, w: 0.12, h: 0.9, fill: { color: c }, line: { type: "none" } });
-    txt(s, [{ text: n + ":  ", options: { bold: true, color: c } }, { text: z, options: { italic: true } }], { x: 0.95, y: y + 0.2, w: 11.5, h: 0.6, fontSize: 18 });
+  const s = base("Auswerten", "Zielcheck: Hast du die Ziele erreicht?", "Erst (*) Forscherfrage mündlich: In Str. 3 steht „als er stapfte durch den Sund“ – das Verb steht nicht am Ende, wegen Reim und Rhythmus (Sund – stund). Dichter dürfen abweichen, im Aufsatz gilt die Regel. Dann Zielcheck allein im Heft (4 Min.), danach Lösungsfolie: Selbstkontrolle mit Grün. Herumgehen und schauen, wer noch Fehler hat – am Donnerstag in der Wiederholung aufgreifen.");
+  box(s, 0.6, 1.55, 12.1, 0.85, LIGHT2);
+  txt(s, [{ text: "* Forscherfrage: ", options: { bold: true, color: VIO } }, { text: "Str. 3: „Und als er stapfte durch den Sund“ – was ist hier anders, und warum?" }], { x: 0.9, y: 1.7, w: 11.6, h: 0.6, fontSize: 18 });
+  [[GREEN, "Ziel 1", "Beantworte mit Strophe: Warum flieht der Schotte am Ende?"],
+   [VIO, "Ziel 2 a", "Verbinde: Der Schotte erschrickt. Er sieht die riesige Nase. (als)"],
+   [VIO, "Ziel 2 b", "Richtig oder falsch? Begründe:  „Paddy versteckt sich, weil er hat Angst.“"]].forEach(([c, n, x], i) => {
+    const y = 2.7 + i * 1.0;
+    box(s, 0.6, y, 12.1, 0.85, LIGHT);
+    s.addShape(pres.shapes.RECTANGLE, { x: 0.6, y, w: 0.12, h: 0.85, fill: { color: c }, line: { type: "none" } });
+    txt(s, [{ text: n + ":  ", options: { bold: true, color: c } }, { text: x }], { x: 0.95, y: y + 0.2, w: 11.5, h: 0.55, fontSize: 19 });
   });
-  box(s, 0.6, 3.85, 12.1, 1.05, LIGHT2);
-  txt(s, [{ text: "* Forscherfrage: ", options: { bold: true, color: VIO } }, { text: "In Strophe 3 steht: „Und als er stapfte durch den Sund“. Was ist hier anders – und warum macht der Dichter das?" }], { x: 0.9, y: 3.97, w: 11.6, h: 0.85, fontSize: 18 });
-  txt(s, "Schreibe ins Heft:  Heute habe ich gelernt, …", { x: 0.6, y: 5.3, w: 12.1, h: 0.6, fontSize: 26, bold: true, fontFace: HEAD, align: "center" });
+  zeit(s, "4 Minuten · allein im Heft, dann Lösung");
+}
+{
+  const s = base("Auswerten · Selbstkontrolle", "Zielcheck – Lösung", "Mit Grün verbessern. Wer bei 2 a oder 2 b einen Fehler hat, schaut sich den Merksatz noch einmal an. Am Donnerstag beginnt die Wiederholung genau mit diesen Fehlern.");
+  [[GREEN, "Ziel 1", "Er sieht die riesige Nase des „Babys“ und glaubt, der Vater müsse noch viel größer sein (Str. 8–10)."],
+   [VIO, "Ziel 2 a", "Der Schotte erschrickt, als er die riesige Nase sieht."],
+   [VIO, "Ziel 2 b", "Falsch: Im Nebensatz steht das finite Verb am Ende → …, weil er Angst hat."]].forEach(([c, n, x], i) => {
+    const y = 1.8 + i * 1.25;
+    box(s, 0.6, y, 12.1, 1.05, LIGHT);
+    s.addShape(pres.shapes.RECTANGLE, { x: 0.6, y, w: 0.12, h: 1.05, fill: { color: c }, line: { type: "none" } });
+    txt(s, [{ text: n + ":  ", options: { bold: true, color: c } }, { text: x }], { x: 0.95, y: y + 0.25, w: 11.5, h: 0.65, fontSize: 20 });
+  });
+  txt(s, "Verbessere mit Grün. Alles richtig? Dann hast du beide Ziele erreicht.", { x: 0.6, y: 5.75, w: 12.1, h: 0.5, fontSize: 20, bold: true, align: "center" });
 }
 pres.writeFile({ fileName: "Mittwoch_04-11_Deutsch_7A.pptx" });
