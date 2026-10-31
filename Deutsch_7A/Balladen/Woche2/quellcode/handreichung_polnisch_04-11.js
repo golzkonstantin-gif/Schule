@@ -169,25 +169,26 @@ const wtab = (pairs, w1 = 2300) => {
 };
 const doc = [
   p([t("Mittwoch, 4.11. · Paddy Fingal: Inhalt und Sprachtraining", { font: "Cambria", bold: true, size: 26, color: NAVY }), pls("   Środa, 4.11. – pomoc do lekcji", { size: 18 })], { after: 30 }),
-  de2([s("Teil 1: ", { bold: true, color: GRN }), s("Ich kann Fragen zum Inhalt der Ballade mit Textbeleg beantworten.", { italics: true })]),
-  pl2("Cel 1: Potrafię odpowiedzieć na pytania o treść ballady i podać dowód z tekstu (numer strofy)."),
+  de2([s("Teil 1: ", { bold: true, color: GRN }), s("Ich kann Aussagen zur Ballade prüfen und mit Textbelegen begründen, ob sie richtig oder falsch sind.", { italics: true })]),
+  pl2("Cel 1: Potrafię sprawdzić stwierdzenia o balladzie i uzasadnić dowodem z tekstu, czy są prawdziwe, czy fałszywe."),
   de2([s("Teil 2: ", { bold: true, color: VIO }), s("Ich kann Nebensätze mit Subjunktion erkennen und richtig bilden: Das finite Verb steht am Ende.", { italics: true })]),
   pl2("Cel 2: Potrafię rozpoznać i poprawnie utworzyć zdanie podrzędne ze spójnikiem: czasownik w formie osobowej stoi na końcu."),
 
   hd("Teil 1 · Paddy Fingal – den Inhalt erschließen", "treść ballady", GRN),
   de2([s("Wiederholung: ", { bold: true }), s("Welche Lesetechnik brauchst du? Begründe mit „weil“.")]),
   pl2("Która technika czytania jest potrzebna? Uzasadnij zdaniem z „weil“. A – chcesz wiedzieć, skąd przybywa obcy. B – chcesz wiedzieć, czy ballada dobrze się kończy. C – masz wyjaśnić, jakiego podstępu używa żona Paddy’ego."),
-  de2([s("Ü1 (LB 1 a): ", { bold: true }), s("Lest im Tandem. Beantwortet die drei Fragen im Heft in ganzen Sätzen, mit Strophe.")]),
-  pl2("Czytajcie w parze na zmianę: jedna osoba czyta strofę na głos, druga czyta po cichu i pomaga. Potem odpowiedz w zeszycie pełnymi zdaniami i podaj strofę.", { after: 10 }),
-  pl2("1 Wie sieht Paddy Fingal aus? – Jak wygląda Paddy Fingal?  ·  2 Was möchte der Riese aus Schottland von Paddy? – Czego chce olbrzym ze Szkocji od Paddy’ego?  ·  3 Welche List wendet Paddys Frau an? – Jakiego podstępu używa żona Paddy’ego?"),
+  de2([s("Ü1 (Arbeitsblatt): ", { bold: true }), s("Prüfe jede Aussage: richtig oder falsch? Belege mit Strophe, Vers und Zitat. Ist sie falsch, schreibe: Richtig ist …")]),
+  pl2("Najpierw czytajcie w parze na zmianę (jedna osoba czyta strofę na głos, druga czyta po cichu i pomaga). Potem sama sprawdź każde zdanie na karcie pracy: prawda (richtig) czy fałsz (falsch)? Zapisz dowód: strofa (Str.), wers (V.), cytat. Jeśli zdanie jest fałszywe, napisz po niemiecku „Richtig ist: …“. Uwaga: zdania są napisane innymi słowami niż w balladzie.", { after: 10 }),
+  pl2("1 Paddy jest tak silny, że rzuca masztem statku jak włócznią. · 2 Szkot przychodzi do Paddy’ego, bo chce go pozyskać jako sojusznika przeciw wrogowi. · 3 Kiedy Paddy widzi obcego z daleka, zauważa, że obaj są mniej więcej tego samego wzrostu. · 4 Paddy chce stanąć do walki i prosi Schayę, żeby pomogła mu się przygotować. · 5 Schaya prosi obcego, żeby był cicho, aby dziecko się nie obudziło. · 6 Szkot słucha ostrzeżenia Schai i trzyma się z daleka od łóżka. · 7 Szkot rozpoznaje Paddy’ego w łóżku i ucieka przed nim. · 8 Podczas ucieczki Szkot prawie stracił życie. · *9 Na końcu Paddy jest słusznie świętowany jako dzielny bohater, bo pokonał Szkota."),
   wtab([
     ["der Riese · der Hüne", "olbrzym · bardzo duży mężczyzna"], ["die Elle", "łokieć (dawna miara długości)"],
     ["der Mastbaum", "maszt statku"], ["der Sund · die Furt", "cieśnina · bród (płytkie miejsce w rzece)"],
     ["Birg mich im Versteck!", "Schowaj mnie w kryjówce!"], ["die Kissen türmen", "układać poduszki w stos"],
     ["das Kindlein · erwachen", "dzieciątko · obudzić się"], ["die List · fliehen", "podstęp · uciekać"],
+    ["der Verbündete · der Speer", "sojusznik · włócznia"], ["ertrinken · zu Recht", "utonąć · słusznie"],
   ]),
   de2([s("* Ü1 b: ", { bold: true }), s("Erzählt die Ballade nach (A: Str. 1–5, B: Str. 6–11).")], { before: 40 }),
-  pl2("Opowiedzcie balladę własnymi słowami. Lista kontrolna: tytuł i autor · właściwa kolejność · niczego nie wymyślać · wszystkie ważne szczegóły."),
+  pl2("Opowiedzcie balladę własnymi słowami (kartę pracy możesz wykorzystać jako ściągę). Lista kontrolna: tytuł i autor · właściwa kolejność · niczego nie wymyślać · wszystkie ważne szczegóły."),
 
   hd("Teil 2 · Sprachtraining: Nebensätze mit Subjunktion", "trening językowy: zdania podrzędne ze spójnikiem", VIO),
   wtab([
@@ -205,10 +206,10 @@ const doc = [
   pl2("W czacie są błędy. Napisz zdania poprawnie i zanotuj, czy błąd dotyczy szyku czasownika (Verbstellung), czy przecinka (Komma)."),
   de2([s("* Ü5: ", { bold: true }), s("Schreibe Sätze über die Ballade mit den Satzanfängen.")]),
   pl2("Dokończ zdania o balladzie, np. „Der Schotte flieht, weil …“ (Szkot ucieka, ponieważ …). Pamiętaj: czasownik na końcu."),
-  de2([s("Prüf-Kette: ", { bold: true }), s("Wer drankommt, prüft zuerst die Antwort davor (✓/✗ + Begründung) und schreibt dann die nächste an.")]),
-  pl2("Kto jest wywołany, najpierw sprawdza odpowiedź poprzednika na tablicy (✓ albo ✗ + krótkie uzasadnienie), potem pisze następną. Wszyscy inni porównują ze swoim zeszytem i poprawiają na zielono."),
+  de2([s("Gemeinsam prüfen: ", { bold: true }), s("Wer drankommt, sagt: richtig oder falsch – und den Beleg. Dann wird aufgedeckt.")]),
+  pl2("Sprawdzamy razem na prezentacji, zdanie po zdaniu. Osoba wywołana mówi: prawda czy fałsz i podaje dowód. Potem nauczyciel pokazuje rozwiązanie. Wszyscy poprawiają na zielono."),
   de2([s("Zielcheck: ", { bold: true }), s("Löse die drei Aufgaben auf der Folie im Heft. Vergleiche dann mit der Lösung.")]),
-  pl2("Sprawdzenie celu: rozwiąż w zeszycie trzy krótkie zadania z prezentacji (1: dlaczego Szkot ucieka? 2 a: połącz zdania spójnikiem „als“; 2 b: czy zdanie jest poprawne? Uzasadnij). Potem porównaj z rozwiązaniem i popraw na zielono.", { after: 0 }),
+  pl2("Sprawdzenie celu: rozwiąż w zeszycie trzy krótkie zadania z prezentacji (1: czy zdanie „Der Schotte flieht, weil Paddy ihn im Bett angreift“ jest prawdziwe? Podaj dowód. 2 a: połącz zdania spójnikiem „als“; 2 b: czy zdanie jest poprawne? Uzasadnij). Potem porównaj z rozwiązaniem i popraw na zielono.", { after: 0 }),
 ];
 const props = { page: { size: { width: 11906, height: 16838 }, margin: { top: 450, bottom: 350, left: 400, right: 400 } } };
 const styles = { default: { document: { run: { font: "Calibri", size: f } } } };

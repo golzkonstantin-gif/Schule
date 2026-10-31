@@ -77,7 +77,7 @@ function section(nr, title, sub, col) {
 }
 
 // ================= Präsentation Mi 4.11.: Teil 1 Paddy Fingal – Inhalt · Teil 2 Nebensätze mit Subjunktion =================
-const Z1 = "Ich kann Fragen zum Inhalt der Ballade mit Textbeleg beantworten.";
+const Z1 = "Ich kann Aussagen zur Ballade prüfen und mit Textbelegen begründen, ob sie richtig oder falsch sind.";
 const Z2 = "Ich kann Nebensätze mit Subjunktion erkennen und richtig bilden: Das finite Verb steht am Ende.";
 const zeit = (s, meta) => { box(s, 0.6, 6.25, 12.1, 0.55, LIGHT2); txt(s, [{ text: "Zeit: ", options: { bold: true } }, { text: meta + "      " }, { text: "Fertig? Stift hinlegen.", options: { italic: true, color: MUTED } }], { x: 0.85, y: 6.33, w: 11.7, h: 0.4, fontSize: 16 }); };
 // Satz mit markierten Teilen: [text, kind] kind: sub (Subjunktion, violett, Kasten-Optik), fin (finites Verb, unterstrichen), hv (Hilfsverb finit, rot unterstrichen), bold
@@ -99,7 +99,7 @@ const runs = (parts, size = 22) => parts.map(([x, k]) => ({ text: x, options: Ob
 {
   const s = base("Überblick", "Unsere Doppelstunde: Ablauf und Ziele", "Am Anfang zeigen und am Ende noch einmal: Was haben wir geschafft? Ziele und Ablauf stehen zusätzlich an der Seitentafel.");
   const P = [
-    ["1", "Paddy Fingal – den Inhalt erschließen", "ca. 40 Min.", Z1, "Wiederholung Lesetechniken · Tandemlesen · LB-Aufgabe 1 a · * LB-Aufgabe 1 b", GREEN],
+    ["1", "Paddy Fingal – den Inhalt erschließen", "ca. 40 Min.", Z1, "Wiederholung Lesetechniken · Tandemlesen · Ü1 Aussagen prüfen und gemeinsam auswerten · * LB-Aufgabe 1 b (nacherzählen)", GREEN],
     ["2", "Sprachtraining: Nebensätze mit Subjunktion", "ca. 45 Min.", Z2, "Ü2 Entdecken in der Ballade · Merksatz · Ü3 Sätze verbinden · Ü4 Fehler finden · * Ü5 zurück zur Ballade", VIO],
   ];
   P.forEach(([n, t, z, ziel, ab, c], i) => {
@@ -130,30 +130,59 @@ section("1", "Paddy Fingal – den Inhalt erschließen", "Wilhelm Brandes · Leh
   txt(s, [{ text: "Schreibe ins Heft: ", options: { bold: true } }, { text: "A orientierend, weil …" }], { x: 0.6, y: 5.45, w: 12.1, h: 0.5, fontSize: 20 });
   zeit(s, "3 Minuten · allein, dann mit dem Nachbarn vergleichen");
 }
-// LB 1a
-uebung("Verarbeiten · LB-Aufgabe 1 a", "Ü1  Wovon handelt die Ballade?", [
+// Ü1 Aussagen prüfen
+const AUS = [
+  ["Paddy ist so stark, dass er einen Schiffsmast wie einen Speer wirft.", true, "Str. 1, V. 4: „einen Mastbaum führt’ er als Wurfgeschoss“", ""],
+  ["Der Schotte kommt zu Paddy, weil er ihn als Verbündeten gegen einen Feind gewinnen will.", false, "Str. 2, V. 7–9: „der hörte von Fingals starker Hand; da wollt’ er erproben alsogleich, wer fester sei …“", "Er hat von Paddys Kraft gehört und will herausfinden, wer von beiden stärker ist."],
+  ["Als Paddy den Fremden von Weitem sieht, merkt er, dass beide ungefähr gleich groß sind.", false, "Str. 3, V. 14: „dass der Fremdling zehn Schuh größer war“", "Der Schotte ist viel größer als Paddy."],
+  ["Paddy will sich dem Kampf stellen und bittet Schaya, ihm beim Vorbereiten zu helfen.", false, "Str. 4, V. 16–17: „Da lief er heim in jähem Schreck: O Schaya, birg mich im Versteck!“", "Paddy bekommt Angst und will sich verstecken."],
+  ["Schaya bittet den Fremden, leise zu sein, damit das Kind nicht aufwacht.", true, "Str. 7, V. 31–32: „Tut leise, Fremder, und tretet sacht, dass Paddys Kindlein nicht erwacht!“", ""],
+  ["Der Schotte hält sich an Schayas Warnung und bleibt vom Bett weg.", false, "Str. 8, V. 37: „der Schotte neugierig ans Lager ging“", "Er geht trotz der Warnung neugierig ans Bett."],
+  ["Der Schotte erkennt Paddy im Bett und flieht vor ihm.", false, "Str. 9, V. 43–44: „Ist das ein Baby, wie Ihr sagt, ein Narr, wer’s mit ihm selber wagt!“", "Er hält Paddy für ein Baby und fürchtet sich vor dessen riesigem Vater."],
+  ["Auf der Flucht hätte der Schotte beinahe sein Leben verloren.", true, "Str. 10, V. 48: „fast wär ertrunken der gute Held“", ""],
+  ["Paddy wird am Ende zu Recht als tapferer Held gefeiert, weil er den Schotten besiegt hat.", false, "Str. 11, V. 55: „den tapfern Paddy Fingal“", "Paddy hat nie gekämpft und gewinnt nur durch Schayas List – „tapfer“ ist ironisch gemeint."],
+];
+uebung("Verarbeiten · Ü1 (Arbeitsblatt)", "Ü1  Paddy Fingal – Aussagen prüfen", [
   "Lest die Ballade im Tandem: abwechselnd Strophe für Strophe.",
-  "Beantwortet die drei Fragen im Heft in ganzen Sätzen.",
-  "Notiert hinter jeder Antwort die Strophe.",
-], "8 Min. lesen (Tandem) + 8 Min. schreiben (allein)", "Methodenkarte Tandemlesen. Lösung: 1 Riese, schwarzer Bart sechs Ellen lang, Fäuste so groß wie Tonnen, wirft mit einem Mastbaum (Str. 1). 2 Der Schotte will herausfinden, wer von beiden stärker ist (Str. 2). 3 Schaya steckt Paddy ins Bett, türmt die Kissen hoch und gibt ihn als Baby aus; der Schotte sieht nur die riesige Nase, denkt an einen riesigen Vater und flieht (Str. 5–10).", (s, y) => {
-  box(s, 0.6, y, 12.1, 1.75, LIGHT);
-  ["1  Wie sieht Paddy Fingal aus?", "2  Was möchte der Riese aus Schottland von Paddy?", "3  Welche List wendet Paddys Frau an?"].forEach((q, i) => txt(s, q, { x: 0.95, y: y + 0.15 + i * 0.52, w: 11.4, h: 0.45, fontSize: 20 }));
+  "Prüft jede Aussage auf dem Arbeitsblatt allein: richtig oder falsch?",
+  "Belegt mit Strophe, Vers und Zitat.",
+  "Ist die Aussage falsch? Schreibt auf, was richtig ist.",
+], "8 Min. lesen (Tandem) + 10 Min. prüfen (allein) · Nr. 9 mit *", "Methodenkarte Tandemlesen. Arbeitsblatt austeilen. Die Aussagen sind bewusst in eigenen Worten formuliert: Die Schüler müssen die Stelle verstanden haben, um sie zu finden. Herumgehen; wer fertig ist, macht * Nr. 9. Lösungen auf den folgenden Aufdeck-Folien.", (s, y) => {
+  box(s, 0.6, y, 12.1, 0.75, LIGHT2);
+  txt(s, [{ text: "Beispiel: ", options: { bold: true, color: GREEN } }, { text: "„Paddy hat einen roten Bart.“ – falsch · Str. 1, V. 2, „Sechs Ellen flog sein schwarzer Bart“ · Richtig ist: Paddys Bart ist schwarz." }], { x: 0.85, y: y + 0.17, w: 11.6, h: 0.5, fontSize: 15 });
 });
-// Vergleich: Prüf-Kette
-{
-  const s = base("Auswerten · Teil 1", "Prüf-Kette: Stimmt die Antwort?", "Ablauf: S1 schreibt Antwort 1 in Stichworten mit Strophe an. S2 prüft sie zuerst (✓ oder ✗ + Stichwort zur Begründung) und schreibt dann Antwort 2. S3 prüft 2 und schreibt 3. S4 prüft 3. Alle anderen vergleichen mit ihrem Heft und verbessern mit Grün. Lösungen siehe Folie davor.");
-  [["1", "Wer drankommt, prüft zuerst die Antwort davor:  ✓ oder ✗  +  Begründung in Stichworten."], ["2", "Dann schreibt er die nächste Antwort in Stichworten mit Strophe an."], ["3", "Alle anderen vergleichen mit ihrem Heft und verbessern mit Grün."]].forEach(([n, x], i) => {
-    num(s, n, 0.6, 1.8 + i * 0.85, GREEN, 0.5);
-    txt(s, x, { x: 1.3, y: 1.84 + i * 0.85, w: 11.3, h: 0.7, fontSize: 21, bold: i < 2 });
+// Aufdeck-Folien Ü1: k Lösungen sichtbar
+for (let k = 0; k <= AUS.length; k++) {
+  const s = base("Auswerten · Teil 1 · gemeinsam prüfen", "Ü1  Richtig oder falsch?", k === 0
+    ? "Ansage: Wir prüfen jetzt gemeinsam, Aussage für Aussage. Wer drankommt, sagt: richtig oder falsch und den Beleg. Erst dann decke ich auf. Alle verbessern auf dem Arbeitsblatt mit Grün."
+    : `Aussage ${k}: erst einen Schüler Urteil und Beleg nennen lassen, bei falschen Aussagen auch „Richtig ist …“. Dann diese Folie zeigen. Alle verbessern mit Grün.` + (k === 9 ? " Nr. 9 ist eine Deutungsfrage: Die Ballade ist ironisch – der Feigling wird als Held gefeiert." : ""));
+  AUS.forEach(([a, ok], i) => {
+    const y = 1.45 + i * 0.43;
+    const cur = i === k - 1;
+    box(s, 0.6, y, 12.1, 0.38, cur ? "FFF4DE" : (i % 2 ? WHITE : LIGHT), { r: 0.04 });
+    txt(s, (i === 8 ? "* " : "") + (i + 1), { x: 0.7, y: y + 0.06, w: 0.55, h: 0.3, fontSize: 14, bold: true, color: GREEN, align: "center" });
+    txt(s, a, { x: 1.3, y: y + 0.07, w: 9.6, h: 0.3, fontSize: 14, bold: cur });
+    if (i < k) {
+      box(s, 11.05, y + 0.04, 1.55, 0.3, ok ? GREEN : RED, { r: 0.15 });
+      txt(s, ok ? "✓ richtig" : "✗ falsch", { x: 11.05, y: y + 0.04, w: 1.55, h: 0.3, fontSize: 13, bold: true, color: WHITE, align: "center", valign: "middle" });
+    }
   });
-  box(s, 0.6, 4.6, 12.1, 1.0, LIGHT2);
-  txt(s, [{ text: "Beispiel:  ", options: { bold: true, color: GREEN } }, { text: "✓ – Strophe 1 stimmt, alle Merkmale genannt   ·   ✗ – die List steht in Str. 5–10, nicht in Str. 2" }], { x: 0.9, y: 4.85, w: 11.5, h: 0.6, fontSize: 18 });
+  if (k > 0) {
+    const [, ok, beleg, richtig] = AUS[k - 1];
+    box(s, 0.6, 5.4, 12.1, 1.45, LIGHT2);
+    s.addShape(pres.shapes.RECTANGLE, { x: 0.6, y: 5.4, w: 0.12, h: 1.45, fill: { color: ok ? GREEN : RED }, line: { type: "none" } });
+    const r = [{ text: `Aussage ${k}: `, options: { bold: true } }, { text: ok ? "richtig" : "falsch", options: { bold: true, color: ok ? GREEN : RED } }, { text: "   ·   Beleg: ", options: { bold: true } }, { text: beleg }];
+    if (richtig) r.push({ text: "\nRichtig ist: ", options: { bold: true, breakLine: false } }, { text: richtig });
+    txt(s, r, { x: 0.9, y: 5.52, w: 11.6, h: 1.25, fontSize: 16 });
+  } else {
+    txt(s, "Wer drankommt, sagt: richtig oder falsch – und den Beleg. Erst dann wird aufgedeckt. Alle verbessern mit Grün.", { x: 0.6, y: 5.55, w: 12.1, h: 0.8, fontSize: 19, bold: true });
+  }
 }
 // * 1b
 uebung("* Verarbeiten · LB-Aufgabe 1 b", "* Ü1 b  Erzählt die Ballade nach", [
   "A erzählt Strophe 1–5 nach, B hört zu und hakt die Checkliste ab.",
   "Wechselt: B erzählt Strophe 6–11, A prüft.",
-  "Nutzt eure Antworten aus Ü1 als Spickzettel.",
+  "Nutzt euer Arbeitsblatt aus Ü1 als Spickzettel.",
 ], "8 Minuten · Tandem", "Nur, wenn die Zeit reicht; sonst Einstieg am Donnerstag. Herumgehen, ein gelungenes Paar kurz vorerzählen lassen.", (s, y) => {
   box(s, 0.6, y, 12.1, 1.3, LIGHT);
   txt(s, [{ text: "Checkliste: ", options: { bold: true, color: GREEN } }, { text: "Titel und Autor  ·  richtige Reihenfolge  ·  nichts dazuerfinden  ·  alle wichtigen Details  ·  * spannend mit wörtlicher Rede" }], { x: 0.95, y: y + 0.2, w: 11.4, h: 0.9, fontSize: 19 });
@@ -211,7 +240,7 @@ section("2", "Sprachtraining an der Ballade", "Nebensätze mit Subjunktion", VIO
 }
 // Ü3 Sätze verbinden
 {
-  const s = base("Verarbeiten", "Ü3  Sätze verbinden", "Lösung: 1 Ich trainiere heute länger, weil am Samstag ein Wettkampf ist. 2 Der Trainer sagt, dass wir nach Frankfurt (Oder) fahren. 3 Ich war nervös, als ich auf der Matte stand. 4 Wir gewinnen, wenn wir als Team spielen. 5 Ich bin stolz, weil ich 80 kg gestoßen habe. *6 Der Trainer fragt, ob ich gut geschlafen habe. Prüf-Kette: S1 schreibt Satz 1 an. S2 prüft ihn (✓/✗ + Begründung: Verb am Ende? Komma?) und schreibt Satz 2 usw. Alle anderen vergleichen mit ihrem Heft und verbessern mit Grün.");
+  const s = base("Verarbeiten", "Ü3  Sätze verbinden", "Lösung: 1 Ich trainiere heute länger, weil am Samstag ein Wettkampf ist. 2 Der Trainer sagt, dass wir nach Frankfurt (Oder) fahren. 3 Ich war nervös, als ich auf der Matte stand. 4 Wir gewinnen, wenn wir als Team spielen. 5 Ich bin stolz, weil ich 80 kg gestoßen habe. *6 Der Trainer fragt, ob ich gut geschlafen habe. Danach gemeinsam auf den Aufdeck-Folien prüfen: Wer drankommt, liest seinen Satz vor und sagt, wo das finite Verb steht. Dann aufdecken, alle verbessern mit Grün.");
   [["1", "Verbinde die Sätze mit der Subjunktion in Klammern."], ["2", "Schreibe den ganzen Satz ins Heft. Denk an das Komma."], ["3", "Kreise die Subjunktion ein, unterstreiche das finite Verb."]].forEach(([n, x], i) => {
     num(s, n, 0.6, 1.55 + i * 0.5, VIO, 0.4);
     txt(s, x, { x: 1.15, y: 1.57 + i * 0.5, w: 11.4, h: 0.42, fontSize: 18, bold: true });
@@ -232,6 +261,26 @@ section("2", "Sprachtraining an der Ballade", "Nebensätze mit Subjunktion", VIO
     txt(s, "(" + sj + ")", { x: 10.8, y, w: 1.7, h: 0.4, fontSize: 18, bold: true, color: VIO, align: "right" });
   });
   zeit(s, "8 Minuten · allein");
+}
+// Aufdeck-Folien Ü3
+const UE3 = [
+  ["Ich trainiere heute länger. Am Samstag ist ein Wettkampf. (weil)", [["Ich trainiere heute länger, ", ""], ["weil", "sub"], [" am Samstag ein Wettkampf ", ""], ["ist", "fin"], [".", ""]]],
+  ["Der Trainer sagt. Wir fahren nach Frankfurt (Oder). (dass)", [["Der Trainer sagt, ", ""], ["dass", "sub"], [" wir nach Frankfurt (Oder) ", ""], ["fahren", "fin"], [".", ""]]],
+  ["Ich war nervös. Ich stand auf der Matte. (als)", [["Ich war nervös, ", ""], ["als", "sub"], [" ich auf der Matte ", ""], ["stand", "fin"], [".", ""]]],
+  ["Wir gewinnen. Wir spielen als Team. (wenn)", [["Wir gewinnen, ", ""], ["wenn", "sub"], [" wir als Team ", ""], ["spielen", "fin"], [".", ""]]],
+  ["Ich bin stolz. Ich habe 80 kg gestoßen. (weil)", [["Ich bin stolz, ", ""], ["weil", "sub"], [" ich 80 kg gestoßen ", ""], ["habe", "hv"], [".", ""]]],
+  ["* Der Trainer fragt. Hast du gut geschlafen? (ob)", [["Der Trainer fragt, ", ""], ["ob", "sub"], [" ich gut geschlafen ", ""], ["habe", "hv"], [".", ""]]],
+];
+for (let k = 1; k <= UE3.length; k++) {
+  const s = base("Verarbeiten · Ü3 gemeinsam prüfen", "Ü3  Lösung – Satz für Satz", `Satz ${k}: erst einen Schüler vorlesen lassen und fragen, wo das finite Verb steht und wo das Komma hin muss. Dann aufdecken. Alle verbessern mit Grün.` + (k === 5 ? " Nachfragen: Welches Verb ist finit? habe – das Hilfsverb (rot) wandert ans Ende." : "") + (k === 6 ? " Auch richtig: …, ob du gut geschlafen hast." : ""));
+  UE3.forEach(([q, sol], i) => {
+    const y = 1.5 + i * 0.78;
+    box(s, 0.6, y, 12.1, 0.68, i === k - 1 ? "FFF4DE" : LIGHT, { r: 0.05 });
+    txt(s, String(i + 1), { x: 0.75, y: y + 0.17, w: 0.5, h: 0.35, fontSize: 17, bold: true, color: VIO });
+    if (i < k) txt(s, runs(sol, 20), { x: 1.3, y: y + 0.14, w: 11.2, h: 0.42, fontFace: HEAD });
+    else txt(s, q, { x: 1.3, y: y + 0.17, w: 11.2, h: 0.4, fontSize: 16, color: MUTED });
+  });
+  txt(s, "Subjunktion eingekreist (violett) · finites Verb unterstrichen · Hilfsverb rot · Komma vor der Subjunktion", { x: 0.6, y: 6.35, w: 12.1, h: 0.35, fontSize: 14, italic: true, color: MUTED });
 }
 // Ü4 Fehler finden
 {
@@ -255,6 +304,21 @@ section("2", "Sprachtraining an der Ballade", "Nebensätze mit Subjunktion", VIO
   });
   zeit(s, "5 Minuten · zu zweit");
 }
+// Ü4 Lösung
+{
+  const s = base("Verarbeiten · Ü4 Lösung", "Ü4  So ist es richtig", "Vergleichen und mit Grün verbessern. Kurz reflektieren: Beim Sprechen hört man oft „weil ich muss …“ – geschrieben ist das falsch.");
+  [[[["Komme später, ", ""], ["weil", "sub"], [" ich noch duschen ", ""], ["muss", "fin"], [".", ""]], "Verbstellung"],
+   [[["Trainer hat gesagt, ", ""], ["dass", "sub"], [" wir morgen frei ", ""], ["haben", "fin"], ["!", ""]], "Verbstellung"],
+   [[["Weißt du, ", ""], ["ob", "sub"], [" der Neue auch ", ""], ["kommt", "fin"], ["?", ""]], "Verbstellung"],
+   [[["Ich freue mich", ""], [",", "b"], [" ", ""], ["weil", "sub"], [" wir frei ", ""], ["haben", "fin"], [".", ""]], "Komma"]].forEach(([r, typ], i) => {
+    const y = 1.6 + i * 1.05;
+    box(s, 0.6, y, 12.1, 0.85, LIGHT);
+    txt(s, String(i + 1), { x: 0.8, y: y + 0.22, w: 0.5, h: 0.4, fontSize: 18, bold: true, color: VIO });
+    txt(s, runs(r, 22), { x: 1.35, y: y + 0.2, w: 8.8, h: 0.5, fontFace: HEAD });
+    box(s, 10.4, y + 0.2, 2.1, 0.45, typ === "Komma" ? YEL : VIO, { r: 0.22 });
+    txt(s, typ, { x: 10.4, y: y + 0.2, w: 2.1, h: 0.45, fontSize: 15, bold: true, color: WHITE, align: "center", valign: "middle" });
+  });
+}
 // * Ü5 zurück zur Ballade
 {
   const s = base("* Verarbeiten · zurück zur Ballade", "* Ü5  Erkläre die Ballade mit Nebensätzen", "Nur, wenn Zeit bleibt. Satzanfänge, keine fertigen Sätze. Mögliche Ergänzungen: … weil er Angst vor dem Schotten hat · … dass Paddy ein Baby sei/ist · … als er die riesige Nase sieht · … weil er glaubt, dass der Vater noch größer ist.");
@@ -270,7 +334,7 @@ section("2", "Sprachtraining an der Ballade", "Nebensätze mit Subjunktion", VIO
   const s = base("Auswerten", "Zielcheck: Hast du die Ziele erreicht?", "Erst (*) Forscherfrage mündlich: In Str. 3 steht „als er stapfte durch den Sund“ – das Verb steht nicht am Ende, wegen Reim und Rhythmus (Sund – stund). Dichter dürfen abweichen, im Aufsatz gilt die Regel. Dann Zielcheck allein im Heft (4 Min.), danach Lösungsfolie: Selbstkontrolle mit Grün. Herumgehen und schauen, wer noch Fehler hat – am Donnerstag in der Wiederholung aufgreifen.");
   box(s, 0.6, 1.55, 12.1, 0.85, LIGHT2);
   txt(s, [{ text: "* Forscherfrage: ", options: { bold: true, color: VIO } }, { text: "Str. 3: „Und als er stapfte durch den Sund“ – was ist hier anders, und warum?" }], { x: 0.9, y: 1.7, w: 11.6, h: 0.6, fontSize: 18 });
-  [[GREEN, "Ziel 1", "Beantworte mit Strophe: Warum flieht der Schotte am Ende?"],
+  [[GREEN, "Ziel 1", "Prüfe mit Beleg: „Der Schotte flieht, weil Paddy ihn im Bett angreift.“ – richtig oder falsch?"],
    [VIO, "Ziel 2 a", "Verbinde: Der Schotte erschrickt. Er sieht die riesige Nase. (als)"],
    [VIO, "Ziel 2 b", "Richtig oder falsch? Begründe:  „Paddy versteckt sich, weil er hat Angst.“"]].forEach(([c, n, x], i) => {
     const y = 2.7 + i * 1.0;
@@ -282,7 +346,7 @@ section("2", "Sprachtraining an der Ballade", "Nebensätze mit Subjunktion", VIO
 }
 {
   const s = base("Auswerten · Selbstkontrolle", "Zielcheck – Lösung", "Mit Grün verbessern. Wer bei 2 a oder 2 b einen Fehler hat, schaut sich den Merksatz noch einmal an. Am Donnerstag beginnt die Wiederholung genau mit diesen Fehlern.");
-  [[GREEN, "Ziel 1", "Er sieht die riesige Nase des „Babys“ und glaubt, der Vater müsse noch viel größer sein (Str. 8–10)."],
+  [[GREEN, "Ziel 1", "Falsch: Paddy greift nicht an. Der Schotte sieht die riesige Nase des „Babys“ und fürchtet den Vater (Str. 8–9, z. B. V. 44: „ein Narr, wer’s mit ihm selber wagt“)."],
    [VIO, "Ziel 2 a", "Der Schotte erschrickt, als er die riesige Nase sieht."],
    [VIO, "Ziel 2 b", "Falsch: Im Nebensatz steht das finite Verb am Ende → …, weil er Angst hat."]].forEach(([c, n, x], i) => {
     const y = 1.8 + i * 1.25;

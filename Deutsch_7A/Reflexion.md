@@ -252,7 +252,14 @@ Die Lehrkraft möchte das weiterverfolgen, noch ohne Material. Die Satzklammer (
 - **Rückmeldung der Lehrkraft (31.10.):**
   - Das Wort „Grammatik“ schreckt die Klasse ab („die SuS machen zu“). Entscheidung: Gegenüber der Klasse heißt es „Sprachtraining“. Das Material für Mi 4.11. ist entsprechend angepasst.
   - Bei Korrekturen wird erst besprochen, dann wird Material erstellt.
-- **Rückmeldung der Lehrkraft (31.10., Teil 1 Mi 4.11.):** Statt Fragen zu beantworten, sollen die Schüler Aussagen prüfen und mit Belegen begründen, ob sie richtig oder falsch sind. Dafür gibt es ein Arbeitsblatt. In der Präsentation stehen die Aussagen, die Lösungen werden gemeinsam Schritt für Schritt überprüft. Niemand muss an die Tafel. Umsetzung wird noch besprochen.
+- **Rückmeldung der Lehrkraft (31.10., Teil 1 Mi 4.11.):** Statt Fragen zu beantworten, sollen die Schüler Aussagen prüfen und mit Belegen begründen, ob sie richtig oder falsch sind. Dafür gibt es ein Arbeitsblatt. In der Präsentation stehen die Aussagen, die Lösungen werden gemeinsam Schritt für Schritt überprüft. Niemand muss an die Tafel. Besprochen und umgesetzt (31.10.):
+  - Die neun Aussagen sind in eigenen Worten formuliert, teils mit falschem Detail oder als Schlussfolgerung. Laut Lehrkraft ist das die eigentliche Herausforderung im Textverständnis.
+  - Bei Nr. 2 sollen die Schüler das Motiv des Schotten selbst finden: Die Aussage ist falsch und muss verbessert werden.
+  - Nr. 9 (*) ist eine Deutungsfrage zur Ironie: „den tapfern Paddy Fingal“.
+  - Material: Arbeitsblatt `Ue1_Paddy_Fingal_Aussagen_pruefen` (1 A4). Präsentation mit Aufdeck-Folien für Ü1 (Folie 6–15) und Ü3 (Folie 22–27), dazu eine Lösungsfolie für Ü4. Insgesamt 32 Folien, keine Tafelarbeit einzelner Schüler.
+  - Neues Ziel 1: Ich kann Aussagen zur Ballade prüfen und mit Textbelegen begründen, ob sie richtig oder falsch sind.
+  - * LB 1 b (nacherzählen) bleibt. Zielcheck Ziel 1 ist jetzt eine Aussage („Der Schotte flieht, weil Paddy ihn im Bett angreift.“).
+  - Die Handreichung für S-PL enthält die Aussagen auf Polnisch, die Vokabelliste ist ergänzt (Aussage prüfen, richtig/falsch, Zitat).
 - **Rückmeldung der Lehrkraft (Mi 4.11.):** *(steht noch aus)*
 
 ### Woche 1: „Paddy Fingal – Lesetechniken“ (Mi 14.10., nach der Leistungskontrolle), „Paddy Fingal gliedern und nacherzählen“ (Do), „Ur-Ei“ (Fr) – AVIVA
