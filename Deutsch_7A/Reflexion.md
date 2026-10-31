@@ -261,6 +261,7 @@ Die Lehrkraft möchte das weiterverfolgen, noch ohne Material. Die Satzklammer (
   - * LB 1 b (nacherzählen) bleibt. Zielcheck Ziel 1 ist jetzt eine Aussage („Der Schotte flieht, weil Paddy ihn im Bett angreift.“).
   - Die Handreichung für S-PL enthält die Aussagen auf Polnisch, die Vokabelliste ist ergänzt (Aussage prüfen, richtig/falsch, Zitat).
   - Auf Wunsch der Lehrkraft gibt es das Arbeitsblatt zusätzlich zweisprachig für S-PL (`Handreichung_Polnisch_04-11_Ue1_Aussagen_pruefen`, Vorder- und Rückseite). Die Aussagen sind deutsch mit polnischer Übersetzung, dazu eine Wortliste. Gleiche Nummern und Lücken wie bei der Klasse.
+- **Rückmeldung der Lehrkraft (31.10., Aufbau vor Belegen):** Bevor die Klasse mit Strophe und Vers belegt, muss sie den Aufbau einer Ballade kennen. Deshalb kommt nach dem Inhalt (Tandemlesen) kurz der Aufbau dran (Strophe, Vers), dafür wird das Sprachtraining gekürzt. Ur-Ei und Reimschema folgen am Donnerstag. Die Umsetzung wird noch besprochen.
 - **Rückmeldung der Lehrkraft (Mi 4.11.):** *(steht noch aus)*
 
 ### Woche 1: „Paddy Fingal – Lesetechniken“ (Mi 14.10., nach der Leistungskontrolle), „Paddy Fingal gliedern und nacherzählen“ (Do), „Ur-Ei“ (Fr) – AVIVA
