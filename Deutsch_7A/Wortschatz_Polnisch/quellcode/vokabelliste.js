@@ -198,6 +198,8 @@ const rows = [
   r("unterstreichen", "Unterstreiche …!", "**podkreślić**", "Unterstreiche das Partizip II."),
   r("ankreuzen", "Kreuze an!", "**zaznaczyć krzyżykiem**", ""),
   r("ordnen · zuordnen", "Ordne … zu!", "**uporządkować** · **przyporządkować**", "Ordne die Sätze dem Zeitstrahl zu."),
+  r("verbinden", "Verbinde …!", "**połączyć**", "Verbinde die Sätze mit „weil“."),
+  r("einkreisen", "Kreise … ein!", "**zakreślić (kółkiem)**", "Kreise die Subjunktion ein."),
   r("vergleichen", "Vergleiche …!", "**porównać**", "Vergleicht mit eurem Nachbarn."),
   r("prüfen · verbessern", "Prüfe! · Verbessere!", "**sprawdzić** · **poprawić**", "Verbessere mit Grün."),
   r("notieren", "Notiere …!", "**zanotować**", "Notiere die Strophe."),
@@ -231,7 +233,16 @@ const rows = [
   r("regelmäßig · unregelmäßig", "", "**regularny** · **nieregularny**", "trainieren – trainierte · laufen – lief – gelaufen"),
   r("der Satz · das Subjekt", "die Sätze", "**zdanie** · **podmiot**", "Der Trainer (Subjekt) lobt mich."),
 
-  sec("4  Balladen", "ballady", "2A8C8C"),
+  sec("4  Satzbau", "budowa zdania", "7A5BA6"),
+  r("der Hauptsatz · der Nebensatz", "die Hauptsätze · die Nebensätze", "**zdanie główne** · **zdanie podrzędne**", "Der Schotte flieht, weil er Angst hat."),
+  r("die Subjunktion", "die Subjunktionen", "**spójnik podrzędny** – zaczyna zdanie podrzędne", "dass, als, weil, wenn, ob, obwohl, während, nachdem"),
+  r("dass · als", "", "**że** · **kiedy** (raz, w przeszłości)", "…, als er die Nase ragen sah."),
+  r("weil · wenn", "", "**ponieważ, bo** · **jeśli, kiedy** (zawsze)", "…, wenn wir als Team spielen."),
+  r("ob · obwohl", "", "**czy** · **chociaż**", "Der Trainer fragt, ob …"),
+  r("während · nachdem", "", "**podczas gdy** · **po tym, jak**", ""),
+  r("die Verbstellung", "", "**szyk (miejsce) czasownika** – w zdaniu podrzędnym forma osobowa stoi na końcu", "…, weil ich 80 kg gestoßen {r:habe}."),
+  r("das Komma", "die Kommas", "**przecinek** – stoi przed spójnikiem", "Ich freue mich, weil …"),
+
   r("die Ballade", "die Balladen", "**ballada**", "„Paddy Fingal“ von Wilhelm Brandes"),
   r("die Lesetechnik", "überfliegend · orientierend · genau", "**technika czytania**: pobieżnie · wybiórczo · dokładnie", "Wie heißt Paddys Frau? → orientierend"),
   r("die Strophe · der Vers", "die Strophen · die Verse", "**strofa** · **wers**", "11 Strophen mit je 5 Versen"),
@@ -245,13 +256,13 @@ const rows = [
   r("die wörtliche Rede", "", "**mowa niezależna**", "„O Schaya, birg mich im Versteck!“"),
   r("die Spannung · der Konflikt", "", "**napięcie** · **konflikt**", "Paddy gegen den Schotten"),
   r("die Zwischenüberschrift · gliedern", "", "**śródtytuł** · **podzielić tekst na części**", "Str. 10: Flucht"),
-  sec("5  Meine neuen Wörter", "moje nowe słowa – dopisuj sama", MUTED),
-  ...Array.from({ length: 14 }, () => row([cell(p(t("")), { w: DW, borders: bd }), cell(p(t("")), { w: PLW, borders: bd, fill: "FBFCFF" }), cell(p(t("")), { w: BW2, borders: bd })], 520)),
+  sec("6  Meine neuen Wörter", "moje nowe słowa – dopisuj sama", MUTED),
+  ...Array.from({ length: 10 }, () => row([cell(p(t("")), { w: DW, borders: bd }), cell(p(t("")), { w: PLW, borders: bd, fill: "FBFCFF" }), cell(p(t("")), { w: BW2, borders: bd })], 520)),
 ];
 
 const doc = [
   p([t("Vokabelliste Deutsch 7A", { font: "Cambria", bold: true, size: 30, color: NAVY }), t("   Słowniczek: niemiecki – polski", { font: "Cambria", size: 24, color: MUTED, italics: true })], { after: 40 }),
-  p([t("Tu są ważne słowa z naszych lekcji: na lekcji, polecenia, czasowniki i czasy, ballady. Po lewej słowo niemieckie (z rodzajnikiem i liczbą mnogą), w środku po polsku, po prawej przykład. ", { size: f }), t("Wskazówka: zakryj kolumnę „Polski“ i sprawdź, czy pamiętasz znaczenie. Ucz się codziennie kilku słów.", { size: f, italics: true })], { after: 40 }),
+  p([t("Tu są ważne słowa z naszych lekcji: na lekcji, polecenia, czasowniki i czasy, budowa zdania, ballady. Po lewej słowo niemieckie (z rodzajnikiem i liczbą mnogą), w środku po polsku, po prawej przykład. ", { size: f }), t("Wskazówka: zakryj kolumnę „Polski“ i sprawdź, czy pamiętasz znaczenie. Ucz się codziennie kilku słów.", { size: f, italics: true })], { after: 40 }),
   p([t("Kolory: ", { size: f, bold: true }), t("czasownik posiłkowy", { size: f, bold: true, color: COL.r }), t(" · ", { size: f }), t("Partizip II", { size: f, bold: true, color: COL.y }), t(" · ", { size: f }), t("bezokolicznik", { size: f, bold: true, color: COL.b }), t(" · ", { size: f }), t("czasownik modalny", { size: f, bold: true, color: COL.g })], { after: 100 }),
   table([DW, PLW, BW2], rows),
 ];

@@ -69,14 +69,18 @@ Die folgenden Vorlieben und Reflexionen gelten für die gesamte weitere Planung,
     - nach Direkter Instruktion (DI: Ziel und Relevanz, Ich – Wir – Ihr, Rückmeldung, Klarheit),
     - zur Differenzierung (in der 7A einschließlich S-PL),
     - dazu Beobachtungsschwerpunkte für die Rückmeldung nach der Stunde.
-- **PowerPoint nur, wenn die Lehrkraft sie möchte – vorher fragen.** Für „Hilfsverben erkennen“ wurde ausdrücklich keine gewünscht.
+- **PowerPoint ist ab 31.10. wieder in Ordnung** und kann standardmäßig eingeplant werden. Wenn ein Raum keinen Beamer hat, gibt die Lehrkraft Bescheid; dann läuft alles über die Tafel (wie am 15./16.10.). Früher galt: nur nach Rückfrage, für „Hilfsverben erkennen“ ausdrücklich keine.
   - Mit PowerPoint: Sie enthält Merksätze und Aufgaben (gleicher Wortlaut wie im Tafelskript, Lösungen nur in den Notizen). Je Merksatz eine Folie: Kernsatz im roten Rahmen, Beispiel in Farbe, „Wofür?“ und „Test“, direkt vor der passenden Übung. An der Tafel entstehen dann nur Tafelbilder und Tabellen.
   - Ohne PowerPoint: Merksätze und Übungen stehen an der Tafel. Im Skript den Tipp geben, die Merksätze vorab auf die Seitentafel zu schreiben.
 ## Klassenspezifisch: Deutsch 7A
 
 - **Einheit Verben und Zeitformen** wird mit einem Test abgeschlossen (Stand 12.10., Test folgt später). Danach folgt laut schulinternem Curriculum die Einheit **Balladen** („Leute, höret die Geschicht’“, ca. 9 Wochen, siehe `Deutsch_7A/Balladen/SchiC_Balladen.md`), nicht Kurzgeschichten. Die Einheit wird am SchiC und am RLP Teil C ausgerichtet, einschließlich der dort vorgegebenen Leistungsbewertung.
 - **Balladen (Stand 13.10.):** Gearbeitet wird mit dem **Lehrbuch** (z. B. „Paddy Fingal“, LB S. 136 f.) und im **Heft**, **ohne Übungs-Schnipsel**. Ausnahme: Merksätze bei Bedarf als Schnipsel. Aufgaben stehen auf der Folie bzw. Tafel, die Schüler schreiben ins Heft. Die Einheit startet mit „Paddy Fingal“, weil die Ballade für den ersten Eindruck zugänglicher ist; „John Maynard“ folgt nach den Herbstferien.
-- **Balladen mit integrierter Grammatik (Stand 31.10.):** Künftig wird mit Balladen gearbeitet, Grammatik wird ab und an integriert behandelt, am Balladentext und mit Reflexion der Sprachnutzung. Die offenen Grammatikthemen aus der Verb-Einheit (siehe unten) bieten sich dafür an.
+- **Balladen mit integrierter Grammatik (Stand 31.10.):** Künftig wird mit Balladen gearbeitet. **In jeder Doppelstunde wird Grammatik integriert.**
+  - Grundlage ist ein grammatisches Phänomen, das die Klasse in der Ballade entdeckt (z. B. Subjunktionen, indirekte Rede, Zeitformen). Daran wird die neue Regel erarbeitet.
+  - Ablauf: an Textstellen entdecken → Regel als Merksatz-Schnipsel → üben (Alltag/Sport, Fehleranalyse) → zurück zur Ballade → Sprachreflexion (z. B. warum der Dichter von der Regel abweicht).
+  - Die offenen Themen aus der Verb-Einheit (siehe unten) bieten sich ebenfalls an.
+  - **Bisher behandelt:** Mi 4.11. Nebensätze mit Subjunktion (Paddy Fingal, Str. 3, 7, 8). **Ideen für später:** Präteritum der starken Verben als Erzähltempus (kroch, lief, schob), indirekte Rede bzw. Konjunktiv I („wer fester sei“, Str. 2), wörtliche Rede und Zeichensetzung.
 - **Stand nach den Herbstferien:** Die Stunde am 16.10. ist ausgefallen. In der ersten Woche nach den Ferien liegt der Schwerpunkt auf Paddy Fingal (LB 1 a), Reimen und den Merkmalen der Ballade (Ur-Ei). Das Material dafür liegt in `Deutsch_7A/Balladen/Woche1/`. Erst danach folgt „John Maynard“.
 - **Schülerin mit Polnisch als Herkunftssprache – immer berücksichtigen (Stand 16.10.).** Eine Schülerin der 7A hat Polnisch als Herkunftssprache. Ihre Unterstützung gehört zu jeder Planung in Deutsch 7A.
   - **Zu jeder Stunde gibt es eine Handreichung für sie**, ohne dass die Lehrkraft eigens danach fragt. Die Handreichung umfasst ein halbes bis ganzes A4-Blatt und wird mit dem übrigen Material erstellt, im Stundenordner als `Handreichung_Polnisch_<Datum>`.

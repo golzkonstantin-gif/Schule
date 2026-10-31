@@ -227,6 +227,21 @@ Die Lehrkraft möchte das weiterverfolgen, noch ohne Material. Die Satzklammer (
   - Am Ende stehen Tipps zum Verbessern.
 - **Planungsprinzipien:** AVIVA, Lernziel und Ablauf transparent, alle Schüler aktiv.
 - **Rückmeldung der Lehrkraft:** *(steht noch aus)*
+- **Entscheidungen der Lehrkraft (31.10., zur Doppelstunde):**
+  - In Doppelstunden wird jeweils Grammatik integriert. Grammatische Phänomene in der Ballade sind die Grundlage für neue Regeln und Übungen.
+  - Eine PowerPoint ist ab jetzt wieder in Ordnung.
+- **Mi 4.11. geplant (Doppelstunde): „Paddy Fingal: Inhalt und Grammatik in der Ballade“**, Material in `Woche2/`:
+  - Präsentation mit 15 Folien, Lösungen in den Notizen
+  - Tafelskript mit Reflexionsteil
+  - Merksatz-Schnipsel „Nebensätze mit Subjunktion“, 8 pro A4
+  - Handreichung Polnisch für S-PL
+  - Vokabelliste um den Abschnitt „Satzbau“ ergänzt
+  - Teil 1, Ziel: Ich kann Fragen zum Inhalt der Ballade mit Textbeleg beantworten.
+    - Ablauf: Wiederholung Lesetechniken mit „weil“ → Tandemlesen, LB 1 a → Kreide-Kette → * LB 1 b.
+  - Teil 2, Ziel: Ich kann Nebensätze mit Subjunktion erkennen und richtig bilden: Das finite Verb steht am Ende.
+    - Ablauf: finites Verb in zwei Hauptsätzen → Ü2 dass/als in Str. 3, 7, 8 entdecken → Merksatz → Ü3 Sätze verbinden (Sport) → Ü4 Fehler im Chat → * Ü5 zurück zur Ballade → * Forscherfrage Str. 3 („als er stapfte durch den Sund“).
+  - Reime und Ur-Ei folgen am Do/Fr mit dem Material aus `Woche1/`.
+- **Rückmeldung der Lehrkraft (Mi 4.11.):** *(steht noch aus)*
 
 ### Woche 1: „Paddy Fingal – Lesetechniken“ (Mi 14.10., nach der Leistungskontrolle), „Paddy Fingal gliedern und nacherzählen“ (Do), „Ur-Ei“ (Fr) – AVIVA
 - **Text:** „Paddy Fingal“ (Wilhelm Brandes, LB S. 136 f.). Die Lehrkraft hält die Ballade für den ersten Eindruck für zugänglicher als „John Maynard“, der deshalb erst nach den Herbstferien kommt. Zuerst geht es um den Leseeindruck, den ungefähren Inhalt und die Lesetechniken. LB-Aufgabe 1 ist kein Muss.
