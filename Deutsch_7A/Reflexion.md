@@ -269,7 +269,18 @@ Die Lehrkraft möchte das weiterverfolgen, noch ohne Material. Die Satzklammer (
   - Neue Nummern: Ü4 entdecken, Ü5 Sätze verbinden, * Ü6 zurück zur Ballade. Die Präsentation hat 34 Folien, Pflicht sind 76 Minuten.
   - Arbeitsblatt jetzt `Ue2_Paddy_Fingal_Aussagen_pruefen`, die zweisprachige Fassung ebenfalls Ü2. Handreichung und Vokabelliste (Verknüpfungswörter) sind angepasst.
 - **Einschätzung der Lehrkraft zur Planung (31.10.):** Grundstruktur und Konzeption der Doppelstunde gefallen ihr „richtig gut“. Die Schüler müssen textbasiert begründet falsifizieren und belegen, die Lehrkraft gibt den Input und ist sonst eher im Hintergrund. Offen ist, ob die Aussagen zu schwer sind. Die Lehrkraft berichtet nach der Stunde.
-- **Plan Donnerstag:** Wiederholung mit den Chat-Fehlern und dem Belegen → Ur-Ei → Reime und Reimschema (Material aus `Woche1/` anpassen).
+- **Do 5.11. geplant: „Paddy Fingal – Reime erkennen“** (Material in `Woche2/`):
+  - Präsentation mit 17 Folien, Tafelskript mit Reflexionsteil
+  - Reim-Schnipsel neu mit vier Texten, 2 pro A4
+  - Handreichung Polnisch
+  - Entscheidungen der Lehrkraft (31.10.):
+    - Der Reim-Schnipsel bekommt einen Handball-Text, damit jede Sportart vertreten ist („Im Siebenmeterkreis“, Paarreim).
+    - Das Ur-Ei folgt am Freitag, der Ur-Ei-Schnipsel bleibt unverändert.
+    - Das Nacherzählen vom Mittwoch dient als Puffer.
+  - Ziel: Ich kann Reime erkennen und das Reimschema einer Strophe bestimmen.
+  - Ablauf: A 2′ → V 5′ Ü1 Chat-Fehler → V 4′ Ü2 Belegen → I 9′ Reime an Strophe 1 entdecken, Merkkasten → V 12′ Ü3 Reim-Schnipsel mit Aufdeck-Folien → A 6′ Zielcheck (Str. 6: aabb + Kehrreim; „Ball – Tor – Fall – vor“: Kreuzreim) → * 7′ Puffer Nacherzählen.
+- **Rückmeldung der Lehrkraft (Do 5.11.):** *(steht noch aus)*
+- **Fr 6.11.:** Ur-Ei (Lyrik, Epik, Dramatik) mit dem Ur-Ei-Schnipsel aus `Woche1/`. Vorher die Wiederholung zu den Reimen.
 - **Rückmeldung der Lehrkraft (Mi 4.11.):** *(steht noch aus)*
 
 ### Woche 1: „Paddy Fingal – Lesetechniken“ (Mi 14.10., nach der Leistungskontrolle), „Paddy Fingal gliedern und nacherzählen“ (Do), „Ur-Ei“ (Fr) – AVIVA
