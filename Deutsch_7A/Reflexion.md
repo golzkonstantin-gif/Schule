@@ -268,6 +268,7 @@ Die Lehrkraft möchte das weiterverfolgen, noch ohne Material. Die Satzklammer (
   - Sprachtraining gekürzt: Die Chat-Übung (Fehler finden) wandert als Wiederholung auf Donnerstag. Der Folien-Code liegt in `Woche2/quellcode/folien_chat_fehler_fuer_donnerstag.js`.
   - Neue Nummern: Ü4 entdecken, Ü5 Sätze verbinden, * Ü6 zurück zur Ballade. Die Präsentation hat 34 Folien, Pflicht sind 76 Minuten.
   - Arbeitsblatt jetzt `Ue2_Paddy_Fingal_Aussagen_pruefen`, die zweisprachige Fassung ebenfalls Ü2. Handreichung und Vokabelliste (Verknüpfungswörter) sind angepasst.
+- **Einschätzung der Lehrkraft zur Planung (31.10.):** Grundstruktur und Konzeption der Doppelstunde gefallen ihr „richtig gut“. Die Schüler müssen textbasiert begründet falsifizieren und belegen, die Lehrkraft gibt den Input und ist sonst eher im Hintergrund. Offen ist, ob die Aussagen zu schwer sind. Die Lehrkraft berichtet nach der Stunde.
 - **Plan Donnerstag:** Wiederholung mit den Chat-Fehlern und dem Belegen → Ur-Ei → Reime und Reimschema (Material aus `Woche1/` anpassen).
 - **Rückmeldung der Lehrkraft (Mi 4.11.):** *(steht noch aus)*
 
