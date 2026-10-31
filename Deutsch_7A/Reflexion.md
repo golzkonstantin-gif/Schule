@@ -276,6 +276,7 @@ Die Lehrkraft möchte das weiterverfolgen, noch ohne Material. Die Satzklammer (
 - **Vokabelliste Deutsch – Polnisch (16.10.):** Für dieselbe Schülerin gibt es eine dreiseitige Vokabelliste über den bisherigen Unterricht. Sie hat vier Abschnitte (Im Unterricht, Arbeitsaufträge, Verben und Zeitformen mit Farbcode, Balladen) und leere Zeilen für eigene Wörter (`Wortschatz_Polnisch/`).
 - **Entscheidung der Lehrkraft (16.10.):** S-PL (Polnisch als Herkunftssprache) wird in Deutsch 7A immer berücksichtigt. Ab jetzt bekommt sie zu jeder Stunde eine Handreichung: Fachbegriffe und Aufträge auf Deutsch, Erklärungen auf Polnisch. Vokabelliste und Lernwortschatz werden fortgeführt (siehe `CLAUDE.md`).
 - **Handreichung Polnisch (Fr 16.10.):** Beide Schnipsel (Reime erkennen, Ur-Ei) stehen zweisprachig auf einer A4-Seite: Aufgaben und Lücken wie bei der Klasse, darunter die polnische Erklärung (`Handreichung_Polnisch_16-10_Schnipsel_Reime_Ur-Ei`). Im Tafelskript ist sie beim Material vermerkt.
+- **Reflexionsteil im Tafelskript (Wunsch 31.10.):** Das Tafelskript Fr 16.10. hat jetzt eine 5. Seite „Umsetzung der Erkenntnisse zur Unterrichtsverbesserung“. Sie behandelt AVIVA, Direkte Instruktion (Ich – Wir – Ihr), Differenzierung und Beobachtungsschwerpunkte. Künftig gehört dieser Teil zu jedem Tafelskript (siehe `CLAUDE.md`).
 - **Rückmeldung der Lehrkraft (Fr):** *(steht noch aus)*
 
 ## Hospitationsfeedback (gesammelt)

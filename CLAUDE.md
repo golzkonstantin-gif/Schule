@@ -64,6 +64,11 @@ Die folgenden Vorlieben und Reflexionen gelten für die gesamte weitere Planung,
 - **Gleicher Ablauf je Phase:** gemeinsam entdecken → Merksatz abschreiben → allein üben → an der Tafel vergleichen → mit Grün verbessern.
 - **Merksätze** immer mit „Wofür brauche ich das?“, dazu ein Erkennungstrick/Test. **Seit 14.10. vorerst nicht mehr abschreiben lassen.** Wenn ein Merksatz nötig ist, gibt es ihn als Schnipsel zum Einkleben.
 - **Tafelskript** für die Lehrkraft: pro Schritt, was die Klasse tut, die wörtliche Ansage, der Tafelanschrieb, die Lösung. Dazu eine Übersicht, wie das Heft am Ende aussieht.
+  - **Reflexionsteil am Ende (Stand 31.10.):** Jedes Tafelskript schließt mit „Umsetzung der Erkenntnisse zur Unterrichtsverbesserung“. Dort steht, wie die bisherigen Rückmeldungen umgesetzt sind:
+    - nach AVIVA (Phase für Phase),
+    - nach Direkter Instruktion (DI: Ziel und Relevanz, Ich – Wir – Ihr, Rückmeldung, Klarheit),
+    - zur Differenzierung (in der 7A einschließlich S-PL),
+    - dazu Beobachtungsschwerpunkte für die Rückmeldung nach der Stunde.
 - **PowerPoint nur, wenn die Lehrkraft sie möchte – vorher fragen.** Für „Hilfsverben erkennen“ wurde ausdrücklich keine gewünscht.
   - Mit PowerPoint: Sie enthält Merksätze und Aufgaben (gleicher Wortlaut wie im Tafelskript, Lösungen nur in den Notizen). Je Merksatz eine Folie: Kernsatz im roten Rahmen, Beispiel in Farbe, „Wofür?“ und „Test“, direkt vor der passenden Übung. An der Tafel entstehen dann nur Tafelbilder und Tabellen.
   - Ohne PowerPoint: Merksätze und Übungen stehen an der Tafel. Im Skript den Tipp geben, die Merksätze vorab auf die Seitentafel zu schreiben.

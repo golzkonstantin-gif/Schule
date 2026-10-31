@@ -240,6 +240,42 @@ doc.push(...steps([
   ["tafel", { say: "Wer drankommt, schreibt einen Beleg mit Strophe in den passenden Teil des Eis. Alle prüfen mit und verbessern mit Grün.", do: ["Kreide-Kette: zuerst drei Schüler für die Lyrik (Strophen/Verse · Paarreim · Kehrreim), dann – falls bearbeitet – je einer für Epik und Dramatik (z. B. Präteritum „kroch“ Str. 5 · wörtliche Rede Schaya Str. 7)."] }],
   ["luecken", { say: "Schaut auf unser Ziel links. Schreibt ins Heft: Heute habe ich gelernt, …", do: ["Zwei Schüler lesen vor. Auf den Ablauf zurückgreifen: Ziel erreicht? Was mit * offen ist, kommt nach den Ferien als Wiederholung.", "* Ausblick: „Nach den Ferien hört ihr John Maynard. Dann prüft ihr: Ist das auch ein Ur-Ei?“"] }],
 ]));
+
+// ---------- Reflexion: Umsetzung der Erkenntnisse zur Unterrichtsverbesserung ----------
+const bul = (head, txt) => p([S("• ", { bold: true, color: C.hv }), ...(head ? [S(head + " ", { bold: true })] : []), S(txt)], { after: 40, indent: { left: 240, hanging: 240 } });
+const refHead = (txt, col) => p(t(txt, { font: "Cambria", size: 22, bold: true, color: col }), { before: 140, after: 50, keepNext: true });
+doc.push(p(new PageBreak()));
+doc.push(kicker("Für die Lehrkraft · Reflexion vor und nach der Stunde"), h3("Umsetzung der Erkenntnisse zur Unterrichtsverbesserung"));
+doc.push(box([p(S("Grundlage: Rückmeldung zum Unterrichtsbesuch (12.10.: chaotische Sortierphase, weil nur ein Schüler aktiv war), Rückmeldungen 14.10. („Lernziele und Verlauf nach AVIVA vorzustellen hilft sehr“; Wiederholung extrem wichtig) und 15.10. (nur die erste Aufgabe geschafft)."), { after: 0 })], LIGHT2));
+
+doc.push(refHead("1  AVIVA – Struktur und Transparenz", C.hv));
+doc.push(bul("Ankommen:", "Ziel als „Ich kann …“ und Ablauf mit * stehen vor der Stunde an der Seitentafel und werden zu Beginn vorgestellt. In der Auswertung wird ausdrücklich darauf zurückgegriffen („Ziel erreicht?“)."));
+doc.push(bul("Vorwissen aktivieren:", "Echte Wiederholung statt Anriss: Die am Donnerstag offen gebliebene LB-Aufgabe 1 a wird nachgeholt, bevor Neues kommt. Sie sichert zugleich den Inhalt, den die Analyse braucht."));
+doc.push(bul("Informieren:", "Zwei kurze Inputs, jeweils direkt vor der passenden Übung. Kleinschrittig: zuerst Reime als Grundlage (sie waren neu), erst dann das Ur-Ei."));
+doc.push(bul("Verarbeiten:", "Jeder arbeitet allein am Schnipsel, danach Partnervergleich. Es gibt keine Phase, in der nur ein Schüler beschäftigt ist."));
+doc.push(bul("Auswerten:", "Kreide-Kette mit Auftrag für alle (mitprüfen, mit Grün verbessern), dann „Heute habe ich gelernt, …“. So wird der Lernzuwachs ausdrücklich."));
+doc.push(bul("Zeit:", "Kein Puffer, deshalb sind Epik und Dramatik bewusst mit * markiert. Kürzungsoption in der Wiederholung ist benannt. Lieber weniger Inhalt als eine unfertige Sicherung."));
+
+doc.push(refHead("2  Direkte Instruktion (DI) – Ich · Wir · Ihr", NAVY));
+doc.push(bul("Ziel und Relevanz:", "Ein überprüfbares Ziel; das „Wofür?“ verweist auf die erste Bewertung (Analyse)."));
+doc.push(bul("Ich (Modellieren):", "Die Lehrkraft zeigt an Strophe 1, wie man Versenden vergleicht und Buchstaben vergibt, und denkt laut („Ab wo klingen Bart und Riesenart gleich?“)."));
+doc.push(bul("Wir (angeleitetes Üben):", "Die Klasse bestimmt Vers 3–5 mit. Verständnis wird mit Kontrollfragen geprüft (abab? abba?), Nr. 1 auf dem Ur-Ei-Schnipsel wird gemeinsam eingetragen."));
+doc.push(bul("Ihr (selbstständiges Üben):", "Reim-Schnipsel und Ur-Ei-Schnipsel allein, mit klarer Zeit und „Fertig? Stift hinlegen“."));
+doc.push(bul("Rückmeldung:", "Partnervergleich mit Grün und Kreide-Kette. Beim Herumgehen auf die vorab benannten Hürden achten: umarmender Reim (Nr. 3), Höhepunkt (Ur-Ei Nr. 5)."));
+doc.push(bul("Klarheit:", "Feste, wörtliche Ansagen bei jedem Wechsel; Aufgaben immer im gleichen Format."));
+
+doc.push(refHead("3  Differenzierung", "2A8C8C"));
+doc.push(bul("", "Tandems lesestärker/leseschwächer beim Tandemlesen."));
+doc.push(bul("", "Aufgaben mit * für Schnelle (Ur-Ei Nr. 4–8, Kehrreim in Reim-Übung 1)."));
+doc.push(bul("", "Merkkasten auf dem Schnipsel statt Abschreiben; Übungstexte mit Sportbezug (Heben, Judo) nur in der Reimübung, die Ballade bleibt im Vordergrund."));
+doc.push(bul("", "S-PL: Handreichung mit beiden Schnipseln zweisprachig (Aufgaben deutsch, Erklärungen polnisch), Vokabelliste und Lernwortschatz."));
+
+doc.push(refHead("4  Beobachtungsschwerpunkte für die Rückmeldung nach der Stunde", MUTED));
+doc.push(bul("", "Hat der Reim-Input für alle gereicht, oder brauchte die Klasse mehr gemeinsames Üben (Wir-Phase)?"));
+doc.push(bul("", "Wie weit kam die Klasse auf dem Ur-Ei-Schnipsel? Was wird nach den Ferien als Wiederholung aufgegriffen?"));
+doc.push(bul("", "Waren in jeder Phase alle aktiv – auch während der Kreide-Kette?"));
+doc.push(bul("", "Kam S-PL mit der Handreichung selbstständig zurecht?"));
+
 const pageProps = { page: { size: { width: 11906, height: 16838 }, margin: { top: 900, bottom: 800, left: 850, right: 850, header: 400, footer: 400 } } };
 const styles = { default: { document: { run: { font: "Calibri", size: 22 } } } };
 Packer.toBuffer(new Document({ styles, sections: [{ properties: pageProps, headers: { default: header("Balladen · Fr 16.10.") }, footers: { default: footer("Tafelskript") }, children: doc }] })).then((buf) => fs.writeFileSync("Tafelskript_Fr_16-10_Paddy_Fingal_Reime_Ur-Ei.docx", buf));
