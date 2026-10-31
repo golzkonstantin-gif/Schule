@@ -250,7 +250,7 @@ Die Lehrkraft möchte das weiterverfolgen, noch ohne Material. Die Satzklammer (
   - Beide Handreichungen für S-PL sind angepasst.
   - Das Material für Do/Fr aus `Woche1/` (Reime, Ur-Ei) muss beim Anpassen ebenfalls umgestellt werden.
 - **Rückmeldung der Lehrkraft (31.10.):**
-  - Das Wort „Grammatik“ schreckt die Klasse ab („die SuS machen zu“). Es braucht eine andere Bezeichnung, die Auswahl ist noch offen.
+  - Das Wort „Grammatik“ schreckt die Klasse ab („die SuS machen zu“). Entscheidung: Gegenüber der Klasse heißt es „Sprachtraining“. Das Material für Mi 4.11. ist entsprechend angepasst.
   - Bei Korrekturen wird erst besprochen, dann wird Material erstellt.
 - **Rückmeldung der Lehrkraft (Mi 4.11.):** *(steht noch aus)*
 

@@ -168,7 +168,7 @@ const wtab = (pairs, w1 = 2300) => {
   return table([w1, half - w1, w1, half - w1], rws);
 };
 const doc = [
-  p([t("Mittwoch, 4.11. · Paddy Fingal: Inhalt und Grammatik", { font: "Cambria", bold: true, size: 26, color: NAVY }), pls("   Środa, 4.11. – pomoc do lekcji", { size: 18 })], { after: 30 }),
+  p([t("Mittwoch, 4.11. · Paddy Fingal: Inhalt und Sprachtraining", { font: "Cambria", bold: true, size: 26, color: NAVY }), pls("   Środa, 4.11. – pomoc do lekcji", { size: 18 })], { after: 30 }),
   de2([s("Teil 1: ", { bold: true, color: GRN }), s("Ich kann Fragen zum Inhalt der Ballade mit Textbeleg beantworten.", { italics: true })]),
   pl2("Cel 1: Potrafię odpowiedzieć na pytania o treść ballady i podać dowód z tekstu (numer strofy)."),
   de2([s("Teil 2: ", { bold: true, color: VIO }), s("Ich kann Nebensätze mit Subjunktion erkennen und richtig bilden: Das finite Verb steht am Ende.", { italics: true })]),
@@ -189,7 +189,7 @@ const doc = [
   de2([s("* Ü1 b: ", { bold: true }), s("Erzählt die Ballade nach (A: Str. 1–5, B: Str. 6–11).")], { before: 40 }),
   pl2("Opowiedzcie balladę własnymi słowami. Lista kontrolna: tytuł i autor · właściwa kolejność · niczego nie wymyślać · wszystkie ważne szczegóły."),
 
-  hd("Teil 2 · Nebensätze mit Subjunktion", "zdania podrzędne ze spójnikiem", VIO),
+  hd("Teil 2 · Sprachtraining: Nebensätze mit Subjunktion", "trening językowy: zdania podrzędne ze spójnikiem", VIO),
   wtab([
     ["der Hauptsatz", "zdanie główne"], ["der Nebensatz", "zdanie podrzędne"],
     ["die Subjunktion", "spójnik podrzędny"], ["das finite Verb", "czasownik w formie osobowej"],

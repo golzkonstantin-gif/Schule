@@ -89,8 +89,8 @@ const runs = (parts, size = 22) => parts.map(([x, k]) => ({ text: x, options: Ob
   darkBg(s);
   box(s, 0.9, 2.05, 3.2, 0.42, YEL, { r: 0.21 });
   txt(s, "MITTWOCH · 4.11.", { x: 0.9, y: 2.05, w: 3.2, h: 0.42, fontSize: 12, bold: true, color: WHITE, align: "center", valign: "middle" });
-  txt(s, "Deutsch 7A – Paddy Fingal: Inhalt und Grammatik", { x: 0.9, y: 2.65, w: 12, h: 1.0, fontFace: HEAD, fontSize: 38, bold: true, color: WHITE });
-  [["1", "Den Inhalt erschließen", GREEN], ["2", "Grammatik in der Ballade", VIO]].forEach(([n, x, c], i) => {
+  txt(s, "Deutsch 7A – Paddy Fingal: Inhalt und Sprachtraining", { x: 0.9, y: 2.65, w: 12, h: 1.0, fontFace: HEAD, fontSize: 38, bold: true, color: WHITE });
+  [["1", "Den Inhalt erschließen", GREEN], ["2", "Sprachtraining an der Ballade", VIO]].forEach(([n, x, c], i) => {
     box(s, 0.9 + i * 5.2, 4.1, 4.9, 0.7, c, { r: 0.35 });
     txt(s, n + "  " + x, { x: 0.9 + i * 5.2, y: 4.1, w: 4.9, h: 0.7, fontSize: 20, bold: true, color: WHITE, align: "center", valign: "middle" });
   });
@@ -100,7 +100,7 @@ const runs = (parts, size = 22) => parts.map(([x, k]) => ({ text: x, options: Ob
   const s = base("Überblick", "Unsere Doppelstunde: Ablauf und Ziele", "Am Anfang zeigen und am Ende noch einmal: Was haben wir geschafft? Ziele und Ablauf stehen zusätzlich an der Seitentafel.");
   const P = [
     ["1", "Paddy Fingal – den Inhalt erschließen", "ca. 40 Min.", Z1, "Wiederholung Lesetechniken · Tandemlesen · LB-Aufgabe 1 a · * LB-Aufgabe 1 b", GREEN],
-    ["2", "Grammatik in der Ballade: Nebensätze mit Subjunktion", "ca. 45 Min.", Z2, "Ü2 Entdecken in der Ballade · Merksatz · Ü3 Sätze verbinden · Ü4 Fehler finden · * Ü5 zurück zur Ballade", VIO],
+    ["2", "Sprachtraining: Nebensätze mit Subjunktion", "ca. 45 Min.", Z2, "Ü2 Entdecken in der Ballade · Merksatz · Ü3 Sätze verbinden · Ü4 Fehler finden · * Ü5 zurück zur Ballade", VIO],
   ];
   P.forEach(([n, t, z, ziel, ab, c], i) => {
     const y = 1.7 + i * 2.25;
@@ -160,8 +160,8 @@ uebung("* Verarbeiten · LB-Aufgabe 1 b", "* Ü1 b  Erzählt die Ballade nach", 
 });
 
 // ================= TEIL 2 =================
-FOOT = "Teil 2 · Grammatik in der Ballade: Nebensätze mit Subjunktion · Deutsch 7A";
-section("2", "Grammatik in der Ballade", "Nebensätze mit Subjunktion", VIO);
+FOOT = "Teil 2 · Sprachtraining: Nebensätze mit Subjunktion · Deutsch 7A";
+section("2", "Sprachtraining an der Ballade", "Nebensätze mit Subjunktion", VIO);
 // Vorwissen finites Verb
 {
   const s = base("Vorwissen aktivieren · Verb-Einheit", "Wo steht das finite Verb?", "Wiederholung aus der Verb-Einheit: Das finite Verb (die Personalform) richtet sich nach der Person. Lösung: war, lief – beide an Position 2 (nach dem ersten Satzglied). Merksatz der Verb-Einheit nicht wiederholen lassen, nur kurz fragen: Woran erkennst du das finite Verb? (ändert sich mit der Person: ich war, du warst).");

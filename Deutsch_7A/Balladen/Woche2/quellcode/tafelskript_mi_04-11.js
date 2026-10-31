@@ -155,8 +155,8 @@ const VIO = "7A5BA6", GRN = "2E9E6B";
 const Z1 = "Ich kann Fragen zum Inhalt der Ballade mit Textbeleg beantworten.";
 const Z2 = "Ich kann Nebensätze mit Subjunktion erkennen und richtig bilden: Das finite Verb steht am Ende.";
 const doc = [];
-doc.push(kicker("Tafelskript für die Lehrkraft · Mi 4.11. · Doppelstunde (90 Min.) · AVIVA · mit Präsentation (16 Folien)"), h1("Paddy Fingal: Inhalt und Grammatik in der Ballade"));
-doc.push(box([p([S("Bezug: ", { bold: true }), S("Die Stunde am 16.10. ist ausgefallen. Am Montag wurden in 15 Minuten die Lesetechniken wiederholt. Offen sind LB-Aufgabe 1 a zu Paddy Fingal, die Reime und die Merkmale der Ballade. Teil 1 holt den Inhalt nach und beginnt mit der Wiederholung vom Montag. Teil 2 integriert Grammatik nach dem neuen Prinzip: Die Klasse entdeckt ein Phänomen in der Ballade (Nebensätze mit „dass“ und „als“), leitet daraus die Regel ab, übt sie an Sätzen aus dem Sportalltag und wendet sie wieder auf die Ballade an. Das knüpft an die Verb-Einheit an (finite Form, Hilfsverb). Reime und Ur-Ei folgen am Do/Fr (Material in Woche1/).")], { after: 0 })], LIGHT2));
+doc.push(kicker("Tafelskript für die Lehrkraft · Mi 4.11. · Doppelstunde (90 Min.) · AVIVA · mit Präsentation (16 Folien)"), h1("Paddy Fingal: Inhalt und Sprachtraining an der Ballade"));
+doc.push(box([p([S("Bezug: ", { bold: true }), S("Die Stunde am 16.10. ist ausgefallen. Am Montag wurden in 15 Minuten die Lesetechniken wiederholt. Offen sind LB-Aufgabe 1 a zu Paddy Fingal, die Reime und die Merkmale der Ballade. Teil 1 holt den Inhalt nach und beginnt mit der Wiederholung vom Montag. Teil 2 integriert Grammatik nach dem neuen Prinzip, gegenüber der Klasse heißt sie „Sprachtraining“: Die Klasse entdeckt ein Phänomen in der Ballade (Nebensätze mit „dass“ und „als“), leitet daraus die Regel ab, übt sie an Sätzen aus dem Sportalltag und wendet sie wieder auf die Ballade an. Das knüpft an die Verb-Einheit an (finite Form, Hilfsverb). Reime und Ur-Ei folgen am Do/Fr (Material in Woche1/).")], { after: 0 })], LIGHT2));
 doc.push(p([S("Lernziele: ", { bold: true }), S("Teil 1: " + Z1 + "  Teil 2: " + Z2, { italics: true })], { before: 120, after: 40 }));
 doc.push(p([S("Antwort auf „Was habt ihr heute gelernt?“: ", { bold: true }), S("„Ich kann mit Strophen belegen, wie Paddy aussieht, was der Schotte will und welche List Schaya anwendet. Nach dass, als, weil, wenn steht das finite Verb am Ende, und davor kommt ein Komma.“ Überprüft wird das im Zielcheck am Ende.")], { after: 80 }));
 doc.push(board("Seitentafel links · vor der Stunde anschreiben, bleibt stehen", [
@@ -190,7 +190,7 @@ doc.push(table([2300, 7906], [
 doc.push(p([S("Material: ", { bold: true }), S("Präsentation `Mittwoch_04-11_Deutsch_7A.pptx` (Lösungen in den Notizen) · Lehrbuch S. 136 f. · Merksatz-Schnipsel „Nebensätze mit Subjunktion“ (8 pro A4) · Tandems wie festgelegt · Handreichung Polnisch für S-PL.")], { before: 80, after: 60 }));
 
 doc.push(avivaPhase("A", "Ankommen: Überblick und Ziele", 4));
-doc.push(...steps([["zuhoeren", { say: "Stifte liegen. Ihr hört nur zu. Heute haben wir zwei Teile. In Teil 1 klären wir, worum es in Paddy Fingal genau geht. In Teil 2 schauen wir uns die Sprache der Ballade an und lernen daraus eine neue Grammatikregel. Die Ziele stehen auf der Folie und links an der Tafel.", do: ["Folie 2 zeigen, auf die Seitentafel verweisen. Folie 2 am Ende noch einmal zeigen."] }]]));
+doc.push(...steps([["zuhoeren", { say: "Stifte liegen. Ihr hört nur zu. Heute haben wir zwei Teile. In Teil 1 klären wir, worum es in Paddy Fingal genau geht. In Teil 2 ist Sprachtraining: Wir schauen uns die Sprache der Ballade an und lernen daraus eine Regel, mit der ihr besser schreibt. Die Ziele stehen auf der Folie und links an der Tafel.", do: ["Folie 2 zeigen, auf die Seitentafel verweisen. Folie 2 am Ende noch einmal zeigen."] }]]));
 
 doc.push(teil("1", "Paddy Fingal – den Inhalt erschließen", GRN));
 doc.push(avivaPhase("V", "Vorwissen aktivieren: Wiederholung Lesetechniken", 6));
@@ -207,7 +207,7 @@ doc.push(...steps([["tafel", { say: "Prüf-Kette. Wer drankommt, prüft zuerst d
 doc.push(avivaPhase("V", "* Verarbeiten: LB-Aufgabe 1 b nacherzählen", 8));
 doc.push(...steps([["partner", { say: "A erzählt Strophe 1 bis 5 nach, B hört zu und hakt die Checkliste ab. Dann Wechsel: B erzählt Strophe 6 bis 11. Eure Antworten aus Ü1 sind euer Spickzettel.", do: ["Checkliste: Titel und Autor · richtige Reihenfolge · nichts dazuerfinden · alle wichtigen Details · * spannend mit wörtlicher Rede.", "Fällt 1 b weg: Einstieg am Donnerstag."] }]]));
 
-doc.push(teil("2", "Grammatik in der Ballade: Nebensätze mit Subjunktion", VIO));
+doc.push(teil("2", "Sprachtraining: Nebensätze mit Subjunktion", VIO));
 doc.push(avivaPhase("V", "Vorwissen aktivieren: Wo steht das finite Verb?", 4));
 doc.push(...steps([["luecken", { say: "Neue Überschrift: Nebensätze mit Subjunktion. Jetzt arbeitet ihr allein. Schreibt die beiden Sätze von der Folie ab und unterstreicht das finite Verb. Wo steht es?", sol: "Paddy Fingal war von Riesenart. · Da lief er heim in jähem Schreck. → war, lief: an Position 2 (nach dem ersten Satzglied).", do: ["Kurz fragen: Woran erkennst du das finite Verb? – Es ändert sich mit der Person (ich war, du warst)."] }]]));
 doc.push(avivaPhase("I", "Informieren: Ü2 entdecken und Merksatz", 12));
@@ -254,7 +254,7 @@ doc.push(refHead("2  Direkte Instruktion (DI)", NAVY));
 doc.push(bul("Ziel und Relevanz:", "Zwei überprüfbare Ziele; „Wofür?“ im Merksatz: Begründen in jeder Analyse, Bezug zum Englischen."));
 doc.push(bul("Ich – Wir – Ihr:", "Lehrkraft entwickelt mit der Klasse das Tafelbild Hauptsatz/Nebensatz und modelliert am Perfekt-Beispiel (Wir/Ich), danach Ü3–Ü5 selbstständig (Ihr)."));
 doc.push(bul("Rückmeldung:", "Prüf-Kette nach Ü1 und Ü3, Partnerkorrektur bei Ü4, Zielcheck mit Lösungsfolie; typische Hürden vorab benannt: Hilfsverb ans Ende (Ü3 Nr. 5), gesprochenes „weil ich muss …“ (Ü4)."));
-doc.push(refHead("3  Grammatik integriert – aus der Ballade heraus", VIO));
+doc.push(refHead("3  Grammatik integriert („Sprachtraining“) – aus der Ballade heraus", VIO));
 doc.push(bul("", "Phänomen in der Ballade entdecken (dass, als) → Regel ableiten → an Sätzen aus dem Sportalltag üben → Fehleranalyse im Chat → zurück zur Ballade (Ü5)."));
 doc.push(bul("", "Sprachreflexion: Forscherfrage zur dichterischen Abweichung (Str. 3) – die Klasse erfährt, warum ein Gedicht anders klingen darf."));
 doc.push(bul("", "Anschluss an die Verb-Einheit (finite Form, Hilfsverb rot) und an Montag (weil-Sätze)."));
