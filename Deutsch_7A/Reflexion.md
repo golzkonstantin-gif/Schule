@@ -294,6 +294,13 @@ Die Lehrkraft möchte das weiterverfolgen, noch ohne Material. Die Satzklammer (
   - Die Lehrkraft findet die Vergleiche aus der Lebenswelt gut („Abwechslung und Transfer“). Der Zielcheck bleibt beim Zuordnen mit Begründung.
 - **Korrektur der Lehrkraft (31.10., Material Fr):** Die Merkmale der drei Gattungen müssen geschärft werden. Wörtliche Rede gibt es auch in der Epik, das Merkmal der Dramatik muss konkreter werden. Ergänzt: In der Epik gibt es auch einen Ich-Erzähler. Das Merkmal ist also, dass ein Erzähler das Geschehen vermittelt, egal ob in der Er- oder Ich-Form. Die Umsetzung wird noch besprochen.
   - Wunsch der Lehrkraft: Die Gattungsmerkmale an konkreten Beispieltexten zeigen. Am Montag werden diese Beispiele wiederholt (Vorwissen reaktivieren), dann ordnen die Schüler Texte den Gattungen zu und begründen.
+  - Umgesetzt (31.10.):
+    - Drei Beispieltexte zu derselben Trainingssituation, allgemein und nicht sportartspezifisch: A Epik (Ich-Erzähler, Rede eingeleitet), B Dramatik (Szene ohne Erzähler, Regieanweisungen), C Lyrik (Paarreim). Die Paare ordnen sie zu und nennen Merkmale, danach wird aufgedeckt und auf die Ballade übertragen (Str. 4, V. 16–17 gegen Str. 7).
+    - Merkmale: Epik = mit Erzähler (Er- oder Ich-Erzähler), Dramatik = ohne Erzähler.
+    - Der Ur-Ei-Schnipsel ist geschärft (Fassung in `Woche2/`): Nr. 6 „Er- oder Ich-Erzähler? · Zeitform · leitet Figurenrede ein: Str., V.“, Nr. 7 „Ganze Strophe nur Figurenrede, ohne Erzähler: Str., wer spricht?“.
+    - Zielcheck: C ist jetzt Str. 9, V. 43–44 (Dramatik), dazu der Prüfstein D: Str. 4, V. 16–17, Epik oder Dramatik?
+    - Die Präsentation hat 14 Folien. Handreichung, Lernwortschatz und Vokabelliste sind angepasst.
+  - Für Mo 9.11.: Die drei Trainings-Beispiele wiederholen, dann neue Texte den Gattungen zuordnen und begründen, dann Reime nach Schema schreiben.
 - **Rückmeldung der Lehrkraft (Fr 6.11.):** *(steht noch aus)*
 - **Idee der Lehrkraft für Mo 9.11. (Hospitation):** Strophe, Vers und Reimschema wiederholen. Dann schreiben die Schüler selbst Reime nach einem vorgegebenen Schema, themenorientiert und mit Formulierungshilfen. Wird nach Freitag geplant.
 - **Rückmeldung der Lehrkraft (Mi 4.11.):** *(steht noch aus)*

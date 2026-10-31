@@ -152,10 +152,10 @@ function phase(nr, title, min) {
 const avivaPhase = (k, title, min) => p([t(`${k}  `, { font: "Cambria", size: 28, bold: true, color: C.hv }), t(title, { font: "Cambria", size: 28, bold: true, color: NAVY }), t(`   ${min} Min.`, { size: 20, bold: true, color: "C77C12" })], { before: 200, after: 100, keepNext: true });
 const ZIEL = "Ich kann an Paddy Fingal mit Belegen zeigen, dass eine Ballade Merkmale von Lyrik, Epik und Dramatik hat.";
 const doc = [];
-doc.push(kicker("Tafelskript für die Lehrkraft · Fr 6.11. · Einzelstunde (45 Min.) · AVIVA · mit Präsentation (13 Folien)"), h1("Paddy Fingal – die Ballade als „Ur-Ei“"));
-doc.push(box([p([S("Bezug: ", { bold: true }), S("Am Donnerstag hat die Klasse Reime und Reimschema an Strophe 1 entdeckt und an Texten aus der eigenen Sportart geübt. Heute wird das zuerst wiederholt (neue Strophe 11, Fachbegriffe). Dann kommt das „Ur-Ei“: Die Klasse lernt, dass eine Ballade Merkmale von Gedicht, Erzählung und Theater verbindet. Vergleiche aus ihrer Lebenswelt (Song-Text, Roman oder Spielbericht, Serienszene) sorgen für Abwechslung und Transfer. Danach weisen die Schüler die Merkmale mit dem Ur-Ei-Schnipsel an Paddy Fingal nach. Das Belegen kennen sie seit Mittwoch, die Lyrik-Merkmale (Nr. 1–3) seit Donnerstag.")], { after: 0 })], LIGHT2));
+doc.push(kicker("Tafelskript für die Lehrkraft · Fr 6.11. · Einzelstunde (45 Min.) · AVIVA · mit Präsentation (14 Folien)"), h1("Paddy Fingal – die Ballade als „Ur-Ei“"));
+doc.push(box([p([S("Bezug: ", { bold: true }), S("Am Donnerstag hat die Klasse Reime und Reimschema an Strophe 1 entdeckt und an Texten aus der eigenen Sportart geübt. Heute wird das zuerst wiederholt (neue Strophe 11, Fachbegriffe). Dann kommt das „Ur-Ei“: Die Klasse lernt, dass eine Ballade Merkmale von Gedicht, Erzählung und Theater verbindet. Die Gattungen werden an drei kurzen Beispieltexten zu derselben Trainingssituation geschärft (Lyrik, Epik mit Ich-Erzähler, Dramatik als Szene). Entscheidend: Epik = ein Erzähler vermittelt (Er- oder Ich-Erzähler) und leitet Figurenrede ein; Dramatik = kein Erzähler, die Figuren sprechen unmittelbar. Wörtliche Rede allein entscheidet nicht (Rückmeldung der Lehrkraft). Die Beispiele werden am Montag wiederholt. Danach weisen die Schüler die Merkmale mit dem Ur-Ei-Schnipsel an Paddy Fingal nach. Das Belegen kennen sie seit Mittwoch, die Lyrik-Merkmale (Nr. 1–3) seit Donnerstag.")], { after: 0 })], LIGHT2));
 doc.push(p([S("Lernziel: ", { bold: true }), S(ZIEL, { italics: true })], { before: 120, after: 40 }));
-doc.push(p([S("Antwort auf „Was habt ihr heute gelernt?“: ", { bold: true }), S("„Eine Ballade ist wie ein Gedicht (Strophen, Reime, Kehrreim), wie eine Erzählung (Erzähler, Figuren, Handlung im Präteritum) und wie ein Theaterstück (wörtliche Rede, Spannung). Das habe ich an Paddy Fingal mit Strophen belegt.“ Überprüft wird das im Zielcheck.")], { after: 80 }));
+doc.push(p([S("Antwort auf „Was habt ihr heute gelernt?“: ", { bold: true }), S("„Eine Ballade ist wie ein Gedicht (Strophen, Reime, Kehrreim), wie eine Erzählung (ein Erzähler vermittelt und leitet die Rede ein) und wie ein Theaterstück (Figuren sprechen ohne Erzähler, Spannung). Das habe ich an Paddy Fingal mit Strophen belegt.“ Überprüft wird das im Zielcheck.")], { after: 80 }));
 doc.push(board("Seitentafel links · vor der Stunde anschreiben, bleibt stehen", [
   p([t("Ziel: ", { bold: true, size: 21, color: NAVY }), t(ZIEL, { size: 21, italics: true })], { after: 60 }),
   ...["Wiederholung: Ü1 Reimschema und Fachbegriffe", "Die Ballade als „Ur-Ei“", "Ü2 Merkmale an Paddy Fingal nachweisen (* Nr. 8)", "Zielcheck"].map((a, i) => p(t(`${i + 1}  ${a}`, { size: 20 }), { after: 10 })),
@@ -165,20 +165,20 @@ doc.push(h3("Ablauf"));
 doc.push(grid([800, 900, 1200, 3300, 4006], ["Zeit", "AVIVA", "Folie", "Phase", "Alle Schüler …"], [
   ["2′", "A", "1–2", "Ankommen: Ziel und Ablauf", "lesen Ziel und Ablauf, schreiben die Überschrift"],
   ["7′", "V", "3–4", "Ü1 Reimschema Str. 11, Fachbegriffe", "lösen allein, verbessern mit der Lösungsfolie"],
-  ["8′", "I", "5–7", "Die Ballade als „Ur-Ei“, Vergleich Song – Spielbericht – Serienszene", "hören zu, nennen Merkmale, vergleichen"],
-  ["12′", "V", "8", "Ü2 Ur-Ei-Schnipsel", "weisen allein Merkmale nach, notieren Strophen"],
-  ["6′", "A", "9–11", "Ü2 gemeinsam prüfen (je Gattung eine Folie)", "nennen Lösung mit Strophe, verbessern mit Grün"],
-  ["6′", "A", "12–13", "Zielcheck", "ordnen drei Stellen einer Gattung zu und begründen; Lösungsfolie"],
+  ["10′", "I", "5–8", "Die Ballade als „Ur-Ei“, ein Training – drei Gattungen, Übertragen auf die Ballade", "ordnen zu zweit drei Beispieltexte zu, nennen Merkmale, übertragen auf Paddy Fingal"],
+  ["11′", "V", "9", "Ü2 Ur-Ei-Schnipsel", "weisen allein Merkmale nach, notieren Strophen"],
+  ["5′", "A", "10–12", "Ü2 gemeinsam prüfen (je Gattung eine Folie)", "nennen Lösung mit Strophe, verbessern mit Grün"],
+  ["7′", "A", "13–14", "Zielcheck mit Prüfstein", "ordnen drei Stellen zu und begründen, entscheiden den Prüfstein D; Lösungsfolie"],
 ], { bold: [true, true, false, true, false], colors: [C.hv, C.hv, MUTED, NAVY, null], h: 320 }));
-doc.push(p([S("Zeit: ", { bold: true, color: C.hv }), S("41 Min., 4 Min. Puffer. Wenn es eng wird: * Nr. 8 (Spannung) beim Aufdecken überspringen.")], { before: 80, after: 60 }));
+doc.push(p([S("Zeit: ", { bold: true, color: C.hv }), S("42 Min., 3 Min. Puffer. Wenn es eng wird: * Nr. 8 (Spannung) beim Aufdecken überspringen.")], { before: 80, after: 60 }));
 doc.push(h3("So sieht das Heft am Ende aus"));
 doc.push(table([2300, 7906], [
   ["Überschrift", "Die Ballade als „Ur-Ei“ · Datum rechts"],
   ["Wiederholung", "Ü1: Reimschema Str. 11 (aabbx, Paarreim) · drei Fachbegriffe in je einem Satz"],
   ["Ur-Ei", "Schnipsel „Die Ballade – ein Ur-Ei“ eingeklebt und ausgefüllt, mit Grün kontrolliert"],
-  ["Zielcheck", "A, B, C mit Gattung und Begründung"],
+  ["Zielcheck", "A, B, C mit Gattung und Begründung · Prüfstein D: Epik oder Dramatik?"],
 ].map(([a, b]) => row([tc(a, 2300, { bold: true, fill: LIGHT }), tc(b, 7906)]))));
-doc.push(p([S("Material: ", { bold: true }), S("Präsentation `Freitag_06-11_Deutsch_7A.pptx` (Lösungen in den Notizen und auf Aufdeck-Folien) · Lehrbuch S. 136 f. · Schnipsel „Die Ballade – ein Ur-Ei“ aus `Woche1/` (unverändert, 2 pro A4) · Handreichung Polnisch für S-PL.")], { before: 80, after: 60 }));
+doc.push(p([S("Material: ", { bold: true }), S("Präsentation `Freitag_06-11_Deutsch_7A.pptx` (Lösungen in den Notizen und auf Aufdeck-Folien) · Lehrbuch S. 136 f. · Schnipsel „Die Ballade – ein Ur-Ei“ in der geschärften Fassung aus `Woche2/` (Nr. 6 und 7 neu, 2 pro A4) · Handreichung Polnisch für S-PL.")], { before: 80, after: 60 }));
 
 doc.push(avivaPhase("A", "Ankommen: Ziel und Ablauf", 2));
 doc.push(...steps([["zuhoeren", { say: "Stifte liegen. Ihr hört nur zu. Am Donnerstag ging es darum, wie die Ballade klingt. Heute zeigen wir: Eine Ballade ist mehr als ein Gedicht. Ziel und Ablauf stehen auf der Folie und links an der Tafel. Jetzt schreibt ihr die Überschrift ab: Die Ballade als Ur-Ei." }]]));
@@ -189,29 +189,31 @@ doc.push(...steps([
   ["kontrolle", { say: "Vergleicht mit der Lösung auf der Folie und verbessert mit Grün.", do: ["Folie 4. Gezielt die Schüler drannehmen, die im Zielcheck am Donnerstag Fehler hatten."] }],
 ]));
 
-doc.push(avivaPhase("I", "Informieren: Die Ballade als „Ur-Ei“", 8));
-doc.push(board("Mitteltafel · Tafelbild (optional zusätzlich zur Folie, bleibt bis zum Zielcheck stehen)", [
+doc.push(avivaPhase("I", "Informieren: Die Ballade als „Ur-Ei“ – ein Training, drei Gattungen", 10));
+doc.push(board("Mitteltafel · Tafelbild (entsteht nach Folie 7, bleibt bis zum Zielcheck stehen)", [
   p([N("Die Ballade – ein „Ur-Ei“ (Goethe)", { bold: true, color: NAVY })], { after: 60, align: AlignmentType.CENTER }),
-  bl([N("Lyrik", { bold: true, color: "2A8C8C" }), N(" – wie ein Song-Text: Strophen, Verse, Reime, Kehrreim")]),
-  bl([N("Epik", { bold: true, color: "7A5BA6" }), N(" – wie ein Roman oder Spielbericht: Erzähler, Figuren, Handlung, Präteritum")]),
-  bl([N("Dramatik", { bold: true, color: "C77C12" }), N(" – wie eine Serienszene: Figuren sprechen selbst, Konflikt, Spannung")]),
+  bl([N("Lyrik", { bold: true, color: "2A8C8C" }), N(" – gebundene Form: Verse, Strophen, Reim, Kehrreim")]),
+  bl([N("Epik", { bold: true, color: "7A5BA6" }), N(" – MIT Erzähler (Er- oder Ich-Erzähler): er vermittelt, meist im Präteritum, leitet Figurenrede ein")]),
+  bl([N("Dramatik", { bold: true, color: "C77C12" }), N(" – OHNE Erzähler: Figuren sprechen unmittelbar (wie auf der Bühne), Konflikt, Spannung")]),
+  bl([N("Achtung: Wörtliche Rede gibt es in Epik und Dramatik – entscheidend ist der Erzähler.", { italics: true, color: MUTED })], { before: 40 }),
 ]));
 doc.push(p(t(""), { after: 40 }));
 doc.push(...steps([
   ["zuhoeren", { say: "Stifte liegen. Ihr hört nur zu. Goethe hat die Ballade ein Ur-Ei genannt. In einem Ei steckt schon alles, was später daraus wird. In der Ballade stecken alle drei großen Gattungen: Lyrik, Epik und Dramatik. Das braucht ihr für die erste Bewertung, die Analyse.", do: ["Folie 5 (Ich)."] }],
-  ["gemeinsam", { say: "Woran erkennt ihr einen Song? Einen Spielbericht? Eine Serienszene?", sol: "Song: Strophen, Refrain, Reime · Spielbericht: jemand erzählt, was passiert ist, in der Vergangenheit · Serienszene: Figuren reden miteinander, Streit, man will wissen, wie es weitergeht", do: ["Folie 6 (Wir): Merkmale sammeln, dann Folie 7 aufdecken und vergleichen. Wer drankommt, nennt ein Merkmal – möglichst viele verschiedene Schüler drannehmen."] }],
+  ["partner", { say: "Auf der Folie steht dreimal dieselbe Situation aus dem Training. Ordnet zu zweit zu: Welcher Text ist Lyrik, Epik, Dramatik? Notiert zu jedem ein Merkmal. Tipp: Wer erzählt hier – und gibt es überhaupt einen Erzähler? Drei Minuten.", sol: "A Epik (Ich-Erzähler, Präteritum, Rede wird eingeleitet: „rief mein Trainer“) · B Dramatik (kein Erzähler, Name vor der Rede, Präsens, Regieanweisungen) · C Lyrik (Verse, Paarreim: schwer – mehr, geschafft – Kraft)", do: ["Folie 6 (Wir)."] }],
+  ["gemeinsam", { say: "Wer drankommt, nennt seine Zuordnung und das Merkmal. Dann decke ich auf.", do: ["Folie 7, dann Tafelbild. Betonen: Wörtliche Rede gibt es in A und B – entscheidend ist, ob ein Erzähler dazwischen ist. Dieselbe Szene in drei Formen: Die Gattung hängt an der Form, nicht am Inhalt.", "Folie 8: Übertragen auf Paddy Fingal – Str. 4, V. 16–17 (Erzähler leitet Paddys Rede ein = Epik) gegen Str. 7 (ganze Strophe Schayas Rede, kein Erzähler = Dramatik). Schnipsel austeilen."] }],
 ]));
 
-doc.push(avivaPhase("V", "Verarbeiten: Ü2 Merkmale nachweisen (Ur-Ei-Schnipsel)", 12));
-doc.push(...steps([["luecken", { say: "Ich teile den Schnipsel aus. Klebt ihn ein. Jetzt arbeitet ihr allein. Nummer 1 bis 3 kennt ihr schon. Bei 4 bis 7 weist ihr die Merkmale an Paddy Fingal nach und notiert die Strophe. Zwölf Minuten. Wer fertig ist, macht Nummer 8 mit Stern. Fertig? Stift hinlegen.", sol: "1 11 Strophen mit je 5 Versen · 2 Paarreim (aabb), z. B. Riesenart / Bart (Str. 1) · 3 „… Paddy Fingal“ (Kehrreim) · 4 Paddy Fingal, Schaya, der Schotte (*die Nachbarn) · 5 Anfang Str. 1–3, Höhepunkt Str. 8–9, Ende Str. 10–11 (andere begründete Grenzen gelten) · 6 Präteritum, z. B. „Paddy Fingal war von Riesenart“ (Str. 1) · 7 Paddy (Str. 4), der Schotte (Str. 6, 9), Schaya (Str. 7) · *8 Paddy gegen den Schotten; Frage: Findet der Schotte Paddy?", do: ["Folie 8. Herumgehen. Typische Hürde: Höhepunkt (Nr. 5) – die Stelle, an der sich alles entscheidet (der Schotte steht vor dem Bett).", "Bei Nr. 6 Bezug zur Verb-Einheit: Woran erkennst du das Präteritum? (war, kroch, lief)"] }]]));
+doc.push(avivaPhase("V", "Verarbeiten: Ü2 Merkmale nachweisen (Ur-Ei-Schnipsel)", 11));
+doc.push(...steps([["luecken", { say: "Ich teile den Schnipsel aus. Klebt ihn ein. Jetzt arbeitet ihr allein. Nummer 1 bis 3 kennt ihr schon. Bei 4 bis 7 weist ihr die Merkmale an Paddy Fingal nach und notiert die Strophe. Elf Minuten. Wer fertig ist, macht Nummer 8 mit Stern. Fertig? Stift hinlegen.", sol: "1 11 Strophen mit je 5 Versen · 2 Paarreim (aabb), z. B. Riesenart / Bart (Str. 1) · 3 „… Paddy Fingal“ (Kehrreim) · 4 Paddy Fingal, Schaya, der Schotte (*die Nachbarn) · 5 Anfang Str. 1–3, Höhepunkt Str. 8–9, Ende Str. 10–11 (andere begründete Grenzen gelten) · 6 Er-Erzähler, Präteritum, leitet Figurenrede ein: z. B. Str. 4, V. 16 („Da lief er heim in jähem Schreck:“) oder Str. 6, V. 29 · 7 Str. 7 (Schaya) oder Str. 9 (der Schotte) – die ganze Strophe ist Figurenrede, kein Erzähler · *8 Paddy gegen den Schotten; Frage: Findet der Schotte Paddy?", do: ["Folie 9. Herumgehen. Typische Hürde: Höhepunkt (Nr. 5) – die Stelle, an der sich alles entscheidet (der Schotte steht vor dem Bett).", "Bei Nr. 6 Bezug zur Verb-Einheit: Woran erkennst du das Präteritum? (war, kroch, lief)"] }]]));
 
-doc.push(avivaPhase("A", "Auswerten: Ü2 gemeinsam prüfen", 6));
-doc.push(...steps([["gemeinsam", { say: "Wir prüfen gemeinsam, Gattung für Gattung. Wer drankommt, nennt seine Lösung mit Strophe. Dann decke ich auf. Alle verbessern mit Grün.", do: ["Folie 9 Lyrik, Folie 10 Epik, Folie 11 Dramatik. Verschiedene Schüler drannehmen, niemand geht an die Tafel."] }]]));
+doc.push(avivaPhase("A", "Auswerten: Ü2 gemeinsam prüfen", 5));
+doc.push(...steps([["gemeinsam", { say: "Wir prüfen gemeinsam, Gattung für Gattung. Wer drankommt, nennt seine Lösung mit Strophe. Dann decke ich auf. Alle verbessern mit Grün.", do: ["Folie 10 Lyrik, Folie 11 Epik, Folie 12 Dramatik. Bei Nr. 7 nachfragen: Warum reicht „wörtliche Rede“ nicht? Verschiedene Schüler drannehmen, niemand geht an die Tafel."] }]]));
 
-doc.push(avivaPhase("A", "Auswerten: Zielcheck", 6));
+doc.push(avivaPhase("A", "Auswerten: Zielcheck mit Prüfstein", 7));
 doc.push(...steps([
-  ["luecken", { say: "Zielcheck. Jetzt arbeitet ihr allein im Heft. Ordnet jede Stelle einer Gattung zu und begründet mit dem Merkmal. Vier Minuten.", sol: "A Lyrik – Reim (Riesenart/Bart, Paarreim) · B Epik – ein Erzähler erzählt im Präteritum („lief“) · C Dramatik – wörtliche Rede von Paddy" }],
-  ["kontrolle", { say: "Vergleicht mit der Lösung auf der Folie und verbessert mit Grün.", do: ["Folie 13. Herumgehen und schauen, wer noch Fehler hat – am Montag in der Wiederholung aufgreifen. Ausblick: Am Montag schreibt ihr selbst Reime."] }],
+  ["luecken", { say: "Zielcheck. Jetzt arbeitet ihr allein im Heft. Ordnet A, B und C einer Gattung zu und begründet mit dem Merkmal. D ist der Prüfstein: Epik oder Dramatik? Vier Minuten.", sol: "A Lyrik – Reim (Riesenart/Bart, Paarreim) · B Epik – ein Erzähler erzählt im Präteritum („lief“) · C Dramatik – die ganze Strophe ist Rede des Schotten, kein Erzähler · D Epik – zwar wörtliche Rede, aber der Erzähler leitet sie ein („Da lief er heim …:“); eine gut begründete andere Antwort mit dem Merkmal „Erzähler“ gilt auch" }],
+  ["kontrolle", { say: "Vergleicht mit der Lösung auf der Folie und verbessert mit Grün.", do: ["Folie 14. Herumgehen und schauen, wer noch Fehler hat – am Montag in der Wiederholung aufgreifen. Ausblick: Am Montag schreibt ihr selbst Reime."] }],
 ]));
 
 // ---------- Reflexion ----------
@@ -221,19 +223,19 @@ doc.push(new Paragraph({ pageBreakBefore: true, children: [t("FÜR DIE LEHRKRAFT
 doc.push(refHead("1  AVIVA – Struktur und Transparenz", C.hv));
 doc.push(bul("Ankommen:", "Ziel und Ablauf auf Folie und Seitentafel, Rückgriff im Zielcheck."));
 doc.push(bul("Vorwissen aktivieren:", "Echte Wiederholung vom Donnerstag an einer neuen Strophe (Transfer statt Abschreiben), dazu die Fachbegriffe."));
-doc.push(bul("Informieren:", "Kurz und anschaulich: Ur-Ei-Bild, dann Vergleiche aus der Lebenswelt (Song, Spielbericht, Serienszene) – von der Lehrkraft ausdrücklich gewünscht für Abwechslung und Transfer."));
+doc.push(bul("Informieren:", "Kurz und anschaulich: Ur-Ei-Bild, dann drei Beispieltexte zu derselben Trainingssituation (Lebenswelt, Transfer). Die Merkmale sind geschärft: mit Erzähler (Epik, auch Ich-Erzähler) gegen ohne Erzähler (Dramatik) – wörtliche Rede allein entscheidet nicht (Rückmeldung 31.10.)."));
 doc.push(bul("Verarbeiten und Auswerten:", "Alle arbeiten allein am Schnipsel, Auswertung über Aufdeck-Folien je Gattung, niemand muss an die Tafel. Sicherung als Zielcheck mit neuen Textstellen."));
 doc.push(bul("Zeit:", "Ur-Ei bewusst auf eine eigene Stunde gelegt; 4 Min. Puffer, * Nr. 8 als Kürzungsoption."));
 doc.push(refHead("2  Direkte Instruktion (DI)", NAVY));
 doc.push(bul("Ziel und Relevanz:", "Ein überprüfbares Ziel; Relevanz: Die Merkmale braucht man für die Analyse (Bewertung 1)."));
-doc.push(bul("Ich – Wir – Ihr:", "Lehrkraft erklärt das Ur-Ei (Ich), Klasse sammelt Merkmale an Alltagsbeispielen (Wir), Schüler weisen sie allein an der Ballade nach (Ihr)."));
-doc.push(bul("Rückmeldung:", "Lösungsfolie nach Ü1, Aufdeck-Folien nach Ü2, Zielcheck mit Lösung; typische Hürde benannt: Höhepunkt."));
+doc.push(bul("Ich – Wir – Ihr:", "Lehrkraft erklärt das Ur-Ei (Ich), Paare ordnen die Beispieltexte zu, gemeinsam wird auf die Ballade übertragen (Wir), Schüler weisen die Merkmale allein nach (Ihr)."));
+doc.push(bul("Rückmeldung:", "Lösungsfolie nach Ü1, Aufdeck-Folien nach Ü2, Zielcheck mit Prüfstein D und Lösung; typische Hürden benannt: Höhepunkt, „wörtliche Rede = Dramatik“."));
 doc.push(refHead("3  Differenzierung", "2A8C8C"));
 doc.push(bul("", "Nr. 1–3 als sicherer Einstieg (bekannt), * Nr. 8 für Schnelle, Bezug zur Verb-Einheit bei Nr. 6."));
 doc.push(bul("", "S-PL: Handreichung mit Ziel, Ablauf und Aufträgen auf Polnisch; Fachbegriffe (Lyrik, Epik, Dramatik …) bleiben deutsch, Polnisch erklärt nur die Bedeutung."));
 doc.push(refHead("4  Beobachtungsschwerpunkte", MUTED));
 doc.push(bul("", "Sitzen Reimschema und Fachbegriffe nach einem Tag (Ü1)?"));
-doc.push(bul("", "Tragen die Vergleiche aus der Lebenswelt – nennen die Schüler selbst Merkmale?"));
+doc.push(bul("", "Erkennen die Paare an den Beispieltexten selbst, dass der Erzähler entscheidet? Wie wird der Prüfstein D begründet? (Grundlage für die Wiederholung am Montag)"));
 doc.push(bul("", "Gelingt das Belegen bei Epik und Dramatik (Nr. 4–7)? Wo hakt es (Höhepunkt, Präteritum)?"));
 
 const pageProps = { page: { size: { width: 11906, height: 16838 }, margin: { top: 900, bottom: 800, left: 850, right: 850, header: 400, footer: 400 } } };

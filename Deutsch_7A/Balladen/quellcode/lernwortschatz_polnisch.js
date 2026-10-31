@@ -186,7 +186,7 @@ const rows = [
 
   SEC("Epik – wie eine Erzählung", "epika – jak opowiadanie", GC.ep),
   r("die Erzählung", "die Erzählungen · erzählen", "**opowiadanie** · **opowiadać**.", ""),
-  r("der Erzähler", "", "**narrator** – głos, który opowiada historię. To nie jest autor!", "„Paddy Fingal war von Riesenart …“"),
+  r("der Erzähler", "der Er-Erzähler · der Ich-Erzähler", "**narrator** – głos, który opowiada historię (w 3. albo w 1. osobie). To nie jest autor! Najważniejsza cecha epiki: jest narrator.", "„Paddy Fingal war von Riesenart …“ (Er-Erzähler)"),
   r("die Figur", "die Figuren", "**postać (bohater)** w tekście. Uwaga: nie „figura“!", "Paddy Fingal, Schaya, der Schotte"),
   r("die Handlung", "", "**akcja, fabuła** – to, co dzieje się w tekście.", ""),
   r("der Anfang · der Höhepunkt · das Ende", "", "**początek** · **punkt kulminacyjny** (moment, w którym wszystko się rozstrzyga) · **zakończenie**.", "Höhepunkt: Der Schotte sieht die Nase (Str. 8–9)."),
@@ -194,7 +194,7 @@ const rows = [
 
   SEC("Dramatik – wie ein Theaterstück", "dramat – jak sztuka teatralna", GC.dr),
   r("das Theaterstück", "die Theaterstücke", "**sztuka teatralna** – postacie mówią same, nie ma narratora.", ""),
-  r("die wörtliche Rede", "", "**mowa niezależna** – dokładne słowa postaci w cudzysłowie „…“.", "„O Schaya, birg mich im Versteck!“ (Str. 4)"),
+  r("ohne Erzähler", "die Figurenrede", "**bez narratora** – postacie mówią same, jak na scenie. Najważniejsza cecha dramatu. Uwaga: mowa niezależna (wörtliche Rede) jest też w epice – tam wprowadza ją narrator.", "Str. 7: cała strofa to słowa Schai"),
   r("der Dialog", "die Dialoge", "**dialog, rozmowa** między postaciami.", ""),
   r("die Spannung", "spannend", "**napięcie** · **trzymający w napięciu** – chcemy wiedzieć, co będzie dalej.", "Findet der Schotte Paddy?"),
   r("der Konflikt", "die Konflikte", "**konflikt** – postacie są przeciwko sobie.", "Paddy gegen den Schotten"),

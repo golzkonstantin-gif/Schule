@@ -135,42 +135,60 @@ const zeit = (s, meta) => { box(s, 0.6, 6.25, 12.1, 0.55, LIGHT2); txt(s, [{ tex
     txt(s, d, { x, y: 3.9, w: 2.7, h: 0.5, fontSize: 16, color: NAVY, align: "center" });
   });
 }
-// Vergleiche aus der Lebenswelt (2 Folien: Frage, dann Merkmale)
-const VG = [
-  [GC.ly, "Lyrik", "wie ein Song-Text", "Strophen und Verse · Reime · Refrain (Kehrreim)"],
-  [GC.ep, "Epik", "wie ein Roman oder Spielbericht", "jemand erzählt (Erzähler) · Figuren · Handlung mit Anfang, Höhepunkt, Ende · meist Präteritum"],
-  [GC.dr, "Dramatik", "wie eine Serienszene", "Figuren sprechen selbst (wörtliche Rede) · Konflikt · Spannung"],
+// Ein Training – drei Gattungen (Beispieltexte; werden am Montag wiederholt)
+const BSP = [
+  ["A", GC.ep, "Epik", [{ text: "Bei der letzten Runde waren meine Beine schwer wie Blei. Ich bekam kaum noch Luft und wollte aufhören. „Noch zwanzig Meter!“, rief mein Trainer vom Rand. Ich biss die Zähne zusammen und lief bis zur Linie." }], "Ein Erzähler erzählt (hier: Ich-Erzähler) · im Nachhinein, Präteritum · er gibt die Rede wieder und leitet sie ein („rief mein Trainer“)"],
+  ["B", GC.dr, "Dramatik", [{ text: "TRAINER ", options: { bold: true } }, { text: "(klatscht in die Hände)", options: { italic: true } }, { text: ": Letzte Runde! Los!\n" }, { text: "SPORTLERIN ", options: { bold: true } }, { text: "(keucht)", options: { italic: true } }, { text: ": Ich kann nicht mehr …\n" }, { text: "TRAINER", options: { bold: true } }, { text: ": Noch zwanzig Meter! Du schaffst das!\n" }, { text: "(Die Sportlerin läuft bis zur Linie und lässt sich ins Gras fallen.)", options: { italic: true } }], "Kein Erzähler · die Figuren sprechen direkt miteinander, Name vor der Rede · es passiert jetzt (Präsens) · Regieanweisungen in Klammern"],
+  ["C", GC.ly, "Lyrik", [{ text: "Die letzte Runde, die Beine schwer,\ndie Luft wird knapp, ich kann nicht mehr.\nEin Schritt noch, dann ist’s geschafft,\nich hol mir aus dem Bauch die Kraft." }], "Verse und Strophe · Reim (Paarreim: schwer – mehr, geschafft – Kraft) · Rhythmus"],
 ];
 [false, true].forEach((show) => {
-  const s = base("Informieren · Vergleich", show ? "Das steckt in der Ballade" : "Woran erkennst du …?", show
-    ? "Wir-Phase abschließen: Merkmale aufdecken, mit den Schülerantworten vergleichen. Überleitung: Jetzt weist ihr diese Merkmale an Paddy Fingal nach – Schnipsel austeilen."
-    : "Wir-Phase: Die Klasse nennt Merkmale. Impulse: Was hat jeder Song? (Strophen, Refrain, Reime) – Was braucht ein Spielbericht? (jemand erzählt, was passiert ist, in der Vergangenheit) – Was passiert in einer Serienszene? (Figuren reden miteinander, es gibt Streit, man will wissen, wie es weitergeht).");
-  VG.forEach(([c, n, v, m], i) => {
+  const s = base("Informieren · Ein Training – drei Gattungen", show ? "So erkennst du die Gattung" : "Welcher Text ist Lyrik, Epik, Dramatik?", show
+    ? "Merkmale aufdecken und mit den Antworten der Paare vergleichen. Entscheidend: Epik = ein Erzähler vermittelt (Er- oder Ich-Erzähler) und leitet Figurenrede ein; Dramatik = kein Erzähler, die Figuren sprechen unmittelbar. Wörtliche Rede gibt es in beiden – sie allein entscheidet nicht! Dieselbe Szene in drei Formen: Die Gattung hängt an der Form, nicht am Inhalt. Diese drei Texte werden am Montag wiederholt."
+    : "Wir-Phase, zu zweit (3 Min.): Ordnet A, B, C zu und notiert je ein Merkmal. Dann einzelne Paare nennen lassen. Impuls: Wer erzählt hier? Gibt es überhaupt einen Erzähler?");
+  BSP.forEach(([k, c, g, runs, m], i) => {
     const x = 0.6 + i * 4.1;
-    box(s, x, 1.6, 3.95, 0.75, c, { r: 0.08 });
-    txt(s, n, { x, y: 1.6, w: 3.95, h: 0.75, fontSize: 24, bold: true, color: WHITE, fontFace: HEAD, align: "center", valign: "middle" });
-    box(s, x, 2.45, 3.95, 0.7, LIGHT2);
-    txt(s, v, { x, y: 2.45, w: 3.95, h: 0.7, fontSize: 18, bold: true, align: "center", valign: "middle" });
-    box(s, x, 3.3, 3.95, 2.3, show ? LIGHT : WHITE, { line: show ? undefined : "C9D3EA" });
-    txt(s, show ? m.split(" · ").map((z, k, arr) => ({ text: "• " + z + (k < arr.length - 1 ? "\n" : "") })) : "?", { x: x + 0.2, y: 3.45, w: 3.55, h: 2.05, fontSize: show ? 17 : 40, color: show ? NAVY : "C9D3EA", align: show ? "left" : "center", valign: show ? "top" : "middle" });
+    box(s, x, 1.55, 3.95, 0.55, show ? c : NAVY, { r: 0.08 });
+    txt(s, show ? `${k}  ${g}` : `Text ${k}`, { x, y: 1.55, w: 3.95, h: 0.55, fontSize: 19, bold: true, color: WHITE, fontFace: HEAD, align: "center", valign: "middle" });
+    box(s, x, 2.2, 3.95, show ? 2.45 : 3.75, LIGHT);
+    txt(s, runs, { x: x + 0.15, y: 2.3, w: 3.65, h: show ? 2.25 : 3.55, fontSize: show ? 12.5 : 15, fontFace: HEAD, valign: "top" });
+    if (show) {
+      box(s, x, 4.75, 3.95, 1.4, WHITE, { line: c, lw: 2 });
+      txt(s, m.split(" · ").map((z, j, arr) => ({ text: "• " + z + (j < arr.length - 1 ? "\n" : "") })), { x: x + 0.12, y: 4.82, w: 3.7, h: 1.3, fontSize: 12.5 });
+    }
   });
-  txt(s, show ? "Die Ballade hat alle drei: Sie ist ein „Ur-Ei“." : "Woran erkennst du einen Song, einen Spielbericht, eine Serienszene?", { x: 0.6, y: 5.8, w: 12.1, h: 0.5, fontSize: 21, bold: true, align: "center" });
+  if (!show) txt(s, "Zu zweit: Ordnet A, B, C zu und notiert je ein Merkmal. Tipp: Wer erzählt hier – und gibt es überhaupt einen Erzähler?", { x: 0.6, y: 6.1, w: 12.1, h: 0.55, fontSize: 16, bold: true });
+  else txt(s, "Mit Erzähler = Epik · ohne Erzähler = Dramatik · gebundene Form = Lyrik", { x: 0.6, y: 6.3, w: 12.1, h: 0.45, fontSize: 18, bold: true, align: "center" });
 });
+// Übertragen auf die Ballade
+{
+  const s = base("Informieren · Übertragen auf Paddy Fingal", "Und in der Ballade?", "Gemeinsam: Der Erzähler leitet Paddys Rede ein (Epik). In Str. 7 und 9 sprechen die Figuren eine ganze Strophe lang ohne Erzähler – wie auf der Bühne (Dramatik). Und alles in Versen mit Reim (Lyrik). Überleitung: Jetzt weist ihr das selbst nach – Schnipsel austeilen.");
+  [[GC.ep, "Mit Erzähler (Epik)", "Da lief er heim in jähem Schreck:\n„O Schaya, birg mich im Versteck! …“", "Str. 4, V. 16–17 – der Erzähler leitet Paddys Rede ein"],
+   [GC.dr, "Ohne Erzähler (Dramatik)", "„Tut leise, Fremder, und tretet sacht,\ndass Paddys Kindlein nicht erwacht! …“", "Str. 7 – die ganze Strophe ist Schayas Rede, kein Erzähler"]].forEach(([c, h, z, b], i) => {
+    const x = 0.6 + i * 6.15;
+    box(s, x, 1.6, 5.95, 0.55, c, { r: 0.08 });
+    txt(s, h, { x, y: 1.6, w: 5.95, h: 0.55, fontSize: 19, bold: true, color: WHITE, align: "center", valign: "middle" });
+    box(s, x, 2.25, 5.95, 1.9, LIGHT);
+    txt(s, z, { x: x + 0.2, y: 2.4, w: 5.55, h: 1.6, fontSize: 18, fontFace: HEAD });
+    txt(s, b, { x, y: 4.25, w: 5.95, h: 0.5, fontSize: 15, italic: true, color: MUTED, align: "center" });
+  });
+  box(s, 0.6, 5.0, 12.1, 0.9, LIGHT2);
+  txt(s, [{ text: "Und alles in Versen mit Reim: ", options: { bold: true, color: GC.ly } }, { text: "Lyrik. Die Ballade verbindet alle drei – ein „Ur-Ei“." }], { x: 0.9, y: 5.2, w: 11.6, h: 0.5, fontSize: 19 });
+}
 // Ü2 Schnipsel
 uebung("Verarbeiten · Schnipsel", "Ü2  Merkmale an Paddy Fingal nachweisen", [
   "Fülle Nr. 1–3 (Lyrik) aus – das kennst du schon.",
   "Weise Nr. 4–7 (Epik, Dramatik) an Paddy Fingal nach.",
   "Notiere bei jedem Merkmal die Strophe.",
   "Fertig? Dann * Nr. 8.",
-], "12 Minuten · allein", "Schnipsel „Die Ballade – ein Ur-Ei“ (Woche 1) austeilen und einkleben lassen. Herumgehen. Typische Hürde: Höhepunkt (Nr. 5) – die Stelle, an der sich alles entscheidet (der Schotte steht vor dem Bett und sieht die Nase). Bei Nr. 6 Bezug zur Verb-Einheit: Woran erkennst du das Präteritum? (war, kroch, lief).");
+], "12 Minuten · allein", "Schnipsel „Die Ballade – ein Ur-Ei“ (geänderte Fassung in Woche 2: Nr. 6 und 7 geschärft) austeilen und einkleben lassen. Herumgehen. Typische Hürde: Höhepunkt (Nr. 5) – die Stelle, an der sich alles entscheidet (der Schotte steht vor dem Bett und sieht die Nase). Bei Nr. 6 Bezug zur Verb-Einheit: Woran erkennst du das Präteritum? (war, kroch, lief).");
 // Aufdeck je Gattung
 const AUF = [
   [GC.ly, "Lyrik – wie ein Gedicht", [["1", "11 Strophen mit je 5 Versen"], ["2", "Paarreim (aabb), z. B. Riesenart / Bart (Str. 1)"], ["3", "„… Paddy Fingal“ – der Kehrreim (wird leicht abgewandelt)"]]],
-  [GC.ep, "Epik – wie eine Erzählung", [["4", "Figuren: Paddy Fingal, Schaya, der Schotte (* die Nachbarn)"], ["5", "Anfang Str. 1–3 · Höhepunkt Str. 8–9 (der Schotte sieht die Nase) · Ende Str. 10–11"], ["6", "Präteritum, z. B. „Paddy Fingal war von Riesenart“ (Str. 1), „Ins Bette Paddy Fingal kroch“ (Str. 5)"]]],
-  [GC.dr, "Dramatik – wie ein Theaterstück", [["7", "Wörtliche Rede: Paddy (Str. 4), der Schotte (Str. 6, 9), Schaya (Str. 7)"], ["* 8", "Paddy gegen den Schotten – Frage: Findet der Schotte Paddy? Wer ist stärker?"]]],
+  [GC.ep, "Epik – wie eine Erzählung", [["4", "Figuren: Paddy Fingal, Schaya, der Schotte (* die Nachbarn)"], ["5", "Anfang Str. 1–3 · Höhepunkt Str. 8–9 (der Schotte sieht die Nase) · Ende Str. 10–11"], ["6", "Er-Erzähler · Präteritum („war“, „kroch“) · er leitet Figurenrede ein, z. B. Str. 4, V. 16 „Da lief er heim in jähem Schreck:“ oder Str. 6, V. 29"]]],
+  [GC.dr, "Dramatik – wie ein Theaterstück", [["7", "Str. 7 (Schaya) oder Str. 9 (der Schotte): die ganze Strophe ist Figurenrede, kein Erzähler"], ["* 8", "Paddy gegen den Schotten – Frage: Findet der Schotte Paddy? Wer ist stärker?"]]],
 ];
 AUF.forEach(([c, title, rows], k) => {
-  const s = base("Auswerten · Ü2 gemeinsam prüfen", "Ü2  Lösung – " + title, "Erst einen Schüler seine Lösung mit Strophe nennen lassen, dann aufdecken. Alle verbessern mit Grün." + (k === 1 ? " Bei Nr. 5 sind andere begründete Grenzen auch richtig." : "") + (k === 2 ? " Nr. 7: Es reicht, zwei Figuren mit Strophe zu nennen." : ""));
+  const s = base("Auswerten · Ü2 gemeinsam prüfen", "Ü2  Lösung – " + title, "Erst einen Schüler seine Lösung mit Strophe nennen lassen, dann aufdecken. Alle verbessern mit Grün." + (k === 1 ? " Bei Nr. 5 sind andere begründete Grenzen auch richtig." : "") + (k === 2 ? " Nr. 7: Wörtliche Rede allein reicht nicht – entscheidend ist, dass kein Erzähler dazwischen ist." : ""));
   box(s, 0.6, 1.55, 12.1, 0.12, c);
   rows.forEach(([n, x], i) => {
     const y = 1.9 + i * 1.2;
@@ -181,25 +199,27 @@ AUF.forEach(([c, title, rows], k) => {
 });
 // Zielcheck
 {
-  const s = base("Auswerten", "Zielcheck: Hast du das Ziel erreicht?", "Allein im Heft, 4 Minuten, dann Lösungsfolie. Herumgehen: Wer noch Fehler hat, wird am Montag in der Wiederholung gezielt drangenommen.");
-  txt(s, "Ordne jede Stelle einer Gattung zu: Lyrik, Epik oder Dramatik. Begründe mit dem Merkmal.", { x: 0.6, y: 1.6, w: 12.1, h: 0.5, fontSize: 19, bold: true });
-  [["A", "Riesenart – Bart", "Str. 1"], ["B", "Da lief er heim in jähem Schreck.", "Str. 4, V. 16"], ["C", "„O Schaya, birg mich im Versteck!“", "Str. 4, V. 17"]].forEach(([k, x, st], i) => {
-    const y = 2.3 + i * 1.15;
-    box(s, 0.6, y, 12.1, 0.95, LIGHT);
-    txt(s, k, { x: 0.85, y: y + 0.18, w: 0.6, h: 0.6, fontSize: 28, bold: true, color: RED, fontFace: HEAD });
-    txt(s, x, { x: 1.6, y: y + 0.22, w: 8.6, h: 0.55, fontSize: 24, fontFace: HEAD });
-    txt(s, st, { x: 10.3, y: y + 0.3, w: 2.2, h: 0.4, fontSize: 15, color: MUTED, align: "right" });
+  const s = base("Auswerten", "Zielcheck: Hast du das Ziel erreicht?", "Allein im Heft, 4 Minuten, dann Lösungsfolie. D ist der Prüfstein: Hier steht zwar wörtliche Rede, aber der Erzähler leitet sie ein. Herumgehen: Wer noch Fehler hat, wird am Montag in der Wiederholung gezielt drangenommen.");
+  txt(s, "Ordne jede Stelle einer Gattung zu: Lyrik, Epik oder Dramatik. Begründe mit dem Merkmal.", { x: 0.6, y: 1.5, w: 12.1, h: 0.45, fontSize: 18, bold: true });
+  [["A", "Riesenart – Bart", "Str. 1"], ["B", "Da lief er heim in jähem Schreck.", "Str. 4, V. 16"], ["C", "„Ist das ein Baby, wie Ihr sagt, / ein Narr, wer’s mit ihm selber wagt!“", "Str. 9, V. 43–44"]].forEach(([k, x, st], i) => {
+    const y = 2.05 + i * 0.9;
+    box(s, 0.6, y, 12.1, 0.78, LIGHT);
+    txt(s, k, { x: 0.85, y: y + 0.12, w: 0.6, h: 0.55, fontSize: 24, bold: true, color: RED, fontFace: HEAD });
+    txt(s, x, { x: 1.6, y: y + 0.16, w: 8.9, h: 0.5, fontSize: 19, fontFace: HEAD });
+    txt(s, st, { x: 10.4, y: y + 0.22, w: 2.1, h: 0.4, fontSize: 14, color: MUTED, align: "right" });
   });
+  box(s, 0.6, 4.85, 12.1, 1.2, LIGHT2, { line: RED, lw: 1.5 });
+  txt(s, [{ text: "D  Prüfstein: ", options: { bold: true, color: RED } }, { text: "„Da lief er heim in jähem Schreck: / O Schaya, birg mich im Versteck!“ (Str. 4, V. 16–17)\n", options: { fontFace: HEAD } }, { text: "Epik oder Dramatik? Begründe." , options: { bold: true } }], { x: 0.9, y: 4.97, w: 11.6, h: 1.0, fontSize: 18 });
   zeit(s, "4 Minuten · allein im Heft");
 }
 {
-  const s = base("Auswerten · Selbstkontrolle", "Zielcheck – Lösung", "Mit Grün verbessern. Alles richtig? Dann ist das Ziel erreicht.");
-  [["A", GC.ly, "Lyrik", "Reim: Riesenart und Bart klingen ab dem betonten Vokal gleich (Paarreim)."], ["B", GC.ep, "Epik", "Ein Erzähler erzählt, was passiert – im Präteritum („lief“)."], ["C", GC.dr, "Dramatik", "Eine Figur spricht selbst: wörtliche Rede von Paddy."]].forEach(([k, c, g, x], i) => {
-    const y = 1.7 + i * 1.3;
-    box(s, 0.6, y, 12.1, 1.1, LIGHT);
-    s.addShape(pres.shapes.RECTANGLE, { x: 0.6, y, w: 0.12, h: 1.1, fill: { color: c }, line: { type: "none" } });
-    txt(s, [{ text: k + "  ", options: { bold: true, color: RED } }, { text: g + ": ", options: { bold: true, color: c } }, { text: x }], { x: 0.95, y: y + 0.27, w: 11.5, h: 0.6, fontSize: 21 });
+  const s = base("Auswerten · Selbstkontrolle", "Zielcheck – Lösung", "Mit Grün verbessern. Bei D gilt auch eine gut begründete andere Antwort, wenn das Merkmal „Erzähler“ richtig benutzt wird.");
+  [["A", GC.ly, "Lyrik", "Reim: Riesenart und Bart klingen ab dem betonten Vokal gleich (Paarreim)."], ["B", GC.ep, "Epik", "Ein Erzähler erzählt, was passiert – im Präteritum („lief“)."], ["C", GC.dr, "Dramatik", "Die ganze Strophe ist Rede des Schotten – kein Erzähler dazwischen."], ["D", GC.ep, "Epik", "Zwar wörtliche Rede – aber der Erzähler leitet sie ein („Da lief er heim …:“). Er vermittelt."]].forEach(([k, c, g, x], i) => {
+    const y = 1.6 + i * 1.05;
+    box(s, 0.6, y, 12.1, 0.9, LIGHT);
+    s.addShape(pres.shapes.RECTANGLE, { x: 0.6, y, w: 0.12, h: 0.9, fill: { color: c }, line: { type: "none" } });
+    txt(s, [{ text: k + "  ", options: { bold: true, color: RED } }, { text: g + ": ", options: { bold: true, color: c } }, { text: x }], { x: 0.95, y: y + 0.2, w: 11.5, h: 0.55, fontSize: 19 });
   });
-  txt(s, "Verbessere mit Grün. Alles richtig? Dann hast du das Ziel erreicht.", { x: 0.6, y: 5.75, w: 12.1, h: 0.5, fontSize: 20, bold: true, align: "center" });
+  txt(s, "Verbessere mit Grün. Alles richtig? Dann hast du das Ziel erreicht.", { x: 0.6, y: 5.95, w: 12.1, h: 0.45, fontSize: 19, bold: true, align: "center" });
 }
 pres.writeFile({ fileName: "Freitag_06-11_Deutsch_7A.pptx" });

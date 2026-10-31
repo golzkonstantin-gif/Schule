@@ -255,13 +255,14 @@ const rows = [
   r("der Paarreim · der Kreuzreim · der umarmende Reim", "aabb · abab · abba", "**rym parzysty** · **krzyżowy** · **okalający**", ""),
   r("der Kehrreim (Refrain)", "", "**refren**", "„… Paddy Fingal!“"),
   r("die Lyrik · die Epik · die Dramatik", "", "**liryka** · **epika** · **dramat**", "Die Ballade ist ein „Ur-Ei“."),
-  r("der Erzähler · die Figur", "die Figuren", "**narrator** · **postać**", "Paddy, Schaya, der Schotte"),
+  r("der Erzähler · die Figur", "Er-/Ich-Erzähler · die Figuren", "**narrator** (w 3. albo 1. osobie) · **postać**", "Paddy, Schaya, der Schotte"),
   r("die Handlung · der Höhepunkt", "", "**akcja (fabuła)** · **punkt kulminacyjny**", "Der Schotte sieht die Nase."),
-  r("die wörtliche Rede", "", "**mowa niezależna**", "„O Schaya, birg mich im Versteck!“"),
+  r("die wörtliche Rede", "", "**mowa niezależna** – jest w epice i w dramacie", "„O Schaya, birg mich im Versteck!“"),
+  r("mit / ohne Erzähler", "", "**z narratorem** (epika) · **bez narratora** (dramat)", "Str. 7: nur Schaya spricht"),
   r("die Spannung · der Konflikt", "", "**napięcie** · **konflikt**", "Paddy gegen den Schotten"),
   r("die Zwischenüberschrift · gliedern", "", "**śródtytuł** · **podzielić tekst na części**", "Str. 10: Flucht"),
   sec("6  Meine neuen Wörter", "moje nowe słowa – dopisuj sama", MUTED),
-  ...Array.from({ length: 10 }, () => row([cell(p(t("")), { w: DW, borders: bd }), cell(p(t("")), { w: PLW, borders: bd, fill: "FBFCFF" }), cell(p(t("")), { w: BW2, borders: bd })], 520)),
+  ...Array.from({ length: 8 }, () => row([cell(p(t("")), { w: DW, borders: bd }), cell(p(t("")), { w: PLW, borders: bd, fill: "FBFCFF" }), cell(p(t("")), { w: BW2, borders: bd })], 520)),
 ];
 
 const doc = [

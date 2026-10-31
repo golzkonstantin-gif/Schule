@@ -171,7 +171,7 @@ const doc = [
   p([t("Freitag, 6.11. · Paddy Fingal – die Ballade als „Ur-Ei“", { font: "Cambria", bold: true, size: 26, color: NAVY }), pls("   Piątek, 6.11. – pomoc do lekcji", { size: 18 })], { after: 30 }),
   de2([s("Ziel: ", { bold: true, color: GRN }), s("Ich kann an Paddy Fingal mit Belegen zeigen, dass eine Ballade Merkmale von Lyrik, Epik und Dramatik hat.", { italics: true })]),
   pl2("Cel: Potrafię na przykładzie „Paddy Fingal“ pokazać z dowodami (strofa), że ballada ma cechy liryki, epiki i dramatu."),
-  pl2("Przebieg: 1 Powtórka: układ rymów i pojęcia (Ü1) · 2 Ballada jako „Ur-Ei“ · 3 Ü2 Udowodnij cechy na balladzie (karteczka) · 4 Sprawdzenie celu (Zielcheck)"),
+  pl2("Przebieg: 1 Powtórka: układ rymów i pojęcia (Ü1) · 2 Ballada jako „Ur-Ei“: trzy krótkie teksty o treningu · 3 Ü2 Udowodnij cechy na balladzie (karteczka) · 4 Sprawdzenie celu (Zielcheck)"),
 
   hd("Ü1 · Wiederholung", "powtórka", GRN),
   de2([s("a ", { bold: true }), s("Bestimme das Reimschema von Strophe 11 und nenne die Reimart. "), s("b ", { bold: true }), s("Erkläre in je einem Satz: Strophe · Vers · Kehrreim.")]),
@@ -181,19 +181,22 @@ const doc = [
   pl2("Goethe nazwał balladę „Ur-Ei“ (prajajo): w niej są wszystkie trzy rodzaje literackie (Gattungen). Niemieckie pojęcia zostają po niemiecku – po polsku tylko wyjaśnienie:", { after: 20 }),
   wtab([
     ["die Gattung", "rodzaj literacki"], ["die Lyrik", "jak wiersz albo tekst piosenki"],
-    ["die Epik", "jak powieść albo relacja z meczu"], ["die Dramatik", "jak scena z serialu: postacie mówią same"],
-    ["der Erzähler", "osoba (głos), która opowiada"], ["die Figur", "postać w tekście"],
+    ["die Epik", "jest narrator (Erzähler), który opowiada – w 3. osobie albo w 1. osobie (Ich-Erzähler)"], ["die Dramatik", "nie ma narratora – postacie mówią same, jak na scenie"],
+    ["der Erzähler · der Ich-Erzähler", "narrator · narrator w 1. osobie („ich“)"], ["die Figur · die Figurenrede", "postać · słowa postaci"],
     ["die Handlung · der Höhepunkt", "akcja · moment kulminacyjny"], ["das Präteritum", "czas przeszły, w którym się opowiada"],
-    ["die wörtliche Rede", "dokładne słowa postaci w „…“"], ["die Spannung · der Konflikt", "napięcie · konflikt (kto przeciw komu)"],
+    ["die wörtliche Rede", "słowa postaci w „…“ – są w epice i w dramacie!"], ["die Spannung · der Konflikt", "napięcie · konflikt (kto przeciw komu)"],
+    ["die Regieanweisung", "wskazówka w nawiasie, co robi postać (w dramacie)"], ["einleiten", "wprowadzić (np. „…“, rief mein Trainer)"],
   ]),
 
+  de2([s("Ein Training – drei Gattungen: ", { bold: true }), s("Welcher Text ist Lyrik, Epik, Dramatik? Woran erkennst du das?")], { before: 30 }),
+  pl2("Na prezentacji ta sama sytuacja z treningu jest trzy razy: A, B, C. Z sąsiadem przyporządkuj teksty i zapisz jedną cechę. Wskazówka: Kto tu opowiada – i czy w ogóle jest narrator? Ważne: słowa postaci (wörtliche Rede) są i w epice, i w dramacie. O gatunku decyduje, czy jest narrator."),
   hd("Ü2 · Ur-Ei-Schnipsel", "karteczka", VIO),
   de2([s("Weise jedes Merkmal an Paddy Fingal nach. Notiere die Strophe.")]),
   pl2("Na karteczce udowodnij każdą cechę na balladzie i zapisz numer strofy (Str.). Nr 1–3 już znasz (Lyrik).", { after: 10 }),
-  pl2("1 Ile strof i ile wersów w strofie? · 2 Jaki rym w wersach 1–4? Podaj przykład. · 3 Jakimi słowami kończy się każda strofa (Kehrreim)? · 4 Wypisz postacie (Figuren). · 5 W których strofach jest początek, Höhepunkt i koniec? · 6 W jakim czasie opowiada Erzähler? Podaj przykład. · 7 Kto mówi w wörtliche Rede i w której strofie? · *8 Kto jest przeciwko komu? Jakie pytanie trzyma w napięciu?"),
+  pl2("1 Ile strof i ile wersów w strofie? · 2 Jaki rym w wersach 1–4? Podaj przykład. · 3 Jakimi słowami kończy się każda strofa (Kehrreim)? · 4 Wypisz postacie (Figuren). · 5 W których strofach jest początek, Höhepunkt i koniec? · 6 Czy to Er- czy Ich-Erzähler? W jakim czasie opowiada? Gdzie narrator wprowadza słowa postaci (strofa, wers)? · 7 Która cała strofa to tylko słowa postaci, bez narratora? Kto mówi? · *8 Kto jest przeciwko komu? Jakie pytanie trzyma w napięciu?"),
 
-  de2([s("Zielcheck: ", { bold: true }), s("Ordne jede Stelle einer Gattung zu: Lyrik, Epik oder Dramatik. Begründe mit dem Merkmal.")], { before: 40 }),
-  pl2("Sprawdzenie celu: przyporządkuj trzy fragmenty (A, B, C) do Lyrik, Epik albo Dramatik i krótko uzasadnij po niemiecku, np. „…, weil …“. Potem porównaj z rozwiązaniem i popraw na zielono.", { after: 0 }),
+  de2([s("Zielcheck: ", { bold: true }), s("Ordne jede Stelle einer Gattung zu: Lyrik, Epik oder Dramatik. Begründe mit dem Merkmal. D: Epik oder Dramatik?")], { before: 40 }),
+  pl2("Sprawdzenie celu: przyporządkuj fragmenty A, B, C do Lyrik, Epik albo Dramatik i krótko uzasadnij po niemiecku, np. „…, weil …“. D to zadanie sprawdzające (Prüfstein): Epik czy Dramatik? Pomyśl, czy jest narrator. Potem porównaj z rozwiązaniem i popraw na zielono.", { after: 0 }),
 ];
 const props = { page: { size: { width: 11906, height: 16838 }, margin: { top: 450, bottom: 350, left: 400, right: 400 } } };
 const styles = { default: { document: { run: { font: "Calibri", size: f } } } };
