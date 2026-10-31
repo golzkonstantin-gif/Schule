@@ -279,6 +279,9 @@ Die Lehrkraft möchte das weiterverfolgen, noch ohne Material. Die Satzklammer (
     - Das Nacherzählen vom Mittwoch dient als Puffer.
   - Ziel: Ich kann Reime erkennen und das Reimschema einer Strophe bestimmen.
   - Ablauf: A 2′ → V 5′ Ü1 Chat-Fehler → V 4′ Ü2 Belegen → I 9′ Reime an Strophe 1 entdecken, Merkkasten → V 12′ Ü3 Reim-Schnipsel mit Aufdeck-Folien → A 6′ Zielcheck (Str. 6: aabb + Kehrreim; „Ball – Tor – Fall – vor“: Kreuzreim) → * 7′ Puffer Nacherzählen.
+- **Korrekturen der Lehrkraft (31.10., Material Do):**
+  - Bei der Handreichung für S-PL soll es beim deutschen Reimschema und den Buchstaben bleiben.
+  - Beim Reim-Schnipsel soll jeder Schüler seine eigene Sportart bekommen, nicht alle Sportarten. Es gibt also eine Fassung je Sportart. Die Umsetzung wird noch besprochen.
 - **Rückmeldung der Lehrkraft (Do 5.11.):** *(steht noch aus)*
 - **Fr 6.11.:** Ur-Ei (Lyrik, Epik, Dramatik) mit dem Ur-Ei-Schnipsel aus `Woche1/`. Vorher die Wiederholung zu den Reimen.
 - **Rückmeldung der Lehrkraft (Mi 4.11.):** *(steht noch aus)*

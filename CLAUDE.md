@@ -37,6 +37,7 @@ Die folgenden Vorlieben und Reflexionen gelten für die gesamte weitere Planung,
   - Sortier- und Zuordnungsaufgaben erst am Platz oder zu zweit bearbeiten, dann an der Tafel vergleichen.
   - Die Sortierphase in der Stunde „Welche Zeitform wann?“ war chaotisch, weil immer nur ein Schüler beschäftigt war.
 
+- **Sportbezug individuell (Stand 31.10.):** Wenn Übungstexte an den Sport anknüpfen, bekommt jeder Schüler eine Fassung mit seiner eigenen Sportart (z. B. drei Fassungen eines Schnipsels), nicht ein Blatt mit allen Sportarten. Die Fassungen sind gleich aufgebaut (gleiche Nummern, gleiche Lösungsstruktur), damit gemeinsam ausgewertet werden kann.
 - **Alle Klassen der Lehrkraft bestehen aus Leistungssportlern.** Beispiele, Übungssätze und Schreibanlässe dort an Training, Wettkampf, Trainer und Alltag im Leistungssport anknüpfen, **wo es sich anbietet – nicht erzwingen** (Stand 12.10.). Bei literarischen Texten steht der Text im Vordergrund. Die Sportarten der jeweiligen Klasse stehen im Reflexionslog der Klasse.
 
 - **Lesetraining nach den Methodenkarten der Schule (Stand 12.10.):** Tandemlesen, chorisches Lesen, Ich-Du-Wir-Würfeln, Blitzlesen und Lautlesetraining mit Hörbüchern (siehe `Methoden/Methodenkarten_Lesetraining.md`). Regelmäßig und kurz einbauen, wo Texte gelesen werden, und im Tafelskript die Methode benennen.
