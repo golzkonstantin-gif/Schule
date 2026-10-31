@@ -287,6 +287,7 @@ Die Lehrkraft möchte das weiterverfolgen, noch ohne Material. Die Satzklammer (
     - Handreichung für S-PL: Fachbegriffe und Reimschema bleiben deutsch (Paarreim aabb usw.), auf Polnisch steht nur, welche Verse sich reimen. Die Übersetzungen der Übungstexte sind entfallen, dafür gibt es eine Wortliste passend zu ihrer Fassung.
 - **Rückmeldung der Lehrkraft (Do 5.11.):** *(steht noch aus)*
 - **Fr 6.11.:** Ur-Ei (Lyrik, Epik, Dramatik) mit dem Ur-Ei-Schnipsel aus `Woche1/`. Vorher die Wiederholung zu den Reimen.
+- **Idee der Lehrkraft für Mo 9.11. (Hospitation):** Strophe, Vers und Reimschema wiederholen. Dann schreiben die Schüler selbst Reime nach einem vorgegebenen Schema, themenorientiert und mit Formulierungshilfen. Wird nach Freitag geplant.
 - **Rückmeldung der Lehrkraft (Mi 4.11.):** *(steht noch aus)*
 
 ### Woche 1: „Paddy Fingal – Lesetechniken“ (Mi 14.10., nach der Leistungskontrolle), „Paddy Fingal gliedern und nacherzählen“ (Do), „Ur-Ei“ (Fr) – AVIVA
