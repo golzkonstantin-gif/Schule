@@ -109,15 +109,15 @@ function ueb(s, rows, solved) {
   num(s); s.addNotes(`13–15 Min. Direkt: laut denken. „Abschnitt ${NR.A} sagt: Er hat das Recht. Abschnitt ${NR.B} sagt: Die Adelsfamilien bestimmen, wie man stimmt. Das ist ein Gegensatz – also passt ‚Aber‘ in die Lücke: ‚Aber die großen Adelsfamilien geben … den Ton an.‘ Der Satz stimmt, ich streiche ‚aber‘ unten auf dem Blatt ab.“ Dann die Warnung vorlesen. Gruppen zu dritt bilden, Sets liegen bereit.`); }
 
 // 13 Auftrag
-{ const s = slide(); title(s, "Mystery · zu dritt", 3); tag(s, "14 Min.");
+{ const s = slide(); title(s, "Mystery · zu dritt", 3); tag(s, "12 Min.");
   steps(s, ["Ausschneiden – jeder liest seine Abschnitte vor.", "Kette legen: Was gehört zusammen?", "Wörter von unten in die Lücken, abstreichen.", "Jeder schreibt die Antwort ins Heft.", "Fest? Hilfe 1, 2, 3 vom Pult holen."], 1.35, 0.72);
-  num(s); s.addNotes("15–29 Min. Indirekt: Die Gruppen erschließen die neuen Informationen selbst. Umhergehen, zuhören; Stolpersteine und Hilfen in der Handreichung. Nach 10 Min. Folie 14 zeigen: „Noch 4 Minuten – jetzt schreibt jeder die Antwort.“"); }
+  num(s); s.addNotes("15–27 Min. Indirekt: Die Gruppen erschließen die neuen Informationen selbst. Umhergehen, zuhören; Stolpersteine und Hilfen in der Handreichung. Nach 9 Min. Folie 14 zeigen: „Noch 3 Minuten – jetzt schreibt jeder die Antwort.“"); }
 
 // 14 Satzanfänge
-{ const s = slide(); title(s, "Eure Antwort ins Heft", 3); tag(s, "4 Min.");
+{ const s = slide(); title(s, "Eure Antwort ins Heft", 3); tag(s, "3 Min.");
   ["„Vorher war Lysias …, aber …“", "„Nach dem Sturz des Hippias …“", "„Kleisthenes teilte …“", "„Dadurch …, deshalb kann Lysias jetzt …“"].forEach((t, i) =>
     boxText(s, t, 0.45, 1.35 + i * 0.95, 9.1, 0.8, i % 2 ? C.white : C.sand, C.dark, { italic: true }));
-  num(s); s.addNotes("25–29 Min. Während die Gruppen schreiben, stehen lassen."); }
+  num(s); s.addNotes("24–27 Min. Während die Gruppen schreiben, stehen lassen."); }
 
 // 15 Lösungskette
 { const s = slide(); title(s, "Die Lösung", 3); tag(s, "Lösung", C.gold, C.dark);
@@ -127,35 +127,64 @@ function ueb(s, rows, solved) {
     s.addText(l, { isTextBox: true, shape: pres.shapes.ROUNDED_RECTANGLE, rectRadius: 0.08, x: 0.45, y, w: 2.3, h: 0.62, fill: { color: col }, color: C.white, fontFace: B, fontSize: MIN, bold: true, align: "center", valign: "middle", margin: 0 });
     txt(s, t, { x: 2.95, y, w: 6.6, h: 0.62, valign: "middle", bold: i === 4 });
   });
-  num(s); s.addNotes(`29–33 Min. Zwei Gruppen lesen vom Platz vor, du trägst die Kette an der Tafel ein. Abschnitte: Vorher ${NR.A}+${NR.B}, Wende ${NR.C}+${NR.D}, Reform ${NR.E}+${NR.F}, Folge ${NR.G}; Zusatz ${NR.H} (Ostrakismos). Verbindungswörter: aber – doch dann – daraufhin – danach – daraus – dadurch – (deshalb) – außerdem. Vergleich mit der Vermutung: Wie nah wart ihr dran?`); }
+  num(s); s.addNotes(`27–29 Min. Zwei Gruppen lesen vom Platz vor, du trägst die Kette an der Tafel ein (zügig – die Einzelheiten klärt danach die Vorher-Nachher-Grafik). Abschnitte: Vorher ${NR.A}+${NR.B}, Wende ${NR.C}+${NR.D}, Reform ${NR.E}+${NR.F}, Folge ${NR.G}; Zusatz ${NR.H} (Ostrakismos). Verbindungswörter: aber – doch dann – daraufhin – danach – daraus – dadurch – (deshalb) – außerdem. Vergleich mit der Vermutung: Wie nah wart ihr dran?`); }
 
-// 16 Schaubild
-{ const s = slide(); title(s, "Mischen statt enteignen", 3); tag(s, "Ergebnis", C.gold, C.dark);
-  const R = [["Stadt", "C9962A"], ["Küste", C.blue], ["Binnenland", C.green]];
-  R.forEach(([n, col], r) => {
-    const y = 1.35 + r * 0.95;
-    txt(s, n, { x: 0.45, y, w: 1.95, h: 0.55, bold: true, color: col, valign: "middle" });
-    for (let i = 0; i < 10; i++) s.addShape(pres.shapes.RECTANGLE, { x: 2.45 + i * 0.19, y: y + 0.05, w: 0.15, h: 0.45, fill: { color: col }, line: { color: C.white, width: 0.5 } });
+// 16 Vorher: eine alte Phyle
+const COL = { stadt: "C9962A", kueste: C.blue, binnen: C.green };
+{ const s = slide(); title(s, "Vorher: die alte Phyle", 3); tag(s, "gemeinsam");
+  card(s, 0.45, 1.3, 5.6, 3.2, C.sand);
+  txt(s, "Alte Phyle (nach Familie)", { x: 0.65, y: 1.35, w: 5.3, h: 0.5, bold: true, valign: "middle" });
+  boxText(s, "Adliger", 0.65, 1.95, 2.4, 0.6, C.dark, C.white, { bold: true, align: "center", margin: 0 });
+  boxText(s, "Lysias", 3.35, 1.95, 2.4, 0.6, C.white, C.dark, { bold: true, align: "center", margin: 0 });
+  ["Paiania", "Dorf B", "Dorf C", "Dorf D", "Dorf E", "Dorf F"].forEach((d, k) =>
+    boxText(s, d, 0.65 + (k % 3) * 1.8, 2.75 + Math.floor(k / 3) * 0.8, 1.65, 0.65, COL.binnen, C.white, { align: "center", margin: 0 }));
+  txt(s, "Gefolgsleute aus 6 Dörfern: ein Block", { x: 6.25, y: 1.4, w: 3.3, h: 1.4, bold: true, color: C.terra });
+  txt(s, "100 davon im Rat der 400", { x: 6.25, y: 2.95, w: 3.3, h: 1.2 });
+  boxText(s, "Der Adlige bestimmt, wie sein Block abstimmt.", 0.45, 4.65, 9.1, 0.7, C.dark, C.gold, { bold: true });
+  num(s); s.addNotes("29–32 Min. Direkt erklären, an der Grafik zeigen: Vor der Reform gehören der Adlige und seine Gefolgsleute aus sechs Dörfern alle zur selben alten Phyle – sie sind nach Familie und Abstammung gebildet. Im Rat der 400 (100 je Phyle) sitzen seine Leute als Block, in der Volksversammlung stimmen sie offen mit ihm. Prüffrage an 2 Schüler: „Warum traut sich Lysias nicht, anders zu stimmen?“ (er ist abhängig, alle um ihn herum gehören zum Adligen, jeder sieht sein Handzeichen)."); }
+
+// 17 Nachher: drei neue Phylen
+{ const s = slide(); title(s, "Nachher: zehn neue Phylen", 3); tag(s, "gemeinsam");
+  [["Pandionis", "Paiania · B"], ["Phyle 2", "Dorf C · D"], ["Phyle 3", "Dorf E · F"]].forEach(([ph, dd], c) => {
+    const x = 0.45 + c * 3.05;
+    txt(s, ph, { x, y: 1.25, w: 2.9, h: 0.5, bold: true, align: "center", valign: "middle", fontFace: H });
+    boxText(s, "Stadt", x, 1.8, 2.9, 0.6, COL.stadt, C.white, { align: "center", margin: 0 });
+    boxText(s, "Küste", x, 2.45, 2.9, 0.6, COL.kueste, C.white, { align: "center", margin: 0 });
+    boxText(s, dd, x, 3.1, 2.9, 0.6, COL.binnen, C.white, { align: "center", bold: true, margin: 0 });
   });
-  s.addShape(pres.shapes.LINE, { x: 4.4, y: 2.3, w: 0.5, h: 0, line: { color: C.dark, width: 3, endArrowType: "triangle" } });
-  for (let p = 0; p < 10; p++) {
-    const x = 5.05 + (p % 5) * 0.9, y = 1.3 + Math.floor(p / 5) * 1.35;
-    R.forEach(([, col], r) => s.addShape(pres.shapes.RECTANGLE, { x, y: y + r * 0.38, w: 0.74, h: 0.36, fill: { color: col }, line: { color: C.white, width: 1 } }));
-  }
-  boxText(s, "3 Gebiete × 10 Trittyen → 10 gemischte Phylen → je 50 Männer im Rat der 500", 0.45, 4.15, 9.1, 1.0, C.dark, C.gold, { bold: true });
-  num(s); s.addNotes("33–38 Min. Links: Stadt, Küste, Binnenland mit je 10 Trittyen. Rechts: 10 neue Phylen, jede mit einem Stück aus jedem Gebiet (durch das Los). Prüffragen an 3–4 Schüler: „Warum gerade drei Gebiete mischen?“ (damit keine Familie eine Phyle beherrscht) – „Was verliert der Adlige, was behält er?“ (verliert die geschlossene Gefolgschaft, behält Land und Vermögensklasse). *Ostrakismos nur bei Zeit."); }
+  txt(s, "+ 7 weitere Phylen · jede: ⅓ Stadt, ⅓ Küste, ⅓ Binnenland", { x: 0.45, y: 3.8, w: 9.1, h: 0.5, valign: "middle", color: C.muted });
+  boxText(s, "Niemand zieht um – aber die Gefolgsleute sind jetzt in drei Phylen.", 0.45, 4.4, 9.1, 0.95, C.dark, C.gold, { bold: true });
+  num(s); s.addNotes("32–35 Min. Laut denken, an der Grafik zeigen: „Alle wohnen weiter in ihrem Dorf. Neu ist nur, zu welcher Phyle ihr Dorf gehört. Die sechs Dörfer liegen in drei verschiedenen Bezirken (Trittyen) des Binnenlandes – das Los teilt diese Bezirke drei verschiedenen Phylen zu. Lysias und der Adlige wohnen beide in Paiania und bleiben deshalb zusammen in Pandionis. Aber dort kommen zwei Drittel aus Stadt und Küste – Fischer und Handwerker, die nichts vom Adligen wollen.“ Warnung vor dem Fehler: Der Adlige wird nicht versetzt und vertritt kein Gebiet; verteilt werden die Dörfer. Wichtig: In der Volksversammlung stimmt jeder einzeln – die Phyle zählt im Rat der 500, im Heer und bei der Bürgerliste. Prüffragen an 3–4 Schüler: „Zieht jemand um?“ (nein) – „In wie vielen Phylen sind die Gefolgsleute jetzt?“ (drei) – „Wer sitzt mit Lysias in seiner Phyle?“ (zu zwei Dritteln Leute aus Stadt und Küste)."); }
+
+// 18 Auftrag Vorher-Nachher-Tabelle
+{ const s = slide(); title(s, "Vorher – Nachher", 3); tag(s, "3 Min.");
+  steps(s, ["Nimm das A5-Blatt „Was hat sich geändert?“.", `Ergänze „Nachher“ mit den Abschnitten ${NR.E}, ${NR.F}, ${NR.G}.`, "Notiere unten, was gleich bleibt.", "Vergleiche gleich mit der Lösung."], 1.35, 0.85);
+  num(s); s.addNotes("35–38 Min. Allein, dann mit dem Nachbarn vergleichen. Durch die Reihen gehen und mitlesen: Steht bei „Gefolgsleute“ wirklich „in drei Phylen“ – und nicht „der Adlige zieht um“?"); }
+
+// 19–20 Lösung Vorher-Nachher
+[[0, 3], [3, 6]].forEach(([a, b], n) => { const s = slide(); title(s, `Lösung (${n + 1}/2)`, 3); tag(s, "Lösung", C.gold, C.dark);
+  const xs = [0.45, 2.85, 6.05], ws = [2.3, 3.1, 3.5];
+  ["", "Vorher", "Nachher"].forEach((t, i) => t && boxText(s, t, xs[i], 1.3, ws[i], 0.55, C.dark, C.white, { bold: true, align: "center", margin: 0 }));
+  D.vergleich.slice(a, b).forEach(([, , , m, v, nn], r) => {
+    const y = 1.95 + r * 0.85;
+    boxText(s, m, xs[0], y, ws[0], 0.75, C.sand, C.dark, { bold: true, margin: 0 });
+    txt(s, v, { x: xs[1] + 0.1, y, w: ws[1] - 0.1, h: 0.75, valign: "middle" });
+    txt(s, nn, { x: xs[2] + 0.1, y, w: ws[2] - 0.1, h: 0.75, valign: "middle", bold: true, color: C.terra });
+  });
+  if (n === 1) boxText(s, "Gleich bleiben: Wohnort, Besitz, Klassen, Stimmrecht.", 0.45, 4.6, 9.1, 0.7, C.dark, C.gold, { bold: true });
+  num(s); s.addNotes(n === 0 ? "38–39 Min. Zeile für Zeile aufdecken, Stichproben vom Platz, alle verbessern im Blatt." : "Ausführlich im Blatt (A5) und in der Handreichung. Gelenkstelle: „Kleisthenes hat also nicht die Rechte geändert, sondern mit wem man zusammengehört – das ist der Kern der Abschlussaufgabe.“"); });
 
 // 17 Abschlussaufgabe
 { const s = slide(); title(s, "Abschlussaufgabe", 4); tag(s, "4 Min.");
   boxText(s, "Kleisthenes änderte Solons Vermögensklassen nicht – trotzdem gilt er als „Wegbereiter der Demokratie“. Erkläre in 3 Sätzen.", 0.45, 1.3, 9.1, 1.75, C.dark, C.white, { bold: true });
   ["„Solon gab den Bürgern …, aber …“", "„Kleisthenes änderte nicht …, sondern …“", "„Dadurch konnten die Bürger …“"].forEach((t, i) =>
     txt(s, t, { x: 0.6, y: 3.25 + i * 0.6, w: 9, h: 0.55, italic: true, valign: "middle" }));
-  num(s); s.addNotes("38–42 Min. Prüfaufgabe zum Ziel, allein ins Heft. Danach gezielt zwei Schüler unterschiedlichen Niveaus vorlesen lassen. Diese Phase nie kürzen."); }
+  num(s); s.addNotes("39–43 Min. Prüfaufgabe zum Ziel, allein ins Heft. Danach gezielt zwei Schüler unterschiedlichen Niveaus vorlesen lassen. Diese Phase nie kürzen."); }
 
 // 18 Beispielantwort
 { const s = slide(); title(s, "So könnte es lauten", 4); tag(s, "Lösung", C.gold, C.dark);
   txt(s, "„Solon gab allen Bürgern das Stimmrecht, aber viele blieben an ihren Adelsherrn gebunden. Kleisthenes änderte nicht die Rechte, sondern die Bindungen: Er mischte die Bürger in neuen Phylen. Dadurch konnten sie frei abstimmen.“", { x: 0.45, y: 1.3, w: 9.1, h: 3.6, italic: true });
-  num(s); s.addNotes("42–44 Min. Vergleichen."); }
+  num(s); s.addNotes("43–44 Min. Vergleichen."); }
 
 // 19 Ziel erreicht?
 { const s = slide(C.dark); aviva(s, 4, true);

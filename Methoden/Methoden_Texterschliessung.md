@@ -18,6 +18,7 @@ Erprobt in Geschichte 11: **Entscheidungsfälle** („Bürgeramt Athen“, sehr 
 - **Verbindungswörter-Leiste** unten auf dem Blatt (aber, doch dann, daraufhin, danach, daraus, dadurch, außerdem) zum Abstreichen. Die Abschnitte beginnen mit einer **Lücke am Satzanfang**, sodass mit dem Verbindungswort ein grammatischer Satz entsteht.
 - Abschnitte gemischt nummerieren; Lösungsblatt mit den Abschnitten in Verbindung für die Lehrkraft.
 - Vorher: Vermutung aufschreiben (Aha), Begriffe klären, zwei Abschnitte vormachen. Gestufte Hilfen (3 Karten am Pult).
+- **Nach dem Mystery eine eindeutige Sicherung:** Die Kette mit Verbindungswörtern zeigt den Zusammenhang, aber nicht zweifelsfrei den Mechanismus. Deshalb danach eine **Vorher-Nachher-Grafik** (gemeinsam besprechen, Prüffragen) und eine **Vorher-Nachher-Tabelle** zum Ergänzen. Abschnitte konkret formulieren (Beispiel mit Zahlen, „niemand zieht um“), keine abstrakten Formulierungen wie „Anhänger werden verteilt“.
 - Vorlage und Quellcode: `Geschichte_11/Stunde_Kleisthenes/`.
 
 ## Prüfen und Korrigieren

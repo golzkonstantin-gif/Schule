@@ -36,7 +36,7 @@ function set() {
 const HILFEN = [
   ["Hilfe 1", "Sortiert die Abschnitte zuerst in drei Stapel: VORHER (Lysias' Lage) – DIE WENDE (was passiert in Athen?) – NACHHER (was ist neu?)."],
   ["Hilfe 2", `Legt Abschnitt ${NR.B} und Abschnitt ${NR.F} nebeneinander. Worin unterscheiden sich die alten und die neuen Phylen?`],
-  ["Hilfe 3", `Lest Abschnitt ${NR.F} (letzter Satz) und ${NR.G}: Wo landen die Anhänger des Nachbarn – und mit wem ist Lysias jetzt zusammen? Was bedeutet das für seine Abstimmung?`],
+  ["Hilfe 3", `Lest Abschnitt ${NR.F} und ${NR.G}: In wie vielen Phylen sind die Gefolgsleute des Nachbarn jetzt? Wer sitzt mit Lysias in seiner Phyle? Was bedeutet das für seine Abstimmung?`],
 ];
 function hilfen() {
   return [
