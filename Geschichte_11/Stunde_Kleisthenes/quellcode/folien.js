@@ -192,4 +192,10 @@ const COL = { stadt: "C9962A", kueste: C.blue, binnen: C.green };
   txt(s, "Mittwoch: Wie beschreibt Aristoteles diese Reform?", { x: 0.45, y: 3.6, w: 9.1, h: 0.8, color: "E8DFD0" });
   num(s); s.addNotes("44–45 Min. Rückbezug aufs Ziel, Ausblick auf Mittwoch (Quellenanalyse)."); }
 
+// 24 Erinnerung an den Test
+{ const s = slide(); title(s, "Mittwoch: Test (45 Min.)", 4); tag(s, "Erinnerung");
+  steps(s, ["Die Krise Athens um 600 v. Chr.", "Drakon, Solon, Peisistratos: Maßnahmen", "Herrschaftsformen mit Übersetzung", "Solons Verfassung: das Schaubild", "Sach- und Werturteil erkennen und schreiben"], 1.3, 0.6);
+  boxText(s, "Kleisthenes kommt noch nicht dran.", 0.45, 4.45, 9.1, 0.75, C.dark, C.gold, { bold: true });
+  num(s); s.addNotes("Ganz am Ende (ca. 1 Min.) oder vorab als Hinweis. Lernhilfe: Klausurvorbereitung/Zusammenfassung_Athen_bis_Peisistratos.pdf (ggf. mit Audiodatei). Für das Werturteil die Maßstäbe wiederholen: Gleichheit, Leistung, Schutz der Schwachen, gleiche Regeln."); }
+
 pres.writeFile({ fileName: OUT }).then(() => console.log("done"));
