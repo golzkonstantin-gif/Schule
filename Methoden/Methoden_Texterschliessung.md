@@ -2,7 +2,7 @@
 
 Gilt für alle Klassen und Fächer, vor allem Geschichte. Gemeinsam ist allen Formen: Die Schüler holen sich **neue Informationen selbst aus einem Text** – aber mit einer Aufgabe, die zum Knobeln, Ordnen, Prüfen oder Entscheiden zwingt. Vorgaben der Lehrkraft bleiben gültig: keine Rollenspiele, nichts Albernes, wenig Unterrichtsgespräch, keine Selbsteinschätzung, Lösung nach jeder Aufgabe, im AVIVA-Rahmen meist die Phase **Verarbeiten** (indirekt) nach einem **Vormachen**.
 
-Erprobt in Geschichte 11: **Entscheidungsfälle** („Bürgeramt Athen“, sehr gut angekommen) und **Mystery** („Warum stimmt Lysias anders?“, Kleisthenes; Rückmeldung folgt). Die Lehrkraft möchte das Mystery auch in anderen Klassen einsetzen.
+Erprobt in Geschichte 11: **Entscheidungsfälle** („Bürgeramt Athen“, sehr gut angekommen) und **Mystery** („Warum verliert Thrasymachos seine Macht?“, Kleisthenes; Rückmeldung folgt). Die Lehrkraft möchte das Mystery auch in anderen Klassen einsetzen.
 
 ## Verknüpfen – Zusammenhänge herstellen
 
@@ -18,6 +18,7 @@ Erprobt in Geschichte 11: **Entscheidungsfälle** („Bürgeramt Athen“, sehr 
 - **Verbindungswörter-Leiste** unten auf dem Blatt (aber, doch dann, daraufhin, danach, daraus, dadurch, außerdem) zum Abstreichen. Die Abschnitte beginnen mit einer **Lücke am Satzanfang**, sodass mit dem Verbindungswort ein grammatischer Satz entsteht.
 - Abschnitte gemischt nummerieren; Lösungsblatt mit den Abschnitten in Verbindung für die Lehrkraft.
 - Vorher: Vermutung aufschreiben (Aha), Begriffe klären, zwei Abschnitte vormachen. Gestufte Hilfen (3 Karten am Pult).
+- **Perspektive so wählen, dass der Mechanismus direkt sichtbar wird:** Beim Kleisthenes-Mystery war die Figur des Bauern („stimmt anders“) zu indirekt; aus Sicht des Adligen („verliert seine Macht, obwohl er nichts verliert“) ist die Ursache eindeutig.
 - **Nach dem Mystery eine eindeutige Sicherung:** Die Kette mit Verbindungswörtern zeigt den Zusammenhang, aber nicht zweifelsfrei den Mechanismus. Deshalb danach eine **Vorher-Nachher-Grafik** (gemeinsam besprechen, Prüffragen) und eine **Vorher-Nachher-Tabelle** zum Ergänzen. Abschnitte konkret formulieren (Beispiel mit Zahlen, „niemand zieht um“), keine abstrakten Formulierungen wie „Anhänger werden verteilt“.
 - Vorlage und Quellcode: `Geschichte_11/Stunde_Kleisthenes/`.
 

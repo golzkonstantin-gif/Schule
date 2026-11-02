@@ -18,7 +18,7 @@ function half() {
     cell([P(i === 0 ? n : "", { size: 20, italics: i === 0, color: i === 0 ? C.muted : C.dark })], cw[2])] }));
   return [
     P("GESCHICHTE · KLASSE 11 · KLEISTHENES", { bold: true, size: 15, color: C.terra, after: 30 }),
-    P("Was hat sich für Lysias geändert?", { font: "Cambria", bold: true, size: 28, after: 50 }),
+    P("Was hat sich für Thrasymachos geändert?", { font: "Cambria", bold: true, size: 28, after: 50 }),
     P(`Ergänze die Spalte „Nachher“ mit den Abschnitten ${NR.E}, ${NR.F} und ${NR.G}. Die erste Zeile ist ein Beispiel.`, { size: 17, italics: true, color: C.muted, after: 80 }),
     new Table({ columnWidths: cw, width: { size: HALF, type: WidthType.DXA }, rows: [head, ...rows] }),
     P([R("Was bleibt gleich? ", { bold: true, size: 18, color: C.terra }), R("_______________________________________________", { size: 18, color: C.soft })], { before: 120, after: 40 }),

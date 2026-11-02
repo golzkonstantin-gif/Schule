@@ -23,7 +23,7 @@ function set() {
     P([R("GESCHICHTE · KLASSE 11 · MYSTERY", { bold: true, size: 16, color: C.terra })], { after: 60 }),
     new Table({ columnWidths: [W], width: { size: W, type: WidthType.DXA }, rows: [new TableRow({ children: [new TableCell({ width: { size: W, type: WidthType.DXA },
       shading: { type: ShadingType.CLEAR, color: "auto", fill: C.sand }, borders: { top: none, bottom: none, left: none, right: none }, margins: { top: 120, bottom: 120, left: 180, right: 180 },
-      children: [P([R("Warum stimmt Lysias anders?", { font: "Cambria", bold: true, size: 30 })], { after: 60 }), P([R(D.frage, { size: 21, italics: true })])] })] })] }),
+      children: [P([R(D.titel, { font: "Cambria", bold: true, size: 30 })], { after: 60 }), P([R(D.frage, { size: 21, italics: true })])] })] })] }),
     P([R("Schneidet die acht Abschnitte an den gestrichelten Linien aus.", { size: 17, color: C.muted, italics: true })], { before: 80, after: 80 }),
     new Table({ columnWidths: [HALF, HALF], width: { size: W, type: WidthType.DXA }, rows }),
     P([R("Verbindungswörter: ", { bold: true, size: 21, color: C.terra }), R("Schreibt das passende Wort in die Lücke am Anfang eines Abschnitts und streicht es hier ab. So entsteht ein richtiger Satz.", { size: 19, italics: true, color: C.muted })], { before: 160, after: 80 }),
@@ -34,9 +34,9 @@ function set() {
   ];
 }
 const HILFEN = [
-  ["Hilfe 1", "Sortiert die Abschnitte zuerst in drei Stapel: VORHER (Lysias' Lage) – DIE WENDE (was passiert in Athen?) – NACHHER (was ist neu?)."],
+  ["Hilfe 1", "Sortiert die Abschnitte zuerst in drei Stapel: VORHER (worauf beruht seine Macht?) – DIE WENDE (was passiert in Athen?) – NACHHER (was ist neu?)."],
   ["Hilfe 2", `Legt Abschnitt ${NR.B} und Abschnitt ${NR.F} nebeneinander. Worin unterscheiden sich die alten und die neuen Phylen?`],
-  ["Hilfe 3", `Lest Abschnitt ${NR.F} und ${NR.G}: In wie vielen Phylen sind die Gefolgsleute des Nachbarn jetzt? Wer sitzt mit Lysias in seiner Phyle? Was bedeutet das für seine Abstimmung?`],
+  ["Hilfe 3", `Lest Abschnitt ${NR.F} und ${NR.G}: In wie vielen Phylen sind die Leute des Thrasymachos jetzt? Wer ist mit ihm in seiner Phyle? Was kann er dort noch bestimmen?`],
 ];
 function hilfen() {
   return [

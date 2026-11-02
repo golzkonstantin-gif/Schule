@@ -16,14 +16,14 @@ const link = v => P([R("↓  ", { size: 22, color: C.soft, bold: true }), R(v, {
 
 const children = [
   P([R("GESCHICHTE · KLASSE 11 · MYSTERY · LÖSUNG (LEHRKRAFT)", { bold: true, size: 16, color: C.terra })], { after: 60 }),
-  P([R("Warum stimmt Lysias anders? – die Abschnitte in Verbindung", { font: "Cambria", bold: true, size: 30 })], { after: 60 }),
+  P([R(D.titel + " – die Abschnitte in Verbindung", { font: "Cambria", bold: true, size: 30 })], { after: 60 }),
   P([R("Eine mögliche Lösung. Andere Verbindungen sind richtig, wenn sie den Zusammenhang sinnvoll begründen. Die Nummern entsprechen dem Schülerblatt.", { size: 17, italics: true, color: C.muted })], { after: 120 }),
 ];
 D.loesung.forEach(([v, id], i) => {
   if (v) children.push(link(v));
   else if (id === "Ergebnis") children.push(link("deshalb (eure Antwort)"));
   if (id === "Ergebnis") {
-    children.push(one([P([R("Ergebnis: ", { bold: true, size: 22, color: C.gold, font: "Cambria" }), R("Deshalb ist Lysias nicht mehr an seinen Adelsherrn gebunden – er kann sein Stimmrecht frei nutzen. Kleisthenes hat nicht die Rechte verändert (die gab schon Solon), sondern die Bindungen an die Adelsfamilien.", { size: 20, color: C.white, bold: true })])], { fill: C.dark, pad: 140 }));
+    children.push(one([P([R("Ergebnis: ", { bold: true, size: 22, color: C.gold, font: "Cambria" }), R(D.ergebnis, { size: 20, color: C.white, bold: true })])], { fill: C.dark, pad: 140 }));
     return;
   }
   const k = card(id);
