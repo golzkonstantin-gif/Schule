@@ -142,9 +142,9 @@ pageNo = 0;
   s.addShape(pres.shapes.OVAL, { x: 10.6, y: -1.6, w: 4.6, h: 4.6, fill: { color: NAVY2 }, line: { type: "none" } });
   s.addShape(pres.shapes.OVAL, { x: -1.5, y: 4.6, w: 4.0, h: 4.0, fill: { color: NAVY2 }, line: { type: "none" } });
   txt(s, "Generalstände 1789", { x: 0.9, y: 1.3, w: 11.5, h: 1.0, fontFace: HEAD, fontSize: 48, bold: true, color: WHITE });
-  txt(s, "Wie können die Stände den Dritten Stand überstimmen?", { x: 0.9, y: 2.4, w: 11.5, h: 0.6, fontSize: 26, italic: true, color: ICE });
+  txt(s, "Wie können die Stände den Dritten Stand überstimmen?", { x: 0.9, y: 2.4, w: 11.5, h: 0.6, fontSize: 27, italic: true, color: ICE });
   box(s, 0.9, 3.7, 11.5, 2.5, NAVY2);
-  txt(s, "Ankommen", { x: 1.2, y: 3.85, w: 6, h: 0.5, fontFace: HEAD, fontSize: 26, bold: true, color: WHITE });
+  txt(s, "Ankommen", { x: 1.2, y: 3.85, w: 6, h: 0.5, fontFace: HEAD, fontSize: 27, bold: true, color: WHITE });
   ["Hole dein Heft heraus.", "Schreibe Datum und Überschrift „Generalstände 1789“.", "Auf deinem Platz liegt eine Karte. Lass sie verdeckt liegen."].forEach((x, i) => {
     numCircle(s, i + 1, 1.2, 4.55 + i * 0.52, 0.4, RED);
     txt(s, x, { x: 1.85, y: 4.52 + i * 0.52, w: 10.3, h: 0.46, fontSize: 27, color: WHITE, valign: "middle" });
@@ -160,7 +160,7 @@ pageNo = 0;
     const y = 1.75 + i * 1.5;
     box(s, 0.6, y, 12.15, 1.25, i % 2 ? LIGHT : LIGHT2);
     numCircle(s, n, 0.9, y + 0.37, 0.5, RED);
-    txt(s, x, { x: 1.7, y, w: 10.8, h: 1.25, fontFace: HEAD, fontSize: 26, valign: "middle" });
+    txt(s, x, { x: 1.7, y, w: 10.8, h: 1.25, fontFace: HEAD, fontSize: 27, valign: "middle" });
   });
   bar(s, [{ text: "Heute: ", options: { bold: true } }, { text: "Zeitstrahl und Ständeversammlung (Spiel).", options: {} }]);
 }
@@ -185,7 +185,7 @@ pageNo = 0;
 {
   const s = blank("V · Vorwissen aktivieren · Übung 1", "Fehlertext: Absolutismus und Stände", 1, "Ansage: „Jetzt arbeitet ihr allein. Die Aufgabe steht rechts.“ Kein Plenumsgespräch. Vier Sätze enthalten je einen Fehler, ein Satz ist richtig. Fehler: 1 (der König regiert allein, nicht mit den Ständen), 2 (die Macht kommt von Gott, Gottesgnadentum), 3 (der Klerus hat etwa 150 000 Mitglieder, nicht 20 Millionen), 4 (Klerus und Adel zahlen keine Steuern). Satz 5 ist richtig. Die Zahlen stammen aus dem Gruppenpuzzle (150 000 / 500 000 / 20 000 000). Wiederholung der letzten Stunde (Test). Die Generalstände kennt die Klasse noch nicht, sie kommen deshalb nicht vor. Nach 4 Minuten Folie 5 zeigen.");
   box(s, 0.6, 1.5, 12.15, 3.55, LIGHT2);
-  const sat = ["Der Sonnenkönig regierte gemeinsam mit den Ständen.", "Seine Macht komme vom Volk (Gottesgnadentum).", "Zum Klerus gehörten etwa 20 Millionen Menschen.", "Klerus und Adel zahlten die meisten Steuern.", "Der Dritte Stand hatte kaum Vorrechte."];
+  const sat = ["Der Sonnenkönig regierte gemeinsam mit den Ständen.", "Seine Macht komme vom Volk (Gottesgnadentum).", "Zum Klerus gehörten etwa 20 Millionen Menschen.", "Klerus und Adel zahlten die meisten Steuern.", "Der Dritte Stand (Bauern und Bürger) hatte kaum Vorrechte."];
   sat.forEach((x, i) => {
     numCircle(s, i + 1, 0.85, 1.7 + i * 0.66, 0.4, NAVY);
     txt(s, x, { x: 1.5, y: 1.62 + i * 0.66, w: 11.1, h: 0.58, fontFace: HEAD, fontSize: 27, valign: "middle" });
@@ -207,7 +207,7 @@ pageNo = 0;
     [{ text: "Seine Macht komme " }, { text: "von Gott", options: G }, { text: " (Gottesgnadentum)." }],
     [{ text: "Zum Klerus gehörten etwa " }, { text: "150 000", options: G }, { text: " Menschen." }],
     [{ text: "Klerus und Adel zahlten " }, { text: "keine Steuern", options: G }, { text: "." }],
-    [{ text: "Der Dritte Stand hatte kaum Vorrechte. " }, { text: "(richtig)", options: { italic: true, color: MUTED } }],
+    [{ text: "Der Dritte Stand (Bauern und Bürger) hatte kaum Vorrechte. " }, { text: "(richtig)", options: { italic: true, color: MUTED } }],
   ];
   lines.forEach((runs, i) => {
     numCircle(s, i + 1, 0.85, 1.75 + i * 0.85, 0.4, NAVY);
@@ -256,7 +256,7 @@ pageNo = 0;
 
 // ============ 9 Stimmzettel ============
 {
-  const { s } = taskSlide("V · Verarbeiten · Abstimmung", "Jetzt stimmt ihr ab", ["Kreuze auf dem Stimmzettel bei A, B und C Ja oder Nein an.", "Klerus und Adel stimmen nach ihrer Rolle, der Dritte Stand nach seiner Überzeugung.", "Lege die Karte verdeckt auf den Tisch."], "3 Minuten · allein · leise",
+  const { s } = taskSlide("V · Verarbeiten · Abstimmung", "Jetzt stimmt ihr ab", ["Kreuze auf dem Stimmzettel bei A, B und C Ja oder Nein an.", "Klerus und Adel stimmen nach ihrer Rolle, der Dritte Stand (Bauern und Bürger) nach seiner Überzeugung.", "Lege die Karte verdeckt auf den Tisch."], "3 Minuten · allein · leise",
     "Ansage: „Stifte liegen. Jetzt stimmt ihr ab. Kreuzt auf dem Stimmzettel unten auf eurer Karte bei jedem Antrag Ja oder Nein an. Legt die Karte verdeckt auf den Tisch. Danach arbeitet ihr allein.“ Klerus und Adel stimmen nach ihrer Rolle (Vorrechte behalten), der Dritte Stand, wie er es für richtig hält. Keine Absprache, keine Bewegung. Karten einsammeln und in drei Stapel sortieren (Klerus, Adel, Dritter Stand).");
   phaseTag(s, 3);
 }
@@ -305,7 +305,7 @@ pageNo = 0;
 
 // ============ 13 Ü3 ============
 {
-  const { s } = taskSlide("V · Verarbeiten · Übung 3", "Was ist passiert?", ["Der Dritte Stand wurde überstimmt, weil …", "Klerus und Adel haben …", "* Die Abstimmung nach Ständen ist unfair, weil … (nenne eine Zahl)"], "4 Minuten · allein · leise",
+  const { s } = taskSlide("V · Verarbeiten · Übung 3", "Was ist passiert?", ["Der Dritte Stand (Bauern und Bürger) wurde überstimmt, weil …", "Klerus und Adel haben …", "* Die Abstimmung nach Ständen ist unfair, weil … (nenne eine Zahl)"], "4 Minuten · allein · leise",
     "Ansage: „Jetzt arbeitet ihr allein. Die Aufgabe steht rechts.“ Nach 3 Minuten: „Noch eine Minute.“ Satz 3 hat einen Stern und darf entfallen. Erwartung: 1 … jeder Stand nur eine Stimme hat. 2 … sich abgesprochen und gemeinsam mit Nein gestimmt. 3 … der Dritte Stand ca. 97 % der Menschen stellt, aber nur 1 von 3 Stimmen hat.");
   phaseTag(s, 3);
 }
@@ -338,16 +338,16 @@ function bubble(s, x, y, w, h, fill, line, side, tipY) {
   s.addImage({ path: "../material/koenig.png", x: 0.55, y: 1.45, w: 3.1, h: 4.0 });
   txt(s, "König Ludwig XVI.", { x: 0.55, y: 5.5, w: 3.1, h: 0.4, fontFace: HEAD, fontSize: 27, bold: true, align: "center" });
   bubble(s, 4.2, 1.5, 8.55, 1.95, WHITE, NAVY, "left", 2.5);
-  txt(s, "„Soll ich erlauben, dass der Dritte Stand (Bauern und Bürger) nach Köpfen abstimmt?“", { x: 4.5, y: 1.5, w: 8.0, h: 1.95, fontFace: HEAD, fontSize: 26, bold: true, color: NAVY, valign: "middle" });
+  txt(s, "„Soll ich erlauben, dass der Dritte Stand (Bauern und Bürger) nach Köpfen abstimmt?“", { x: 4.5, y: 1.5, w: 8.0, h: 1.95, fontFace: HEAD, fontSize: 27, bold: true, color: NAVY, valign: "middle" });
   bubble(s, 4.2, 3.75, 6.9, 1.6, "FDF1D8", GOLD, "right", 4.55);
-  txt(s, "Dein Rat:  „Ich rate dir, … , weil …“", { x: 4.5, y: 3.75, w: 6.4, h: 1.6, fontFace: HEAD, fontSize: 26, bold: true, color: NAVY, valign: "middle" });
+  txt(s, "Dein Rat:  „Ich rate dir, … , weil …“", { x: 4.5, y: 3.75, w: 6.4, h: 1.6, fontFace: HEAD, fontSize: 27, bold: true, color: NAVY, valign: "middle" });
   s.addImage({ path: "../material/berater.png", x: 11.75, y: 3.4, w: 1.3, h: 1.8 });
   txt(s, "Du", { x: 11.75, y: 5.2, w: 1.3, h: 0.4, fontFace: HEAD, fontSize: 27, bold: true, align: "center" });
-  [["Position", 2.3], ["Sachargument", 3.3], ["„weil“", 2.1]].reduce((xx, [lab, ww], i) => {
+  [["Position", 2.1], ["Sachargument", 3.2], ["„weil“", 1.9]].reduce((xx, [lab, ww], i) => {
     box(s, xx, 5.55, ww, 0.62, i % 2 ? LIGHT : LIGHT2);
     s.addText([{ text: lab, options: { bold: true, fontFace: HEAD, fontSize: 27, color: NAVY } }], { isTextBox: true, x: xx + 0.1, y: 5.55, w: ww - 0.2, h: 0.62, valign: "middle", align: "center", margin: 0 });
     return xx + ww + 0.2;
-  }, 4.2);
+  }, 4.0);
   bar(s, [{ text: "Zeit: ", options: { bold: true } }, { text: "3 Minuten · allein · leise      ", options: {} }, { text: "Fertig? Stift hinlegen.", options: { italic: true, color: ICE } }]);
 }
 
@@ -358,7 +358,7 @@ function bubble(s, x, y, w, h, fill, line, side, tipY) {
     const y = 1.7 + i * 1.4;
     box(s, 0.6, y, 12.15, 1.15, i % 2 ? LIGHT : LIGHT2);
     s.addShape(pres.shapes.OVAL, { x: 0.9, y: y + 0.3, w: 0.55, h: 0.55, fill: { color: WHITE }, line: { color: NAVY, width: 2 } });
-    txt(s, x, { x: 1.75, y, w: 10.8, h: 1.15, fontFace: HEAD, fontSize: 26, valign: "middle" });
+    txt(s, x, { x: 1.75, y, w: 10.8, h: 1.15, fontFace: HEAD, fontSize: 27, valign: "middle" });
   });
   bar(s, [{ text: "Jetzt: ", options: { bold: true } }, { text: "Schau auf die Ziele. Haben wir sie erreicht?", options: {} }]);
 }
@@ -367,7 +367,7 @@ function bubble(s, x, y, w, h, fill, line, side, tipY) {
 {
   const s = blank("A · Auswerten · Ausblick", "Wie geht es weiter?", 4, "Folie nur lesen (1 Minute). Ausblick: Was passiert, wenn der Dritte Stand verlangt, dass nach Köpfen abgestimmt wird, und der König ablehnt? Hausaufgabe nur, wenn der Test zurückgegeben wurde: Falsche Aufgaben mit Grün berichtigen.");
   box(s, 0.6, 1.8, 12.15, 2.0, NAVY);
-  txt(s, "Der Dritte Stand fordert:\n„Wir stimmen nach Köpfen ab!“", { x: 0.95, y: 1.8, w: 11.45, h: 2.0, fontFace: HEAD, fontSize: 32, bold: true, color: WHITE, valign: "middle" });
+  txt(s, "Der Dritte Stand (Bauern und Bürger) fordert:\n„Wir stimmen nach Köpfen ab!“", { x: 0.95, y: 1.8, w: 11.45, h: 2.0, fontFace: HEAD, fontSize: 32, bold: true, color: WHITE, valign: "middle" });
   box(s, 0.6, 4.1, 12.15, 1.6, LIGHT2);
   txt(s, "Wie reagieren Klerus, Adel und der König? Das sehen wir in der nächsten Stunde.", { x: 0.95, y: 4.1, w: 11.45, h: 1.6, fontFace: HEAD, fontSize: 28, valign: "middle" });
   bar(s, [{ text: "Hausaufgabe: ", options: { bold: true } }, { text: "Testaufgaben mit Grün berichtigen.", options: {} }]);
