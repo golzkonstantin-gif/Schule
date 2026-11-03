@@ -119,4 +119,4 @@ Stand 27.10. Offene Abschlussfrage mit mehreren guten Antworten, bevorzugt im Be
 
 ## Vorwissen-Formate (Orientierung, kein festes Muster)
 
-Stand 27.10. Die Wiederholung am Stundenbeginn nutzt abwechselnd Fehlertext, Falschbehauptungen (schriftlich begründen) oder ein Bild. Nur Wissen verwenden, das die Klasse schon hat. Beispiele: Stunde 1 Fehlertext zu Absolutismus und Ständen (so geplant), Stunde 2 Fehlertext zur Stunde 1 (Ständeabstimmung), Stunde 4 Schaubild mit Fehlern, Stunde 7 Falschbehauptungen zum König.
+Stand 27.10. Die Wiederholung am Stundenbeginn nutzt abwechselnd Fehlertext, Falschbehauptungen (schriftlich begründen) oder ein Bild. Nur Wissen verwenden, das die Klasse schon hat. Beispiele: Stunde 1 (8D) Kreuzworträtsel zu Absolutismus und Ständen (so geplant, die acht Lösungswörter bleiben als Begriffsspeicher und werden in Stunde 2 und vor Test 1 wiederholt, z. B. als „Antwort gegeben – Frage gesucht“), Stunde 2 Fehlertext zur Stunde 1 (Ständeabstimmung), Stunde 4 Schaubild mit Fehlern, Stunde 7 Falschbehauptungen zum König.

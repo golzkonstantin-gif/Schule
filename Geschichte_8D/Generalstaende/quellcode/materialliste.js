@@ -20,6 +20,7 @@ const box = () => p(t("□", { size: 26 }), { after: 0, align: AlignmentType.CEN
 // Druck
 const DW = [550, 3500, 1700, 4456];
 const druck = [
+  ["Kreuzworträtsel „Absolutismus und Stände“ (Seite 1: zwei Rätsel pro A4)", "13 Blatt, in der Mitte schneiden (26 Rätsel); Seite 2 = Lösung für dich", "`Kreuzwortraetsel_Absolutismus_Staende.pdf`"],
   ["Text „Wie kam es zu den Generalständen?“ (Textblatt mit Zeitstrahl)", "27 (25 + 2 Reserve), einseitig A4", "`Text_Wie_kam_es_zu_den_Generalstaenden.pdf`"],
   ["Druckvorlage Standeskarten, Stimmzettel und Rollenkarten (4 Seiten)", "je 1 Seite: Seite 1 bis 3 ausschneiden (23 Karten + 7 Reserve), Seite 4 in der Mitte teilen", "`Druckvorlage_Standeskarten_Stimmzettel.pdf`: Seite 1 (3 Klerus, 4 Adel, 3 Dritter Stand), Seite 2 (10 Dritter Stand), Seite 3 (3 Dritter Stand, 7 Reserve), Seite 4 (Rollenkarten Wahlleitung und Schriftführung)"],
   ["Tests der Klasse", "falls noch nicht zurückgegeben: verdeckt auf die Plätze", "keine Besprechung, Berichtigung mit Grün bis zur nächsten Stunde"],

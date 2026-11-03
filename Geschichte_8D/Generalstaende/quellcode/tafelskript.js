@@ -62,7 +62,7 @@ d.push(...bullets([
 
 d.push(table([800, 2300, 4300, 2806], [
   row([th("Min.", 800), th("AVIVA", 2300), th("Phase", 4300), th("Arbeitsform", 2806)], 320),
-  ...[["3", "Ankommen", "0  Ankommen, Lernziele, Test", "still, allein"], ["6", "Vorwissen", "1  Wiederholung: Fehlertext Absolutismus und Stände", "allein, Kontrolle per Folie"], ["11", "Informieren", "2  Text, Zeitstrahl, Kreide-Kette", "allein, Tafel mit Mitschreiben"], ["18", "Verarbeiten", "3  Ständeversammlung: drei Anträge, Abstimmung, Auswertung", "allein, Stände, Tafel"], ["6", "Auswerten", "4  Merksatz, Abschlussfrage (Berater), Ausblick", "allein, abschreiben"], ["1", "—", "Puffer", "—"]].map((r) => row(r.map((v, i) => tc(v, [800, 2300, 4300, 2806][i], { bold: i < 3 })), 320)),
+  ...[["3", "Ankommen", "0  Ankommen, Lernziele, Test", "still, allein"], ["6", "Vorwissen", "1  Wiederholung: Kreuzworträtsel Absolutismus und Stände", "allein, Kontrolle per Folie"], ["11", "Informieren", "2  Text, Zeitstrahl, Kreide-Kette", "allein, Tafel mit Mitschreiben"], ["18", "Verarbeiten", "3  Ständeversammlung: drei Anträge, Abstimmung, Auswertung", "allein, Stände, Tafel"], ["6", "Auswerten", "4  Merksatz, Abschlussfrage (Berater), Ausblick", "allein, abschreiben"], ["1", "—", "Puffer", "—"]].map((r) => row(r.map((v, i) => tc(v, [800, 2300, 4300, 2806][i], { bold: i < 3 })), 320)),
 ]));
 
 d.push(h3("Lautstärke und Gesprächsanteil: so läuft die Stunde"));
@@ -88,7 +88,7 @@ d.push(table([4700, 5506], [
 
 d.push(h3("Material und Vorbereitung"));
 d.push(...bullets([
-  "Text „Wie kam es zu den Generalständen?“ (ein Blatt pro Person, wie 8C; Zeitstrahl unten, Daten vorgegeben).",
+  "Kreuzworträtsel „Absolutismus und Stände“: 13 Blatt (zwei Rätsel pro A4, in der Mitte schneiden, ein Rätsel pro Person; Seite 2 ist die Lösung für Sie). Text „Wie kam es zu den Generalständen?“ (ein Blatt pro Person, wie 8C; Zeitstrahl unten, Daten vorgegeben).",
   "Druckvorlage „Standeskarten und Stimmzettel“: Seite 1: 3 Karten Klerus, 4 Karten Adel, 3 Karten Dritter Stand; Seite 2: 10 Karten Dritter Stand; Seite 3: 3 Karten Dritter Stand und 7 Reserve-Karten; Seite 4: zwei Rollenkarten (Wahlleitung mit Zählhilfe, Schriftführung mit Tafelrahmen). Seite 1 bis 3 ausschneiden, Seite 4 in der Mitte teilen. Jede Karte enthält unten den Stimmzettel mit drei Anträgen (A, B, C), nichts muss abgerissen werden.",
   "Vor der Stunde: Karten verdeckt auf die Plätze legen. Klerus und Adel gezielt verteilen: eher zuverlässige Schülerinnen und Schüler, die ihre Rolle ernst nehmen. Ein Platzwechsel ist nicht nötig. Wählen Sie vorab zwei zuverlässige, rechensichere Schülerinnen oder Schüler als Wahlleitung und Schriftführung aus (nicht stimmberechtigt) und geben Sie ihnen in Phase 0 still die Rollenkarte zum Lesen. So sind Sie in der Abstimmung nur Sicherheitsnetz und greifen nur im Notfall ein.",
   "Wenn Schülerinnen oder Schüler fehlen: Klerus bleibt 3, Adel 4, die Reserve-Karten gleichen den Dritten Stand aus (die beiden privilegierten Stände dürfen zusammen nie mehr als ein Drittel der Klasse sein).",
@@ -116,17 +116,17 @@ d.push(step("kommt an, arbeitet leise", {
 }));
 
 // Phase 1
-d.push(phase("1", "Wiederholung: Fehlertext", 6, "AVIVA: Vorwissen aktivieren"));
-d.push(warum("Wissen aus dem Absolutismus-Test aktiv anwenden: Falsches erkennen und verbessern. Zahlen und Vorrechte der Stände braucht die Klasse gleich im Spiel (direkt: allein, Kontrolle per Folie). Die Generalstände kennt die Klasse noch nicht, deshalb kommen sie im Fehlertext nicht vor.", "„Klerus und Adel zahlen keine Steuern. Wie es dazu kam, dass der König ihre Zustimmung doch wieder brauchte, lest ihr jetzt.“"));
+d.push(phase("1", "Wiederholung: Kreuzworträtsel", 6, "AVIVA: Vorwissen aktivieren"));
+d.push(warum("Begriffe aus dem Absolutismus-Test spielerisch abrufen und festigen (Kreuzworträtsel, direkt: allein, Partnercheck, Kontrolle per Folie). Die Lösungswörter bleiben als Begriffsspeicher und werden in den nächsten Stunden wiederholt. Die Generalstände kennt die Klasse noch nicht, deshalb kommen sie im Rätsel nicht vor.", "„Klerus und Adel zahlen keine Steuern. Wie es dazu kam, dass der König ihre Zustimmung doch wieder brauchte, lest ihr jetzt.“"));
 d.push(sp());
-d.push(step("arbeitet allein, kontrolliert", {
+d.push(step("arbeitet allein, dann zu zweit", {
   say: "Jetzt arbeitet ihr allein. Die Aufgabe steht rechts.",
-  do: ["Folie 4 (Ü1, Fehlertext). 4 Minuten schriftlich im Heft, danach Folie 5 zeigen (Lösung), 2 Minuten „Vergleicht und verbessert mit Grün.“ Kein Plenumsgespräch. Partnercheck nach Ü1 (1 Minute, flüstern) nur, wenn die Klasse ruhig ist; sonst entfällt er. Der Inhalt knüpft an die letzte Stunde an: Die Zahlen und Vorrechte brauchen die Schülerinnen und Schüler gleich im Spiel."],
-  extra: [folieBox("4 · Ü1 Fehlertext", [p(t("Ü1 Absolutismus und Stände", { font: "Cambria", size: 22, bold: true, color: NAVY }), { after: 40 }), bl("1. Der Sonnenkönig regierte gemeinsam mit den Ständen."), bl("2. Seine Macht komme vom Volk (Gottesgnadentum)."), bl("3. Zum Klerus gehörten etwa 20 Millionen Menschen."), bl("4. Klerus und Adel zahlten die meisten Steuern."), bl("5. Der Dritte Stand (Bauern und Bürger) hatte kaum Vorrechte.", { after: 40 }), bl("Aufgabe: Vier Sätze enthalten einen Fehler. Unterstreiche die Fehler und schreibe diese Sätze richtig ins Heft.", { after: 40 }), p([t("Zeit: ", { bold: true, size: 19 }), t("4 Minuten · allein · leise     ", { size: 19 }), t("Fertig? Stift hinlegen.", { size: 19, italics: true })], { after: 0 })]), gapP()],
-  sol: "Fehler in 1 (der König regiert allein, ohne die Stände), 2 (die Macht kommt von Gott), 3 (der Klerus hat etwa 150 000 Mitglieder), 4 (Klerus und Adel zahlen keine Steuern). Satz 5 ist richtig. Die Zahlen stammen aus dem Gruppenpuzzle (150 000 / 500 000 / 20 000 000).",
+  do: ["Folie 4 (Ü1, Kreuzworträtsel). Das Blatt liegt vorab auf den Tischen (13 Blätter, zwei Rätsel pro A4 geschnitten). 3 Minuten allein, danach 1 Minute Partnercheck (leise): „Vergleicht und verbessert mit Grün.“ Dann Folie 5 (Lösung, 2 Minuten). Kein Plenumsgespräch, nur gezielte Abfrage bei Bedarf. Schnelle schreiben zu einem Lösungswort einen Satz. Die acht Lösungswörter stehen danach im Heft: Sie bleiben als Begriffsspeicher und werden in Stunde 2 und vor Test 1 wiederholt."],
+  extra: [folieBox("4 · Ü1 Kreuzworträtsel", [p(t("Ü1 Absolutismus und Stände", { font: "Cambria", size: 22, bold: true, color: NAVY }), { after: 40 }), bl("1. Löse das Kreuzworträtsel auf deinem Tisch."), bl("2. Schreibe die acht Lösungswörter in dein Heft."), bl("3. Fertig? Schreibe zu einem Wort einen Satz.", { after: 40 }), p([t("Zeit: ", { bold: true, size: 19 }), t("4 Minuten · allein, dann Partnercheck · leise     ", { size: 19 }), t("Fertig? Stift hinlegen.", { size: 19, italics: true })], { after: 0 })]), gapP()],
+  sol: "Lösung: 1 ABSOLUTISMUS (waagerecht), 2 SONNENKÖNIG (senkrecht), 3 VORRECHTE (senkrecht), 4 GOTTESGNADENTUM (waagerecht), 5 VERSAILLES (waagerecht), 6 STEUERN (senkrecht), 7 ADEL (waagerecht), 8 KLERUS (waagerecht). Das Lösungsgitter steht auf Seite 2 der Datei Kreuzwortraetsel_Absolutismus_Staende.pdf.",
 }));
 d.push(sp());
-d.push(note("SOLLBRUCHSTELLE", "Läuft die Klasse langsam oder laut an, wird Folie 5 sofort ohne Besprechung gezeigt (2 Minuten gewonnen)."));
+d.push(note("SOLLBRUCHSTELLE", "Läuft die Klasse langsam oder laut an, entfällt der Partnercheck, und Folie 5 wird sofort gezeigt (1 Minute gewonnen)."));
 
 // Phase 2
 d.push(phase("2", "Text, Zeitstrahl, Kreide-Kette", 11, "AVIVA: Informieren"));
@@ -225,7 +225,7 @@ d.push(note("ZUSATZ (Puffer, nur bei Zeit)", "Folie 18: Sportverein-Beispiel (Ü
 d.push(h3("So sieht das Heft am Ende der Stunde aus"));
 d.push(table([2300, 7906], [
   ["Überschrift", "Generalstände 1789 · Datum"],
-  ["Ü1", "Fehlertext: vier verbesserte Sätze (Verbesserungen grün)"],
+  ["Ü1", "Kreuzworträtsel (Blatt eingeklebt), acht Lösungswörter als Begriffsspeicher, ein Satz zu einem Wort"],
   ["Zeitstrahl", "Blatt eingeklebt, Ereignisse zu den Daten eingetragen (1614 bis 5. Mai 1789), Verbesserungen grün"],
   ["Ständeversammlung", "Vermutung zum Ausgang, Ergebnisse der drei Anträge nach Ständen und nach Köpfen (Zahlen von der Tafel)"],
   ["Ü3", "Drei Sätze (Satz 3 optional)"],
