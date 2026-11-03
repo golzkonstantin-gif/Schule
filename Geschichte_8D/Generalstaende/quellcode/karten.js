@@ -3,13 +3,13 @@ const { Document, Packer, Paragraph, TextRun, Table, TableRow, TableCell, WidthT
 
 const NAVY = "1E2761", MUTED = "5B6B8C", RED = "D9534F";
 const STAND = {
-  K: { name: "ERSTER STAND · KLERUS", fill: "EFE8F8", edge: "8E6BBE",
+  K: { name: "ERSTER STAND · KLERUS", fill: "FFFFFF", edge: "8E6BBE", ink: "6B4A9E",
        rolle: "Du bist Geistlicher. Du zahlst keine Steuern und hast Vorrechte. Du willst sie behalten.",
        tipp: "Du stimmst nach deiner Rolle." },
-  A: { name: "ZWEITER STAND · ADEL", fill: "FDF1D8", edge: "E8A33D",
+  A: { name: "ZWEITER STAND · ADEL", fill: "FFFFFF", edge: "E8A33D", ink: "B9791A",
        rolle: "Du bist Adliger. Du zahlst keine Steuern und hast Vorrechte (z. B. Jagdrecht, Ämter am Hof). Du willst sie behalten.",
        tipp: "Du stimmst nach deiner Rolle." },
-  D: { name: "DRITTER STAND (BAUERN UND BÜRGER)", fill: "E3EEFB", edge: "3F7CC4",
+  D: { name: "DRITTER STAND (BAUERN UND BÜRGER)", fill: "FFFFFF", edge: "3F7CC4", ink: "2F6AAE",
        rolle: "Du zahlst Steuern und Abgaben. Der Brotpreis ist gestiegen, die Familie hat Hunger. Du willst, dass sich etwas ändert.",
        tipp: "Du stimmst nach deiner Überzeugung." },
 };
@@ -23,13 +23,13 @@ function card(key, reserve) {
   const s = STAND[key];
   const ch = [
     p(t(reserve ? "STANDESKARTE · RESERVE" : "STANDESKARTE · GEHEIM", { size: 15, bold: true, color: MUTED }), { after: 10 }),
-    p(t(s.name, { font: "Cambria", size: 26, bold: true, color: NAVY }), { after: 50 }),
+    p(t(s.name, { font: "Cambria", size: 26, bold: true, color: s.ink }), { after: 50 }),
     p(t(s.rolle, { size: 22 }), { after: 40 }),
     p(t(s.tipp, { size: 22, bold: true }), { after: 70 }),
     p([t("STIMMZETTEL  ", { size: 18, bold: true, color: RED }), t("Kreuze bei jedem Antrag an.", { size: 17, color: MUTED })], { after: 30, border: { top: { style: BorderStyle.SINGLE, size: 8, color: s.edge, space: 4 } } }),
     ...[["A", "Steuern auch für Adel und Klerus"], ["B", "Stände abschaffen, gleiche Rechte"], ["C", "Mehr Mitsprache für Bauern"]].map(([l, x]) => p([t(l + "  ", { size: 20, bold: true }), t(x, { size: 18 }), t("      □ Ja  □ Nein", { size: 20, bold: true })], { after: 20 })),
   ];
-  return new TableCell({ children: ch, width: { size: CW, type: WidthType.DXA }, shading: { fill: s.fill, type: ShadingType.CLEAR, color: "auto" }, borders: { top: dash, bottom: dash, left: dash, right: dash }, margins: { top: 90, bottom: 60, left: 170, right: 170 }, verticalAlign: VerticalAlign.TOP });
+  return new TableCell({ children: ch, width: { size: CW, type: WidthType.DXA }, borders: { top: dash, bottom: dash, left: { style: BorderStyle.SINGLE, size: 48, color: s.edge }, right: dash }, margins: { top: 90, bottom: 60, left: 200, right: 170 }, verticalAlign: VerticalAlign.TOP });
 }
 function page(list) {
   const rows = [];
