@@ -65,3 +65,8 @@
 - Hospitationsfeedback (anonymisiert):
 - Nächster Schritt / neue Baustellen:
 ```
+
+### Ergänzung 3.11. – Folie „Das erwarte ich von euch“ (Neue Autorität)
+- Wunsch der Lehrkraft: eine Folie zu den Erwartungen im Sinne der Neuen Autorität („Lehrer und Coach, Spaß und Lernen, geht nur mit Mitarbeit“).
+- Umgesetzt als Folie 4 in der Generalstände-Stunde (Phase Ankommen, 1 Minute, kein Gespräch, drei Erwartungen: zuhören, leise arbeiten, mitmachen, „Ich helfe euch dabei“). Ankommen dauert damit 4 statt 3 Minuten, der Puffer von 1 Minute entfällt. Folien jetzt 19, Folienverweise im Tafelskript angepasst.
+- Offen: Rückmeldung, ob die drei Erwartungen zur 8D passen und ob die Folie auch in der 8C und in späteren Stunden wiederkehren soll.

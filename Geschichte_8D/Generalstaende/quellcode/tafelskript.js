@@ -62,7 +62,7 @@ d.push(...bullets([
 
 d.push(table([800, 2300, 4300, 2806], [
   row([th("Min.", 800), th("AVIVA", 2300), th("Phase", 4300), th("Arbeitsform", 2806)], 320),
-  ...[["3", "Ankommen", "0  Ankommen, Lernziele, Test", "still, allein"], ["6", "Vorwissen", "1  Wiederholung: Buchstabenrätsel Absolutismus und Stände", "allein, Kontrolle per Folie"], ["11", "Informieren", "2  Text, Zeitstrahl, Kreide-Kette", "allein, Tafel mit Mitschreiben"], ["18", "Verarbeiten", "3  Ständeversammlung: drei Anträge, Abstimmung, Auswertung", "allein, Stände, Tafel"], ["6", "Auswerten", "4  Merksatz, Abschlussfrage (Berater), Ausblick", "allein, abschreiben"], ["1", "—", "Puffer", "—"]].map((r) => row(r.map((v, i) => tc(v, [800, 2300, 4300, 2806][i], { bold: i < 3 })), 320)),
+  ...[["4", "Ankommen", "0  Ankommen, Lernziele, Erwartungen", "still, allein"], ["6", "Vorwissen", "1  Wiederholung: Buchstabenrätsel Absolutismus und Stände", "allein, Kontrolle per Folie"], ["11", "Informieren", "2  Text, Zeitstrahl, Kreide-Kette", "allein, Tafel mit Mitschreiben"], ["18", "Verarbeiten", "3  Ständeversammlung: drei Anträge, Abstimmung, Auswertung", "allein, Stände, Tafel"], ["6", "Auswerten", "4  Merksatz, Abschlussfrage (Berater), Ausblick", "allein, abschreiben"]].map((r) => row(r.map((v, i) => tc(v, [800, 2300, 4300, 2806][i], { bold: i < 3 })), 320)),
 ]));
 
 d.push(h3("Lautstärke und Gesprächsanteil: so läuft die Stunde"));
@@ -98,13 +98,13 @@ d.push(...bullets([
 ]));
 
 // Phase 0
-d.push(phase("0", "Ankommen", 3, "AVIVA: Ankommen"));
+d.push(phase("0", "Ankommen", 4, "AVIVA: Ankommen"));
 d.push(warum("Die Klasse wird ruhig, kennt Ziel und Ablauf und weiß, was am Ende gekonnt werden soll (direkt, von der Lehrkraft geführt).", "„Zuerst schauen wir, was ihr aus dem Absolutismus noch wisst, denn das braucht ihr gleich.“"));
 d.push(sp());
 d.push(step("kommt an, arbeitet leise", {
   say: "Stifte liegen. Ihr hört nur zu. Auf dem Platz liegt eine Karte. Lasst sie verdeckt liegen. Schreibt Datum und Überschrift „Generalstände 1789“ ins Heft.",
   do: [
-    "Folie 1 steht beim Betreten da (Auftrag: Heft raus, Datum und Überschrift, Karte nicht umdrehen). Folie 2 (Lernziele) und Folie 3 (Ablauf nach AVIVA) kurz vorlesen, 1 Minute, die Klasse hört nur zu. An der Seitentafel steht dasselbe in Stichpunkten.",
+    "Folie 1 steht beim Betreten da (Auftrag: Heft raus, Datum und Überschrift, Karte nicht umdrehen). Folie 2 (Lernziele) und Folie 3 (Ablauf nach AVIVA) kurz vorlesen, 1 Minute, die Klasse hört nur zu. Dann Folie 4 „Das erwarte ich von euch“ (Neue Autorität, 1 Minute, kein Gespräch): „Ich bin euer Lehrer und euer Coach. Ich will, dass ihr Spaß habt und lernt. Das geht nur, wenn ihr mitarbeitet. Dafür brauche ich drei Dinge von euch: Ihr hört zu, wenn jemand spricht. Ihr arbeitet leise und konzentriert. Ihr macht mit, auch wenn es mal schwer ist. Und ich helfe euch dabei.“ Ruhig und freundlich, ohne Drohung, danach nicht diskutieren. Bei Störungen später ruhig an die Vereinbarung erinnern („Wir hatten vereinbart …“). An der Seitentafel steht dasselbe in Stichpunkten.",
     "Hinweis zum Stern: „Was wir eventuell nicht schaffen, hat einen Stern. Am Ende prüfen wir, ob wir die Ziele erreicht haben.“",
   ],
   extra: [boardBox("Seitentafel · Ziel und Ablauf", [
@@ -121,12 +121,12 @@ d.push(warum("Begriffe aus dem Absolutismus-Test spielerisch abrufen und festige
 d.push(sp());
 d.push(step("arbeitet allein, dann zu zweit", {
   say: "Jetzt arbeitet ihr allein. Die Aufgabe steht rechts.",
-  do: ["Folie 4 (Ü1, Buchstabenrätsel). Das Blatt liegt vorab auf den Tischen (13 Blätter, zwei Rätsel pro A4 geschnitten). 4 Minuten allein, danach 1 Minute Partnercheck (leise): „Vergleicht und verbessert mit Grün.“ Dann Folie 5 (Lösung, 1 Minute). Zu jedem Hinweis gibt es ein Wort mit angegebener Buchstabenzahl; die Wörter stehen waagerecht oder senkrecht. Kein Plenumsgespräch, nur gezielte Abfrage bei Bedarf. Schnelle schreiben zu einem Lösungswort einen Satz. Die zehn Lösungswörter stehen danach hinter den Hinweisen auf dem Blatt (Blatt ins Heft kleben): Sie bleiben als Begriffsspeicher und werden in Stunde 2 und vor Test 1 wiederholt."],
-  extra: [folieBox("4 · Ü1 Buchstabenrätsel", [p(t("Ü1 Absolutismus und Stände", { font: "Cambria", size: 22, bold: true, color: NAVY }), { after: 40 }), bl("1. Finde zu jedem Hinweis das Wort im Gitter."), bl("2. Kreise es ein."), bl("3. Schreibe es hinter den Hinweis."), bl("4. Fertig? Schreibe zu einem Wort einen Satz.", { after: 40 }), p([t("Zeit: ", { bold: true, size: 19 }), t("4 Minuten · allein, dann Partnercheck · leise     ", { size: 19 }), t("Fertig? Stift hinlegen.", { size: 19, italics: true })], { after: 0 })]), gapP()],
+  do: ["Folie 5 (Ü1, Buchstabenrätsel). Das Blatt liegt vorab auf den Tischen (13 Blätter, zwei Rätsel pro A4 geschnitten). 4 Minuten allein, danach 1 Minute Partnercheck (leise): „Vergleicht und verbessert mit Grün.“ Dann Folie 6 (Lösung, 1 Minute). Zu jedem Hinweis gibt es ein Wort mit angegebener Buchstabenzahl; die Wörter stehen waagerecht oder senkrecht. Kein Plenumsgespräch, nur gezielte Abfrage bei Bedarf. Schnelle schreiben zu einem Lösungswort einen Satz. Die zehn Lösungswörter stehen danach hinter den Hinweisen auf dem Blatt (Blatt ins Heft kleben): Sie bleiben als Begriffsspeicher und werden in Stunde 2 und vor Test 1 wiederholt."],
+  extra: [folieBox("5 · Ü1 Buchstabenrätsel", [p(t("Ü1 Absolutismus und Stände", { font: "Cambria", size: 22, bold: true, color: NAVY }), { after: 40 }), bl("1. Finde zu jedem Hinweis das Wort im Gitter."), bl("2. Kreise es ein."), bl("3. Schreibe es hinter den Hinweis."), bl("4. Fertig? Schreibe zu einem Wort einen Satz.", { after: 40 }), p([t("Zeit: ", { bold: true, size: 19 }), t("4 Minuten · allein, dann Partnercheck · leise     ", { size: 19 }), t("Fertig? Stift hinlegen.", { size: 19, italics: true })], { after: 0 })]), gapP()],
   sol: "Lösung: 1 ABSOLUTISMUS, 2 SONNENKÖNIG, 3 VERSAILLES, 4 GOTTESGNADENTUM, 5 KLERUS, 6 ADEL, 7 STEUERN, 8 VORRECHTE, 9 BAUERN, 10 BÜRGER. Fundstellen und Lösungsgitter stehen auf Seite 2 der Datei Buchstabenraetsel_Absolutismus_Staende.pdf.",
 }));
 d.push(sp());
-d.push(note("SOLLBRUCHSTELLE", "Läuft die Klasse langsam oder laut an, entfällt der Partnercheck, und Folie 5 wird sofort gezeigt (1 Minute gewonnen). Finden die Schüler ein Wort nicht, dürfen sie nach den Hinweisen weitersuchen und später zurückkehren."));
+d.push(note("SOLLBRUCHSTELLE", "Läuft die Klasse langsam oder laut an, entfällt der Partnercheck, und Folie 6 wird sofort gezeigt (1 Minute gewonnen). Finden die Schüler ein Wort nicht, dürfen sie nach den Hinweisen weitersuchen und später zurückkehren."));
 
 // Phase 2
 d.push(phase("2", "Text, Zeitstrahl, Kreide-Kette", 11, "AVIVA: Informieren"));
@@ -134,15 +134,15 @@ d.push(warum("Der Verlauf bis 1789 wird selbst aus dem Text erarbeitet, damit Ur
 d.push(sp());
 d.push(step("arbeitet allein", {
   say: "Ich teile den Text aus. Jetzt arbeitet ihr allein. Die Aufgabe steht rechts.",
-  do: ["Folie 6 (Ü2). Blatt austeilen: oben der Text, unten der Zeitstrahl mit Daten, aber leeren Ereignisfeldern. 6 Minuten: lesen, Jahreszahlen unterstreichen, zu jedem Datum das Ereignis als Stichwort eintragen. Währenddessen leise durch die Reihen gehen, nichts erklären."],
-  extra: [folieBox("6 · Ü2 Text und Zeitstrahl", [p(t("Ü2 Wie kam es zu den Generalständen?", { font: "Cambria", size: 22, bold: true, color: NAVY }), { after: 40 }), bl("1. Lies den Text und unterstreiche die Jahreszahlen."), bl("2. Schreibe zu jedem Datum das Ereignis in den Zeitstrahl."), bl("3. Prüfe: Passt jedes Ereignis zum Datum?", { after: 40 }), p([t("Zeit: ", { bold: true, size: 19 }), t("6 Minuten · allein · leise     ", { size: 19 }), t("Fertig? Stift hinlegen.", { size: 19, italics: true })], { after: 0 })]), gapP()],
+  do: ["Folie 7 (Ü2). Blatt austeilen: oben der Text, unten der Zeitstrahl mit Daten, aber leeren Ereignisfeldern. 6 Minuten: lesen, Jahreszahlen unterstreichen, zu jedem Datum das Ereignis als Stichwort eintragen. Währenddessen leise durch die Reihen gehen, nichts erklären."],
+  extra: [folieBox("7 · Ü2 Text und Zeitstrahl", [p(t("Ü2 Wie kam es zu den Generalständen?", { font: "Cambria", size: 22, bold: true, color: NAVY }), { after: 40 }), bl("1. Lies den Text und unterstreiche die Jahreszahlen."), bl("2. Schreibe zu jedem Datum das Ereignis in den Zeitstrahl."), bl("3. Prüfe: Passt jedes Ereignis zum Datum?", { after: 40 }), p([t("Zeit: ", { bold: true, size: 19 }), t("6 Minuten · allein · leise     ", { size: 19 }), t("Fertig? Stift hinlegen.", { size: 19, italics: true })], { after: 0 })]), gapP()],
 }));
 d.push(sp());
 d.push(step("Kreide-Kette, alle prüfen mit", {
   say: "Wer drankommt, schreibt an die Tafel. Alle prüfen mit. Gesprochen wird nicht.",
   do: [
     "Die Datumsangaben stehen schon an der Tafel (links, untereinander). Sieben Schülerinnen und Schüler kommen nacheinander an die Tafel, schreiben das Ereignis zum nächsten Datum (Stichwort, nicht abschreiben) und geben die Kreide weiter. Die anderen vergleichen mit ihrem Blatt und unterstreichen Abweichungen. 4 Minuten, ohne Kommentar.",
-    "Danach Folie 7 (Zeitstrahl als Lösung) zeigen. „Vergleicht und verbessert mit Grün.“ 1 Minute.",
+    "Danach Folie 8 (Zeitstrahl als Lösung) zeigen. „Vergleicht und verbessert mit Grün.“ 1 Minute.",
   ],
   extra: [boardBox("Mitte · Zeitstrahl (Lösung)", [
     bl("1614    letzte Generalstände (danach 175 Jahre nicht mehr)"),
@@ -165,7 +165,7 @@ d.push(sp());
 d.push(step("dreht Karte um, bleibt am Platz", {
   say: "Stifte liegen. Ihr hört nur zu. Dreht jetzt eure Karte um. Lest sie leise. Zeigt sie niemandem. Alle bleiben an ihrem Platz.",
   do: [
-    "3a  (3 Min., Folie 8) Drei Anträge zeigen: A „Auch Adel und Klerus zahlen künftig Steuern.“ B „Die Stände werden abgeschafft. Alle haben gleiche Rechte.“ C „Auch Bauern bekommen mehr Mitsprache im Staat.“ Regel: Jeder Stand hat eine Stimme (so war es bei den Generalständen, siehe Text). Sprechen Sie die Regel einmal vor.",
+    "3a  (3 Min., Folie 9) Drei Anträge zeigen: A „Auch Adel und Klerus zahlen künftig Steuern.“ B „Die Stände werden abgeschafft. Alle haben gleiche Rechte.“ C „Auch Bauern bekommen mehr Mitsprache im Staat.“ Regel: Jeder Stand hat eine Stimme (so war es bei den Generalständen, siehe Text). Sprechen Sie die Regel einmal vor.",
     "Modell (30 Sekunden, laut denken): „Es gibt drei Stände, jeder hat eine Stimme. Zwei Stimmen reichen. Wenn Klerus und Adel beide Nein sagen, ist der Antrag durch, egal, was der Dritte Stand sagt.“",
     "Warnung vor dem Fehler: Viele denken, der Dritte Stand habe bei der Abstimmung nach Ständen mehr Stimmen, weil er mehr Menschen hat. Es ist eine Stimme für den ganzen Stand, nicht eine pro Person.",
     "Gezielte Abfrage (Stichprobe bei 3 Schülerinnen und Schülern unterschiedlichen Niveaus, unbenotet, getrennt von den mündlichen Noten, kein Gespräch): „Wie viele Stimmen hat der Dritte Stand?“ – „Wie viele braucht man zum Sieg?“ – „Wer hätte schon gewonnen?“ Neutral reagieren, kurz bestätigen oder korrigieren.",
@@ -175,8 +175,8 @@ d.push(sp());
 d.push(step("stimmt ab, arbeitet leise", {
   say: "Stifte liegen. Kreuzt auf dem Stimmzettel unten auf eurer Karte bei jedem Antrag Ja oder Nein an. Danach stimmen wir offen ab. Die Wahlleitung leitet die Abstimmung.",
   do: [
-    "3b  (2 Min., Folie 9) Klerus und Adel stimmen nach ihrer Rolle (Vorrechte behalten), der Dritte Stand nach seiner Überzeugung. Das Ankreuzen dauert 2 Minuten, die Karten bleiben bei den Schülern (sie dienen als Gedächtnisstütze für die offene Abstimmung). Sie greifen nur im Notfall ein.",
-    "3c  (5 Min., Folien 9 und 10) Offene Abstimmung per Handzeichen, geleitet von der Wahlleitung: „Antrag A. Klerus: Wer ist dafür? Hand hoch.“ Die Wahlleitung zählt die Hände (nur die Ja-Stimmen, Nein = Personenzahl des Standes minus Ja), trägt in die Zählhilfe ein und diktiert der Schriftführung: „Antrag A, Klerus: Ja …, Nein …“. Dann Adel, Dritter Stand, danach Antrag B und C. Anschließend rechnet die Wahlleitung nach Ständen und nach Köpfen aus, die Schriftführung schreibt ins Tafelfeld. Währenddessen arbeitet die Klasse (Folie 10) allein: „Schreibe auf: Wie viele der drei Anträge werden nach Ständen angenommen? Wie viele nach Köpfen? Begründe in einem Satz, warum dein Stand so abgestimmt hat.“ Dauert die Abstimmung inklusive Rechnen länger als fünf Minuten, helfen Sie (Notfall). Danach liest die Wahlleitung die Ergebnisse Antrag für Antrag (drei Durchgänge, je 20 Sekunden): zuerst nach Ständen, dann nach Köpfen.",
+    "3b  (2 Min., Folie 10) Klerus und Adel stimmen nach ihrer Rolle (Vorrechte behalten), der Dritte Stand nach seiner Überzeugung. Das Ankreuzen dauert 2 Minuten, die Karten bleiben bei den Schülern (sie dienen als Gedächtnisstütze für die offene Abstimmung). Sie greifen nur im Notfall ein.",
+    "3c  (5 Min., Folien 10 und 11) Offene Abstimmung per Handzeichen, geleitet von der Wahlleitung: „Antrag A. Klerus: Wer ist dafür? Hand hoch.“ Die Wahlleitung zählt die Hände (nur die Ja-Stimmen, Nein = Personenzahl des Standes minus Ja), trägt in die Zählhilfe ein und diktiert der Schriftführung: „Antrag A, Klerus: Ja …, Nein …“. Dann Adel, Dritter Stand, danach Antrag B und C. Anschließend rechnet die Wahlleitung nach Ständen und nach Köpfen aus, die Schriftführung schreibt ins Tafelfeld. Währenddessen arbeitet die Klasse (Folie 11) allein: „Schreibe auf: Wie viele der drei Anträge werden nach Ständen angenommen? Wie viele nach Köpfen? Begründe in einem Satz, warum dein Stand so abgestimmt hat.“ Dauert die Abstimmung inklusive Rechnen länger als fünf Minuten, helfen Sie (Notfall). Danach liest die Wahlleitung die Ergebnisse Antrag für Antrag (drei Durchgänge, je 20 Sekunden): zuerst nach Ständen, dann nach Köpfen.",
   ],
   extra: [boardBox("Links · Ergebnis (wird während des Zählens an die Tafel geschrieben)", [
     bl("A Steuern     nach Ständen: Klerus ___ · Adel ___ · Dritter Stand ___  →  ___ : ___     nach Köpfen: Ja ___ · Nein ___"),
@@ -189,17 +189,17 @@ d.push(sp());
 d.push(step("schaut zu, antwortet kurz", {
   say: "Stifte liegen. Ihr hört nur zu.",
   do: [
-    "3d  (4 Min., Folien 11 und 12) Folie 11: „Drei Anträge, zwei Regeln, zwei Ergebnisse.“ Gezielte Abfrage (2 bis 3 Personen, kurz, kein Gespräch): „Wie haben Klerus und Adel in allen drei Durchgängen abgestimmt? Warum?“ Antwort: gleich, denn sie wollen ihre Vorrechte behalten, ihre Interessen sind deckungsgleich.",
+    "3d  (4 Min., Folien 12 und 13) Folie 12: „Drei Anträge, zwei Regeln, zwei Ergebnisse.“ Gezielte Abfrage (2 bis 3 Personen, kurz, kein Gespräch): „Wie haben Klerus und Adel in allen drei Durchgängen abgestimmt? Warum?“ Antwort: gleich, denn sie wollen ihre Vorrechte behalten, ihre Interessen sind deckungsgleich.",
     "Einordnung (eine Minute, von Ihnen): „Im Spiel stimmen Klerus und Adel immer gleich, weil beide ihre Vorrechte verteidigen. Historisch waren die Stände nicht immer so einheitlich: Viele einfache Pfarrer unterstützten den Dritten Stand, und einzelne Adlige schlossen sich später an. Bei der Abstimmungsregel hielten die Privilegierten aber oft zusammen.“",
-    "Danach Folie 12 (Frankreich): Im Spiel sind die Verhältnisse gröber als in Frankreich; die echten Zahlen stehen auf Folie 12. Klerus und Adel sind etwa 3 %, aber sie haben 2 von 3 Stimmen.",
+    "Danach Folie 13 (Frankreich): Im Spiel sind die Verhältnisse gröber als in Frankreich; die echten Zahlen stehen auf Folie 13. Klerus und Adel sind etwa 3 %, aber sie haben 2 von 3 Stimmen.",
     "Gezielte Abfrage (2 bis 3 Personen, kurz): „Warum hat der Antrag nach Ständen verloren, obwohl 16 Personen dafür waren?“ – „Was ist anders nach Köpfen?“ Das ersetzt das Gespräch.",
   ],
 }));
 d.push(sp());
 d.push(step("arbeitet allein", {
   say: "Jetzt arbeitet ihr allein. Die Aufgabe steht rechts.",
-  do: ["3e  (4 Min., Folie 13) Ü3 im Heft: drei Sätze. Satz 3 ist mit * markiert und darf entfallen, wenn die Zeit knapp wird. Zeit angeben, nach 3 Minuten „Noch eine Minute.“ Stichprobe im Heft: durch die Reihen gehen und bei 4 bis 6 Personen unterschiedlichen Niveaus mitlesen, nicht kommentieren. Im Wechsel mit der gezielten Abfrage einsetzbar."],
-  extra: [folieBox("13 · Ü3 Was ist passiert?", [p(t("Ü3 Die Abstimmung", { font: "Cambria", size: 22, bold: true, color: NAVY }), { after: 40 }), bl("1. Der Dritte Stand (Bauern und Bürger) wurde überstimmt, weil …"), bl("2. Klerus und Adel haben …"), bl("3.* Die Abstimmung nach Ständen ist unfair, weil … (nenne eine Zahl)", { after: 40 }), p([t("Zeit: ", { bold: true, size: 19 }), t("4 Minuten · allein · leise     ", { size: 19 }), t("Fertig? Stift hinlegen.", { size: 19, italics: true })], { after: 0 })]), gapP()],
+  do: ["3e  (4 Min., Folie 14) Ü3 im Heft: drei Sätze. Satz 3 ist mit * markiert und darf entfallen, wenn die Zeit knapp wird. Zeit angeben, nach 3 Minuten „Noch eine Minute.“ Stichprobe im Heft: durch die Reihen gehen und bei 4 bis 6 Personen unterschiedlichen Niveaus mitlesen, nicht kommentieren. Im Wechsel mit der gezielten Abfrage einsetzbar."],
+  extra: [folieBox("14 · Ü3 Was ist passiert?", [p(t("Ü3 Die Abstimmung", { font: "Cambria", size: 22, bold: true, color: NAVY }), { after: 40 }), bl("1. Der Dritte Stand (Bauern und Bürger) wurde überstimmt, weil …"), bl("2. Klerus und Adel haben …"), bl("3.* Die Abstimmung nach Ständen ist unfair, weil … (nenne eine Zahl)", { after: 40 }), p([t("Zeit: ", { bold: true, size: 19 }), t("4 Minuten · allein · leise     ", { size: 19 }), t("Fertig? Stift hinlegen.", { size: 19, italics: true })], { after: 0 })]), gapP()],
   sol: "1: …jeder Stand nur eine Stimme hat. 2: …dieselben Interessen hatten (ihre Vorrechte) und gemeinsam mit Nein stimmten. 3.*: …der Dritte Stand ca. 97 % der Menschen stellt, aber nur 1 von 3 Stimmen hat.",
 }));
 d.push(sp());
@@ -212,15 +212,15 @@ d.push(sp());
 d.push(step("schreibt ab", {
   say: "Jetzt schreibt ihr ab: Merksatz 1. Rahmt ihn rot ein.",
   do: [
-    "Folie 14 (Merksatz, 2 Minuten): Kernsatz im roten Rahmen, Beispiel, Test. Alle schreiben ab. Danach „Vergleicht und verbessert mit Grün.“",
-    "Folie 15 (3 Minuten): Abschlussfrage mit Zeichnung (König Ludwig XVI. mit Sprechblase, Berater mit „Ich rate dir, …, weil …“): „Du bist Berater von König Ludwig XVI. Er fragt dich: Soll ich erlauben, dass der Dritte Stand (Bauern und Bürger) nach Köpfen abstimmt?“ Rat im Heft: „Ich rate dir, …, weil …“. Es gibt mehrere gute Antworten, geprüft werden Position, ein Sachargument aus der Stunde und ein „weil“. Erst zehn Sekunden denken, dann schreiben.",
+    "Folie 15 (Merksatz, 2 Minuten): Kernsatz im roten Rahmen, Beispiel, Test. Alle schreiben ab. Danach „Vergleicht und verbessert mit Grün.“",
+    "Folie 16 (3 Minuten): Abschlussfrage mit Zeichnung (König Ludwig XVI. mit Sprechblase, Berater mit „Ich rate dir, …, weil …“): „Du bist Berater von König Ludwig XVI. Er fragt dich: Soll ich erlauben, dass der Dritte Stand (Bauern und Bürger) nach Köpfen abstimmt?“ Rat im Heft: „Ich rate dir, …, weil …“. Es gibt mehrere gute Antworten, geprüft werden Position, ein Sachargument aus der Stunde und ein „weil“. Erst zehn Sekunden denken, dann schreiben.",
     "Form nach Verlauf wählen: (a) Blitzlicht: je eine Stimme „erlauben“ und eine „nicht erlauben“ gezielt aufrufen, kein Kommentar (wenig Zeit, Klasse hört gut zu). (b) Schriftlich, dann zwei bis drei Sätze vorlesen (Klasse unruhig, Heft-Stichprobe bei 4 bis 6 Personen). (c) Berater-Duell zu zweit: A rät dafür, B dagegen, leise (Ruhe und Zeit). Unbenotet.",
-    "Folie 16 (30 Sekunden, still): Haben wir die Ziele erreicht? Keine Antworten ins Plenum. Folie 17 (30 Sekunden, nur lesen): Ausblick und Hausaufgabe. „Was passiert, wenn der Dritte Stand fordert, dass nach Köpfen abgestimmt wird, und der König ablehnt? Das sehen wir in der nächsten Stunde.“ Hausaufgabe: Testaufgaben mit Grün berichtigen (falls der Test zurückgegeben wurde).",
+    "Folie 17 (30 Sekunden, still): Haben wir die Ziele erreicht? Keine Antworten ins Plenum. Folie 18 (30 Sekunden, nur lesen): Ausblick und Hausaufgabe. „Was passiert, wenn der Dritte Stand fordert, dass nach Köpfen abgestimmt wird, und der König ablehnt? Das sehen wir in der nächsten Stunde.“ Hausaufgabe: Testaufgaben mit Grün berichtigen (falls der Test zurückgegeben wurde).",
   ],
   sol: "Mögliche Argumente (Auswahl, keine Musterlösung). Erlauben: Der Staat braucht Geld, Steuern gehen nur mit dem Dritten Stand (Bauern und Bürger); er stellt fast alle Menschen, sonst droht Unruhe; Hunger und Staatsbankrott sind nah. Nicht erlauben: Adel und Klerus sind wütend (Steuerplan 1787 gescheitert), der König verliert Rückhalt und Macht; der Dritte Stand wäre zu mächtig; seit 1614 wurde nach Ständen abgestimmt. Zwischenlösungen (erlauben, aber nur für die Steuerfrage) sind gut begründbar. Ein Hinweis, falls gefragt: Historisch lehnte der König ab. Kriterien: Position, ein Sachargument aus der Stunde, ein „weil“.",
 }));
 d.push(sp());
-d.push(note("ZUSATZ (Puffer, nur bei Zeit)", "Folie 18: Sportverein-Beispiel (Übertragung): Ein Verein hat drei Abteilungen: Fußball 200 Mitglieder, Tischtennis 20, Schach 10. Jede Abteilung hat bei der Abstimmung eine Stimme. Was ist unfair? Einzelarbeit, Heft, 2 Minuten.", "F4F7FD", NAVY, "B9C6E8"));
+d.push(note("ZUSATZ (Puffer, nur bei Zeit)", "Folie 19: Sportverein-Beispiel (Übertragung): Ein Verein hat drei Abteilungen: Fußball 200 Mitglieder, Tischtennis 20, Schach 10. Jede Abteilung hat bei der Abstimmung eine Stimme. Was ist unfair? Einzelarbeit, Heft, 2 Minuten.", "F4F7FD", NAVY, "B9C6E8"));
 
 d.push(h3("So sieht das Heft am Ende der Stunde aus"));
 d.push(table([2300, 7906], [
@@ -239,7 +239,7 @@ d.push(h3("Zum Prüfen"));
 d.push(...bullets([
   "Zahlen und Daten (Abgeordnete 290/270/580, Krieg in Amerika, 1787, August 1788) stammen aus dem Text der 8C und sind gegen das Schulbuch zu lesen. Die Anzahl der Menschen (150 000 / 500 000 / 20 000 000) stammt aus Ihrem Gruppenpuzzle-Material.",
   "Rückmeldung zur Planung: Eine geheime Absprache zwischen Erstem und Zweitem Stand (frühere Fassung) ist historisch nicht belegt und wurde gestrichen. Stattdessen drei Durchgänge, in denen die beiden Stände aufgrund deckungsgleicher Interessen gleich abstimmen. Das Spiel vereinfacht weiterhin: 1789 wurde nicht über genau diese Anträge abgestimmt, die Abschaffung der Vorrechte wurde erst am 4. August 1789 beschlossen. Der Streit ging um die Abstimmungsregel (nach Ständen oder nach Köpfen) und blockierte die Generalstände. Die Karten sagen „Auch Adel und Klerus zahlen künftig Steuern“, weil das der Kern der Steuerfrage war. Für die nächste Stunde (Dritter Stand fordert „nach Köpfen“, Nationalversammlung) lässt sich direkt daran anknüpfen.",
-  "Die Standeskarten verteilen die Rollen: 3 Klerus (13 %), 4 Adel (17 %), 16 Dritter Stand (70 %), dazu Wahlleitung und Schriftführung. Das ist verzerrt, 1789 waren Klerus und Adel zusammen etwa 3 %. Das Verhältnis der Menschen steht auf Folie 12. Bei der Auswertung kann man darauf hinweisen: In Frankreich war der Unterschied noch viel größer.",
+  "Die Standeskarten verteilen die Rollen: 3 Klerus (13 %), 4 Adel (17 %), 16 Dritter Stand (70 %), dazu Wahlleitung und Schriftführung. Das ist verzerrt, 1789 waren Klerus und Adel zusammen etwa 3 %. Das Verhältnis der Menschen steht auf Folie 13. Bei der Auswertung kann man darauf hinweisen: In Frankreich war der Unterschied noch viel größer.",
   "Stimmen im Dritten Stand einzelne mit Nein, bleibt das Ergebnis nach Ständen gleich (die Mehrheit im Stand entscheidet), nach Köpfen wird es knapper. Das ist kein Fehler, sondern zeigt, dass auch ein Stand nicht einheitlich denkt (Hinweis für die nächste Stunde).",
 ]));
 

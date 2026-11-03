@@ -150,12 +150,12 @@ pageNo = 0;
     txt(s, x, { x: 1.85, y: 4.52 + i * 0.52, w: 10.3, h: 0.46, fontSize: 27, color: WHITE, valign: "middle" });
   });
   txt(s, "Geschichte, Klasse 8D · Französische Revolution", { x: 0.9, y: 6.7, w: 8, h: 0.3, fontSize: 13, color: ICE });
-  s.addNotes("Die Folie steht beim Betreten. Niemand muss etwas sagen. Tests liegen verdeckt auf den Plätzen (falls noch nicht zurückgegeben), keine Besprechung. Die Karten (Standeskarten) liegen verdeckt auf den Plätzen. Wahlleitung und Schriftführung (zwei zuverlässige Schülerinnen oder Schüler) erhalten ihre Rollenkarte vorab und lesen sie still. Ansage: „Stifte liegen. Ihr hört nur zu.“ Danach Folie 2 und 3.");
+  s.addNotes("Die Folie steht beim Betreten. Niemand muss etwas sagen. Tests liegen verdeckt auf den Plätzen (falls noch nicht zurückgegeben), keine Besprechung. Die Karten (Standeskarten) liegen verdeckt auf den Plätzen. Wahlleitung und Schriftführung (zwei zuverlässige Schülerinnen oder Schüler) erhalten ihre Rollenkarte vorab und lesen sie still. Ansage: „Stifte liegen. Ihr hört nur zu.“ Danach Folie 2, 3 und 4.");
 }
 
 // ============ 2 Lernziele ============
 {
-  const s = blank("Lernziele", "Das kannst du am Ende der Stunde", undefined, "Lernziele vorlesen (1 Minute, Klasse hört nur zu). Am Ende der Stunde (Folie 16) prüft die Klasse still, ob sie erreicht sind. Was nicht geschafft wird, hat einen Stern.");
+  const s = blank("Lernziele", "Das kannst du am Ende der Stunde", undefined, "Lernziele vorlesen (1 Minute, Klasse hört nur zu). Am Ende der Stunde (Folie 17) prüft die Klasse still, ob sie erreicht sind. Was nicht geschafft wird, hat einen Stern.");
   [["1", "Ich kann den Weg bis zu den Generalständen am Zeitstrahl erklären."], ["2", "Ich kann erklären, wie die Stände den Dritten Stand überstimmen konnten."], ["3", "Ich kann begründen, warum die Abstimmung nach Ständen unfair war."]].forEach(([n, x], i) => {
     const y = 1.75 + i * 1.5;
     box(s, 0.6, y, 12.15, 1.25, i % 2 ? LIGHT : LIGHT2);
@@ -168,7 +168,7 @@ pageNo = 0;
 // ============ 3 Ablauf ============
 {
   const s = blank("Ablauf", "So arbeiten wir heute", undefined, "Ablauf zeigen. Die Kreise oben rechts zeigen die Phase: A V I V A. Der Stern * bedeutet: wird eventuell nicht mehr geschafft (Ü3 Satz 3).");
-  const ph = [["A", "Ankommen", "Ziele", "3 Min."], ["V", "Vorwissen", "Stände", "6 Min."], ["I", "Informieren", "Text und Zeitstrahl", "11 Min."], ["V", "Verarbeiten", "Spiel", "18 Min."], ["A", "Auswerten", "Merksatz, Frage", "6 Min."]];
+  const ph = [["A", "Ankommen", "Ziele, Erwartungen", "4 Min."], ["V", "Vorwissen", "Stände", "6 Min."], ["I", "Informieren", "Text und Zeitstrahl", "11 Min."], ["V", "Verarbeiten", "Spiel", "18 Min."], ["A", "Auswerten", "Merksatz, Frage", "6 Min."]];
   ph.forEach(([l, n, x, m], i) => {
     const xx = 0.6 + i * 2.45;
     box(s, xx, 1.9, 2.3, 3.6, i % 2 ? LIGHT : LIGHT2);
@@ -181,10 +181,25 @@ pageNo = 0;
   bar(s, [{ text: "Wichtig: ", options: { bold: true } }, { text: "Wir arbeiten leise. Gesprochen wird nur nach Ansage.", options: {} }]);
 }
 
-// ============ 4 Ü1 Buchstabenrätsel ============
+// ============ 4 Erwartungen (Neue Autorität) ============
+{
+  const s = blank("A · Ankommen · Zusammenarbeit", "Das erwarte ich von euch", undefined, "Dauer: 1 Minute, Sie sprechen, die Klasse hört nur zu, kein Gespräch, keine Abfrage. Ansage: „Stifte liegen. Ihr hört nur zu.“ Haltung (Neue Autorität): ruhig, präsent, wertschätzend, ohne Drohung und ohne Vorwurf. Sie sagen, was Sie wollen und was Sie dafür brauchen, und dass Sie dafür da sind. Sinngemäß: „Ich bin euer Lehrer und euer Coach. Ich will, dass ihr hier Spaß habt und etwas lernt. Beides geht nur, wenn ihr mitarbeitet. Dafür brauche ich drei Dinge von euch. Und ich helfe euch dabei.“ Im Sport kennen sie das: Im Training bringt jeder seine Leistung, sonst funktioniert die Mannschaft nicht. Die drei Erwartungen sind ein Vorschlag, bitte nach Ihrer Klasse anpassen. Später in der Stunde knüpfen Sie bei Bedarf kurz und ruhig daran an („Wir hatten vereinbart: …“) statt zu ermahnen.");
+  box(s, 0.6, 1.5, 12.15, 1.15, NAVY2);
+  txt(s, "Ich bin euer Lehrer und euer Coach. Ich will, dass ihr Spaß habt und lernt.", { x: 0.9, y: 1.5, w: 11.6, h: 1.15, fontFace: HEAD, fontSize: 27, bold: true, color: WHITE, valign: "middle" });
+  txt(s, "Das geht nur, wenn ihr mitarbeitet:", { x: 0.6, y: 2.8, w: 12.1, h: 0.55, fontSize: 27, bold: true, color: NAVY });
+  ["Ihr hört zu, wenn jemand spricht.", "Ihr arbeitet in den Arbeitsphasen leise und konzentriert.", "Ihr macht mit, auch wenn es mal schwer ist."].forEach((x, i) => {
+    const y = 3.45 + i * 0.88;
+    box(s, 0.6, y, 12.15, 0.76, i % 2 ? LIGHT : LIGHT2);
+    numCircle(s, i + 1, 0.8, y + 0.17, 0.42, RED);
+    txt(s, x, { x: 1.4, y, w: 11.2, h: 0.76, fontSize: 27, valign: "middle" });
+  });
+  bar(s, [{ text: "Ich helfe euch dabei. ", options: { bold: true } }, { text: "Wie im Training: Alle bringen ihr Bestes.", options: {} }]);
+}
+
+// ============ 5 Ü1 Buchstabenrätsel ============
 {
   const { s } = taskSlide("V · Vorwissen aktivieren · Übung 1", "Buchstabenrätsel: Absolutismus und Stände", ["Finde zu jedem Hinweis das Wort im Gitter.", "Kreise es ein.", "Schreibe es hinter den Hinweis.", "Fertig? Schreibe zu einem Wort einen Satz."], "4 Minuten · allein, dann Partnercheck · leise",
-    "Ansage: „Jetzt arbeitet ihr allein. Die Aufgabe steht rechts.“ Das Rätsel liegt vorab auf den Tischen (Buchstabenraetsel_Absolutismus_Staende.pdf, ein Blatt pro Person, zwei Rätsel pro A4 geschnitten). Zu jedem Hinweis gibt es ein Wort (zehn Wörter) mit angegebener Buchstabenzahl, die Wörter stehen waagerecht oder senkrecht. Kein Plenumsgespräch. Nach 4 Minuten allein: Partnercheck (1 Minute, leise), dann Folie 5. Hinweis → Lösungswort: König regiert allein → ABSOLUTISMUS; Beiname Ludwigs XIV. → SONNENKÖNIG; Prächtiges Schloss → VERSAILLES; Macht kommt von Gott → GOTTESGNADENTUM; Erster Stand → KLERUS; Zweiter Stand → ADEL; Abgaben an den Staat → STEUERN; Sonderrechte → VORRECHTE; sie bestellen die Felder → BAUERN; Handwerker und Kaufleute → BÜRGER. Wiederholung der letzten Stunde (Test). Die Generalstände kennt die Klasse noch nicht, sie kommen nicht vor. Die Lösungswörter bleiben als Begriffsspeicher und werden in den nächsten Stunden zur Wiederholung genutzt.");
+    "Ansage: „Jetzt arbeitet ihr allein. Die Aufgabe steht rechts.“ Das Rätsel liegt vorab auf den Tischen (Buchstabenraetsel_Absolutismus_Staende.pdf, ein Blatt pro Person, zwei Rätsel pro A4 geschnitten). Zu jedem Hinweis gibt es ein Wort (zehn Wörter) mit angegebener Buchstabenzahl, die Wörter stehen waagerecht oder senkrecht. Kein Plenumsgespräch. Nach 4 Minuten allein: Partnercheck (1 Minute, leise), dann Folie 6. Hinweis → Lösungswort: König regiert allein → ABSOLUTISMUS; Beiname Ludwigs XIV. → SONNENKÖNIG; Prächtiges Schloss → VERSAILLES; Macht kommt von Gott → GOTTESGNADENTUM; Erster Stand → KLERUS; Zweiter Stand → ADEL; Abgaben an den Staat → STEUERN; Sonderrechte → VORRECHTE; sie bestellen die Felder → BAUERN; Handwerker und Kaufleute → BÜRGER. Wiederholung der letzten Stunde (Test). Die Generalstände kennt die Klasse noch nicht, sie kommen nicht vor. Die Lösungswörter bleiben als Begriffsspeicher und werden in den nächsten Stunden zur Wiederholung genutzt.");
   phaseTag(s, 1);
 }
 
@@ -339,7 +354,7 @@ function bubble(s, x, y, w, h, fill, line, side, tipY) {
 
 // ============ 16 Ziele prüfen ============
 {
-  const s = blank("A · Auswerten", "Haben wir die Ziele erreicht?", 4, "Die Klasse prüft still: Kann ich das? Danach Folie 17. Ziel 3 hat einen Stern (*): Es kann sein, dass es nicht mehr geschafft wurde, dann kommt es nächste Stunde als Wiederholung. Keine Antworten ins Plenum, keine Abfrage von Selbsteinschätzungen.");
+  const s = blank("A · Auswerten", "Haben wir die Ziele erreicht?", 4, "Die Klasse prüft still: Kann ich das? Danach Folie 18. Ziel 3 hat einen Stern (*): Es kann sein, dass es nicht mehr geschafft wurde, dann kommt es nächste Stunde als Wiederholung. Keine Antworten ins Plenum, keine Abfrage von Selbsteinschätzungen.");
   [["Ich kann den Weg bis zu den Generalständen am Zeitstrahl erklären."], ["Ich kann erklären, wie die Stände den Dritten Stand überstimmen konnten."], ["Ich kann begründen, warum die Abstimmung nach Ständen unfair war.*"]].forEach(([x], i) => {
     const y = 1.7 + i * 1.4;
     box(s, 0.6, y, 12.15, 1.15, i % 2 ? LIGHT : LIGHT2);

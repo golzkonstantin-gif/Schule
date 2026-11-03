@@ -28,7 +28,7 @@ const druck = [
 // Vorbereitung
 const prep = [
   ["Tafelskript ausdrucken oder auf dem Tablet bereithalten", "`Tafelskript_Generalstaende_8D.pdf`, 7 Seiten"],
-  ["Folien öffnen und einmal durchklicken", "`Praesentation_Generalstaende_8D.pptx`, 18 Folien; Folie 1 steht beim Betreten da"],
+  ["Folien öffnen und einmal durchklicken", "`Praesentation_Generalstaende_8D.pptx`, 19 Folien; Folie 1 steht beim Betreten da"],
   ["Rollen verteilen und Karten verdeckt auf die Plätze legen", "Wahlleitung und Schriftführung zuerst auswählen (zwei zuverlässige, rechensichere Schülerinnen oder Schüler, nicht stimmberechtigt), ihnen die Rollenkarte geben. Klerus 3 und Adel 4 gezielt wählen, Rest Dritter Stand; Tabelle unten ausfüllen (ohne Namen, nur Platznummern)"],
   ["Kreide und Grün zum Verbessern bereitlegen", "Kreide-Kette: 1 Stück Kreide, das weitergegeben wird"],
   ["Uhr oder Timer bereitstellen", "Übungsphase endet 5 Minuten vor Schluss, „Auswerten“ ist fest"],
@@ -44,7 +44,7 @@ const tafel = [
 const d = [];
 d.push(p(t("GESCHICHTE · KLASSE 8D · MITTWOCH 04.11.2026", { size: 18, bold: true, color: MUTED }), { after: 20 }));
 d.push(p(t("Materialliste: Generalstände", { font: "Cambria", size: 44, bold: true, color: NAVY }), { after: 40 }));
-d.push(p(t("Zum Abhaken. Alle Dateien liegen in Geschichte_8D/Generalstaende/. Ablauf: 3 Ankommen · 6 Wiederholung · 11 Text und Zeitstrahl · 18 Ständeversammlung · 6 Auswerten · 1 Puffer.", { size: 20, color: MUTED }), { after: 80 }));
+d.push(p(t("Zum Abhaken. Alle Dateien liegen in Geschichte_8D/Generalstaende/. Ablauf: 4 Ankommen · 6 Wiederholung · 11 Text und Zeitstrahl · 18 Ständeversammlung · 6 Auswerten.", { size: 20, color: MUTED }), { after: 80 }));
 
 d.push(h2("1 Drucken und schneiden"));
 d.push(table(DW, [hdr(["", "Was", "Menge", "Datei und Hinweis"], DW), ...druck.map(([a, b, c]) => row([cell(box(), { w: DW[0] }), cell(p(t(a, { bold: true, size: 20 }), { after: 0 }), { w: DW[1] }), cell(p(t(b, { size: 20 }), { after: 0 }), { w: DW[2] }), cell(p(t(c.replace(/`/g, ""), { size: 19 }), { after: 0 }), { w: DW[3] })], 560))]));
