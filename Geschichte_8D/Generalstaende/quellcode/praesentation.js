@@ -183,17 +183,17 @@ pageNo = 0;
 
 // ============ 4 Erwartungen (Neue Autorität) ============
 {
-  const s = blank("A · Ankommen · Zusammenarbeit", "Das erwarte ich von euch", undefined, "Dauer: 1 Minute, Sie sprechen, die Klasse hört nur zu, kein Gespräch, keine Abfrage. Ansage: „Stifte liegen. Ihr hört nur zu.“ Haltung (Neue Autorität): ruhig, präsent, wertschätzend, ohne Drohung und ohne Vorwurf. Sie sagen, was Sie wollen und was Sie dafür brauchen, und dass Sie dafür da sind. Sinngemäß: „Ich bin euer Lehrer und euer Coach. Ich will, dass ihr hier Spaß habt und etwas lernt. Beides geht nur, wenn ihr mitarbeitet. Dafür brauche ich drei Dinge von euch. Und ich helfe euch dabei.“ Im Sport kennen sie das: Im Training bringt jeder seine Leistung, sonst funktioniert die Mannschaft nicht. Die drei Erwartungen sind ein Vorschlag, bitte nach Ihrer Klasse anpassen. Später in der Stunde knüpfen Sie bei Bedarf kurz und ruhig daran an („Wir hatten vereinbart: …“) statt zu ermahnen.");
+  const s = blank("A · Ankommen · Zusammenarbeit", "Das ist mir wichtig", undefined, "Dauer: 1 Minute, Sie sprechen, die Klasse hört nur zu, kein Gespräch, keine Abfrage. Ansage: „Stifte liegen. Ihr hört nur zu.“ Haltung (Neue Autorität): ruhig, präsent, wertschätzend, ohne Drohung und ohne Vorwurf. Sie sagen, was Ihnen wichtig ist und wofür Sie selbst einstehen (Präsenz, Beziehung, Beharrlichkeit), und laden zum gemeinsamen „Wir“ ein, statt Forderungen von oben nach unten zu stellen. Sinngemäß: „Ich bin euer Lehrer und euer Coach. Mir ist wichtig, dass ihr hier Spaß habt und etwas lernt. Beides gelingt nur, wenn wir zusammenarbeiten. Dafür sorgen wir gemeinsam: Wir hören einander zu. Wir arbeiten leise, wenn Arbeitszeit ist. Wir machen mit, auch wenn es mal schwer ist. Ich bin da, ich helfe euch, und ich bleibe dran.“ Im Sport kennen sie das: Eine Mannschaft funktioniert nur, wenn alle mitziehen. Die drei Sätze sind ein Vorschlag, bitte nach Ihrer Klasse anpassen. Später in der Stunde knüpfen Sie bei Bedarf kurz und ruhig daran an („Wir hatten vereinbart: …“) statt zu ermahnen.");
   box(s, 0.6, 1.5, 12.15, 1.15, NAVY2);
-  txt(s, "Ich bin euer Lehrer und euer Coach. Ich will, dass ihr Spaß habt und lernt.", { x: 0.9, y: 1.5, w: 11.6, h: 1.15, fontFace: HEAD, fontSize: 27, bold: true, color: WHITE, valign: "middle" });
-  txt(s, "Das geht nur, wenn ihr mitarbeitet:", { x: 0.6, y: 2.8, w: 12.1, h: 0.55, fontSize: 27, bold: true, color: NAVY });
-  ["Ihr hört zu, wenn jemand spricht.", "Ihr arbeitet in den Arbeitsphasen leise und konzentriert.", "Ihr macht mit, auch wenn es mal schwer ist."].forEach((x, i) => {
+  txt(s, "Ich bin euer Lehrer und Coach. Mir ist wichtig, dass ihr Spaß habt und lernt.", { x: 0.9, y: 1.5, w: 11.6, h: 1.15, fontFace: HEAD, fontSize: 27, bold: true, color: WHITE, valign: "middle" });
+  txt(s, "Das gelingt, wenn wir gemeinsam arbeiten:", { x: 0.6, y: 2.8, w: 12.1, h: 0.55, fontSize: 27, bold: true, color: NAVY });
+  ["Wir hören einander zu, wenn jemand spricht.", "Wir arbeiten leise, wenn Arbeitszeit ist.", "Wir machen mit, auch wenn es mal schwer ist."].forEach((x, i) => {
     const y = 3.45 + i * 0.88;
     box(s, 0.6, y, 12.15, 0.76, i % 2 ? LIGHT : LIGHT2);
     numCircle(s, i + 1, 0.8, y + 0.17, 0.42, RED);
     txt(s, x, { x: 1.4, y, w: 11.2, h: 0.76, fontSize: 27, valign: "middle" });
   });
-  bar(s, [{ text: "Ich helfe euch dabei. ", options: { bold: true } }, { text: "Wie im Training: Alle bringen ihr Bestes.", options: {} }]);
+  bar(s, [{ text: "Ich bin da und bleibe dran. ", options: { bold: true } }, { text: "Ich helfe euch.", options: {} }]);
 }
 
 // ============ 5 Ü1 Buchstabenrätsel ============
