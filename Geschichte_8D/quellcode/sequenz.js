@@ -143,7 +143,7 @@ d.push(p(t("Alles hier ist Orientierung, kein festes Muster. Abschlussfragen mü
 const OW = [650, 4900, 2750, 3850, 3288];
 const OH = ["Nr.", "Abschlussfrage (Berater: „Du bist Berater von …“)", "Vorwissen (Wiederholung)", "Methode (Idee)", "Lehrbuch (nur indirekt)"];
 const OR = [
-  ["1", "König Ludwig XVI.: Soll ich erlauben, dass der Dritte Stand (Bauern und Bürger) nach Köpfen abstimmt? (so geplant)", "Kreuzworträtsel Absolutismus und Stände (Begriffsspeicher)", "Ständespiel (8D), Zeitstrahl, Kreide-Kette", "S. 110/111"],
+  ["1", "König Ludwig XVI.: Soll ich erlauben, dass der Dritte Stand (Bauern und Bürger) nach Köpfen abstimmt? (so geplant)", "Buchstabenrätsel Absolutismus und Stände (Begriffsspeicher)", "Ständespiel (8D), Zeitstrahl, Kreide-Kette", "S. 110/111"],
   ["2", "Abgeordneter: Draußen stehen Soldaten. Wenn ich schwöre, kann ich verhaftet werden, auch meine Familie ist in Gefahr. Soll ich trotzdem schwören? (so geplant)", "Fehlertext: Abstimmung nach Ständen und nach Köpfen", "Karikatur direkt (Modell, dann Paare); Ideen: Zahlenjagd, Einordnen auf einer Linie (Beurteilen)", "S. 111 (Karikatur), 112/113 (Sieyès, Ballhausschwur), 116 (Dreischritt)"],
   ["3", "Adliger: Soll ich auf meine Vorrechte verzichten? (Risiko prüfen)", "Falschbehauptungen zu Stunde 2", "Entscheidungsfälle zu den Artikeln der Menschenrechte; Begriff „Revolution“ einführen", "S. 112/113 (Bastille, 4./5. August, Menschenrechte)"],
   ["4", "Nationalversammlung: Wer soll wählen dürfen? (Risiko prüfen)", "Schaubild mit Fehlern", "Stummes Schaubild, evtl. Fälle zur Wahlberechtigung", "S. 114/115 (Verfassung, Schaubild M2)"],

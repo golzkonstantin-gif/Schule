@@ -181,23 +181,23 @@ pageNo = 0;
   bar(s, [{ text: "Wichtig: ", options: { bold: true } }, { text: "Wir arbeiten leise. Gesprochen wird nur nach Ansage.", options: {} }]);
 }
 
-// ============ 4 Ü1 Kreuzworträtsel ============
+// ============ 4 Ü1 Buchstabenrätsel ============
 {
-  const { s } = taskSlide("V · Vorwissen aktivieren · Übung 1", "Kreuzworträtsel: Absolutismus und Stände", ["Löse das Kreuzworträtsel auf deinem Tisch.", "Schreibe die acht Lösungswörter in dein Heft.", "Fertig? Schreibe zu einem Wort einen Satz."], "4 Minuten · allein, dann Partnercheck · leise",
-    "Ansage: „Jetzt arbeitet ihr allein. Die Aufgabe steht rechts.“ Das Rätsel liegt vorab auf den Tischen (Kreuzwortraetsel_Absolutismus_Staende.pdf, ein Blatt pro Person, zwei Rätsel pro A4 geschnitten). Kein Plenumsgespräch. Nach 3 Minuten allein: Partnercheck (1 Minute, leise), dann Folie 5. Lösungswörter: 1 ABSOLUTISMUS, 2 SONNENKÖNIG, 3 VORRECHTE, 4 GOTTESGNADENTUM, 5 VERSAILLES, 6 STEUERN, 7 ADEL, 8 KLERUS. Wiederholung der letzten Stunde (Test). Die Generalstände kennt die Klasse noch nicht, sie kommen nicht vor. Die Lösungswörter bleiben als Begriffsspeicher und werden in den nächsten Stunden zur Wiederholung genutzt.");
+  const { s } = taskSlide("V · Vorwissen aktivieren · Übung 1", "Buchstabenrätsel: Absolutismus und Stände", ["Finde im Gitter die acht Wörter zu den Hinweisen.", "Kreise jedes Wort ein.", "Schreibe die acht Lösungswörter in dein Heft.", "Fertig? Schreibe zu einem Wort einen Satz."], "4 Minuten · allein, dann Partnercheck · leise",
+    "Ansage: „Jetzt arbeitet ihr allein. Die Aufgabe steht rechts.“ Das Rätsel liegt vorab auf den Tischen (Buchstabenraetsel_Absolutismus_Staende.pdf, ein Blatt pro Person, zwei Rätsel pro A4 geschnitten). Zu jedem Hinweis gibt es ein Wort mit angegebener Buchstabenzahl, die Wörter stehen waagerecht oder senkrecht. Kein Plenumsgespräch. Nach 4 Minuten allein: Partnercheck (1 Minute, leise), dann Folie 5. Lösungswörter: 1 ABSOLUTISMUS, 2 SONNENKÖNIG, 3 VERSAILLES, 4 GOTTESGNADENTUM, 5 KLERUS, 6 ADEL, 7 STEUERN, 8 VORRECHTE. Wiederholung der letzten Stunde (Test). Die Generalstände kennt die Klasse noch nicht, sie kommen nicht vor. Die Lösungswörter bleiben als Begriffsspeicher und werden in den nächsten Stunden zur Wiederholung genutzt.");
   phaseTag(s, 1);
 }
 
-// ============ 5 Lösung Kreuzworträtsel ============
+// ============ 5 Lösung Buchstabenrätsel ============
 {
-  const s = blank("V · Vorwissen aktivieren · Kontrolle", "Kreuzworträtsel: Lösung", 1, "Ansage: „Vergleicht und verbessert mit Grün.“ 2 Minuten, nicht besprechen. Bei Unklarheit gezielte Abfrage (2 bis 3 Personen): „Was bedeutet Gottesgnadentum? Wer zahlt die Steuern?“ Danach Hinweis: Diese Begriffe brauchen wir in den nächsten Stunden, sie bleiben im Heft als Begriffsspeicher und werden zur Wiederholung genutzt.");
+  const s = blank("V · Vorwissen aktivieren · Kontrolle", "Buchstabenrätsel: Lösung", 1, "Ansage: „Vergleicht und verbessert mit Grün.“ 1 bis 2 Minuten, nicht besprechen. Bei Unklarheit gezielte Abfrage (2 bis 3 Personen): „Was bedeutet Gottesgnadentum? Wer zahlt die Steuern?“ Danach Hinweis: Diese Begriffe brauchen wir in den nächsten Stunden, sie bleiben im Heft als Begriffsspeicher und werden zur Wiederholung genutzt. Lösungsgitter mit Fundstellen: Seite 2 der Datei Buchstabenraetsel_Absolutismus_Staende.pdf.");
   box(s, 0.6, 1.5, 12.15, 4.45, LIGHT2);
-  const W2 = [["1 →", "ABSOLUTISMUS"], ["2 ↓", "SONNENKÖNIG"], ["3 ↓", "VORRECHTE"], ["4 →", "GOTTESGNADENTUM"], ["5 →", "VERSAILLES"], ["6 ↓", "STEUERN"], ["7 →", "ADEL"], ["8 →", "KLERUS"]];
+  const W2 = [["1", "ABSOLUTISMUS"], ["2", "SONNENKÖNIG"], ["3", "VERSAILLES"], ["4", "GOTTESGNADENTUM"], ["5", "KLERUS"], ["6", "ADEL"], ["7", "STEUERN"], ["8", "VORRECHTE"]];
   W2.forEach(([n, w], i) => {
     const col = Math.floor(i / 4), row = i % 4;
     const x = 0.9 + col * 6.0, y = 1.75 + row * 1.0;
-    txt(s, n, { x, y, w: 1.0, h: 0.8, fontSize: 27, bold: true, color: RED, valign: "middle" });
-    txt(s, w, { x: x + 1.0, y, w: 4.8, h: 0.8, fontFace: HEAD, fontSize: 27, bold: true, color: NAVY, valign: "middle" });
+    txt(s, n, { x, y, w: 0.7, h: 0.8, fontSize: 27, bold: true, color: RED, valign: "middle" });
+    txt(s, w, { x: x + 0.7, y, w: 5.1, h: 0.8, fontFace: HEAD, fontSize: 27, bold: true, color: NAVY, valign: "middle" });
   });
   bar(s, [{ text: "Jetzt: ", options: { bold: true } }, { text: "Vergleiche und verbessere mit Grün.", options: {} }]);
 }
