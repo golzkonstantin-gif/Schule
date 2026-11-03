@@ -21,8 +21,7 @@ const box = () => p(t("□", { size: 26 }), { after: 0, align: AlignmentType.CEN
 const DW = [550, 3500, 1700, 4456];
 const druck = [
   ["Text „Wie kam es zu den Generalständen?“ (Textblatt mit Zeitstrahl)", "27 (25 + 2 Reserve), einseitig A4", "`Text_Wie_kam_es_zu_den_Generalstaenden.pdf`"],
-  ["Druckvorlage Standeskarten und Stimmzettel, Seite 1 bis 3", "je 1 Seite, ausschneiden: 25 Karten + 5 Reserve", "`Druckvorlage_Standeskarten_Stimmzettel.pdf`: Seite 1 (3 Klerus, 4 Adel, 3 Dritter Stand), Seite 2 (10 Dritter Stand), Seite 3 (5 Dritter Stand, 5 Reserve)"],
-  ["Absprache-Zettel (Seite 4 derselben Datei)", "1 Seite (zwei Zettel, einer genügt)", "für den Tisch vorn, geheim; wird nach der Absprache eingesammelt"],
+  ["Druckvorlage Standeskarten und Stimmzettel (3 Seiten)", "je 1 Seite, ausschneiden: 25 Karten + 5 Reserve", "`Druckvorlage_Standeskarten_Stimmzettel.pdf`: Seite 1 (3 Klerus, 4 Adel, 3 Dritter Stand), Seite 2 (10 Dritter Stand), Seite 3 (5 Dritter Stand, 5 Reserve)"],
   ["Tests der Klasse", "falls noch nicht zurückgegeben: verdeckt auf die Plätze", "keine Besprechung, Berichtigung mit Grün bis zur nächsten Stunde"],
 ];
 // Vorbereitung
@@ -30,7 +29,6 @@ const prep = [
   ["Tafelskript ausdrucken oder auf dem Tablet bereithalten", "`Tafelskript_Generalstaende_8D.pdf`, 7 Seiten"],
   ["Folien öffnen und einmal durchklicken", "`Praesentation_Generalstaende_8D.pptx`, 18 Folien; Folie 1 steht beim Betreten da"],
   ["Rollen verteilen und Karten verdeckt auf die Plätze legen", "Klerus 3 und Adel 4 gezielt wählen (ruhige, zuverlässige Schülerinnen und Schüler), Rest Dritter Stand; Tabelle unten ausfüllen (ohne Namen, nur Platznummern)"],
-  ["Tisch vorn (Hinterzimmer) mit 7 Stühlen aufstellen", "Absprache-Zettel dort ablegen"],
   ["Kreide und Grün zum Verbessern bereitlegen", "Kreide-Kette: 1 Stück Kreide, das weitergegeben wird"],
   ["Uhr oder Timer bereitstellen", "Übungsphase endet 5 Minuten vor Schluss, „Auswerten“ ist fest"],
   ["Stimmzettel sammeln und zählen vorbereiten", "3 Stapel (Klerus, Adel, Dritter Stand), Stift für die Tafelzahlen"],
@@ -39,7 +37,7 @@ const prep = [
 const tafel = [
   ["Seitentafel", "Ziele („Ich kann …“, 3 Sätze) und Ablauf: A Ankommen · V Wiederholung · I Text und Zeitstrahl · V Ständeversammlung · A Auswerten (Ü3 Satz 3 mit *)"],
   ["Mitte, links", "Daten für die Kreide-Kette untereinander: 1614 · 1778–1783 · 1787 · 1788 · August 1788 · Frühjahr 1789 · 5. Mai 1789"],
-  ["Mitte, rechts", "Leerer Rahmen für das Ergebnis der Abstimmung („nach Ständen: Klerus __ Adel __ Dritter Stand __ → __ : __“, „nach Köpfen: Ja __ Nein __“)"],
+  ["Mitte, rechts", "Leerer Rahmen für das Ergebnis der drei Anträge A, B, C (je „nach Ständen: Klerus __ Adel __ Dritter Stand __ → __ : __“ und „nach Köpfen: Ja __ Nein __“)"],
 ];
 
 const d = [];
@@ -65,7 +63,7 @@ d.push(table(RW, [hdr(["Stand", "Anzahl", "Plätze"], RW), ...rolle.map(([a, b, 
 d.push(p(t("Wenn Schülerinnen oder Schüler fehlen: Klerus bleibt 3, Adel bleibt 4. Klerus und Adel dürfen zusammen nie mehr als ein Drittel der Klasse sein.", { size: 19, italics: true, color: MUTED }), { before: 60 }));
 
 d.push(h2("5 Kurz vor Beginn (5 Minuten)"));
-["Folie 1 steht, Beamer an", "Karten liegen verdeckt auf den Plätzen", "Tisch vorn steht", "Seitentafel und Datumsliste an der Tafel", "Textblätter liegen bereit (nicht schon austeilen)", "Lautstärke-Ansagen im Kopf: „Stifte liegen. Ihr hört nur zu.“ · „Flüsterstufe. Nur dein Partner hört dich.“"].forEach((x) => d.push(p([t("□  ", { size: 24 }), t(x, { size: 21 })], { after: 50 })));
+["Folie 1 steht, Beamer an", "Karten liegen verdeckt auf den Plätzen", "Seitentafel und Datumsliste an der Tafel", "Textblätter liegen bereit (nicht schon austeilen)", "Lautstärke-Ansagen im Kopf: „Stifte liegen. Ihr hört nur zu.“ · „Flüsterstufe. Nur dein Partner hört dich.“"].forEach((x) => d.push(p([t("□  ", { size: 24 }), t(x, { size: 21 })], { after: 50 })));
 
 (async () => {
   const doc = new Document({ styles: { default: { document: { run: { font: "Calibri", size: 21 } } } }, sections: [{ properties: { page: { size: { width: 11906, height: 16838 }, margin: { top: 800, bottom: 700, left: 850, right: 850 } } }, footers: { default: footer }, children: d }] });

@@ -241,45 +241,36 @@ pageNo = 0;
   });
 }
 
-// ============ 8 Ständeversammlung: Antrag ============
+// ============ 8 Ständeversammlung: drei Anträge ============
 {
-  const s = blank("V · Verarbeiten · Ständeversammlung", "Der Antrag", 3, "Ansage: „Stifte liegen. Ihr hört nur zu. Dreht jetzt eure Karte um. Lest sie leise. Zeigt sie niemandem.“ Dann Regel vorsprechen: Jeder Stand hat eine Stimme (siehe Text). Dann: „Erster und Zweiter Stand, ihr geht jetzt leise an den Tisch vorn. Dritter Stand, ihr bleibt sitzen.“ Absprache-Zettel auf den Tisch vorn legen. Das ist die einzige Bewegung der Stunde.");
-  s.addShape(pres.shapes.ROUNDED_RECTANGLE, { x: 0.6, y: 1.65, w: 12.15, h: 1.7, rectRadius: 0.08, fill: { color: WHITE }, line: { color: RED, width: 3 } });
-  txt(s, "Antrag: Auch Adel und Klerus zahlen künftig Steuern.", { x: 0.95, y: 1.7, w: 11.45, h: 1.6, fontFace: HEAD, fontSize: 32, bold: true, valign: "middle" });
-  cardRow(s, 3.55, [["Klerus", "3 Personen · 1 Stimme", KLERUS], ["Adel", "4 Personen · 1 Stimme", ADEL], ["Dritter Stand (Bauern und Bürger)", "18 Personen · 1 Stimme", DRITTER]]);
+  const s = blank("V · Verarbeiten · Ständeversammlung", "Drei Anträge, drei Durchgänge", 3, "Ansage: „Stifte liegen. Ihr hört nur zu. Dreht jetzt eure Karte um. Lest sie leise. Zeigt sie niemandem.“ Dann die Regel vorsprechen: Jeder Stand hat eine Stimme (siehe Text). Alle bleiben an ihrem Platz, es gibt keine Bewegung und keine Absprache. Die drei Anträge sind Spielanträge, historisch ging der Streit um die Abstimmungsregel. Klerus und Adel haben in allen drei Fällen dieselben Interessen: Sie wollen ihre Vorrechte behalten. Im Spiel sieht die Klasse das an den Ergebnissen.");
+  [["A", "Auch Adel und Klerus zahlen künftig Steuern."], ["B", "Die Stände werden abgeschafft. Alle haben gleiche Rechte."], ["C", "Auch Bauern bekommen mehr Mitsprache im Staat."]].forEach(([n, x], i) => {
+    const y = 1.5 + i * 0.95;
+    box(s, 0.6, y, 12.15, 0.8, i % 2 ? LIGHT : LIGHT2);
+    numCircle(s, n, 0.85, y + 0.17, 0.46, RED);
+    txt(s, x, { x: 1.55, y, w: 11.0, h: 0.8, fontFace: HEAD, fontSize: 27, bold: true, valign: "middle" });
+  });
+  txt(s, "Klerus: 3 Personen · Adel: 4 Personen · Dritter Stand (Bauern und Bürger): 18 Personen. Jeder Stand hat eine Stimme.", { x: 0.7, y: 4.5, w: 12.0, h: 1.4, fontSize: 27, color: NAVY, valign: "middle" });
   bar(s, [{ text: "Regel: ", options: { bold: true } }, { text: "Jeder Stand hat eine Stimme (Abstimmung nach Ständen).", options: {} }]);
 }
 
-// ============ 9 Aufträge ============
+// ============ 9 Stimmzettel ============
 {
-  const s = blank("V · Verarbeiten · Beratung", "Eure Aufträge (4 Minuten)", 3, "Ansage: „Flüsterstufe. Nur dein Partner hört dich. Ihr habt vier Minuten.“ Klerus und Adel füllen gemeinsam den Absprache-Zettel aus. Der Dritte Stand arbeitet zu zweit mit dem Sitznachbarn. Die Beobachtung ist der Zielpunkt: Dem Dritten Stand nicht sagen, dass es eine Absprache ist. Eine Minute vor Ende: „Noch eine Minute.“");
-  box(s, 0.6, 1.65, 5.95, 4.35, LIGHT2);
-  s.addShape(pres.shapes.RECTANGLE, { x: 0.6, y: 1.65, w: 0.14, h: 4.35, fill: { color: ADEL }, line: { type: "none" } });
-  txt(s, "Erster und Zweiter Stand", { x: 0.95, y: 1.75, w: 5.4, h: 0.55, fontFace: HEAD, fontSize: 27, bold: true });
-  ["Füllt gemeinsam den Absprache-Zettel aus.", "Wie stimmt ihr ab?", "Was versprecht ihr euch?"].forEach((x, i) => {
-    numCircle(s, i + 1, 0.95, 2.95 + i * 1.0, 0.42);
-    txt(s, x, { x: 1.55, y: 2.9 + i * 1.0, w: 4.8, h: 0.95, fontSize: 27, bold: true });
-  });
-  box(s, 6.8, 1.65, 5.95, 4.35, LIGHT);
-  s.addShape(pres.shapes.RECTANGLE, { x: 6.8, y: 1.65, w: 0.14, h: 4.35, fill: { color: DRITTER }, line: { type: "none" } });
-  txt(s, "Dritter Stand (Bauern und Bürger)", { x: 7.15, y: 1.75, w: 5.4, h: 0.55, fontFace: HEAD, fontSize: 27, bold: true });
-  ["Schreibe zwei Argumente auf: Warum sollen auch Adel und Klerus Steuern zahlen?", "Beobachte den Tisch vorn. Schreibe eine Beobachtung auf: Was tun Klerus und Adel?"].forEach((x, i) => {
-    numCircle(s, i + 1, 7.15, 3.05 + i * 1.5, 0.42);
-    txt(s, x, { x: 7.75, y: 2.95 + i * 1.5, w: 4.8, h: 1.45, fontSize: 27, bold: true });
-  });
-  bar(s, [{ text: "Zeit: ", options: { bold: true } }, { text: "4 Minuten · Flüsterstufe      ", options: {} }, { text: "Fertig? Stift hinlegen.", options: { italic: true, color: ICE } }]);
+  const { s } = taskSlide("V · Verarbeiten · Abstimmung", "Jetzt stimmt ihr ab", ["Kreuze auf dem Stimmzettel bei A, B und C Ja oder Nein an.", "Klerus und Adel stimmen nach ihrer Rolle, der Dritte Stand nach seiner Überzeugung.", "Lege die Karte verdeckt auf den Tisch."], "3 Minuten · allein · leise",
+    "Ansage: „Stifte liegen. Jetzt stimmt ihr ab. Kreuzt auf dem Stimmzettel unten auf eurer Karte bei jedem Antrag Ja oder Nein an. Legt die Karte verdeckt auf den Tisch. Danach arbeitet ihr allein.“ Klerus und Adel stimmen nach ihrer Rolle (Vorrechte behalten), der Dritte Stand, wie er es für richtig hält. Keine Absprache, keine Bewegung. Karten einsammeln und in drei Stapel sortieren (Klerus, Adel, Dritter Stand).");
+  phaseTag(s, 3);
 }
 
-// ============ 10 Abstimmung ============
+// ============ 10 Vermutung ============
 {
-  const { s } = taskSlide("V · Verarbeiten · Abstimmung", "Jetzt stimmt ihr ab", ["Kreuze auf dem Stimmzettel unten auf deiner Karte Ja oder Nein an.", "Lege die Karte verdeckt auf den Tisch.", "Schreibe auf: Wer gewinnt nach Ständen? Wer gewinnt nach Köpfen? Ein Satz mit Begründung."], "3 Minuten · allein · leise",
-    "Ansage: „Stifte liegen. Jetzt stimmt ihr ab. Kreuzt auf dem Stimmzettel unten auf eurer Karte Ja oder Nein an. Legt die Karte verdeckt auf den Tisch. Danach arbeitet ihr allein.“ Klerus und Adel stimmen nach Rolle, der Dritte Stand, wie er es für richtig hält. Karten einsammeln, in drei Stapel sortieren (Klerus, Adel, Dritter Stand), währenddessen schreibt die Klasse die Vermutung. Ergebnis (echte Zahlen!) an die Tafel schreiben.");
+  const { s } = taskSlide("V · Verarbeiten · Vermutung", "Was vermutest du?", ["Schreibe auf: Wie viele der drei Anträge werden nach Ständen angenommen? Wie viele nach Köpfen?", "Begründe in einem Satz."], "2 Minuten · allein · leise",
+    "Ansage: „Jetzt arbeitet ihr allein. Die Aufgabe steht rechts.“ Während Sie zählen (zwei Minuten), schreibt die Klasse ihre Vermutung. Ergebnis (echte Zahlen!) für jeden Antrag A, B, C an die Tafel schreiben, jeweils nach Ständen und nach Köpfen (Tafelbild links). Erwartet: Klerus 3 Nein, Adel 4 Nein, Dritter Stand Ja in allen drei Anträgen: nach Ständen 2 zu 1 abgelehnt, nach Köpfen Ja ca. 18, Nein ca. 7 angenommen.");
   phaseTag(s, 3);
 }
 
 // ============ 11 Zwei Regeln ============
 {
-  const s = blank("V · Verarbeiten · Auswertung", "Zwei Regeln für dieselben Stimmen", 3, "Ansage: „Stifte liegen. Ihr hört nur zu. Erster und Zweiter Stand, ihr geht leise an eure Plätze zurück.“ Die Zahlen schreiben Sie an die Tafel (Tafelbild links), die Folie zeigt nur die Regel. Je ein Satz: „Nach Ständen: abgelehnt, 2 zu 1.“ „Nach Köpfen: angenommen.“ Dann den Absprache-Zettel vorlesen (unter einer Minute).");
+  const s = blank("V · Verarbeiten · Auswertung", "Zwei Regeln für dieselben Stimmen", 3, "Ansage: „Stifte liegen. Ihr hört nur zu.“ Die Zahlen schreiben Sie an die Tafel (Tafelbild links), die Folie zeigt nur die Regel. Je Antrag A, B, C zeigen Sie das Ergebnis (nach Ständen, dann nach Köpfen), je ein Satz: „Nach Ständen: abgelehnt, 2 zu 1.“ „Nach Köpfen: angenommen.“ Dann die Frage: „Wie haben Klerus und Adel in allen drei Durchgängen abgestimmt? Warum?“ (gezielte Abfrage, kein Gespräch). Antwort: gleich, denn sie wollen ihre Vorrechte behalten, ihre Interessen sind deckungsgleich. Einordnung (eine Minute): Im Spiel stimmen die beiden Stände immer gleich. Historisch waren die Stände nicht immer einheitlich, viele einfache Pfarrer unterstützten den Dritten Stand und einzelne Adlige schlossen sich später an. Bei der Abstimmungsregel hielten die Privilegierten aber oft zusammen.");
   box(s, 0.6, 1.65, 5.95, 4.35, LIGHT2);
   txt(s, "Nach Ständen", { x: 0.9, y: 1.75, w: 5.4, h: 0.55, fontFace: HEAD, fontSize: 28, bold: true, color: NAVY });
   txt(s, "Jeder Stand hat eine Stimme.", { x: 0.9, y: 2.4, w: 5.4, h: 0.5, fontSize: 27 });
@@ -296,7 +287,7 @@ pageNo = 0;
     s.addShape(pres.shapes.OVAL, { x: 7.1 + (i % 9) * 0.58, y: 3.2 + Math.floor(i / 9) * 0.58, w: 0.46, h: 0.46, fill: { color: c }, line: { type: "none" } });
   }
   txt(s, "25 Stimmen insgesamt", { x: 7.1, y: 4.9, w: 5.4, h: 0.5, fontSize: 27, color: MUTED });
-  bar(s, [{ text: "Ergebnis: ", options: { bold: true } }, { text: "Zwei Regeln. Dieselben Stimmen. Zwei Ergebnisse.", options: {} }]);
+  bar(s, [{ text: "Ergebnis: ", options: { bold: true } }, { text: "Drei Anträge, zwei Regeln, zwei Ergebnisse.", options: {} }]);
 }
 
 // ============ 12 Und in Frankreich? ============
@@ -322,7 +313,7 @@ pageNo = 0;
 // ============ 14 Merksatz ============
 {
   const s = merkSlide(1, "Abstimmung nach Ständen",
-    "Bei den Generalständen hat jeder Stand **eine Stimme**. Klerus und Adel (zusammen ca. 3 % der Bevölkerung) haben damit **zwei von drei Stimmen**. Sprechen sie sich ab, können sie den Dritten Stand (Bauern und Bürger, ca. 97 %) **immer überstimmen**.",
+    "Bei den Generalständen hat jeder Stand **eine Stimme**. Klerus und Adel (zusammen ca. 3 % der Bevölkerung) haben damit **zwei von drei Stimmen**. Stimmen sie gemeinsam ab, können sie den Dritten Stand (Bauern und Bürger, ca. 97 %) **immer überstimmen**.",
     "Im Spiel: 18 Personen im Dritten Stand hatten zusammen **eine** Stimme, 3 Personen im Klerus ebenfalls.",
     "Wie viele Menschen stehen hinter **einer Stimme**?",
     "Ansage: „Jetzt schreibt ihr ab: Merksatz 1. Rahmt ihn rot ein.“ Danach „Vergleicht und verbessert mit Grün.“", 24);
