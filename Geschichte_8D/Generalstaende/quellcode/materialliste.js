@@ -31,7 +31,7 @@ const prep = [
   ["Rollen verteilen und Karten verdeckt auf die Plätze legen", "Wahlleitung und Schriftführung zuerst auswählen (zwei zuverlässige, rechensichere Schülerinnen oder Schüler, nicht stimmberechtigt), ihnen die Rollenkarte geben. Klerus 3 und Adel 4 gezielt wählen, Rest Dritter Stand; Tabelle unten ausfüllen (ohne Namen, nur Platznummern)"],
   ["Kreide und Grün zum Verbessern bereitlegen", "Kreide-Kette: 1 Stück Kreide, das weitergegeben wird"],
   ["Uhr oder Timer bereitstellen", "Übungsphase endet 5 Minuten vor Schluss, „Auswerten“ ist fest"],
-  ["Abstimmung: Sie sind nur Sicherheitsnetz", "Die Wahlleitung sammelt und zählt, die Schriftführung schreibt an die Tafel. Nur im Notfall eingreifen, nach 4 Minuten ohne Ergebnis helfen"],
+  ["Abstimmung: Sie sind nur Sicherheitsnetz", "Offene Abstimmung per Handzeichen: Die Wahlleitung ruft die Stände auf und zählt die Hände, die Schriftführung schreibt an die Tafel. Nur im Notfall eingreifen, nach 5 Minuten ohne Ergebnis helfen"],
 ];
 // Tafel
 const tafel = [

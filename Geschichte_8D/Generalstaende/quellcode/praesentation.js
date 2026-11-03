@@ -257,15 +257,15 @@ pageNo = 0;
 
 // ============ 9 Stimmzettel ============
 {
-  const { s } = taskSlide("V · Verarbeiten · Abstimmung", "Jetzt stimmt ihr ab", ["Kreuze auf dem Stimmzettel bei A, B und C Ja oder Nein an.", "Klerus und Adel stimmen nach ihrer Rolle, der Dritte Stand (Bauern und Bürger) nach seiner Überzeugung.", "Gib die Karte auf Ansage der Wahlleitung verdeckt nach vorn, Reihe für Reihe."], "3 Minuten · allein · leise",
-    "Ansage: „Stifte liegen. Jetzt stimmt ihr ab. Kreuzt auf dem Stimmzettel unten auf eurer Karte bei jedem Antrag Ja oder Nein an. Legt die Karte verdeckt auf den Tisch. Danach arbeitet ihr allein.“ Klerus und Adel stimmen nach ihrer Rolle (Vorrechte behalten), der Dritte Stand, wie er es für richtig hält. Keine Absprache, keine Bewegung. Die Wahlleitung sammelt die Karten reihenweise ein und sortiert sie in drei Stapel (Klerus, Adel, Dritter Stand). Sie greifen nur im Notfall ein.");
+  const { s } = taskSlide("V · Verarbeiten · Abstimmung", "Jetzt stimmt ihr ab", ["Kreuze auf dem Stimmzettel bei A, B und C Ja oder Nein an.", "Klerus und Adel stimmen nach ihrer Rolle, der Dritte Stand (Bauern und Bürger) nach seiner Überzeugung.", "Stimme offen ab: Hand heben, wenn die Wahlleitung deinen Stand und deinen Antrag aufruft."], "2 Minuten, dann offen",
+    "Ansage: „Stifte liegen. Jetzt stimmt ihr ab. Kreuzt auf dem Stimmzettel unten auf eurer Karte bei jedem Antrag Ja oder Nein an. Danach stimmen wir offen ab: Die Wahlleitung ruft zuerst „Antrag A. Klerus: Wer ist dafür? Hand hoch.“, zählt die Hände und ruft dann Adel und Dritter Stand auf, dann Antrag B und C. Nein = Personenzahl des Standes minus Ja.“ Klerus und Adel stimmen nach ihrer Rolle (Vorrechte behalten), der Dritte Stand, wie er es für richtig hält. Keine Absprache, keine Bewegung. Die Wahlleitung leitet die offene Abstimmung per Handzeichen (nur die Ja-Stimmen werden gezählt), die Schriftführung schreibt. Sie greifen nur im Notfall ein.");
   phaseTag(s, 3);
 }
 
 // ============ 10 Vermutung ============
 {
   const { s } = taskSlide("V · Verarbeiten · Vermutung", "Was vermutest du?", ["Schreibe auf: Wie viele der drei Anträge werden nach Ständen angenommen? Wie viele nach Köpfen?", "Begründe in einem Satz, warum dein Stand so abgestimmt hat."], "3 Minuten · allein · leise",
-    "Ansage: „Jetzt arbeitet ihr allein. Die Aufgabe steht rechts.“ Währenddessen zählt die Wahlleitung (Zählhilfe auf der Rollenkarte), und die Schriftführung schreibt die Zahlen an die Tafel (Rahmen steht schon). Sie greifen nur im Notfall ein. Dauert das Zählen länger als vier Minuten, helfen Sie. Erwartet: Klerus 3 Nein, Adel 4 Nein, Dritter Stand Ja in allen drei Anträgen: nach Ständen 2 zu 1 abgelehnt, nach Köpfen Ja ca. 16, Nein 7 angenommen. Echte Zahlen gelten.");
+    "Ansage: „Jetzt arbeitet ihr allein. Die Aufgabe steht rechts.“ Während die Wahlleitung die Ergebnisse nach Ständen und nach Köpfen ausrechnet (Zählhilfe auf der Rollenkarte) und die Schriftführung die Zahlen an die Tafel schreibt (Rahmen steht schon), schreibt die Klasse die Aufgaben. Sie greifen nur im Notfall ein. Dauert das Zählen länger als vier Minuten, helfen Sie. Erwartet: Klerus 3 Nein, Adel 4 Nein, Dritter Stand Ja in allen drei Anträgen: nach Ständen 2 zu 1 abgelehnt, nach Köpfen Ja ca. 16, Nein 7 angenommen. Echte Zahlen gelten.");
   phaseTag(s, 3);
 }
 

@@ -26,7 +26,7 @@ function card(key, reserve) {
     p(t(s.name, { font: "Cambria", size: 26, bold: true, color: s.ink }), { after: 50 }),
     p(t(s.rolle, { size: 22 }), { after: 40 }),
     p(t(s.tipp, { size: 22, bold: true }), { after: 70 }),
-    p([t("STIMMZETTEL  ", { size: 18, bold: true, color: RED }), t("Kreuze bei jedem Antrag an.", { size: 17, color: MUTED })], { after: 30, border: { top: { style: BorderStyle.SINGLE, size: 8, color: s.edge, space: 4 } } }),
+    p([t("STIMMZETTEL  ", { size: 18, bold: true, color: RED }), t("Kreuze vorab an, dann stimmst du offen ab.", { size: 17, color: MUTED })], { after: 30, border: { top: { style: BorderStyle.SINGLE, size: 8, color: s.edge, space: 4 } } }),
     ...[["A", "Steuern auch für Adel und Klerus"], ["B", "Stände abschaffen, gleiche Rechte"], ["C", "Mehr Mitsprache für Bauern"]].map(([l, x]) => p([t(l + "  ", { size: 20, bold: true }), t(x, { size: 18 }), t("      □ Ja  □ Nein", { size: 20, bold: true })], { after: 20 })),
   ];
   return new TableCell({ children: ch, width: { size: CW, type: WidthType.DXA }, borders: { top: dash, bottom: dash, left: { style: BorderStyle.SINGLE, size: 48, color: s.edge }, right: dash }, margins: { top: 90, bottom: 60, left: 200, right: 170 }, verticalAlign: VerticalAlign.TOP });
@@ -67,13 +67,13 @@ const tb = new Table({ width: { size: TW2.reduce((a, b) => a + b, 0), type: Widt
 const sp2 = () => p(t(" ", { size: 10 }), { after: 40 });
 const seite4 = [
   rolle("Wahlleitung", "ROLLENKARTE · DU LEITEST DIE ABSTIMMUNG · DU STIMMST NICHT MIT", "1E2761", "1E2761", [
-    "Sage laut: „Stifte liegen. Gebt eure Karte verdeckt nach vorn, Reihe für Reihe.“",
-    "Sortiere die Karten in drei Stapel: Klerus, Adel, Dritter Stand (Bauern und Bürger).",
-    "Zähle Stapel für Stapel und trage die Zahlen in die Zählhilfe ein.",
-    "Diktiere der Schriftführung die Zahlen, Antrag für Antrag: „Antrag A, Klerus: Ja …, Nein …“",
+    "Frage zuerst: Wie viele Personen hat jeder Stand? Schreibe die Zahlen in die Zählhilfe.",
+    "Stimme offen ab. Rufe laut auf: „Antrag A. Klerus: Wer ist dafür? Hand hoch.“ Zähle die Hände (nur die Ja-Stimmen).",
+    "Nein = Personenzahl des Standes minus Ja. Diktiere der Schriftführung: „Antrag A, Klerus: Ja …, Nein …“",
+    "Wiederhole für Adel und Dritter Stand, danach für Antrag B und Antrag C.",
     "Nach Ständen: Wie stimmt jeder Stand (Mehrheit im Stand)? Mindestens 2 von 3 Ständen Ja = angenommen.",
-    "Nach Köpfen: Zähle alle Ja und alle Nein zusammen. Mehr Ja = angenommen.",
-    "Lies jedes Ergebnis laut vor. Bei Problemen frage die Lehrkraft (nur im Notfall).",
+    "Nach Köpfen: Zähle alle Ja und alle Nein zusammen. Mehr Ja = angenommen. Lies jedes Ergebnis laut vor.",
+    "Bei Problemen frage die Lehrkraft (nur im Notfall).",
   ], [sp2(), zaehl]),
   sp2(), sp2(),
   rolle("Schriftführung", "ROLLENKARTE · DU SCHREIBST AN DIE TAFEL · DU STIMMST NICHT MIT", "1E2761", "1E2761", [
