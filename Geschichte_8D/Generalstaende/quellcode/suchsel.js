@@ -8,8 +8,10 @@ const WORDS = [
   ["GOTTESGNADENTUM", "Der König sagt: Meine Macht kommt von Gott."],
   ["KLERUS", "Erster Stand: die Geistlichen."],
   ["ADEL", "Zweiter Stand."],
-  ["STEUERN", "Das zahlt der Dritte Stand (Bauern und Bürger), Klerus und Adel nicht."],
+  ["STEUERN", "Abgaben an den Staat, die Klerus und Adel nicht zahlen."],
   ["VORRECHTE", "Sonderrechte von Klerus und Adel."],
+  ["BAUERN", "Sie bestellen auf dem Land die Felder und zahlen die meisten Abgaben."],
+  ["BÜRGER", "Handwerker und Kaufleute in der Stadt."],
 ];
 const N = 15;
 let seed = 4711;
@@ -81,7 +83,7 @@ function blatt() {
   return [
     p(t("BUCHSTABENRÄTSEL · GESCHICHTE 8D", { size: 15, bold: true, color: MUTED }), { after: 10 }),
     p(t("Absolutismus und Stände", { font: "Cambria", size: 30, bold: true, color: NAVY }), { after: 30 }),
-    p(t("Im Gitter sind acht Wörter versteckt: waagerecht (von links nach rechts) oder senkrecht (von oben nach unten). Finde zu jedem Hinweis das Wort und kreise es ein. Schreibe danach die Lösungswörter ins Heft.", { size: 17, italics: true, color: MUTED }), { after: 50 }),
+    p(t("Im Gitter sind zehn Wörter versteckt: waagerecht (von links nach rechts) oder senkrecht (von oben nach unten). Finde zu jedem Hinweis das Wort und kreise es ein. Schreibe danach die Lösungswörter ins Heft.", { size: 17, italics: true, color: MUTED }), { after: 50 }),
     gridTable(false),
     p(t(" ", { size: 8 }), { after: 40 }),
     clueTable(),
@@ -93,7 +95,7 @@ const sol = [
   gridTable(true),
   p(t(" ", { size: 8 }), { after: 60 }),
   ...G.pos.map((x) => p([t(x.word, { bold: true, size: 20 }), t(`   (Zeile ${x.r + 1}, Spalte ${x.q + 1}, ${x.dr && x.dq ? "schräg" : x.dr ? "senkrecht" : "waagerecht"})`, { size: 18, color: MUTED })], { after: 20 })),
-  p(t("Die acht Lösungswörter werden als Begriffsspeicher in den nächsten Stunden wiederholt.", { size: 19, italics: true, color: MUTED }), { before: 80 }),
+  p(t("Die zehn Lösungswörter werden als Begriffsspeicher in den nächsten Stunden wiederholt.", { size: 19, italics: true, color: MUTED }), { before: 80 }),
 ];
 (async () => {
   const doc = new Document({ styles: { default: { document: { run: { font: "Calibri", size: 20 } } } }, sections: [
