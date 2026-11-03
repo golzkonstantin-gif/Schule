@@ -121,8 +121,8 @@ d.push(warum("Begriffe aus dem Absolutismus-Test spielerisch abrufen und festige
 d.push(sp());
 d.push(step("arbeitet allein, dann zu zweit", {
   say: "Jetzt arbeitet ihr allein. Die Aufgabe steht rechts.",
-  do: ["Folie 4 (Ü1, Buchstabenrätsel). Das Blatt liegt vorab auf den Tischen (13 Blätter, zwei Rätsel pro A4 geschnitten). 4 Minuten allein, danach 1 Minute Partnercheck (leise): „Vergleicht und verbessert mit Grün.“ Dann Folie 5 (Lösung, 1 Minute). Zu jedem Hinweis gibt es ein Wort mit angegebener Buchstabenzahl; die Wörter stehen waagerecht oder senkrecht. Kein Plenumsgespräch, nur gezielte Abfrage bei Bedarf. Schnelle schreiben zu einem Lösungswort einen Satz. Die zehn Lösungswörter stehen danach im Heft: Sie bleiben als Begriffsspeicher und werden in Stunde 2 und vor Test 1 wiederholt."],
-  extra: [folieBox("4 · Ü1 Buchstabenrätsel", [p(t("Ü1 Absolutismus und Stände", { font: "Cambria", size: 22, bold: true, color: NAVY }), { after: 40 }), bl("1. Finde im Gitter die zehn Wörter zu den Hinweisen."), bl("2. Kreise jedes Wort ein."), bl("3. Schreibe die zehn Lösungswörter in dein Heft."), bl("4. Fertig? Schreibe zu einem Wort einen Satz.", { after: 40 }), p([t("Zeit: ", { bold: true, size: 19 }), t("4 Minuten · allein, dann Partnercheck · leise     ", { size: 19 }), t("Fertig? Stift hinlegen.", { size: 19, italics: true })], { after: 0 })]), gapP()],
+  do: ["Folie 4 (Ü1, Buchstabenrätsel). Das Blatt liegt vorab auf den Tischen (13 Blätter, zwei Rätsel pro A4 geschnitten). 4 Minuten allein, danach 1 Minute Partnercheck (leise): „Vergleicht und verbessert mit Grün.“ Dann Folie 5 (Lösung, 1 Minute). Zu jedem Hinweis gibt es ein Wort mit angegebener Buchstabenzahl; die Wörter stehen waagerecht oder senkrecht. Kein Plenumsgespräch, nur gezielte Abfrage bei Bedarf. Schnelle schreiben zu einem Lösungswort einen Satz. Die zehn Lösungswörter stehen danach hinter den Hinweisen auf dem Blatt (Blatt ins Heft kleben): Sie bleiben als Begriffsspeicher und werden in Stunde 2 und vor Test 1 wiederholt."],
+  extra: [folieBox("4 · Ü1 Buchstabenrätsel", [p(t("Ü1 Absolutismus und Stände", { font: "Cambria", size: 22, bold: true, color: NAVY }), { after: 40 }), bl("1. Finde zu jedem Hinweis das Wort im Gitter."), bl("2. Kreise es ein."), bl("3. Schreibe es hinter den Hinweis."), bl("4. Fertig? Schreibe zu einem Wort einen Satz.", { after: 40 }), p([t("Zeit: ", { bold: true, size: 19 }), t("4 Minuten · allein, dann Partnercheck · leise     ", { size: 19 }), t("Fertig? Stift hinlegen.", { size: 19, italics: true })], { after: 0 })]), gapP()],
   sol: "Lösung: 1 ABSOLUTISMUS, 2 SONNENKÖNIG, 3 VERSAILLES, 4 GOTTESGNADENTUM, 5 KLERUS, 6 ADEL, 7 STEUERN, 8 VORRECHTE, 9 BAUERN, 10 BÜRGER. Fundstellen und Lösungsgitter stehen auf Seite 2 der Datei Buchstabenraetsel_Absolutismus_Staende.pdf.",
 }));
 d.push(sp());
@@ -225,7 +225,7 @@ d.push(note("ZUSATZ (Puffer, nur bei Zeit)", "Folie 18: Sportverein-Beispiel (Ü
 d.push(h3("So sieht das Heft am Ende der Stunde aus"));
 d.push(table([2300, 7906], [
   ["Überschrift", "Generalstände 1789 · Datum"],
-  ["Ü1", "Buchstabenrätsel (Blatt eingeklebt), zehn Lösungswörter als Begriffsspeicher, ein Satz zu einem Wort"],
+  ["Ü1", "Buchstabenrätsel (Blatt eingeklebt), Lösungswörter hinter den Hinweisen als Begriffsspeicher, ein Satz zu einem Wort"],
   ["Zeitstrahl", "Blatt eingeklebt, Ereignisse zu den Daten eingetragen (1614 bis 5. Mai 1789), Verbesserungen grün"],
   ["Ständeversammlung", "Vermutung zum Ausgang, Ergebnisse der drei Anträge nach Ständen und nach Köpfen (Zahlen von der Tafel)"],
   ["Ü3", "Drei Sätze (Satz 3 optional)"],

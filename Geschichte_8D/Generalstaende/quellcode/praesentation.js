@@ -183,21 +183,20 @@ pageNo = 0;
 
 // ============ 4 Ü1 Buchstabenrätsel ============
 {
-  const { s } = taskSlide("V · Vorwissen aktivieren · Übung 1", "Buchstabenrätsel: Absolutismus und Stände", ["Finde im Gitter die zehn Wörter zu den Hinweisen.", "Kreise jedes Wort ein.", "Schreibe die zehn Lösungswörter in dein Heft.", "Fertig? Schreibe zu einem Wort einen Satz."], "4 Minuten · allein, dann Partnercheck · leise",
-    "Ansage: „Jetzt arbeitet ihr allein. Die Aufgabe steht rechts.“ Das Rätsel liegt vorab auf den Tischen (Buchstabenraetsel_Absolutismus_Staende.pdf, ein Blatt pro Person, zwei Rätsel pro A4 geschnitten). Zu jedem Hinweis gibt es ein Wort (zehn Wörter) mit angegebener Buchstabenzahl, die Wörter stehen waagerecht oder senkrecht. Kein Plenumsgespräch. Nach 4 Minuten allein: Partnercheck (1 Minute, leise), dann Folie 5. Lösungswörter: 1 ABSOLUTISMUS, 2 SONNENKÖNIG, 3 VERSAILLES, 4 GOTTESGNADENTUM, 5 KLERUS, 6 ADEL, 7 STEUERN, 8 VORRECHTE, 9 BAUERN, 10 BÜRGER. Wiederholung der letzten Stunde (Test). Die Generalstände kennt die Klasse noch nicht, sie kommen nicht vor. Die Lösungswörter bleiben als Begriffsspeicher und werden in den nächsten Stunden zur Wiederholung genutzt.");
+  const { s } = taskSlide("V · Vorwissen aktivieren · Übung 1", "Buchstabenrätsel: Absolutismus und Stände", ["Finde zu jedem Hinweis das Wort im Gitter.", "Kreise es ein.", "Schreibe es hinter den Hinweis.", "Fertig? Schreibe zu einem Wort einen Satz."], "4 Minuten · allein, dann Partnercheck · leise",
+    "Ansage: „Jetzt arbeitet ihr allein. Die Aufgabe steht rechts.“ Das Rätsel liegt vorab auf den Tischen (Buchstabenraetsel_Absolutismus_Staende.pdf, ein Blatt pro Person, zwei Rätsel pro A4 geschnitten). Zu jedem Hinweis gibt es ein Wort (zehn Wörter) mit angegebener Buchstabenzahl, die Wörter stehen waagerecht oder senkrecht. Kein Plenumsgespräch. Nach 4 Minuten allein: Partnercheck (1 Minute, leise), dann Folie 5. Hinweis → Lösungswort: König regiert allein → ABSOLUTISMUS; Beiname Ludwigs XIV. → SONNENKÖNIG; Prächtiges Schloss → VERSAILLES; Macht kommt von Gott → GOTTESGNADENTUM; Erster Stand → KLERUS; Zweiter Stand → ADEL; Abgaben an den Staat → STEUERN; Sonderrechte → VORRECHTE; sie bestellen die Felder → BAUERN; Handwerker und Kaufleute → BÜRGER. Wiederholung der letzten Stunde (Test). Die Generalstände kennt die Klasse noch nicht, sie kommen nicht vor. Die Lösungswörter bleiben als Begriffsspeicher und werden in den nächsten Stunden zur Wiederholung genutzt.");
   phaseTag(s, 1);
 }
 
 // ============ 5 Lösung Buchstabenrätsel ============
 {
-  const s = blank("V · Vorwissen aktivieren · Kontrolle", "Buchstabenrätsel: Lösung", 1, "Ansage: „Vergleicht und verbessert mit Grün.“ 1 bis 2 Minuten, nicht besprechen. Bei Unklarheit gezielte Abfrage (2 bis 3 Personen): „Was bedeutet Gottesgnadentum? Wer zahlt die Steuern?“ Danach Hinweis: Diese Begriffe brauchen wir in den nächsten Stunden, sie bleiben im Heft als Begriffsspeicher und werden zur Wiederholung genutzt. Lösungsgitter mit Fundstellen: Seite 2 der Datei Buchstabenraetsel_Absolutismus_Staende.pdf.");
+  const s = blank("V · Vorwissen aktivieren · Kontrolle", "Buchstabenrätsel: Lösungswörter", 1, "Ansage: „Vergleicht und verbessert mit Grün.“ 1 bis 2 Minuten, nicht besprechen. Bei Unklarheit gezielte Abfrage (2 bis 3 Personen): „Was bedeutet Gottesgnadentum? Wer zahlt die Steuern?“ Danach Hinweis: Diese Begriffe brauchen wir in den nächsten Stunden, sie bleiben im Heft als Begriffsspeicher und werden zur Wiederholung genutzt. Lösungsgitter mit Fundstellen: Seite 2 der Datei Buchstabenraetsel_Absolutismus_Staende.pdf.");
   box(s, 0.6, 1.5, 12.15, 4.45, LIGHT2);
-  const W2 = [["1", "ABSOLUTISMUS"], ["2", "SONNENKÖNIG"], ["3", "VERSAILLES"], ["4", "GOTTESGNADENTUM"], ["5", "KLERUS"], ["6", "ADEL"], ["7", "STEUERN"], ["8", "VORRECHTE"], ["9", "BAUERN"], ["10", "BÜRGER"]];
+  const W2 = [["", "ABSOLUTISMUS"], ["", "SONNENKÖNIG"], ["", "VERSAILLES"], ["", "GOTTESGNADENTUM"], ["", "KLERUS"], ["", "ADEL"], ["", "STEUERN"], ["", "VORRECHTE"], ["", "BAUERN"], ["", "BÜRGER"]];
   W2.forEach(([n, w], i) => {
     const col = Math.floor(i / 5), row = i % 5;
-    const x = 0.9 + col * 6.0, y = 1.62 + row * 0.86;
-    txt(s, n, { x, y, w: 0.8, h: 0.7, fontSize: 27, bold: true, color: RED, valign: "middle" });
-    txt(s, w, { x: x + 0.8, y, w: 5.0, h: 0.7, fontFace: HEAD, fontSize: 27, bold: true, color: NAVY, valign: "middle" });
+    const x = 0.8 + col * 6.0, y = 1.62 + row * 0.86;
+    txt(s, w, { x, y, w: 5.8, h: 0.7, fontFace: HEAD, fontSize: 27, bold: true, color: NAVY, valign: "middle" });
   });
   bar(s, [{ text: "Jetzt: ", options: { bold: true } }, { text: "Vergleiche und verbessere mit Grün.", options: {} }]);
 }

@@ -2,15 +2,15 @@ const fs = require("fs");
 const { Document, Packer, Paragraph, TextRun, Table, TableRow, TableCell, WidthType, BorderStyle, AlignmentType, VerticalAlign, HeightRule, ShadingType } = require("docx");
 
 const WORDS = [
-  ["ABSOLUTISMUS", "Der König regiert allein, ohne die Stände."],
-  ["SONNENKÖNIG", "Beiname von Ludwig XIV."],
-  ["VERSAILLES", "Prächtiges Schloss des Königs mit seinem Hof."],
-  ["GOTTESGNADENTUM", "Der König sagt: Meine Macht kommt von Gott."],
+  ["ABSOLUTISMUS", "Der König regiert allein."],
+  ["SONNENKÖNIG", "Beiname Ludwigs XIV."],
+  ["VERSAILLES", "Prächtiges Schloss des Königs."],
+  ["GOTTESGNADENTUM", "Die Macht des Königs kommt von Gott."],
   ["KLERUS", "Erster Stand: die Geistlichen."],
   ["ADEL", "Zweiter Stand."],
-  ["STEUERN", "Abgaben an den Staat, die Klerus und Adel nicht zahlen."],
+  ["STEUERN", "Abgaben an den Staat."],
   ["VORRECHTE", "Sonderrechte von Klerus und Adel."],
-  ["BAUERN", "Sie bestellen auf dem Land die Felder und zahlen die meisten Abgaben."],
+  ["BAUERN", "Sie bestellen die Felder."],
   ["BÜRGER", "Handwerker und Kaufleute in der Stadt."],
 ];
 const N = 15;
@@ -76,14 +76,14 @@ function gridTable(show) {
 }
 function clueTable() {
   const half = Math.ceil(WORDS.length / 2);
-  const col = (list, off) => new TableCell({ width: { size: 5350, type: WidthType.DXA }, borders: { top: none, bottom: none, left: none, right: none }, margins: { top: 20, bottom: 20, left: 40, right: 100 }, children: list.map(([w, c], i) => p([t((off + i + 1) + "  ", { bold: true, size: 18 }), t(c, { size: 18 }), t("  (" + w.length + " Buchstaben)", { size: 16, color: MUTED })], { after: 20 })) });
-  return new Table({ width: { size: 10700, type: WidthType.DXA }, columnWidths: [5350, 5350], rows: [new TableRow({ children: [col(WORDS.slice(0, half), 0), col(WORDS.slice(half), half)] })] });
+  const col = (list) => new TableCell({ width: { size: 5350, type: WidthType.DXA }, borders: { top: none, bottom: none, left: none, right: none }, margins: { top: 20, bottom: 20, left: 40, right: 100 }, children: list.map(([w, c]) => p([t("• " + c, { size: 18 }), t("  (" + w.length + ")", { size: 16, color: MUTED }), t("  →  ______________", { size: 18, color: "8A96B5" })], { after: 70 })) });
+  return new Table({ width: { size: 10700, type: WidthType.DXA }, columnWidths: [5350, 5350], rows: [new TableRow({ children: [col(WORDS.slice(0, half)), col(WORDS.slice(half))] })] });
 }
 function blatt() {
   return [
     p(t("BUCHSTABENRÄTSEL · GESCHICHTE 8D", { size: 15, bold: true, color: MUTED }), { after: 10 }),
     p(t("Absolutismus und Stände", { font: "Cambria", size: 30, bold: true, color: NAVY }), { after: 30 }),
-    p(t("Im Gitter sind zehn Wörter versteckt: waagerecht (von links nach rechts) oder senkrecht (von oben nach unten). Finde zu jedem Hinweis das Wort und kreise es ein. Schreibe danach die Lösungswörter ins Heft.", { size: 17, italics: true, color: MUTED }), { after: 50 }),
+    p(t("Im Gitter sind zehn Wörter versteckt: waagerecht (von links nach rechts) oder senkrecht (von oben nach unten). Finde zu jedem Hinweis das Wort, kreise es ein und schreibe es hinter den Hinweis. Die Zahl in Klammern ist die Buchstabenzahl.", { size: 17, italics: true, color: MUTED }), { after: 50 }),
     gridTable(false),
     p(t(" ", { size: 8 }), { after: 40 }),
     clueTable(),
