@@ -1,5 +1,6 @@
 // Übersicht für den Hefter (A4 doppelseitig): Interpretation einer Textquelle nach dem Schema der Fachschaft.
 // Vorderseite: Arbeitsschritte als Tabelle (formale Analyse mit TATTEA). Rückseite: Formulierungshilfen je Schritt.
+// Tintensparend (Wunsch der Lehrkraft, 4.11.): keine Farbflächen – Farbe nur in Schrift und Randlinien.
 const fs = require("fs");
 const { Document, Packer, Paragraph, TextRun, Table, TableRow, TableCell, WidthType, ShadingType, VerticalAlign, PageBreak, BorderStyle } = require("docx");
 const { C } = require("./lib.js");
@@ -11,14 +12,15 @@ const run = (t, o = {}) => new TextRun({ text: t, font: o.font || "Calibri", siz
 // **fett** im Text
 const runs = (t, o = {}) => String(t).split(/(\*\*[^*]+\*\*)/).filter(Boolean).map(x => run(x.startsWith("**") ? x.slice(2, -2) : x, { ...o, bold: x.startsWith("**") || o.bold }));
 const para = (t, o = {}) => new Paragraph({ children: Array.isArray(t) ? t : runs(t, o), spacing: { after: o.after ?? 50, before: o.before ?? 0 } });
-const cell = (children, w, fill, o = {}) => new TableCell({ children, width: { size: w, type: WidthType.DXA }, borders, verticalAlign: o.v || VerticalAlign.TOP, columnSpan: o.span,
+const bar = color => ({ ...borders, left: { style: BorderStyle.SINGLE, size: 36, color } });
+const cell = (children, w, fill, o = {}) => new TableCell({ children, width: { size: w, type: WidthType.DXA }, borders: o.borders || borders, verticalAlign: o.v || VerticalAlign.TOP, columnSpan: o.span,
   shading: fill ? { type: ShadingType.CLEAR, color: "auto", fill } : undefined, margins: { top: 130, bottom: 130, left: 130, right: 130 } });
-const head = (cols, cw) => new TableRow({ tableHeader: true, children: cols.map((t, i) => cell([para(t, { bold: true, color: C.white, after: 0, size: 24 })], cw[i], C.dark)) });
-const step = (nr, name, sub, fill, w) => cell([
-  para([run(nr, { font: "Cambria", bold: true, size: 46, color: C.white })], { after: 0 }),
-  para([run(name, { font: "Cambria", bold: true, size: 25, color: C.white })], { after: 20 }),
-  ...(sub ? [para([run(sub, { size: 20, it: true, color: "F4ECDE" })], { after: 0 })] : []),
-], w, fill, { v: VerticalAlign.CENTER });
+const head = (cols, cw) => new TableRow({ tableHeader: true, children: cols.map((t, i) => cell([para(t, { bold: true, color: C.dark, after: 0, size: 24 })], cw[i], null, { borders: { ...borders, bottom: { style: BorderStyle.SINGLE, size: 18, color: C.dark } } })) });
+const step = (nr, name, sub, color, w) => cell([
+  para([run(nr, { font: "Cambria", bold: true, size: 46, color })], { after: 0 }),
+  para([run(name, { font: "Cambria", bold: true, size: 25, color })], { after: 20 }),
+  ...(sub ? [para([run(sub, { size: 20, it: true, color: C.muted })], { after: 0 })] : []),
+], w, null, { v: VerticalAlign.CENTER, borders: bar(color) });
 const items = (arr, o = {}) => arr.map(t => para("▸ " + t, { after: 40, ...o }));
 const title = (kick, t) => [para(kick, { size: 18, bold: true, color: C.terra, after: 20 }), para([run(t, { font: "Cambria", bold: true, size: 40 })], { after: 80 })];
 
@@ -53,13 +55,13 @@ const front = [
   ...title("GESCHICHTE · KLASSE 11 · FÜR DEN HEFTER", "So interpretierst du eine Textquelle"),
   para("Klausur: „Interpretieren Sie die Quelle.“ Gehe die Tabelle von oben nach unten durch – **erst untersuchen, dann urteilen.**", { size: 24, after: 140 }),
   new Table({ columnWidths: cw1, width: { size: W, type: WidthType.DXA }, rows: [
-    head(["Schritt", "Was mache ich?", "⚠ Achtung"], cw1),
+    head(["Schritt", "Was mache ich?", "Achtung"], cw1),
     ...STEPS.map(([nr, name, sub, fill], i) => new TableRow({ cantSplit: true, children: [
-      step(nr, name, sub, fill, cw1[0]), cell(LEIT[i][0], cw1[1], i % 2 ? C.white : C.pale), cell([para(LEIT[i][1], { after: 0, size: 23 })], cw1[2], C.sand)] })),
+      step(nr, name, sub, fill, cw1[0]), cell(LEIT[i][0], cw1[1]), cell([para(LEIT[i][1], { after: 0, size: 23, color: C.terra })], cw1[2])] })),
     new TableRow({ children: [cell([
       para("**Operatoren:** analysieren (2) · einordnen, erläutern (3) · **beurteilen** = Sachurteil (4a) · **bewerten**, Stellung nehmen = Werturteil (4b)", { size: 22, after: 50 }),
       para("**Bildquelle:** gleiche Schritte; in 2b die Gestaltungsmittel **beschreiben** (Figuren, Symbole, Farben, Perspektive …) und **deuten**: Was ist die Botschaft?", { size: 22, after: 0 }),
-    ], W, "EDE4D3", { span: 3 })] }),
+    ], W, null, { span: 3, borders: { ...borders, top: { style: BorderStyle.SINGLE, size: 18, color: C.dark } } })] }),
   ] }),
   para("Rückseite: Formulierungshilfen für jeden Schritt", { size: 18, it: true, color: C.muted, before: 80, after: 0 }),
 ];
@@ -79,10 +81,10 @@ const back = [
   ...title("RÜCKSEITE · FORMULIERUNGSHILFEN", "So kannst du formulieren"),
   new Table({ columnWidths: cw2, width: { size: W, type: WidthType.DXA }, rows: [
     head(["Schritt", "Formulierungen"], cw2),
-    ...STEPS.map(([nr, name, sub, fill], i) => new TableRow({ cantSplit: true, children: [step(nr, name, null, fill, cw2[0]), cell(items(F[i], { size: 23, after: 40 }), cw2[1], i % 2 ? C.white : C.pale)] })),
+    ...STEPS.map(([nr, name, sub, fill], i) => new TableRow({ cantSplit: true, children: [step(nr, name, null, fill, cw2[0]), cell(items(F[i], { size: 23, after: 40 }), cw2[1])] })),
     new TableRow({ children: [cell([
       para("**Verknüpfungswörter:** weil · da · denn · deshalb · folglich · somit · außerdem · zudem · jedoch · allerdings · dagegen · trotzdem · obwohl", { size: 23, after: 0 }),
-    ], W, "EDE4D3", { span: 2 })] }),
+    ], W, null, { span: 2, borders: { ...borders, top: { style: BorderStyle.SINGLE, size: 18, color: C.dark } } })] }),
   ] }),
 ];
 
