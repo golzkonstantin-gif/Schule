@@ -104,7 +104,7 @@ Grundlage ist `Methoden/Literatur_Unterrichtsqualitaet.md` (AVIVA, Direkte Instr
 
 ## Offene Baustellen
 
-- [ ] **Rede als Franz an den Vater** schreiben und bewerten (aus der Kafka-Appell-Stunde, mit Reaktivierung und Schreibhilfe), siehe „Nächste Stunde“
+- [x] ~~Rede als Franz an den Vater~~ – entfällt (Entscheidung der Lehrkraft, 04.11.). Die Schreibhilfe-Idee (inhaltsunabhängige Satzmuster) bleibt für spätere Schreibaufgaben.
 - [ ] Komma vor Nebensätzen sicher, auch ohne „dass“ (größter Hebel)
 - [ ] Groß- und Kleinschreibung (auch die Überkorrektur) und das/dass
 - [ ] Gegenlesen vor der Abgabe als feste Routine (drei Prüffragen)
@@ -114,18 +114,11 @@ Grundlage ist `Methoden/Literatur_Unterrichtsqualitaet.md` (AVIVA, Direkte Instr
 - [ ] Übungsklausur Kafka (Tischregeln, S. 5) erst nach Kontextsicherung und mehr gelenkter Übung, oder mit einem leichteren Text
 - [ ] Rechtschreib-Schnipsel mit 10 Sätzen (Großschreibung, Komma auch ohne „dass“) liegt im Git-Verlauf von `Kafka_Appell/quellcode/schnipsel.js` und kann eingesetzt werden
 
-## Nächste Stunde (vorgemerkt, 45 Min.)
+## Nächste Stunde (Do 5.11., 45 Min., Beamer)
 
-- **Reaktivierung** (Vorwissen abprüfen): Was ist ein Appell? Offen oder verdeckt? Worum bittet Kafka? Warum so vorsichtig?
-- **Schreibaufgabe:** Rede als Franz an den Vater (Max Brods Brief war erfolgreich), **wird bewertet**, Inhalt und Sprache. Raster vorab, Auftrag und Kriterien als Whiteboard-PDF.
-- **Schreibhilfe** (Schnipsel, 3 pro A4, und im Whiteboard-PDF), nur inhaltsunabhängige Satzmuster:
-  - Komma: „Ich wünsche mir, dass …“ · „Ich hoffe, … / Ich glaube, … / Ich finde, …“ (auch ohne dass) · „Wenn …, dann …“ · „…, weil / obwohl / damit …“ · „Ich weiß nicht, ob …“ · „…, aber …“
-  - Großschreibung: Artikelprobe · beim / zum / das + Verb · etwas / nichts / viel + Adjektiv · keine Überkorrektur
-  - das / dass: Ersatzprobe dieses / welches
-  - drei Prüffragen vor der Abgabe: Substantive groß? Komma vor jedem Nebensatz? „du“ einheitlich?
-- Die Musterrede auf „du“ (klein) umstellen.
-- Offen: Punkteverteilung (bisher Inhalt 20 + Sprache 10).
-- Neu nach dem Literaturabgleich: Planungskopf mit Mindestziel, Zielcheck am Ende.
+- „Gibs auf!“ (Kafka): Stilmittel wiederholen (Parataxe, Hypotaxe, Metapher, Symbol) und erweitern (Wiederholung, Vergleich, rhetorische Frage, Ellipse), Parabel wiederholen über einen Bildimpuls (Wegweiser), eigene Situation aus dem Sport als Gespräch schreiben, ein Text wird gemeinsam im Kommunikationsquadrat untersucht (*), Zielcheck.
+- Material: `Kafka_Gibs_auf/`.
+- Die Rede als Franz an den Vater entfällt (04.11.).
 
 ## Stundenlog
 
@@ -166,8 +159,8 @@ Grundlage ist `Methoden/Literatur_Unterrichtsqualitaet.md` (AVIVA, Direkte Instr
 ### Kafka, „Gibs auf!“ – Kommunikationsmodelle und Stilmittel (2.11., Stunde der Mentorin)
 - **Material:** Arbeitsblatt der Mentorin (Scan, nicht im Repo): Text „Gibs auf!“; Wiederholung Vier-Seiten-Modell und Organon-Modell (Bühler); Analyse der Aussage des Schutzmanns „Von mir willst du den Weg erfahren?“ auf den vier Seiten, Scheitern der Kommunikation (Symmetrie/Asymmetrie, Störung, Empfängerohr); Infobox Stilmittel (Metapher, Parataxe, Hypotaxe, Symbol, innerer Monolog/erlebte Rede); Syntax des ersten Satzes (Partnerarbeit), Symbol suchen; Synthese Bild- und Sachebene der Parabel (Wofür steht der Schutzmann?).
 - **Beobachtungen beim Abgleich:** Der Text weicht vermutlich an einigen Stellen vom Original ab (z. B. Satzgrenze nach „nicht sehr gut aus“, „Zum Glück“, „irrewerden“) – vor weiterer Arbeit mit der Quelle abgleichen. Die Frage „Hypotaxe oder Parataxe?“ ist beim langen ersten Satz nicht eindeutig (Reihung von Hauptsätzen mit eingebetteten Nebensätzen). Das Organon-Modell war in unseren Stunden bisher nicht Thema.
-- **Rückmeldung:** noch offen.
-- **Nächster Schritt:** Stilmittel wiederholen und erweitern, Parabel wiederholen (Bildimpuls), eigene Situationen aus dem Sport schreiben und kommunikativ untersuchen (Planung in Arbeit).
+- **Rückmeldung:** „Die Stunde lief gut.“
+- **Nächster Schritt:** Do 5.11. (Beamer vorhanden): Stilmittel wiederholen und erweitern, Parabel wiederholen (Bildimpuls), eigene Situationen aus dem Sport schreiben und kommunikativ untersuchen. Material: `Kafka_Gibs_auf/`.
 
 ## Hospitationsfeedback (gesammelt)
 
