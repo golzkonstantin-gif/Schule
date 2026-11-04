@@ -70,6 +70,11 @@
 - Material der Fachschaft nachgereicht (Arbeitsschritte Text-/Bildquelle, Musterlösung M11, Teil C, Formulierungshilfen) → Schreibplan, Folien und Handreichung auf dieses Schema umgestellt (Themenfrage – Analyse formal/inhaltlich – Kontext – Sach-/Werturteil); neue **Übersicht für den Hefter** (`Uebersicht_Quelleninterpretation`, A4 doppelseitig: vorne Arbeitsschritte als Tabelle mit TATTEA und Achtung-Spalte, hinten Formulierungshilfen je Schritt). Glaubwürdigkeit beim Sachurteil (wie in den Arbeitsschritten). Übersicht danach anschaulicher gestaltet (Stufen mit Farben, Pfeilen, Beispielsatz) und formale Analyse mit der bekannten **TATTEA-Formel** (Titel, Autor, Textsorte, Thema, Entstehung, Adressat) – auch in Schreibplan, Folien und Handreichung.
 - Rückmeldung der Lehrkraft: *(steht noch aus)*
 
+### Wiederholung: Die Reform des Kleisthenes Schritt für Schritt (geplant)
+- Anlass (Rückmeldung der Lehrkraft, 4.11.): Die Schüler hatten Probleme, die Reform konkret nachzuvollziehen → muss wiederholt werden, schrittweise.
+- Material: `Wiederholung_Kleisthenes_Reform/` (12 Folien ≥ 27 pt, Quellcode in `quellcode/`): Leitfrage → Ausgangslage (Gegenden als Blöcke, Peisistratos) → Schritt 1 Dorf (Demos) → 2 Bezirk (Trittys, 3 × 10) → 3 Los (je 1 Bezirk aus Stadt, Küste, Binnenland = 1 Phyle) → 4 zehn Phylen → 5 Rat und Heer → Folge für Thrasymachos → Treppe Dorf–Bezirk–Phyle–Rat → 5 Prüffragen mit Lösung. Sprechtext und Prüffragen je Schritt in den Notizen.
+- Rückmeldung der Lehrkraft: *(steht noch aus)*
+
 ## Hospitationsfeedback (gesammelt)
 
 *(noch keine Einträge)*
