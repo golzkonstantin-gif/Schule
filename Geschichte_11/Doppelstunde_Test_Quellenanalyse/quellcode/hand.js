@@ -39,6 +39,7 @@ const content = [
     ["Uebersicht_Quelleninterpretation (für den Hefter)", "A4 doppelseitig", "1 je Schüler"],
     ["Quelle_und_Schreibplan", "A4 doppelseitig", "1 je Schüler"],
     ["Test_Erwartungshorizont_Notenschluessel", "A4", "nur Lehrkraft"],
+    ["Quelle_Aristoteles_Erwartungshorizont (Quelle + Stichpunkte zur Interpretation)", "A4 doppelseitig", "nur Lehrkraft"],
     ["Folien_Quellenanalyse (28 Folien, Teil 1 = Folie 1)", "Beamer", "–"],
   ], { size: 18 }),
 
