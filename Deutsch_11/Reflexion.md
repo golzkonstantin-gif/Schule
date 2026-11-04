@@ -119,6 +119,7 @@ Grundlage ist `Methoden/Literatur_Unterrichtsqualitaet.md` (AVIVA, Direkte Instr
 - „Gibs auf!“ (Kafka): Stilmittel wiederholen (Parataxe, Hypotaxe, Metapher, Symbol) und erweitern (Wiederholung, Vergleich, rhetorische Frage, Ellipse), Parabel wiederholen über einen Bildimpuls (Wegweiser), eigene Situation aus dem Sport als Gespräch schreiben, ein Text wird gemeinsam im Kommunikationsquadrat untersucht (*), Zielcheck.
 - Material: `Kafka_Gibs_auf/`.
 - Die Rede als Franz an den Vater entfällt (04.11.).
+- Korrektur der Lehrkraft (04.11.): Der Bildimpuls soll die **Parabel selbst** abbilden – ein Bild mit allen wesentlichen Elementen der Geschichte, an dem die Klasse sie nacherzählt und wiederholt (kein allgemeines Symbolbild wie der Wegweiser).
 
 ## Stundenlog
 
