@@ -163,6 +163,12 @@ Grundlage ist `Methoden/Literatur_Unterrichtsqualitaet.md` (AVIVA, Direkte Instr
 - **Wo hing es:** Geschafft bis einschließlich Reflexion; die Rede wird nachgeholt. Die Aufgaben waren teilweise redundant (offene und verdeckte Appelle mehrfach gefragt).
 - **Nächster Schritt:** Reaktivierung, dann Rede schreiben und bewerten (siehe „Nächste Stunde“).
 
+### Kafka, „Gibs auf!“ – Kommunikationsmodelle und Stilmittel (2.11., Stunde der Mentorin)
+- **Material:** Arbeitsblatt der Mentorin (Scan, nicht im Repo): Text „Gibs auf!“; Wiederholung Vier-Seiten-Modell und Organon-Modell (Bühler); Analyse der Aussage des Schutzmanns „Von mir willst du den Weg erfahren?“ auf den vier Seiten, Scheitern der Kommunikation (Symmetrie/Asymmetrie, Störung, Empfängerohr); Infobox Stilmittel (Metapher, Parataxe, Hypotaxe, Symbol, innerer Monolog/erlebte Rede); Syntax des ersten Satzes (Partnerarbeit), Symbol suchen; Synthese Bild- und Sachebene der Parabel (Wofür steht der Schutzmann?).
+- **Beobachtungen beim Abgleich:** Der Text weicht vermutlich an einigen Stellen vom Original ab (z. B. Satzgrenze nach „nicht sehr gut aus“, „Zum Glück“, „irrewerden“) – vor weiterer Arbeit mit der Quelle abgleichen. Die Frage „Hypotaxe oder Parataxe?“ ist beim langen ersten Satz nicht eindeutig (Reihung von Hauptsätzen mit eingebetteten Nebensätzen). Das Organon-Modell war in unseren Stunden bisher nicht Thema.
+- **Rückmeldung:** noch offen.
+- **Nächster Schritt:** Stilmittel wiederholen und erweitern, Parabel wiederholen (Bildimpuls), eigene Situationen aus dem Sport schreiben und kommunikativ untersuchen (Planung in Arbeit).
+
 ## Hospitationsfeedback (gesammelt)
 
 *(noch keine Einträge; die Planungsmuster der Mentorin stehen bei den Grundsätzen)*
