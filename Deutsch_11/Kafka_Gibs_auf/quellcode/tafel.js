@@ -78,11 +78,11 @@ const hdr = (x, w) => cell(p(t(x, { bold: true, color: "FFFFFF", size: 17 }), { 
 const ablauf = [
   ["0–3'", "Verlauf, Lernziele", "direkt", "Folie 1–2. Ziel und Ablauf an der Seitentafel, Untersuchung mit *. „Heute bleiben wir bei ‚Gibs auf!‘ – und dann schreibt ihr euer eigenes ‚Gibs auf!‘.“", "Seitentafel", "Folie 1–2"],
   ["3–8'", "A: Ankommen", "indirekt", "Folie 3 (Bildimpuls: die Parabel als Bild): „Stifte liegen. Schaut euch das Bild an.“ – „Erzählt die Geschichte anhand des Bildes nach. Was sagt der Schutzmann?“ Mehrere Schüler erzählen nacheinander weiter, die Klasse ergänzt den Dialog. Gelenk: „Das ist die Bildebene. Was ist die Sachebene?“", "–", "Folie 3"],
-  ["8–15'", "V: Vorwissen aktivieren", "direkt", "Folie 4: „Ihr habt eine Minute. Schreibt Stichworte ins Heft.“ Dann Stichproben (4–6, unterschiedliche Niveaus), Antworten an die Tafel (①). Folie 5: Lehrkraft liest den Text vor, Klasse liest im Hefter mit. Folie 6–7: Satz 1 und 2 – Parataxe oder Hypotaxe? Erst 30 Sek. allein, dann Stichproben, dann Lösung (Satz 2: beides).", "① Parabel", "Folie 4–7, Hefter (Blatt 2.11.)"],
-  ["15–20'", "I: Informieren", "direkt", "Folie 8–9: neue Stilmittel in zwei Portionen, je ein Beispiel; Warnung vor dem Fehler: Nicht jede Frage ist rhetorisch. Schnipsel einkleben. Folie 10: Wiederholung laut denkend vormachen (Was steht da? → Stilmittel? → Wirkung?). Tafel: erste Zeile in ②.", "② erste Zeilen", "Folie 8–10, Schnipsel"],
-  ["20–26'", "V: Aufgabe 1", "indirekt (angeleitet)", "Folie 11: „Jetzt arbeitet ihr allein. Die Aufgabe steht auf der Folie.“ 5 Min. Herumgehen. Lösungen nacheinander aufdecken (Folie 12–14), erst eine Antwort vom Platz, dann Folie. „Vergleicht und verbessert mit Grün.“ Tafel: ② ergänzen.", "② vervollständigen", "Folie 11–14"],
-  ["26–37'", "V: Aufgabe 2 (Schreiben)", "indirekt (selbstständig)", "Folie 15: „Jetzt schreibt ihr allein. Ihr müsst nichts vorlesen, was ihr nicht vorlesen wollt.“ Timer 10 Min. Schreibhilfe auf dem Schnipsel und Folie 16–17. Schnelle: ein zweites Stilmittel einbauen.", "–", "Folie 15–17, Heft"],
-  ["37–42'", "A: Auswerten *", "direkt", "Folie 18: Ein freiwilliger Text wird vorgelesen. Alle schreiben den abweisenden Satz und seinen Appell ins Heft, dann gemeinsam das Quadrat an der Tafel (③). Gelenk: „Ist das auch eine Parabel? Was wäre die Sachebene?“ Entfällt bei Zeitnot – dann Einstieg der nächsten Stunde.", "③*", "Folie 18"],
+  ["8–15'", "V: Vorwissen aktivieren", "direkt", "Folie 4: „Ihr habt eine Minute. Schreibt Stichworte ins Heft.“ Dann Stichproben (4–6, unterschiedliche Niveaus), Antworten an die Tafel (①). Arbeitsblatt austeilen. Folie 5: Lehrkraft liest den Text vor, Klasse liest auf dem AB mit (Zeilennummern). Folie 6–7: Satz 1 und 2 – Parataxe oder Hypotaxe? Erst 30 Sek. allein, dann Stichproben, dann Lösung (Satz 2: beides).", "① Parabel", "Folie 4–7, AB Nr. 1"],
+  ["15–20'", "I: Informieren", "direkt", "Folie 8–9: neue Stilmittel in zwei Portionen, je ein Beispiel; Warnung vor dem Fehler: Nicht jede Frage ist rhetorisch. Stilmittel auf dem Arbeitsblatt (Nr. 2) mitlesen. Folie 10: Wiederholung laut denkend vormachen (Was steht da? → Stilmittel? → Wirkung?). Tafel: erste Zeile in ②.", "② erste Zeilen", "Folie 8–10, AB Nr. 2"],
+  ["20–26'", "V: Aufgabe 1", "indirekt (angeleitet)", "Folie 11: „Jetzt arbeitet ihr allein. Die Aufgabe steht auf der Folie.“ 5 Min. Herumgehen. Lösungen nacheinander aufdecken (Folie 12–14), erst eine Antwort vom Platz, dann Folie. „Vergleicht und verbessert mit Grün.“ Tafel: ② ergänzen.", "② vervollständigen", "Folie 11–14, AB Aufgabe 1"],
+  ["26–37'", "V: Aufgabe 2 (Schreiben)", "indirekt (selbstständig)", "Folie 15: „Jetzt schreibt ihr allein. Ihr müsst nichts vorlesen, was ihr nicht vorlesen wollt.“ Timer 10 Min. Schreibhilfe auf dem Arbeitsblatt (Aufgabe 2) und Folie 16–17. Schnelle: ein zweites Stilmittel einbauen.", "–", "Folie 15–17, AB"],
+  ["37–42'", "A: Auswerten *", "direkt", "Folie 18: Ein freiwilliger Text wird vorgelesen. Alle schreiben den abweisenden Satz und seinen Appell auf das Arbeitsblatt (Aufgabe 3), dann gemeinsam das Quadrat an der Tafel (③). Gelenk: „Ist das auch eine Parabel? Was wäre die Sachebene?“ Entfällt bei Zeitnot – dann Einstieg der nächsten Stunde.", "③*", "Folie 18"],
   ["42–45'", "A: Zielcheck", "indirekt, dann Kontrolle", "Folie 19: „Allein, im Heft. 3 Minuten.“ Folie 20: Lösung, mit Grün kontrollieren. Herumgehen. Rückblick auf die Lernziele. Nie streichen.", "–", "Folie 19–20"],
 ];
 const page2 = [
@@ -115,15 +115,15 @@ const page3 = [
   h2("Aufgabe 1 und Zielcheck"),
   table(lW, [
     row([hdr("Stilmittel", lW[0]), hdr("Zitat / Satz", lW[1]), hdr("Wirkung", lW[2])]),
-    ...D.STILMITTEL.map(([b, , bsp, , wirk]) => row([cell(p(t(b, { bold: true, size: 18, color: RED }), { after: 0 }), { w: lW[0], fill: LIGHT }), cell(p(t(bsp, { italics: true, size: 18 }), { after: 0 }), { w: lW[1] }), cell(p(t(wirk, { size: 18 }), { after: 0 }), { w: lW[2] })])),
+    ...D.STILMITTEL.map(([b, , bsp, , wirk]) => row([cell(p(t(b, { bold: true, size: 18, color: RED }), { after: 0 }), { w: lW[0], fill: LIGHT }), cell(p([t(bsp, { italics: true, size: 18 }), t("  (" + D.zeile(bsp) + ")", { size: 17, color: MUTED })], { after: 0 }), { w: lW[1] }), cell(p(t(wirk, { size: 18 }), { after: 0 }), { w: lW[2] })])),
     ...D.ZIELCHECK.map(([satz, sm, wirk], i) => row([cell(p(t("Zielcheck " + (i + 1) + ": " + sm, { bold: true, size: 18, color: GREEN }), { after: 0 }), { w: lW[0], fill: LIGHT }), cell(p(t(satz, { italics: true, size: 18 }), { after: 0 }), { w: lW[1] }), cell(p(t(wirk, { size: 18 }), { after: 0 }), { w: lW[2] })])),
   ]),
   h2("Aufgabe 2: Erwartung an die Schülertexte"),
   p(t("6–8 Sätze, Ich-Form, Präteritum; eine Bitte um Hilfe oder Orientierung und eine Abweisung in wörtlicher Rede (Zeichensetzung!); mindestens ein Stilmittel von heute. Nicht bewertet. Persönliches nur freiwillig vorlesen; erfundene Situationen sind erlaubt.", { size: 18 }), { line: 280 }),
   h2("Hinweis zum Text"),
   box([p(t(D.ORIGINAL_HINWEIS, { size: 17 }), { after: 0 })], "FFF8EC"),
-  h2("So sieht das Heft am Ende aus"),
-  p(t("Überschrift „Kafka: ‚Gibs auf!‘ – Stilmittel“ · Stichworte zur Wiederholung · eingeklebter Merkkasten · Aufgabe 1 (drei Zitate + Wirkung, mit Grün verbessert) · eigenes „Gibs auf!“ (6–8 Sätze) · *Appell des Schülertextes · Zielcheck (mit Grün kontrolliert).", { size: 18 }), { line: 280 }),
+  h2("So sehen Arbeitsblatt und Heft am Ende aus"),
+  p(t("Arbeitsblatt (in den Hefter): Aufgabe 1 ausgefüllt (drei Zitate mit Zeile + Wirkung, mit Grün verbessert) · eigenes „Gibs auf!“ auf den Schreiblinien · *abweisender Satz und Kommunikationsquadrat. Heft: Stichworte zur Wiederholung, Zielcheck (mit Grün kontrolliert).", { size: 18 }), { line: 280 }),
 ];
 
 // ================= Seite 4: Umsetzung der Erkenntnisse =================

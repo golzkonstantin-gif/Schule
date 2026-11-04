@@ -11,6 +11,27 @@ const TEXT = [
 ];
 const ORIGINAL_HINWEIS = "Vermutete Abweichungen vom Original (aus dem Gedächtnis, nicht geprüft – bitte mit einer Ausgabe abgleichen): Im Original läuft der lange Satz weiter bis „… fragte ihn atemlos nach dem Weg“ („…, ich kannte mich in dieser Stadt noch nicht sehr gut aus, glücklicherweise war ein Schutzmann in der Nähe, …“); statt „irrewerden“ vermutlich „unsicher werden“; „mit einem großen Schwunge“; alte Schreibung „daß“. Für die Stunde unerheblich: Alle geübten Stilmittel stehen in beiden Fassungen.";
 
+// Text mit festen Zeilen (für das Arbeitsblatt mit Zeilennummern), ca. 70 Zeichen pro Zeile
+function umbrechen(absaetze, breite = 70) {
+  const zeilen = [];
+  let akt = "";
+  absaetze.join(" ").split(" ").forEach((w) => {
+    if ((akt + " " + w).trim().length > breite) { zeilen.push(akt); akt = w; } else akt = (akt + " " + w).trim();
+  });
+  if (akt) zeilen.push(akt);
+  return zeilen;
+}
+const ZEILEN = umbrechen(TEXT);
+// Zeilenangabe zu einem Zitat (erste Zeile, in der der Anfang steht; ggf. „f.“)
+function zeile(zitat) {
+  const kern = zitat.replace(/[„“…]/g, "").trim().split(" ").slice(0, 3).join(" ");
+  const i = ZEILEN.findIndex((z, j) => { const k = (z + " " + (ZEILEN[j + 1] || "")).indexOf(kern); return k >= 0 && k < z.length; });
+  if (i < 0) return "";
+  const rest = zitat.replace(/[„“…]/g, "").trim();
+  const ende = ZEILEN[i].includes(rest) ? "" : " f.";
+  return "Z. " + (i + 1) + ende;
+}
+
 // Lernziele (Ich kann …), das dritte ist optional (*)
 const LERNZIELE = [
   ["Ich kann in „Gibs auf!“ Stilmittel bestimmen und ihre Wirkung erklären.", false],
@@ -56,10 +77,10 @@ const ALTE_STILMITTEL = [
 // Aufgabe 1: drei Stilmittel finden (Wiederholung macht die Lehrkraft vor)
 const AUFGABE1 = {
   titel: "Aufgabe 1: Stilmittel finden",
-  zeit: "5 Min.", form: "allein, im Heft",
+  zeit: "5 Min.", form: "allein, auf dem Arbeitsblatt",
   schritte: [
     "Suche im Text einen Vergleich, eine rhetorische Frage und eine Ellipse.",
-    "Schreibe jeweils das Zitat ab.",
+    "Notiere jeweils das Zitat mit Zeilenangabe.",
     "Erkläre die Wirkung in einem Satz: „Dadurch wirkt …“",
   ],
 };
@@ -67,7 +88,7 @@ const AUFGABE1 = {
 // Aufgabe 2: eigenes Gespräch schreiben
 const AUFGABE2 = {
   titel: "Aufgabe 2: Dein „Gibs auf!“",
-  zeit: "10 Min.", form: "allein, im Heft",
+  zeit: "10 Min.", form: "allein, auf dem Arbeitsblatt",
   schritte: [
     "Denke an eine Situation aus deinem Sport, in der du Hilfe oder Orientierung gesucht hast – und abgewiesen oder nicht ernst genommen wurdest (Trainer, Kampfrichter, Mannschaft …). Du darfst die Situation auch erfinden.",
     "Schreibe sie in 6–8 Sätzen auf: Ich-Form, Präteritum.",
@@ -88,7 +109,7 @@ const AUFGABE3 = {
   zeit: "5 Min.", form: "erst allein, dann gemeinsam",
   schritte: [
     "Hört den Text zu. Schreibt den Satz auf, mit dem die Person abweist.",
-    "Notiert in eurem Heft: Was ist der Appell dieses Satzes?",
+    "Notiert auf dem Arbeitsblatt: Was ist der Appell dieses Satzes?",
     "Gemeinsam an der Tafel: alle vier Seiten – und der Vergleich mit dem Schutzmann.",
   ],
 };
@@ -101,6 +122,6 @@ const ZIELCHECK = [
 ];
 
 module.exports = {
-  TITEL, AUTOR, TEXT, ORIGINAL_HINWEIS, LERNZIELE, VERLAUF, VORWISSEN, SATZBAU,
+  TITEL, AUTOR, TEXT, ZEILEN, zeile, ORIGINAL_HINWEIS, LERNZIELE, VERLAUF, VORWISSEN, SATZBAU,
   STILMITTEL, ALTE_STILMITTEL, AUFGABE1, AUFGABE2, SCHREIBHILFE, AUFGABE3, ZIELCHECK,
 };

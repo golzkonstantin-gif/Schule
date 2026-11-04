@@ -80,7 +80,7 @@ function aufgabe(a, phase, notes, extra) {
 {
   const s = base("„Gibs auf!“ – Franz Kafka", { phase: "VORWISSEN" });
   txt(s, D.TEXT.join(" "), { x: 0.5, y: 1.15, w: 12.3, h: 6.2, fontFace: HEAD, lineSpacingMultiple: 1.0 });
-  s.addNotes("Text liegt im Hefter (Blatt vom 2.11.). Lehrkraft liest vor, die Klasse liest still mit. " + D.ORIGINAL_HINWEIS);
+  s.addNotes("Arbeitsblatt austeilen (Text mit Zeilennummern, Nr. 1). Lehrkraft liest vor, die Klasse liest still mit. " + D.ORIGINAL_HINWEIS);
 }
 [false, true].forEach((loes) => {
   const s = base(loes ? "Satzbau: Lösung" : "Satzbau: " + D.SATZBAU.frage, { phase: "VORWISSEN" });
@@ -102,7 +102,7 @@ for (let k = 0; k < D.STILMITTEL.length; k += 2) {
     txt(s, [{ text: "Beispiel: ", options: { bold: true, color: BLUE } }, { text: bsp, options: { italic: true, color: BLUE, fontFace: HEAD } }], { x: 0.8, y: y + 1.2, w: 11.8, h: 0.75 });
     txt(s, [{ text: "Test: ", options: { bold: true, color: GREEN } }, { text: test }], { x: 0.8, y: y + 1.95, w: 11.8, h: 0.75 });
   });
-  s.addNotes(k ? "Merkkasten-Schnipsel einkleben lassen (alle vier Stilmittel, mit den bekannten zur Wiederholung). Wofür? Stilmittel sind Bedeutungsträger: Sie zeigen, wie der Erzähler die Situation erlebt – das braucht ihr für jede Textanalyse." : "Kurz erklären, je ein Beispiel. Typischer Fehler vorab: Nicht jede Frage im Text ist rhetorisch – entscheidend ist, ob eine Antwort erwartet wird.");
+  s.addNotes(k ? "Alle Stilmittel stehen auf dem Arbeitsblatt (Nr. 2), mit den bekannten zur Wiederholung. Wofür? Stilmittel sind Bedeutungsträger: Sie zeigen, wie der Erzähler die Situation erlebt – das braucht ihr für jede Textanalyse." : "Kurz erklären, je ein Beispiel. Typischer Fehler vorab: Nicht jede Frage im Text ist rhetorisch – entscheidend ist, ob eine Antwort erwartet wird.");
 }
 {
   const s = base("Ich mache vor: Wiederholung", { phase: "INFORMIEREN" });
@@ -122,11 +122,11 @@ aufgabe(D.AUFGABE1, "VERARBEITEN", "Ansage: „Jetzt arbeitet ihr allein. Die Au
 D.STILMITTEL.slice(1).forEach(([b, , bsp, , wirk]) => {
   const s = base("Lösung: " + b, { phase: "VERARBEITEN" });
   rect(s, 0.5, 1.3, 12.3, 1.5, LIGHT);
-  txt(s, bsp, { x: 0.8, y: 1.3, w: 11.8, h: 1.5, fontFace: HEAD, italic: true, valign: "middle" });
+  txt(s, [{ text: bsp, options: { italic: true } }, { text: "  (" + D.zeile(bsp) + ")", options: { color: MUTED } }], { x: 0.8, y: 1.3, w: 11.8, h: 1.5, fontFace: HEAD, valign: "middle" });
   txt(s, [{ text: "Wirkung: ", options: { bold: true, color: GREEN } }, { text: wirk }], { x: 0.8, y: 3.1, w: 11.8, h: 3.5 });
   s.addNotes("Erst eine Schülerantwort vom Platz hören, dann aufdecken. Mit Grün verbessern.");
 });
-aufgabe(D.AUFGABE2, "VERARBEITEN", "Ansage: „Jetzt schreibt ihr allein. Ihr müsst nichts vorlesen, was ihr nicht vorlesen wollt.“ Timer 10 Minuten. Schreibhilfe liegt als Schnipsel bereit (nächste Folie). Wer schnell fertig ist: ein zweites Stilmittel einbauen.");
+aufgabe(D.AUFGABE2, "VERARBEITEN", "Ansage: „Jetzt schreibt ihr allein. Ihr müsst nichts vorlesen, was ihr nicht vorlesen wollt.“ Timer 10 Minuten. Die Schreibhilfe steht auf dem Arbeitsblatt bei Aufgabe 2 (und auf den nächsten Folien). Wer schnell fertig ist: ein zweites Stilmittel einbauen.");
 // Schreibhilfe auf zwei Folien (27 pt): Wörtliche Rede + Komma, dann Stilmittel
 [[0, 1], [2]].forEach((gruppen, k) => {
   const s = base("Schreibhilfe" + (k ? " (2)" : " (1)"), { phase: "VERARBEITEN" });
@@ -141,7 +141,7 @@ aufgabe(D.AUFGABE2, "VERARBEITEN", "Ansage: „Jetzt schreibt ihr allein. Ihr m�
 });
 
 // ===== A: Auswerten =====
-aufgabe(D.AUFGABE3, "AUSWERTEN", "* Wenn die Zeit knapp ist, entfällt diese Phase – der Zielcheck bleibt. Ein freiwilliger Text wird vorgelesen. Alle notieren zuerst den Appell im Heft (so sind alle aktiv), dann gemeinsam das Quadrat an der Tafel (②). Abschlussfrage: Ist das auch eine Parabel – was wäre die Sachebene?", (s) => {
+aufgabe(D.AUFGABE3, "AUSWERTEN", "* Wenn die Zeit knapp ist, entfällt diese Phase – der Zielcheck bleibt. Ein freiwilliger Text wird vorgelesen. Alle notieren zuerst den abweisenden Satz und seinen Appell auf dem Arbeitsblatt (so sind alle aktiv), dann gemeinsam das Quadrat an der Tafel (②). Abschlussfrage: Ist das auch eine Parabel – was wäre die Sachebene?", (s) => {
   const q = [["Sachinhalt", LIGHT, NAVY], ["Selbstkundgabe", LIGHT, NAVY], ["Beziehung", LIGHT, NAVY], ["Appell", "FDECEA", RED]];
   q.forEach(([k, fill, col], i) => {
     const x = 3.2 + (i % 2) * 3.5, y = 5.0 + Math.floor(i / 2) * 0.85;
