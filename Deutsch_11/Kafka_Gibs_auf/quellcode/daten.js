@@ -18,7 +18,7 @@ const LERNZIELE = [
   ["Ich kann eine eigene Erfahrung als Gespräch aufschreiben und mit dem Kommunikationsquadrat untersuchen.", true],
 ];
 const VERLAUF = [
-  ["Bildimpuls", "Ankommen"],
+  ["Bild: die Geschichte nacherzählen", "Ankommen"],
   ["Wiederholung: Parabel und Stilmittel", "Vorwissen"],
   ["Neue Stilmittel", "Informieren"],
   ["Stilmittel finden · eigenes Gespräch schreiben", "Verarbeiten"],
@@ -27,7 +27,7 @@ const VERLAUF = [
 
 // Wiederholung: Vorwissen-Fragen (Antworten an die Tafel)
 const VORWISSEN = [
-  ["Was ist eine Parabel?", "Bildebene · Sachebene"],
+  ["Das ist die Bildebene – was ist die Sachebene?", "Parabel: Was wird übertragen?"],
   ["Wofür könnte der Schutzmann stehen?", "eine Instanz, die Orientierung geben sollte"],
   ["Welche Stilmittel kennt ihr schon?", "4 aus der letzten Stunde"],
 ];

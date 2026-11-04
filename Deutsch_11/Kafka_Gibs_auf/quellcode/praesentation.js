@@ -59,29 +59,12 @@ function aufgabe(a, phase, notes, extra) {
   s.addNotes("Lernziele vorlesen. Am Ende (Zielcheck) darauf zurückkommen.");
 }
 
-// ===== A: Ankommen – Bildimpuls Wegweiser =====
+// ===== A: Ankommen – Bildimpuls: die Parabel als Bild (Variante A, eine Szene) =====
 {
-  const s = base("Was seht ihr?", { phase: "ANKOMMEN" });
-  // Pfahl
-  s.addShape(pres.shapes.RECTANGLE, { x: 4.05, y: 1.5, w: 0.32, h: 5.7, fill: { color: WOOD }, line: { type: "none" } });
-  s.addShape(pres.shapes.RECTANGLE, { x: 3.3, y: 7.05, w: 1.8, h: 0.2, fill: { color: "6E7C5A" }, line: { type: "none" } });
-  // Schilder: alle „Bahnhof“, verschiedene Richtungen
-  const schilder = [
-    { x: 4.2, y: 1.7, w: 3.2, rot: -8, flip: false },
-    { x: 1.0, y: 2.7, w: 3.2, rot: 6, flip: true },
-    { x: 4.2, y: 3.7, w: 3.2, rot: 12, flip: false },
-    { x: 1.0, y: 4.7, w: 3.2, rot: -10, flip: true },
-  ];
-  schilder.forEach((p) => {
-    s.addShape(pres.shapes.PENTAGON, { x: p.x, y: p.y, w: p.w, h: 0.75, fill: { color: "F7F3E8" }, line: { color: WOOD, width: 2 }, rotate: p.rot, flipH: p.flip });
-    txt(s, "Bahnhof", { x: p.x + (p.flip ? 0.55 : 0.15), y: p.y, w: p.w - 0.7, h: 0.75, fontFace: HEAD, bold: true, align: "center", valign: "middle", rotate: p.rot });
-  });
-  // Uhr
-  s.addShape(pres.shapes.OVAL, { x: 9.2, y: 1.5, w: 2.2, h: 2.2, fill: { color: WHITE }, line: { color: NAVY, width: 3 } });
-  s.addShape(pres.shapes.LINE, { x: 10.3, y: 1.85, w: 0, h: 0.75, line: { color: NAVY, width: 3 } });
-  s.addShape(pres.shapes.LINE, { x: 10.3, y: 2.6, w: 0.55, h: 0.35, line: { color: RED, width: 3 } });
-  txt(s, ["Was seht ihr?", "Wie fühlt sich jemand, der davorsteht?"].join("\n"), { x: 8.2, y: 4.3, w: 4.7, h: 2.2, paraSpaceAfter: 10 });
-  s.addNotes("Bild 30 Sekunden wirken lassen, dann zwei, drei Beiträge. Erwartung: Alle Schilder zeigen „Bahnhof“, aber in verschiedene Richtungen; die Uhr läuft. Man ist ratlos, unter Zeitdruck. Überleitung: „Woran erinnert euch das?“ → „Gibs auf!“ – der Erzähler sucht den Weg zum Bahnhof.");
+  const s = pres.addSlide();
+  s.background = { color: WHITE };
+  require("./bildimpuls")(pres).szene(s);
+  s.addNotes("Ansage: „Stifte liegen. Schaut euch das Bild an.“ 30 Sekunden wirken lassen. Impuls: „Erzählt die Geschichte anhand des Bildes nach. Was sagt der Schutzmann?“ Zwei, drei Schüler erzählen nacheinander weiter; die Klasse ergänzt den Dialog („Von mir willst du den Weg erfahren?“ – „Ja, da ich ihn selbst nicht finden kann.“ – „Gibs auf, gibs auf.“). Elemente im Bild: früher Morgen, leere Straßen, Turmuhr (7:50) und eigene Uhr, Erzähler mit Koffer in Eile, Bahnhof ohne erkennbaren Weg, Schutzmann wendet sich lachend ab. Gelenk: „Das ist die Bildebene. Was ist die Sachebene?“");
 }
 
 // ===== V: Vorwissen aktivieren =====

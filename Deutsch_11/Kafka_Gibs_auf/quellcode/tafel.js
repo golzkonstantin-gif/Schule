@@ -37,7 +37,7 @@ const sW = [2600, 5000, W - 7600];
 const board = table(sW, [
   row([bc([
     p(c("Franz Kafka: „Gibs auf!“ – Stilmittel und Parabel", { font: "Cambria", size: 30, bold: true }), { after: 20 }),
-    p(c("Seitentafel: Ziel „Ich kann Stilmittel bestimmen und ihre Wirkung erklären.“ · Ablauf: Bild – Wiederholung – neue Stilmittel – eigenes Gespräch – Untersuchen* – Zielcheck", { size: 17, color: DIM, italics: true }), { after: 0 }),
+    p(c("Seitentafel: Ziel „Ich kann Stilmittel bestimmen und ihre Wirkung erklären.“ · Ablauf: Bild nacherzählen – Wiederholung – neue Stilmittel – eigenes Gespräch – Untersuchen* – Zielcheck", { size: 17, color: DIM, italics: true }), { after: 0 }),
   ], { w: W, span: 3, borders: { top: none, bottom: line, left: none, right: none } })]),
   row([bc([
     p(c("① Parabel", { bold: true, color: YEL, size: 22 }), { after: 30 }),
@@ -77,8 +77,8 @@ const aW = [900, 2300, 7500, 2338, 2300];
 const hdr = (x, w) => cell(p(t(x, { bold: true, color: "FFFFFF", size: 17 }), { after: 0 }), { w, fill: NAVY });
 const ablauf = [
   ["0–3'", "Verlauf, Lernziele", "direkt", "Folie 1–2. Ziel und Ablauf an der Seitentafel, Untersuchung mit *. „Heute bleiben wir bei ‚Gibs auf!‘ – und dann schreibt ihr euer eigenes ‚Gibs auf!‘.“", "Seitentafel", "Folie 1–2"],
-  ["3–7'", "A: Ankommen", "indirekt", "Folie 3 (Bildimpuls Wegweiser): „Stifte liegen. Schaut euch das Bild an.“ – „Was seht ihr? Wie fühlt sich jemand, der davorsteht?“ Erwartung: alle Schilder „Bahnhof“, verschiedene Richtungen, Uhr läuft → ratlos, Zeitdruck. Gelenk: „Woran erinnert euch das?“ → „Gibs auf!“", "–", "Folie 3"],
-  ["7–15'", "V: Vorwissen aktivieren", "direkt", "Folie 4: „Ihr habt eine Minute. Schreibt Stichworte ins Heft.“ Dann Stichproben (4–6, unterschiedliche Niveaus), Antworten an die Tafel (①). Folie 5: Lehrkraft liest den Text vor, Klasse liest im Hefter mit. Folie 6–7: Satz 1 und 2 – Parataxe oder Hypotaxe? Erst 30 Sek. allein, dann Stichproben, dann Lösung (Satz 2: beides).", "① Parabel", "Folie 4–7, Hefter (Blatt 2.11.)"],
+  ["3–8'", "A: Ankommen", "indirekt", "Folie 3 (Bildimpuls: die Parabel als Bild): „Stifte liegen. Schaut euch das Bild an.“ – „Erzählt die Geschichte anhand des Bildes nach. Was sagt der Schutzmann?“ Mehrere Schüler erzählen nacheinander weiter, die Klasse ergänzt den Dialog. Gelenk: „Das ist die Bildebene. Was ist die Sachebene?“", "–", "Folie 3"],
+  ["8–15'", "V: Vorwissen aktivieren", "direkt", "Folie 4: „Ihr habt eine Minute. Schreibt Stichworte ins Heft.“ Dann Stichproben (4–6, unterschiedliche Niveaus), Antworten an die Tafel (①). Folie 5: Lehrkraft liest den Text vor, Klasse liest im Hefter mit. Folie 6–7: Satz 1 und 2 – Parataxe oder Hypotaxe? Erst 30 Sek. allein, dann Stichproben, dann Lösung (Satz 2: beides).", "① Parabel", "Folie 4–7, Hefter (Blatt 2.11.)"],
   ["15–20'", "I: Informieren", "direkt", "Folie 8–9: neue Stilmittel in zwei Portionen, je ein Beispiel; Warnung vor dem Fehler: Nicht jede Frage ist rhetorisch. Schnipsel einkleben. Folie 10: Wiederholung laut denkend vormachen (Was steht da? → Stilmittel? → Wirkung?). Tafel: erste Zeile in ②.", "② erste Zeilen", "Folie 8–10, Schnipsel"],
   ["20–26'", "V: Aufgabe 1", "indirekt (angeleitet)", "Folie 11: „Jetzt arbeitet ihr allein. Die Aufgabe steht auf der Folie.“ 5 Min. Herumgehen. Lösungen nacheinander aufdecken (Folie 12–14), erst eine Antwort vom Platz, dann Folie. „Vergleicht und verbessert mit Grün.“ Tafel: ② ergänzen.", "② vervollständigen", "Folie 11–14"],
   ["26–37'", "V: Aufgabe 2 (Schreiben)", "indirekt (selbstständig)", "Folie 15: „Jetzt schreibt ihr allein. Ihr müsst nichts vorlesen, was ihr nicht vorlesen wollt.“ Timer 10 Min. Schreibhilfe auf dem Schnipsel und Folie 16–17. Schnelle: ein zweites Stilmittel einbauen.", "–", "Folie 15–17, Heft"],
@@ -129,7 +129,7 @@ const page3 = [
 // ================= Seite 4: Umsetzung der Erkenntnisse =================
 const rW = [3000, W - 3000];
 const refl = [
-  ["AVIVA", "Alle fünf Phasen, das Auswerten (Zielcheck) wird nie gestrichen; der Stern trifft nur die Untersuchung des Schülertextes. Ankommen über einen Bildimpuls, der schon die Parabel-Struktur zeigt (Bild → Bedeutung)."],
+  ["AVIVA", "Alle fünf Phasen, das Auswerten (Zielcheck) wird nie gestrichen; der Stern trifft nur die Untersuchung des Schülertextes. Ankommen über einen Bildimpuls, der die Parabel selbst mit allen Elementen zeigt: Die Klasse erzählt nach (Wiederholung der Geschichte) und kommt vom Bild (Bildebene) zur Bedeutung (Sachebene)."],
   ["Direkte Instruktion", "Ziel und Ablauf zu Beginn (Seitentafel, Folie). Vorwissen aktiv abgeprüft (erst allein, dann Stichproben) – hat sich in der Kafka-Appell-Stunde bewährt. Informieren in zwei Portionen mit Fehlerwarnung. Ich – Wir – Ihr: Lehrkraft macht die Wiederholung laut denkend vor, die Klasse wendet es bei drei Stilmitteln an, dann selbstständig im eigenen Text. Rückmeldung: Lösungen nacheinander aufdecken, mit Grün verbessern; Zielcheck."],
   ["Rückmeldungen umgesetzt", "Aufgaben ohne Dopplungen: finden (Aufgabe 1) → selbst verwenden (Aufgabe 2) → ein Gespräch untersuchen (Aufgabe 3*). Erarbeitung allein, keine Partnerarbeit. Präsentation in 27 pt mit Verlauf und Lernzielen. Schreibhilfe nur mit inhaltsunabhängigen Satzmustern. Sportbezug nur beim eigenen Schreiben, wo er passt. Keine Hausaufgabe."],
   ["Differenzierung", "Schreibhilfe als gestufte Hilfe (Zeichensetzung, Stilmittel); Schnelle bauen ein zweites Stilmittel ein; erfundene statt persönlicher Situation erlaubt; Vorlesen freiwillig."],

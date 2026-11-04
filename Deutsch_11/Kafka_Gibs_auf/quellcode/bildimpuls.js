@@ -1,11 +1,8 @@
-// Bildimpuls „Gibs auf!“ zum Nacherzählen der Parabel – zwei Varianten zur Auswahl (16:9):
-// A) eine Szene mit allen Elementen, B) Bildgeschichte in drei Bildern. Gezeichnet mit Formen (in PowerPoint bearbeitbar).
-// Einziger Text im Bild: das Schild „Bahnhof“ in der Ferne.
-const pptxgen = require("pptxgenjs");
-
-const pres = new pptxgen();
-pres.layout = "LAYOUT_WIDE"; // 13.333 x 7.5
-pres.title = "Gibs auf! – Bildimpuls (Varianten)";
+// Bildimpuls „Gibs auf!“ zum Nacherzählen der Parabel (16:9). Gewählt: Variante A, eine Szene mit allen Elementen
+// (Entscheidung der Lehrkraft, 04.11.). Variante B (Bildgeschichte in drei Bildern) bleibt zum Vergleich in Bildimpuls_Varianten.
+// Gezeichnet mit Formen (in PowerPoint bearbeitbar). Einziger Text im Bild: das Schild „Bahnhof“ in der Ferne.
+// Verwendung: const { szene } = require("./bildimpuls")(pres); szene(slide);
+function zeichner(pres) {
 
 const NAVY = "1E2761", INK = "2B2F3A";
 const SKY = "DCE7F2", DAWN = "F6DCC4", HOUSE = "9AA8BD", HOUSE2 = "8293AB", ROOF = "6F7F99", WIN = "4A5670";
@@ -106,9 +103,7 @@ const rahmen = (s, x, y, w, h) => s.addShape(pres.shapes.RECTANGLE, { x, y, w, h
 const himmel = (s, x, y, w, h) => { box(s, x, y, w, h, SKY); box(s, x, y + h * 0.55, w, h * 0.45, DAWN); };
 
 // ===== Variante A: eine Szene =====
-{
-  const s = pres.addSlide();
-  s.background = { color: "FFFFFF" };
+function szene(s) {
   himmel(s, 0, 0, 13.333, 4.6);
   // Bahnhof in der Ferne, Turm mit Uhr
   bahnhof(s, 9.6, 3.55, 1.5);
@@ -129,9 +124,7 @@ const himmel = (s, x, y, w, h) => { box(s, x, y, w, h, SKY); box(s, x, y + h * 0
 }
 
 // ===== Variante B: Bildgeschichte in drei Bildern =====
-{
-  const s = pres.addSlide();
-  s.background = { color: "FFFFFF" };
+function geschichte(s) {
   const pw = 4.1, ph = 6.3, py = 0.6;
   [0.35, 4.62, 8.89].forEach((px, i) => {
     himmel(s, px, py, pw, ph * 0.62);
@@ -159,4 +152,16 @@ const himmel = (s, x, y, w, h) => { box(s, x, y, w, h, SKY); box(s, x, y + h * 0
   });
 }
 
-pres.writeFile({ fileName: "Bildimpuls_Varianten.pptx" });
+return { szene, geschichte };
+}
+
+module.exports = zeichner;
+if (require.main === module) {
+  const pptxgen = require("pptxgenjs");
+  const pres = new pptxgen();
+  pres.layout = "LAYOUT_WIDE"; // 13.333 x 7.5
+  pres.title = "Gibs auf! – Bildimpuls (Varianten)";
+  const z = zeichner(pres);
+  [z.szene, z.geschichte].forEach((fn) => { const s = pres.addSlide(); s.background = { color: "FFFFFF" }; fn(s); });
+  pres.writeFile({ fileName: "Bildimpuls_Varianten.pptx" });
+}
