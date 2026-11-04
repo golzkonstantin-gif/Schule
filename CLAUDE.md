@@ -4,7 +4,8 @@ Dieses Repo enthält Unterrichtsmaterial (Deutsch). Die Lehrkraft plant hier gem
 
 ## Vor jeder neuen Planung
 
-1. Das Reflexionslog der Klasse lesen (z. B. `Deutsch_7A/Reflexion.md`): Lernstand, offene Baustellen, Rückmeldungen zu vergangenen Stunden, Hospitationsfeedback.
+1. Das Reflexionslog der Klasse lesen (z. B. `Deutsch_7A/Reflexion.md`, `Deutsch_11/Reflexion.md`): Lernstand, offene Baustellen, Rückmeldungen zu vergangenen Stunden, Hospitationsfeedback.
+   - Den Literaturabgleich in `Methoden/Literatur_Unterrichtsqualitaet.md` kennen (AVIVA, Direkte Instruktion, Planungsstandard). Für Deutsch 11 steht die Übertragung auf die Klasse im Reflexionslog.
 2. Die Planung ausdrücklich darauf beziehen („Letztes Mal hing die Klasse bei …, deshalb …“).
    - In Deutsch 7A gehört zu jeder Stunde auch die Handreichung auf Polnisch für S-PL (siehe Klassenspezifisch).
 3. Wenn die Lehrkraft Rückmeldung zu einer Stunde oder Hospitationsfeedback gibt: im Reflexionslog eintragen (Vorlage steht dort) und mitcommitten. Dauerhafte neue Vorlieben zusätzlich hier in `CLAUDE.md` ergänzen.
@@ -109,6 +110,19 @@ Die folgenden Vorlieben und Reflexionen gelten für die gesamte weitere Planung,
   - **Im „Wofür?“ der Merksätze den Bezug zu den Tempora herstellen**, wenn es passt (z. B. Partizip II und Hilfsverb braucht man für die Tempora).
 - Futur II, Hilfsverb oder Vollverb, Modalverben und die Satzklammer wurden nicht mehr behandelt. Bei einer späteren Wiederaufnahme der Grammatik dort ansetzen.
 
+## Klassenspezifisch: Deutsch 11
+
+Ausführlich in `Deutsch_11/Reflexion.md` (Grundsätze, Lernstand, Literaturabgleich, Stundenlog, nächste Stunde). Kurzfassung der Abweichungen und Ergänzungen zu den Vorlieben oben:
+
+- **Einheit Kommunikation** (Schulz von Thun, Watzlawick, Störungen lösen), seit Oktober angewendet auf Kafkas „Brief an den Vater“ (Stunden von der Mentorin übernommen). 21 Schülerinnen und Schüler, Gruppen nach Sitzreihen.
+- **Vorwissen in jeder Stunde abprüfen** (Folie, Antworten an die Tafel) – hat sich bewährt (Kafka-Appell, Okt.).
+- **Erarbeitung allein**, dann Unterrichtsgespräch; Partnerarbeit nur, wenn wirklich zielführend (zu zweit wird gequatscht). Lösungen im Unterrichtsgespräch, danach als Folie. Kein Gruppenpuzzle bei schweren Texten.
+- **Literarische Texte nach dem Muster der Mentorin:** Kontext zuerst, kurzer Auszug, ein Schwerpunkt, erst Kernbotschaft, dann Analyse; Leitfragen zu einzelnen Wörtern; immer ein Transfer. Vor dem Schreiben einen Beispielsatz gemeinsam formulieren (Modell). Aufgaben ohne Dopplungen.
+- **Leistungsnachweise:** Anwendung am Fall (Brief, Rede), Gesamtnote aus Inhalt und Sprache (bisher 20 + 10), Raster vorab, Auftrag und Kriterien als Whiteboard-PDF.
+- **Rechtschreibung:** Fehlertexte statt langer Diktate; bei Schreibaufgaben eine Schreibhilfe mit **inhaltsunabhängigen** Satzmustern zu den Fehlerquellen (Komma auch ohne „dass“, Großschreibung, das/dass).
+- **Präsentationen in 27 pt**, mit Verlauf und Lernzielen zu Beginn. Arbeitsblätter möglichst nur mit Text; mit Aufträgen nur mit Schreiblinien.
+- **Keine Hausaufgaben.**
+
 ## Gestaltung
 
 - Formate: Word (`.docx`) für Skripte/Arbeitsblätter, PowerPoint (`.pptx`) für Folien, jeweils zusätzlich als PDF.
@@ -125,5 +139,6 @@ Keine Klarnamen von Schülerinnen, Schülern oder Kolleginnen und Kollegen ins R
 
 - `Deutsch_7A/` – Material der Klasse 7A, ein Unterordner pro Stunde/Einheit
 - `Deutsch_7A/Reflexion.md` – Lernstand, Stundenlog, Hospitationsfeedback, offene Baustellen
-- `Methoden/` – Methodenmaterial der Schule, das für alle Klassen gilt (z. B. Methodenkarten Lesetraining, Kriterien für mündliche Noten)
+- `Deutsch_11/` – Material der Klasse 11 (Kommunikation, Kafka), `Deutsch_11/Reflexion.md` mit Literaturabgleich für die Klasse
+- `Methoden/` – Methodenmaterial der Schule, das für alle Klassen gilt (z. B. Methodenkarten Lesetraining, Kriterien für mündliche Noten, `Literatur_Unterrichtsqualitaet.md` mit Literaturabgleich und Planungsstandard)
 - Weitere Klassen und Fächer bekommen einen eigenen Ordner nach demselben Muster (`<Fach>_<Klasse>/`) mit eigenem `Reflexion.md`, z. B. Klassenprofil, Sportarten und Lernstand. Die Vorlieben oben gelten dort genauso.
