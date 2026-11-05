@@ -86,7 +86,7 @@ d.push(h3("Material und Vorbereitung"));
 d.push(...bullets([
   "Arbeitsblatt „Der Dritte Stand handelt“ (Text, Quelle von Sieyès, Zeitstrahl): 14 Stück (12 plus 2 Reserve), einseitig.",
   "Schnipsel „Karikatur analysieren: Dreischritt“ (Seite 1): 6 Schnipsel, ausschneiden, je einer pro Paar. Hilfekarten Stufe 1 bis 3 (Seite 2): einmal drucken, ausschneiden, am Pult bereitlegen (Hilfe nur auf Nachfrage).",
-  "Folien 1 bis 17 (Schrift mindestens 24 Punkt). Das Bild „Für die Mühsal geboren“ (S. 111), das Bild des Ballhausschwurs (S. 113) und die Karikatur zu den drei Ständen aus dem Absolutismus sind auf den Folien. Lehrbuch S. 111, 113 und 116 liegen zur Hand.",
+  "Folien 1 bis 17 (Schrift mindestens 27 Punkt). Das Bild „Für die Mühsal geboren“ (S. 111), das Bild des Ballhausschwurs (S. 113) und die Karikatur zu den drei Ständen aus dem Absolutismus sind auf den Folien. Lehrbuch S. 111, 113 und 116 liegen zur Hand.",
   "Seitentafel: Ziele und Ablauf mit * bei Schritt 3 der Karikatur-Analyse. Mitte der Tafel leer lassen. Kreide, Grün zum Verbessern, Uhr oder Timer.",
   "Material vorab auf die Tische legen (Arbeitsblatt, Schnipsel), damit keine Austeilaktion Zeit kostet.",
   "Zahlen: wie in Stunde 1 (Gedankenspiel 580 zu 560). Siehe Prüfhinweise am Ende.",
