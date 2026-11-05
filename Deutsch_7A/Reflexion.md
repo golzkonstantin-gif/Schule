@@ -291,7 +291,7 @@ Die Lehrkraft möchte das weiterverfolgen, noch ohne Material. Die Satzklammer (
   - Hinweise als Lückensätze aus der Ballade, aus dem Training und zur Regel.
   - * Zusatz: zwei eigene Sätze mit Lösungswörtern, Subjunktion einkreisen und finites Verb unterstreichen.
 - **Rückmeldung der Lehrkraft (Do 5.11.):** „Heute, Donnerstag, war auch gut!“
-- **Hinweis der Lehrkraft (5.11.) zum Kreuzworträtsel:** Gibt es eine Anschlussaufgabe, soll sie als nächster Schritt gekennzeichnet sein, den die Klasse gemeinsam macht. Auf dem Schnipsel stehen dafür Zeilen zum Eintragen. Die Umsetzung wird noch besprochen.
+- **Hinweis der Lehrkraft (5.11.) zum Kreuzworträtsel:** Gibt es eine Anschlussaufgabe, soll sie als nächster Schritt gekennzeichnet sein, den die Klasse gemeinsam macht. Auf dem Schnipsel stehen dafür Zeilen zum Eintragen. Das Kreuzworträtsel wird am Mo 9.11. eingesetzt und um Wörter zu den Gattungen und zum Reim erweitert. Die Umsetzung wird mit der Montagsplanung besprochen.
 - **Fr 6.11. geplant: „Paddy Fingal – die Ballade als Ur-Ei“** (Material in `Woche2/`):
   - Präsentation mit 13 Folien, Tafelskript mit Reflexionsteil, Handreichung Polnisch
   - Der Ur-Ei-Schnipsel aus `Woche1/` bleibt unverändert.
