@@ -183,7 +183,7 @@ const IMG = "../material/";
 // ============ 3 Ablauf ============
 {
   const s = blank("Ablauf", "So arbeiten wir heute", undefined, "Ablauf zeigen. Die Kreise oben rechts zeigen die Phase: A V I V A. Der Stern * bedeutet: wird eventuell nicht mehr geschafft (Beurteilen der Karikatur).");
-  const ph = [["A", "Ankommen", "Ziele", "3 Min."], ["V", "Vorwissen", "Abstimmung", "6 Min."], ["I", "Informieren", "Text, Zeitstrahl", "12 Min."], ["V", "Verarbeiten", "Karikatur", "15 Min."], ["A", "Auswerten", "Berater-Frage", "6 Min."]];
+  const ph = [["A", "Ankommen", "Ziele", "3 Min."], ["V", "Vorwissen", "Abstimmung", "8 Min."], ["I", "Informieren", "Text, Zeitstrahl", "12 Min."], ["V", "Verarbeiten", "Karikatur", "15 Min."], ["A", "Auswerten", "Berater-Frage", "6 Min."]];
   ph.forEach(([l, n, x, m], i) => {
     const xx = 0.6 + i * 2.45;
     box(s, xx, 1.9, 2.3, 3.6, i % 2 ? LIGHT : LIGHT2);
@@ -198,7 +198,7 @@ const IMG = "../material/";
 
 // ============ 4 Ü1 Fehlertext ============
 {
-  const s = blank("V · Vorwissen aktivieren · Übung 1", "Fehlertext: Abstimmung bei den Generalständen", 1, "Ansage: „Jetzt arbeitet ihr allein. Die Aufgabe steht rechts.“ Vier Sätze enthalten einen Fehler, ein Satz ist richtig. Fehler: 1 (jeder Stand hat eine Stimme, nicht jeder Abgeordnete), 3 (der Dritte Stand stellt etwa 97 %), 4 (nach Köpfen hätte er mehr Gewicht), 5 (der König lehnte ab). Satz 2 ist richtig. Wiederholung der letzten Stunde. Lehrkraft 2 hospitiert nur. Nach 3 Minuten allein: Partnercheck (1 Minute, leise), dann Folie 5. Hinweis: Die Abstimmungsmöglichkeiten nach Ständen und nach Köpfen sind laut Lehrkraft noch nicht sicher.");
+  const s = blank("V · Vorwissen aktivieren · Übung 1", "Fehlertext: Abstimmung bei den Generalständen", 1, "Ansage: „Jetzt arbeitet ihr allein. Die Aufgabe steht rechts.“ Vier Sätze enthalten einen Fehler, ein Satz ist richtig. Fehler: 1 (jeder Stand hat eine Stimme, nicht jeder Abgeordnete), 3 (der Dritte Stand stellt etwa 97 %), 4 (nach Köpfen hätte er mehr Gewicht), 5 (der König lehnte ab). Satz 2 ist richtig. Wiederholung der letzten Stunde. Lehrkraft 2 hospitiert nur. Nach 3 Minuten allein (Sie gehen durch die Reihen): Folie 5, Schüler am Presenter. Hinweis: Die Abstimmungsmöglichkeiten nach Ständen und nach Köpfen sind laut Lehrkraft noch nicht sicher.");
   box(s, 0.6, 1.5, 12.15, 3.55, LIGHT2);
   const sat = ["Bei den Generalständen hat jeder Abgeordnete eine Stimme.", "Klerus und Adel haben zusammen zwei von drei Stimmen.", "Der Dritte Stand (Bauern und Bürger) stellt etwa 3 % der Menschen.", "Bei der Abstimmung nach Köpfen hätte er weniger Gewicht gehabt.", "Der König erlaubte die Abstimmung nach Köpfen."];
   sat.forEach((x, i) => {
@@ -209,12 +209,12 @@ const IMG = "../material/";
     numCircle(s, n, 0.85, 5.3 + i * 0.45, 0.38, RED);
     txt(s, x, { x: 1.5, y: 5.25 + i * 0.45, w: 11.1, h: 0.45, fontSize: 27, bold: true, valign: "middle" });
   });
-  bar(s, [{ text: "Zeit: ", options: { bold: true } }, { text: "4 Minuten · allein, dann Partnercheck · leise      ", options: {} }, { text: "Fertig? Stift hinlegen.", options: { italic: true, color: ICE } }]);
+  bar(s, [{ text: "Zeit: ", options: { bold: true } }, { text: "3 Minuten · allein · leise       ", options: {} }, { text: "Fertig? Stift hinlegen.", options: { italic: true, color: ICE } }]);
 }
 
 // ============ 5 Lösung Fehlertext ============
 {
-  const s = blank("V · Vorwissen aktivieren · Kontrolle", "Fehlertext: Lösung", 1, "Ansage: „Vergleicht und verbessert mit Grün.“ Die korrigierten Stellen stehen grün. Satz 2 war richtig. Gezielte Abfrage (2 bis 3 Personen, kein Gespräch): „Wie viele Stimmen hat der Dritte Stand nach Ständen? Und nach Köpfen?“");
+  const s = blank("V · Vorwissen aktivieren · Kontrolle", "Fehlertext: Lösung", 1, "Ansage: „Jetzt erklärt ihr. Wer den Presenter hat, liest einen Satz, sagt, was falsch war, und begründet. Dann bestimmt ihr, wer als Nächstes dran ist. Alle anderen verbessern mit Grün.“ Die Klasse erklärt vorn, Sie stehen hinten. Jede Person nur einmal, vier Sätze (Satz 2 war richtig). Die korrigierten Stellen stehen grün. Greifen Sie nur ein, wenn eine Erklärung falsch ist. Ca. 4 Minuten. Dauert es zu lange: nur drei Personen erklären, den Rest erklären Sie.");
   box(s, 0.6, 1.5, 12.15, 4.45, LIGHT2);
   const G = { bold: true, color: GREEN };
   const lines = [
@@ -228,12 +228,12 @@ const IMG = "../material/";
     numCircle(s, i + 1, 0.85, 1.75 + i * 0.85, 0.4, NAVY);
     s.addText(runs.map((r) => ({ text: r.text, options: Object.assign({ fontFace: HEAD, fontSize: 27, color: NAVY }, r.options || {}) })), { isTextBox: true, x: 1.5, y: 1.65 + i * 0.85, w: 11.0, h: 0.8, valign: "middle", margin: 0 });
   });
-  bar(s, [{ text: "Jetzt: ", options: { bold: true } }, { text: "Vergleiche und verbessere mit Grün.", options: {} }]);
+  bar(s, [{ text: "Jetzt: ", options: { bold: true } }, { text: "Du erklärst: falsch, richtig, weil … Alle verbessern mit Grün.", options: {} }]);
 }
 
 // ============ 6 Zwei Regeln ============
 {
-  const s = blank("V · Vorwissen aktivieren · Merkbild", "Nach Ständen oder nach Köpfen?", 1, "Kurz erklären (1 Minute), das Bild trägt die Wiederholung. Gedankenspiel aus Stunde 1 (Antrag: Auch Adel und Klerus zahlen Steuern): Nach Ständen stimmen Klerus Nein, Adel Nein, Dritter Stand Ja: 2 zu 1, abgelehnt. Nach Köpfen Ja 580, Nein 290 + 270 = 560: knapp angenommen. Wichtig: Es wurde 1789 nicht nach Köpfen abgestimmt, der Streit um die Regel blockierte die Generalstände. Gezielte Abfrage statt Gespräch.");
+  const s = blank("V · Vorwissen aktivieren · Merkbild", "Nach Ständen oder nach Köpfen?", 1, "Eine weitere Schülerin oder ein Schüler erklärt am Presenter (1 Minute), das Bild trägt die Wiederholung; Sie ergänzen nur bei Fehlern. Gedankenspiel aus Stunde 1 (Antrag: Auch Adel und Klerus zahlen Steuern): Nach Ständen stimmen Klerus Nein, Adel Nein, Dritter Stand Ja: 2 zu 1, abgelehnt. Nach Köpfen Ja 580, Nein 290 + 270 = 560: knapp angenommen. Wichtig: Es wurde 1789 nicht nach Köpfen abgestimmt, der Streit um die Regel blockierte die Generalstände. Gezielte Abfrage statt Gespräch.");
   box(s, 0.6, 1.5, 5.95, 4.5, LIGHT2);
   txt(s, "Nach Ständen", { x: 0.9, y: 1.6, w: 5.4, h: 0.55, fontFace: HEAD, fontSize: 28, bold: true, color: NAVY });
   txt(s, "Jeder Stand hat eine Stimme.", { x: 0.9, y: 2.25, w: 5.4, h: 0.5, fontSize: 27 });

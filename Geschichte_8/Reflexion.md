@@ -85,3 +85,8 @@
 - Hospitationsfeedback (anonymisiert):
 - Nächster Schritt / neue Baustellen:
 ```
+
+### Anpassung Stunde 2 (8C, Fr 06.11.) nach Rückmeldung der 8D (05.11.)
+- Anlass: In der 8D war die Wiederholung mit Schülern am Presenter sehr aktivierend (Begriffe zeigen und erklären, Reihenfolge selbst bestimmen).
+- Umgesetzt (Entscheidung der Lehrkraft): Phase 1 (Fehlertext) läuft jetzt so: 3 Minuten allein, danach erklären vier Schüler nacheinander je einen Satz am Presenter (Folie 5: falsch, richtig, weil …) und bestimmen jeweils den Nächsten; eine weitere Person erklärt Folie 6 (Merkbild). Alle anderen verbessern mit Grün; der Partnercheck entfällt. Phase 1 dauert 8 statt 6 Minuten, der Puffer schrumpft von 3 auf 1 Minute. Sollbruchstelle: nur drei Personen erklären, den Rest übernimmt die Lehrkraft.
+- Zu beobachten: Wird die Zeit gehalten? Sind die Erklärungen inhaltlich richtig (Stimme je Stand vs. je Kopf)? Bleibt es leise genug?

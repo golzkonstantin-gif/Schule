@@ -63,13 +63,13 @@ d.push(table([2600, 7606], [
 d.push(sp());
 d.push(table([800, 2300, 4300, 2806], [
   row([th("Min.", 800), th("AVIVA", 2300), th("Phase", 4300), th("Arbeitsform", 2806)], 320),
-  ...[["3", "Ankommen", "0  Ankommen, Ziele, Eingangsdiagnose", "still, allein"], ["6", "Vorwissen", "1  Fehlertext: Abstimmung nach Ständen und Köpfen", "allein, Partnercheck, Folie"], ["12", "Informieren", "2  Text, Quelle, Zeitstrahl, Bild, Merksatz", "allein, Folie, abschreiben"], ["15", "Verarbeiten", "3  Karikatur: Modell, Partnerarbeit, Sicherung", "Lehrkraft, zu zweit"], ["6", "Auswerten", "4  Berater-Frage, Ziele prüfen, Ausblick", "allein, gezielte Abfrage"], ["3", "—", "Puffer", "—"]].map((r) => row(r.map((v, i) => tc(v, [800, 2300, 4300, 2806][i], { bold: i < 3 })), 320)),
+  ...[["3", "Ankommen", "0  Ankommen, Ziele, Eingangsdiagnose", "still, allein"], ["8", "Vorwissen", "1  Fehlertext: Abstimmung nach Ständen und Köpfen", "allein, dann Schüler am Presenter"], ["12", "Informieren", "2  Text, Quelle, Zeitstrahl, Bild, Merksatz", "allein, Folie, abschreiben"], ["15", "Verarbeiten", "3  Karikatur: Modell, Partnerarbeit, Sicherung", "Lehrkraft, zu zweit"], ["6", "Auswerten", "4  Berater-Frage, Ziele prüfen, Ausblick", "allein, gezielte Abfrage"], ["1", "—", "Puffer", "—"]].map((r) => row(r.map((v, i) => tc(v, [800, 2300, 4300, 2806][i], { bold: i < 3 })), 320)),
 ]));
 
 d.push(h3("Redeanteil und Ansagen"));
 d.push(table([3300, 6906], [
   ["Gespräch ersetzen", "Antworten schriftlich, per Folie, gezielte Abfrage (2 bis 3 Personen, kurz). Kein offenes Plenumsgespräch."],
-  ["Partnerarbeit", "Nur in Phase 3 (Karikatur) und beim Partnercheck in Phase 1. Wörtlich: „Flüsterstufe. Nur dein Partner hört dich.“"],
+  ["Partnerarbeit", "Nur in Phase 3 (Karikatur). In Phase 1 führen Schüler am Presenter. Wörtlich: „Flüsterstufe. Nur dein Partner hört dich.“"],
   ["Stichproben", "Im Heft mitlesen bei 4 bis 6 Personen unterschiedlichen Niveaus, unbenotet, getrennt von den mündlichen Noten. Im Wechsel mit der gezielten Abfrage."],
   ["Kreide-Kette", "Nur, wenn Zeit ist, beim Zeitstrahl (12 Schülerinnen und Schüler). Sonst Partnervergleich und Folie."],
 ].map(([a, b]) => row([tc(a, 3300, { fill: LIGHT, bold: true }), tc(b, 6906)], 340))));
@@ -111,17 +111,17 @@ d.push(step("kommt an, schreibt leise", {
 }));
 
 // Phase 1
-d.push(phase("1", "Fehlertext: Abstimmung wiederholen", 6, "AVIVA: Vorwissen aktivieren"));
-d.push(warum("Nach Ständen und nach Köpfen sicher abrufen: Die Regel erklärt, warum der Dritte Stand handelt (direkt: allein, Partnercheck, Kontrolle per Folie).", "„Der Dritte Stand hat gegen die Regel verloren, aber er gibt nicht auf. Wie reagiert er? Das lest ihr jetzt.“"));
+d.push(phase("1", "Fehlertext: Abstimmung wiederholen", 8, "AVIVA: Vorwissen aktivieren"));
+d.push(warum("Nach Ständen und nach Köpfen sicher abrufen: Die Regel erklärt, warum der Dritte Stand handelt (allein, dann Kontrolle durch Schüler am Presenter). Bewährt in der 8D (Stunde 1, 04.11.): Wenn die Schüler den Presenter bekommen, die Begriffe selbst zeigen und erklären und selbst bestimmen, wer als Nächster dran ist, aktiviert das sehr. Deshalb hier genauso, mit 8 statt 6 Minuten. Die Aufgabe bleibt unbenotet.", "„Der Dritte Stand hat gegen die Regel verloren, aber er gibt nicht auf. Wie reagiert er? Das lest ihr jetzt.“"));
 d.push(sp());
 d.push(step("arbeitet allein, dann zu zweit", {
   say: "Jetzt arbeitet ihr allein. Die Aufgabe steht rechts.",
-  do: ["Folie 4 (Ü1, Fehlertext). 3 Minuten allein im Heft, dann 1 Minute Partnercheck (leise): „Vergleicht und verbessert mit Grün.“ Dann Folie 5 (Lösung, 1 Minute) und Folie 6 (Merkbild „Nach Ständen oder nach Köpfen?“, 1 Minute). Gezielte Abfrage bei 2 bis 3 Personen: „Wie viele Stimmen hat der Dritte Stand nach Ständen? Und nach Köpfen?“ Kein Gespräch."],
+  do: ["Folie 4 (Ü1, Fehlertext). 3 Minuten allein im Heft, Sie gehen durch die Reihen (Heft-Stichprobe, nicht kommentieren). Dann Schüler am Presenter (4 Minuten): Eine zuverlässige Person erhält den Presenter und geht zu Folie 5 (Lösung). Sie liest einen Satz, sagt, was falsch war, und begründet die Korrektur („Satz 1 ist falsch, weil …“). Danach bestimmt sie selbst, wer als Nächste oder Nächster den nächsten Satz erklärt und den Presenter bekommt; jede Person nur einmal. Alle anderen verbessern mit Grün: „Vergleicht und verbessert mit Grün.“ Sie stehen hinten oder seitlich, greifen nur ein, wenn eine Erklärung falsch ist („Stimmt das? Wer ergänzt?“), und loben das Erklären. Dann Folie 6 (Merkbild „Nach Ständen oder nach Köpfen?“, 1 Minute): Eine weitere Person erklärt am Merkbild, wie der Dritte Stand nach Ständen und wie nach Köpfen abschneidet. Kein offenes Gespräch, nur gezielte Abfrage bei Bedarf."],
   extra: [folieBox("4 · Ü1 Fehlertext", [p(t("Ü1 Abstimmung bei den Generalständen", { font: "Cambria", size: 22, bold: true, color: NAVY }), { after: 40 }), bl("1. Bei den Generalständen hat jeder Abgeordnete eine Stimme."), bl("2. Klerus und Adel haben zusammen zwei von drei Stimmen."), bl("3. Der Dritte Stand (Bauern und Bürger) stellt etwa 3 % der Menschen."), bl("4. Bei der Abstimmung nach Köpfen hätte er weniger Gewicht gehabt."), bl("5. Der König erlaubte die Abstimmung nach Köpfen.", { after: 40 }), bl("Aufgabe: Vier Sätze enthalten einen Fehler. Unterstreiche die Fehler und schreibe diese Sätze richtig ins Heft.", { after: 40 }), p([t("Zeit: ", { bold: true, size: 19 }), t("4 Minuten · allein, dann Partnercheck · leise     ", { size: 19 }), t("Fertig? Stift hinlegen.", { size: 19, italics: true })], { after: 0 })]), gapP()],
   sol: "Fehler in 1 (jeder Stand eine Stimme, nicht jeder Abgeordnete), 3 (etwa 97 %), 4 (nach Köpfen mehr Gewicht), 5 (der König lehnte ab). Satz 2 ist richtig. Merkbild: Nach Ständen Klerus Nein, Adel Nein, Dritter Stand Ja = 2 zu 1, abgelehnt. Nach Köpfen Ja 580, Nein 560 = knapp angenommen (Gedankenspiel; 1789 wurde nicht nach Köpfen abgestimmt).",
 }));
 d.push(sp());
-d.push(note("SOLLBRUCHSTELLE", "Läuft die Klasse langsam an, entfällt der Partnercheck, und Folie 5 wird sofort gezeigt (1 Minute gewonnen)."));
+d.push(note("SOLLBRUCHSTELLE", "Dauert das Erklären zu lange, erklären nur drei Personen die Sätze, den vierten Satz und Folie 6 erklären Sie in einer Minute (2 Minuten gewonnen). Der Puffer am Stundenende beträgt nur noch 1 Minute."));
 
 // Phase 2
 d.push(phase("2", "Text, Quelle, Zeitstrahl, Bild, Merksatz", 12, "AVIVA: Informieren"));
@@ -221,7 +221,7 @@ d.push(...bullets([
   "Sieyès: Das Buch sagt, die Kampfschrift wurde 1788 verfasst; erschienen ist sie im Winter 1788/89. Der Text und der Zeitstrahl sagen deshalb „Winter 1788/89“. Das Zitat ist gekürzt.",
   "Zahlen: Das Merkbild nutzt das Gedankenspiel aus Stunde 1 (580 zu 560, nach Ständen 2 zu 1). Das Buch nennt etwa 600 zu je etwa 300 Abgeordneten. Die Zahlen bleiben wie in der 8C-Stunde 1 und in der 8D (Vergleichbarkeit).",
   "Bilder: Die Bilder (Buch S. 111 und S. 113) sind aus dem Scan übernommen und nur für den Unterricht gedacht. Die Zeichnung des Abgeordneten und des Beraters ist selbst gezeichnet, kein historisches Porträt. Die Deutung einzelner Bildelemente („Für die Mühsal geboren“, z. B. Hahn, Tiere) ist nicht sicher, die Erwartungen sind eine Auswahl.",
-  "Zeit: Die Karikatur-Phase hat 15 Minuten, der Puffer 3. Schritt 3 „Beurteilen“ ist mit * markiert.",
+  "Zeit: Die Karikatur-Phase hat 15 Minuten, der Puffer 1 (Vorwissen dauert mit Schülern am Presenter 8 statt 6 Minuten). Schritt 3 „Beurteilen“ ist mit * markiert.",
 ]));
 
 (async () => {
