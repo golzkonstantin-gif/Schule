@@ -290,7 +290,8 @@ Die Lehrkraft möchte das weiterverfolgen, noch ohne Material. Die Satzklammer (
   - Die acht Wörter sind DASS, WEIL, WENN, ALS, OBWOHL, KOMMA, ENDE und NEBENSATZ.
   - Hinweise als Lückensätze aus der Ballade, aus dem Training und zur Regel.
   - * Zusatz: zwei eigene Sätze mit Lösungswörtern, Subjunktion einkreisen und finites Verb unterstreichen.
-- **Rückmeldung der Lehrkraft (Do 5.11.):** *(steht noch aus)*
+- **Rückmeldung der Lehrkraft (Do 5.11.):** „Heute, Donnerstag, war auch gut!“
+- **Hinweis der Lehrkraft (5.11.) zum Kreuzworträtsel:** Gibt es eine Anschlussaufgabe, soll sie als nächster Schritt gekennzeichnet sein, den die Klasse gemeinsam macht. Auf dem Schnipsel stehen dafür Zeilen zum Eintragen. Die Umsetzung wird noch besprochen.
 - **Fr 6.11. geplant: „Paddy Fingal – die Ballade als Ur-Ei“** (Material in `Woche2/`):
   - Präsentation mit 13 Folien, Tafelskript mit Reflexionsteil, Handreichung Polnisch
   - Der Ur-Ei-Schnipsel aus `Woche1/` bleibt unverändert.
@@ -308,7 +309,7 @@ Die Lehrkraft möchte das weiterverfolgen, noch ohne Material. Die Satzklammer (
   - Für Mo 9.11.: Die drei Trainings-Beispiele wiederholen, dann neue Texte den Gattungen zuordnen und begründen, dann Reime nach Schema schreiben.
 - **Rückmeldung der Lehrkraft (Fr 6.11.):** *(steht noch aus)*
 - **Idee der Lehrkraft für Mo 9.11. (Hospitation):** Strophe, Vers und Reimschema wiederholen. Dann schreiben die Schüler selbst Reime nach einem vorgegebenen Schema, themenorientiert und mit Formulierungshilfen. Wird nach Freitag geplant.
-- **Rückmeldung der Lehrkraft (Mi 4.11.):** *(steht noch aus)*
+- **Rückmeldung der Lehrkraft (Mi 4.11.):** „Mittwoch hat sehr gut geklappt!“ Die Konzeption hat sich bewährt: Aufbau und Belegen vor den Aussagen, Aufdeck-Folien, Sprachtraining aus der Ballade heraus.
 
 ### Woche 1: „Paddy Fingal – Lesetechniken“ (Mi 14.10., nach der Leistungskontrolle), „Paddy Fingal gliedern und nacherzählen“ (Do), „Ur-Ei“ (Fr) – AVIVA
 - **Text:** „Paddy Fingal“ (Wilhelm Brandes, LB S. 136 f.). Die Lehrkraft hält die Ballade für den ersten Eindruck für zugänglicher als „John Maynard“, der deshalb erst nach den Herbstferien kommt. Zuerst geht es um den Leseeindruck, den ungefähren Inhalt und die Lesetechniken. LB-Aufgabe 1 ist kein Muss.
