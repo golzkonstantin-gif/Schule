@@ -285,6 +285,10 @@ Die Lehrkraft möchte das weiterverfolgen, noch ohne Material. Die Satzklammer (
     - `Schnipsel_Reime_erkennen_3_Fassungen` mit je einer Seite für Gewichtheben, Judo und Handball (2 pro A4). Der Aufbau ist gleich: 1 Paddy Str. 4, 2 Kreuzreim, 3 umarmender Reim, 4 Paarreim. Sechs neue Strophen sind dazugekommen.
     - Die Präsentation zeigt die Aufdeck-Folien je Nummer mit allen drei Sportarten nebeneinander.
     - Handreichung für S-PL: Fachbegriffe und Reimschema bleiben deutsch (Paarreim aabb usw.), auf Polnisch steht nur, welche Verse sich reimen. Die Übersetzungen der Übungstexte sind entfallen, dafür gibt es eine Wortliste passend zu ihrer Fassung.
+- **Zusatzmaterial (5.11.): Kreuzworträtsel Subjunktionen** zur Wiederholung vom Mittwoch (`Woche2/Schnipsel_Kreuzwortraetsel_Subjunktionen`, 3 pro A4, Lösung auf Seite 2).
+  - Die acht Wörter sind DASS, WEIL, WENN, ALS, OBWOHL, KOMMA, ENDE und NEBENSATZ.
+  - Hinweise als Lückensätze aus der Ballade, aus dem Training und zur Regel.
+  - * Zusatz: zwei eigene Sätze mit Lösungswörtern, Subjunktion einkreisen und finites Verb unterstreichen.
 - **Rückmeldung der Lehrkraft (Do 5.11.):** *(steht noch aus)*
 - **Fr 6.11. geplant: „Paddy Fingal – die Ballade als Ur-Ei“** (Material in `Woche2/`):
   - Präsentation mit 13 Folien, Tafelskript mit Reflexionsteil, Handreichung Polnisch
