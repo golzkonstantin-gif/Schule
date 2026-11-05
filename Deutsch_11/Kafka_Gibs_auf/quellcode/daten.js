@@ -60,12 +60,13 @@ const SATZBAU = {
   s2: { text: TEXT[1], loesung: "Beides: Am Anfang Nebensätze (Als ich …, dass es …, als ich …), danach eine lange Reihe von Hauptsätzen ohne Punkt. Wirkung: Der Satz überstürzt sich wie der Erzähler – Hektik, Schrecken, Verwirrung." },
 };
 
-// Neue Stilmittel: [Begriff, Kernsatz, Beispiel aus dem Text, Test, Wirkung im Text]
+// Neue Stilmittel: [Begriff, Kernsatz, Beispiel aus dem Text (= Lösung Aufgabe 1), Test, Wirkung im Text, Beispiel für die Erklärung (nicht aus dem Text)]
+// Die Erklärbeispiele stammen bewusst nicht aus „Gibs auf!“, damit die Klasse die Stilmittel in Aufgabe 1 selbst findet.
 const STILMITTEL = [
-  ["Wiederholung", "Ein Wort oder eine Wortgruppe wird unmittelbar wiederholt.", "„Gibs auf, gibs auf“", "Steht dasselbe direkt zweimal hintereinander?", "Die Aussage wird verstärkt und endgültig. Es klingt wie ein Abwimmeln – Widerspruch zwecklos."],
-  ["Vergleich", "Zwei Dinge werden mit „wie“ oder „als ob“ verbunden.", "„so wie Leute, die mit ihrem Lachen allein sein wollen“", "Steht ein „wie“ zwischen zwei Bereichen?", "Der Schutzmann wird anschaulich: Er lacht über den Erzähler und will ihn los sein – Spott und Distanz."],
-  ["Rhetorische Frage", "Eine Frage, auf die keine Antwort erwartet wird; sie ist eigentlich eine Aussage.", "„Von mir willst du den Weg erfahren?“", "Lässt sich die Frage in eine Aussage umformen?", "Gemeint ist: „Ausgerechnet von mir? Das ist lächerlich.“ Der Erzähler antwortet trotzdem mit „Ja“ – er hört nur die Sache, nicht den Spott."],
-  ["Ellipse", "Ein Satz ist unvollständig, ein Wort (oft das Verb) fehlt.", "„die Straßen rein und leer“", "Muss ich ein Wort ergänzen, damit der Satz vollständig ist?", "Es fehlt „waren“. Knapp wie ein schneller Blick – leer und still, niemand außer ihm."],
+  ["Wiederholung", "Ein Wort oder eine Wortgruppe wird unmittelbar wiederholt.", "„Gibs auf, gibs auf“", "Steht dasselbe direkt zweimal hintereinander?", "Die Aussage wird verstärkt und endgültig. Es klingt wie ein Abwimmeln – Widerspruch zwecklos.", "„Weiter, weiter, nicht stehen bleiben!“ (Ruf des Trainers)"],
+  ["Vergleich", "Zwei Dinge werden mit „wie“ oder „als ob“ verbunden.", "„so wie Leute, die mit ihrem Lachen allein sein wollen“", "Steht ein „wie“ zwischen zwei Bereichen?", "Der Schutzmann wird anschaulich: Er lacht über den Erzähler und will ihn los sein – Spott und Distanz.", "„Sie kämpfte wie eine Löwin.“"],
+  ["Rhetorische Frage", "Eine Frage, auf die keine Antwort erwartet wird; sie ist eigentlich eine Aussage.", "„Von mir willst du den Weg erfahren?“", "Lässt sich die Frage in eine Aussage umformen?", "Gemeint ist: „Ausgerechnet von mir? Das ist lächerlich.“ Der Erzähler antwortet trotzdem mit „Ja“ – er hört nur die Sache, nicht den Spott.", "„Wer will schon verlieren?“ (= Niemand will verlieren.)"],
+  ["Ellipse", "Ein Satz ist unvollständig, ein Wort (oft das Verb) fehlt.", "„die Straßen rein und leer“", "Muss ich ein Wort ergänzen, damit der Satz vollständig ist?", "Es fehlt „waren“. Knapp wie ein schneller Blick – leer und still, niemand außer ihm.", "„Abpfiff. Null zu zwei.“"],
 ];
 const ALTE_STILMITTEL = [
   ["Parataxe", "Reihung von Hauptsätzen"],

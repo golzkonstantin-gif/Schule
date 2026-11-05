@@ -48,16 +48,16 @@ const bekannt = [
   ["Symbol", "konkreter Gegenstand für etwas Abstraktes", "z. B. Uhr für Zeitdruck"],
 ];
 const stilTabelle = table(mW, [
-  row([kopf("Stilmittel", mW[0]), kopf("So erkennst du es", mW[1]), kopf("Hinweis / Test", mW[2])]),
+  row([kopf("Stilmittel", mW[0]), kopf("So erkennst du es", mW[1]), kopf("Wirkung / Test", mW[2])]),
   ...bekannt.map(([b, e, h]) => row([
     cell(p(t(b, { bold: true, color: NAVY, size: 19 }), { after: 0 }), { w: mW[0], fill: LIGHT }),
     cell(p(t(e, { size: 19 }), { after: 0 }), { w: mW[1] }),
     cell(p(t(h, { size: 18, color: MUTED }), { after: 0 }), { w: mW[2] }),
   ])),
   row([cell(p(t("neu", { bold: true, size: 16, color: RED }), { after: 0 }), { w: W, span: 3, fill: "FDECEA", m: 10 })]),
-  ...D.STILMITTEL.map(([b, kern, , test]) => row([
+  ...D.STILMITTEL.map(([b, kern, , test, , bsp]) => row([
     cell(p(t(b, { bold: true, color: RED, size: 19 }), { after: 0 }), { w: mW[0], fill: LIGHT }),
-    cell(p(t(kern, { size: 19 }), { after: 0 }), { w: mW[1] }),
+    cell([p(t(kern, { size: 19 }), { after: 10 }), p(t("Beispiel: " + bsp, { size: 18, italics: true, color: BLUE }), { after: 0 })], { w: mW[1] }),
     cell(p(t("Test: " + test, { size: 18, color: MUTED }), { after: 0 }), { w: mW[2] }),
   ])),
 ]);

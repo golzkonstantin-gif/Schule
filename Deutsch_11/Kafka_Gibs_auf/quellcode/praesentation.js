@@ -95,14 +95,14 @@ function aufgabe(a, phase, notes, extra) {
 // ===== I: Informieren – neue Stilmittel =====
 for (let k = 0; k < D.STILMITTEL.length; k += 2) {
   const s = base("Neue Stilmittel", { phase: "INFORMIEREN" });
-  D.STILMITTEL.slice(k, k + 2).forEach(([b, kern, bsp, test], i) => {
+  D.STILMITTEL.slice(k, k + 2).forEach(([b, kern, , test, , bsp], i) => {
     const y = 1.2 + i * 3.0;
     s.addShape(pres.shapes.RECTANGLE, { x: 0.5, y, w: 12.3, h: 2.8, fill: { color: WHITE }, line: { color: RED, width: 2.5 } });
     txt(s, [{ text: b + ": ", options: { bold: true, color: RED } }, { text: kern }], { x: 0.8, y: y + 0.12, w: 11.8, h: 1.1 });
     txt(s, [{ text: "Beispiel: ", options: { bold: true, color: BLUE } }, { text: bsp, options: { italic: true, color: BLUE, fontFace: HEAD } }], { x: 0.8, y: y + 1.2, w: 11.8, h: 0.75 });
     txt(s, [{ text: "Test: ", options: { bold: true, color: GREEN } }, { text: test }], { x: 0.8, y: y + 1.95, w: 11.8, h: 0.75 });
   });
-  s.addNotes(k ? "Alle Stilmittel stehen auf dem Arbeitsblatt (Nr. 2), mit den bekannten zur Wiederholung. Wofür? Stilmittel sind Bedeutungsträger: Sie zeigen, wie der Erzähler die Situation erlebt – das braucht ihr für jede Textanalyse." : "Kurz erklären, je ein Beispiel. Typischer Fehler vorab: Nicht jede Frage im Text ist rhetorisch – entscheidend ist, ob eine Antwort erwartet wird.");
+  s.addNotes(k ? "Alle Stilmittel stehen auf dem Arbeitsblatt (Nr. 2), mit den bekannten zur Wiederholung. Wofür? Stilmittel sind Bedeutungsträger: Sie zeigen, wie der Erzähler die Situation erlebt – das braucht ihr für jede Textanalyse." : "Kurz erklären, je ein Beispiel – bewusst nicht aus „Gibs auf!“, die Stellen im Text sucht die Klasse in Aufgabe 1 selbst. Typischer Fehler vorab: Nicht jede Frage im Text ist rhetorisch – entscheidend ist, ob eine Antwort erwartet wird.");
 }
 {
   const s = base("Ich mache vor: Wiederholung", { phase: "INFORMIEREN" });

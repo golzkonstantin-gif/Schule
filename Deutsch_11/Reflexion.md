@@ -19,6 +19,7 @@ Diese Punkte ergänzen die allgemeinen Vorlieben in `CLAUDE.md`. Sie stammen aus
 - Erarbeitung bevorzugt **allein**, danach Unterrichtsgespräch oder Reihengruppen. Partnerarbeit nur, wenn sie wirklich zielführend ist.
 - **Lösungen werden im Unterrichtsgespräch besprochen** und danach auf einer Folie gezeigt.
 - **Kein Gruppenpuzzle bei schweren Texten**, weil Fehler einzelner Experten weitergegeben werden. Stattdessen stellt jede Reihengruppe an der Tafel vor, die anderen ergänzen ihre Matrix, die Lehrkraft korrigiert direkt.
+- **Erklärbeispiele nicht aus dem Text, den die Klasse danach untersucht** (Stand 05.11.): Sonst steht die Lösung schon auf der Merkfolie. Beispiele aus dem Sport oder Alltag nehmen; nur das Vormachen (Modell) darf eine Textstelle sein, die dann aus der Aufgabe herausgenommen wird.
 - Neue Techniken **Schritt für Schritt**: gemeinsam ansehen → allein anwenden → kurz prüfen → erst dann das Nächste. Aufgaben einzeln auf Folien zeigen.
 - **Aufgaben ohne Dopplungen:** Jede Aufgabe hat eine eigene Denkleistung. Was die Analyse schon gefragt hat, wird danach weiterverarbeitet (ordnen, bewerten, übertragen), nicht erneut abgefragt.
 - Rollenspiele **genau kriteriengeleitet**: klarer Auftrag, Kriterien für die Szene, dieselben Kriterien als Beobachtungsbogen. Gespielt wird ohne Unterbrechung, Auswertung danach.
