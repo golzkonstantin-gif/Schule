@@ -70,3 +70,10 @@
 - Wunsch der Lehrkraft: eine Folie zu den Erwartungen im Sinne der Neuen Autorität („Lehrer und Coach, Spaß und Lernen, geht nur mit Mitarbeit“).
 - Umgesetzt als Folie 4 in der Generalstände-Stunde (Phase Ankommen, 1 Minute, kein Gespräch, drei Sätze in Wir-Form: zuhören, leise arbeiten, mitmachen; „Ich bin da und bleibe dran“, bewusst nicht „von euch“ (klang nach oben-unten), nach Neuer Autorität: Haltung der Lehrkraft und gemeinsames Wir). Ankommen dauert damit 4 statt 3 Minuten, der Puffer von 1 Minute entfällt. Folien jetzt 19, Folienverweise im Tafelskript angepasst.
 - Offen: Rückmeldung, ob die drei Erwartungen zur 8D passen und ob die Folie auch in der 8C und in späteren Stunden wiederkehren soll.
+
+### Generalstände (8D, Mi 04.11.) – Rückmeldung der Lehrkraft
+- Material: `Geschichte_8D/Generalstaende/`
+- Was hat funktioniert: Stunde „sehr gut“. Die Folie „Das ist mir wichtig“ half der Klasse zu verstehen, dass die Lehrkraft Bestleistungen will und dass sie nur gemeinsam zu schaffen sind; das hat motiviert. Das Buchstabenrätsel war eine sehr gute Reaktivierung: Die Schüler bekamen den PowerPoint-Presenter, zeigten die gefundenen Begriffe und erklärten sie; sie legten selbst fest, wer den nächsten Begriff findet und beschreibt. Der Zeitstrahl lief sehr gut.
+- Wo hing die Klasse: nicht berichtet.
+- Eigene Beobachtungen (Timing): Bis zum Zeitstrahl geschafft. Die Abstimmung (Ständespiel: drei Anträge, Auswertung, Ü3, Merksatz, Berater-Abschlussfrage) wurde nicht mehr erreicht. Die Schülerführung beim Rätsel (Presenter) dauerte länger als die geplanten 6 Minuten, war aber inhaltlich wertvoll.
+- Nächster Schritt: In 8D Stunde 2 (Mi 11.11.) das Ständespiel an den Anfang setzen und in der Stunde zuerst das, was fehlt (Abstimmung, Auswertung, Berater-Abschlussfrage), dann Nationalversammlung. Offen: Zeit für Stunde 2 entscheiden (Sequenz hat keine Reserve, Wiener Kongress ist mit * schon gestrichen-fähig). Für die 8C (Fr 06.11.): Zeitbudget für Schüler-Präsentationen und Vorwissen großzügiger planen.
