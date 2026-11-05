@@ -47,7 +47,7 @@ d.push(p(t("Ziel: Die Klasse sichert zuerst die Abstimmung nach Ständen und nac
 d.push(h3("Bezug zur Reflexion (Stunde 1, 16.10.)"));
 d.push(...bullets([
   "Stunde 1 lief inhaltlich, der Text mit Zeitstrahl war gut. Rückmeldung: Die Stunde war unterrichtsgesprächslastig, das Schulbeispiel zu abstrakt. Deshalb läuft diese Stunde über Aufträge, schriftliche Antworten und gezielte Abfragen statt Gespräch.",
-  "Die Abstimmung nach Ständen und nach Köpfen sitzt noch nicht sicher. Deshalb wiederholen wir genau das: Fehlertext (Folie 4 und 5) und ein Merkbild (Folie 6).",
+  "Die Abstimmung nach Ständen und nach Köpfen sitzt noch nicht sicher. Deshalb wiederholen wir genau das: Buchstabenrätsel (Folie 4 und 5) und ein Merkbild (Folie 6).",
   "Eine zweite Lehrkraft hospitiert nur. Die Hilfekarten liegen am Pult, die Betreuung der Partnerarbeit liegt allein bei Ihnen.",
 ]));
 
@@ -63,7 +63,7 @@ d.push(table([2600, 7606], [
 d.push(sp());
 d.push(table([800, 2300, 4300, 2806], [
   row([th("Min.", 800), th("AVIVA", 2300), th("Phase", 4300), th("Arbeitsform", 2806)], 320),
-  ...[["3", "Ankommen", "0  Ankommen, Ziele, Eingangsdiagnose", "still, allein"], ["8", "Vorwissen", "1  Fehlertext: Abstimmung nach Ständen und Köpfen", "allein, dann Schüler am Presenter"], ["12", "Informieren", "2  Text, Quelle, Zeitstrahl, Bild, Merksatz", "allein, Folie, abschreiben"], ["15", "Verarbeiten", "3  Karikatur: Modell, Partnerarbeit, Sicherung", "Lehrkraft, zu zweit"], ["6", "Auswerten", "4  Berater-Frage, Ziele prüfen, Ausblick", "allein, gezielte Abfrage"], ["1", "—", "Puffer", "—"]].map((r) => row(r.map((v, i) => tc(v, [800, 2300, 4300, 2806][i], { bold: i < 3 })), 320)),
+  ...[["3", "Ankommen", "0  Ankommen, Ziele, Eingangsdiagnose", "still, allein"], ["8", "Vorwissen", "1  Buchstabenrätsel: Generalstände und Abstimmung", "allein, dann Schüler am Presenter"], ["12", "Informieren", "2  Text, Quelle, Zeitstrahl, Bild, Merksatz", "allein, Folie, abschreiben"], ["15", "Verarbeiten", "3  Karikatur: Modell, Partnerarbeit, Sicherung", "Lehrkraft, zu zweit"], ["6", "Auswerten", "4  Berater-Frage, Ziele prüfen, Ausblick", "allein, gezielte Abfrage"], ["1", "—", "Puffer", "—"]].map((r) => row(r.map((v, i) => tc(v, [800, 2300, 4300, 2806][i], { bold: i < 3 })), 320)),
 ]));
 
 d.push(h3("Redeanteil und Ansagen"));
@@ -85,6 +85,7 @@ d.push(table([4700, 5506], [
 d.push(h3("Material und Vorbereitung"));
 d.push(...bullets([
   "Arbeitsblatt „Der Dritte Stand handelt“ (Text, Quelle von Sieyès, Zeitstrahl): 14 Stück (12 plus 2 Reserve), einseitig.",
+  "Buchstabenrätsel „Generalstände und Abstimmung“: 7 Blatt (zwei Rätsel pro A4, in der Mitte schneiden, ein Rätsel pro Person; Seite 2 ist die Lösung für Sie).",
   "Schnipsel „Karikatur analysieren: Dreischritt“ (Seite 1): 6 Schnipsel, ausschneiden, je einer pro Paar. Hilfekarten Stufe 1 bis 3 (Seite 2): einmal drucken, ausschneiden, am Pult bereitlegen (Hilfe nur auf Nachfrage).",
   "Folien 1 bis 17 (Schrift mindestens 27 Punkt). Das Bild „Für die Mühsal geboren“ (S. 111), das Bild des Ballhausschwurs (S. 113) und die Karikatur zu den drei Ständen aus dem Absolutismus sind auf den Folien. Lehrbuch S. 111, 113 und 116 liegen zur Hand.",
   "Seitentafel: Ziele und Ablauf mit * bei Schritt 3 der Karikatur-Analyse. Mitte der Tafel leer lassen. Kreide, Grün zum Verbessern, Uhr oder Timer.",
@@ -106,22 +107,22 @@ d.push(step("kommt an, schreibt leise", {
     bl("Ich kann erklären, warum sich der Dritte Stand 1789 zur Nationalversammlung erklärte.", { after: 20 }),
     bl("Ich kann erklären, was die Abgeordneten im Ballhausschwur versprachen.", { after: 20 }),
     bl("Ich kann eine Karikatur analysieren: beschreiben, deuten, beurteilen.*", { after: 60 }),
-    bl("A Ankommen · V Abstimmung wiederholen · I Text und Zeitstrahl · V Karikatur (Schritt 3 *) · A Berater-Frage", { after: 0 }),
+    bl("A Ankommen · V Rätsel zur Wiederholung · I Text und Zeitstrahl · V Karikatur (Schritt 3 *) · A Berater-Frage", { after: 0 }),
   ]), gapP()],
 }));
 
 // Phase 1
-d.push(phase("1", "Fehlertext: Abstimmung wiederholen", 8, "AVIVA: Vorwissen aktivieren"));
+d.push(phase("1", "Buchstabenrätsel: Generalstände wiederholen", 8, "AVIVA: Vorwissen aktivieren"));
 d.push(warum("Nach Ständen und nach Köpfen sicher abrufen: Die Regel erklärt, warum der Dritte Stand handelt (allein, dann Kontrolle durch Schüler am Presenter). Bewährt in der 8D (Stunde 1, 04.11.): Wenn die Schüler den Presenter bekommen, die Begriffe selbst zeigen und erklären und selbst bestimmen, wer als Nächster dran ist, aktiviert das sehr. Deshalb hier genauso, mit 8 statt 6 Minuten. Die Aufgabe bleibt unbenotet.", "„Der Dritte Stand hat gegen die Regel verloren, aber er gibt nicht auf. Wie reagiert er? Das lest ihr jetzt.“"));
 d.push(sp());
 d.push(step("arbeitet allein, dann zu zweit", {
   say: "Jetzt arbeitet ihr allein. Die Aufgabe steht rechts.",
-  do: ["Folie 4 (Ü1, Fehlertext). 3 Minuten allein im Heft, Sie gehen durch die Reihen (Heft-Stichprobe, nicht kommentieren). Dann Schüler am Presenter (4 Minuten): Eine zuverlässige Person erhält den Presenter und geht zu Folie 5 (Lösung). Sie liest einen Satz, sagt, was falsch war, und begründet die Korrektur („Satz 1 ist falsch, weil …“). Danach bestimmt sie selbst, wer als Nächste oder Nächster den nächsten Satz erklärt und den Presenter bekommt; jede Person nur einmal. Alle anderen verbessern mit Grün: „Vergleicht und verbessert mit Grün.“ Sie stehen hinten oder seitlich, greifen nur ein, wenn eine Erklärung falsch ist („Stimmt das? Wer ergänzt?“), und loben das Erklären. Dann Folie 6 (Merkbild „Nach Ständen oder nach Köpfen?“, 1 Minute): Eine weitere Person erklärt am Merkbild, wie der Dritte Stand nach Ständen und wie nach Köpfen abschneidet. Kein offenes Gespräch, nur gezielte Abfrage bei Bedarf."],
-  extra: [folieBox("4 · Ü1 Fehlertext", [p(t("Ü1 Abstimmung bei den Generalständen", { font: "Cambria", size: 22, bold: true, color: NAVY }), { after: 40 }), bl("1. Bei den Generalständen hat jeder Abgeordnete eine Stimme."), bl("2. Klerus und Adel haben zusammen zwei von drei Stimmen."), bl("3. Der Dritte Stand (Bauern und Bürger) stellt etwa 3 % der Menschen."), bl("4. Bei der Abstimmung nach Köpfen hätte er weniger Gewicht gehabt."), bl("5. Der König erlaubte die Abstimmung nach Köpfen.", { after: 40 }), bl("Aufgabe: Vier Sätze enthalten einen Fehler. Unterstreiche die Fehler und schreibe diese Sätze richtig ins Heft.", { after: 40 }), p([t("Zeit: ", { bold: true, size: 19 }), t("4 Minuten · allein, dann Partnercheck · leise     ", { size: 19 }), t("Fertig? Stift hinlegen.", { size: 19, italics: true })], { after: 0 })]), gapP()],
-  sol: "Fehler in 1 (jeder Stand eine Stimme, nicht jeder Abgeordnete), 3 (etwa 97 %), 4 (nach Köpfen mehr Gewicht), 5 (der König lehnte ab). Satz 2 ist richtig. Merkbild: Nach Ständen Klerus Nein, Adel Nein, Dritter Stand Ja = 2 zu 1, abgelehnt. Nach Köpfen Ja 580, Nein 560 = knapp angenommen (Gedankenspiel; 1789 wurde nicht nach Köpfen abgestimmt).",
+  do: ["Folie 4 (Ü1, Buchstabenrätsel). Das Blatt liegt vorab auf den Tischen (zwei Rätsel pro A4 geschnitten, 7 Blatt). 3 Minuten allein, Sie gehen durch die Reihen (Heft-Stichprobe, nicht kommentieren). Es müssen nicht alle zehn Wörter gefunden werden. Dann Schüler am Presenter (4 Minuten): Eine zuverlässige Person erhält den Presenter und geht zu Folie 5 (Lösungswörter). Sie zeigt ein gefundenes Wort, erklärt es und sagt, wie es zur Abstimmung bei den Generalständen passt (z. B. „Stände: Jeder Stand hatte eine Stimme, weil …“). Danach bestimmt sie selbst, wer als Nächste oder Nächster das nächste Wort erklärt und den Presenter bekommt; jede Person nur einmal, je zwei Wörter (4 bis 5 Personen). STÄNDEN und KÖPFEN unbedingt erklären lassen. Alle anderen verbessern mit Grün: „Vergleicht und verbessert mit Grün.“ Sie stehen hinten oder seitlich, greifen nur ein, wenn eine Erklärung falsch ist („Stimmt das? Wer ergänzt?“), und loben das Erklären. Dann Folie 6 (Merkbild „Nach Ständen oder nach Köpfen?“, 1 Minute): Eine weitere Person erklärt am Merkbild, wie der Dritte Stand nach Ständen und wie nach Köpfen abschneidet. Kein offenes Gespräch, nur gezielte Abfrage bei Bedarf."],
+  extra: [folieBox("4 · Ü1 Buchstabenrätsel", [p(t("Ü1 Generalstände und Abstimmung", { font: "Cambria", size: 22, bold: true, color: NAVY }), { after: 40 }), bl("1. Finde zu jedem Hinweis das Wort im Gitter."), bl("2. Kreise es ein."), bl("3. Schreibe es hinter den Hinweis."), bl("4. Fertig? Schreibe zu einem Wort einen Satz.", { after: 40 }), p([t("Zeit: ", { bold: true, size: 19 }), t("3 Minuten · allein · leise     ", { size: 19 }), t("Fertig? Stift hinlegen.", { size: 19, italics: true })], { after: 0 })]), gapP()],
+  sol: "Lösungswörter in der Reihenfolge der Hinweise: GENERALSTÄNDE, KLERUS, ADEL, BÜRGER, STÄNDEN, KÖPFEN, STEUERN, VORRECHTE, STAATSBANKROTT, ABGEORDNETE (Lösung mit Fundstellen: Seite 2 der Datei Buchstabenraetsel_Generalstaende_8C.pdf). Merkbild: Nach Ständen Klerus Nein, Adel Nein, Dritter Stand Ja = 2 zu 1, abgelehnt. Nach Köpfen Ja 580, Nein 560 = knapp angenommen (Gedankenspiel; 1789 wurde nicht nach Köpfen abgestimmt).",
 }));
 d.push(sp());
-d.push(note("SOLLBRUCHSTELLE", "Dauert das Erklären zu lange, erklären nur drei Personen die Sätze, den vierten Satz und Folie 6 erklären Sie in einer Minute (2 Minuten gewonnen). Der Puffer am Stundenende beträgt nur noch 1 Minute."));
+d.push(note("SOLLBRUCHSTELLE", "Dauert das Erklären zu lange, erklären nur drei Personen die Wörter, den Rest und Folie 6 erklären Sie in einer Minute (2 Minuten gewonnen). Der Puffer am Stundenende beträgt nur noch 1 Minute."));
 
 // Phase 2
 d.push(phase("2", "Text, Quelle, Zeitstrahl, Bild, Merksatz", 12, "AVIVA: Informieren"));
@@ -205,7 +206,7 @@ d.push(h3("So sieht das Heft am Ende der Stunde aus"));
 d.push(table([2300, 7906], [
   ["Überschrift", "Der Dritte Stand handelt · Datum"],
   ["Eingangsdiagnose", "Meinung „Darf sich das Volk gegen einen König wehren, der allein regiert? Ich finde …, weil …“ (bleibt bis Stunde 11)"],
-  ["Ü1", "Fehlertext: vier verbesserte Sätze (Verbesserungen grün)"],
+  ["Ü1", "Buchstabenrätsel (Blatt eingeklebt), Lösungswörter hinter den Hinweisen als Begriffsspeicher, ein Satz zu einem Wort"],
   ["Arbeitsblatt", "Eingeklebt: Text, Zeitstrahl ausgefüllt, ein Satz zu ALLES mit einer Zahl"],
   ["Merksatz 1", "Nationalversammlung und Ballhausschwur – rot umrahmt"],
   ["Ü3", "Analyse „Für die Mühsal geboren“ (Beschreiben, Deuten, Beurteilen*), mit Grün verbessert"],
@@ -213,7 +214,7 @@ d.push(table([2300, 7906], [
 ].map(([a, b]) => row([tc(a, 2300, { bold: true, fill: LIGHT }), tc(b, 7906)], 340))));
 
 d.push(h3("Nach der Stunde festhalten (Reflexionslog)"));
-d.push(...bullets(["Passten Ziel, Inhalt und Methode zusammen? Wie lief die Zeit? Wie viel echte Lernzeit hatte die Klasse?", "Sitzt die Abstimmung nach Ständen und nach Köpfen jetzt? (Fehlertext, Abfrage)", "Konnten die Paare die Karikatur beschreiben und deuten? Wer brauchte welche Hilfekarte?", "Wie viele nannten in der Abschlussfrage ein Sachargument aus der Stunde? Welche Form trug am besten?", "Rückmeldung der 8D (Stunde 1) und der 8C abgleichen."]));
+d.push(...bullets(["Passten Ziel, Inhalt und Methode zusammen? Wie lief die Zeit? Wie viel echte Lernzeit hatte die Klasse?", "Sitzt die Abstimmung nach Ständen und nach Köpfen jetzt? (Rätsel, Merkbild)", "Konnten die Paare die Karikatur beschreiben und deuten? Wer brauchte welche Hilfekarte?", "Wie viele nannten in der Abschlussfrage ein Sachargument aus der Stunde? Welche Form trug am besten?", "Rückmeldung der 8D (Stunde 1) und der 8C abgleichen."]));
 
 d.push(h3("Zum Prüfen"));
 d.push(...bullets([

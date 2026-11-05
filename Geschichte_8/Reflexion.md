@@ -90,3 +90,8 @@
 - Anlass: In der 8D war die Wiederholung mit Schülern am Presenter sehr aktivierend (Begriffe zeigen und erklären, Reihenfolge selbst bestimmen).
 - Umgesetzt (Entscheidung der Lehrkraft): Phase 1 (Fehlertext) läuft jetzt so: 3 Minuten allein, danach erklären vier Schüler nacheinander je einen Satz am Presenter (Folie 5: falsch, richtig, weil …) und bestimmen jeweils den Nächsten; eine weitere Person erklärt Folie 6 (Merkbild). Alle anderen verbessern mit Grün; der Partnercheck entfällt. Phase 1 dauert 8 statt 6 Minuten, der Puffer schrumpft von 3 auf 1 Minute. Sollbruchstelle: nur drei Personen erklären, den Rest übernimmt die Lehrkraft.
 - Zu beobachten: Wird die Zeit gehalten? Sind die Erklärungen inhaltlich richtig (Stimme je Stand vs. je Kopf)? Bleibt es leise genug?
+
+### Ergänzung 8C Stunde 2 (Fr 06.11.): Buchstabenrätsel statt Fehlertext
+- Auf Wunsch der Lehrkraft wird die Wiederholung als Buchstabenrätsel (Suchsel) gemacht, nicht als Fehlertext. Zehn Wörter aus Stunde 1: GENERALSTÄNDE, KLERUS, ADEL, BÜRGER, STÄNDEN, KÖPFEN, STEUERN, VORRECHTE, STAATSBANKROTT, ABGEORDNETE. Hinweise ohne Nummern, Lösungswort wird hinter den Hinweis geschrieben (wie in der 8D).
+- Ablauf Phase 1 (8 Min.): 3 Minuten allein, 4 Minuten Schüler am Presenter (je zwei Wörter zeigen und erklären, Nächsten selbst bestimmen), 1 Minute Merkbild (Folie 6). STÄNDEN und KÖPFEN sind zu erklären, weil die Abstimmungsregel noch unsicher war.
+- Die Schreiblinien sind kurz; für lange Wörter (STAATSBANKROTT) darf im Heft ergänzt werden.

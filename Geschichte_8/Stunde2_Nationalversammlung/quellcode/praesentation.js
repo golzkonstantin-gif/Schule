@@ -196,39 +196,23 @@ const IMG = "../material/";
   bar(s, [{ text: "Wichtig: ", options: { bold: true } }, { text: "Wir arbeiten konzentriert. Gesprochen wird nach Ansage.", options: {} }]);
 }
 
-// ============ 4 Ü1 Fehlertext ============
+// ============ 4 Ü1 Buchstabenrätsel ============
 {
-  const s = blank("V · Vorwissen aktivieren · Übung 1", "Fehlertext: Abstimmung bei den Generalständen", 1, "Ansage: „Jetzt arbeitet ihr allein. Die Aufgabe steht rechts.“ Vier Sätze enthalten einen Fehler, ein Satz ist richtig. Fehler: 1 (jeder Stand hat eine Stimme, nicht jeder Abgeordnete), 3 (der Dritte Stand stellt etwa 97 %), 4 (nach Köpfen hätte er mehr Gewicht), 5 (der König lehnte ab). Satz 2 ist richtig. Wiederholung der letzten Stunde. Lehrkraft 2 hospitiert nur. Nach 3 Minuten allein (Sie gehen durch die Reihen): Folie 5, Schüler am Presenter. Hinweis: Die Abstimmungsmöglichkeiten nach Ständen und nach Köpfen sind laut Lehrkraft noch nicht sicher.");
-  box(s, 0.6, 1.5, 12.15, 3.55, LIGHT2);
-  const sat = ["Bei den Generalständen hat jeder Abgeordnete eine Stimme.", "Klerus und Adel haben zusammen zwei von drei Stimmen.", "Der Dritte Stand (Bauern und Bürger) stellt etwa 3 % der Menschen.", "Bei der Abstimmung nach Köpfen hätte er weniger Gewicht gehabt.", "Der König erlaubte die Abstimmung nach Köpfen."];
-  sat.forEach((x, i) => {
-    numCircle(s, i + 1, 0.85, 1.7 + i * 0.66, 0.4, NAVY);
-    txt(s, x, { x: 1.5, y: 1.62 + i * 0.66, w: 11.1, h: 0.58, fontFace: HEAD, fontSize: 27, valign: "middle" });
-  });
-  [["1", "Vier Sätze enthalten einen Fehler. Unterstreiche die Fehler."], ["2", "Schreibe diese Sätze richtig ins Heft."]].forEach(([n, x], i) => {
-    numCircle(s, n, 0.85, 5.3 + i * 0.45, 0.38, RED);
-    txt(s, x, { x: 1.5, y: 5.25 + i * 0.45, w: 11.1, h: 0.45, fontSize: 27, bold: true, valign: "middle" });
-  });
-  bar(s, [{ text: "Zeit: ", options: { bold: true } }, { text: "3 Minuten · allein · leise       ", options: {} }, { text: "Fertig? Stift hinlegen.", options: { italic: true, color: ICE } }]);
+  const { s } = taskSlide("V · Vorwissen aktivieren · Übung 1", "Buchstabenrätsel: Generalstände und Abstimmung", ["Finde zu jedem Hinweis das Wort im Gitter.", "Kreise es ein.", "Schreibe es hinter den Hinweis.", "Fertig? Schreibe zu einem Wort einen Satz."], "3 Minuten · allein · leise",
+    "Ansage: „Jetzt arbeitet ihr allein. Die Aufgabe steht rechts.“ Das Rätsel liegt vorab auf den Tischen (Buchstabenraetsel_Generalstaende_8C.pdf, zwei Rätsel pro A4 geschnitten, ein Blatt pro Person). Zu jedem Hinweis gibt es ein Wort (zehn Wörter), die Zahl in Klammern ist die Buchstabenzahl, die Wörter stehen waagerecht oder senkrecht. Wiederholung der Stunde 1, nur Wissen aus Stunde 1. Sie gehen durch die Reihen (Heft-Stichprobe). Nach 3 Minuten: Folie 5, Schüler am Presenter. Hinweis → Lösungswort: Versammlung von 1789 → GENERALSTÄNDE; Erster Stand → KLERUS; Zweiter Stand → ADEL; Dritter Stand: Bauern und … → BÜRGER; Jeder Stand hat eine Stimme: Abstimmung nach … → STÄNDEN; Jeder Abgeordnete hat eine Stimme: nach … → KÖPFEN; Klerus und Adel zahlten kaum … → STEUERN; Sonderrechte → VORRECHTE; Der Staat kann seine Schulden nicht zahlen → STAATSBANKROTT; Vertreter der Stände in Versailles → ABGEORDNETE. Die Lösungswörter bleiben als Begriffsspeicher und werden später wiederholt.");
+  phaseTag(s, 1);
 }
 
-// ============ 5 Lösung Fehlertext ============
+// ============ 5 Lösungswörter Buchstabenrätsel ============
 {
-  const s = blank("V · Vorwissen aktivieren · Kontrolle", "Fehlertext: Lösung", 1, "Ansage: „Jetzt erklärt ihr. Wer den Presenter hat, liest einen Satz, sagt, was falsch war, und begründet. Dann bestimmt ihr, wer als Nächstes dran ist. Alle anderen verbessern mit Grün.“ Die Klasse erklärt vorn, Sie stehen hinten. Jede Person nur einmal, vier Sätze (Satz 2 war richtig). Die korrigierten Stellen stehen grün. Greifen Sie nur ein, wenn eine Erklärung falsch ist. Ca. 4 Minuten. Dauert es zu lange: nur drei Personen erklären, den Rest erklären Sie.");
+  const s = blank("V · Vorwissen aktivieren · Kontrolle", "Buchstabenrätsel: Lösungswörter", 1, "Ansage: „Jetzt erklärt ihr. Wer den Presenter hat, zeigt ein Wort, erklärt es und sagt, wie es zur Abstimmung bei den Generalständen passt. Dann bestimmt ihr, wer als Nächstes dran ist. Alle anderen verbessern mit Grün.“ Die Klasse erklärt vorn, Sie stehen hinten. Jede Person nur einmal (4 bis 5 Personen, je zwei Wörter), ca. 4 Minuten. Greifen Sie nur ein, wenn eine Erklärung falsch ist. Wichtig: STÄNDEN und KÖPFEN erklären lassen (Stimme je Stand oder je Abgeordneter), das ist die Stelle, die in der Parallelklasse noch unsicher war. Dauert es zu lange: nur drei Personen, den Rest erklären Sie.");
   box(s, 0.6, 1.5, 12.15, 4.45, LIGHT2);
-  const G = { bold: true, color: GREEN };
-  const lines = [
-    [{ text: "Bei den Generalständen hat jeder " }, { text: "Stand", options: G }, { text: " eine Stimme." }],
-    [{ text: "Klerus und Adel haben zusammen zwei von drei Stimmen. " }, { text: "(war richtig)", options: { italic: true, color: MUTED } }],
-    [{ text: "Der Dritte Stand (Bauern und Bürger) stellt etwa " }, { text: "97 %", options: G }, { text: " der Menschen." }],
-    [{ text: "Bei der Abstimmung nach Köpfen hätte er " }, { text: "mehr", options: G }, { text: " Gewicht gehabt." }],
-    [{ text: "Der König " }, { text: "lehnte", options: G }, { text: " die Abstimmung nach Köpfen " }, { text: "ab", options: G }, { text: "." }],
-  ];
-  lines.forEach((runs, i) => {
-    numCircle(s, i + 1, 0.85, 1.75 + i * 0.85, 0.4, NAVY);
-    s.addText(runs.map((r) => ({ text: r.text, options: Object.assign({ fontFace: HEAD, fontSize: 27, color: NAVY }, r.options || {}) })), { isTextBox: true, x: 1.5, y: 1.65 + i * 0.85, w: 11.0, h: 0.8, valign: "middle", margin: 0 });
+  const W2 = ["GENERALSTÄNDE", "KLERUS", "ADEL", "BÜRGER", "STÄNDEN", "KÖPFEN", "STEUERN", "VORRECHTE", "STAATSBANKROTT", "ABGEORDNETE"];
+  W2.forEach((w, i) => {
+    const col = Math.floor(i / 5), row = i % 5;
+    txt(s, w, { x: 0.8 + col * 6.0, y: 1.62 + row * 0.86, w: 5.8, h: 0.7, fontFace: HEAD, fontSize: 27, bold: true, color: NAVY, valign: "middle" });
   });
-  bar(s, [{ text: "Jetzt: ", options: { bold: true } }, { text: "Du erklärst: falsch, richtig, weil … Alle verbessern mit Grün.", options: {} }]);
+  bar(s, [{ text: "Jetzt: ", options: { bold: true } }, { text: "Du erklärst ein Wort. Alle verbessern mit Grün.", options: {} }]);
 }
 
 // ============ 6 Zwei Regeln ============
