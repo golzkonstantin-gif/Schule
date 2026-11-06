@@ -314,8 +314,8 @@ Die Lehrkraft möchte das weiterverfolgen, noch ohne Material. Die Satzklammer (
   - Lösung zum Projizieren.
   - Lückendiktat (2 pro A4) für Schwächere und S-PL, mit einer polnischen Zeile.
 - **Puffer-/Einstiegsfolie: Wiederholung Subjunktionen** (`Woche2/Folie_Wiederholung_Subjunktionen`): 2 Satzpaare (+ * drittes) mit weil/dass/nachdem verbinden, Subjunktion einkreisen, finites Verb unterstreichen; Lösungsfolie im Farbcode (Modalverb grün, Hilfsverb rot), Regel: finites Verb am Ende des Nebensatzes.
-- **Rückmeldung der Lehrkraft (Fr 6.11.):** „Hat mir ganz gut gefallen.“ Die Fragen auf den Schnipseln waren aber **etwas uneindeutig**. Künftig jede Aufgabe so formulieren, dass nur eine Antwort passt: genau sagen, welche Strophe gemeint ist, wie viele Belege gesucht sind und in welcher Form geantwortet wird.
-  - Außerdem soll **mehr farbige Tinte gespart** werden (siehe `CLAUDE.md`, Gestaltung).
+- **Rückmeldung der Lehrkraft (Fr 6.11.):** „Hat mir ganz gut gefallen.“ Die Fragen auf dem **Ur-Ei-Schnipsel** waren aber **etwas uneindeutig**. Künftig jede Aufgabe so formulieren, dass nur eine Antwort passt: genau sagen, welche Strophe gemeint ist, wie viele Belege gesucht sind und in welcher Form geantwortet wird.
+  - Außerdem soll **mehr farbige Tinte gespart** werden: keine farbigen Hintergründe oder großen Farbflächen, farbige Schrift und Rahmen sind in Ordnung (siehe `CLAUDE.md`, Gestaltung).
 - **Idee der Lehrkraft für Mo 9.11. (Hospitation):** Strophe, Vers und Reimschema wiederholen. Dann schreiben die Schüler selbst Reime nach einem vorgegebenen Schema, themenorientiert und mit Formulierungshilfen. Wird nach Freitag geplant.
 - **Rückmeldung der Lehrkraft (Mi 4.11.):** „Mittwoch hat sehr gut geklappt!“ Die Konzeption hat sich bewährt: Aufbau und Belegen vor den Aussagen, Aufdeck-Folien, Sprachtraining aus der Ballade heraus.
 
