@@ -307,6 +307,7 @@ Die Lehrkraft möchte das weiterverfolgen, noch ohne Material. Die Satzklammer (
     - Zielcheck: C ist jetzt Str. 9, V. 43–44 (Dramatik), dazu der Prüfstein D: Str. 4, V. 16–17, Epik oder Dramatik?
     - Die Präsentation hat 14 Folien. Handreichung, Lernwortschatz und Vokabelliste sind angepasst.
   - Für Mo 9.11.: Die drei Trainings-Beispiele wiederholen, dann neue Texte den Gattungen zuordnen und begründen, dann Reime nach Schema schreiben.
+- **Zusatz Fr 6.11.:** Ur-Ei-Schnipsel mit Lösung (`Schnipsel_Ballade_Ur-Ei_Paddy_Fingal_Loesung`) und zweisprachig für S-PL (`Handreichung_Polnisch_06-11_Ur-Ei_Schnipsel`, Begriffe deutsch, Hinweise je Nummer auf Polnisch).
 - **Rückmeldung der Lehrkraft (Fr 6.11.):** *(steht noch aus)*
 - **Idee der Lehrkraft für Mo 9.11. (Hospitation):** Strophe, Vers und Reimschema wiederholen. Dann schreiben die Schüler selbst Reime nach einem vorgegebenen Schema, themenorientiert und mit Formulierungshilfen. Wird nach Freitag geplant.
 - **Rückmeldung der Lehrkraft (Mi 4.11.):** „Mittwoch hat sehr gut geklappt!“ Die Konzeption hat sich bewährt: Aufbau und Belegen vor den Aussagen, Aufdeck-Folien, Sprachtraining aus der Ballade heraus.
