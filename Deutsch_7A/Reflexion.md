@@ -308,6 +308,11 @@ Die Lehrkraft möchte das weiterverfolgen, noch ohne Material. Die Satzklammer (
     - Die Präsentation hat 14 Folien. Handreichung, Lernwortschatz und Vokabelliste sind angepasst.
   - Für Mo 9.11.: Die drei Trainings-Beispiele wiederholen, dann neue Texte den Gattungen zuordnen und begründen, dann Reime nach Schema schreiben.
 - **Zusatz Fr 6.11.:** Ur-Ei-Schnipsel mit Lösung (`Schnipsel_Ballade_Ur-Ei_Paddy_Fingal_Loesung`) und zweisprachig für S-PL (`Handreichung_Polnisch_06-11_Ur-Ei_Schnipsel`, Begriffe deutsch, Hinweise je Nummer auf Polnisch).
+- **Puffer-Material (6.11.): Diktat „Paddy Fingal“** (`Woche2/Diktat_Paddy_Fingal`), falls die Klasse zu schnell ist.
+  - Der Text erzählt die Ballade im Präteritum nach. Schwerpunkte: Komma zwischen Haupt- und Nebensatz, das/dass, starke Verben im Präteritum, wörtliche Rede.
+  - Lehrerblatt mit Sinnschritten und Ablauf: Kommas werden nicht angesagt, danach Selbstkorrektur mit Grün.
+  - Lösung zum Projizieren.
+  - Lückendiktat (2 pro A4) für Schwächere und S-PL, mit einer polnischen Zeile.
 - **Rückmeldung der Lehrkraft (Fr 6.11.):** *(steht noch aus)*
 - **Idee der Lehrkraft für Mo 9.11. (Hospitation):** Strophe, Vers und Reimschema wiederholen. Dann schreiben die Schüler selbst Reime nach einem vorgegebenen Schema, themenorientiert und mit Formulierungshilfen. Wird nach Freitag geplant.
 - **Rückmeldung der Lehrkraft (Mi 4.11.):** „Mittwoch hat sehr gut geklappt!“ Die Konzeption hat sich bewährt: Aufbau und Belegen vor den Aussagen, Aufdeck-Folien, Sprachtraining aus der Ballade heraus.
