@@ -116,6 +116,7 @@ Die folgenden Vorlieben und Reflexionen gelten für die gesamte weitere Planung,
 - Formate: Word (`.docx`) für Skripte/Arbeitsblätter, PowerPoint (`.pptx`) für Folien, jeweils zusätzlich als PDF.
 - Farben: Navy `1E2761` (Grundfarbe), Hellblau `F4F7FD`/`EAF0FA` (Flächen), Grau `5B6B8C` (Nebentext).
 - Farbcode Verbformen (Grammatik Deutsch; gilt für Tafel, Heft, Folien): Hilfsverb haben/sein/werden **rot** `D9534F`, Modalverb **grün** `2E9E6B`, Partizip II **gelb** `E8A33D`, Infinitiv **blau** `3F7CC4`, Verbesserungen im Heft grün.
+- **Farbige Tinte sparen (Stand 6.11.).** Gedrucktes Material (Schnipsel, Arbeitsblätter, Handreichungen) möglichst schwarz-weiß gestalten: keine farbig gefüllten Flächen oder Kopfzeilen, Farbe höchstens sparsam. Auf Folien bleibt Farbe erlaubt.
 - Schrift: Überschriften Cambria, Text Calibri. Folien 16:9 im Stil der bisherigen Präsentationen.
 - Die Dateien werden per Skript erzeugt; die Skripte liegen jeweils im Unterordner `quellcode/` (Node: `docx`, `pptxgenjs`). Änderungen am Material im Skript machen und neu erzeugen.
 
