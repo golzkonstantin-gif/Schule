@@ -108,7 +108,7 @@ Stand 27.10. Offene Abschlussfrage mit mehreren guten Antworten, bevorzugt im Be
 | Stunde | Du bist Berater von … | Er fragt dich … |
 |---|---|---|
 | 1 | König Ludwig XVI. | Soll ich erlauben, dass der Dritte Stand (Bauern und Bürger) nach Köpfen abstimmt? (so geplant) |
-| 2 | einem Abgeordneten des Dritten Standes (Bauern und Bürger) | Draußen stehen Soldaten. Wenn ich schwöre, kann ich verhaftet werden, auch meine Familie ist in Gefahr. Soll ich trotzdem schwören? |
+| 2 | deinem Freund, der auch Bauer ist | Die Abgeordneten des Dritten Standes (Bauern und Bürger) wollen eine Verfassung. Soll ich mich ihnen anschließen? Ich habe doch genug mit der Ernte zu tun. |
 | 3 | einem Adligen | Soll ich auf meine Vorrechte verzichten? |
 | 4 | der Nationalversammlung | Wer soll wählen dürfen? |
 | 6 | Ludwig XVI. | Soll ich aus Paris fliehen? |

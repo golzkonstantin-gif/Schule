@@ -183,7 +183,7 @@ const IMG = "../material/";
 // ============ 3 Ablauf ============
 {
   const s = blank("Ablauf", "So arbeiten wir heute", undefined, "Ablauf zeigen. Die Kreise oben rechts zeigen die Phase: A V I V A. Der Stern * bedeutet: wird eventuell nicht mehr geschafft (Beurteilen der Karikatur).");
-  const ph = [["A", "Ankommen", "Ziele", "3 Min."], ["V", "Vorwissen", "Abstimmung", "8 Min."], ["I", "Informieren", "Text, Zeitstrahl", "12 Min."], ["V", "Verarbeiten", "Karikatur", "15 Min."], ["A", "Auswerten", "Berater-Frage", "6 Min."]];
+  const ph = [["A", "Ankommen", "Ziele", "3 Min."], ["V", "Vorwissen", "Rätsel", "8 Min."], ["I", "Informieren", "Text, Zeitstrahl", "12 Min."], ["V", "Verarbeiten", "Karikatur", "15 Min."], ["A", "Auswerten", "Rat an Freund", "6 Min."]];
   ph.forEach(([l, n, x, m], i) => {
     const xx = 0.6 + i * 2.45;
     box(s, xx, 1.9, 2.3, 3.6, i % 2 ? LIGHT : LIGHT2);
@@ -328,15 +328,15 @@ const IMG = "../material/";
   bar(s, [{ text: "Jetzt: ", options: { bold: true } }, { text: "Vergleiche mit deiner Analyse und verbessere mit Grün.", options: {} }]);
 }
 
-// ============ 15 Abschlussfrage Berater ============
+// ============ 15 Abschlussfrage Freund (Bauer) ============
 {
-  const s = blank("A · Auswerten", "Abschlussfrage: Du bist Berater", 4, "Ansage: „Stifte liegen. Ihr hört nur zu. Das ist die letzte Aufgabe. Jetzt arbeitet ihr allein. Die Aufgabe steht rechts.“ Zehn Sekunden denken, dann schreiben. Es gibt mehrere gute Antworten, geprüft wird die Begründung: eine Position, ein Sachargument aus der Stunde, ein „weil“. Erwartung (Auswahl, keine Musterlösung): SCHWÖREN: Die Abgeordneten vertreten fast alle Menschen (Sieyès: ALLES); wenn alle schwören, kann der König nicht alle verhaften; wer jetzt nachgibt, dem bleibt alles beim Alten; ohne Verfassung entscheidet der König weiter allein; Hunger und Steuern der Menschen. NICHT SCHWÖREN: Die Familie ist in Gefahr; Gewalt vermeiden; allein ist man leicht zu verhaften; später verhandeln. Zwischenlösung (schwören, aber Familie in Sicherheit bringen) ist begründbar. Historisch schworen fast alle Abgeordneten. Das Risiko macht die Frage persönlich: Es steht etwas auf dem Spiel. Form nach Verlauf: Blitzlicht (je eine Stimme „schwören“, eine „nicht schwören“, gezielt aufgerufen), schriftlich mit Vorlesen oder Berater-Duell zu zweit. Stichprobe: bei 4 bis 6 Heften mitlesen, nicht kommentieren (unbenotet). Die Figuren sind Zeichnungen, keine historischen Porträts.");
-  s.addImage({ path: IMG + "abgeordneter.png", x: 0.55, y: 1.45, w: 2.9, h: 4.19 });
-  txt(s, "Abgeordneter", { x: 0.55, y: 5.6, w: 2.9, h: 0.4, fontFace: HEAD, fontSize: 27, bold: true, align: "center" });
+  const s = blank("A · Auswerten", "Abschlussfrage: Erkläre es deinem Freund", 4,"Ansage: „Stifte liegen. Ihr hört nur zu. Das ist die letzte Aufgabe. Jetzt arbeitet ihr allein. Die Aufgabe steht rechts.“ Zehn Sekunden denken, dann schreiben. Es gibt mehrere gute Antworten, geprüft wird die Begründung: eine Position, ein Sachargument aus der Stunde, ein „weil“. Der Freund ist selbst Bauer, es geht um einen Rat unter Freunden, nicht um Gefahr. Erwartung (Auswahl, keine Musterlösung): ANSCHLIESSEN: Der Dritte Stand (Bauern und Bürger) sind fast alle Menschen (Sieyès: ALLES); die Bauern tragen Steuern und Abgaben, Klerus und Adel zahlen kaum; gemeinsam sind sie stark, ihre Vertreter bilden die Nationalversammlung; mit einer Verfassung entscheidet der König nicht mehr allein; wer abseits steht, hat keine Stimme. ABWARTEN: Die Ernte und die Familie brauchen Zeit und Kraft; es ist unklar, ob der König nachgibt; Veränderungen dauern lange; man kann die Vertreter erst beobachten. Zwischenlösung (die Beschwerden mitunterschreiben, aber weiterarbeiten) ist begründbar. Form nach Verlauf: Blitzlicht (je eine Stimme „anschließen“, eine „abwarten“, gezielt aufgerufen), schriftlich mit Vorlesen oder Rat-Duell zu zweit. Transfer später: Das Muster „Erkläre deinem Freund, warum …“ funktioniert in jeder Epoche (Wahlen, Widerstand, Beitritt zu einer Bewegung). Stichprobe: bei 4 bis 6 Heften mitlesen, nicht kommentieren (unbenotet). Die Figuren sind Zeichnungen, keine historischen Porträts.");
+  s.addImage({ path: IMG + "bauer.png", x: 0.55, y: 1.45, w: 2.9, h: 4.19 });
+  txt(s, "Dein Freund", { x: 0.55, y: 5.6, w: 2.9, h: 0.4, fontFace: HEAD, fontSize: 27, bold: true, align: "center" });
   bubble(s, 4.0, 1.5, 8.75, 1.95, WHITE, NAVY, "left", 2.5);
-  txt(s, "„Draußen stehen Soldaten. Wenn ich schwöre, kann ich verhaftet werden, auch meine Familie ist in Gefahr. Soll ich trotzdem schwören?“", { x: 4.3, y: 1.5, w: 8.2, h: 1.95, fontFace: HEAD, fontSize: 26, bold: true, color: NAVY, valign: "middle" });
+  txt(s, "„Die Abgeordneten des Dritten Standes (Bauern und Bürger) wollen eine Verfassung. Soll ich mich ihnen anschließen? Ich habe doch genug mit der Ernte zu tun.“", { x: 4.3, y: 1.5, w: 8.2, h: 1.95, fontFace: HEAD, fontSize: 26, bold: true, color: NAVY, valign: "middle" });
   bubble(s, 4.0, 3.75, 7.1, 1.6, "FDF1D8", GOLD, "right", 4.55);
-  txt(s, "Dein Rat:  „Ich rate dir, … , weil …“", { x: 4.3, y: 3.75, w: 6.6, h: 1.6, fontFace: HEAD, fontSize: 26, bold: true, color: NAVY, valign: "middle" });
+  txt(s, "Du erklärst:  „Ich rate dir, …, weil …“", { x: 4.3, y: 3.75, w: 6.6, h: 1.6, fontFace: HEAD, fontSize: 26, bold: true, color: NAVY, valign: "middle" });
   s.addImage({ path: IMG + "berater.png", x: 11.75, y: 3.4, w: 1.3, h: 1.8 });
   txt(s, "Du", { x: 11.75, y: 5.2, w: 1.3, h: 0.4, fontFace: HEAD, fontSize: 27, bold: true, align: "center" });
   [["Position", 2.1], ["Sachargument", 3.2], ["„weil“", 1.9]].reduce((xx, [lab, ww], i) => {

@@ -95,3 +95,7 @@
 - Auf Wunsch der Lehrkraft wird die Wiederholung als Buchstabenrätsel (Suchsel) gemacht, nicht als Fehlertext. Zehn Wörter aus Stunde 1: GENERALSTÄNDE, KLERUS, ADEL, BÜRGER, STÄNDEN, KÖPFEN, STEUERN, VORRECHTE, STAATSBANKROTT, ABGEORDNETE. Hinweise ohne Nummern, Lösungswort wird hinter den Hinweis geschrieben (wie in der 8D).
 - Ablauf Phase 1 (8 Min.): 3 Minuten allein, 4 Minuten Schüler am Presenter (je zwei Wörter zeigen und erklären, Nächsten selbst bestimmen), 1 Minute Merkbild (Folie 6). STÄNDEN und KÖPFEN sind zu erklären, weil die Abstimmungsregel noch unsicher war.
 - Die Schreiblinien sind kurz; für lange Wörter (STAATSBANKROTT) darf im Heft ergänzt werden.
+
+### Änderung der Abschlussfrage 8C Stunde 2 (6.11.)
+- Rückmeldung der Lehrkraft: Das Beispiel mit Soldaten und Gefahr für die Familie ist nicht sinnvoll; es fingiert, dass man Gefahr in Kauf nehmen müsste, und wäre für andere Epochen (1. und 2. Weltkrieg) dysfunktional. Die Frage soll reflektieren und transferierbar sein.
+- Neu (Wunsch der Lehrkraft): „Erkläre deinem Freund, der auch Bauer ist, warum er sich anschließen sollte.“ Der Freund fragt, ob er sich den Abgeordneten des Dritten Standes (Bauern und Bürger) anschließen soll („Ich habe doch genug mit der Ernte zu tun“). Satzanfang „Ich rate dir, …, weil …“. Mehrere gute Antworten (anschließen oder abwarten). Neue Zeichnung „Dein Freund“ (Bauer). Folie 15, Tafelskript und Sequenz angepasst; in `CLAUDE.md` als Regel festgehalten.

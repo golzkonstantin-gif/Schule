@@ -54,7 +54,7 @@ d.push(...bullets([
 d.push(h3("Kopf der Planung"));
 d.push(table([2600, 7606], [
   ["Ziel (Ich kann …)", "… erklären, warum sich der Dritte Stand (Bauern und Bürger) 1789 zur Nationalversammlung erklärte. … erklären, was die Abgeordneten im Ballhausschwur versprachen. … eine Karikatur analysieren: beschreiben, deuten, beurteilen.*"],
-  ["Prüfaufgabe: Woran erkenne ich es?", "Zeitstrahl ausgefüllt, Merksatz im Heft (Ziel 1 und 2). Kurzanalyse der Karikatur „Für die Mühsal geboren“ mit Dreischritt (Ziel 3). Abschlussfrage im Berater-Format (mit persönlichem Risiko)."],
+  ["Prüfaufgabe: Woran erkenne ich es?", "Zeitstrahl ausgefüllt, Merksatz im Heft (Ziel 1 und 2). Kurzanalyse der Karikatur „Für die Mühsal geboren“ mit Dreischritt (Ziel 3). Abschlussfrage „Erkläre es deinem Freund (Bauer)“, Rat mit Begründung."],
   ["Mindestziel", "Ziel 1 und 2 und die Schritte 1 und 2 der Karikatur-Analyse. Alles mit * (Schritt 3 „Beurteilen“) nur bei Zeit; er kann in Stunde 3 wiederholt werden. „Auswerten“ bleibt immer."],
   ["Beitrag zur Reihe", "Stunde 2 von 11 (Sequenz Französische Revolution). Der Dritte Stand wird handelnde Kraft, der Streit um die Abstimmung führt zur Nationalversammlung. Gelenk zu Stunde 3: Der König zieht Soldaten zusammen, in Paris wächst die Angst (Bastille). Die Karikatur-Methode wird in Stunde 7 an „Robespierre als Henker“ wiederholt."],
   ["Vorgehen", "Direkt bei der neuen Methode (Karikatur, Modell laut denken), indirekt beim Text und beim Zeitstrahl (Selbsterarbeitung), angeleitet in der Partnerarbeit mit Hilfekarten. Direkt oder indirekt wird je Phase entschieden."],
@@ -63,7 +63,7 @@ d.push(table([2600, 7606], [
 d.push(sp());
 d.push(table([800, 2300, 4300, 2806], [
   row([th("Min.", 800), th("AVIVA", 2300), th("Phase", 4300), th("Arbeitsform", 2806)], 320),
-  ...[["3", "Ankommen", "0  Ankommen, Ziele, Eingangsdiagnose", "still, allein"], ["8", "Vorwissen", "1  Buchstabenrätsel: Generalstände und Abstimmung", "allein, dann Schüler am Presenter"], ["12", "Informieren", "2  Text, Quelle, Zeitstrahl, Bild, Merksatz", "allein, Folie, abschreiben"], ["15", "Verarbeiten", "3  Karikatur: Modell, Partnerarbeit, Sicherung", "Lehrkraft, zu zweit"], ["6", "Auswerten", "4  Berater-Frage, Ziele prüfen, Ausblick", "allein, gezielte Abfrage"], ["1", "—", "Puffer", "—"]].map((r) => row(r.map((v, i) => tc(v, [800, 2300, 4300, 2806][i], { bold: i < 3 })), 320)),
+  ...[["3", "Ankommen", "0  Ankommen, Ziele, Eingangsdiagnose", "still, allein"], ["8", "Vorwissen", "1  Buchstabenrätsel: Generalstände und Abstimmung", "allein, dann Schüler am Presenter"], ["12", "Informieren", "2  Text, Quelle, Zeitstrahl, Bild, Merksatz", "allein, Folie, abschreiben"], ["15", "Verarbeiten", "3  Karikatur: Modell, Partnerarbeit, Sicherung", "Lehrkraft, zu zweit"], ["6", "Auswerten", "4  Rat an den Freund, Ziele prüfen, Ausblick", "allein, gezielte Abfrage"], ["1", "—", "Puffer", "—"]].map((r) => row(r.map((v, i) => tc(v, [800, 2300, 4300, 2806][i], { bold: i < 3 })), 320)),
 ]));
 
 d.push(h3("Redeanteil und Ansagen"));
@@ -107,7 +107,7 @@ d.push(step("kommt an, schreibt leise", {
     bl("Ich kann erklären, warum sich der Dritte Stand 1789 zur Nationalversammlung erklärte.", { after: 20 }),
     bl("Ich kann erklären, was die Abgeordneten im Ballhausschwur versprachen.", { after: 20 }),
     bl("Ich kann eine Karikatur analysieren: beschreiben, deuten, beurteilen.*", { after: 60 }),
-    bl("A Ankommen · V Rätsel zur Wiederholung · I Text und Zeitstrahl · V Karikatur (Schritt 3 *) · A Berater-Frage", { after: 0 }),
+    bl("A Ankommen · V Rätsel zur Wiederholung · I Text und Zeitstrahl · V Karikatur (Schritt 3 *) · A Rat an den Freund", { after: 0 }),
   ]), gapP()],
 }));
 
@@ -195,11 +195,11 @@ d.push(sp());
 d.push(step("arbeitet allein", {
   say: "Stifte liegen. Ihr hört nur zu. Das ist die letzte Aufgabe. Jetzt arbeitet ihr allein. Die Aufgabe steht rechts.",
   do: [
-    "Folie 15 (3 Minuten): Abschlussfrage mit Zeichnung (Abgeordneter mit Sprechblase, Berater „Du“): „Du bist Berater eines Abgeordneten des Dritten Standes (Bauern und Bürger). Er sagt: Draußen stehen Soldaten. Wenn ich schwöre, kann ich verhaftet werden, auch meine Familie ist in Gefahr. Soll ich trotzdem schwören?“ Rat im Heft: „Ich rate dir, …, weil …“. Es gibt mehrere gute Antworten, geprüft werden Position, ein Sachargument aus der Stunde und ein „weil“. Das Risiko (Verhaftung, Familie) macht die Frage persönlich, damit etwas auf dem Spiel steht. Erst zehn Sekunden denken, dann schreiben.",
-    "Form nach Verlauf wählen: (a) Blitzlicht: je eine Stimme „schwören“ und eine „nicht schwören“ gezielt aufrufen, kein Kommentar. (b) Schriftlich, dann zwei bis drei Sätze vorlesen, Heft-Stichprobe bei 4 bis 6 Personen. (c) Berater-Duell zu zweit: A rät dafür, B dagegen, leise. Unbenotet.",
+    "Folie 15 (3 Minuten): Abschlussfrage mit Zeichnung („Dein Freund“, Bauer, mit Sprechblase, „Du“ erklärst): „Dein Freund ist auch Bauer und sagt: Die Abgeordneten des Dritten Standes (Bauern und Bürger) wollen eine Verfassung. Soll ich mich ihnen anschließen? Ich habe doch genug mit der Ernte zu tun. Erkläre ihm, was du ihm rätst.“ Im Heft: „Ich rate dir, …, weil …“. Es gibt mehrere gute Antworten (anschließen oder abwarten), geprüft werden Position, ein Sachargument aus der Stunde und ein „weil“. Es steht etwas auf dem Spiel, weil es ein Rat unter Freunden ist und die Schüler selbst abwägen (Ernte und Alltag gegen Mitsprache), ohne erfundene Bedrohung. Erst zehn Sekunden denken, dann schreiben.",
+    "Form nach Verlauf wählen: (a) Blitzlicht: je eine Stimme „anschließen“ und eine „abwarten“ gezielt aufrufen, kein Kommentar. (b) Schriftlich, dann zwei bis drei Sätze vorlesen, Heft-Stichprobe bei 4 bis 6 Personen. (c) Rat-Duell zu zweit: A rät zum Anschließen, B zum Abwarten, leise. Unbenotet.",
     "Folie 16 (30 Sekunden, still): Haben wir die Ziele erreicht? Keine Antworten ins Plenum. Folie 17 (30 Sekunden): Ausblick auf die Bastille.",
   ],
-  sol: "Mögliche Argumente (Auswahl, keine Musterlösung). Schwören: Die Abgeordneten vertreten fast alle Menschen (Sieyès: ALLES); wenn alle schwören, kann der König nicht alle verhaften; wer jetzt nachgibt, dem bleibt alles beim Alten; ohne Verfassung entscheidet der König weiter allein; Hunger und Steuern der Menschen. Nicht schwören: Die Familie ist in Gefahr; Gewalt vermeiden; allein ist man leicht zu verhaften; später verhandeln. Zwischenlösung (schwören, aber die Familie in Sicherheit bringen) ist begründbar. Historisch schworen fast alle Abgeordneten. Kriterien: Position, ein Sachargument aus der Stunde, ein „weil“.",
+  sol: "Mögliche Argumente (Auswahl, keine Musterlösung). Anschließen: Der Dritte Stand (Bauern und Bürger) ist fast die ganze Bevölkerung (Sieyès: ALLES); die Bauern tragen die Steuern und Abgaben, Klerus und Adel kaum; gemeinsam sind sie stark; mit einer Verfassung entscheidet der König nicht mehr allein; wer abseits steht, hat keine Stimme. Abwarten: Ernte und Familie brauchen Kraft und Zeit; unklar, ob der König nachgibt; Veränderungen dauern; erst beobachten, was die Vertreter erreichen. Zwischenlösung (die Forderungen unterstützen, aber weiterarbeiten) ist begründbar. Transfer später: „Erkläre deinem Freund, warum …“ in anderen Epochen. Kriterien: Position, ein Sachargument aus der Stunde, ein „weil“.",
 }));
 
 d.push(h3("So sieht das Heft am Ende der Stunde aus"));
@@ -221,7 +221,7 @@ d.push(...bullets([
   "Daten und Abläufe (17. und 20. Juni, Sieyès, Soldaten und Entlassung des Finanzministers Anfang Juli) stammen aus dem Lehrbuch (S. 112/113) und aus meinem Wissen. Bitte gegen das Buch lesen. Das Buch nennt für die Nationalversammlung den 20. Juni, die Zeitleiste im Buch den 17. Juni. Wir folgen der Zeitleiste.",
   "Sieyès: Das Buch sagt, die Kampfschrift wurde 1788 verfasst; erschienen ist sie im Winter 1788/89. Der Text und der Zeitstrahl sagen deshalb „Winter 1788/89“. Das Zitat ist gekürzt.",
   "Zahlen: Das Merkbild nutzt das Gedankenspiel aus Stunde 1 (580 zu 560, nach Ständen 2 zu 1). Das Buch nennt etwa 600 zu je etwa 300 Abgeordneten. Die Zahlen bleiben wie in der 8C-Stunde 1 und in der 8D (Vergleichbarkeit).",
-  "Bilder: Die Bilder (Buch S. 111 und S. 113) sind aus dem Scan übernommen und nur für den Unterricht gedacht. Die Zeichnung des Abgeordneten und des Beraters ist selbst gezeichnet, kein historisches Porträt. Die Deutung einzelner Bildelemente („Für die Mühsal geboren“, z. B. Hahn, Tiere) ist nicht sicher, die Erwartungen sind eine Auswahl.",
+  "Bilder: Die Bilder (Buch S. 111 und S. 113) sind aus dem Scan übernommen und nur für den Unterricht gedacht. Die Zeichnungen (Freund als Bauer, Berater) sind selbst gezeichnet, kein historisches Porträt. Die Deutung einzelner Bildelemente („Für die Mühsal geboren“, z. B. Hahn, Tiere) ist nicht sicher, die Erwartungen sind eine Auswahl.",
   "Zeit: Die Karikatur-Phase hat 15 Minuten, der Puffer 1 (Vorwissen dauert mit Schülern am Presenter 8 statt 6 Minuten). Schritt 3 „Beurteilen“ ist mit * markiert.",
 ]));
 
