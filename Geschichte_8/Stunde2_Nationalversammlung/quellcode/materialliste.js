@@ -22,6 +22,7 @@ const DW = [550, 3500, 1700, 4456];
 const druck = [
   ["Buchstabenrätsel „Generalstände und Abstimmung“ (Seite 1: zwei Rätsel pro A4)", "7 Blatt, in der Mitte schneiden (14 Rätsel, 12 + 2 Reserve)", "Buchstabenraetsel_Generalstaende_8C.pdf, Seite 2 = Lösung für dich, vorab auf die Tische legen"],
   ["Arbeitsblatt „Der Dritte Stand handelt“ (Text, Quelle von Sieyès, Zeitstrahl)", "14 (12 + 2 Reserve), einseitig A4", "Arbeitsblatt_Der_Dritte_Stand_handelt.pdf, vorab auf die Tische legen"],
+  ["Schnipsel „Abschlussfrage: Erkläre es deinem Freund“ (drei pro A4)", "5 Blatt, in 3 Schnipsel schneiden (14 Schnipsel, 12 + 2 Reserve)", "Schnipsel_Abschlussfrage_Rat_an_den_Freund.pdf, erst in Phase 4 austeilen"],
   ["Schnipsel „Karikatur analysieren: Dreischritt“ (Seite 1)", "1 Blatt, 6 Schnipsel ausschneiden, je einer pro Paar", "Schnipsel_Karikatur_Dreischritt_und_Hilfekarten.pdf, Seite 1"],
   ["Hilfekarten Stufe 1 bis 3 (Seite 2)", "1 Blatt, ausschneiden, am Pult bereitlegen", "Gleiche Datei, Seite 2. Hilfe nur auf Nachfrage"],
 ];

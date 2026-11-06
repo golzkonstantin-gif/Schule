@@ -86,6 +86,7 @@ d.push(h3("Material und Vorbereitung"));
 d.push(...bullets([
   "Arbeitsblatt „Der Dritte Stand handelt“ (Text, Quelle von Sieyès, Zeitstrahl): 14 Stück (12 plus 2 Reserve), einseitig.",
   "Buchstabenrätsel „Generalstände und Abstimmung“: 7 Blatt (zwei Rätsel pro A4, in der Mitte schneiden, ein Rätsel pro Person; Seite 2 ist die Lösung für Sie).",
+  "Schnipsel „Abschlussfrage: Erkläre es deinem Freund“: 5 Blatt (drei Schnipsel pro A4, 14 Schnipsel, 12 + 2 Reserve), ausschneiden, erst in Phase 4 austeilen. Enthält Frage, Satzanfänge (Position, Argument, Zwischenlösung) und fünf Schreiblinien.",
   "Schnipsel „Karikatur analysieren: Dreischritt“ (Seite 1): 6 Schnipsel, ausschneiden, je einer pro Paar. Hilfekarten Stufe 1 bis 3 (Seite 2): einmal drucken, ausschneiden, am Pult bereitlegen (Hilfe nur auf Nachfrage).",
   "Folien 1 bis 17 (Schrift mindestens 27 Punkt). Das Bild „Für die Mühsal geboren“ (S. 111), das Bild des Ballhausschwurs (S. 113) und die Karikatur zu den drei Ständen aus dem Absolutismus sind auf den Folien. Lehrbuch S. 111, 113 und 116 liegen zur Hand.",
   "Seitentafel: Ziele und Ablauf mit * bei Schritt 3 der Karikatur-Analyse. Mitte der Tafel leer lassen. Kreide, Grün zum Verbessern, Uhr oder Timer.",
@@ -195,7 +196,7 @@ d.push(sp());
 d.push(step("arbeitet allein", {
   say: "Stifte liegen. Ihr hört nur zu. Das ist die letzte Aufgabe. Jetzt arbeitet ihr allein. Die Aufgabe steht rechts.",
   do: [
-    "Folie 15 (3 Minuten): Abschlussfrage mit Zeichnung („Dein Freund“, Bauer, mit Sprechblase, „Du“ erklärst): „Dein Freund ist auch Bauer und sagt: Die Abgeordneten des Dritten Standes (Bauern und Bürger) wollen eine Verfassung. Soll ich mich ihnen anschließen? Ich habe doch genug mit der Ernte zu tun. Erkläre ihm, was du ihm rätst.“ Im Heft: „Ich rate dir, …, weil …“. Es gibt mehrere gute Antworten (anschließen oder abwarten), geprüft werden Position, ein Sachargument aus der Stunde und ein „weil“. Es steht etwas auf dem Spiel, weil es ein Rat unter Freunden ist und die Schüler selbst abwägen (Ernte und Alltag gegen Mitsprache), ohne erfundene Bedrohung. Erst zehn Sekunden denken, dann schreiben.",
+    "Folie 15 (3 Minuten): Abschlussfrage mit Zeichnung („Dein Freund“, Bauer, mit Sprechblase, „Du“ erklärst): „Dein Freund ist auch Bauer und sagt: Die Abgeordneten des Dritten Standes (Bauern und Bürger) wollen eine Verfassung. Soll ich mich ihnen anschließen? Ich habe doch genug mit der Ernte zu tun. Erkläre ihm, was du ihm rätst.“ Auf dem Schnipsel (Satzanfänge zu Position und Argument, fünf Schreiblinien; Schnipsel erst jetzt austeilen, Stifte liegen bis zur Ansage) oder im Heft: „Ich rate dir, …, weil …“. Es gibt mehrere gute Antworten (anschließen oder abwarten), geprüft werden Position, ein Sachargument aus der Stunde und ein „weil“. Es steht etwas auf dem Spiel, weil es ein Rat unter Freunden ist und die Schüler selbst abwägen (Ernte und Alltag gegen Mitsprache), ohne erfundene Bedrohung. Erst zehn Sekunden denken, dann schreiben.",
     "Form nach Verlauf wählen: (a) Blitzlicht: je eine Stimme „anschließen“ und eine „abwarten“ gezielt aufrufen, kein Kommentar. (b) Schriftlich, dann zwei bis drei Sätze vorlesen, Heft-Stichprobe bei 4 bis 6 Personen. (c) Rat-Duell zu zweit: A rät zum Anschließen, B zum Abwarten, leise. Unbenotet.",
     "Folie 16 (30 Sekunden, still): Haben wir die Ziele erreicht? Keine Antworten ins Plenum. Folie 17 (30 Sekunden): Ausblick auf die Bastille.",
   ],
@@ -206,7 +207,7 @@ d.push(h3("So sieht das Heft am Ende der Stunde aus"));
 d.push(table([2300, 7906], [
   ["Überschrift", "Der Dritte Stand handelt · Datum"],
   ["Eingangsdiagnose", "Meinung „Darf sich das Volk gegen einen König wehren, der allein regiert? Ich finde …, weil …“ (bleibt bis Stunde 11)"],
-  ["Ü1", "Buchstabenrätsel (Blatt eingeklebt), Lösungswörter hinter den Hinweisen als Begriffsspeicher, ein Satz zu einem Wort"],
+  ["Abschluss", "Schnipsel „Erkläre es deinem Freund“ eingeklebt (Position, Argument, weil)"], ["Ü1", "Buchstabenrätsel (Blatt eingeklebt), Lösungswörter hinter den Hinweisen als Begriffsspeicher, ein Satz zu einem Wort"],
   ["Arbeitsblatt", "Eingeklebt: Text, Zeitstrahl ausgefüllt, ein Satz zu ALLES mit einer Zahl"],
   ["Merksatz 1", "Nationalversammlung und Ballhausschwur – rot umrahmt"],
   ["Ü3", "Analyse „Für die Mühsal geboren“ (Beschreiben, Deuten, Beurteilen*), mit Grün verbessert"],
