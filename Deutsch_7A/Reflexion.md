@@ -311,9 +311,9 @@ Die Lehrkraft möchte das weiterverfolgen, noch ohne Material. Die Satzklammer (
 - **Puffer-Material (6.11.): Diktat „Paddy Fingal“** (`Woche2/Diktat_Paddy_Fingal`), falls die Klasse zu schnell ist.
   - Der Text erzählt die Ballade im Präteritum nach. Schwerpunkte: Komma zwischen Haupt- und Nebensatz, das/dass, starke Verben im Präteritum, wörtliche Rede.
   - Lehrerblatt mit Sinnschritten und Ablauf: Kommas werden nicht angesagt, danach Selbstkorrektur mit Grün.
-- **Puffer-/Einstiegsfolie: Wiederholung Subjunktionen** (`Woche2/Folie_Wiederholung_Subjunktionen`): 2 Satzpaare (+ * drittes) mit weil/dass/nachdem verbinden, Subjunktion einkreisen, finites Verb unterstreichen; Lösungsfolie im Farbcode (Modalverb grün, Hilfsverb rot), Regel: finites Verb am Ende des Nebensatzes.
   - Lösung zum Projizieren.
   - Lückendiktat (2 pro A4) für Schwächere und S-PL, mit einer polnischen Zeile.
+- **Puffer-/Einstiegsfolie: Wiederholung Subjunktionen** (`Woche2/Folie_Wiederholung_Subjunktionen`): 2 Satzpaare (+ * drittes) mit weil/dass/nachdem verbinden, Subjunktion einkreisen, finites Verb unterstreichen; Lösungsfolie im Farbcode (Modalverb grün, Hilfsverb rot), Regel: finites Verb am Ende des Nebensatzes.
 - **Rückmeldung der Lehrkraft (Fr 6.11.):** *(steht noch aus)*
 - **Idee der Lehrkraft für Mo 9.11. (Hospitation):** Strophe, Vers und Reimschema wiederholen. Dann schreiben die Schüler selbst Reime nach einem vorgegebenen Schema, themenorientiert und mit Formulierungshilfen. Wird nach Freitag geplant.
 - **Rückmeldung der Lehrkraft (Mi 4.11.):** „Mittwoch hat sehr gut geklappt!“ Die Konzeption hat sich bewährt: Aufbau und Belegen vor den Aussagen, Aufdeck-Folien, Sprachtraining aus der Ballade heraus.
