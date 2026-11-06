@@ -309,6 +309,7 @@ Die Lehrkraft möchte das weiterverfolgen, noch ohne Material. Die Satzklammer (
   - Für Mo 9.11.: Die drei Trainings-Beispiele wiederholen, dann neue Texte den Gattungen zuordnen und begründen, dann Reime nach Schema schreiben.
 - **Zusatz Fr 6.11.:** Ur-Ei-Schnipsel mit Lösung (`Schnipsel_Ballade_Ur-Ei_Paddy_Fingal_Loesung`) und zweisprachig für S-PL (`Handreichung_Polnisch_06-11_Ur-Ei_Schnipsel`, Begriffe deutsch, Hinweise je Nummer auf Polnisch).
 - **Puffer-Material (6.11.): Diktat „Paddy Fingal“** (`Woche2/Diktat_Paddy_Fingal`), falls die Klasse zu schnell ist.
+- **Puffer-/Einstiegsfolie: Wiederholung Subjunktionen** (`Woche2/Folie_Wiederholung_Subjunktionen`): 2 Satzpaare (+ * drittes) mit weil/dass/nachdem verbinden, Subjunktion einkreisen, finites Verb unterstreichen; Lösungsfolie im Farbcode (Modalverb grün, Hilfsverb rot), Regel: finites Verb am Ende des Nebensatzes.
   - Der Text erzählt die Ballade im Präteritum nach. Schwerpunkte: Komma zwischen Haupt- und Nebensatz, das/dass, starke Verben im Präteritum, wörtliche Rede.
   - Lehrerblatt mit Sinnschritten und Ablauf: Kommas werden nicht angesagt, danach Selbstkorrektur mit Grün.
   - Lösung zum Projizieren.
