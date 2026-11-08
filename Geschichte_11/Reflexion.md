@@ -75,6 +75,12 @@
 - Material: `Wiederholung_Kleisthenes_Reform/` (12 Folien ≥ 27 pt, Quellcode in `quellcode/`): Leitfrage → Ausgangslage (Gegenden als Blöcke, Peisistratos) → Schritt 1 Dorf (Demos) → 2 Bezirk (Trittys, 3 × 10) → 3 Los (je 1 Bezirk aus Stadt, Küste, Binnenland = 1 Phyle) → 4 zehn Phylen → 5 Rat und Heer → Folge für Thrasymachos → Treppe Dorf–Bezirk–Phyle–Rat → 5 Prüffragen mit Lösung. Sprechtext und Prüffragen je Schritt in den Notizen.
 - Rückmeldung der Lehrkraft: *(steht noch aus)*
 
+### Perikles – Herrschaft des Volkes oder eines Mannes? (Einzelstunde, geplant)
+- Material: `Stunde_Perikles/` (20 Folien ≥ 27 pt, Fragenblatt 2 × A5 + Hilfekarten mit Fundstellen, Handreichung, Quellcode in `quellcode/`). Grundlage: Lehrbuch S. 17 f. (Perserkriege, Themistokles, Ephialtes, Perikles) – letztes Material zum Demokratisierungsprozess.
+- Methode auf Wunsch der Lehrkraft: **klassische Textarbeit (Lesen + Fragen)** – 8 Fragen in Stichworten ins Heft, Frage 1 vorgemacht, Fundstellen als Hilfekarten, Lösung über Folie.
+- Planungsentscheidungen: Kleisthenes-Wiederholung am Anfang (Prüffragen + Treppe), Begriffe Stratege und Diäten vorab, Daumenabfrage „Volk oder ein Mann?“ und Aha mit Thukydides, Zeitleiste 508 – 487 – 462 als Sicherung, Abschlussaufgabe „Bei uns herrscht in Wahrheit nur einer – Perikles. Hat er recht?“ (nie kürzen); Frage 8 mit *.
+- Rückmeldung der Lehrkraft: *(steht noch aus)*
+
 ## Hospitationsfeedback (gesammelt)
 
 *(noch keine Einträge)*

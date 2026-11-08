@@ -52,6 +52,14 @@ Erprobt in Geschichte 11: **Entscheidungsfälle** („Bürgeramt Athen“, sehr 
 - **Perikles (Geschichte 11):** Diamond Nine „Was machte die Demokratie unter Perikles aus?“; Aha danach mit Thukydides („dem Namen nach eine Demokratie, in Wirklichkeit die Herrschaft des ersten Mannes“, im Lehrbuchscan S. 17).
 - **Französische Revolution (Geschichte 8C/8D):** Textpuzzle zum Verlauf 1789, Strukturlegetechnik zur Ständegesellschaft, Rätselkette vor Test 2.
 
+## Klassische Textarbeit
+
+| Methode | So geht's | Passt gut für |
+|---|---|---|
+| **Lesen + Fragen** | 6–8 Fragen in Textreihenfolge, Antworten in Stichworten ins Heft; eine Frage vormachen (Signalwörter „weil“, „da“), Fundstellen als Hilfekarten, Lösung über Folie | Darstellungstexte mit vielen Einzelschritten (Perikles, S. 17 f.); Methodenwechsel nach spielerischen Formen |
+
+Erprobt in Geschichte 11: „Perikles – Herrschaft des Volkes oder eines Mannes?“ (Rückmeldung folgt). Mit einer Urteilsfrage verbinden (Daumenabfrage vorher, Zitat als Aha), damit es nicht beim Abarbeiten bleibt.
+
 ## Bei der Planung beachten
 
 - Methode **vormachen** (ein Beispiel laut denkend), dann erst Gruppenarbeit.
