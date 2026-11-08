@@ -317,6 +317,13 @@ Die Lehrkraft möchte das weiterverfolgen, noch ohne Material. Die Satzklammer (
 - **Rückmeldung der Lehrkraft (Fr 6.11.):** „Hat mir ganz gut gefallen.“ Die Fragen auf dem **Ur-Ei-Schnipsel** waren aber **etwas uneindeutig**. Künftig jede Aufgabe so formulieren, dass nur eine Antwort passt: genau sagen, welche Strophe gemeint ist, wie viele Belege gesucht sind und in welcher Form geantwortet wird.
   - Außerdem soll **mehr farbige Tinte gespart** werden: keine farbigen Hintergründe oder großen Farbflächen, farbige Schrift und Rahmen sind in Ordnung (siehe `CLAUDE.md`, Gestaltung).
 - **Idee der Lehrkraft für Mo 9.11. (Hospitation):** Strophe, Vers und Reimschema wiederholen. Dann schreiben die Schüler selbst Reime nach einem vorgegebenen Schema, themenorientiert und mit Formulierungshilfen. Wird nach Freitag geplant.
+- **Mo 9.11. geplant (Hospitation, Einzelstunde, Beamer): „Balladen – alles im Griff?“** (Material in `Woche3/`):
+  - **Entscheidungen der Lehrkraft:** Reime selbst schreiben und John Maynard sind gestrichen, ebenso Blitzlesen. Ablauf: Leseband mit Ich-Du-Wir-Würfeln (eigener Leseband-Text) → Kreuzworträtsel zum ganzen Thema Balladen → Wiederholung Subjunktionen mit einer neuen Methode (gewählt: Fehleranalyse im Chat).
+  - **Ziel:** „Ich kann die Merkmale einer Ballade benennen und Nebensätze mit Subjunktion richtig schreiben.“
+  - **Ablauf (AVIVA):** Ankommen (2) · Leseband (10) · Ü1 Kreuzworträtsel, hierarchisch Ballade → Gattungen → Merkmale (8) · Ü1 Nr. 2 als gemeinsamer nächster Schritt: „Paddy Fingal ist eine Ballade, weil …“ (5) · Informieren: Regel am eigenen weil-Satz wiederentdecken (3) · Ü2 Fehler im Chat (der Schotte und sein Bruder, genau ein Fehler pro Nachricht, K oder V) mit Aufdeck-Folien (11) · Zielcheck (6).
+  - **Material:** Präsentation (14 Folien), Tafelskript mit Reflexionsteil, Schnipsel Kreuzworträtsel (A4 quer, 2 pro Blatt, Lösung), Handreichung Polnisch für S-PL. Druckmaterial erstmals ohne Farbflächen (Tinte sparen). Vokabelliste um „der Würfel · würfeln“ und „der Dialog“ ergänzt.
+- **Rückmeldung der Lehrkraft (Mo 9.11.):** *(steht noch aus)*
+- **Hospitationsfeedback (Mo 9.11.):** *(steht noch aus)*
 - **Rückmeldung der Lehrkraft (Mi 4.11.):** „Mittwoch hat sehr gut geklappt!“ Die Konzeption hat sich bewährt: Aufbau und Belegen vor den Aussagen, Aufdeck-Folien, Sprachtraining aus der Ballade heraus.
 
 ### Woche 1: „Paddy Fingal – Lesetechniken“ (Mi 14.10., nach der Leistungskontrolle), „Paddy Fingal gliedern und nacherzählen“ (Do), „Ur-Ei“ (Fr) – AVIVA
