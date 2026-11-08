@@ -42,9 +42,9 @@ const slide = (bg = C.white) => { const s = pres.addSlide(); s.background = { co
 // 2 Ziel und Ablauf
 { const s = slide(); title(s, "Ziel und Ablauf", 0); tag(s, "2 Min.");
   panel(s, D.ziel, 0.45, 1.3, 9.1, 1.6, C.dark, C.white, { bold: true });
-  ["Wiederholung: Kleisthenes", "Zwei neue Begriffe", "Text lesen, Fragen beantworten (Frage 8*)", "Lösung und Zeitleiste", "Abschlussaufgabe"].forEach((t, i) =>
+  ["Wiederholung: Kleisthenes", "Zwei neue Begriffe", "Text lesen, Fragen beantworten", "Lösung und Zeitleiste", "Abschlussaufgabe"].forEach((t, i) =>
     txt(s, (i + 1) + "  " + t, { x: 0.6, y: 3.0 + i * 0.47, w: 9, h: 0.47, valign: "middle" }));
-  num(s); s.addNotes("0–2 Min. Ziel vorlesen (steht auch an der Seitentafel). „Heute ist das letzte Stück auf dem Weg zur Demokratie dran – und am Ende entscheidet ihr: Hat 430 v. Chr. wirklich das Volk regiert?“ * = nur bei Zeit."); }
+  num(s); s.addNotes("0–2 Min. Ziel vorlesen (steht auch an der Seitentafel). „Heute ist das letzte Stück auf dem Weg zur Demokratie dran – und am Ende entscheidet ihr: Hat 430 v. Chr. wirklich das Volk regiert?“ Frage 8 bei Zeitnot weglassen."); }
 
 // 3–5 Wiederholung Kleisthenes
 [false, true].forEach(solved => { const s = slide(); title(s, solved ? "Lösung" : "Wiederholung: Kleisthenes", 1); tag(s, solved ? "Lösung" : "3 Min.", solved ? C.gold : C.dark, solved ? C.dark : C.white);
@@ -92,13 +92,13 @@ const slide = (bg = C.white) => { const s = pres.addSlide(); s.background = { co
 
 // 10 Auftrag
 { const s = slide(); title(s, "Lesen und beantworten", 3); tag(s, "16 Min.");
-  steps(s, ["Lies den Text (Zeile 1–34).", "Beantworte Fragen 2–7 in Stichworten im Heft.", "Fertig? Frage 8*.", "Fest? Hand heben – ich komme zu dir.", "Letzte 3 Minuten: mit dem Nachbarn vergleichen."], 1.35, 0.75);
+  steps(s, ["Lies den Text (Zeile 1–34).", "Beantworte Fragen 2–8 in Stichworten im Heft.", "Du kommst nicht weiter? Hand heben – ich komme zu dir.", "Letzte 3 Minuten: mit dem Nachbarn vergleichen."], 1.35, 0.85);
   num(s); s.addNotes("14–30 Min. Indirekt: Einzelarbeit mit dem Textblatt, Fragen auf dem Fragenkärtchen . Fragen auch auf den Folien 11–13 an der Wand. Umhergehen, im Heft mitlesen und individuell helfen: Hilfeblatt (Fundstelle → Impuls → Satzanfang); Stolpersteine in der Handreichung. Nach 13 Min.: „Noch 3 Minuten – jetzt vergleicht ihr zu zweit.“"); }
 
 // 11–12 Fragen an der Wand
 [[1, 4], [4, 6], [6, 8]].forEach(([a, b]) => { const s = slide(); title(s, "Die Fragen", 3); tag(s, (a + 1) + "–" + b);
   D.fragen.slice(a, b).forEach(([q], i) => { const y = 1.3 + i * 1.25;
-    dot(s, a + i + 1, 0.45, y + 0.05); txt(s, q + (a + i + 1 === 8 ? " *" : ""), { x: 1.1, y, w: 8.45, h: 1.1, valign: "middle" }); });
+    dot(s, a + i + 1, 0.45, y + 0.05); txt(s, q, { x: 1.1, y, w: 8.45, h: 1.1, valign: "middle" }); });
   num(s); s.addNotes("Arbeitsgrundlage an die Wand, solange gearbeitet wird."); });
 
 // 13–14 Lösung

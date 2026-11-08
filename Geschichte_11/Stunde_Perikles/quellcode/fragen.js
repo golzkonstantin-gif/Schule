@@ -10,9 +10,9 @@ const R = (t, o = {}) => new TextRun({ text: t, font: o.font || "Calibri", size:
 const P = (runs, o = {}) => new Paragraph({ spacing: { after: o.after ?? 0, before: o.before ?? 0 }, indent: o.indent, children: Array.isArray(runs) ? runs : [R(runs, o)] });
 const card = () => new TableCell({ width: { size: HW, type: WidthType.DXA }, borders: { top: dash, bottom: dash, left: dash, right: dash }, margins: { top: 200, bottom: 120, left: 260, right: 260 }, children: [
   P("FRAGEN ZUM TEXT · STICHWORTE INS HEFT", { bold: true, size: 16, color: C.terra, after: 140 }),
-  ...D.fragen.map(([q], i) => P([R((i + 1) + "  ", { bold: true, color: C.terra, font: "Cambria", size: 26 }), R(q + (i === 7 ? " *" : ""), { size: 24 }),
+  ...D.fragen.map(([q], i) => P([R((i + 1) + "  ", { bold: true, color: C.terra, font: "Cambria", size: 26 }), R(q, { size: 24 }),
     ...(i === 0 ? [R("  (Beispiel)", { size: 15, italics: true, color: C.muted })] : [])], { after: 200, indent: { left: 340, hanging: 340 } })),
-  P("* nur wenn du fertig bist · Fest? Hand heben.", { size: 18, italics: true, color: C.muted, before: 20 }),
+  P("Du kommst nicht weiter? Hand heben – ich komme zu dir.", { size: 18, italics: true, color: C.muted, before: 20 }),
 ] });
 const children = [new Table({ columnWidths: [HW, HW], width: { size: W, type: WidthType.DXA },
   rows: [0, 1].map(() => new TableRow({ cantSplit: true, height: { value: 7700, rule: HeightRule.EXACT }, children: [card(), card()] })) })];

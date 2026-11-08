@@ -13,7 +13,7 @@ const cell = (t, i, o = {}) => new TableCell({ width: { size: cw[i], type: Width
   borders: { top: line, left: line, right: line, bottom: o.head ? thick : line }, children: [P(t, o)] });
 const head = new TableRow({ tableHeader: true, children: ["Frage", "Stufe 1: Fundstelle", "Stufe 2: Impuls", "Stufe 3: Satzanfang", "Lösung (Stichwort)"].map((t, i) => cell(t, i, { head: true, bold: true, size: 21 })) });
 const rows = D.fragen.map(([q, z, , k, imp, satz], i) => new TableRow({ cantSplit: true, children: [
-  cell([R((i + 1) + (i === 7 ? "*" : "") + "  ", { bold: true, color: C.terra, font: "Cambria", size: 21 }), R(q, { size: 21 })], 0),
+  cell([R((i + 1) + "  ", { bold: true, color: C.terra, font: "Cambria", size: 21 }), R(q, { size: 21 })], 0),
   cell(z, 1, { bold: true, size: 24, color: C.terra }), cell("„" + imp + "“", 2, { size: 21 }), cell(satz, 3, { size: 21, italics: true }), cell(k, 4, { size: 21, bold: true })] }));
 const children = [
   P("NUR FÜR DIE LEHRKRAFT · BEIM UMHERGEHEN", { bold: true, size: 16, color: C.terra, after: 30 }),
