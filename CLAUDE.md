@@ -86,6 +86,8 @@ Vorbild: Stunde „Bürgeramt Athen“ (`Geschichte_11/Stunde_Buergeramt_Athen/`
 - **Konkrete Arbeitsaufträge** auf den Folien: nummerierte Schritte, Satzbausteine, Zeitangabe.
 - **Nach jeder Aufgabe eine Lösungsfolie.**
 - **Lösungen nicht auf Schülerkarten** (sonst wird umgedreht); Lösungskarten bleiben am Pult.
+- **Gestufte Hilfen individuell durch die Lehrkraft** (Stand 8.11.): keine Hilfekarten zum Abholen am Pult (sonst holen sich alle die Karten), sondern ein Hilfeblatt nur für die Lehrkraft (Fundstelle → Impuls → Satzanfang, dazu die Lösung) zum Einsatz beim Umhergehen.
+- **Texte als eigenes Blatt, Fragen getrennt** (Stand 8.11.): Bei Textarbeit den Text (mit Zeilennummern) auf ein Blatt, die Fragen als separate Schnipsel/Kärtchen daneben – die Schüler sollen nicht umdrehen müssen.
 - **Sparsam drucken:** möglichst 2 × A5 auf A4 quer; Ergebnisse im Heft.
 - **Sach- und Werturteil** regelmäßig üben: erst Sachurteil mit Beleg, dann Werturteil mit offengelegtem Maßstab (z. B. Gleichheit, Leistung, Schutz der Schwachen, gleiche Regeln). Satzanfänge als Hilfe, keine fertigen Sätze.
 - **Inhaltlich nah am Lehrbuch** bleiben; keine Inhalte voraussetzen, die die Klasse noch nicht hatte.

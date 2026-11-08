@@ -85,15 +85,15 @@ const slide = (bg = C.white) => { const s = pres.addSlide(); s.background = { co
 // 9 Vormachen
 { const s = slide(); title(s, "So geht's – Frage 1", 2); tag(s, "Lehrkraft");
   panel(s, "1  " + D.fragen[0][0], 0.45, 1.3, 9.1, 0.8, C.sand, C.dark, { bold: true });
-  txt(s, "Im Text: „… da die Athener die Aufständischen mit Schiffen unterstützt hatten.“", { x: 0.45, y: 2.25, w: 9.1, h: 1.0, italic: true, color: C.muted });
+  txt(s, "Im Text (Z. 4f.): „… wollten nun auch Griechenland erobern – zur Strafe für die Hilfe der Athener.“", { x: 0.45, y: 2.25, w: 9.1, h: 1.0, italic: true, color: C.muted });
   panel(s, "Heft: " + D.fragen[0][3], 0.45, 3.35, 9.1, 0.75, C.white, C.dark, { line: C.terra, lw: 2, bold: true });
   panel(s, "Nicht abschreiben – Stichworte in eigenen Worten.", 0.45, 4.35, 9.1, 0.8, C.dark, C.gold, { bold: true });
-  num(s); s.addNotes("12–14 Min. Vormachen, laut denken: „Frage 1 fragt nach dem Grund – ich suche ein ‚weil‘ oder ‚da‘. Im ersten Absatz zu den Perserkriegen steht: Die Perser wollten Griechenland erobern, da die Athener den Aufstand in Kleinasien mit Schiffen unterstützt hatten. Ich schreibe nicht den Satz ab, sondern kurz: Athen half dem Aufstand in Kleinasien.“ Warnung vor dem Fehler vorlesen."); }
+  num(s); s.addNotes("12–14 Min. Vormachen, laut denken: „Frage 1 fragt nach dem Grund – ich suche ein Signalwort wie ‚weil‘, ‚da‘ oder ‚zur Strafe für‘. In Zeile 4 und 5 steht: Die Perser wollten Griechenland erobern – zur Strafe für die Hilfe der Athener. Welche Hilfe? Zeile 3: Athen unterstützte den Aufstand mit Schiffen. Ich schreibe nicht den Satz ab, sondern kurz: Athen half dem Aufstand in Kleinasien.“ Warnung vor dem Fehler vorlesen."); }
 
 // 10 Auftrag
 { const s = slide(); title(s, "Lesen und beantworten", 3); tag(s, "16 Min.");
-  steps(s, ["Lies S. 17 ab „Die Perserkriege“ bis S. 18 oben.", "Beantworte Fragen 2–7 in Stichworten im Heft.", "Fertig? Frage 8* (Randspalte Perikles).", "Fest? Fundstelle als Hilfekarte am Pult.", "Letzte 3 Minuten: mit dem Nachbarn vergleichen."], 1.35, 0.75);
-  num(s); s.addNotes("14–30 Min. Indirekt: Einzelarbeit mit dem Lehrbuch, Fragen auf dem A5-Blatt . Fragen auch auf den Folien 11–13 an der Wand. Umhergehen, im Heft mitlesen; Stolpersteine in der Handreichung. Nach 13 Min.: „Noch 3 Minuten – jetzt vergleicht ihr zu zweit.“"); }
+  steps(s, ["Lies den Text (Zeile 1–34).", "Beantworte Fragen 2–7 in Stichworten im Heft.", "Fertig? Frage 8*.", "Fest? Hand heben – ich komme zu dir.", "Letzte 3 Minuten: mit dem Nachbarn vergleichen."], 1.35, 0.75);
+  num(s); s.addNotes("14–30 Min. Indirekt: Einzelarbeit mit dem Textblatt, Fragen auf dem Fragenkärtchen . Fragen auch auf den Folien 11–13 an der Wand. Umhergehen, im Heft mitlesen und individuell helfen: Hilfeblatt (Fundstelle → Impuls → Satzanfang); Stolpersteine in der Handreichung. Nach 13 Min.: „Noch 3 Minuten – jetzt vergleicht ihr zu zweit.“"); }
 
 // 11–12 Fragen an der Wand
 [[1, 4], [4, 6], [6, 8]].forEach(([a, b]) => { const s = slide(); title(s, "Die Fragen", 3); tag(s, (a + 1) + "–" + b);

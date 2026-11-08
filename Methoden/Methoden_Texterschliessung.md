@@ -56,7 +56,7 @@ Erprobt in Geschichte 11: **Entscheidungsfälle** („Bürgeramt Athen“, sehr 
 
 | Methode | So geht's | Passt gut für |
 |---|---|---|
-| **Lesen + Fragen** | 6–8 Fragen in Textreihenfolge, Antworten in Stichworten ins Heft; eine Frage vormachen (Signalwörter „weil“, „da“), Fundstellen als Hilfekarten, Lösung über Folie | Darstellungstexte mit vielen Einzelschritten (Perikles, S. 17 f.); Methodenwechsel nach spielerischen Formen |
+| **Lesen + Fragen** | Text mit Zeilennummern auf eigenem Blatt, 6–8 Fragen in Textreihenfolge als Kärtchen daneben, Antworten in Stichworten ins Heft; eine Frage vormachen (Signalwörter „weil“, „da“), gestufte Hilfen individuell durch die Lehrkraft (Hilfeblatt), Lösung über Folie | Darstellungstexte mit vielen Einzelschritten (Perikles, S. 17 f.); Methodenwechsel nach spielerischen Formen |
 
 Erprobt in Geschichte 11: „Perikles – Herrschaft des Volkes oder eines Mannes?“ (Rückmeldung folgt). Mit einer Urteilsfrage verbinden (Daumenabfrage vorher, Zitat als Aha), damit es nicht beim Abarbeiten bleibt.
 

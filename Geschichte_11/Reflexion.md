@@ -76,8 +76,9 @@
 - Rückmeldung der Lehrkraft: *(steht noch aus)*
 
 ### Perikles – Herrschaft des Volkes oder eines Mannes? (Einzelstunde, geplant)
-- Material: `Stunde_Perikles/` (20 Folien ≥ 27 pt, Fragenblatt 2 × A5 + Hilfekarten mit Fundstellen, Handreichung, Quellcode in `quellcode/`). Grundlage: Lehrbuch S. 17 f. (Perserkriege, Themistokles, Ephialtes, Perikles) – letztes Material zum Demokratisierungsprozess.
-- Methode auf Wunsch der Lehrkraft: **klassische Textarbeit (Lesen + Fragen)** – 8 Fragen in Stichworten ins Heft, Frage 1 vorgemacht, Fundstellen als Hilfekarten, Lösung über Folie.
+- Material: `Stunde_Perikles/` (20 Folien ≥ 27 pt, **Textblatt** mit eigenem Text nach Lehrbuch S. 17 f. und Zeilennummern – ohne Buch, **Fragenkärtchen** (4 × A6) zum Danebenlegen, **Hilfeblatt nur für die Lehrkraft**, Handreichung, Quellcode in `quellcode/`). Inhalt: Perserkriege, Themistokles, Ephialtes, Perikles – letztes Material zum Demokratisierungsprozess.
+- Änderungen der Lehrkraft (8.11.): ohne Buch, Text auf eigenem Blatt; Fragen als separate Schnipsel, damit nicht umgedreht werden muss; Hilfen nicht am Pult, sondern individuell durch die Lehrkraft (sonst holen sich alle die Karten).
+- Methode auf Wunsch der Lehrkraft: **klassische Textarbeit (Lesen + Fragen)** – 8 Fragen in Stichworten ins Heft, Frage 1 vorgemacht, gestufte Hilfen individuell (Fundstelle → Impuls → Satzanfang), Lösung über Folie.
 - Planungsentscheidungen: Kleisthenes-Wiederholung am Anfang (Prüffragen + Treppe), Begriffe Stratege und Diäten vorab, Daumenabfrage „Volk oder ein Mann?“ und Aha mit Thukydides, Zeitleiste 508 – 487 – 462 als Sicherung, Abschlussaufgabe „Bei uns herrscht in Wahrheit nur einer – Perikles. Hat er recht?“ (nie kürzen); Frage 8 mit *.
 - Rückmeldung der Lehrkraft: *(steht noch aus)*
 
