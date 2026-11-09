@@ -14,7 +14,7 @@ const zeile = (t, first) => { n++; return new Paragraph({ tabStops: [{ type: Tab
 const children = [
   P("GESCHICHTE · KLASSE 11 · TEXT", { bold: true, size: 16, color: C.terra, after: 30 }),
   P([R("Vom Perserkrieg zur Demokratie: Athen von Themistokles bis Perikles", { font: "Cambria", bold: true, size: 30 })], { after: 60 }),
-  P("Lies den Text. Die Fragen stehen auf deinem Fragenkärtchen – antworte in Stichworten im Heft.", { size: 19, italics: true, color: C.muted, after: 60 }),
+  P("Lies den Text. Beantworte die Fragen in Stichworten in der Fragentabelle.", { size: 19, italics: true, color: C.muted, after: 60 }),
   ...D.text.flatMap(abs => abs.map((t, i) => zeile(t, i === 0))),
   P(D.nachweis, { size: 16, color: C.muted, before: 160, after: 140 }),
   P([R("Stratege", { bold: true, size: 20 }), R(" = einer der zehn Heerführer Athens, jedes Jahr gewählt · ", { size: 20 }), R("Diäten", { bold: true, size: 20 }), R(" = Geld für jeden Tag im Amt · ", { size: 20 }),

@@ -1,4 +1,4 @@
-// Antwortblatt zu den Fragenkärtchen (A4 hoch): Frage, Zeilen, Antwort. Tintensparend.
+// Antwortblatt zur Fragentabelle (A4 hoch): Frage, Zeilen, Antwort. Tintensparend.
 const fs = require("fs");
 const { Document, Packer, Paragraph, TextRun, Table, TableRow, TableCell, WidthType, BorderStyle, VerticalAlign } = require("docx");
 const { C } = require("./lib.js");
@@ -17,9 +17,9 @@ const rows = D.fragen.map(([q, z, e], i) => new TableRow({ cantSplit: true, chil
   cell([P(z, { bold: true, color: C.terra, size: 21 })], 1),
   cell([P(e, { size: 21 })], 2)] }));
 const children = [
-  P("GESCHICHTE · KLASSE 11 · ANTWORTEN ZU DEN FRAGENKÄRTCHEN", { bold: true, size: 16, color: C.terra, after: 30 }),
+  P("GESCHICHTE · KLASSE 11 · ANTWORTEN ZUR FRAGENTABELLE", { bold: true, size: 16, color: C.terra, after: 30 }),
   P([R("Vom Perserkrieg zur Demokratie – Antworten", { font: "Cambria", bold: true, size: 30 })], { after: 60 }),
-  P("Zeilenangaben beziehen sich auf das Textblatt. Im Heft genügen Stichworte; andere Formulierungen sind richtig, wenn der Kern stimmt.", { size: 18, italics: true, color: C.muted, after: 120 }),
+  P("Zeilenangaben beziehen sich auf das Textblatt. In der Tabelle genügen Stichworte; andere Formulierungen sind richtig, wenn der Kern stimmt.", { size: 18, italics: true, color: C.muted, after: 120 }),
   new Table({ columnWidths: cw, width: { size: W, type: WidthType.DXA }, rows: [head, ...rows] }),
 ];
 const doc = new Document({ sections: [{ properties: { page: { size: { width: 11906, height: 16838 }, margin: { top: 700, bottom: 600, left: 992, right: 992 } } }, children }] });
