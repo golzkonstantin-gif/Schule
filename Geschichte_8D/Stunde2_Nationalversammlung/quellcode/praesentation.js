@@ -195,7 +195,7 @@ const IMG = "../material/";
 
 // ============ 4 Lernziele ============
 {
-  const s = blank("Lernziele", "Das kannst du am Ende der Stunde", undefined, "Lernziele vorlesen (30 Sekunden, Klasse hört nur zu). Ziel 1 und 2 sind das Mindestziel. Ziel 3 hat einen Stern: Was nicht mehr geschafft wird, hat einen Stern. Am Ende (Folie 14) prüft die Klasse still, ob die Ziele erreicht sind.");
+  const s = blank("Lernziele", "Das kannst du am Ende der Stunde", undefined, "Lernziele vorlesen (30 Sekunden, Klasse hört nur zu). Ziel 1 und 2 sind das Mindestziel. Ziel 3 hat einen Stern: Was nicht mehr geschafft wird, hat einen Stern. Am Ende (Folie 15) prüft die Klasse still, ob die Ziele erreicht sind.");
   [["1", "Ich kann erklären, wie die Stände den Dritten Stand (Bauern und Bürger) überstimmen können."], ["2", "Ich kann beurteilen, ob der Dritte Stand die Politik durch Abstimmen ändern kann, und das mit einer Zahl begründen."], ["3", "Ich kann am Zeitstrahl erklären, wie sich der Dritte Stand wehrt.*"]].forEach(([n, x], i) => {
     const y = 1.75 + i * 1.5;
     box(s, 0.6, y, 12.15, 1.25, i % 2 ? LIGHT : LIGHT2);
@@ -274,7 +274,7 @@ const IMG = "../material/";
 // ============ 11 Ü4 Rechne und werte aus ============
 {
   const { s } = taskSlide("A · Auswerten · Übung 4", "Rechne und werte aus", ["Lies die Ja-Zahlen an der Tafel ab. Rechne: nach Ständen und nach Köpfen.", "Schreibe: Nach Ständen …, nach Köpfen … Das zeigt: … (nenne Zahlen).", "Vergleiche mit deiner Vermutung vom Anfang."], "4 Minuten · allein · leise",
-    "Gelenk: „Ihr habt abgestimmt, Klerus, Adel und Dritter Stand (Bauern und Bürger). Jetzt seht ihr, was herausgekommen ist.“ Ansage: „Stifte liegen. Ihr hört nur zu. Hier ist das Ergebnis.“ Die Matrix steht an der Tafel (Ja-Zahlen je Stand für A und B). Dann: „Jetzt arbeitet ihr allein. Die Aufgabe steht rechts.“ Zuerst rechnen (etwa 1 Minute): Nach Ständen: Wie viele der drei Stände sagen Ja? Mindestens 2 von 3 = angenommen. Nach Köpfen: Alle Ja zusammenzählen (von allen 25), mehr als die Hälfte = angenommen. Dann ins Heft (etwa 3 Minuten): zuerst die beiden Ergebnisse, dann was die Abstimmung zeigt (Antwort auf die Stundenfrage „Kann der Dritte Stand die Politik einfach wegstimmen?“, mit Zahlen) und der Vergleich mit der Vermutung vom Anfang. Die Antwort an den Adligen kommt danach mündlich (Folie 13). Wenn die Zeit knapp ist, genügen die Ergebnisse und ein Urteilssatz. Heft-Stichprobe: durch die Reihen gehen, bei 4 bis 6 Personen mitlesen, nicht kommentieren (unbenotet). Erwartung (bei A und B gleich): Nach Ständen 1 von 3 Ständen Ja, abgelehnt. Nach Köpfen 18 von 25 Ja, angenommen (echte Zahlen gelten). Dieselben Stimmen, ein anderes Ergebnis. Warum: Klerus und Adel stimmten gleich, jeder Stand hat nur eine Stimme. Antwort mit Zahl, z. B. „Nein, das stimmt nicht, weil Klerus und Adel zusammen 2 von 3 Stimmen haben, obwohl sie nur etwa 3 % der Menschen sind“ oder „Nur nach Köpfen hätte der Dritte Stand (Bauern und Bürger) gewonnen: 18 von 25“. Die Antwort wird nicht vorgegeben. Einordnung (ein Satz): Im Spiel stimmen Klerus und Adel immer gleich. Historisch waren die Stände nicht immer einheitlich (viele einfache Pfarrer unterstützten den Dritten Stand), bei der Abstimmungsregel hielten die Privilegierten aber oft zusammen. In Frankreich sind Klerus und Adel zusammen ca. 3 % der Menschen (ca. 150 000 und ca. 500 000 von ca. 20,65 Millionen).");
+    "Gelenk: „Ihr habt abgestimmt, Klerus, Adel und Dritter Stand (Bauern und Bürger). Jetzt seht ihr, was herausgekommen ist.“ Ansage: „Stifte liegen. Ihr hört nur zu. Hier ist das Ergebnis.“ Die Matrix steht an der Tafel (Ja-Zahlen je Stand für A und B). Dann: „Jetzt arbeitet ihr allein. Die Aufgabe steht rechts.“ Zuerst rechnen (etwa 1 Minute): Nach Ständen: Wie viele der drei Stände sagen Ja? Mindestens 2 von 3 = angenommen. Nach Köpfen: Alle Ja zusammenzählen (von allen 25), mehr als die Hälfte = angenommen. Dann ins Heft (etwa 3 Minuten): zuerst die beiden Ergebnisse, dann was die Abstimmung zeigt (Antwort auf die Stundenfrage „Kann der Dritte Stand die Politik einfach wegstimmen?“, mit Zahlen) und der Vergleich mit der Vermutung vom Anfang. Die Antwort an den Adligen kommt danach mündlich (Folie 14), vorher zeigt Folie 13, dass es 1789 keine Abstimmung nach Köpfen gab. Wenn die Zeit knapp ist, genügen die Ergebnisse und ein Urteilssatz. Heft-Stichprobe: durch die Reihen gehen, bei 4 bis 6 Personen mitlesen, nicht kommentieren (unbenotet). Erwartung (bei A und B gleich): Nach Ständen 1 von 3 Ständen Ja, abgelehnt. Nach Köpfen 18 von 25 Ja, angenommen (echte Zahlen gelten). Dieselben Stimmen, ein anderes Ergebnis. Warum: Klerus und Adel stimmten gleich, jeder Stand hat nur eine Stimme. Antwort mit Zahl, z. B. „Nein, das stimmt nicht, weil Klerus und Adel zusammen 2 von 3 Stimmen haben, obwohl sie nur etwa 3 % der Menschen sind“ oder „Nur nach Köpfen hätte der Dritte Stand (Bauern und Bürger) gewonnen: 18 von 25“. Die Antwort wird nicht vorgegeben. Einordnung (ein Satz): Im Spiel stimmen Klerus und Adel immer gleich. Historisch waren die Stände nicht immer einheitlich (viele einfache Pfarrer unterstützten den Dritten Stand), bei der Abstimmungsregel hielten die Privilegierten aber oft zusammen. In Frankreich sind Klerus und Adel zusammen ca. 3 % der Menschen (ca. 150 000 und ca. 500 000 von ca. 20,65 Millionen).");
   phaseTag(s, 4);
 }
 
@@ -298,7 +298,29 @@ const IMG = "../material/";
   bar(s, [{ text: "Jetzt: ", options: { bold: true } }, { text: "Vergleiche und verbessere mit Grün.", options: {} }]);
 }
 
-// ============ 13 Abschlussfrage: Antwort an den Adligen ============
+// ============ 13 Keine Abstimmung nach Köpfen ============
+{
+  const s = blank("A · Auswerten · Geschichte", "1789: Wie wurde wirklich abgestimmt?", 4, "Dauer: etwa 20 Sekunden, Sie sprechen, kein Gespräch. Ansage: „Stifte liegen. Ihr hört nur zu.“ Wichtig für die Einordnung: Im Spiel haben wir zwei Regeln verglichen. 1789 gab es keine Abstimmung nach Köpfen. Der Dritte Stand (Bauern und Bürger) forderte sie, der König lehnte ab, bei den Generalständen wurde nach Ständen abgestimmt. Der Streit um diese Regel blockierte die Generalstände wochenlang (siehe Text). Nach Köpfen gerechnet hätte der Dritte Stand Mehrheiten gehabt, deshalb war die Regel so wichtig. Stichwort für die nächste Stunde und das Ende der Folie: Erst als sich der Dritte Stand am 17. Juni zur Nationalversammlung erklärte, zählten die Abgeordneten nach Köpfen. Vergleich: Die Folie zeigt, was in unserem Spiel nur zur Probe berechnet wurde.");
+  box(s, 0.6, 1.5, 5.95, 4.5, LIGHT2);
+  txt(s, "Nach Ständen", { x: 0.9, y: 1.6, w: 5.4, h: 0.55, fontFace: HEAD, fontSize: 28, bold: true, color: NAVY });
+  txt(s, "So wurde 1789 abgestimmt.", { x: 0.9, y: 2.3, w: 5.4, h: 0.6, fontSize: 27 });
+  [["Klerus", KLERUS], ["Adel", ADEL], ["Dritter Stand", DRITTER]].forEach(([n, c], i) => {
+    s.addShape(pres.shapes.RECTANGLE, { x: 0.9 + i * 1.8, y: 3.1, w: 1.65, h: 1.3, fill: { color: c }, line: { type: "none" } });
+    txt(s, n + "\n1 Stimme", { x: 0.9 + i * 1.8, y: 3.1, w: 1.65, h: 1.3, fontSize: 27, bold: true, color: WHITE, align: "center", valign: "middle" });
+  });
+  txt(s, "Jeder Stand hat eine Stimme.", { x: 0.9, y: 4.75, w: 5.4, h: 0.9, fontFace: HEAD, fontSize: 28, bold: true, color: NAVY });
+  // durchgestrichen
+  box(s, 6.8, 1.5, 5.95, 4.5, "FBE9E8", { line: RED, lw: 3 });
+  s.addText("Nach Köpfen", { isTextBox: true, x: 7.1, y: 1.6, w: 5.4, h: 0.55, fontFace: HEAD, fontSize: 28, bold: true, color: RED, strike: "sngStrike", margin: 0 });
+  s.addText("Jede Hand zählt einzeln.", { isTextBox: true, x: 7.1, y: 2.3, w: 5.4, h: 0.6, fontFace: BODY, fontSize: 27, color: RED, strike: "sngStrike", margin: 0 });
+  stackBar(s, 7.1, 3.1, 5.35, 1.3, [[18, "E3A3A0", "Ja"], [7, "E3A3A0", "Nein"]]);
+  s.addText("Gab es 1789 nicht.", { isTextBox: true, x: 7.1, y: 4.75, w: 5.4, h: 0.9, fontFace: HEAD, fontSize: 28, bold: true, color: RED, margin: 0 });
+  s.addShape(pres.shapes.LINE, { x: 7.1, y: 3.1, w: 5.35, h: 1.3, line: { color: RED, width: 10 } });
+  s.addShape(pres.shapes.LINE, { x: 12.45, y: 3.1, w: -5.35, h: 1.3, line: { color: RED, width: 10 } });
+  bar(s, [{ text: "Wichtig: ", options: { bold: true } }, { text: "1789 gab es keine Abstimmung nach Köpfen.", options: {} }]);
+}
+
+// ============ 14 Abschlussfrage: Antwort an den Adligen ============
 {
   const s = blank("A · Auswerten", "Abschlussfrage: Was antwortest du ihm?", 4, "Ansage: „Stifte liegen. Ihr hört nur zu. Das ist die letzte Aufgabe. Schaut noch einmal auf die Karikatur vom Anfang. Denkt zehn Sekunden nach. Ich rufe euch auf.“ Die Klasse nimmt Bezug auf die Aussage des Adligen vom Anfang: „Wenn der Dritte Stand unzufrieden ist, soll er einfach gegen die Politik des Königs stimmen.“ Die Antwort kommt mündlich, ohne Schnipsel: „Ich antworte dir, …, weil …“. Mehrere gute Antworten, geprüft werden Position, ein Sachargument aus der Stunde (Zahl aus der Matrix, 97 % der Menschen, 1 von 3 Stimmen, Nationalversammlung) und ein „weil“. Erwartung (Auswahl, keine Musterlösung): „Das funktioniert nicht, weil nach Ständen Klerus und Adel 2 von 3 Stimmen haben, obwohl der Dritte Stand (Bauern und Bürger) fast alle Menschen vertritt.“ „Das stimmt nur, wenn nach Köpfen abgestimmt wird, dort hätte der Dritte Stand 18 von 25 Stimmen.“ „Ihr habt Angst vor der Mehrheit, deshalb wollt ihr nicht nach Köpfen abstimmen.“ „Wenn Abstimmen nichts bringt, wehrt sich der Dritte Stand anders, er erklärt sich zur Nationalversammlung.“ Form nach Verlauf: Blitzlicht (4 bis 6 Personen unterschiedlichen Niveaus gezielt aufrufen, kein Kommentar) oder Duell zu zweit (leise: eine Person ist der Adlige, eine antwortet). Unbenotet. Vergleich mit der Vermutung vom Anfang: Wer hat umgedacht?");
   s.addImage({ path: IMG + "karikatur_klerus_adel.png", x: 0.6, y: 1.5, w: 5.4, h: 3.375 });
@@ -316,9 +338,9 @@ const IMG = "../material/";
   bar(s, [{ text: "Zeit: ", options: { bold: true } }, { text: "3 Minuten · erst denken, dann mündlich      ", options: {} }, { text: "Alle denken mit.", options: { italic: true, color: ICE } }]);
 }
 
-// ============ 14 Ziele prüfen ============
+// ============ 15 Ziele prüfen ============
 {
-  const s = blank("A · Auswerten", "Haben wir die Ziele erreicht?", 4, "Die Klasse prüft still: Kann ich das? Danach Folie 15. Keine Antworten ins Plenum, keine Abfrage von Selbsteinschätzungen (30 Sekunden). Wenn Ziel 3 (*) nicht mehr geschafft wurde, kommt es als Wiederholung in Stunde 3.");
+  const s = blank("A · Auswerten", "Haben wir die Ziele erreicht?", 4, "Die Klasse prüft still: Kann ich das? Danach Folie 16. Keine Antworten ins Plenum, keine Abfrage von Selbsteinschätzungen (30 Sekunden). Wenn Ziel 3 (*) nicht mehr geschafft wurde, kommt es als Wiederholung in Stunde 3.");
   [["Ich kann erklären, wie die Stände den Dritten Stand (Bauern und Bürger) überstimmen können."], ["Ich kann beurteilen, ob der Dritte Stand die Politik durch Abstimmen ändern kann, und das mit einer Zahl begründen."], ["Ich kann am Zeitstrahl erklären, wie sich der Dritte Stand wehrt.*"]].forEach(([x], i) => {
     const y = 1.7 + i * 1.4;
     box(s, 0.6, y, 12.15, 1.15, i % 2 ? LIGHT : LIGHT2);
@@ -328,7 +350,7 @@ const IMG = "../material/";
   bar(s, [{ text: "Jetzt: ", options: { bold: true } }, { text: "Schau auf die Ziele. Haben wir sie erreicht?", options: {} }]);
 }
 
-// ============ 15 Ausblick ============
+// ============ 16 Ausblick ============
 {
   const s = blank("A · Auswerten · Ausblick", "Wie geht es weiter?", 4, "Folie nur lesen (30 Sekunden). Ausblick: Anfang Juli zieht der König Soldaten um Paris zusammen und entlässt seinen Finanzminister. In Paris wächst die Angst. Das sehen wir in der nächsten Stunde (Bastille, Ende der Vorrechte, Menschenrechte).");
   box(s, 0.6, 1.8, 12.15, 2.0, NAVY);

@@ -100,3 +100,4 @@
 - Zeit (25 Min.): Ankommen 4 · Abstimmung 4 · Text 4 · Zeitstrahl 3 · Auswerten 10.
 - Zu beobachten: Passt die Karikatur als Einstieg (versteht die Klasse die Aussage)? Reicht der gekürzte Text? Zeit in Phase 0 und 4?
 - Änderung (12.11.): Die Abschlussfrage nimmt Bezug auf die Karikatur und die Aussage des Adligen vom Anfang (statt Rat an einen Bauern). Folie 13 zeigt die Karikatur wieder: „Was antwortest du dem Adligen? Ich antworte dir, …, weil …“ (mündlich, mehrere gute Antworten mit Zahl aus der Matrix, 97 %, Nationalversammlung). Die schriftliche Auswertung (Ü4) hält fest, was die Abstimmung zeigt, und vergleicht mit der Vermutung vom Anfang.
+- Ergänzung (12.11.): Neue Folie 13 nach der Auswertung der Abstimmung: „1789 gab es keine Abstimmung nach Köpfen.“ Die Spalte „Nach Köpfen“ ist rot durchgestrichen (Text und Balken), „Nach Ständen“ steht daneben als tatsächliches Verfahren. Folien jetzt 16 (Abschlussfrage 14, Ziele 15, Ausblick 16).

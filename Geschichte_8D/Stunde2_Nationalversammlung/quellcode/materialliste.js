@@ -29,7 +29,7 @@ const druck = [
 // Vorbereitung
 const prep = [
   ["Tafelskript ausdrucken oder auf dem Tablet bereithalten", "Tafelskript_Stunde2_Nationalversammlung_8D.pdf"],
-  ["Folien öffnen und einmal durchklicken", "Praesentation_Stunde2_Nationalversammlung_8D.pptx, 15 Folien (27 Punkt); Folie 1 (Karikatur) steht beim Betreten da"],
+  ["Folien öffnen und einmal durchklicken", "Praesentation_Stunde2_Nationalversammlung_8D.pptx, 16 Folien (27 Punkt); Folie 1 (Karikatur) steht beim Betreten da"],
   ["Stände verteilen", "Klerus (3) und Adel (4) gezielt wählen (zuverlässige Personen), alle übrigen sind Dritter Stand (18). Keine Wahlhelfer. Tabelle unten ausfüllen (ohne Namen, nur Platznummern)"],
   ["Karten und Stimmzettel auf die Plätze legen", "Karte verdeckt, Stimmzettel daneben; Reservekarten und -zettel am Pult"],
   ["Auszählen: Sie zählen selbst, während die Klasse Text und Zeitstrahl bearbeitet", "Zettel nach Stand sortieren, Ja und Nein je Antrag in der Strichliste, Kontrolle: Ja plus Nein = Personenzahl. Ja-Zahlen in die Matrix an der Tafel schreiben (Folie 8, Phase 3). Bei Zeitnot nur Antrag A"],
@@ -64,7 +64,7 @@ d.push(table(RW, [hdr(["Stand", "Anzahl", "Plätze"], RW), ...rolle.map(([a, b, 
 d.push(p(t("Wenn Schülerinnen oder Schüler fehlen: Klerus bleibt 3, Adel bleibt 4, der Dritte Stand wird kleiner (Zahlen in der Matrix anpassen). Klerus und Adel dürfen zusammen nie mehr als ein Drittel der Klasse sein.", { size: 19, italics: true, color: MUTED }), { before: 60 }));
 
 d.push(h2("5 Kurz vor Beginn (5 Minuten)"));
-["Folie 1 (Karikatur) steht, Beamer an", "Karten liegen verdeckt auf den Plätzen, daneben der Stimmzettel", "Seitentafel beschrieben, Matrix in der Mitte gezeichnet, Platz für den Zeitstrahl", "Textblätter liegen bereit (noch nicht austeilen); die Abschlussfrage läuft mündlich (Rückgriff auf die Karikatur, Folie 13)", "Strichliste auf dem Pult, Ansagen im Kopf: „Stifte liegen. Ihr hört nur zu.“ · „Stifte hinlegen. Ich sammle die Zettel ein.“"].forEach((x) => d.push(p([t("□  ", { size: 24 }), t(x, { size: 20 })], { after: 50 })));
+["Folie 1 (Karikatur) steht, Beamer an", "Karten liegen verdeckt auf den Plätzen, daneben der Stimmzettel", "Seitentafel beschrieben, Matrix in der Mitte gezeichnet, Platz für den Zeitstrahl", "Textblätter liegen bereit (noch nicht austeilen); die Abschlussfrage läuft mündlich (Rückgriff auf die Karikatur, Folie 14)", "Strichliste auf dem Pult, Ansagen im Kopf: „Stifte liegen. Ihr hört nur zu.“ · „Stifte hinlegen. Ich sammle die Zettel ein.“"].forEach((x) => d.push(p([t("□  ", { size: 24 }), t(x, { size: 20 })], { after: 50 })));
 
 (async () => {
   const doc = new Document({ styles: { default: { document: { run: { font: "Calibri", size: 21 } } } }, sections: [{ properties: { page: { size: { width: 11906, height: 16838 }, margin: { top: 800, bottom: 700, left: 850, right: 850 } } }, footers: { default: footer }, children: d }] });
