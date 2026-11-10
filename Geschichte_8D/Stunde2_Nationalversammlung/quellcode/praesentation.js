@@ -150,23 +150,22 @@ function bubble(s, x, y, w, h, fill, line, side, tipY) {
 const IMG = "../material/";
 
 
-// ============ 1 Titel / Ankommen ============
+// ============ 1 Karikatur / Ankommen ============
 {
-  const s = pres.addSlide();
-  pageNo++;
-  s.background = { color: NAVY };
-  s.addShape(pres.shapes.OVAL, { x: 10.6, y: -1.6, w: 4.6, h: 4.6, fill: { color: NAVY2 }, line: { type: "none" } });
-  s.addShape(pres.shapes.OVAL, { x: -1.5, y: 4.6, w: 4.0, h: 4.0, fill: { color: NAVY2 }, line: { type: "none" } });
-  txt(s, "Nationalversammlung 1789", { x: 0.9, y: 1.2, w: 11.5, h: 1.0, fontFace: HEAD, fontSize: 48, bold: true, color: WHITE });
-  txt(s, "Wie wehrt sich der Dritte Stand gegen die Abstimmungsregel?", { x: 0.9, y: 2.3, w: 11.5, h: 0.6, fontSize: 27, italic: true, color: ICE });
-  box(s, 0.9, 3.6, 11.5, 2.6, NAVY2);
-  txt(s, "Ankommen", { x: 1.2, y: 3.75, w: 6, h: 0.5, fontFace: HEAD, fontSize: 27, bold: true, color: WHITE });
-  ["Hole dein Heft heraus.", "Schreibe Datum und Überschrift ins Heft.", "Lass deine Karte verdeckt liegen."].forEach((x, i) => {
-    numCircle(s, i + 1, 1.2, 4.45 + i * 0.52, 0.4, RED);
-    txt(s, x, { x: 1.85, y: 4.42 + i * 0.52, w: 10.3, h: 0.46, fontSize: 27, color: WHITE, valign: "middle" });
+  const s = blank("Ankommen", "Ein Gespräch in Versailles", 0, "Die Folie steht beim Betreten. Niemand muss etwas sagen. Die Karikatur ist selbst gezeichnet, keine historische Quelle. Der Adlige sagt: „Wenn der Dritte Stand unzufrieden ist, soll er einfach gegen die Politik des Königs stimmen.“ Klerus und Adel unterhalten sich. Die Klasse schreibt ihre Vermutung ins Heft (Eingangsdiagnose, bleibt stehen, wird in Phase 4 mit dem Ergebnis verglichen): „Stimmt das? Ich vermute …, weil …“ Keine Besprechung, kein Urteil. Neben jeder Karte liegt ein Stimmzettel, die Karten bleiben verdeckt. Ansage: „Stifte liegen. Ihr hört nur zu.“ Danach Folie 2 bis 5 in zusammen etwa 2 Minuten.");
+  s.addImage({ path: IMG + "karikatur_klerus_adel.png", x: 0.6, y: 1.45, w: 7.0, h: 4.375 });
+  s.addShape(pres.shapes.ROUNDED_RECTANGLE, { x: 0.85, y: 1.55, w: 6.5, h: 1.55, rectRadius: 0.18, fill: { color: WHITE }, line: { color: NAVY, width: 3 } });
+  s.addShape(pres.shapes.ISOSCELES_TRIANGLE, { x: 5.5, y: 3.05, w: 0.6, h: 0.5, rotate: 180, fill: { color: WHITE }, line: { color: NAVY, width: 3 } });
+  s.addShape(pres.shapes.RECTANGLE, { x: 5.52, y: 3.02, w: 0.56, h: 0.1, fill: { color: WHITE }, line: { type: "none" } });
+  txt(s, "„Wenn der Dritte Stand unzufrieden ist, soll er einfach gegen die Politik des Königs stimmen.“", { x: 1.05, y: 1.55, w: 6.1, h: 1.55, fontFace: HEAD, fontSize: 27, color: NAVY, valign: "middle" });
+  [["Klerus", 1.2], ["Adel", 4.7]].forEach(([n, x]) => {
+    box(s, x, 5.2, n === "Klerus" ? 1.9 : 1.6, 0.52, WHITE, { line: NAVY, lw: 2 });
+    txt(s, n, { x, y: 5.2, w: n === "Klerus" ? 1.9 : 1.6, h: 0.52, fontSize: 27, bold: true, color: NAVY, align: "center", valign: "middle" });
   });
-  txt(s, "Geschichte, Klasse 8D · Französische Revolution · Stunde 2", { x: 0.9, y: 6.7, w: 8, h: 0.3, fontSize: 13, color: ICE });
-  s.addNotes("Die Folie steht beim Betreten. Niemand muss etwas sagen. Auf jedem Platz liegen eine Standeskarte (verdeckt) und ein Beobachtungszettel. Neben jeder Karte liegt ein Stimmzettel. Ansage: „Stifte liegen. Ihr hört nur zu.“ Danach Folie 2, 3 und 4 in zusammen etwa 2 Minuten.");
+  [["Heft raus. Datum und Überschrift.", 1.6, 1.0], ["Lies, was der Adlige sagt.", 2.85, 1.0], ["Schreibe: Stimmt das? Ich vermute …, weil …", 4.1, 1.7]].forEach(([x, y, h], i) => {
+    numCircle(s, i + 1, 7.95, y + 0.05, 0.45, RED);
+    txt(s, x, { x: 8.6, y, w: 4.15, h, fontSize: 27, bold: true, valign: "top" });
+  });
 }
 
 // ============ 2 Erwartungen (Neue Autorität) ============
@@ -185,22 +184,31 @@ const IMG = "../material/";
 }
 
 
-// ============ 3 Lernziele ============
+// ============ 3 Stundenfrage ============
 {
-  const s = blank("Lernziele", "Das kannst du am Ende der Stunde", undefined, "Lernziele vorlesen (30 Sekunden, Klasse hört nur zu). Ziel 1 und 2 sind das Mindestziel. Ziel 3 hat einen Stern: Was nicht mehr geschafft wird, hat einen Stern. Am Ende (Folie 13) prüft die Klasse still, ob die Ziele erreicht sind.");
-  [["1", "Ich kann erklären, wie die Stände den Dritten Stand (Bauern und Bürger) überstimmen können."], ["2", "Ich kann die Abstimmung nach Ständen beurteilen und mein Urteil begründen."], ["3", "Ich kann am Zeitstrahl erklären, wie sich der Dritte Stand zur Nationalversammlung erklärte.*"]].forEach(([n, x], i) => {
+  const s = blank("Stundenfrage", "Das untersuchen wir heute", undefined, "Die Behauptung von Klerus und Adel wird zur Stundenfrage (30 Sekunden, Klasse hört nur zu): „Klerus und Adel sagen: Der Dritte Stand soll einfach abstimmen. Stimmt das? Das prüfen wir heute mit einer Abstimmung.“ Keine Antworten ins Plenum, die Vermutungen stehen im Heft.");
+  box(s, 0.6, 1.6, 12.15, 2.6, NAVY);
+  txt(s, "Kann der Dritte Stand (Bauern und Bürger) die Politik des Königs einfach wegstimmen?", { x: 1.0, y: 1.6, w: 11.35, h: 2.6, fontFace: HEAD, fontSize: 34, bold: true, color: WHITE, valign: "middle" });
+  box(s, 0.6, 4.5, 12.15, 1.4, LIGHT2);
+  txt(s, "Wir prüfen es mit einer Abstimmung der Stände.", { x: 1.0, y: 4.5, w: 11.35, h: 1.4, fontFace: HEAD, fontSize: 30, valign: "middle" });
+}
+
+// ============ 4 Lernziele ============
+{
+  const s = blank("Lernziele", "Das kannst du am Ende der Stunde", undefined, "Lernziele vorlesen (30 Sekunden, Klasse hört nur zu). Ziel 1 und 2 sind das Mindestziel. Ziel 3 hat einen Stern: Was nicht mehr geschafft wird, hat einen Stern. Am Ende (Folie 14) prüft die Klasse still, ob die Ziele erreicht sind.");
+  [["1", "Ich kann erklären, wie die Stände den Dritten Stand (Bauern und Bürger) überstimmen können."], ["2", "Ich kann beurteilen, ob der Dritte Stand die Politik durch Abstimmen ändern kann, und das mit einer Zahl begründen."], ["3", "Ich kann am Zeitstrahl erklären, wie sich der Dritte Stand wehrt.*"]].forEach(([n, x], i) => {
     const y = 1.75 + i * 1.5;
     box(s, 0.6, y, 12.15, 1.25, i % 2 ? LIGHT : LIGHT2);
     numCircle(s, n, 0.9, y + 0.37, 0.5, RED);
     txt(s, x, { x: 1.7, y, w: 10.8, h: 1.25, fontFace: HEAD, fontSize: 27, valign: "middle" });
   });
-  bar(s, [{ text: "Heute: ", options: { bold: true } }, { text: "Abstimmung, Text, Zeitstrahl, Ergebnis.", options: {} }]);
+  bar(s, [{ text: "Heute: ", options: { bold: true } }, { text: "Karikatur, Abstimmung, Text, Zeitstrahl.", options: {} }]);
 }
 
-// ============ 4 Ablauf ============
+// ============ 5 Ablauf ============
 {
   const s = blank("Ablauf", "So arbeiten wir heute", undefined, "Ablauf zeigen (30 Sekunden). Die Kreise oben rechts zeigen die Phase: A V I V A. Der Stern * bedeutet: wird eventuell nicht mehr geschafft (Ziel 3). Insgesamt 25 Minuten.");
-  const ph = [["A", "Ankommen", "Ziele", "3 Min."], ["V", "Vorwissen", "Abstimmung", "4 Min."], ["I", "Informieren", "Text", "5 Min."], ["V", "Verarbeiten", "Zeitstrahl", "3 Min."], ["A", "Auswerten", "Ergebnis, Rat", "10 Min."]];
+  const ph = [["A", "Ankommen", "Karikatur", "4 Min."], ["V", "Vorwissen", "Abstimmung", "4 Min."], ["I", "Informieren", "Text", "4 Min."], ["V", "Verarbeiten", "Zeitstrahl", "3 Min."], ["A", "Auswerten", "Ergebnis, Rat", "10 Min."]];
   ph.forEach(([l, n, x, m], i) => {
     const xx = 0.6 + i * 2.45;
     box(s, xx, 1.9, 2.3, 3.6, i % 2 ? LIGHT : LIGHT2);
@@ -213,9 +221,9 @@ const IMG = "../material/";
   bar(s, [{ text: "Wichtig: ", options: { bold: true } }, { text: "Wir arbeiten leise. Gesprochen wird nur nach Ansage.", options: {} }]);
 }
 
-// ============ 5 Zwei Anträge ============
+// ============ 6 Zwei Anträge ============
 {
-  const s = blank("V · Vorwissen aktivieren · Abstimmung", "Zwei Anträge, eine Regel", 1, "Gelenk: „Auf dem Zeitstrahl endete der Streit um die Abstimmung. Heute erlebt ihr diesen Streit selbst.“ Ansage: „Stifte liegen. Ihr hört nur zu.“ Anträge und Regel vorlesen (1 Minute). Die beiden Anträge sind Spielanträge, historisch ging der Streit um die Abstimmungsregel. Klerus und Adel haben in beiden Fällen dieselben Interessen: Sie wollen ihre Vorrechte behalten. Klerus 3, Adel 4, Dritter Stand (Bauern und Bürger) 18 Personen (bei 25 Personen, ohne Wahlhelfer). Die Klasse stimmt vorab auf einem Zettel ab, die Zettel werden eingesammelt. Sie werten sie während Text und Zeitstrahl aus und schreiben die Ergebnisse in die Matrix an der Tafel. Regel zum Vorlesen: Jeder Stand hat eine Stimme (Abstimmung nach Ständen). Gezählt werden nur die Ja-Stimmen je Stand. Das Ergebnis nach Ständen und nach Köpfen rechnet die Klasse später selbst aus (Folie 10).");
+  const s = blank("V · Vorwissen aktivieren · Abstimmung", "Zwei Anträge, eine Regel", 1, "Gelenk: „Klerus und Adel sagen: Einfach abstimmen. Das testen wir jetzt.“ Die beiden Anträge sind die Politik, über die der Dritte Stand abstimmen möchte. Ansage: „Stifte liegen. Ihr hört nur zu.“ Anträge und Regel vorlesen (1 Minute). Die beiden Anträge sind Spielanträge, historisch ging der Streit um die Abstimmungsregel. Klerus und Adel haben in beiden Fällen dieselben Interessen: Sie wollen ihre Vorrechte behalten. Klerus 3, Adel 4, Dritter Stand (Bauern und Bürger) 18 Personen (bei 25 Personen, ohne Wahlhelfer). Die Klasse stimmt vorab auf einem Zettel ab, die Zettel werden eingesammelt. Sie werten sie während Text und Zeitstrahl aus und schreiben die Ergebnisse in die Matrix an der Tafel. Regel zum Vorlesen: Jeder Stand hat eine Stimme (Abstimmung nach Ständen). Gezählt werden nur die Ja-Stimmen je Stand. Das Ergebnis nach Ständen und nach Köpfen rechnet die Klasse später selbst aus (Folie 11).");
   [["A", "Auch Adel und Klerus zahlen künftig Steuern."], ["B", "Die Stände werden abgeschafft. Alle haben gleiche Rechte."]].forEach(([n, x], i) => {
     const y = 1.5 + i * 1.15;
     box(s, 0.6, y, 12.15, 0.95, i % 2 ? LIGHT : LIGHT2);
@@ -227,34 +235,34 @@ const IMG = "../material/";
   bar(s, [{ text: "Regel: ", options: { bold: true } }, { text: "Jeder Stand hat eine Stimme (nach Ständen).", options: {} }]);
 }
 
-// ============ 6 Ü1 Vorab ============
+// ============ 7 Ü1 Vorab ============
 {
   const { s } = taskSlide("V · Vorwissen aktivieren · Übung 1", "Wir stimmen ab: Dein Zettel", ["Drehe deine Karte um. Lies sie leise.", "Kreuze auf dem Stimmzettel deinen Stand an.", "Kreuze deine Stimme bei A und B an.", "Halte den Zettel bereit. Ich sammle ihn ein."], "3 Minuten · allein · leise",
-    "Ansage: „Stifte liegen. Jetzt arbeitet ihr allein. Die Aufgabe steht rechts.“ Klerus und Adel stimmen nach ihrer Rolle (Vorrechte behalten), der Dritte Stand (Bauern und Bürger) nach seiner Überzeugung. Keine Absprache, keine Bewegung. Nach etwa zwei Minuten: „Stifte hinlegen. Ich sammle die Zettel ein.“ Sie gehen durch die Reihen und sammeln die Zettel ein (etwa 1 Minute, ruhig). Danach sofort Folie 7. Sie werten die Zettel während Text und Zeitstrahl aus: Zettel nach Stand sortieren, Ja und Nein je Antrag in der Strichliste (Tafelmatrix-Datei, Seite 3), Ja-Zahlen in die Matrix an der Tafel schreiben. Notfall: Wer keine Karte hat, nimmt eine Reservekarte (Dritter Stand).");
+    "Ansage: „Stifte liegen. Jetzt arbeitet ihr allein. Die Aufgabe steht rechts.“ Klerus und Adel stimmen nach ihrer Rolle (Vorrechte behalten), der Dritte Stand (Bauern und Bürger) nach seiner Überzeugung. Keine Absprache, keine Bewegung. Nach etwa zwei Minuten: „Stifte hinlegen. Ich sammle die Zettel ein.“ Sie gehen durch die Reihen und sammeln die Zettel ein (etwa 1 Minute, ruhig). Danach sofort Folie 8. Sie werten die Zettel während Text und Zeitstrahl aus: Zettel nach Stand sortieren, Ja und Nein je Antrag in der Strichliste (Tafelmatrix-Datei, Seite 3), Ja-Zahlen in die Matrix an der Tafel schreiben. Notfall: Wer keine Karte hat, nimmt eine Reservekarte (Dritter Stand).");
   phaseTag(s, 1);
 }
 
-// ============ 7 Ü2 Text ============
+// ============ 8 Ü2 Text ============
 {
-  const { s } = taskSlide("I · Informieren · Übung 2", "Der Dritte Stand handelt: Text", ["Lies den Text auf dem Blatt.", "Unterstreiche alle Daten.", "Lies die Quelle von Sieyès: Was verlangt der Dritte Stand?"], "5 Minuten · allein · leise",
-    "Ansage: „Stifte liegen. Ihr hört nur zu. Jetzt arbeitet ihr allein. Die Aufgabe steht rechts.“ Das Blatt (Arbeitsblatt_Der_Dritte_Stand_handelt.pdf, ein Blatt pro Person) liegt vorab auf den Tischen, umgedreht, oder wird jetzt ausgeteilt. Text unverändert wie in der 8C. Warnung vor dem Fehler: Das Lehrbuch nennt den 20. Juni für die Nationalversammlung. Historisch ist es der 17. Juni (Nationalversammlung) und der 20. Juni (Ballhausschwur). Während die Klasse liest, sortieren und zählen Sie die Stimmzettel (Strichliste, Tafelmatrix-Datei Seite 3) und tragen die Ja-Zahlen in die Matrix an der Tafel ein. Die Heft-Stichprobe entfällt in dieser Phase. Wer schneller fertig ist, liest den Text noch einmal und überlegt, wie der Dritte Stand die Macht des Königs infrage stellt. Nach 5 Minuten: Folie 8.");
+  const { s } = taskSlide("I · Informieren · Übung 2", "Der Dritte Stand wehrt sich: Text", ["Lies den Text auf dem Blatt.", "Unterstreiche alle Daten.", "Lies die Wörter unter dem Text."], "4 Minuten · allein · leise",
+    "Ansage: „Stifte liegen. Ihr hört nur zu. Jetzt arbeitet ihr allein. Die Aufgabe steht rechts.“ Das Blatt (Arbeitsblatt_Der_Dritte_Stand_wehrt_sich.pdf, ein Blatt pro Person) liegt vorab auf den Tischen, umgedreht, oder wird jetzt ausgeteilt. Der Text ist gegenüber der 8C gekürzt (ein Drittel einer Seite, vier Daten). Warnung vor dem Fehler: Das Lehrbuch nennt den 20. Juni für die Nationalversammlung. Historisch ist es der 17. Juni (Nationalversammlung) und der 20. Juni (Ballhausschwur). Während die Klasse liest, sortieren und zählen Sie die Stimmzettel (Strichliste, Tafelmatrix-Datei Seite 3) und tragen die Ja-Zahlen in die Matrix an der Tafel ein. Die Heft-Stichprobe entfällt in dieser Phase. Wer schneller fertig ist, liest den Text noch einmal und überlegt, wie der Dritte Stand die Macht des Königs infrage stellt. Nach 4 Minuten: Folie 9.");
   phaseTag(s, 2);
 }
 
-// ============ 8 Ü3 Zeitstrahl ============
+// ============ 9 Ü3 Zeitstrahl ============
 {
   const { s } = taskSlide("V · Verarbeiten · Übung 3", "Zeitstrahl: Was geschah wann?", ["Schreibe zu jedem Datum das Ereignis in den Zeitstrahl.", "Nutze Stichworte aus dem Text.", "Prüfe: Passt jedes Ereignis zum Datum?"], "2 Minuten · allein · leise",
-    "Ansage: „Stifte liegen. Jetzt arbeitet ihr allein. Die Aufgabe steht rechts.“ Sie schreiben die Ja-Zahlen an die Tafel (Strichliste, Matrix), während die Klasse arbeitet. Der Zeitstrahl steht unten auf demselben Blatt, die Daten sind vorgegeben. 2 Minuten, dann Folie 9 (Lösung, 1 Minute). Aufgabe 3 auf dem Blatt (Sieyès und die Zahl) entfällt oder ist Zusatz (*). Wenn die Zeit knapp ist, genügen die drei letzten Einträge (17. Juni, 20. Juni, Anfang Juli).");
+    "Ansage: „Stifte liegen. Jetzt arbeitet ihr allein. Die Aufgabe steht rechts.“ Sie schreiben die Ja-Zahlen an die Tafel (Strichliste, Matrix), während die Klasse arbeitet. Der Zeitstrahl steht unten auf demselben Blatt, die Daten sind vorgegeben. 2 Minuten, dann Folie 10 (Lösung, 1 Minute). Aufgabe 3 auf dem Blatt (Sieyès und die Zahl) entfällt oder ist Zusatz (*). Wenn die Zeit knapp ist, genügen die drei letzten Einträge (17. Juni, 20. Juni, Anfang Juli).");
   phaseTag(s, 3);
 }
 
-// ============ 9 Zeitstrahl ============
+// ============ 10 Zeitstrahl ============
 {
-  const s = blank("V · Verarbeiten · Kontrolle", "Der Dritte Stand handelt: Zeitstrahl", 3, "Nach dem Ausfüllen zeigen (1 Minute). Ansage: „Vergleicht und verbessert mit Grün.“ Der letzte Eintrag („Anfang Juli: Soldaten um Paris“) ist das Ziel der Stunde. Warnung vor dem Fehler: Das Lehrbuch nennt den 20. Juni für die Nationalversammlung. Historisch ist es der 17. Juni (Nationalversammlung) und der 20. Juni (Ballhausschwur). Quelle Sieyès: verfasst 1788, erschienen Winter 1788/89.");
-  const ev = [["Winter 1788/89", "Sieyès: Der Dritte Stand ist ALLES"], ["5. Mai 1789", "Eröffnung, Streit um die Abstimmung"], ["17. Juni 1789", "Nationalversammlung"], ["20. Juni 1789", "Ballhausschwur"], ["Anfang Juli 1789", "Soldaten um Paris, Angst in Paris"]];
+  const s = blank("V · Verarbeiten · Kontrolle", "Der Dritte Stand wehrt sich: Zeitstrahl", 3, "Nach dem Ausfüllen zeigen (1 Minute). Ansage: „Vergleicht und verbessert mit Grün.“ Der letzte Eintrag („Anfang Juli: Soldaten um Paris“) ist das Ziel der Stunde. Warnung vor dem Fehler: Das Lehrbuch nennt den 20. Juni für die Nationalversammlung. Historisch ist es der 17. Juni (Nationalversammlung) und der 20. Juni (Ballhausschwur). Quelle Sieyès: verfasst 1788, erschienen Winter 1788/89.");
+  const ev = [["5. Mai 1789", "Eröffnung, Streit um die Abstimmung"], ["17. Juni 1789", "Nationalversammlung"], ["20. Juni 1789", "Ballhausschwur"], ["Anfang Juli 1789", "Soldaten um Paris, Angst in Paris"]];
   s.addShape(pres.shapes.RECTANGLE, { x: 3.6, y: 1.7, w: 0.1, h: 4.35, fill: { color: NAVY }, line: { type: "none" } });
   ev.forEach(([d, e], i) => {
-    const y = 1.5 + i * 0.9;
+    const y = 1.55 + i * 1.1;
     box(s, 0.6, y, 2.8, 0.75, i % 2 ? LIGHT : LIGHT2);
     txt(s, d, { x: 0.7, y, w: 2.6, h: 0.75, fontSize: 27, bold: true, color: RED, align: "center", valign: "middle" });
     s.addShape(pres.shapes.OVAL, { x: 3.5, y: y + 0.2, w: 0.34, h: 0.34, fill: { color: i === 3 ? RED : NAVY }, line: { color: WHITE, width: 2 } });
@@ -263,16 +271,16 @@ const IMG = "../material/";
 }
 
 
-// ============ 10 Ü4 Rechne und werte aus ============
+// ============ 11 Ü4 Rechne und werte aus ============
 {
-  const { s } = taskSlide("A · Auswerten · Übung 4", "Rechne und werte aus", ["Lies die Ja-Zahlen aus der Matrix an der Tafel ab.", "Rechne in deinem Heft: nach Ständen und nach Köpfen.", "Schreibe: Nach Ständen …, nach Köpfen … Ich finde die Regel „Jeder Stand hat eine Stimme“ …, weil … (nenne eine Zahl)."], "4 Minuten · allein · leise",
-    "Gelenk: „Ihr habt abgestimmt, Klerus, Adel und Dritter Stand (Bauern und Bürger). Jetzt seht ihr, was herausgekommen ist.“ Ansage: „Stifte liegen. Ihr hört nur zu. Hier ist das Ergebnis.“ Die Matrix steht an der Tafel (Ja-Zahlen je Stand für A und B). Dann: „Jetzt arbeitet ihr allein. Die Aufgabe steht rechts.“ Zuerst rechnen (etwa 1 Minute): Nach Ständen: Wie viele der drei Stände sagen Ja? Mindestens 2 von 3 = angenommen. Nach Köpfen: Alle Ja zusammenzählen (von allen 25), mehr als die Hälfte = angenommen. Dann ins Heft (etwa 3 Minuten): zuerst die beiden Ergebnisse, dann das Urteil. Wenn die Zeit knapp ist, genügen die Ergebnisse und ein Urteilssatz. Heft-Stichprobe: durch die Reihen gehen, bei 4 bis 6 Personen mitlesen, nicht kommentieren (unbenotet). Erwartung (bei A und B gleich): Nach Ständen 1 von 3 Ständen Ja, abgelehnt. Nach Köpfen 18 von 25 Ja, angenommen (echte Zahlen gelten). Dieselben Stimmen, ein anderes Ergebnis. Warum: Klerus und Adel stimmten gleich, jeder Stand hat nur eine Stimme. Urteil: offen mit Zahl (mehrere gute Antworten), z. B. „Ich finde die Regel ungerecht, weil der Dritte Stand (Bauern und Bürger) ca. 97 % der Menschen stellt, aber nur 1 von 3 Stimmen hat“ oder „Ich finde sie nachvollziehbar, weil jeder Stand als Gruppe zählt, aber die Zahl 97 % zeigt ein Problem“. Das Urteil wird nicht vorgegeben. Einordnung (ein Satz): Im Spiel stimmen Klerus und Adel immer gleich. Historisch waren die Stände nicht immer einheitlich (viele einfache Pfarrer unterstützten den Dritten Stand), bei der Abstimmungsregel hielten die Privilegierten aber oft zusammen. In Frankreich sind Klerus und Adel zusammen ca. 3 % der Menschen (ca. 150 000 und ca. 500 000 von ca. 20,65 Millionen).");
+  const { s } = taskSlide("A · Auswerten · Übung 4", "Rechne und werte aus", ["Lies die Ja-Zahlen an der Tafel ab. Rechne: nach Ständen und nach Köpfen.", "Schreibe: Stimmt, was der Adlige sagt? Nach Ständen …, nach Köpfen … Deshalb … (nenne eine Zahl).", "Vergleiche mit deiner Vermutung vom Anfang."], "4 Minuten · allein · leise",
+    "Gelenk: „Ihr habt abgestimmt, Klerus, Adel und Dritter Stand (Bauern und Bürger). Jetzt seht ihr, was herausgekommen ist.“ Ansage: „Stifte liegen. Ihr hört nur zu. Hier ist das Ergebnis.“ Die Matrix steht an der Tafel (Ja-Zahlen je Stand für A und B). Dann: „Jetzt arbeitet ihr allein. Die Aufgabe steht rechts.“ Zuerst rechnen (etwa 1 Minute): Nach Ständen: Wie viele der drei Stände sagen Ja? Mindestens 2 von 3 = angenommen. Nach Köpfen: Alle Ja zusammenzählen (von allen 25), mehr als die Hälfte = angenommen. Dann ins Heft (etwa 3 Minuten): zuerst die beiden Ergebnisse, dann die Antwort auf die Stundenfrage („Kann der Dritte Stand die Politik einfach wegstimmen?“) und der Vergleich mit der Vermutung vom Anfang. Wenn die Zeit knapp ist, genügen die Ergebnisse und ein Urteilssatz. Heft-Stichprobe: durch die Reihen gehen, bei 4 bis 6 Personen mitlesen, nicht kommentieren (unbenotet). Erwartung (bei A und B gleich): Nach Ständen 1 von 3 Ständen Ja, abgelehnt. Nach Köpfen 18 von 25 Ja, angenommen (echte Zahlen gelten). Dieselben Stimmen, ein anderes Ergebnis. Warum: Klerus und Adel stimmten gleich, jeder Stand hat nur eine Stimme. Antwort mit Zahl, z. B. „Nein, das stimmt nicht, weil Klerus und Adel zusammen 2 von 3 Stimmen haben, obwohl sie nur etwa 3 % der Menschen sind“ oder „Nur nach Köpfen hätte der Dritte Stand (Bauern und Bürger) gewonnen: 18 von 25“. Die Antwort wird nicht vorgegeben. Einordnung (ein Satz): Im Spiel stimmen Klerus und Adel immer gleich. Historisch waren die Stände nicht immer einheitlich (viele einfache Pfarrer unterstützten den Dritten Stand), bei der Abstimmungsregel hielten die Privilegierten aber oft zusammen. In Frankreich sind Klerus und Adel zusammen ca. 3 % der Menschen (ca. 150 000 und ca. 500 000 von ca. 20,65 Millionen).");
   phaseTag(s, 4);
 }
 
-// ============ 11 Matrix ausgefüllt ============
+// ============ 12 Matrix ausgefüllt ============
 {
-  const s = blank("A · Auswerten · Kontrolle", "Dieselben Stimmen, zwei Regeln", 4, "Kontrolle (1 Minute). Ansage: „Vergleicht und verbessert mit Grün.“ Die Zahlen aus der Klasse gelten, die Folie zeigt die erwartete Matrix (Klerus 3, Adel 4, Dritter Stand 18). Gelenk: „Der Dritte Stand (Bauern und Bürger) wurde nach Ständen überstimmt, obwohl er fast alle Menschen vertritt. Was würdet ihr einem Freund raten, der auch Bauer ist?“ Vereinfachung im Spiel: Klerus und Adel stimmen immer gleich; die Anträge sind Spielanträge.");
+  const s = blank("A · Auswerten · Kontrolle", "Dieselben Stimmen, zwei Regeln", 4, "Kontrolle (1 Minute). Ansage: „Vergleicht und verbessert mit Grün.“ Die Zahlen aus der Klasse gelten, die Folie zeigt die erwartete Matrix (Klerus 3, Adel 4, Dritter Stand 18). Gelenk: „Klerus und Adel sagen, der Dritte Stand soll einfach abstimmen. Nach Ständen verliert er immer, obwohl er fast alle Menschen vertritt. Was rät man ihm jetzt?“ Vereinfachung im Spiel: Klerus und Adel stimmen immer gleich; die Anträge sind Spielanträge.");
   const cols = [["Antrag", 1.25, NAVY], ["Klerus", 1.8, KLERUS], ["Adel", 1.8, ADEL], ["Dritter Stand", 2.1, DRITTER], ["Ergebnis nach Ständen", 2.6, NAVY], ["Ergebnis nach Köpfen", 2.6, NAVY]];
   let x0 = 0.6;
   const xs = cols.map(([, w]) => { const v = x0; x0 += w; return v; });
@@ -290,13 +298,13 @@ const IMG = "../material/";
   bar(s, [{ text: "Jetzt: ", options: { bold: true } }, { text: "Vergleiche und verbessere mit Grün.", options: {} }]);
 }
 
-// ============ 12 Abschlussfrage Freund (Bauer) ============
+// ============ 13 Abschlussfrage Freund (Bauer) ============
 {
-  const s = blank("A · Auswerten", "Abschlussfrage: Erkläre es deinem Freund", 4,"Ansage: „Stifte liegen. Ihr hört nur zu. Das ist die letzte Aufgabe. Denkt zehn Sekunden nach. Ich rufe euch auf.“ Die Antwort kommt mündlich (Blitzlicht, 4 bis 6 Personen unterschiedlichen Niveaus gezielt aufrufen, kein Kommentar), kein Schnipsel, kein Schreiben. Es gibt mehrere gute Antworten, geprüft wird die Begründung: eine Position, ein Sachargument aus der Stunde, ein „weil“. Der Freund ist selbst Bauer, es geht um einen Rat unter Freunden, nicht um Gefahr. Erwartung (Auswahl, keine Musterlösung): ANSCHLIESSEN: Der Dritte Stand (Bauern und Bürger) sind fast alle Menschen (Sieyès: ALLES); die Bauern tragen Steuern und Abgaben, Klerus und Adel zahlen kaum; gemeinsam sind sie stark, ihre Vertreter bilden die Nationalversammlung; mit einer Verfassung entscheidet der König nicht mehr allein; wer abseits steht, hat keine Stimme. ABWARTEN: Die Ernte und die Familie brauchen Zeit und Kraft; es ist unklar, ob der König nachgibt; Veränderungen dauern lange; man kann die Vertreter erst beobachten. Zwischenlösung (die Beschwerden mitunterschreiben, aber weiterarbeiten) ist begründbar. Form nach Verlauf: Blitzlicht oder Rat-Duell zu zweit (leise). Transfer später: Das Muster „Erkläre deinem Freund, warum …“ funktioniert in jeder Epoche (Wahlen, Widerstand, Beitritt zu einer Bewegung). Gezielt aufrufen, nicht kommentieren (unbenotet). Die Figuren sind Zeichnungen, keine historischen Porträts.");
+  const s = blank("A · Auswerten", "Abschlussfrage: Was rätst du ihm?", 4,"Ansage: „Stifte liegen. Ihr hört nur zu. Das ist die letzte Aufgabe. Denkt zehn Sekunden nach. Ich rufe euch auf.“ Die Antwort kommt mündlich (Blitzlicht, 4 bis 6 Personen unterschiedlichen Niveaus gezielt aufrufen, kein Kommentar), kein Schnipsel, kein Schreiben. Es gibt mehrere gute Antworten, geprüft wird die Begründung: eine Position, ein Sachargument aus der Stunde, ein „weil“. Der Bauer gehört zum Dritten Stand und hat die Abstimmung verloren. Es geht um einen Rat, nicht um Gefahr. Erwartung (Auswahl, keine Musterlösung): SICH ALS NATIONALVERSAMMLUNG ERKLÄREN (so geschah es 1789): Sie vertreten fast alle Menschen (Sieyès: ALLES); nach Ständen verlieren sie immer; gemeinsam sind sie stark; so entscheidet der König nicht mehr allein. NACH KÖPFEN ABSTIMMEN FORDERN und weiter verhandeln. STEUERN VERWEIGERN oder ABWARTEN: unklar, ob der König nachgibt; Verhandeln kostet Zeit. Zwischenlösungen sind begründbar. Form nach Verlauf: Blitzlicht oder Rat-Duell zu zweit (leise). Der Rat ist offen: Das Text-Ergebnis (Nationalversammlung) kann, muss aber nicht genannt werden. Transfer später: Das Muster „Erkläre deinem Freund, warum …“ funktioniert in jeder Epoche (Wahlen, Widerstand, Beitritt zu einer Bewegung). Gezielt aufrufen, nicht kommentieren (unbenotet). Die Figuren sind Zeichnungen, keine historischen Porträts.");
   s.addImage({ path: IMG + "bauer.png", x: 0.55, y: 1.45, w: 2.9, h: 4.19 });
-  txt(s, "Dein Freund", { x: 0.55, y: 5.6, w: 2.9, h: 0.4, fontFace: HEAD, fontSize: 27, bold: true, align: "center" });
+  txt(s, "Ein Bauer", { x: 0.55, y: 5.6, w: 2.9, h: 0.4, fontFace: HEAD, fontSize: 27, bold: true, align: "center" });
   bubble(s, 4.0, 1.5, 8.75, 1.95, WHITE, NAVY, "left", 2.5);
-  txt(s, "„Die Abgeordneten des Dritten Standes (Bauern und Bürger) wollen eine Verfassung. Soll ich mich ihnen anschließen? Ich habe doch genug mit der Ernte zu tun.“", { x: 4.3, y: 1.5, w: 8.2, h: 1.95, fontFace: HEAD, fontSize: 26, bold: true, color: NAVY, valign: "middle" });
+  txt(s, "„Wir sind fast alle, aber nach Ständen haben wir nur eine von drei Stimmen. Was sollen wir jetzt tun?“", { x: 4.3, y: 1.5, w: 8.2, h: 1.95, fontFace: HEAD, fontSize: 26, bold: true, color: NAVY, valign: "middle" });
   bubble(s, 4.0, 3.75, 7.1, 1.6, "FDF1D8", GOLD, "right", 4.55);
   txt(s, "Du erklärst:  „Ich rate dir, …, weil …“", { x: 4.3, y: 3.75, w: 6.6, h: 1.6, fontFace: HEAD, fontSize: 26, bold: true, color: NAVY, valign: "middle" });
   s.addImage({ path: IMG + "berater.png", x: 11.75, y: 3.4, w: 1.3, h: 1.8 });
@@ -306,13 +314,13 @@ const IMG = "../material/";
     s.addText([{ text: lab, options: { bold: true, fontFace: HEAD, fontSize: 27, color: NAVY } }], { isTextBox: true, x: xx + 0.1, y: 5.55, w: ww - 0.2, h: 0.62, valign: "middle", align: "center", margin: 0 });
     return xx + ww + 0.2;
   }, 4.0);
-  bar(s, [{ text: "Zeit: ", options: { bold: true } }, { text: "2 Minuten · erst denken, dann mündlich      ", options: {} }, { text: "Alle denken mit.", options: { italic: true, color: ICE } }]);
+  bar(s, [{ text: "Zeit: ", options: { bold: true } }, { text: "3 Minuten · erst denken, dann mündlich      ", options: {} }, { text: "Alle denken mit.", options: { italic: true, color: ICE } }]);
 }
 
-// ============ 13 Ziele prüfen ============
+// ============ 14 Ziele prüfen ============
 {
-  const s = blank("A · Auswerten", "Haben wir die Ziele erreicht?", 4, "Die Klasse prüft still: Kann ich das? Danach Folie 14. Keine Antworten ins Plenum, keine Abfrage von Selbsteinschätzungen (30 Sekunden). Wenn Ziel 3 (*) nicht mehr geschafft wurde, kommt es als Wiederholung in Stunde 3.");
-  [["Ich kann erklären, wie die Stände den Dritten Stand (Bauern und Bürger) überstimmen können."], ["Ich kann die Abstimmung nach Ständen beurteilen und mein Urteil begründen."], ["Ich kann am Zeitstrahl erklären, wie sich der Dritte Stand zur Nationalversammlung erklärte.*"]].forEach(([x], i) => {
+  const s = blank("A · Auswerten", "Haben wir die Ziele erreicht?", 4, "Die Klasse prüft still: Kann ich das? Danach Folie 15. Keine Antworten ins Plenum, keine Abfrage von Selbsteinschätzungen (30 Sekunden). Wenn Ziel 3 (*) nicht mehr geschafft wurde, kommt es als Wiederholung in Stunde 3.");
+  [["Ich kann erklären, wie die Stände den Dritten Stand (Bauern und Bürger) überstimmen können."], ["Ich kann beurteilen, ob der Dritte Stand die Politik durch Abstimmen ändern kann, und das mit einer Zahl begründen."], ["Ich kann am Zeitstrahl erklären, wie sich der Dritte Stand wehrt.*"]].forEach(([x], i) => {
     const y = 1.7 + i * 1.4;
     box(s, 0.6, y, 12.15, 1.15, i % 2 ? LIGHT : LIGHT2);
     s.addShape(pres.shapes.OVAL, { x: 0.9, y: y + 0.3, w: 0.55, h: 0.55, fill: { color: WHITE }, line: { color: NAVY, width: 2 } });
@@ -321,7 +329,7 @@ const IMG = "../material/";
   bar(s, [{ text: "Jetzt: ", options: { bold: true } }, { text: "Schau auf die Ziele. Haben wir sie erreicht?", options: {} }]);
 }
 
-// ============ 14 Ausblick ============
+// ============ 15 Ausblick ============
 {
   const s = blank("A · Auswerten · Ausblick", "Wie geht es weiter?", 4, "Folie nur lesen (30 Sekunden). Ausblick: Anfang Juli zieht der König Soldaten um Paris zusammen und entlässt seinen Finanzminister. In Paris wächst die Angst. Das sehen wir in der nächsten Stunde (Bastille, Ende der Vorrechte, Menschenrechte).");
   box(s, 0.6, 1.8, 12.15, 2.0, NAVY);
