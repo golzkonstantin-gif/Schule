@@ -20,8 +20,8 @@ const box = () => p(t("□", { size: 26 }), { after: 0, align: AlignmentType.CEN
 // Druck
 const DW = [550, 3500, 1700, 4456];
 const druck = [
-  ["Druckvorlage Karten, Beobachtungsbogen, Rollenkarten: Seite 1 und 2 (Standeskarten)", "je 1 Seite: 24 Karten ausschneiden (3 Klerus, 4 Adel, 17 Dritter Stand, davon 1 Reserve)", "Druckvorlage_Karten_Beobachtungsbogen_8D.pdf, Seite 1 und 2"],
-  ["Beobachtungsbogen (Seite 3, ein A4 pro Person)", "26 Blatt (25 + 1 Reserve), einseitig, tintensparend", "Gleiche Datei, Seite 3, 26-mal drucken (Bogen liegt mit der Karte auf dem Platz)"],
+  ["Druckvorlage Karten, Beobachtungszettel, Rollenkarten: Seite 1 und 2 (Standeskarten)", "je 1 Seite: 24 Karten ausschneiden (3 Klerus, 4 Adel, 17 Dritter Stand, davon 1 Reserve)", "Druckvorlage_Karten_Beobachtungszettel_8D.pdf, Seite 1 und 2"],
+  ["Beobachtungszettel (Seite 3, vier pro A4)", "7 Blatt, in 4 Zettel schneiden (28 Zettel: 25 + 3 Reserve), tintensparend", "Gleiche Datei, Seite 3, 7-mal drucken (Zettel liegt mit der Karte auf dem Platz)"],
   ["Rollenkarten Wahlleitung und Schriftführung (Seite 4)", "1 Blatt, in der Mitte teilen", "Gleiche Datei, Seite 4; vorab den zwei Personen geben"],
   ["Text mit Zeitstrahl „Der Dritte Stand handelt“", "27 (25 + 2 Reserve), einseitig A4", "Arbeitsblatt_Der_Dritte_Stand_handelt.pdf (unverändert wie 8C)"],
   ["Lösung Text mit Zeitstrahl (für dich)", "1 Blatt", "Loesung_Arbeitsblatt_Der_Dritte_Stand_handelt.pdf"],
@@ -31,8 +31,8 @@ const prep = [
   ["Tafelskript ausdrucken oder auf dem Tablet bereithalten", "Tafelskript_Stunde2_Nationalversammlung_8D.pdf, 5 Seiten"],
   ["Folien öffnen und einmal durchklicken", "Praesentation_Stunde2_Nationalversammlung_8D.pptx, 15 Folien (27 Punkt); Folie 1 steht beim Betreten da"],
   ["Rollen verteilen", "Wahlleitung und Schriftführung zuerst ansprechen (zwei zuverlässige, rechensichere Personen, nicht stimmberechtigt), Rollenkarte geben. Klerus 3 und Adel 4 gezielt wählen, Rest Dritter Stand; Tabelle unten ausfüllen (ohne Namen, nur Platznummern)"],
-  ["Karten und Bögen auf die Plätze legen", "Karte verdeckt, Bogen daneben; Reservekarten und -bögen am Pult"],
-  ["Abstimmung: Sie sind nur Sicherheitsnetz", "Offene Abstimmung per Handzeichen: Die Wahlleitung ruft die Stände auf und zählt die Hände, die Schriftführung schreibt an die Tafel, alle anderen tragen auf dem Bogen ein. Nach 4 Minuten ohne Ergebnis helfen"],
+  ["Karten und Bögen auf die Plätze legen", "Karte verdeckt, Zettel daneben; Reservekarten und -bögen am Pult"],
+  ["Abstimmung: Sie sind nur Sicherheitsnetz", "Offene Abstimmung per Handzeichen: Die Wahlleitung ruft die Stände auf und zählt die Hände, die Schriftführung schreibt an die Tafel, alle anderen tragen auf dem Zettel ein. Nach 4 Minuten ohne Ergebnis helfen"],
   ["Kreide, Grün zum Verbessern, Uhr oder Timer", "Kurzstunde: 25 Minuten, kein Puffer; Phase 4 „Auswerten“ ist fest"],
 ];
 // Tafel
@@ -64,7 +64,7 @@ d.push(table(RW, [hdr(["Stand", "Anzahl", "Plätze"], RW), ...rolle.map(([a, b, 
 d.push(p(t("Wenn Schülerinnen oder Schüler fehlen: Klerus bleibt 3, Adel bleibt 4, Wahlleitung und Schriftführung bleiben. Klerus und Adel dürfen zusammen nie mehr als ein Drittel der Klasse sein.", { size: 19, italics: true, color: MUTED }), { before: 60 }));
 
 d.push(h2("5 Kurz vor Beginn (5 Minuten)"));
-["Folie 1 steht, Beamer an", "Karten liegen verdeckt auf den Plätzen, daneben der Bogen; Wahlleitung und Schriftführung haben ihre Rollenkarte", "Seitentafel, Rahmen für die Abstimmung und Datumsliste an der Tafel", "Textblätter liegen bereit (noch nicht austeilen); die Abschlussfrage läuft mündlich", "Ansagen im Kopf: „Stifte liegen. Ihr hört nur zu.“ · „Jetzt stimmt ihr offen ab. Die Wahlleitung führt, alle anderen beobachten und schreiben auf.“"].forEach((x) => d.push(p([t("□  ", { size: 24 }), t(x, { size: 20 })], { after: 50 })));
+["Folie 1 steht, Beamer an", "Karten liegen verdeckt auf den Plätzen, daneben der Zettel; Wahlleitung und Schriftführung haben ihre Rollenkarte", "Seitentafel, Rahmen für die Abstimmung und Datumsliste an der Tafel", "Textblätter liegen bereit (noch nicht austeilen); die Abschlussfrage läuft mündlich", "Ansagen im Kopf: „Stifte liegen. Ihr hört nur zu.“ · „Jetzt stimmt ihr offen ab. Die Wahlleitung führt, alle anderen beobachten und schreiben auf.“"].forEach((x) => d.push(p([t("□  ", { size: 24 }), t(x, { size: 20 })], { after: 50 })));
 
 (async () => {
   const doc = new Document({ styles: { default: { document: { run: { font: "Calibri", size: 21 } } } }, sections: [{ properties: { page: { size: { width: 11906, height: 16838 }, margin: { top: 800, bottom: 700, left: 850, right: 850 } } }, footers: { default: footer }, children: d }] });

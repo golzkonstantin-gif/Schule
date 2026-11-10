@@ -32,43 +32,27 @@ function page(list) {
 const pg1 = [["K"], ["K"], ["K"], ["A"], ["A"], ["A"], ["A"], ["D"], ["D"], ["D"], ["D"], ["D"]];
 const pg2 = [...Array(11).fill(["D"]), ["D", true]];
 
-// ---- Beobachtungsbogen (ein A4 pro Person, übersichtlich) ----
-const LN = (txt, edge) => p(t(txt, { font: "Cambria", size: 26, bold: true, color: NAVY }), { before: 200, after: 70, border: { bottom: { style: BorderStyle.SINGLE, size: 10, color: edge || "B9C0D4", space: 3 } } });
-const cc = (txt, o = {}) => new TableCell({ children: [p(t(txt, { size: o.size || 22, bold: o.bold, color: o.color }), { after: 0, align: o.align || AlignmentType.CENTER })], width: { size: o.w, type: WidthType.DXA }, borders: { top: thin, bottom: thin, left: thin, right: thin }, margins: { top: 60, bottom: 60, left: 80, right: 80 }, verticalAlign: VerticalAlign.CENTER, columnSpan: o.span });
-const jn = (w) => cc("Ja ____   Nein ____", { w, size: 20, color: "8A96B5" });
-function bogen() {
-  const W3 = [1100, 2100, 2100, 2300, 1500, 1600];
-  const staende = new Table({ width: { size: W3.reduce((x, y) => x + y, 0), type: WidthType.DXA }, columnWidths: W3, rows: [
-    new TableRow({ children: [cc("Antrag", { w: W3[0], bold: true }), cc("Klerus", { w: W3[1], bold: true, color: "6B4A9E" }), cc("Adel", { w: W3[2], bold: true, color: "B9791A" }), cc("Dritter Stand", { w: W3[3], bold: true, color: "2F6AAE" }), cc("Stände dafür", { w: W3[4], bold: true }), cc("Ergebnis", { w: W3[5], bold: true })] }),
-    ...["A", "B"].map((x) => new TableRow({ height: { value: 780, rule: HeightRule.ATLEAST }, children: [cc(x, { w: W3[0], bold: true, size: 26 }), jn(W3[1]), jn(W3[2]), jn(W3[3]), cc("___ von 3", { w: W3[4], size: 20, color: "8A96B5" }), cc("", { w: W3[5] })] })),
+// ---- Beobachtungszettel (Schnipsel, drei pro A4) ----
+const cc = (txt, o = {}) => new TableCell({ children: [p(t(txt, { size: o.size || 20, bold: o.bold, color: o.color }), { after: 0, align: o.align || AlignmentType.CENTER })], width: { size: o.w, type: WidthType.DXA }, borders: { top: thin, bottom: thin, left: thin, right: thin }, margins: { top: 40, bottom: 40, left: 60, right: 60 }, verticalAlign: VerticalAlign.CENTER, columnSpan: o.span });
+const jn = (w) => new TableCell({ children: [p(t("Ja", { size: 16, color: "8A96B5" }), { after: 60 }), p(t("Nein", { size: 16, color: "8A96B5" }), { after: 0 })], width: { size: w, type: WidthType.DXA }, borders: { top: thin, bottom: thin, left: thin, right: thin }, margins: { top: 30, bottom: 30, left: 80, right: 60 }, verticalAlign: VerticalAlign.CENTER });
+function zettel() {
+  const BW = [850, 1400, 1400, 1500, 1400, 1100, 1100, 1400];
+  const tbl = new Table({ width: { size: BW.reduce((x, y) => x + y, 0), type: WidthType.DXA }, columnWidths: BW, rows: [
+    new TableRow({ children: [cc("", { w: BW[0] }), cc("Nach Ständen (jeder Stand eine Stimme)", { w: BW[1] + BW[2] + BW[3] + BW[4], span: 4, bold: true, size: 17 }), cc("Nach Köpfen (jede Hand)", { w: BW[5] + BW[6] + BW[7], span: 3, bold: true, size: 17 })] }),
+    new TableRow({ children: [cc("Antrag", { w: BW[0], bold: true, size: 16 }), cc("Klerus", { w: BW[1], bold: true, size: 17, color: "6B4A9E" }), cc("Adel", { w: BW[2], bold: true, size: 17, color: "B9791A" }), cc("Dritter Stand", { w: BW[3], bold: true, size: 17, color: "2F6AAE" }), cc("Ergebnis", { w: BW[4], bold: true, size: 17 }), cc("Ja", { w: BW[5], bold: true, size: 17 }), cc("Nein", { w: BW[6], bold: true, size: 17 }), cc("Ergebnis", { w: BW[7], bold: true, size: 17 })] }),
+    ...["A", "B"].map((x) => new TableRow({ height: { value: 620, rule: HeightRule.ATLEAST }, children: [cc(x, { w: BW[0], bold: true, size: 24 }), jn(BW[1]), jn(BW[2]), jn(BW[3]), cc("", { w: BW[4] }), cc("", { w: BW[5] }), cc("", { w: BW[6] }), cc("", { w: BW[7] })] })),
   ] });
-  const W4 = [1100, 3000, 3000, 3600];
-  const koepfe = new Table({ width: { size: W4.reduce((x, y) => x + y, 0), type: WidthType.DXA }, columnWidths: W4, rows: [
-    new TableRow({ children: [cc("Antrag", { w: W4[0], bold: true }), cc("Ja (alle zusammen)", { w: W4[1], bold: true }), cc("Nein (alle zusammen)", { w: W4[2], bold: true }), cc("Ergebnis", { w: W4[3], bold: true })] }),
-    ...["A", "B"].map((x) => new TableRow({ height: { value: 780, rule: HeightRule.ATLEAST }, children: [cc(x, { w: W4[0], bold: true, size: 26 }), cc("", { w: W4[1] }), cc("", { w: W4[2] }), cc("", { w: W4[3] })] })),
-  ] });
-  const frage = (n, txt) => [p([t(n + "  ", { size: 23, bold: true, color: RED }), t(txt, { size: 23 })], { before: 120, after: 0 }), p(t("_".repeat(104), { size: 22, color: "8A96B5" }), { before: 110, after: 0 }), p(t("_".repeat(104), { size: 22, color: "8A96B5" }), { before: 110, after: 0 })];
   return [
-    p([t("BEOBACHTUNGSBOGEN · GESCHICHTE 8D", { size: 16, bold: true, color: MUTED })], { after: 10 }),
-    p(t("Abstimmung der Stände", { font: "Cambria", size: 40, bold: true, color: NAVY }), { after: 40 }),
-    p([t("A  ", { size: 22, bold: true, color: RED }), t("Auch Adel und Klerus zahlen künftig Steuern.", { size: 22 })], { after: 20 }),
-    p([t("B  ", { size: 22, bold: true, color: RED }), t("Die Stände werden abgeschafft. Alle haben gleiche Rechte.", { size: 22 })], { after: 20 }),
-    LN("1  Vorab: Mein Stand und meine Stimme", "3F7CC4"),
-    p([t("Mein Stand:   ", { size: 23, bold: true }), t("□ Klerus      □ Adel      □ Dritter Stand", { size: 23 })], { before: 60, after: 60 }),
-    p([t("Meine Stimme:   ", { size: 23, bold: true }), t("Antrag A   □ Ja   □ Nein            Antrag B   □ Ja   □ Nein", { size: 23 })], { after: 0 }),
-    LN("2  Beobachten: Nach Ständen (jeder Stand hat eine Stimme)", "E8A33D"),
-    p(t("Trage ein, was die Wahlleitung ausruft. Mehrheit im Stand = Ja oder Nein des Standes. Mindestens 2 von 3 Ständen Ja = angenommen.", { size: 19, italics: true, color: MUTED }), { after: 60 }),
-    staende,
-    LN("3  Beobachten: Nach Köpfen (jede Hand zählt einzeln)", "8E6BBE"),
-    p(t("Alle Ja-Stimmen und alle Nein-Stimmen zusammen. Mehr Ja = angenommen.", { size: 19, italics: true, color: MUTED }), { after: 60 }),
-    koepfe,
-    LN("4  Auswerten", "D9534F"),
-    ...frage("a", "Wie haben Klerus und Adel abgestimmt? Warum?"),
-    ...frage("b", "Vergleiche bei Antrag A: Was ist nach Ständen anders als nach Köpfen?"),
-    ...frage("c*", "Beurteile die Regel „Jeder Stand hat eine Stimme“. Ich finde sie …, weil … (nenne eine Zahl)"),
+    p([t("BEOBACHTUNGSZETTEL · GESCHICHTE 8D   ", { size: 15, bold: true, color: MUTED }), t("Abstimmung der Stände", { font: "Cambria", size: 26, bold: true, color: NAVY })], { after: 50 }),
+    p([t("Mein Stand:  ", { size: 20, bold: true }), t("□ Klerus   □ Adel   □ Dritter Stand", { size: 20 }), t("          Meine Stimme (vorab):  ", { size: 20, bold: true }), t("A □ Ja □ Nein      B □ Ja □ Nein", { size: 20 })], { after: 60 }),
+    tbl,
+    p(t("Trage ein, was die Wahlleitung ausruft. Nach Ständen: mindestens 2 von 3 Ständen Ja = angenommen. Nach Köpfen: mehr Ja = angenommen.", { size: 16, italics: true, color: MUTED }), { before: 40, after: 0 }),
   ];
 }
-const bogenPage = new Table({ width: { size: W, type: WidthType.DXA }, columnWidths: [W], rows: [new TableRow({ cantSplit: true, children: [new TableCell({ children: bogen(), width: { size: W, type: WidthType.DXA }, borders: { top: none, bottom: none, left: none, right: none }, margins: { top: 0, bottom: 0, left: 120, right: 120 }, verticalAlign: VerticalAlign.TOP })] })] });
+function zettelCell() {
+  return new TableCell({ children: zettel(), width: { size: W, type: WidthType.DXA }, borders: { top: dash, bottom: dash, left: dash, right: dash }, margins: { top: 80, bottom: 60, left: 170, right: 170 }, verticalAlign: VerticalAlign.TOP });
+}
+const bogenPage = new Table({ width: { size: W, type: WidthType.DXA }, columnWidths: [W], rows: [0, 1, 2, 3].map(() => new TableRow({ cantSplit: true, height: { value: 3450, rule: HeightRule.EXACT }, children: [zettelCell()] })) });
 
 const g = (txt, o = {}) => new TableCell({ children: [p(t(txt, { size: o.size || 19, bold: o.bold, color: o.color }), { after: 0, align: o.align || AlignmentType.CENTER })], width: { size: o.w, type: WidthType.DXA }, borders: { top: thin, bottom: thin, left: thin, right: thin }, margins: { top: 30, bottom: 30, left: 50, right: 50 }, verticalAlign: VerticalAlign.CENTER, columnSpan: o.span });
 // ---- Rollenkarten Wahlleitung und Schriftführung ----
@@ -116,6 +100,6 @@ const brk = () => new Paragraph({ children: [new PageBreak()] });
   const doc = new Document({ styles: { default: { document: { run: { font: "Calibri", size: 22 } } } }, sections: [{ properties: { page: { size: { width: 11906, height: 16838 }, margin: { top: 450, bottom: 450, left: 600, right: 600 } } }, children: [
     page(pg1), brk(), page(pg2), brk(), bogenPage, brk(), ...seite4,
   ] }] });
-  fs.writeFileSync("../Druckvorlage_Karten_Beobachtungsbogen_8D.docx", await Packer.toBuffer(doc));
+  fs.writeFileSync("../Druckvorlage_Karten_Beobachtungszettel_8D.docx", await Packer.toBuffer(doc));
   console.log("ok");
 })();

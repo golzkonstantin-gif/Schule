@@ -166,7 +166,7 @@ const IMG = "../material/";
     txt(s, x, { x: 1.85, y: 4.42 + i * 0.52, w: 10.3, h: 0.46, fontSize: 27, color: WHITE, valign: "middle" });
   });
   txt(s, "Geschichte, Klasse 8D · Französische Revolution · Stunde 2", { x: 0.9, y: 6.7, w: 8, h: 0.3, fontSize: 13, color: ICE });
-  s.addNotes("Die Folie steht beim Betreten. Niemand muss etwas sagen. Auf jedem Platz liegen eine Standeskarte (verdeckt) und ein Beobachtungsbogen. Wahlleitung und Schriftführung (zwei zuverlässige, rechensichere Schülerinnen oder Schüler, nicht stimmberechtigt) haben ihre Rollenkarte vorab erhalten und lesen sie still. Ansage: „Stifte liegen. Ihr hört nur zu.“ Danach Folie 2, 3 und 4 in zusammen etwa 2 Minuten.");
+  s.addNotes("Die Folie steht beim Betreten. Niemand muss etwas sagen. Auf jedem Platz liegen eine Standeskarte (verdeckt) und ein Beobachtungszettel. Wahlleitung und Schriftführung (zwei zuverlässige, rechensichere Schülerinnen oder Schüler, nicht stimmberechtigt) haben ihre Rollenkarte vorab erhalten und lesen sie still. Ansage: „Stifte liegen. Ihr hört nur zu.“ Danach Folie 2, 3 und 4 in zusammen etwa 2 Minuten.");
 }
 
 // ============ 2 Erwartungen (Neue Autorität) ============
@@ -199,7 +199,7 @@ const IMG = "../material/";
 
 // ============ 4 Ablauf ============
 {
-  const s = blank("Ablauf", "So arbeiten wir heute", undefined, "Ablauf zeigen (30 Sekunden). Die Kreise oben rechts zeigen die Phase: A V I V A. Der Stern * bedeutet: wird eventuell nicht mehr geschafft (Ziel 3, Frage c auf dem Bogen). Insgesamt 25 Minuten.");
+  const s = blank("Ablauf", "So arbeiten wir heute", undefined, "Ablauf zeigen (30 Sekunden). Die Kreise oben rechts zeigen die Phase: A V I V A. Der Stern * bedeutet: wird eventuell nicht mehr geschafft (Ziel 3, Frage c auf dem Zettel). Insgesamt 25 Minuten.");
   const ph = [["A", "Ankommen", "Ziele", "3 Min."], ["V", "Vorwissen", "Abstimmung", "9 Min."], ["I", "Informieren", "Text", "6 Min."], ["V", "Verarbeiten", "Zeitstrahl", "3 Min."], ["A", "Auswerten", "Rat an Freund", "4 Min."]];
   ph.forEach(([l, n, x, m], i) => {
     const xx = 0.6 + i * 2.45;
@@ -229,22 +229,22 @@ const IMG = "../material/";
 
 // ============ 6 Ü1 Vorab ankreuzen ============
 {
-  const { s } = taskSlide("V · Vorwissen aktivieren · Übung 1", "Vorab: Deine Stimme", ["Drehe deine Karte um. Lies sie leise.", "Kreuze auf dem Bogen deinen Stand an.", "Kreuze deine Stimme bei A und B an.", "Zeige niemandem deine Karte."], "1 Minute · allein · leise",
+  const { s } = taskSlide("V · Vorwissen aktivieren · Übung 1", "Vorab: Deine Stimme", ["Drehe deine Karte um. Lies sie leise.", "Kreuze auf dem Zettel deinen Stand an.", "Kreuze deine Stimme bei A und B an.", "Zeige niemandem deine Karte."], "1 Minute · allein · leise",
     "Ansage: „Stifte liegen. Jetzt arbeitet ihr allein. Die Aufgabe steht rechts.“ Klerus und Adel stimmen nach ihrer Rolle (Vorrechte behalten), der Dritte Stand (Bauern und Bürger) nach seiner Überzeugung. Keine Absprache, keine Bewegung. Nach etwa einer Minute: „Stifte hinlegen. Wir stimmen jetzt ab.“ Notfall: Wer keine Karte hat, nimmt eine Reservekarte (Dritter Stand).");
   phaseTag(s, 1);
 }
 
 // ============ 7 Ü2 Abstimmung beobachten ============
 {
-  const { s } = taskSlide("V · Vorwissen aktivieren · Übung 2", "Wir stimmen ab: Du beobachtest", ["Die Wahlleitung ruft Stand und Antrag auf.", "Wer dafür ist, hebt die Hand. Alle anderen zählen mit.", "Trage die Zahlen auf deinem Bogen ein (Ja : Nein).", "Trage das Ergebnis ein, nach Ständen und nach Köpfen."], "4 Minuten · alle beobachten · leise",
-    "Ansage: „Stifte liegen. Jetzt stimmt ihr offen ab. Die Wahlleitung führt, die Schriftführung schreibt. Alle anderen beobachten und tragen die Zahlen auf dem Bogen ein.“ Ablauf: Die Wahlleitung ruft „Antrag A. Klerus: Wer ist dafür? Hand hoch.“, zählt die Hände und ruft laut aus „Antrag A, Klerus: Ja …, Nein …“, dann Adel und Dritter Stand, danach Antrag B. Ergebnis nach Ständen: mindestens 2 von 3 Ständen Ja = angenommen. Dann zählt die Wahlleitung alle Ja und alle Nein zusammen (nach Köpfen). Die Schriftführung schreibt an die Tafel, alle anderen auf den Bogen. Sie greifen nur im Notfall ein. Dauert das Zählen länger als 4 Minuten, helfen Sie. Erwartet: Klerus Nein (3), Adel Nein (4), Dritter Stand Ja (16) bei A und B. Nach Ständen 2 zu 1 abgelehnt, nach Köpfen 16 Ja, 7 Nein angenommen. Echte Zahlen gelten.");
+  const { s } = taskSlide("V · Vorwissen aktivieren · Übung 2", "Wir stimmen ab: Du beobachtest", ["Die Wahlleitung ruft Stand und Antrag auf.", "Wer dafür ist, hebt die Hand. Alle anderen zählen mit.", "Trage die Zahlen auf deinem Zettel ein (Ja : Nein).", "Trage das Ergebnis ein, nach Ständen und nach Köpfen."], "4 Minuten · alle beobachten · leise",
+    "Ansage: „Stifte liegen. Jetzt stimmt ihr offen ab. Die Wahlleitung führt, die Schriftführung schreibt. Alle anderen beobachten und tragen die Zahlen auf dem Zettel ein.“ Ablauf: Die Wahlleitung ruft „Antrag A. Klerus: Wer ist dafür? Hand hoch.“, zählt die Hände und ruft laut aus „Antrag A, Klerus: Ja …, Nein …“, dann Adel und Dritter Stand, danach Antrag B. Ergebnis nach Ständen: mindestens 2 von 3 Ständen Ja = angenommen. Dann zählt die Wahlleitung alle Ja und alle Nein zusammen (nach Köpfen). Die Schriftführung schreibt an die Tafel, alle anderen auf den Zettel. Sie greifen nur im Notfall ein. Dauert das Zählen länger als 4 Minuten, helfen Sie. Erwartet: Klerus Nein (3), Adel Nein (4), Dritter Stand Ja (16) bei A und B. Nach Ständen 2 zu 1 abgelehnt, nach Köpfen 16 Ja, 7 Nein angenommen. Echte Zahlen gelten.");
   phaseTag(s, 1);
 }
 
-// ============ 8 Ü3 Auswerten auf dem Bogen ============
+// ============ 8 Ü3 Auswerten auf dem Zettel ============
 {
-  const { s } = taskSlide("V · Vorwissen aktivieren · Übung 3", "Werte den Bogen aus", ["Wie haben Klerus und Adel abgestimmt? Warum? (Frage a)", "Vergleiche Antrag A nach Ständen und nach Köpfen. (Frage b)", "* Beurteile die Regel „Jeder Stand hat eine Stimme“ und nenne eine Zahl. (Frage c)"], "2 Minuten · allein · leise",
-    "Ansage: „Stifte liegen. Jetzt arbeitet ihr allein. Die Aufgabe steht rechts. Schreibt die Antworten unter Punkt 4 auf euren Bogen.“ Nach 90 Sekunden: „Noch eine halbe Minute.“ Frage c hat einen Stern und darf entfallen. Gezielte Abfrage nur bei Bedarf (2 bis 3 Personen, kein Gespräch): „Wie haben Klerus und Adel abgestimmt? Warum?“ Erwartung: a gleich (Nein), denn sie wollen ihre Vorrechte behalten, ihre Interessen sind deckungsgleich. b nach Ständen abgelehnt, nach Köpfen angenommen. c offenes Urteil mit Zahl (mehrere gute Antworten), z. B. „Ich finde die Regel ungerecht, weil der Dritte Stand (Bauern und Bürger) ca. 97 % der Menschen stellt, aber nur 1 von 3 Stimmen hat“ oder „Ich finde sie nachvollziehbar, weil jeder Stand als Gruppe zählt, aber die Zahl 97 % zeigt ein Problem“. Das Urteil wird nicht vorgegeben. Einordnung (ein Satz): Im Spiel stimmen Klerus und Adel immer gleich. Historisch waren die Stände nicht immer einheitlich (viele einfache Pfarrer unterstützten den Dritten Stand), bei der Abstimmungsregel hielten die Privilegierten aber oft zusammen. In Frankreich sind Klerus und Adel zusammen ca. 3 % der Menschen (ca. 150 000 und ca. 500 000 von ca. 20,65 Millionen).");
+  const { s } = taskSlide("V · Vorwissen aktivieren · Übung 3", "Werte die Abstimmung aus", ["Wie haben Klerus und Adel abgestimmt? Warum? (Frage a)", "Vergleiche Antrag A nach Ständen und nach Köpfen. (Frage b)", "* Beurteile die Regel „Jeder Stand hat eine Stimme“ und nenne eine Zahl. (Frage c)"], "2 Minuten · allein · leise",
+    "Ansage: „Stifte liegen. Jetzt arbeitet ihr allein. Die Aufgabe steht rechts. Schreibt die Antworten ins Heft.“ Nach 90 Sekunden: „Noch eine halbe Minute.“ Frage c hat einen Stern und darf entfallen. Gezielte Abfrage nur bei Bedarf (2 bis 3 Personen, kein Gespräch): „Wie haben Klerus und Adel abgestimmt? Warum?“ Erwartung: a gleich (Nein), denn sie wollen ihre Vorrechte behalten, ihre Interessen sind deckungsgleich. b nach Ständen abgelehnt, nach Köpfen angenommen. c offenes Urteil mit Zahl (mehrere gute Antworten), z. B. „Ich finde die Regel ungerecht, weil der Dritte Stand (Bauern und Bürger) ca. 97 % der Menschen stellt, aber nur 1 von 3 Stimmen hat“ oder „Ich finde sie nachvollziehbar, weil jeder Stand als Gruppe zählt, aber die Zahl 97 % zeigt ein Problem“. Das Urteil wird nicht vorgegeben. Einordnung (ein Satz): Im Spiel stimmen Klerus und Adel immer gleich. Historisch waren die Stände nicht immer einheitlich (viele einfache Pfarrer unterstützten den Dritten Stand), bei der Abstimmungsregel hielten die Privilegierten aber oft zusammen. In Frankreich sind Klerus und Adel zusammen ca. 3 % der Menschen (ca. 150 000 und ca. 500 000 von ca. 20,65 Millionen).");
   phaseTag(s, 1);
 }
 
