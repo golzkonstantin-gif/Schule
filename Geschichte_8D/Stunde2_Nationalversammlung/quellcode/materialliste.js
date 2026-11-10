@@ -32,13 +32,13 @@ const prep = [
   ["Folien öffnen und einmal durchklicken", "Praesentation_Stunde2_Nationalversammlung_8D.pptx, 15 Folien (27 Punkt); Folie 1 steht beim Betreten da"],
   ["Rollen verteilen", "Wahlleitung und Schriftführung zuerst ansprechen (zwei zuverlässige, rechensichere Personen, nicht stimmberechtigt), Rollenkarte geben. Klerus 3 und Adel 4 gezielt wählen, Rest Dritter Stand; Tabelle unten ausfüllen (ohne Namen, nur Platznummern)"],
   ["Karten und Bögen auf die Plätze legen", "Karte verdeckt, Zettel daneben; Reservekarten und -bögen am Pult"],
-  ["Abstimmung: Sie sind nur Sicherheitsnetz", "Offene Abstimmung per Handzeichen: Die Wahlleitung ruft die Stände auf und zählt die Hände, die Schriftführung schreibt an die Tafel, alle anderen tragen auf dem Zettel ein. Nach 4 Minuten ohne Ergebnis helfen"],
+  ["Abstimmung: Sie sind nur Sicherheitsnetz", "Offene Abstimmung per Handzeichen: Die Wahlleitung ruft die Stände auf und zählt nur die Ja-Hände, die Schriftführung schreibt an die Tafel, alle anderen tragen die Ja-Zahlen auf dem Zettel ein und rechnen danach selbst. Nach 4 Minuten ohne Ergebnis helfen"],
   ["Kreide, Grün zum Verbessern, Uhr oder Timer", "Kurzstunde: 25 Minuten, kein Puffer; Phase 4 „Auswerten“ ist fest"],
 ];
 // Tafel
 const tafel = [
   ["Seitentafel", "Ziele („Ich kann …“, 3 Sätze, Satz 3 mit *) und Ablauf: A Ankommen · V Abstimmung · I Text · V Zeitstrahl · A Rat an den Freund"],
-  ["Mitte", "Rahmen (Tabelle) für das Ergebnis, den die Schriftführung ausfüllt: Zeilen A und B; Spalten nach Ständen (Klerus, Adel, Dritter Stand, Ergebnis) und nach Köpfen (Ja, Nein, Ergebnis). Daneben Platz für den Zeitstrahl."],
+  ["Mitte", "Rahmen (Tabelle) für die Ja-Zahlen, den die Schriftführung ausfüllt: Zeilen Klerus (3), Adel (4), Dritter Stand (16); Spalten Stand, Personen, Ja. Daneben Platz für den Zeitstrahl."],
 ];
 
 const d = [];

@@ -42,13 +42,13 @@ const warum = (why, gelenk) => table([W - 20], [row([cell([p([t("Warum  ", { bol
 
 const d = [];
 d.push(kicker("Tafelskript für die Lehrkraft · Kurzstunde (25 Min.) · 25 Schülerinnen und Schüler · eine Lehrkraft · Mittwoch 11.11.2026"), h1("Abstimmung beobachten und der Dritte Stand handelt"));
-d.push(p(t("Ziel: Die Abstimmung aus Stunde 1, die nicht mehr geschafft wurde, wird jetzt erlebt: Die Klasse bildet drei Stände, stimmt zwei Anträge offen ab und beobachtet dabei, schreibt die Ergebnisse auf und wertet sie aus. Danach erarbeitet sie mit dem Text aus der 8C, wie der Dritte Stand (Bauern und Bürger) die Nationalversammlung gründet, bis zum Zusammenziehen der Truppen vor Paris. Gearbeitet wird mit nur drei Methoden (Beobachtungszettel, Text mit Zeitstrahl, Rat an den Freund), weil die 8C am 06.11. an zu vielen Methoden gelitten hat.", { size: 21, color: MUTED }), { after: 100 }));
+d.push(p(t("Ziel: Die Abstimmung aus Stunde 1, die nicht mehr geschafft wurde, wird jetzt erlebt: Die Klasse bildet drei Stände, stimmt einen Antrag offen ab, zählt dabei nur die Ja-Stimmen je Stand und rechnet danach selbst aus, wie die Abstimmung nach Ständen und nach Köpfen ausgeht. Danach erarbeitet sie mit dem Text aus der 8C, wie der Dritte Stand (Bauern und Bürger) die Nationalversammlung gründet, bis zum Zusammenziehen der Truppen vor Paris. Gearbeitet wird mit nur drei Methoden (Beobachtungszettel, Text mit Zeitstrahl, Rat an den Freund), weil die 8C am 06.11. an zu vielen Methoden gelitten hat.", { size: 21, color: MUTED }), { after: 100 }));
 
 d.push(h3("Kopf der Planung"));
 d.push(table([2600, 7606], [
   ["Ziel (Ich kann …)", "… erklären, wie die Stände den Dritten Stand (Bauern und Bürger) überstimmen können. … die Abstimmung nach Ständen beurteilen und das Urteil begründen. … am Zeitstrahl erklären, wie sich der Dritte Stand zur Nationalversammlung erklärte.*"],
-  ["Prüfaufgabe: Woran erkenne ich es?", "Beobachtungszettel ausgefüllt und ausgewertet, Frage a und b (Ziel 1), Frage c mit Urteil und Zahl (Ziel 2, mit *). Zeitstrahl bis „Anfang Juli: Soldaten um Paris“ (Ziel 3). Offene Abschlussfrage mündlich: Rat an den Freund mit Position, Sachargument und „weil“."],
-  ["Mindestziel", "Ziel 1 und 2. Ziel 3 und Frage c haben einen Stern. „Auswerten“ bleibt immer."],
+  ["Prüfaufgabe: Woran erkenne ich es?", "Beobachtungszettel ausgefüllt und ausgerechnet (Ziel 1), Heft: Ergebnisse und Beurteilung der Regel mit einer Zahl (Ziel 2). Zeitstrahl bis „Anfang Juli: Soldaten um Paris“ (Ziel 3). Offene Abschlussfrage mündlich: Rat an den Freund mit Position, Sachargument und „weil“."],
+  ["Mindestziel", "Ziel 1 und 2. Ziel 3 hat einen Stern. „Auswerten“ bleibt immer."],
   ["Beitrag zur Reihe", "Stunde 2 von 11 (Sequenz Französische Revolution). Sie schließt die Abstimmung aus Stunde 1 ab (Ursache des Streits) und führt zur Nationalversammlung und zum Ballhausschwur. Die Karikatur-Analyse und der Merksatz rücken in die Folgestunden (siehe Sequenz)."],
   ["Vorgehen", "Phase 1 direkt (Regel und Anträge vorgegeben, Zettel strukturiert die Beobachtung), Phase 2 und 3 indirekt (Text und Zeitstrahl selbst erarbeiten). Direkt oder indirekt wird je Phase entschieden."],
 ].map(([a, b]) => row([tc(a, 2600, { fill: LIGHT, bold: true }), tc(b, 7606)], 340))));
@@ -57,7 +57,7 @@ d.push(h3("Was aus der 8C und aus Stunde 1 übernommen und geändert wurde"));
 d.push(...bullets([
   "Rückmeldung 8C (06.11.): Für 45 Minuten waren es zu viele Methoden. Deshalb hier für 25 Minuten nur drei: Abstimmung mit Beobachtungszettel, Text mit Zeitstrahl, Abschlussfrage. Die Abschlussfrage läuft mündlich. Gestrichen oder verschoben: Buchstabenrätsel (Stunde 1 gelaufen, Begriffe bleiben im Heft), Merkbild, Merksatz zum Abschreiben, Karikatur-Dreischritt, Ballhausschwur-Bild.",
   "Rückmeldung 8D (04.11.): Die Abstimmung wurde nicht mehr geschafft, der Zeitstrahl lief gut. Deshalb steht die Abstimmung jetzt vorn, als Wiederholung des Unerledigten. Die Folie „Das ist mir wichtig“ kommt kurz wieder (hat motiviert).",
-  "Entscheidung der Lehrkraft: Zwei Anträge statt drei (A Steuern, B Stände abschaffen). Der Stimmzettel wird zum Beobachtungszettel: vorab ankreuzen, dann offen abstimmen, Zahlen und Ergebnisse eintragen, auswerten. Der Text bleibt wie in der 8C, mit Sieyès-Quelle und fünf Daten.",
+  "Entscheidung der Lehrkraft: Ein Antrag (A Steuern), Antrag B als Zusatz (*). Der Stimmzettel wird zum Beobachtungszettel: vorab ankreuzen, offen abstimmen, nur die Ja-Zahlen je Stand eintragen, danach selbst ausrechnen. Grund: Das gleichzeitige Zählen nach Ständen und nach Köpfen wäre zu kompliziert. Der Text bleibt wie in der 8C, mit Sieyès-Quelle und fünf Daten.",
   "Historische Vereinfachung: Klerus und Adel stimmen im Spiel immer gleich (Vorrechte behalten). Das ist verkürzt (siehe Prüfhinweise).",
 ]));
 
@@ -66,7 +66,7 @@ d.push(table([800, 2300, 4300, 2806], [
   row([th("Min.", 800), th("AVIVA", 2300), th("Phase", 4300), th("Arbeitsform", 2806)], 320),
   ...[["3", "Ankommen", "0  Ankommen, Ziele, „Das ist mir wichtig“", "still, allein"], ["9", "Vorwissen", "1  Abstimmung: vorab ankreuzen, beobachten, auswerten", "allein, Stände, Zettel"], ["6", "Informieren", "2  Text mit Sieyès-Quelle", "allein, leise"], ["3", "Verarbeiten", "3  Zeitstrahl bis Anfang Juli", "allein, Kontrolle per Folie"], ["4", "Auswerten", "4  Rat an den Freund, Ziele prüfen, Ausblick", "allein, gezielte Abfrage"]].map((r) => row(r.map((v, i) => tc(v, [800, 2300, 4300, 2806][i], { bold: i < 3 })), 320)),
 ]));
-d.push(note("ZEIT", "Die Stunde ist sehr knapp: Kein Puffer. Läuft die Abstimmung länger als 4 Minuten, entfallen Frage c (*) und die beiden ersten Zeitstrahl-Einträge. Phase 4 wird nicht gestrichen."));
+d.push(note("ZEIT", "Die Stunde ist sehr knapp: Kein Puffer. Läuft die Abstimmung länger als 4 Minuten, entfallen die Beurteilung (Phase 1c) und die beiden ersten Zeitstrahl-Einträge. Phase 4 wird nicht gestrichen."));
 
 d.push(h3("Lautstärke und Ansagen (wörtlich)"));
 d.push(table([4700, 5506], [
@@ -106,39 +106,39 @@ d.push(step("kommt an, arbeitet leise", {
 }));
 
 // Phase 1
-d.push(phase("1", "Abstimmung: vorab ankreuzen, beobachten, auswerten", 9, "AVIVA: Vorwissen aktivieren"));
-d.push(warum("Der in Stunde 1 nicht geschaffte Stoff wird nachgeholt: Die Klasse erlebt die Regel „jeder Stand eine Stimme“ selbst. Der Zettel lenkt das Beobachten (aufschreiben), damit alle aktiv sind und die Auswertung Daten hat (direkt: Regel und Anträge vorgegeben, Auswertung geführt).", "„Der Dritte Stand (Bauern und Bürger) macht in dieser Abstimmung eine Erfahrung. Gleich seht ihr, welche.“"));
+d.push(phase("1", "Abstimmung: vorab ankreuzen, zählen, ausrechnen", 9, "AVIVA: Vorwissen aktivieren"));
+d.push(warum("Der in Stunde 1 nicht geschaffte Stoff wird nachgeholt: Die Klasse erlebt die Regel „jeder Stand eine Stimme“ selbst. Gezählt werden nur die Ja-Stimmen je Stand (einfach), das Ergebnis nach Ständen und nach Köpfen rechnet die Klasse danach selbst aus. So erkennt sie selbst: dieselben Stimmen, zwei Regeln, zwei Ergebnisse (direkt: Regel und Antrag vorgegeben, Auswertung geführt).", "„Der Dritte Stand (Bauern und Bürger) macht in dieser Abstimmung eine Erfahrung. Gleich seht ihr, welche.“"));
 d.push(sp());
 d.push(step("1a  arbeitet allein", {
-  say: "Stifte liegen. Ihr hört nur zu. Das sind die beiden Anträge. Jeder Stand hat eine Stimme. … Jetzt arbeitet ihr allein. Die Aufgabe steht rechts.",
+  say: "Stifte liegen. Ihr hört nur zu. Das ist der Antrag. Jeder Stand hat eine Stimme. … Jetzt arbeitet ihr allein. Die Aufgabe steht rechts.",
   do: [
-    "Folie 5 (Anträge, 1 Minute): A „Auch Adel und Klerus zahlen künftig Steuern.“ B „Die Stände werden abgeschafft. Alle haben gleiche Rechte.“ Klerus 3, Adel 4, Dritter Stand (Bauern und Bürger) 16 Personen, Wahlleitung und Schriftführung stimmen nicht mit. Regel: Jeder Stand hat eine Stimme.",
-    "Folie 6 (Ü1, 1 Minute): Karte umdrehen, leise lesen, auf dem Zettel Stand und eigene Stimme bei A und B vorab ankreuzen. Klerus und Adel stimmen nach ihrer Rolle (Vorrechte behalten), der Dritte Stand nach seiner Überzeugung. Keine Absprache, keine Bewegung.",
+    "Folie 5 (Antrag, 1 Minute): A „Auch Adel und Klerus zahlen künftig Steuern.“ Klerus 3, Adel 4, Dritter Stand (Bauern und Bürger) 16 Personen, Wahlleitung und Schriftführung stimmen nicht mit. Regel: Jeder Stand hat eine Stimme. Antrag B (Stände abschaffen) ist Zusatz (*), nur wenn mehr als 2 Minuten übrig sind.",
+    "Folie 6 (Ü1, 1 Minute): Karte umdrehen, leise lesen, auf dem Zettel Stand und eigene Stimme vorab ankreuzen. Klerus und Adel stimmen nach ihrer Rolle (Vorrechte behalten), der Dritte Stand nach seiner Überzeugung. Keine Absprache, keine Bewegung.",
   ],
 }));
 d.push(sp());
 d.push(step("1b  beobachtet und schreibt", {
-  say: "Stifte liegen. Jetzt stimmt ihr offen ab. Die Wahlleitung führt, die Schriftführung schreibt an die Tafel, alle anderen beobachten und schreiben auf.",
+  say: "Stifte liegen. Jetzt stimmt ihr offen ab. Die Wahlleitung führt, die Schriftführung schreibt an die Tafel, alle anderen beobachten und tragen die Ja-Zahlen auf dem Zettel ein.",
   do: [
-    "Folie 7 (Ü2, 4 Minuten): Die Wahlleitung ruft „Antrag A. Klerus: Wer ist dafür? Hand hoch.“, zählt, ruft „Antrag A, Klerus: Ja …, Nein …“ aus, dann Adel und Dritter Stand, danach Antrag B; zuletzt nach Köpfen alle Ja und Nein. Die Schriftführung schreibt an die Tafel, alle anderen tragen Zahlen und Ergebnis auf ihrem Zettel ein (Ja : Nein, angenommen oder abgelehnt). Sie greifen nur im Notfall ein. Notfallplan: Dauert das Zählen länger als 4 Minuten, helfen Sie, die Zahlen stehen dann von Ihnen an der Tafel.",
-    "Erwartet: A und B jeweils Klerus Nein (3 von 3), Adel Nein (4 von 4), Dritter Stand Ja (ca. 16). Nach Ständen 2 : 1 abgelehnt, nach Köpfen 16 : 7 angenommen. Echte Zahlen gelten.",
+    "Folie 7 (Ü2, 3 Minuten): Die Wahlleitung ruft „Klerus. Wer ist für Antrag A? Hand hoch.“, zählt nur die Ja-Stimmen und ruft „Klerus: Ja …“ aus, dann Adel und Dritter Stand. Die Schriftführung schreibt die Zahl an die Tafel, alle anderen auf den Zettel. Nein-Stimmen und Ergebnisse werden jetzt nicht gezählt. Sie greifen nur im Notfall ein. Notfallplan: Dauert es länger als 3 Minuten, helfen Sie, die Zahlen stehen dann von Ihnen an der Tafel.",
+    "Erwartet: Klerus Ja 0 von 3, Adel Ja 0 von 4, Dritter Stand Ja 16 von 16. Echte Zahlen gelten.",
   ],
   extra: [boardBox("Mitte · Rahmen (vorab anschreiben)", [
-    bl("Antrag | nach Ständen: Klerus · Adel · Dritter Stand · Ergebnis | nach Köpfen: Ja · Nein · Ergebnis", { after: 20 }),
-    bl("A", { after: 20 }), bl("B", { after: 0 }),
+    bl("Stand | Personen | Ja", { after: 20 }),
+    bl("Klerus | 3 | ", { after: 20 }), bl("Adel | 4 | ", { after: 20 }), bl("Dritter Stand | 16 | ", { after: 0 }),
   ]), gapP()],
 }));
 d.push(sp());
-d.push(step("1c  wertet aus", {
-  say: "Stifte liegen. Jetzt arbeitet ihr allein. Die Aufgabe steht rechts. Schreibt die Sätze unten auf euren Zettel.",
+d.push(step("1c  rechnet und wertet aus", {
+  say: "Stifte liegen. Jetzt arbeitet ihr allein. Die Aufgabe steht rechts. Rechnet erst auf dem Zettel, dann schreibt ihr ins Heft.",
   do: [
-    "Folie 8 (Ü3, 2 Minuten): ins Heft, drei Fragen (stehen auf der Folie): a Wie haben Klerus und Adel abgestimmt? Warum? b Vergleiche bei Antrag A nach Ständen und nach Köpfen. c* Beurteile die Regel „Jeder Stand hat eine Stimme“ (Ich finde sie …, weil …, nenne eine Zahl). Die Frage c gibt kein Urteil vor, mehrere Urteile sind möglich. Nach 90 Sekunden: „Noch eine halbe Minute.“ Frage c darf entfallen. Heft- oder Heft-Stichprobe: bei 4 bis 6 Personen unterschiedlichen Niveaus mitlesen, nicht kommentieren (unbenotet).",
-    "Folie 9 (Kontrolle, 1 Minute): „Vergleicht und verbessert mit Grün.“ Nach Ständen Klerus Nein, Adel Nein, Dritter Stand Ja = 2 : 1 abgelehnt, nach Köpfen 16 : 7 angenommen. Einordnung in einem Satz: „Im Spiel stimmen Klerus und Adel immer gleich. In Frankreich sind sie zusammen nur etwa 3 % der Menschen.“ Gezielte Abfrage nur bei Bedarf (2 bis 3 Personen, kurz): „Wie haben Klerus und Adel abgestimmt? Warum?“",
+    "Folie 8 (Ü3, 3 Minuten): (1) Auf dem Zettel ausrechnen, etwa 1 Minute: Nach Ständen: Wie viele der drei Stände sagen Ja? Mindestens 2 von 3 = angenommen. Nach Köpfen: Alle Ja zusammenzählen (von allen 23), mehr als die Hälfte = angenommen. (2) Ins Heft, etwa 2 Minuten: „Nach Ständen …, nach Köpfen …“ und die Beurteilung „Ich finde die Regel …, weil … (nenne eine Zahl)“. Die Beurteilung gibt kein Urteil vor, mehrere sind möglich. Wenn die Zeit knapp ist, genügen die Ergebnisse und ein Urteilssatz. Heft-Stichprobe: bei 4 bis 6 Personen unterschiedlichen Niveaus mitlesen, nicht kommentieren (unbenotet).",
+    "Folie 9 (Kontrolle, 1 Minute): „Vergleicht und verbessert mit Grün.“ Nach Ständen Klerus Nein, Adel Nein, Dritter Stand Ja = 1 von 3, abgelehnt. Nach Köpfen 16 von 23 Ja, angenommen. Einordnung in einem Satz: „Im Spiel stimmen Klerus und Adel immer gleich. In Frankreich sind sie zusammen nur etwa 3 % der Menschen.“ Gezielte Abfrage nur bei Bedarf (2 bis 3 Personen, kurz): „Wie haben Klerus und Adel abgestimmt? Warum?“",
   ],
-  sol: "1: …gleich (Nein), weil sie ihre Vorrechte behalten wollen (deckungsgleiche Interessen). 2: …nach Ständen abgelehnt, nach Köpfen angenommen. 3*: …der Dritte Stand ca. 97 % der Menschen stellt, aber nur 1 von 3 Stimmen hat.",
+  sol: "Rechnen: Nach Ständen 1 von 3 Ständen Ja, abgelehnt. Nach Köpfen 16 von 23 Ja, angenommen. Heft: Nach Ständen wurde der Antrag abgelehnt, nach Köpfen angenommen, weil jeder Stand nur eine Stimme hat und Klerus und Adel gleich abstimmten. Urteil offen, mit Zahl: z. B. „Ich finde die Regel ungerecht, weil der Dritte Stand (Bauern und Bürger) ca. 97 % der Menschen stellt, aber nur 1 von 3 Stimmen hat“ oder „Ich finde sie nachvollziehbar, weil jeder Stand als Gruppe zählt, aber die Zahl 97 % zeigt ein Problem“.",
 }));
 d.push(sp());
-d.push(note("SOLLBRUCHSTELLE", "Wird die Abstimmung länger als 4 Minuten, entfällt Frage c (*) und die Kontrolle läuft in 30 Sekunden (nur Folie 9 zeigen). Frage c kann in Stunde 3 als Wiederholung wieder aufgegriffen werden."));
+d.push(note("SOLLBRUCHSTELLE", "Wird die Abstimmung länger als 3 Minuten, schreiben Sie die Ja-Zahlen selbst an. Wird das Ausrechnen und Schreiben länger als 3 Minuten, entfällt die Beurteilung (Satz „Ich finde die Regel …“) und die Kontrolle läuft in 30 Sekunden (nur Folie 9). Sie kann in Stunde 3 als Wiederholung wieder aufgegriffen werden."));
 
 // Phase 2
 d.push(phase("2", "Text mit Sieyès-Quelle", 6, "AVIVA: Informieren"));
@@ -189,7 +189,7 @@ d.push(step("arbeitet allein", {
 d.push(h3("So sieht das Heft am Ende der Stunde aus"));
 d.push(table([2300, 7906], [
   ["Überschrift", "Nationalversammlung 1789 · Datum"],
-  ["Beobachtungszettel", "eingeklebt: eigener Stand und eigene Stimme, Zahlen und Ergebnisse (nach Ständen, nach Köpfen), Fragen a und b (Frage c *), Verbesserungen grün"],
+  ["Beobachtungszettel", "eingeklebt: eigener Stand und eigene Stimme, Ja-Zahlen je Stand, Ergebnis nach Ständen und nach Köpfen. Im Heft: Ergebnisse und Beurteilung der Regel, Verbesserungen grün"],
   ["Text und Zeitstrahl", "Blatt eingeklebt, Daten unterstrichen, Ereignisse eingetragen, Verbesserungen grün"],
 ].map(([a, b]) => row([tc(a, 2300, { bold: true, fill: LIGHT }), tc(b, 7906)], 340))));
 
