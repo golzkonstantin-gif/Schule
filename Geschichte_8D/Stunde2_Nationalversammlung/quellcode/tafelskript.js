@@ -51,7 +51,7 @@ const matrixT = (filled) => table(MW, [
 ]);
 const d = [];
 d.push(kicker("Tafelskript für die Lehrkraft · Kurzstunde (25 Min.) · 25 Schülerinnen und Schüler · eine Lehrkraft · Mittwoch 11.11.2026"), h1("Kann der Dritte Stand die Politik einfach wegstimmen?"));
-d.push(p(t("Ziel: Die Stunde beginnt mit einer selbst gezeichneten Karikatur: Klerus und Adel unterhalten sich, ein Adliger sagt „Wenn der Dritte Stand unzufrieden ist, soll er einfach gegen die Politik des Königs stimmen.“ Die Klasse schreibt eine Vermutung ins Heft. Das Ziel der Stunde ist, diese Behauptung zu untersuchen: Die Klasse bildet drei Stände und stimmt auf einem Zettel über zwei Anträge ab. Die Lehrkraft zählt während Text und Zeitstrahl aus und füllt eine Matrix an der Tafel aus. Die Klasse rechnet selbst aus: Nach Ständen verliert der Dritte Stand (Bauern und Bürger) immer, obwohl er fast alle Menschen vertritt. Der gekürzte Text zeigt, wie er sich daraufhin wehrt (Nationalversammlung, Ballhausschwur) bis zum Zusammenziehen der Truppen vor Paris. Die Karikatur ist nur der Einstieg, die Methoden sind Abstimmung mit Matrix und Text mit Zeitstrahl (dazu ein kurzer mündlicher Rat), weil die 8C am 06.11. an zu vielen Methoden gelitten hat.", { size: 21, color: MUTED }), { after: 100 }));
+d.push(p(t("Ziel: Die Stunde beginnt mit einer selbst gezeichneten Karikatur: Klerus und Adel unterhalten sich, ein Adliger sagt „Wenn der Dritte Stand unzufrieden ist, soll er einfach gegen die Politik des Königs stimmen.“ Die Klasse schreibt eine Vermutung ins Heft. Das Ziel der Stunde ist, diese Behauptung zu untersuchen: Die Klasse bildet drei Stände und stimmt auf der farbigen Standeskarte (Rolle und Stimmzettel in einem) über zwei Anträge ab. Die Lehrkraft zählt während Text und Zeitstrahl aus und füllt eine Matrix an der Tafel aus. Die Klasse rechnet selbst aus: Nach Ständen verliert der Dritte Stand (Bauern und Bürger) immer, obwohl er fast alle Menschen vertritt. Der gekürzte Text zeigt, wie er sich daraufhin wehrt (Nationalversammlung, Ballhausschwur) bis zum Zusammenziehen der Truppen vor Paris. Die Karikatur ist nur der Einstieg, die Methoden sind Abstimmung mit Matrix und Text mit Zeitstrahl (dazu ein kurzer mündlicher Rat), weil die 8C am 06.11. an zu vielen Methoden gelitten hat.", { size: 21, color: MUTED }), { after: 100 }));
 
 d.push(h3("Kopf der Planung"));
 d.push(table([2600, 7606], [
@@ -66,32 +66,32 @@ d.push(h3("Was aus der 8C und aus Stunde 1 übernommen und geändert wurde"));
 d.push(...bullets([
   "Rückmeldung 8C (06.11.): Für 45 Minuten waren es zu viele Methoden. Deshalb hier nur drei. Gestrichen oder verschoben: Buchstabenrätsel, Merkbild, Merksatz zum Abschreiben, Karikatur-Dreischritt, Ballhausschwur-Bild.",
   "Rückmeldung 8D (04.11.): Die Abstimmung wurde nicht mehr geschafft, der Zeitstrahl lief gut. Deshalb kommt die Abstimmung zuerst. Die Folie „Das ist mir wichtig“ kommt kurz wieder.",
-  "Entscheidung der Lehrkraft (12.11.): Karikatur als Einstieg (Klerus und Adel: „einfach abstimmen“), Stundenziel ist die Untersuchung dieser Behauptung, der Text wird gekürzt (vier Absätze auf einen kurzen Block, vier Daten statt fünf, ohne Quellenbox). Entscheidungen der Lehrkraft (11.11.): Zwei Anträge mit Vorab-Stimme. Keine Wahlhelfer. Gezählt wird nicht live: Die Schüler stimmen auf einem Zettel ab und geben ihn ab, die Lehrkraft zählt während Text und Zeitstrahl aus und füllt die Matrix an der Tafel aus. Gezählt werden nur die Ja-Stimmen je Stand, das Ergebnis nach Ständen und nach Köpfen rechnet die Klasse danach selbst aus.",
+  "Entscheidung der Lehrkraft (12.11.): Karikatur als Einstieg (Klerus und Adel: „einfach abstimmen“), Stundenziel ist die Untersuchung dieser Behauptung, der Text wird gekürzt (vier Absätze auf einen kurzen Block, vier Daten statt fünf, ohne Quellenbox). Entscheidungen der Lehrkraft (11.11.): Zwei Anträge mit Vorab-Stimme. Keine Wahlhelfer. Gezählt wird nicht live: Die Schüler stimmen auf ihrer Standeskarte ab und geben sie ab, die Lehrkraft zählt während Text und Zeitstrahl aus und füllt die Matrix an der Tafel aus. Gezählt werden nur die Ja-Stimmen je Stand, das Ergebnis nach Ständen und nach Köpfen rechnet die Klasse danach selbst aus.",
   "Historische Vereinfachung: Klerus und Adel stimmen im Spiel immer gleich (Vorrechte behalten). Das ist verkürzt (siehe Prüfhinweise).",
 ]));
 
 d.push(h3("Zeitplan (25 Minuten)"));
 d.push(table([800, 2300, 4300, 2806], [
   row([th("Min.", 800), th("AVIVA", 2300), th("Phase", 4300), th("Arbeitsform", 2806)], 320),
-  ...[["4", "Ankommen", "0  Karikatur, Vermutung, Ziele, „Das ist mir wichtig“", "still, allein"], ["4", "Vorwissen", "1  Abstimmung: Stimmzettel ausfüllen und abgeben", "allein, leise"], ["4", "Informieren", "2  Text (gekürzt, Sie zählen aus)", "allein, leise"], ["3", "Verarbeiten", "3  Zeitstrahl bis Anfang Juli (Sie schreiben die Matrix an)", "allein, Kontrolle per Folie"], ["10", "Auswerten", "4  Matrix rechnen, Antwort auf die Stundenfrage, Antwort an den Adligen, Ziele, Ausblick", "allein, mündlich"]].map((r) => row(r.map((v, i) => tc(v, [800, 2300, 4300, 2806][i], { bold: i < 3 })), 320)),
+  ...[["4", "Ankommen", "0  Karikatur, Vermutung, Ziele, „Das ist mir wichtig“", "still, allein"], ["4", "Vorwissen", "1  Abstimmung: auf der Standeskarte ankreuzen und abgeben", "allein, leise"], ["4", "Informieren", "2  Text (gekürzt, Sie zählen aus)", "allein, leise"], ["3", "Verarbeiten", "3  Zeitstrahl bis Anfang Juli (Sie schreiben die Matrix an)", "allein, Kontrolle per Folie"], ["10", "Auswerten", "4  Matrix rechnen, Antwort auf die Stundenfrage, Antwort an den Adligen, Ziele, Ausblick", "allein, mündlich"]].map((r) => row(r.map((v, i) => tc(v, [800, 2300, 4300, 2806][i], { bold: i < 3 })), 320)),
 ]));
-d.push(note("ZEIT", "Die Stunde ist sehr knapp: Kein Puffer. Das Auszählen der Zettel (25 Zettel, 2 Anträge) dauert etwa 4 bis 6 Minuten und läuft in Phase 2 und 3. Wird es nicht fertig, schreiben Sie vor Phase 4 nur Antrag A in die Matrix (Antrag B entfällt). Phase 4 wird nicht gestrichen."));
+d.push(note("ZEIT", "Die Stunde ist sehr knapp: Kein Puffer. Das Auszählen der Karten (25 Karten, 2 Anträge) dauert etwa 4 bis 6 Minuten und läuft in Phase 2 und 3. Wird es nicht fertig, schreiben Sie vor Phase 4 nur Antrag A in die Matrix (Antrag B entfällt). Phase 4 wird nicht gestrichen."));
 
 d.push(h3("Lautstärke und Ansagen (wörtlich)"));
 d.push(table([4700, 5506], [
   ["„Stifte liegen. Ihr hört nur zu.“", "Sie erklären, niemand schreibt."],
   ["„Jetzt arbeitet ihr allein. Die Aufgabe steht rechts.“", "Einzelarbeit, leise."],
-  ["„Stifte hinlegen. Ich sammle die Zettel ein.“", "Einsammeln der Stimmzettel (Phase 1)."],
+  ["„Stifte hinlegen. Ich sammle die Karten ein.“", "Einsammeln der Standeskarten (Phase 1)."],
   ["„Vergleicht und verbessert mit Grün.“", "Kontrolle im Heft bzw. Zeitstrahl."],
   ["„Es ist zu laut. Ab jetzt arbeitet ihr allein und schreibt.“", "Wenn es laut wird, keine Diskussion."],
 ].map(([a, b]) => row([tc(a, 4700, { fill: LIGHT, bold: true }), tc(b, 5506)], 340))));
 
 d.push(h3("Material und Vorbereitung (Details: Materialliste)"));
 d.push(...bullets([
-  "Druckvorlage „Karten und Stimmzettel“: Seite 1 und 2: 28 Standeskarten (3 Klerus, 4 Adel, 18 Dritter Stand, 3 Reserve). Seite 3: Stimmzettel, acht pro A4, 4-mal drucken und schneiden (32 Zettel).",
+  "Druckvorlage „Standeskarten mit Stimmzettel“: Seite 1 bis 3: 30 farbige Standeskarten mit Stimmzettel (3 Klerus violett, 4 Adel orange, 18 Dritter Stand blau, 5 Reserve), je Seite 10 Karten, ausschneiden.",
   "Tafelmatrix_Auswertung_8D.pdf: Seite 1 Matrix leer (zum Abzeichnen an die Tafel), Seite 2 Matrix ausgefüllt (erwartet), Seite 3 Strichliste zum Auszählen.",
   "Text mit Zeitstrahl: „Der Dritte Stand wehrt sich“ (gekürzte Fassung, Arbeitsblatt_Der_Dritte_Stand_wehrt_sich.pdf, 27 Stück; ein Drittel A4 Text, vier Daten). Lösung für Sie: Loesung_Arbeitsblatt_Der_Dritte_Stand_wehrt_sich.pdf. Kein Schnipsel für die Abschlussfrage (mündlich).",
-  "Vorab: Karten verdeckt mit dem Stimmzettel auf die Plätze legen. Klerus (3) und Adel (4) gezielt verteilen (zuverlässige Personen), alle übrigen sind Dritter Stand (18). Keine Wahlhelfer. Matrix vorab an die Tafel zeichnen (Mitte), Platz für den Zeitstrahl lassen.",
+  "Vorab: Standeskarten (Rolle und Stimmzettel in einem) verdeckt auf die Plätze legen. Klerus (3) und Adel (4) gezielt verteilen (zuverlässige Personen), alle übrigen sind Dritter Stand (18). Keine Wahlhelfer. Matrix vorab an die Tafel zeichnen (Mitte), Platz für den Zeitstrahl lassen.",
   "Folien 1 bis 16 (Schrift mindestens 27 Punkt; Folie 1 mit der selbst gezeichneten Karikatur), Kreide, Grün zum Verbessern, Uhr oder Timer.",
 ]));
 
@@ -115,28 +115,28 @@ d.push(step("kommt an, schreibt leise", {
 }));
 
 // Phase 1
-d.push(phase("1", "Abstimmung: Stimmzettel ausfüllen und abgeben", 4, "AVIVA: Vorwissen aktivieren"));
+d.push(phase("1", "Abstimmung: auf der Standeskarte ankreuzen und abgeben", 4, "AVIVA: Vorwissen aktivieren"));
 d.push(warum("Die Behauptung wird getestet, und der in Stunde 1 nicht geschaffte Stoff wird nachgeholt: Die Klasse erlebt die Regel „jeder Stand eine Stimme“, indem sie in ihrer Rolle abstimmt (Klerus und Adel nach ihren Vorrechten, der Dritte Stand (Bauern und Bürger) nach Überzeugung). Das Zählen läuft ohne Klasse (einfach, ruhig), die Auswertung kommt am Stundenende (direkt: Regel und Anträge vorgegeben).", "„Klerus und Adel sagen: Einfach abstimmen. Gleich seht ihr, wie die Abstimmung ausgeht. Vorher lest ihr, wie es 1789 weiterging.“"));
 d.push(sp());
 d.push(step("arbeitet allein", {
   say: "Stifte liegen. Ihr hört nur zu. Das sind die beiden Anträge. Jeder Stand hat eine Stimme. … Jetzt arbeitet ihr allein. Die Aufgabe steht rechts.",
   do: [
     "Folie 6 (Anträge, 1 Minute): A „Auch Adel und Klerus zahlen künftig Steuern.“ B „Die Stände werden abgeschafft. Alle haben gleiche Rechte.“ Klerus 3, Adel 4, Dritter Stand (Bauern und Bürger) 18 Personen. Regel: Jeder Stand hat eine Stimme.",
-    "Folie 7 (Ü1, 2 Minuten): Karte umdrehen, leise lesen, auf dem Stimmzettel Stand und Stimme bei A und B ankreuzen. Klerus und Adel stimmen nach ihrer Rolle (Vorrechte behalten), der Dritte Stand nach seiner Überzeugung. Keine Absprache, keine Bewegung.",
-    "Einsammeln (1 Minute): „Stifte hinlegen. Ich sammle die Zettel ein.“ Sie gehen durch die Reihen und sammeln ein. Danach sofort Folie 8.",
+    "Folie 7 (Ü1, 2 Minuten): Karte umdrehen, leise lesen, unten auf der Karte die Stimme bei A und B ankreuzen (der Stand steht schon auf der Karte, die Farbe zeigt ihn). Klerus und Adel stimmen nach ihrer Rolle (Vorrechte behalten), der Dritte Stand nach seiner Überzeugung. Keine Absprache, keine Bewegung.",
+    "Einsammeln (1 Minute): „Stifte hinlegen. Ich sammle die Karten ein.“ Sie gehen durch die Reihen und sammeln ein. Danach sofort Folie 8.",
   ],
 }));
 
 // Phase 2
 d.push(phase("2", "Text (gekürzt)", 4, "AVIVA: Informieren"));
-d.push(warum("Wie der Dritte Stand die Macht des Königs infrage stellt, wird selbst aus dem gekürzten Text erarbeitet (indirekt: Lesen allein, Unterstreichen). Der Text ist bewusst kurz (ein Drittel A4, vier Daten), damit die Stunde in 25 Minuten gelingt. Kein Vorlesen. Während die Klasse arbeitet, zählen Sie die Zettel aus.", "„Der Dritte Stand hat gegen die Regel verloren, aber er gibt nicht auf. Wie reagiert er? Das lest ihr jetzt.“"));
+d.push(warum("Wie der Dritte Stand die Macht des Königs infrage stellt, wird selbst aus dem gekürzten Text erarbeitet (indirekt: Lesen allein, Unterstreichen). Der Text ist bewusst kurz (ein Drittel A4, vier Daten), damit die Stunde in 25 Minuten gelingt. Kein Vorlesen. Während die Klasse arbeitet, zählen Sie die Karten aus.", "„Der Dritte Stand hat gegen die Regel verloren, aber er gibt nicht auf. Wie reagiert er? Das lest ihr jetzt.“"));
 d.push(sp());
 d.push(step("liest allein", {
   say: "Stifte liegen. Ihr hört nur zu. Das Blatt liegt vor euch. Jetzt arbeitet ihr allein. Die Aufgabe steht rechts.",
   do: [
     "Folie 8 (Ü2, 4 Minuten): Text lesen, alle Daten unterstreichen, die Wörter unter dem Text lesen (Flugschrift, Verfassung, Nationalversammlung, Ballhalle). Gekürzte Fassung gegenüber der 8C: vier kurze Absätze, Sieyès nur in einem Satz (ALLES, NICHTS, ETWAS ZU SEIN), keine Quellenbox.",
     "Warnung vor dem Fehler: Das Lehrbuch nennt den 20. Juni für die Nationalversammlung. Historisch ist es der 17. Juni (Nationalversammlung) und der 20. Juni (Ballhausschwur). Sagen Sie das vorab in einem Satz.",
-    "Auszählen (Sie, am Pult, leise): Zettel nach Stand sortieren (Klerus 3, Adel 4, Dritter Stand 18), Ja und Nein je Antrag in der Strichliste (Tafelmatrix-Datei, Seite 3). Kontrolle: Ja plus Nein je Stand ist die Personenzahl.",
+    "Auszählen (Sie, am Pult, leise): Karten nach Farbe sortieren (Klerus violett 3, Adel orange 4, Dritter Stand blau 18), Ja und Nein je Antrag in der Strichliste (Tafelmatrix-Datei, Seite 3). Kontrolle: Ja plus Nein je Stand ist die Personenzahl.",
   ],
 }));
 

@@ -20,8 +20,7 @@ const box = () => p(t("□", { size: 26 }), { after: 0, align: AlignmentType.CEN
 // Druck
 const DW = [550, 3500, 1700, 4456];
 const druck = [
-  ["Standeskarten (Druckvorlage Seite 1 und 2)", "je 1 Seite: 28 Karten ausschneiden (3 Klerus, 4 Adel, 18 Dritter Stand, 3 Reserve)", "Druckvorlage_Karten_Stimmzettel_8D.pdf, Seite 1 und 2"],
-  ["Stimmzettel (Druckvorlage Seite 3, acht pro A4)", "4 Blatt, in 8 Zettel schneiden (32 Zettel: 25 + 7 Reserve), tintensparend", "Gleiche Datei, Seite 3, 4-mal drucken"],
+  ["Standeskarten mit Stimmzettel (farbig nach Stand, Rolle und Ankreuzen in einem)", "3 Seiten, je 10 Karten ausschneiden (30 Karten: 3 Klerus, 4 Adel, 18 Dritter Stand, 5 Reserve)", "Druckvorlage_Karten_Stimmzettel_8D.pdf, Seite 1 bis 3; Farbe zeigt den Stand (violett Klerus, orange Adel, blau Dritter Stand), gern tintensparend"],
   ["Text mit Zeitstrahl „Der Dritte Stand wehrt sich“ (gekürzt)", "27 (25 + 2 Reserve), einseitig A4 (oder 2 pro Blatt, in der Mitte schneiden)", "Arbeitsblatt_Der_Dritte_Stand_wehrt_sich.pdf (gekürzt gegenüber der 8C)"],
   ["Tafelmatrix und Strichliste (für dich)", "1 Exemplar (3 Seiten, Querformat)", "Tafelmatrix_Auswertung_8D.pdf: Seite 1 leer zum Abzeichnen, Seite 2 erwartetes Ergebnis, Seite 3 Strichliste zum Auszählen"],
   ["Lösung Text mit Zeitstrahl (für dich)", "1 Blatt", "Loesung_Arbeitsblatt_Der_Dritte_Stand_wehrt_sich.pdf"],
@@ -31,8 +30,8 @@ const prep = [
   ["Tafelskript ausdrucken oder auf dem Tablet bereithalten", "Tafelskript_Stunde2_Nationalversammlung_8D.pdf"],
   ["Folien öffnen und einmal durchklicken", "Praesentation_Stunde2_Nationalversammlung_8D.pptx, 16 Folien (27 Punkt); Folie 1 (Karikatur) steht beim Betreten da"],
   ["Stände verteilen", "Klerus (3) und Adel (4) gezielt wählen (zuverlässige Personen), alle übrigen sind Dritter Stand (18). Keine Wahlhelfer. Tabelle unten ausfüllen (ohne Namen, nur Platznummern)"],
-  ["Karten und Stimmzettel auf die Plätze legen", "Karte verdeckt, Stimmzettel daneben; Reservekarten und -zettel am Pult"],
-  ["Auszählen: Sie zählen selbst, während die Klasse Text und Zeitstrahl bearbeitet", "Zettel nach Stand sortieren, Ja und Nein je Antrag in der Strichliste, Kontrolle: Ja plus Nein = Personenzahl. Ja-Zahlen in die Matrix an der Tafel schreiben (Folie 8, Phase 3). Bei Zeitnot nur Antrag A"],
+  ["Standeskarten auf die Plätze legen", "Karten verdeckt; Reservekarten am Pult"],
+  ["Auszählen: Sie zählen selbst, während die Klasse Text und Zeitstrahl bearbeitet", "Karten nach Farbe (Stand) sortieren, Ja und Nein je Antrag in der Strichliste, Kontrolle: Ja plus Nein = Personenzahl. Ja-Zahlen in die Matrix an der Tafel schreiben (Folie 8, Phase 3). Bei Zeitnot nur Antrag A"],
   ["Kreide, Grün zum Verbessern, Uhr oder Timer", "Kurzstunde: 25 Minuten, kein Puffer; Phase 4 „Auswerten“ ist fest"],
 ];
 // Tafel
@@ -64,7 +63,7 @@ d.push(table(RW, [hdr(["Stand", "Anzahl", "Plätze"], RW), ...rolle.map(([a, b, 
 d.push(p(t("Wenn Schülerinnen oder Schüler fehlen: Klerus bleibt 3, Adel bleibt 4, der Dritte Stand wird kleiner (Zahlen in der Matrix anpassen). Klerus und Adel dürfen zusammen nie mehr als ein Drittel der Klasse sein.", { size: 19, italics: true, color: MUTED }), { before: 60 }));
 
 d.push(h2("5 Kurz vor Beginn (5 Minuten)"));
-["Folie 1 (Karikatur) steht, Beamer an", "Karten liegen verdeckt auf den Plätzen, daneben der Stimmzettel", "Seitentafel beschrieben, Matrix in der Mitte gezeichnet, Platz für den Zeitstrahl", "Textblätter liegen bereit (noch nicht austeilen); die Abschlussfrage läuft mündlich (Rückgriff auf die Karikatur, Folie 14)", "Strichliste auf dem Pult, Ansagen im Kopf: „Stifte liegen. Ihr hört nur zu.“ · „Stifte hinlegen. Ich sammle die Zettel ein.“"].forEach((x) => d.push(p([t("□  ", { size: 24 }), t(x, { size: 20 })], { after: 50 })));
+["Folie 1 (Karikatur) steht, Beamer an", "Standeskarten liegen verdeckt auf den Plätzen", "Seitentafel beschrieben, Matrix in der Mitte gezeichnet, Platz für den Zeitstrahl", "Textblätter liegen bereit (noch nicht austeilen); die Abschlussfrage läuft mündlich (Rückgriff auf die Karikatur, Folie 14)", "Strichliste auf dem Pult, Ansagen im Kopf: „Stifte liegen. Ihr hört nur zu.“ · „Stifte hinlegen. Ich sammle die Karten ein.“"].forEach((x) => d.push(p([t("□  ", { size: 24 }), t(x, { size: 20 })], { after: 50 })));
 
 (async () => {
   const doc = new Document({ styles: { default: { document: { run: { font: "Calibri", size: 21 } } } }, sections: [{ properties: { page: { size: { width: 11906, height: 16838 }, margin: { top: 800, bottom: 700, left: 850, right: 850 } } }, footers: { default: footer }, children: d }] });

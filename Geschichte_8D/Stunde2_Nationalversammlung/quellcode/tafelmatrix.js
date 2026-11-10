@@ -29,7 +29,7 @@ const brk = () => new Paragraph({ children: [new PageBreak()] });
     matrix(true),
     p(t("Nach Ständen: Klerus Nein, Adel Nein, Dritter Stand Ja = 1 von 3, abgelehnt. Nach Köpfen: 18 von 25 Ja = angenommen. Dieselben Stimmen, ein anderes Ergebnis. (Bei A und B gleich, weil Klerus und Adel immer ihre Vorrechte verteidigen.)", { size: 24, color: NAVY }), { before: 160 }),
     brk(),
-    ...head("GESCHICHTE 8D · AUSZÄHLHILFE FÜR DIE LEHRKRAFT", "Strichliste zum Auszählen der Zettel", "Sortiere die Zettel nach Stand und zähle Ja und Nein je Antrag. Kontrolle: Ja plus Nein ist je Stand die Personenzahl (3, 4, 18)."),
+    ...head("GESCHICHTE 8D · AUSZÄHLHILFE FÜR DIE LEHRKRAFT", "Strichliste zum Auszählen der Karten", "Sortiere die Karten nach Farbe (Stand) und zähle Ja und Nein je Antrag. Kontrolle: Ja plus Nein ist je Stand die Personenzahl (3, 4, 18)."),
     strich,
     p(t("Danach trägst du nur die Ja-Zahlen in die Auswertungsmatrix an der Tafel ein.", { size: 24, italics: true, color: MUTED }), { before: 160 }),
   ] }] });
