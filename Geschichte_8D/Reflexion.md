@@ -77,3 +77,10 @@
 - Wo hing die Klasse: nicht berichtet.
 - Eigene Beobachtungen (Timing): Bis zum Zeitstrahl geschafft. Die Abstimmung (Ständespiel: drei Anträge, Auswertung, Ü3, Merksatz, Berater-Abschlussfrage) wurde nicht mehr erreicht. Die Schülerführung beim Rätsel (Presenter) dauerte länger als die geplanten 6 Minuten, war aber inhaltlich wertvoll.
 - Nächster Schritt: In 8D Stunde 2 (Mi 11.11.) das Ständespiel an den Anfang setzen und in der Stunde zuerst das, was fehlt (Abstimmung, Auswertung, Berater-Abschlussfrage), dann Nationalversammlung. Offen: Zeit für Stunde 2 entscheiden (Sequenz hat keine Reserve, Wiener Kongress ist mit * schon gestrichen-fähig). Für die 8C (Fr 06.11.): Zeitbudget für Schüler-Präsentationen und Vorwissen großzügiger planen.
+
+### Planung 8D Stunde 2 (Mi 11.11.): Kurzstunde mit Beobachtungsbogen
+- Material: `Geschichte_8D/Stunde2_Nationalversammlung/`
+- Anlass: Die 8C lief „mäßig“ (zu viele Methoden für 45 Minuten, Rückmeldung der Klasse). Die 8D hat in Stunde 2 nur etwa 25 Minuten.
+- Entscheidungen der Lehrkraft (10.11.): Abstimmung aus Stunde 1 nachholen und dabei bis zum Zusammenziehen der Truppen vor Paris kommen. Zwei Anträge (A Steuern, B Stände abschaffen), kein Antrag C. Der Stimmzettel wird zum Beobachtungsbogen: eigene Stimme vorab ankreuzen, Zahlen und Ergebnisse der offenen Abstimmung eintragen, dann auswerten (drei Satzanfänge). Danach der Text wie in der 8C (Sieyès-Quelle, fünf Daten). Abschlussfrage: Rat an den Freund (Bauer).
+- Ablauf (25 Min.): Ankommen 3 · Abstimmung (Vorwissen) 9 · Text 6 · Zeitstrahl 3 · Auswerten 4. Nur drei Methoden. Kein Puffer; Sollbruchstellen: Satz 3 des Bogens und die ersten Zeitstrahl-Einträge. Wahlleitung und Schriftführung führen die Abstimmung.
+- Zu beobachten: Reicht die Zeit für Phase 1b? Trägt der Bogen die Beobachtung? Wird der Zeitstrahl bis Anfang Juli erreicht? Wie viele nennen ein Sachargument in der Abschlussfrage?

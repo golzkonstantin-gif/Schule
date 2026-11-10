@@ -24,7 +24,7 @@ Status: geplant · gelaufen · Rückmeldung (R) im Reflexionslog.
 | Nr. | 8D (Mi) | 8C (Fr) | Thema | SchiC-Bezug, Kompetenz | 8C | 8D |
 |---|---|---|---|---|---|---|
 | 1 | 04.11. | 16.10. | Generalstände: Weg zu 1789, Abstimmung nach Ständen | Ursachen; Rekonstruktion | gelaufen (R: UG-lastig, Schulbeispiel zu abstrakt, Text gut) | gelaufen, sehr gut; Abstimmung (Ständespiel) nicht geschafft, wird in Stunde 2 aufgegriffen (R: `Geschichte_8D/Reflexion.md`) |
-| 2 | 11.11. | 06.11. | Dritter Stand handelt: Nationalversammlung, Ballhausschwur; Karikatur analysieren | Epochenjahr 1789; **Karikatur** | geplant (`Geschichte_8/Stunde2_Nationalversammlung/`) | offen |
+| 2 | 11.11. | 06.11. | Dritter Stand handelt: Nationalversammlung, Ballhausschwur; Karikatur analysieren (8D: Kurzstunde, ohne Karikatur) | Epochenjahr 1789; **Karikatur** (8C) | gelaufen („mäßig“, zu viele Methoden) | geplant als Kurzstunde, 25 Min. (`Geschichte_8D/Stunde2_Nationalversammlung/`) |
 | 3 | 18.11. | 13.11. | Bastille, Ende der Vorrechte, Menschen- und Bürgerrechte | Epochenjahr 1789; Menschenrechtserklärung | offen | offen |
 | 4 | 25.11. | 20.11. | Verfassung 1791: konstitutionelle Monarchie | **Verfassungsschaubild** | offen | offen |
 | 5 | 02.12. | 27.11. | **Test 1** | | offen | offen |
@@ -38,6 +38,12 @@ Status: geplant · gelaufen · Rückmeldung (R) im Reflexionslog.
 | R | – | 29.01. | 8C: Reserve, Rückgabe, Ausblick Industrielle Revolution (8D hat keine Reserve) | | | |
 
 **Entscheidung 27.10.:** Test 2 liegt am 20.01. (Stunde 10), damit die Rückgabe vor dem Halbjahresende möglich ist. Die Urteilsstunde und der Wiener Kongress rücken dadurch auf Stunde 11 (27.01.), der Wiener Kongress bleibt mit *.
+
+**Anpassung 10.11. (Vorschlag, zur Bestätigung):** Die 8D hat in Stunde 2 nur etwa 25 Minuten (Abstimmung mit Beobachtungsbogen, Text mit Zeitstrahl bis zum Truppenzusammenzug, Rat an den Freund). Die Karikatur „Für die Mühsal geboren“ und der Ballhausschwur als Bild entfallen dort. **Regel für beide Klassen:** pro Stunde höchstens drei Methoden (Rückmeldung 8C, 06.11.).
+- **Stunde 3 (8D 18.11., 8C 13.11.): Bastille und Ende der Vorrechte (4. August).** Methoden: Text (Bastille, 4. August), Karikatur „Für die Mühsal geboren“ (S. 111) als Vorher-Nachher-Bild mit Dreischritt (Modell, dann kurz angeleitet), Abschlussfrage. Rückgriff auf die Standeskarten. Wiederholung zu Beginn: Zeitstrahl bis Anfang Juli (aus Stunde 2).
+- **Stunde 4 (8D 25.11., 8C 20.11.): Menschenrechte (26. August, zwei Artikel) als Einstieg und Verfassung 1791.** Die Menschenrechtserklärung wird kurz (Text, zwei Artikel, Zuordnung zu den Ständen von früher) mit dem Verfassungsschaubild verbunden (drei Gewalten, Wahlrecht der Aktivbürger). Die Spielidee „Wahl mit Steuerkarten“ entfällt, sie wird auf eine Folie mit Beispiel reduziert. Mindestziel: zwei Artikel und Wahlrecht.
+- **8C:** Die 8C nutzt ihre Reserve in Stunde 4 (oder zieht Menschenrechte als eigene Stunde vor), sodass dort getestet werden kann, wie viel in eine Stunde passt. Test 1 (Stunde 5) bleibt auf dem 02.12. (8D) und 27.11. (8C).
+- **Offen:** Bestätigung oder Alternative. Das Karikatur-Beurteilen (Schritt 3) bleibt in der 8C Zusatz (*).
 
 ## Die Stunden im Einzelnen
 
