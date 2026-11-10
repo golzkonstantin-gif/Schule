@@ -20,7 +20,7 @@ const G = {
   A: {
     wer: [["… will herausfinden, wer stärker ist.", "S"], ["… versteckt sich aus Angst.", "P"], ["… bittet den Fremden, leise zu sein.", "Sch"]],
     aus: [
-      ["Der Schotte kommt, weil er Paddy um Hilfe bitten will.", false, "Str. 2, V. 7–9: „da wollt’ er erproben alsogleich, wer fester sei“", "Er will herausfinden, wer von beiden stärker ist."],
+      ["Der Schotte kommt, weil er Paddy um Hilfe bitten will.", false, "Str. 2, V. 8–9: „da wollt’ er erproben alsogleich, wer fester sei“", "Er will herausfinden, wer von beiden stärker ist."],
       ["Auf der Flucht wäre der Schotte beinahe ertrunken.", true, "Str. 10, V. 48: „fast wär ertrunken der gute Held“", ""],
     ],
     merk: [["Strophen mit Reimschema", "L", "strofy z układem rymów"], ["Ein Erzähler erzählt die Handlung.", "E", "narrator opowiada akcję"], ["Figuren sprechen unmittelbar, ohne Erzähler.", "D", "postacie mówią bezpośrednio, bez narratora"], ["Kehrreim am Ende jeder Strophe", "L", "refren na końcu każdej strofy"], ["Ein Erzähler leitet die Rede der Figuren ein („…“, rief er.)", "E", "narrator wprowadza słowa postaci („…“, zawołał.)"], ["Regieanweisungen in Klammern", "D", "wskazówki dla aktorów (didaskalia) w nawiasach"]],
@@ -205,7 +205,7 @@ function erwartung() {
   const rows = [
     ["1 a (3)", "A: 1 der Schotte · 2 Paddy · 3 Schaya", "B: 1 Paddy · 2 Schaya · 3 der Schotte · je Zeile 1 P."],
     ["1 b (2)", "Er hält Paddy für ein Baby und schließt daraus, dass der Vater ein noch größerer Riese sein muss (Str. 9).", "2 P. für Baby + Schluss auf den riesigen Vater; 1 P. nur für „Er hat Angst“ oder nur „Baby“"],
-    ["2 (6)", "A: a falsch – Str. 2, V. 7–9 „… wer fester sei“ – richtig ist: Er will herausfinden, wer stärker ist · b richtig – Str. 10, V. 48 „fast wär ertrunken der gute Held“", "B: a richtig – Str. 3, V. 14 „dass der Fremdling zehn Schuh größer war“ · b falsch – Str. 8, V. 37 „der Schotte neugierig ans Lager ging“ – richtig ist: Er geht trotz Warnung ans Bett · je Aussage: Urteil (bei falschen mit Verbesserung) 1 P., Stelle 1 P., Zitat 1 P.; andere passende Stellen gelten"],
+    ["2 (6)", "A: a falsch – Str. 2, V. 8–9 „… wer fester sei“ – richtig ist: Er will herausfinden, wer stärker ist · b richtig – Str. 10, V. 48 „fast wär ertrunken der gute Held“", "B: a richtig – Str. 3, V. 14 „dass der Fremdling zehn Schuh größer war“ · b falsch – Str. 8, V. 37 „der Schotte neugierig ans Lager ging“ – richtig ist: Er geht trotz Warnung ans Bett · je Aussage: Urteil (bei falschen mit Verbesserung) 1 P., Stelle 1 P., Zitat 1 P.; andere passende Stellen gelten"],
     ["3 (6)", "A: 1 L · 2 E · 3 D · 4 L · 5 E · 6 D", "B: 1 L · 2 E · 3 D · 4 L · 5 E · 6 D · je richtiges Kreuz 1 P."],
     ["4 (5)", "11 Strophen · 5 Verse · a a b b x · Paarreim · Kehrreim „Paddy Fingal“", "je 1 P. (Schema ohne x, aber aabb richtig: 1 P.)"],
     ["5 (4)", "Er-Erzähler · A Str. 7: Schaya / B Str. 9: der Schotte · Begründung: Die Figur spricht unmittelbar, ohne Erzähler (wie auf der Bühne)", "a 1 P., b 1 P., c 2 P. (1 P. nur für „wörtliche Rede“ – allein kein Merkmal der Dramatik)"],
