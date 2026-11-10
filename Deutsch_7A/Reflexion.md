@@ -337,6 +337,7 @@ Die Lehrkraft möchte das weiterverfolgen, noch ohne Material. Die Satzklammer (
     - 2 mit verteilten Rollen laut vorlesen (welche Rollen?)
     - 3 Was geschieht auf der „Schwalbe“? Wahl a/b/c: a Angaben zur Fahrt Strophe für Strophe, b was die Passagiere tun, c was man über John Maynard erfährt; d Inhalt anhand der Ergebnisse zusammenfassen
     - Gewünscht: Präsentation und Lösungen. Umsetzung wird besprochen.
+    - Lehrkraft (10.11.): Die Aufgaben werden jeweils gemeinsam bearbeitet (nicht arbeitsteilig), weil die Klasse mit John Maynard erst am Anfang steht. Text LB S. 132–133 liegt als Scan vor (Verszählung 1–62).
 - **Hospitationsfeedback (Mo 9.11.):** *(steht noch aus)*
 - **Rückmeldung der Lehrkraft (Mi 4.11.):** „Mittwoch hat sehr gut geklappt!“ Die Konzeption hat sich bewährt: Aufbau und Belegen vor den Aussagen, Aufdeck-Folien, Sprachtraining aus der Ballade heraus.
 
