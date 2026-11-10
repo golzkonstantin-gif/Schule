@@ -326,6 +326,7 @@ Die Lehrkraft möchte das weiterverfolgen, noch ohne Material. Die Satzklammer (
 - **Planung Mi 11.11. (Doppelstunde):** Teil 1 kleiner Test (ca. 30 Min.) zu den Merkmalen einer Ballade und ihrer Bestimmung an Paddy Fingal, Teil 2 Einstieg „John Maynard“.
   - **Test** in `Leistungskontrolle_Balladen/`: Gruppe A und B, je mit Lösung und mit polnischer Übersetzung der Aufgabenstellungen für S-PL, dazu Erwartungshorizont und Notenschlüssel. 24 Punkte + 2 Zusatzpunkte. Der Text liegt als Kopie LB S. 136 f. mit Verszählung bei.
     - A1 Merkmale den Gattungen zuordnen (ankreuzen) und Fachbegriffe ergänzen · A2 Lyrik: Strophen/Verse, Reimschema Str. 1 (A) bzw. 11 (B), Kehrreim · A3 Epik: Er-/Ich-Erzähler, Zeitform mit Beleg, Redeeinleitung Str. 4 · A4 Dramatik: Str. 7 (A) bzw. 9 (B), Erzähler ja/nein, Begründung · Zusatz: weil-Satz mit finitem Verb.
+  - **Rückmeldung der Lehrkraft zum Testentwurf (10.11.):** Belegen und Zitieren soll mit abgefragt werden. Bei der Ankreuzaufgabe (Merkmale → Gattung) ist nicht alles eindeutig (z. B. „Ich-Form“ passt auch zum lyrischen Ich, „Verse“ gibt es auch im Drama). Die Schrift soll größer sein. Überarbeitung wird besprochen.
   - **Einstieg John Maynard:** wird noch besprochen.
 - **Hospitationsfeedback (Mo 9.11.):** *(steht noch aus)*
 - **Rückmeldung der Lehrkraft (Mi 4.11.):** „Mittwoch hat sehr gut geklappt!“ Die Konzeption hat sich bewährt: Aufbau und Belegen vor den Aussagen, Aufdeck-Folien, Sprachtraining aus der Ballade heraus.
