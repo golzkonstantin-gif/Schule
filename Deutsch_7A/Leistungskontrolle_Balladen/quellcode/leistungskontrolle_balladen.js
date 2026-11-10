@@ -23,7 +23,7 @@ const G = {
       ["Der Schotte kommt, weil er Paddy um Hilfe bitten will.", false, "Str. 2, V. 7–9: „da wollt’ er erproben alsogleich, wer fester sei“", "Er will herausfinden, wer von beiden stärker ist."],
       ["Auf der Flucht wäre der Schotte beinahe ertrunken.", true, "Str. 10, V. 48: „fast wär ertrunken der gute Held“", ""],
     ],
-    merk: [["Strophen mit Reimschema", "L"], ["Ein Erzähler erzählt die Handlung.", "E"], ["Figuren sprechen unmittelbar, ohne Erzähler.", "D"], ["Kehrreim am Ende jeder Strophe", "L"], ["Ein Erzähler leitet die Rede der Figuren ein („…“, rief er.)", "E"], ["Regieanweisungen in Klammern", "D"]],
+    merk: [["Strophen mit Reimschema", "L", "strofy z układem rymów"], ["Ein Erzähler erzählt die Handlung.", "E", "narrator opowiada akcję"], ["Figuren sprechen unmittelbar, ohne Erzähler.", "D", "postacie mówią bezpośrednio, bez narratora"], ["Kehrreim am Ende jeder Strophe", "L", "refren na końcu każdej strofy"], ["Ein Erzähler leitet die Rede der Figuren ein („…“, rief er.)", "E", "narrator wprowadza słowa postaci („…“, zawołał.)"], ["Regieanweisungen in Klammern", "D", "wskazówki dla aktorów (didaskalia) w nawiasach"]],
     rStr: 1, rSol: "a a b b x · Paarreim",
     dStr: 7, dWho: "Schaya (Paddys Frau)",
     dWhy: "Die ganze Strophe ist Schayas Rede. Kein Erzähler leitet sie ein – die Figur spricht unmittelbar wie auf der Bühne.",
@@ -34,7 +34,7 @@ const G = {
       ["Paddy merkt, dass der Schotte viel größer ist als er.", true, "Str. 3, V. 14: „dass der Fremdling zehn Schuh größer war“", ""],
       ["Der Schotte bleibt vom Bett weg, weil Schaya ihn warnt.", false, "Str. 8, V. 37: „der Schotte neugierig ans Lager ging“", "Er geht trotz der Warnung neugierig ans Bett."],
     ],
-    merk: [["Reim am Versende", "L"], ["Ein Er-Erzähler berichtet, was die Figuren tun.", "E"], ["Rollenname vor jeder Rede (SCHAYA: …)", "D"], ["Paarreim (aabb)", "L"], ["Ein Erzähler leitet die Rede der Figuren ein.", "E"], ["Nur Figurenrede, kein Erzähler", "D"]],
+    merk: [["Reim am Versende", "L", "rym na końcu wersu"], ["Ein Er-Erzähler berichtet, was die Figuren tun.", "E", "narrator w 3. osobie opowiada, co robią postacie"], ["Rollenname vor jeder Rede (SCHAYA: …)", "D", "imię postaci przed każdą wypowiedzią (SCHAYA: …)"], ["Paarreim (aabb)", "L", "rym parzysty (aabb)"], ["Ein Erzähler leitet die Rede der Figuren ein.", "E", "narrator wprowadza słowa postaci"], ["Nur Figurenrede, kein Erzähler", "D", "tylko słowa postaci, bez narratora"]],
     rStr: 11, rSol: "a a b b x · Paarreim",
     dStr: 9, dWho: "der Schotte",
     dWhy: "Die ganze Strophe ist die Rede des Schotten. Kein Erzähler leitet sie ein – die Figur spricht unmittelbar wie auf der Bühne.",
@@ -146,12 +146,13 @@ function test(g, mode) { // mode: "s" Schüler, "l" Lösung, "pl" polnisch
 
   // Aufgabe 3 · Gattungen
   const W = [IW - 3 * 1450, 1450, 1450, 1450];
-  const gh = (k, w) => cell([p(t(`${GS[k]} ${GN[k]}`, { bold: true, size: 24, color: GC[k], font: "Cambria" }), { after: 0, align: AlignmentType.CENTER }), p(t(GV[k], { size: 17, it: true, color: MUTED }), { after: 0, align: AlignmentType.CENTER })], { w, borders: borders(B(BorderStyle.SINGLE, 10, GC[k])), m: 30 });
+  const GPL = { L: "liryka", E: "epika", D: "dramat" };
+  const gh = (k, w) => cell([p(t(`${GS[k]} ${GN[k]}`, { bold: true, size: 24, color: GC[k], font: "Cambria" }), { after: 0, align: AlignmentType.CENTER }), p(t(PLm ? GPL[k] : GV[k], { size: 17, it: true, color: PLm ? PLC : MUTED }), { after: 0, align: AlignmentType.CENTER })], { w, borders: borders(B(BorderStyle.SINGLE, 10, GC[k])), m: 30 });
   const a3 = [p(s("Kreuze bei jedem Merkmal genau eine Gattung an: die Gattung, für die das Merkmal typisch ist."), { after: 40, keepNext: true })];
   if (PLm) a3.push(pl(PL.a3));
   a3.push(table(W, [
     row([cell(p(t("Merkmal", { bold: true, size: 24, color: NAVY }), { after: 0 }), { w: W[0], borders: borders(B(BorderStyle.SINGLE, 10, NAVY)), ml: 120 }), gh("L", W[1]), gh("E", W[2]), gh("D", W[3])], 420),
-    ...D.merk.map(([m, k], i) => row([cell(p([t(`${i + 1}   `, { bold: true, size: 24, color: NAVY }), s(m, { size: 23 })], { after: 0 }), { w: W[0], ml: 120, m: 20 }), ...["L", "E", "D"].map((x, j) => cell(p(t(sol && x === k ? "✗" : "☐", { size: 26, bold: sol && x === k, color: sol && x === k ? SOLC : "B9C6E8" }), { after: 0, align: AlignmentType.CENTER }), { w: W[j + 1], m: 20 }))], 360)),
+    ...D.merk.map(([m, k, mpl], i) => row([cell([p([t(`${i + 1}   `, { bold: true, size: 24, color: NAVY }), s(m, { size: 23 })], { after: 0 }), ...(PLm ? [p(t("PL: " + mpl, { size: 19, it: true, color: PLC }), { after: 0, indent: { left: 300 } })] : [])], { w: W[0], ml: 120, m: 20 }), ...["L", "E", "D"].map((x, j) => cell(p(t(sol && x === k ? "✗" : "☐", { size: 26, bold: sol && x === k, color: sol && x === k ? SOLC : "B9C6E8" }), { after: 0, align: AlignmentType.CENTER }), { w: W[j + 1], m: 20 }))], 360)),
   ]));
   d.push(...aufgabe(3, "Merkmale den Gattungen zuordnen", 6, NAVY, a3));
 
