@@ -20,30 +20,31 @@ const box = () => p(t("□", { size: 26 }), { after: 0, align: AlignmentType.CEN
 // Druck
 const DW = [550, 3500, 1700, 4456];
 const druck = [
-  ["Druckvorlage Karten und Beobachtungszettel: Seite 1 und 2 (Standeskarten)", "je 1 Seite: 28 Karten ausschneiden (3 Klerus, 4 Adel, 18 Dritter Stand, 3 Reserve)", "Druckvorlage_Karten_Beobachtungszettel_8D.pdf, Seite 1 und 2"],
-  ["Beobachtungszettel (Seite 3, vier pro A4)", "7 Blatt, in 4 Zettel schneiden (28 Zettel: 25 + 3 Reserve), tintensparend", "Gleiche Datei, Seite 3, 7-mal drucken (Zettel liegt mit der Karte auf dem Platz)"],
+  ["Standeskarten (Druckvorlage Seite 1 und 2)", "je 1 Seite: 28 Karten ausschneiden (3 Klerus, 4 Adel, 18 Dritter Stand, 3 Reserve)", "Druckvorlage_Karten_Stimmzettel_8D.pdf, Seite 1 und 2"],
+  ["Stimmzettel (Druckvorlage Seite 3, acht pro A4)", "4 Blatt, in 8 Zettel schneiden (32 Zettel: 25 + 7 Reserve), tintensparend", "Gleiche Datei, Seite 3, 4-mal drucken"],
   ["Text mit Zeitstrahl „Der Dritte Stand handelt“", "27 (25 + 2 Reserve), einseitig A4", "Arbeitsblatt_Der_Dritte_Stand_handelt.pdf (unverändert wie 8C)"],
+  ["Tafelmatrix und Strichliste (für dich)", "1 Exemplar (3 Seiten, Querformat)", "Tafelmatrix_Auswertung_8D.pdf: Seite 1 leer zum Abzeichnen, Seite 2 erwartetes Ergebnis, Seite 3 Strichliste zum Auszählen"],
   ["Lösung Text mit Zeitstrahl (für dich)", "1 Blatt", "Loesung_Arbeitsblatt_Der_Dritte_Stand_handelt.pdf"],
 ];
 // Vorbereitung
 const prep = [
-  ["Tafelskript ausdrucken oder auf dem Tablet bereithalten", "Tafelskript_Stunde2_Nationalversammlung_8D.pdf, 5 Seiten"],
-  ["Folien öffnen und einmal durchklicken", "Praesentation_Stunde2_Nationalversammlung_8D.pptx, 15 Folien (27 Punkt); Folie 1 steht beim Betreten da"],
+  ["Tafelskript ausdrucken oder auf dem Tablet bereithalten", "Tafelskript_Stunde2_Nationalversammlung_8D.pdf"],
+  ["Folien öffnen und einmal durchklicken", "Praesentation_Stunde2_Nationalversammlung_8D.pptx, 14 Folien (27 Punkt); Folie 1 steht beim Betreten da"],
   ["Stände verteilen", "Klerus (3) und Adel (4) gezielt wählen (zuverlässige Personen), alle übrigen sind Dritter Stand (18). Keine Wahlhelfer. Tabelle unten ausfüllen (ohne Namen, nur Platznummern)"],
-  ["Karten und Bögen auf die Plätze legen", "Karte verdeckt, Zettel daneben; Reservekarten und -bögen am Pult"],
-  ["Abstimmung: Sie zählen selbst", "Offene Abstimmung per Handzeichen, Zeile für Zeile der Matrix (A: Klerus, Adel, Dritter Stand, dann B). Nur Ja-Hände zählen und an die Tafel schreiben, die Klasse schreibt auf dem Zettel mit. Dann rechnet die Klasse die Ergebnisse aus"],
+  ["Karten und Stimmzettel auf die Plätze legen", "Karte verdeckt, Stimmzettel daneben; Reservekarten und -zettel am Pult"],
+  ["Auszählen: Sie zählen selbst, während die Klasse Text und Zeitstrahl bearbeitet", "Zettel nach Stand sortieren, Ja und Nein je Antrag in der Strichliste, Kontrolle: Ja plus Nein = Personenzahl. Ja-Zahlen in die Matrix an der Tafel schreiben (Folie 8, Phase 3). Bei Zeitnot nur Antrag A"],
   ["Kreide, Grün zum Verbessern, Uhr oder Timer", "Kurzstunde: 25 Minuten, kein Puffer; Phase 4 „Auswerten“ ist fest"],
 ];
 // Tafel
 const tafel = [
-  ["Seitentafel", "Ziele („Ich kann …“, 3 Sätze, Satz 3 mit *) und Ablauf: A Ankommen · V Abstimmung · I Text · V Zeitstrahl · A Rat an den Freund"],
-  ["Mitte", "Matrix (Tabelle) für die Abstimmung, Spalten: Antrag, Klerus (3), Adel (4), Dritter Stand (18), Stände mit Ja, Ergebnis nach Ständen, alle Ja (von 25), Ergebnis nach Köpfen; Zeilen A und B. Daneben Platz für den Zeitstrahl."],
+  ["Seitentafel", "Ziele („Ich kann …“, 3 Sätze, Satz 3 mit *) und Ablauf: A Ankommen · V Abstimmung · I Text · V Zeitstrahl · A Ergebnis und Rat an den Freund"],
+  ["Mitte", "Auswertungsmatrix (Tafelmatrix-Datei, Seite 1) vorab zeichnen: Spalten Antrag, Klerus (3), Adel (4), Dritter Stand (18), Stände mit Ja, Ergebnis nach Ständen, alle Ja (von 25), Ergebnis nach Köpfen; Zeilen A und B. Daneben Platz für den Zeitstrahl."],
 ];
 
 const d = [];
 d.push(p(t("GESCHICHTE · KLASSE 8D · MITTWOCH 11.11.2026", { size: 18, bold: true, color: MUTED }), { after: 20 }));
 d.push(p(t("Materialliste: Nationalversammlung", { font: "Cambria", size: 44, bold: true, color: NAVY }), { after: 40 }));
-d.push(p(t("Zum Abhaken. Alle Dateien liegen in Geschichte_8D/Stunde2_Nationalversammlung/. Ablauf (25 Minuten): 3 Ankommen · 10 Abstimmung · 5 Text · 3 Zeitstrahl · 4 Auswerten.", { size: 20, color: MUTED }), { after: 80 }));
+d.push(p(t("Zum Abhaken. Alle Dateien liegen in Geschichte_8D/Stunde2_Nationalversammlung/. Ablauf (25 Minuten): 3 Ankommen · 4 Abstimmung · 5 Text · 3 Zeitstrahl · 10 Auswerten.", { size: 20, color: MUTED }), { after: 80 }));
 
 d.push(h2("1 Drucken und schneiden"));
 d.push(table(DW, [hdr(["", "Was", "Menge", "Datei und Hinweis"], DW), ...druck.map(([a, b, c]) => row([cell(box(), { w: DW[0] }), cell(p(t(a, { bold: true, size: 20 }), { after: 0 }), { w: DW[1] }), cell(p(t(b, { size: 20 }), { after: 0 }), { w: DW[2] }), cell(p(t(c, { size: 19 }), { after: 0 }), { w: DW[3] })], 560))]));
@@ -56,14 +57,14 @@ d.push(h2("3 Tafel vor der Stunde"));
 const TW = [2000, 8206];
 d.push(table(TW, [hdr(["Wo", "Was steht dort"], TW), ...tafel.map(([a, b]) => row([cell(p(t(a, { bold: true, size: 20 }), { after: 0 }), { w: TW[0], fill: LIGHT }), cell(p(t(b, { size: 20 }), { after: 0 }), { w: TW[1] })], 520))]));
 
-d.push(h2("4 Rollenverteilung (ohne Namen, nur Platznummern)"));
+d.push(h2("4 Stände (ohne Namen, nur Platznummern)"));
 const RW = [2400, 1100, 6706];
-const rolle = [["Erster Stand · Klerus", "3", "Plätze: ____  ____  ____"], ["Zweiter Stand · Adel", "4", "Plätze: ____  ____  ____  ____"], ["Dritter Stand (Bauern und Bürger)", "18", "alle übrigen Plätze; bei Fehlzeiten Reservekarte einsetzen"], ];
+const rolle = [["Erster Stand · Klerus", "3", "Plätze: ____  ____  ____"], ["Zweiter Stand · Adel", "4", "Plätze: ____  ____  ____  ____"], ["Dritter Stand (Bauern und Bürger)", "18", "alle übrigen Plätze; bei Fehlzeiten Reservekarte einsetzen"]];
 d.push(table(RW, [hdr(["Stand", "Anzahl", "Plätze"], RW), ...rolle.map(([a, b, c]) => row([cell(p(t(a, { bold: true, size: 20 }), { after: 0 }), { w: RW[0], fill: LIGHT }), cell(p(t(b, { size: 20 }), { after: 0, align: AlignmentType.CENTER }), { w: RW[1] }), cell(p(t(c, { size: 20 }), { after: 0 }), { w: RW[2] })], 520))]));
-d.push(p(t("Wenn Schülerinnen oder Schüler fehlen: Klerus bleibt 3, Adel bleibt 4, der Dritte Stand wird kleiner. Klerus und Adel dürfen zusammen nie mehr als ein Drittel der Klasse sein.", { size: 19, italics: true, color: MUTED }), { before: 60 }));
+d.push(p(t("Wenn Schülerinnen oder Schüler fehlen: Klerus bleibt 3, Adel bleibt 4, der Dritte Stand wird kleiner (Zahlen in der Matrix anpassen). Klerus und Adel dürfen zusammen nie mehr als ein Drittel der Klasse sein.", { size: 19, italics: true, color: MUTED }), { before: 60 }));
 
 d.push(h2("5 Kurz vor Beginn (5 Minuten)"));
-["Folie 1 steht, Beamer an", "Karten liegen verdeckt auf den Plätzen, daneben der Zettel; die Matrix steht an der Tafel", "Seitentafel, Rahmen für die Abstimmung und Datumsliste an der Tafel", "Textblätter liegen bereit (noch nicht austeilen); die Abschlussfrage läuft mündlich", "Ansagen im Kopf: „Stifte liegen. Ihr hört nur zu.“ · „Jetzt stimmt ihr offen ab. Ich zähle, ihr schreibt auf eurem Zettel mit.“"].forEach((x) => d.push(p([t("□  ", { size: 24 }), t(x, { size: 20 })], { after: 50 })));
+["Folie 1 steht, Beamer an", "Karten liegen verdeckt auf den Plätzen, daneben der Stimmzettel", "Seitentafel beschrieben, Matrix in der Mitte gezeichnet, Platz für den Zeitstrahl", "Textblätter liegen bereit (noch nicht austeilen); die Abschlussfrage läuft mündlich", "Strichliste auf dem Pult, Ansagen im Kopf: „Stifte liegen. Ihr hört nur zu.“ · „Stifte hinlegen. Ich sammle die Zettel ein.“"].forEach((x) => d.push(p([t("□  ", { size: 24 }), t(x, { size: 20 })], { after: 50 })));
 
 (async () => {
   const doc = new Document({ styles: { default: { document: { run: { font: "Calibri", size: 21 } } } }, sections: [{ properties: { page: { size: { width: 11906, height: 16838 }, margin: { top: 800, bottom: 700, left: 850, right: 850 } } }, footers: { default: footer }, children: d }] });

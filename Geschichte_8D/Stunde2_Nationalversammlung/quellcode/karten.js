@@ -32,34 +32,27 @@ function page(list) {
 const pg1 = [["K"], ["K"], ["K"], ["A"], ["A"], ["A"], ["A"], ["D"], ["D"], ["D"], ["D"], ["D"], ["D"], ["D"]];
 const pg2 = [...Array(11).fill(["D"]), ...Array(3).fill(["D", true])];
 
-// ---- Beobachtungszettel (Schnipsel, vier pro A4): nur Ja-Stimmen zählen, Ergebnis selbst ausrechnen ----
-const cc = (txt, o = {}) => new TableCell({ children: [p(t(txt, { size: o.size || 20, bold: o.bold, color: o.color }), { after: 0, align: o.align || AlignmentType.CENTER })], width: { size: o.w, type: WidthType.DXA }, borders: { top: thin, bottom: thin, left: thin, right: thin }, margins: { top: 50, bottom: 50, left: 70, right: 70 }, verticalAlign: VerticalAlign.CENTER, columnSpan: o.span });
-function zettel() {
-  const M = [800, 1250, 1250, 1500, 1200, 1350, 1200, 1650];
-  const jn = (w, von) => cc("Ja ___ von " + von, { w, size: 18, color: "5B6B8C" });
-  const matrix = new Table({ width: { size: M.reduce((x, y) => x + y, 0), type: WidthType.DXA }, columnWidths: M, rows: [
-    new TableRow({ children: [cc("", { w: M[0] }), cc("Nach Ständen (jeder Stand eine Stimme)", { w: M[1] + M[2] + M[3] + M[4] + M[5], span: 5, bold: true, size: 17 }), cc("Nach Köpfen (jede Hand)", { w: M[6] + M[7], span: 2, bold: true, size: 17 })] }),
-    new TableRow({ children: [cc("Antrag", { w: M[0], bold: true, size: 16 }), cc("Klerus", { w: M[1], bold: true, size: 17, color: "6B4A9E" }), cc("Adel", { w: M[2], bold: true, size: 17, color: "B9791A" }), cc("Dritter Stand", { w: M[3], bold: true, size: 17, color: "2F6AAE" }), cc("Stände mit Ja", { w: M[4], bold: true, size: 16 }), cc("Ergebnis", { w: M[5], bold: true, size: 17 }), cc("alle Ja", { w: M[6], bold: true, size: 16 }), cc("Ergebnis", { w: M[7], bold: true, size: 17 })] }),
-    ...["A", "B"].map((x) => new TableRow({ height: { value: 640, rule: HeightRule.ATLEAST }, children: [cc(x, { w: M[0], bold: true, size: 24 }), jn(M[1], "___"), jn(M[2], "___"), jn(M[3], "___"), cc("___ von 3", { w: M[4], size: 17, color: "5B6B8C" }), cc("", { w: M[5] }), cc("___ von ___", { w: M[6], size: 17, color: "5B6B8C" }), cc("", { w: M[7] })] })),
-  ] });
+// ---- Stimmzettel (Schnipsel, acht pro A4), werden abgegeben ----
+function stimm() {
   return [
-    p([t("BEOBACHTUNGSZETTEL · GESCHICHTE 8D   ", { size: 15, bold: true, color: MUTED }), t("Abstimmung der Stände", { font: "Cambria", size: 26, bold: true, color: NAVY })], { after: 40 }),
-    p([t("Mein Stand:  ", { size: 19, bold: true }), t("□ Klerus  □ Adel  □ Dritter Stand", { size: 19 }), t("       Meine Stimme (vorab):  ", { size: 19, bold: true }), t("A □ Ja □ Nein    B □ Ja □ Nein", { size: 19 })], { after: 50 }),
-    matrix,
-    p(t("Schreibe mit, was die Lehrkraft an die Tafel schreibt. Nach Ständen: mindestens 2 von 3 Ständen Ja = angenommen. Nach Köpfen: mehr als die Hälfte Ja = angenommen.", { size: 16, italics: true, color: MUTED }), { before: 40, after: 0 }),
+    p([t("STIMMZETTEL · 8D", { size: 15, bold: true, color: MUTED })], { after: 20 }),
+    p(t("Abstimmung der Stände", { font: "Cambria", size: 24, bold: true, color: NAVY }), { after: 50 }),
+    p([t("Mein Stand:", { size: 20, bold: true })], { after: 20 }),
+    p(t("□ Klerus     □ Adel     □ Dritter Stand", { size: 20 }), { after: 70 }),
+    p([t("A  ", { size: 22, bold: true, color: RED }), t("Steuern auch für Adel und Klerus", { size: 19 })], { after: 20 }),
+    p(t("□ Ja        □ Nein", { size: 22, bold: true }), { after: 60 }),
+    p([t("B  ", { size: 22, bold: true, color: RED }), t("Stände abschaffen, gleiche Rechte", { size: 19 })], { after: 20 }),
+    p(t("□ Ja        □ Nein", { size: 22, bold: true }), { after: 0 }),
   ];
 }
-function zettelCell() {
-  return new TableCell({ children: zettel(), width: { size: W, type: WidthType.DXA }, borders: { top: dash, bottom: dash, left: dash, right: dash }, margins: { top: 80, bottom: 60, left: 170, right: 170 }, verticalAlign: VerticalAlign.TOP });
-}
-const bogenPage = new Table({ width: { size: W, type: WidthType.DXA }, columnWidths: [W], rows: [0, 1, 2, 3].map(() => new TableRow({ cantSplit: true, height: { value: 3450, rule: HeightRule.EXACT }, children: [zettelCell()] })) });
+const sc = () => new TableCell({ children: stimm(), width: { size: CW, type: WidthType.DXA }, borders: { top: dash, bottom: dash, left: dash, right: dash }, margins: { top: 90, bottom: 60, left: 200, right: 170 }, verticalAlign: VerticalAlign.TOP });
+const bogenPage = new Table({ width: { size: W, type: WidthType.DXA }, columnWidths: [CW, CW], rows: [0, 1, 2, 3].map(() => new TableRow({ cantSplit: true, height: { value: 3700, rule: HeightRule.EXACT }, children: [sc(), sc()] })) });
 
-const g = (txt, o = {}) => new TableCell({ children: [p(t(txt, { size: o.size || 19, bold: o.bold, color: o.color }), { after: 0, align: o.align || AlignmentType.CENTER })], width: { size: o.w, type: WidthType.DXA }, borders: { top: thin, bottom: thin, left: thin, right: thin }, margins: { top: 30, bottom: 30, left: 50, right: 50 }, verticalAlign: VerticalAlign.CENTER, columnSpan: o.span });
 const brk = () => new Paragraph({ children: [new PageBreak()] });
 (async () => {
   const doc = new Document({ styles: { default: { document: { run: { font: "Calibri", size: 22 } } } }, sections: [{ properties: { page: { size: { width: 11906, height: 16838 }, margin: { top: 450, bottom: 450, left: 600, right: 600 } } }, children: [
     page(pg1), brk(), page(pg2), brk(), bogenPage,
   ] }] });
-  fs.writeFileSync("../Druckvorlage_Karten_Beobachtungszettel_8D.docx", await Packer.toBuffer(doc));
+  fs.writeFileSync("../Druckvorlage_Karten_Stimmzettel_8D.docx", await Packer.toBuffer(doc));
   console.log("ok");
 })();
