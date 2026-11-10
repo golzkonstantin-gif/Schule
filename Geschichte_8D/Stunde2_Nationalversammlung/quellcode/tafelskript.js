@@ -90,7 +90,7 @@ d.push(h3("Material und Vorbereitung (Details: Materialliste)"));
 d.push(...bullets([
   "Druckvorlage „Standeskarten mit Stimmzettel“: Seite 1 bis 3: 30 farbige Standeskarten mit Stimmzettel (3 Klerus violett, 4 Adel orange, 18 Dritter Stand blau, 5 Reserve), je Seite 10 Karten, ausschneiden.",
   "Tafelmatrix_Auswertung_8D.pdf: Seite 1 Matrix leer (zum Abzeichnen an die Tafel), Seite 2 Matrix ausgefüllt (erwartet), Seite 3 Strichliste zum Auszählen.",
-  "Text mit Zeitstrahl: „Der Dritte Stand wehrt sich“ (gekürzte Fassung, Arbeitsblatt_Der_Dritte_Stand_wehrt_sich.pdf, 27 Stück; ein Drittel A4 Text, vier Daten). Lösung für Sie: Loesung_Arbeitsblatt_Der_Dritte_Stand_wehrt_sich.pdf. Kein Schnipsel für die Abschlussfrage (mündlich).",
+  "Text mit Zeitstrahl: „Der Dritte Stand wehrt sich“ (gekürzte Fassung, Arbeitsblatt_Der_Dritte_Stand_wehrt_sich.pdf, zwei Blätter pro A4: 14 Blatt drucken und in der Mitte schneiden, 28 Blätter; Text und Zeitstrahl auf einer halben Seite, vier Daten). Lösung für Sie: Loesung_Arbeitsblatt_Der_Dritte_Stand_wehrt_sich.pdf. Kein Schnipsel für die Abschlussfrage (mündlich).",
   "Vorab: Standeskarten (Rolle und Stimmzettel in einem) verdeckt auf die Plätze legen. Klerus (3) und Adel (4) gezielt verteilen (zuverlässige Personen), alle übrigen sind Dritter Stand (18). Keine Wahlhelfer. Matrix vorab an die Tafel zeichnen (Mitte), Platz für den Zeitstrahl lassen.",
   "Folien 1 bis 16 (Schrift mindestens 27 Punkt; Folie 1 mit der selbst gezeichneten Karikatur), Kreide, Grün zum Verbessern, Uhr oder Timer.",
 ]));
@@ -129,7 +129,7 @@ d.push(step("arbeitet allein", {
 
 // Phase 2
 d.push(phase("2", "Text (gekürzt)", 4, "AVIVA: Informieren"));
-d.push(warum("Wie der Dritte Stand die Macht des Königs infrage stellt, wird selbst aus dem gekürzten Text erarbeitet (indirekt: Lesen allein, Unterstreichen). Der Text ist bewusst kurz (ein Drittel A4, vier Daten), damit die Stunde in 25 Minuten gelingt. Kein Vorlesen. Während die Klasse arbeitet, zählen Sie die Karten aus.", "„Der Dritte Stand hat gegen die Regel verloren, aber er gibt nicht auf. Wie reagiert er? Das lest ihr jetzt.“"));
+d.push(warum("Wie der Dritte Stand die Macht des Königs infrage stellt, wird selbst aus dem gekürzten Text erarbeitet (indirekt: Lesen allein, Unterstreichen). Der Text ist bewusst kurz (eine halbe A4-Seite mit Zeitstrahl, vier Daten), damit die Stunde in 25 Minuten gelingt. Kein Vorlesen. Während die Klasse arbeitet, zählen Sie die Karten aus.", "„Der Dritte Stand hat gegen die Regel verloren, aber er gibt nicht auf. Wie reagiert er? Das lest ihr jetzt.“"));
 d.push(sp());
 d.push(step("liest allein", {
   say: "Stifte liegen. Ihr hört nur zu. Das Blatt liegt vor euch. Jetzt arbeitet ihr allein. Die Aufgabe steht rechts.",

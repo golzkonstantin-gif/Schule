@@ -21,7 +21,7 @@ const box = () => p(t("□", { size: 26 }), { after: 0, align: AlignmentType.CEN
 const DW = [550, 3500, 1700, 4456];
 const druck = [
   ["Standeskarten mit Stimmzettel (farbig nach Stand, Rolle und Ankreuzen in einem)", "3 Seiten, je 10 Karten ausschneiden (30 Karten: 3 Klerus, 4 Adel, 18 Dritter Stand, 5 Reserve)", "Druckvorlage_Karten_Stimmzettel_8D.pdf, Seite 1 bis 3; Farbe zeigt den Stand (violett Klerus, orange Adel, blau Dritter Stand), gern tintensparend"],
-  ["Text mit Zeitstrahl „Der Dritte Stand wehrt sich“ (gekürzt)", "27 (25 + 2 Reserve), einseitig A4 (oder 2 pro Blatt, in der Mitte schneiden)", "Arbeitsblatt_Der_Dritte_Stand_wehrt_sich.pdf (gekürzt gegenüber der 8C)"],
+  ["Text mit Zeitstrahl „Der Dritte Stand wehrt sich“ (gekürzt)", "14 Blatt, in der Mitte schneiden (28 Blätter: 25 + 3 Reserve), zwei pro A4, einseitig", "Arbeitsblatt_Der_Dritte_Stand_wehrt_sich.pdf (gekürzt gegenüber der 8C)"],
   ["Tafelmatrix und Strichliste (für dich)", "1 Exemplar (3 Seiten, Querformat)", "Tafelmatrix_Auswertung_8D.pdf: Seite 1 leer zum Abzeichnen, Seite 2 erwartetes Ergebnis, Seite 3 Strichliste zum Auszählen"],
   ["Lösung Text mit Zeitstrahl (für dich)", "1 Blatt", "Loesung_Arbeitsblatt_Der_Dritte_Stand_wehrt_sich.pdf"],
 ];
