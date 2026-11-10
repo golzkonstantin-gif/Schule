@@ -56,7 +56,7 @@ d.push(p(t("Ziel: Die Stunde beginnt mit einer selbst gezeichneten Karikatur: Kl
 d.push(h3("Kopf der Planung"));
 d.push(table([2600, 7606], [
   ["Ziel (Ich kann …)", "… erklären, wie die Stände den Dritten Stand (Bauern und Bürger) überstimmen können. … beurteilen, ob der Dritte Stand die Politik durch Abstimmen ändern kann, und das mit einer Zahl begründen. … am Zeitstrahl erklären, wie sich der Dritte Stand wehrt.*"],
-  ["Prüfaufgabe: Woran erkenne ich es?", "Heft: Vermutung vom Anfang, Ergebnisse nach Ständen und nach Köpfen selbst ausgerechnet (Ziel 1), Antwort auf die Stundenfrage mit einer Zahl und Vergleich mit der Vermutung (Ziel 2). Zeitstrahl bis „Anfang Juli: Soldaten um Paris“ (Ziel 3). Abschlussfrage mündlich: Rat an den Bauern mit Position, Sachargument und „weil“."],
+  ["Prüfaufgabe: Woran erkenne ich es?", "Heft: Vermutung vom Anfang, Ergebnisse nach Ständen und nach Köpfen selbst ausgerechnet (Ziel 1), Antwort auf die Stundenfrage mit einer Zahl und Vergleich mit der Vermutung (Ziel 2). Zeitstrahl bis „Anfang Juli: Soldaten um Paris“ (Ziel 3). Abschlussfrage mündlich: Antwort an den Adligen (Bezug auf die Karikatur) mit Position, Sachargument und „weil“."],
   ["Mindestziel", "Ziel 1 und 2. Ziel 3 hat einen Stern. „Auswerten“ bleibt immer."],
   ["Beitrag zur Reihe", "Stunde 2 von 11 (Sequenz Französische Revolution). Sie schließt die Abstimmung aus Stunde 1 ab (Ursache des Streits) und führt zur Nationalversammlung und zum Ballhausschwur. Die Karikatur-Analyse und der Merksatz rücken in die Folgestunden (siehe Sequenz)."],
   ["Vorgehen", "Phase 1 direkt (Regel und Anträge vorgegeben), Phase 2 und 3 indirekt (Text und Zeitstrahl selbst erarbeiten), Phase 4 geführt (Matrix rechnen, Antwort auf die Stundenfrage, mündlicher Rat). Direkt oder indirekt wird je Phase entschieden."],
@@ -73,7 +73,7 @@ d.push(...bullets([
 d.push(h3("Zeitplan (25 Minuten)"));
 d.push(table([800, 2300, 4300, 2806], [
   row([th("Min.", 800), th("AVIVA", 2300), th("Phase", 4300), th("Arbeitsform", 2806)], 320),
-  ...[["4", "Ankommen", "0  Karikatur, Vermutung, Ziele, „Das ist mir wichtig“", "still, allein"], ["4", "Vorwissen", "1  Abstimmung: Stimmzettel ausfüllen und abgeben", "allein, leise"], ["4", "Informieren", "2  Text (gekürzt, Sie zählen aus)", "allein, leise"], ["3", "Verarbeiten", "3  Zeitstrahl bis Anfang Juli (Sie schreiben die Matrix an)", "allein, Kontrolle per Folie"], ["10", "Auswerten", "4  Matrix rechnen, Antwort auf die Stundenfrage, Rat an den Bauern, Ziele, Ausblick", "allein, mündlich"]].map((r) => row(r.map((v, i) => tc(v, [800, 2300, 4300, 2806][i], { bold: i < 3 })), 320)),
+  ...[["4", "Ankommen", "0  Karikatur, Vermutung, Ziele, „Das ist mir wichtig“", "still, allein"], ["4", "Vorwissen", "1  Abstimmung: Stimmzettel ausfüllen und abgeben", "allein, leise"], ["4", "Informieren", "2  Text (gekürzt, Sie zählen aus)", "allein, leise"], ["3", "Verarbeiten", "3  Zeitstrahl bis Anfang Juli (Sie schreiben die Matrix an)", "allein, Kontrolle per Folie"], ["10", "Auswerten", "4  Matrix rechnen, Antwort auf die Stundenfrage, Antwort an den Adligen, Ziele, Ausblick", "allein, mündlich"]].map((r) => row(r.map((v, i) => tc(v, [800, 2300, 4300, 2806][i], { bold: i < 3 })), 320)),
 ]));
 d.push(note("ZEIT", "Die Stunde ist sehr knapp: Kein Puffer. Das Auszählen der Zettel (25 Zettel, 2 Anträge) dauert etwa 4 bis 6 Minuten und läuft in Phase 2 und 3. Wird es nicht fertig, schreiben Sie vor Phase 4 nur Antrag A in die Matrix (Antrag B entfällt). Phase 4 wird nicht gestrichen."));
 
@@ -161,29 +161,29 @@ d.push(step("arbeitet allein", {
 }));
 
 // Phase 4
-d.push(phase("4", "Auswerten: Ergebnis, Stundenfrage, Rat an den Bauern", 10, "AVIVA: Auswerten"));
-d.push(warum("Die Klasse rechnet selbst aus und beantwortet die Stundenfrage: Nach Ständen verliert der Dritte Stand (Bauern und Bürger) immer, nach Köpfen hätte er gewonnen, „einfach abstimmen“ funktioniert so nicht. Sie vergleicht mit ihrer Vermutung vom Anfang. Der mündliche Rat überprüft das Gelernte offen mit mehreren guten Antworten (Vorstufe zu den Urteilsaufgaben der Reihe). Diese Phase wird nie gestrichen.", "„Klerus und Adel sagen: Einfach abstimmen. Was zeigt eure Abstimmung? Und was rät man dem Dritten Stand jetzt?“"));
+d.push(phase("4", "Auswerten: Ergebnis, Stundenfrage, Antwort an den Adligen", 10, "AVIVA: Auswerten"));
+d.push(warum("Die Klasse rechnet selbst aus und beantwortet die Stundenfrage: Nach Ständen verliert der Dritte Stand (Bauern und Bürger) immer, nach Köpfen hätte er gewonnen, „einfach abstimmen“ funktioniert so nicht. Sie vergleicht mit ihrer Vermutung vom Anfang. Die Klasse nimmt am Ende Bezug auf die Aussage des Adligen vom Anfang (Karikatur) und antwortet ihm mündlich: Das überprüft das Gelernte offen mit mehreren guten Antworten (Vorstufe zu den Urteilsaufgaben der Reihe). Diese Phase wird nie gestrichen.", "„Der Adlige vom Anfang sagt: Einfach abstimmen. Was zeigt eure Abstimmung? Was antwortet ihr ihm?“"));
 d.push(sp());
 d.push(step("rechnet und schreibt", {
   say: "Stifte liegen. Ihr hört nur zu. Hier ist das Ergebnis eurer Abstimmung. … Jetzt arbeitet ihr allein. Die Aufgabe steht rechts.",
   do: [
-    "Folie 11 (Ü4, 4 Minuten): Die Matrix mit den Ja-Zahlen steht an der Tafel. (1) Ablesen und rechnen, etwa 1 Minute: Nach Ständen: Wie viele der drei Stände sagen Ja? Mindestens 2 von 3 = angenommen. Nach Köpfen: Alle Ja zusammenzählen (von 25), mehr als die Hälfte = angenommen. (2) Ins Heft, etwa 3 Minuten: „Stimmt, was der Adlige sagt? Nach Ständen …, nach Köpfen … Deshalb … (nenne eine Zahl)“ und Vergleich mit der Vermutung vom Anfang. Die Antwort wird nicht vorgegeben. Wenn die Zeit knapp ist, genügen die Ergebnisse und ein Antwortsatz. Heft-Stichprobe: bei 4 bis 6 Personen unterschiedlichen Niveaus mitlesen, nicht kommentieren (unbenotet).",
+    "Folie 11 (Ü4, 4 Minuten): Die Matrix mit den Ja-Zahlen steht an der Tafel. (1) Ablesen und rechnen, etwa 1 Minute: Nach Ständen: Wie viele der drei Stände sagen Ja? Mindestens 2 von 3 = angenommen. Nach Köpfen: Alle Ja zusammenzählen (von 25), mehr als die Hälfte = angenommen. (2) Ins Heft, etwa 3 Minuten: „Nach Ständen …, nach Köpfen … Das zeigt: … (nenne Zahlen)“ und Vergleich mit der Vermutung vom Anfang. Die Antwort wird nicht vorgegeben. Die Antwort an den Adligen kommt danach mündlich (Folie 13). Wenn die Zeit knapp ist, genügen die Ergebnisse und ein Antwortsatz. Heft-Stichprobe: bei 4 bis 6 Personen unterschiedlichen Niveaus mitlesen, nicht kommentieren (unbenotet).",
     "Folie 12 (Kontrolle, 1 Minute): „Vergleicht und verbessert mit Grün.“ Sie tragen die Ergebnisse in die Matrix an der Tafel ein. Einordnung in einem Satz: „Im Spiel stimmen Klerus und Adel immer gleich. In Frankreich sind sie zusammen nur etwa 3 % der Menschen.“ Gezielte Abfrage nur bei Bedarf (2 bis 3 Personen, kurz): „Wie haben Klerus und Adel abgestimmt? Warum?“",
   ],
   sol: "Rechnen: Nach Ständen 1 von 3 Ständen Ja, abgelehnt. Nach Köpfen 18 von 25 Ja, angenommen (bei A und B gleich, echte Zahlen gelten). Antwort auf die Stundenfrage (mit Zahl, mehrere Formulierungen möglich): „Nein, das stimmt nicht, weil Klerus und Adel zusammen 2 von 3 Stimmen haben, obwohl sie nur etwa 3 % der Menschen sind“ oder „Nur nach Köpfen hätte der Dritte Stand gewonnen: 18 von 25“. Vergleich: Wer vermutet hat, einfach abstimmen reiche nicht, sieht sich bestätigt; wer das Gegenteil vermutet hat, korrigiert.",
 }));
 d.push(sp());
-d.push(step("denkt, dann mündlich", {
-  say: "Stifte liegen. Ihr hört nur zu. Das ist die letzte Aufgabe. Denkt zehn Sekunden nach. Ich rufe euch auf.",
+d.push(step("schaut auf die Karikatur, denkt, dann mündlich", {
+  say: "Stifte liegen. Ihr hört nur zu. Das ist die letzte Aufgabe. Schaut noch einmal auf die Karikatur vom Anfang. Denkt zehn Sekunden nach. Ich rufe euch auf.",
   do: [
-    "Folie 13 (Abschlussfrage, 3 Minuten): Zeichnung („Ein Bauer“ mit Sprechblase, „Du“ rätst): Der Bauer sagt: „Wir sind fast alle, aber nach Ständen haben wir nur eine von drei Stimmen. Was sollen wir jetzt tun?“ Die Antwort kommt mündlich, ohne Schnipsel: „Ich rate dir, …, weil …“. Mehrere gute Antworten, geprüft werden Position, ein Sachargument aus der Stunde und ein „weil“. Erst zehn Sekunden denken, dann mündlich.",
-    "Form nach Verlauf wählen: (a) Blitzlicht (empfohlen): 4 bis 6 Personen unterschiedlichen Niveaus gezielt aufrufen, kein Kommentar. (b) Rat-Duell zu zweit, leise („Flüsterstufe. Nur dein Partner hört dich.“), danach zwei Personen berichten (nur wenn Zeit ist). Unbenotet.",
+    "Folie 13 (Abschlussfrage, 3 Minuten): Die Karikatur vom Anfang erscheint wieder, daneben die Aussage des Adligen: „Wenn der Dritte Stand unzufrieden ist, soll er einfach gegen die Politik des Königs stimmen.“ Auftrag: „Was antwortest du dem Adligen?“ Die Antwort kommt mündlich, ohne Schnipsel: „Ich antworte dir, …, weil …“. Mehrere gute Antworten, geprüft werden Position, ein Sachargument aus der Stunde (Zahl aus der Matrix, 97 % der Menschen, 1 von 3 Stimmen, Nationalversammlung) und ein „weil“. Erst zehn Sekunden denken, dann mündlich. Zum Schluss: Wer hat seine Vermutung vom Anfang geändert? (nur Blick ins Heft, keine Abfrage).",
+    "Form nach Verlauf wählen: (a) Blitzlicht (empfohlen): 4 bis 6 Personen unterschiedlichen Niveaus gezielt aufrufen, kein Kommentar. (b) Duell zu zweit, leise („Flüsterstufe. Nur dein Partner hört dich.“): eine Person ist der Adlige, die andere antwortet, danach zwei Personen berichten (nur wenn Zeit ist). Unbenotet.",
     "Folie 14 (30 Sekunden, still): Haben wir die Ziele erreicht? Keine Antworten ins Plenum. Folie 15 (30 Sekunden, nur lesen): Ausblick, Soldaten um Paris. „Wie reagieren die Menschen in Paris? Das sehen wir in der nächsten Stunde.“",
   ],
-  sol: "Mögliche Argumente (Auswahl, keine Musterlösung). Sich selbst zur Nationalversammlung erklären (so geschah es 1789): Sie vertreten fast alle Menschen (Sieyès: ALLES); nach Ständen verlieren sie immer; gemeinsam sind sie stark; so entscheidet der König nicht mehr allein. Weiter fordern, nach Köpfen abzustimmen und verhandeln. Steuern verweigern. Abwarten: unklar, ob der König nachgibt; Verhandeln kostet Zeit. Zwischenlösungen sind begründbar. Kriterien: Position, ein Sachargument aus der Stunde, ein „weil“.",
+  sol: "Mögliche Antworten an den Adligen (Auswahl, keine Musterlösung). „Das funktioniert nicht, weil nach Ständen Klerus und Adel 2 von 3 Stimmen haben, obwohl der Dritte Stand (Bauern und Bürger) fast alle Menschen vertritt.“ „Das stimmt nur, wenn nach Köpfen abgestimmt wird: dort hätte der Dritte Stand 18 von 25 Stimmen.“ „Ihr wollt nicht nach Köpfen abstimmen, weil ihr eure Vorrechte behalten wollt.“ „Wenn Abstimmen nichts bringt, wehrt sich der Dritte Stand anders, er erklärt sich zur Nationalversammlung.“ Kriterien: Position, ein Sachargument aus der Stunde (Zahl, 97 %, Nationalversammlung), ein „weil“.",
 }));
 d.push(sp());
-d.push(note("SOLLBRUCHSTELLE", "Ist das Auszählen vor Phase 4 nicht fertig, schreiben Sie nur Antrag A an. Wird das Ausrechnen und Schreiben länger als 4 Minuten, entfällt der Vergleich mit der Vermutung und der Rat an den Bauern läuft als Blitzlicht (2 Minuten). Der Vergleich kann in Stunde 3 als Wiederholung wieder aufgegriffen werden."));
+d.push(note("SOLLBRUCHSTELLE", "Ist das Auszählen vor Phase 4 nicht fertig, schreiben Sie nur Antrag A an. Wird das Ausrechnen und Schreiben länger als 4 Minuten, entfällt der Vergleich mit der Vermutung und die Antwort an den Adligen läuft als Blitzlicht (2 Minuten). Der Vergleich kann in Stunde 3 als Wiederholung wieder aufgegriffen werden."));
 
 d.push(h3("So sieht das Heft am Ende der Stunde aus"));
 d.push(table([2300, 7906], [
@@ -199,7 +199,7 @@ d.push(...bullets([
   "Das Spiel vereinfacht: Im Spiel stimmen Klerus und Adel immer gleich. Historisch waren die Stände nicht immer einheitlich (viele einfache Pfarrer unterstützten den Dritten Stand, einzelne Adlige schlossen sich später an), bei der Abstimmungsregel hielten die Privilegierten aber oft zusammen. Die Anträge A und B sind Spielanträge, historisch ging der Streit um die Abstimmungsregel (1789 wurde nicht nach Köpfen abgestimmt).",
   "Die Standeskarten verteilen die Rollen: 3 Klerus (12 %), 4 Adel (16 %), 18 Dritter Stand (72 %). Das ist verzerrt, in Frankreich sind Klerus und Adel zusammen etwa 3 % (Klerus ca. 150 000, Adel ca. 500 000, Dritter Stand ca. 20 000 000 Menschen, Zahlen aus Ihrem Gruppenpuzzle-Material).",
   "Zahlen und Daten stammen aus dem Text der 8C (hier gekürzt) und sind gegen das Schulbuch zu lesen (Lehrbuch S. 112/113): 17. Juni Nationalversammlung, 20. Juni Ballhausschwur, Anfang Juli Soldaten und Entlassung des Finanzministers (im gekürzten Text nicht mehr erwähnt).",
-  "Die Karikatur (Klerus und Adel) und die Figuren („Ein Bauer“, „Du“) sind selbst gezeichnet, keine historischen Quellen oder Porträts.",
+  "Die Karikatur (Klerus und Adel) und sind selbst gezeichnet, keine historischen Quellen oder Porträts.",
 ]));
 
 (async () => {

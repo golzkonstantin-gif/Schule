@@ -37,7 +37,7 @@ const prep = [
 ];
 // Tafel
 const tafel = [
-  ["Seitentafel", "Stundenfrage („Kann der Dritte Stand die Politik des Königs einfach wegstimmen?“), Ziele („Ich kann …“, 3 Sätze, Satz 3 mit *) und Ablauf: A Karikatur · V Abstimmung · I Text · V Zeitstrahl · A Ergebnis und Rat"],
+  ["Seitentafel", "Stundenfrage („Kann der Dritte Stand die Politik des Königs einfach wegstimmen?“), Ziele („Ich kann …“, 3 Sätze, Satz 3 mit *) und Ablauf: A Karikatur · V Abstimmung · I Text · V Zeitstrahl · A Ergebnis und Antwort an den Adligen"],
   ["Mitte", "Auswertungsmatrix (Tafelmatrix-Datei, Seite 1) vorab zeichnen: Spalten Antrag, Klerus (3), Adel (4), Dritter Stand (18), Stände mit Ja, Ergebnis nach Ständen, alle Ja (von 25), Ergebnis nach Köpfen; Zeilen A und B. Daneben Platz für den Zeitstrahl."],
 ];
 
@@ -64,7 +64,7 @@ d.push(table(RW, [hdr(["Stand", "Anzahl", "Plätze"], RW), ...rolle.map(([a, b, 
 d.push(p(t("Wenn Schülerinnen oder Schüler fehlen: Klerus bleibt 3, Adel bleibt 4, der Dritte Stand wird kleiner (Zahlen in der Matrix anpassen). Klerus und Adel dürfen zusammen nie mehr als ein Drittel der Klasse sein.", { size: 19, italics: true, color: MUTED }), { before: 60 }));
 
 d.push(h2("5 Kurz vor Beginn (5 Minuten)"));
-["Folie 1 (Karikatur) steht, Beamer an", "Karten liegen verdeckt auf den Plätzen, daneben der Stimmzettel", "Seitentafel beschrieben, Matrix in der Mitte gezeichnet, Platz für den Zeitstrahl", "Textblätter liegen bereit (noch nicht austeilen); die Abschlussfrage läuft mündlich", "Strichliste auf dem Pult, Ansagen im Kopf: „Stifte liegen. Ihr hört nur zu.“ · „Stifte hinlegen. Ich sammle die Zettel ein.“"].forEach((x) => d.push(p([t("□  ", { size: 24 }), t(x, { size: 20 })], { after: 50 })));
+["Folie 1 (Karikatur) steht, Beamer an", "Karten liegen verdeckt auf den Plätzen, daneben der Stimmzettel", "Seitentafel beschrieben, Matrix in der Mitte gezeichnet, Platz für den Zeitstrahl", "Textblätter liegen bereit (noch nicht austeilen); die Abschlussfrage läuft mündlich (Rückgriff auf die Karikatur, Folie 13)", "Strichliste auf dem Pult, Ansagen im Kopf: „Stifte liegen. Ihr hört nur zu.“ · „Stifte hinlegen. Ich sammle die Zettel ein.“"].forEach((x) => d.push(p([t("□  ", { size: 24 }), t(x, { size: 20 })], { after: 50 })));
 
 (async () => {
   const doc = new Document({ styles: { default: { document: { run: { font: "Calibri", size: 21 } } } }, sections: [{ properties: { page: { size: { width: 11906, height: 16838 }, margin: { top: 800, bottom: 700, left: 850, right: 850 } } }, footers: { default: footer }, children: d }] });
