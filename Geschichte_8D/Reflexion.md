@@ -84,3 +84,8 @@
 - Entscheidungen der Lehrkraft (10.11.): Abstimmung aus Stunde 1 nachholen und dabei bis zum Zusammenziehen der Truppen vor Paris kommen. Zwei Anträge (A Steuern, B Stände abschaffen), kein Antrag C. Der Stimmzettel wird zum Beobachtungsbogen: eigene Stimme vorab ankreuzen, Zahlen und Ergebnisse der offenen Abstimmung eintragen, dann auswerten (drei Satzanfänge). Danach der Text wie in der 8C (Sieyès-Quelle, fünf Daten). Abschlussfrage: Rat an den Freund (Bauer).
 - Ablauf (25 Min.): Ankommen 3 · Abstimmung (Vorwissen) 9 · Text 6 · Zeitstrahl 3 · Auswerten 4. Nur drei Methoden. Kein Puffer; Sollbruchstellen: Satz 3 des Bogens und die ersten Zeitstrahl-Einträge. Wahlleitung und Schriftführung führen die Abstimmung.
 - Zu beobachten: Reicht die Zeit für Phase 1b? Trägt der Bogen die Beobachtung? Wird der Zeitstrahl bis Anfang Juli erreicht? Wie viele nennen ein Sachargument in der Abschlussfrage?
+
+### Rückmeldung zum Entwurf 8D Stunde 2 (11.11.)
+- Der Schnipsel zur Abschlussfrage (Rat an den Freund) entfällt, die Frage läuft mündlich (Blitzlicht, gezielt aufrufen, 10 Sekunden denken).
+- Der Beobachtungsbogen war nicht übersichtlich genug (zwei kleine Bögen pro A4, eng gesetzte Tabelle). Neu: ein A4 pro Person mit vier klaren Abschnitten (1 Vorab, 2 Nach Ständen, 3 Nach Köpfen, 4 Auswerten), große Felder, Stand-Farben nur in den Spaltenköpfen.
+- Das Wort „unfair“ in Ziel 2 und Satz 3 nahm eine Erkenntnis vorweg. Neu: Ziel „Ich kann die Abstimmung nach Ständen beurteilen und mein Urteil begründen“, Frage c „Beurteile die Regel „Jeder Stand hat eine Stimme“ (Ich finde sie …, weil …, nenne eine Zahl)“, mehrere Urteile möglich.

@@ -188,7 +188,7 @@ const IMG = "../material/";
 // ============ 3 Lernziele ============
 {
   const s = blank("Lernziele", "Das kannst du am Ende der Stunde", undefined, "Lernziele vorlesen (30 Sekunden, Klasse hört nur zu). Ziel 1 und 2 sind das Mindestziel. Ziel 3 hat einen Stern: Was nicht mehr geschafft wird, hat einen Stern. Am Ende (Folie 14) prüft die Klasse still, ob die Ziele erreicht sind.");
-  [["1", "Ich kann erklären, wie die Stände den Dritten Stand (Bauern und Bürger) überstimmen können."], ["2", "Ich kann begründen, warum die Abstimmung nach Ständen unfair war."], ["3", "Ich kann am Zeitstrahl erklären, wie sich der Dritte Stand zur Nationalversammlung erklärte.*"]].forEach(([n, x], i) => {
+  [["1", "Ich kann erklären, wie die Stände den Dritten Stand (Bauern und Bürger) überstimmen können."], ["2", "Ich kann die Abstimmung nach Ständen beurteilen und mein Urteil begründen."], ["3", "Ich kann am Zeitstrahl erklären, wie sich der Dritte Stand zur Nationalversammlung erklärte.*"]].forEach(([n, x], i) => {
     const y = 1.75 + i * 1.5;
     box(s, 0.6, y, 12.15, 1.25, i % 2 ? LIGHT : LIGHT2);
     numCircle(s, n, 0.9, y + 0.37, 0.5, RED);
@@ -199,7 +199,7 @@ const IMG = "../material/";
 
 // ============ 4 Ablauf ============
 {
-  const s = blank("Ablauf", "So arbeiten wir heute", undefined, "Ablauf zeigen (30 Sekunden). Die Kreise oben rechts zeigen die Phase: A V I V A. Der Stern * bedeutet: wird eventuell nicht mehr geschafft (Ziel 3, Aufgabe 3 auf dem Bogen). Insgesamt 25 Minuten.");
+  const s = blank("Ablauf", "So arbeiten wir heute", undefined, "Ablauf zeigen (30 Sekunden). Die Kreise oben rechts zeigen die Phase: A V I V A. Der Stern * bedeutet: wird eventuell nicht mehr geschafft (Ziel 3, Frage c auf dem Bogen). Insgesamt 25 Minuten.");
   const ph = [["A", "Ankommen", "Ziele", "3 Min."], ["V", "Vorwissen", "Abstimmung", "9 Min."], ["I", "Informieren", "Text", "6 Min."], ["V", "Verarbeiten", "Zeitstrahl", "3 Min."], ["A", "Auswerten", "Rat an Freund", "4 Min."]];
   ph.forEach(([l, n, x, m], i) => {
     const xx = 0.6 + i * 2.45;
@@ -243,8 +243,8 @@ const IMG = "../material/";
 
 // ============ 8 Ü3 Auswerten auf dem Bogen ============
 {
-  const { s } = taskSlide("V · Vorwissen aktivieren · Übung 3", "Werte den Bogen aus", ["Klerus und Adel stimmten immer …, weil …", "Nach Ständen wurde Antrag A …, nach Köpfen …", "* Das ist für den Dritten Stand (Bauern und Bürger) unfair, weil … (nenne eine Zahl)"], "2 Minuten · allein · leise",
-    "Ansage: „Stifte liegen. Jetzt arbeitet ihr allein. Die Aufgabe steht rechts. Schreibt die Sätze unten auf euren Bogen.“ Nach 90 Sekunden: „Noch eine halbe Minute.“ Satz 3 hat einen Stern und darf entfallen. Gezielte Abfrage nur bei Bedarf (2 bis 3 Personen, kein Gespräch): „Wie haben Klerus und Adel abgestimmt? Warum?“ Erwartung: 1 … gleich (Nein), denn sie wollen ihre Vorrechte behalten, ihre Interessen sind deckungsgleich. 2 … nach Ständen abgelehnt, nach Köpfen angenommen. 3 … der Dritte Stand (Bauern und Bürger) ca. 97 % der Menschen stellt, aber nur 1 von 3 Stimmen hat. Einordnung (ein Satz): Im Spiel stimmen Klerus und Adel immer gleich. Historisch waren die Stände nicht immer einheitlich (viele einfache Pfarrer unterstützten den Dritten Stand), bei der Abstimmungsregel hielten die Privilegierten aber oft zusammen. In Frankreich sind Klerus und Adel zusammen ca. 3 % der Menschen (ca. 150 000 und ca. 500 000 von ca. 20,65 Millionen).");
+  const { s } = taskSlide("V · Vorwissen aktivieren · Übung 3", "Werte den Bogen aus", ["Wie haben Klerus und Adel abgestimmt? Warum? (Frage a)", "Vergleiche Antrag A nach Ständen und nach Köpfen. (Frage b)", "* Beurteile die Regel „Jeder Stand hat eine Stimme“ und nenne eine Zahl. (Frage c)"], "2 Minuten · allein · leise",
+    "Ansage: „Stifte liegen. Jetzt arbeitet ihr allein. Die Aufgabe steht rechts. Schreibt die Antworten unter Punkt 4 auf euren Bogen.“ Nach 90 Sekunden: „Noch eine halbe Minute.“ Frage c hat einen Stern und darf entfallen. Gezielte Abfrage nur bei Bedarf (2 bis 3 Personen, kein Gespräch): „Wie haben Klerus und Adel abgestimmt? Warum?“ Erwartung: a gleich (Nein), denn sie wollen ihre Vorrechte behalten, ihre Interessen sind deckungsgleich. b nach Ständen abgelehnt, nach Köpfen angenommen. c offenes Urteil mit Zahl (mehrere gute Antworten), z. B. „Ich finde die Regel ungerecht, weil der Dritte Stand (Bauern und Bürger) ca. 97 % der Menschen stellt, aber nur 1 von 3 Stimmen hat“ oder „Ich finde sie nachvollziehbar, weil jeder Stand als Gruppe zählt, aber die Zahl 97 % zeigt ein Problem“. Das Urteil wird nicht vorgegeben. Einordnung (ein Satz): Im Spiel stimmen Klerus und Adel immer gleich. Historisch waren die Stände nicht immer einheitlich (viele einfache Pfarrer unterstützten den Dritten Stand), bei der Abstimmungsregel hielten die Privilegierten aber oft zusammen. In Frankreich sind Klerus und Adel zusammen ca. 3 % der Menschen (ca. 150 000 und ca. 500 000 von ca. 20,65 Millionen).");
   phaseTag(s, 1);
 }
 
@@ -298,7 +298,7 @@ const IMG = "../material/";
 
 // ============ 13 Abschlussfrage Freund (Bauer) ============
 {
-  const s = blank("A · Auswerten", "Abschlussfrage: Erkläre es deinem Freund", 4,"Ansage: „Stifte liegen. Ihr hört nur zu. Das ist die letzte Aufgabe. Jetzt arbeitet ihr allein. Die Aufgabe steht rechts.“ Zehn Sekunden denken, dann schreiben. Es gibt mehrere gute Antworten, geprüft wird die Begründung: eine Position, ein Sachargument aus der Stunde, ein „weil“. Der Freund ist selbst Bauer, es geht um einen Rat unter Freunden, nicht um Gefahr. Erwartung (Auswahl, keine Musterlösung): ANSCHLIESSEN: Der Dritte Stand (Bauern und Bürger) sind fast alle Menschen (Sieyès: ALLES); die Bauern tragen Steuern und Abgaben, Klerus und Adel zahlen kaum; gemeinsam sind sie stark, ihre Vertreter bilden die Nationalversammlung; mit einer Verfassung entscheidet der König nicht mehr allein; wer abseits steht, hat keine Stimme. ABWARTEN: Die Ernte und die Familie brauchen Zeit und Kraft; es ist unklar, ob der König nachgibt; Veränderungen dauern lange; man kann die Vertreter erst beobachten. Zwischenlösung (die Beschwerden mitunterschreiben, aber weiterarbeiten) ist begründbar. Form nach Verlauf: Blitzlicht (je eine Stimme „anschließen“, eine „abwarten“, gezielt aufgerufen), schriftlich mit Vorlesen oder Rat-Duell zu zweit. Transfer später: Das Muster „Erkläre deinem Freund, warum …“ funktioniert in jeder Epoche (Wahlen, Widerstand, Beitritt zu einer Bewegung). Stichprobe: bei 4 bis 6 Heften mitlesen, nicht kommentieren (unbenotet). Die Figuren sind Zeichnungen, keine historischen Porträts.");
+  const s = blank("A · Auswerten", "Abschlussfrage: Erkläre es deinem Freund", 4,"Ansage: „Stifte liegen. Ihr hört nur zu. Das ist die letzte Aufgabe. Denkt zehn Sekunden nach. Ich rufe euch auf.“ Die Antwort kommt mündlich (Blitzlicht, 4 bis 6 Personen unterschiedlichen Niveaus gezielt aufrufen, kein Kommentar), kein Schnipsel, kein Schreiben. Es gibt mehrere gute Antworten, geprüft wird die Begründung: eine Position, ein Sachargument aus der Stunde, ein „weil“. Der Freund ist selbst Bauer, es geht um einen Rat unter Freunden, nicht um Gefahr. Erwartung (Auswahl, keine Musterlösung): ANSCHLIESSEN: Der Dritte Stand (Bauern und Bürger) sind fast alle Menschen (Sieyès: ALLES); die Bauern tragen Steuern und Abgaben, Klerus und Adel zahlen kaum; gemeinsam sind sie stark, ihre Vertreter bilden die Nationalversammlung; mit einer Verfassung entscheidet der König nicht mehr allein; wer abseits steht, hat keine Stimme. ABWARTEN: Die Ernte und die Familie brauchen Zeit und Kraft; es ist unklar, ob der König nachgibt; Veränderungen dauern lange; man kann die Vertreter erst beobachten. Zwischenlösung (die Beschwerden mitunterschreiben, aber weiterarbeiten) ist begründbar. Form nach Verlauf: Blitzlicht oder Rat-Duell zu zweit (leise). Transfer später: Das Muster „Erkläre deinem Freund, warum …“ funktioniert in jeder Epoche (Wahlen, Widerstand, Beitritt zu einer Bewegung). Gezielt aufrufen, nicht kommentieren (unbenotet). Die Figuren sind Zeichnungen, keine historischen Porträts.");
   s.addImage({ path: IMG + "bauer.png", x: 0.55, y: 1.45, w: 2.9, h: 4.19 });
   txt(s, "Dein Freund", { x: 0.55, y: 5.6, w: 2.9, h: 0.4, fontFace: HEAD, fontSize: 27, bold: true, align: "center" });
   bubble(s, 4.0, 1.5, 8.75, 1.95, WHITE, NAVY, "left", 2.5);
@@ -312,13 +312,13 @@ const IMG = "../material/";
     s.addText([{ text: lab, options: { bold: true, fontFace: HEAD, fontSize: 27, color: NAVY } }], { isTextBox: true, x: xx + 0.1, y: 5.55, w: ww - 0.2, h: 0.62, valign: "middle", align: "center", margin: 0 });
     return xx + ww + 0.2;
   }, 4.0);
-  bar(s, [{ text: "Zeit: ", options: { bold: true } }, { text: "3 Minuten · allein · leise      ", options: {} }, { text: "Fertig? Stift hinlegen.", options: { italic: true, color: ICE } }]);
+  bar(s, [{ text: "Zeit: ", options: { bold: true } }, { text: "2 Minuten · erst denken, dann mündlich      ", options: {} }, { text: "Alle denken mit.", options: { italic: true, color: ICE } }]);
 }
 
 // ============ 14 Ziele prüfen ============
 {
   const s = blank("A · Auswerten", "Haben wir die Ziele erreicht?", 4, "Die Klasse prüft still: Kann ich das? Danach Folie 15. Keine Antworten ins Plenum, keine Abfrage von Selbsteinschätzungen (30 Sekunden). Wenn Ziel 3 (*) nicht mehr geschafft wurde, kommt es als Wiederholung in Stunde 3.");
-  [["Ich kann erklären, wie die Stände den Dritten Stand (Bauern und Bürger) überstimmen können."], ["Ich kann begründen, warum die Abstimmung nach Ständen unfair war."], ["Ich kann am Zeitstrahl erklären, wie sich der Dritte Stand zur Nationalversammlung erklärte.*"]].forEach(([x], i) => {
+  [["Ich kann erklären, wie die Stände den Dritten Stand (Bauern und Bürger) überstimmen können."], ["Ich kann die Abstimmung nach Ständen beurteilen und mein Urteil begründen."], ["Ich kann am Zeitstrahl erklären, wie sich der Dritte Stand zur Nationalversammlung erklärte.*"]].forEach(([x], i) => {
     const y = 1.7 + i * 1.4;
     box(s, 0.6, y, 12.15, 1.15, i % 2 ? LIGHT : LIGHT2);
     s.addShape(pres.shapes.OVAL, { x: 0.9, y: y + 0.3, w: 0.55, h: 0.55, fill: { color: WHITE }, line: { color: NAVY, width: 2 } });
