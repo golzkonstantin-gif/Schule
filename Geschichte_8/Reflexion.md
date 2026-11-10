@@ -100,3 +100,9 @@
 - Rückmeldung der Lehrkraft: Das Beispiel mit Soldaten und Gefahr für die Familie ist nicht sinnvoll; es fingiert, dass man Gefahr in Kauf nehmen müsste, und wäre für andere Epochen (1. und 2. Weltkrieg) dysfunktional. Die Frage soll reflektieren und transferierbar sein.
 - Neu (Wunsch der Lehrkraft): „Erkläre deinem Freund, der auch Bauer ist, warum er sich anschließen sollte.“ Der Freund fragt, ob er sich den Abgeordneten des Dritten Standes (Bauern und Bürger) anschließen soll („Ich habe doch genug mit der Ernte zu tun“). Satzanfang „Ich rate dir, …, weil …“. Mehrere gute Antworten (anschließen oder abwarten). Neue Zeichnung „Dein Freund“ (Bauer). Folie 15, Tafelskript und Sequenz angepasst; in `CLAUDE.md` als Regel festgehalten.
 - Material zur neuen Abschlussfrage (6.11.): Schnipsel „Erkläre es deinem Freund“ mit Frage, Satzanfängen (Position, Argument aus der Stunde, Zwischenlösung) und fünf Schreiblinien, drei pro A4, erst in Phase 4 austeilen (`Geschichte_8/Stunde2_Nationalversammlung/Schnipsel_Abschlussfrage_Rat_an_den_Freund`). Alternativ im Heft.
+
+### Rückmeldung 8C Stunde 2 (Fr 06.11.)
+- Material: `Geschichte_8/Stunde2_Nationalversammlung/`
+- Gesamteindruck der Lehrkraft: lief „so mäßig“. Die Rückmeldung (auch der Klasse) ergab: **Für 45 Minuten waren es zu viele Methoden** (Buchstabenrätsel mit Presenter, Text mit Zeitstrahl, Karikatur-Dreischritt mit Hilfekarten, Abschlussfrage, dazu Eingangsdiagnose).
+- Folgerung (vorläufig, Details offen): pro Stunde höchstens zwei bis drei Methoden, jede mit genug Zeit; Karikatur und Spiele eher als eigene Schwerpunkte. Genaue Beobachtungen (wo hing es, wie war die Zeit) noch nicht berichtet.
+- Für die 8D-Stunde 2 (Mi 11.11., ca. 25 Minuten): Abstimmung mit Beobachtungsbogen, danach Text bis zum Truppenzusammenzug vor Paris. Planung wird besprochen, noch kein Material.
