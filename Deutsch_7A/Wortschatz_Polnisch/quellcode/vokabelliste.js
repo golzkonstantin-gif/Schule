@@ -178,6 +178,8 @@ const rows = [
   r("die Lösung", "die Lösungen", "**rozwiązanie**", ""),
   r("der Fehler", "die Fehler", "**błąd**", "Sucht einen Fehler."),
   r("der Würfel · würfeln", "die Würfel", "**kostka** · **rzucać kostką**", "Würfelt reihum."),
+  r("mit verteilten Rollen lesen", "die Rolle, die Rollen", "**czytać z podziałem na role**", "Lest die Ballade mit verteilten Rollen."),
+  r("zusammenfassen", "Fasse … zusammen!", "**streścić** (w czasie teraźniejszym)", "Fasse den Inhalt zusammen."),
   r("die Leistungskontrolle", "die Leistungskontrollen", "**sprawdzian**", ""),
   r("die Note · die Mitarbeit", "", "**ocena** · **aktywność na lekcji**", "mündliche Note"),
   r("sich melden", "", "**zgłaszać się (podnieść rękę)**", "Ich melde mich."),
@@ -264,7 +266,7 @@ const rows = [
   r("die Spannung · der Konflikt", "", "**napięcie** · **konflikt**", "Paddy gegen den Schotten"),
   r("die Zwischenüberschrift · gliedern", "", "**śródtytuł** · **podzielić tekst na części**", "Str. 10: Flucht"),
   sec("6  Meine neuen Wörter", "moje nowe słowa – dopisuj sama", MUTED),
-  ...Array.from({ length: 5 }, () => row([cell(p(t("")), { w: DW, borders: bd }), cell(p(t("")), { w: PLW, borders: bd, fill: "FBFCFF" }), cell(p(t("")), { w: BW2, borders: bd })], 520)),
+  ...Array.from({ length: 4 }, () => row([cell(p(t("")), { w: DW, borders: bd }), cell(p(t("")), { w: PLW, borders: bd, fill: "FBFCFF" }), cell(p(t("")), { w: BW2, borders: bd })], 520)),
 ];
 
 const doc = [

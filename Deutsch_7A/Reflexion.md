@@ -338,6 +338,8 @@ Die Lehrkraft möchte das weiterverfolgen, noch ohne Material. Die Satzklammer (
     - 3 Was geschieht auf der „Schwalbe“? Wahl a/b/c: a Angaben zur Fahrt Strophe für Strophe, b was die Passagiere tun, c was man über John Maynard erfährt; d Inhalt anhand der Ergebnisse zusammenfassen
     - Gewünscht: Präsentation und Lösungen. Umsetzung wird besprochen.
     - Lehrkraft (10.11.): Die Aufgaben werden jeweils gemeinsam bearbeitet (nicht arbeitsteilig), weil die Klasse mit John Maynard erst am Anfang steht. Text LB S. 132–133 liegt als Scan vor (Verszählung 1–62).
+    - **Material erstellt** (`Woche3/`): Präsentation `Mittwoch_11-11_Deutsch_7A` (22 Folien: Überblick mit zwei Ich-Zielen, Test-Ablauf, Ü1 mit Countdown-Folie, Ü2 Rollen + Rollenlesen nach Methodenkarte, Ü3 Tabelle Strophe | Fahrt | Passagiere | John Maynard mit Aufdeck-Folien je Strophe, Str. 2 als Ich-Beispiel, Str. 1 + 8 als Rahmen, * 3d mit Stichwörtern und Musterlösung, Zielcheck mit drei Aussagen), Tafelskript mit Reflexionsteil, Handreichung Polnisch mit Worterklärungen. Strophenzählung wie im LB: 8 Strophen (Str. 3 = V. 18–29). Kein Sprachtraining in dieser Doppelstunde (Test). Vokabelliste ergänzt (mit verteilten Rollen lesen, zusammenfassen).
+- **Rückmeldung der Lehrkraft (Mi 11.11.):** *(steht noch aus)*
 - **Hospitationsfeedback (Mo 9.11.):** *(steht noch aus)*
 - **Rückmeldung der Lehrkraft (Mi 4.11.):** „Mittwoch hat sehr gut geklappt!“ Die Konzeption hat sich bewährt: Aufbau und Belegen vor den Aussagen, Aufdeck-Folien, Sprachtraining aus der Ballade heraus.
 
