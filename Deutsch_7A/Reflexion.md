@@ -323,7 +323,10 @@ Die Lehrkraft möchte das weiterverfolgen, noch ohne Material. Die Satzklammer (
   - **Ablauf (AVIVA):** Ankommen (2) · Leseband (10) · Ü1 Kreuzworträtsel, hierarchisch Ballade → Gattungen → Merkmale (8) · Ü1 Nr. 2 als gemeinsamer nächster Schritt: „Paddy Fingal ist eine Ballade, weil …“ (5) · Informieren: Regel am eigenen weil-Satz wiederentdecken (3) · Ü2 Fehler im Chat (der Schotte und sein Bruder, genau ein Fehler pro Nachricht, K oder V) mit Aufdeck-Folien (11) · Zielcheck (6).
   - **Material:** Präsentation (14 Folien), Tafelskript mit Reflexionsteil, Schnipsel Kreuzworträtsel (A4 quer, 2 pro Blatt, Lösung), Handreichung Polnisch für S-PL, dazu das Kreuzworträtsel zweisprachig für S-PL (`Handreichung_Polnisch_09-11_Kreuzwortraetsel`, Wörter deutsch, Hinweise auch polnisch, ohne Lösung). Druckmaterial erstmals ohne Farbflächen (Tinte sparen). Vokabelliste um „der Würfel · würfeln“ und „der Dialog“ ergänzt.
 - **Rückmeldung der Lehrkraft (Mo 9.11.):** „Die Stunde hat gut funktioniert.“ Ablauf Leseband → Kreuzworträtsel → Fehler-Chat hat sich bewährt.
-- **Planung Mi 11.11. (Doppelstunde):** Test zu den Merkmalen einer Ballade und ihrer Bestimmung am Beispiel Paddy Fingal, danach geht es weiter (Einzelheiten werden besprochen).
+- **Planung Mi 11.11. (Doppelstunde):** Teil 1 kleiner Test (ca. 30 Min.) zu den Merkmalen einer Ballade und ihrer Bestimmung an Paddy Fingal, Teil 2 Einstieg „John Maynard“.
+  - **Test** in `Leistungskontrolle_Balladen/`: Gruppe A und B, je mit Lösung und mit polnischer Übersetzung der Aufgabenstellungen für S-PL, dazu Erwartungshorizont und Notenschlüssel. 24 Punkte + 2 Zusatzpunkte. Der Text liegt als Kopie LB S. 136 f. mit Verszählung bei.
+    - A1 Merkmale den Gattungen zuordnen (ankreuzen) und Fachbegriffe ergänzen · A2 Lyrik: Strophen/Verse, Reimschema Str. 1 (A) bzw. 11 (B), Kehrreim · A3 Epik: Er-/Ich-Erzähler, Zeitform mit Beleg, Redeeinleitung Str. 4 · A4 Dramatik: Str. 7 (A) bzw. 9 (B), Erzähler ja/nein, Begründung · Zusatz: weil-Satz mit finitem Verb.
+  - **Einstieg John Maynard:** wird noch besprochen.
 - **Hospitationsfeedback (Mo 9.11.):** *(steht noch aus)*
 - **Rückmeldung der Lehrkraft (Mi 4.11.):** „Mittwoch hat sehr gut geklappt!“ Die Konzeption hat sich bewährt: Aufbau und Belegen vor den Aussagen, Aufdeck-Folien, Sprachtraining aus der Ballade heraus.
 
