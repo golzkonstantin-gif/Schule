@@ -20,7 +20,7 @@ const G = {
   A: {
     merk: [["Strophen mit Reimschema", "L"], ["Ein Erzähler erzählt die Handlung.", "E"], ["Figuren sprechen unmittelbar, ohne Erzähler.", "D"], ["Kehrreim am Ende jeder Strophe", "L"], ["Ein Erzähler leitet die Rede der Figuren ein („…“, rief er.)", "E"], ["Regieanweisungen in Klammern", "D"]],
     bel: [["Paddy ist sehr stark.", "Str. 1, V. 4: „einen Mastbaum führt’ er als Wurfgeschoss“"], ["Der Schotte geht trotz der Warnung ans Bett.", "Str. 8, V. 37: „der Schotte neugierig ans Lager ging“"]],
-    fach: [["abab heißt", "Kreuzreim"], ["Eine Zeile in einem Gedicht heißt", "Vers"], ["Ein Gespräch zwischen Figuren ohne Erzähler heißt", "Dialog"]],
+    fach: [["Das Reimschema abab (Vers 1 reimt sich auf Vers 3, Vers 2 auf Vers 4) heißt", "Kreuzreim"], ["Eine Zeile in einem Gedicht heißt", "Vers"], ["Ein Gespräch zwischen Figuren ohne Erzähler heißt", "Dialog"]],
     rStr: 1, rSol: "a a b b x · Paarreim · z. B. Riesenart – Bart",
     vStr: 4, vSol: "z. B. lief",
     dStr: 7, dWho: "Schaya (Paddys Frau)",
@@ -29,7 +29,7 @@ const G = {
   B: {
     merk: [["Reim am Versende", "L"], ["Ein Er-Erzähler berichtet, was die Figuren tun.", "E"], ["Rollenname vor jeder Rede (SCHAYA: …)", "D"], ["Paarreim (aabb)", "L"], ["Ein Erzähler leitet die Rede der Figuren ein.", "E"], ["Nur Figurenrede, kein Erzähler", "D"]],
     bel: [["Der Schotte ist viel größer als Paddy.", "Str. 3, V. 14: „dass der Fremdling zehn Schuh größer war“"], ["Der Schotte wäre auf der Flucht fast gestorben.", "Str. 10, V. 48: „fast wär ertrunken der gute Held“"]],
-    fach: [["abba heißt", "umarmender Reim"], ["Ein Vers, der sich am Ende jeder Strophe wiederholt, heißt", "Kehrreim"], ["Wer in der Epik das Geschehen vermittelt, heißt", "Erzähler"]],
+    fach: [["Das Reimschema abba (Vers 1 reimt sich auf Vers 4, Vers 2 auf Vers 3) heißt", "umarmender Reim"], ["Ein Vers, der sich am Ende jeder Strophe wiederholt, heißt", "Kehrreim"], ["Wer in der Epik das Geschehen vermittelt, heißt", "Erzähler"]],
     rStr: 11, rSol: "a a b b x · Paarreim · z. B. Siegesgeschrei – herbei",
     vStr: 8, vSol: "z. B. ging",
     dStr: 9, dWho: "der Schotte",
@@ -56,7 +56,7 @@ const PL = {
 };
 
 const s = (x, o = {}) => t(x, Object.assign({ size: 26 }, o));
-const pl = (x) => p([t("PL: ", { size: 22, bold: true, color: PLC }), t(x, { size: 22, it: true, color: PLC })], { after: 60 });
+const pl = (x) => p([t("PL: ", { size: 20, bold: true, color: PLC }), t(x, { size: 20, it: true, color: PLC })], { after: 40 });
 const solR = (x) => t(x, { size: 24, it: true, color: SOLC, bold: true });
 const lineP = (sol, txt, o = {}) => sol && txt ? p([solR(txt)], { before: 140, after: 0 }) : p(t("_".repeat(o.n || 86), { color: GRAY }), { before: o.before ?? 220, after: 0 });
 const box = "☐", boxX = "☒";
@@ -77,7 +77,7 @@ const FB = borders(B(BorderStyle.SINGLE, 6, "9AA3B5"));
 const field = (w, h, sol, solTxt, o = {}) => cell(p(sol && solTxt ? solR(solTxt) : t(""), { after: 0, align: o.center ? AlignmentType.CENTER : undefined }), { w, borders: FB, ml: 100, m: 30 });
 const lbl = (x, w, o = {}) => cell(p(s(x, o), { after: 0, align: o.right ? AlignmentType.RIGHT : undefined }), { w, borders: NONE, ml: 60, m: 30 });
 const gapC = (w) => cell(p(t(""), { after: 0 }), { w, borders: NONE, m: 0 });
-const line = (cells, h = 520) => table(cells.map((c) => c.w), [row(cells.map((c) => c.c), h, HeightRule.EXACT)]);
+const line = (cells, h = 480) => table(cells.map((c) => c.w), [row(cells.map((c) => c.c), h, HeightRule.ATLEAST)]);
 const L = (x, w, o) => ({ c: lbl(x, w, o), w });
 const F = (w, sol, solTxt, o) => ({ c: field(w, 0, sol, solTxt, o), w });
 const G0 = (w) => ({ c: gapC(w), w });
@@ -85,14 +85,16 @@ const bigField = (w, h, sol, solTxt) => table([w], [row([cell(p(sol && solTxt ? 
 const spacer = (n = 80) => p(t("", { size: 8 }), { after: n });
 const IW = PW - 300; // Innenbreite der Aufgabenkästen
 function aufgabe(nr, title, pts, col, children, o = {}) {
-  const head = table([IW - 1500, 1500], [row([
-    cell(p([t(nr ? `Aufgabe ${nr}   ` : "Zusatz   ", { font: "Cambria", size: 30, bold: true, color: col }), t(title, { font: "Cambria", size: 30, bold: true, color: NAVY }), ...(o.sub ? [t("   " + o.sub, { size: 20, it: true, color: col })] : [])], { after: 0 }), { w: IW - 1500, borders: NONE, ml: 0, m: 0 }),
-    cell(p([t("___ / " + pts + " P.", { size: 22, bold: true, color: NAVY })], { after: 0, align: AlignmentType.CENTER }), { w: 1500, borders: borders(B(BorderStyle.SINGLE, 10, col)), m: 40 }),
+  const BW = o.w || PW, iw = BW - 300;
+  const head = table([iw - 1450, 1450], [row([
+    cell(p([t(nr ? `Aufgabe ${nr}   ` : "Zusatz   ", { font: "Cambria", size: 28, bold: true, color: col }), t(title, { font: "Cambria", size: 28, bold: true, color: NAVY }), ...(o.sub ? [t("   " + o.sub, { size: 20, it: true, color: col })] : [])], { after: 0 }), { w: iw - 1450, borders: NONE, ml: 0, m: 0 }),
+    cell(p([t("___ / " + pts + " P.", { size: 21, bold: true, color: NAVY })], { after: 0, align: AlignmentType.CENTER }), { w: 1450, borders: borders(B(BorderStyle.SINGLE, 10, col)), m: 30 }),
   ])]);
-  return [table([PW], [new TableRow({ cantSplit: true, children: [cell([head, spacer(60), ...children], { w: PW, borders: borders(B(o.dashed ? BorderStyle.DASHED : BorderStyle.SINGLE, 14, col)), m: 140, ml: 150, valign: VerticalAlign.TOP })] })]), spacer(160)];
+  const box = table([BW], [new TableRow({ cantSplit: true, children: [cell([head, spacer(20), ...children], { w: BW, borders: borders(B(o.dashed ? BorderStyle.DASHED : BorderStyle.SINGLE, 14, col)), m: 90, ml: 150, valign: VerticalAlign.TOP })] })]);
+  return o.raw ? box : [box, spacer(70)];
 }
-const subA = (l, txt, pts, col = NAVY) => p([t(l + "   ", { bold: true, size: 26, color: col }), s(txt), ...(pts ? [t(`  (${pts} P.)`, { size: 20, color: MUTED })] : [])], { before: 60, after: 60, keepNext: true });
-const kreuzL = (opts, right, sol) => p(opts.map((o, i) => t(`${sol && o === right ? "☒" : "☐"}  ${o}${i < opts.length - 1 ? "          " : ""}`, { size: 26, bold: sol && o === right, color: sol && o === right ? SOLC : "000000" })), { before: 40, after: 80 });
+const subA = (l, txt, pts, col = NAVY) => p([t(l + "   ", { bold: true, size: 26, color: col }), s(txt), ...(pts ? [t(`  (${pts} P.)`, { size: 20, color: MUTED })] : [])], { before: 40, after: 40, keepNext: true });
+const kreuzL = (opts, right, sol) => p(opts.map((o, i) => t(`${sol && o === right ? "☒" : "☐"}  ${o}${i < opts.length - 1 ? "          " : ""}`, { size: 26, bold: sol && o === right, color: sol && o === right ? SOLC : "000000" })), { before: 20, after: 50 });
 
 function test(g, mode) { // mode: "s" Schüler, "l" Lösung, "pl" polnisch
   const D = G[g], sol = mode === "l", PLm = mode === "pl";
@@ -101,14 +103,14 @@ function test(g, mode) { // mode: "s" Schüler, "l" Lösung, "pl" polnisch
   d.push(table([PW - 2700, 2700], [row([
     cell([
       p(t("TEST · DEUTSCH · KLASSE 7A", { size: 18, color: MUTED, bold: true }), { after: 20 }),
-      p(t("Paddy Fingal unter der Lupe", { font: "Cambria", bold: true, size: 40, color: NAVY }), { after: 10 }),
-      p([t("Merkmale einer Ballade  ·  ", { font: "Cambria", size: 24, color: MUTED }), t("♪ Lyrik", { font: "Cambria", size: 24, bold: true, color: GC.L }), t("  ✎ Epik", { font: "Cambria", size: 24, bold: true, color: GC.E }), t("  ◆ Dramatik", { font: "Cambria", size: 24, bold: true, color: GC.D })], { after: 120 }),
-      line([L("Name:", 900), F(4300, false), G0(300), L("Datum:", 900), L("11.11.", 900)]),
+      p(t("Paddy Fingal unter der Lupe", { font: "Cambria", bold: true, size: 38, color: NAVY }), { after: 0 }),
+      p([t("Merkmale einer Ballade  ·  ", { font: "Cambria", size: 24, color: MUTED }), t("♪ Lyrik", { font: "Cambria", size: 24, bold: true, color: GC.L }), t("  ✎ Epik", { font: "Cambria", size: 24, bold: true, color: GC.E }), t("  ◆ Dramatik", { font: "Cambria", size: 24, bold: true, color: GC.D })], { after: 80 }),
+      line([L("Name:", 900), F(4100, false), G0(200), L("Datum: 11.11.", 2000)]),
     ], { w: PW - 2700, borders: NONE, m: 0, ml: 0, valign: VerticalAlign.TOP }),
     cell([p(t(`Gruppe ${g}`, { font: "Cambria", bold: true, size: 40, color: RED }), { after: 40, align: AlignmentType.CENTER }), ...(sol ? [p(t("LÖSUNG", { bold: true, size: 24, color: SOLC }), { after: 30, align: AlignmentType.CENTER })] : []), p(s("Punkte: ____ / 26", { size: 22 }), { after: 40, align: AlignmentType.CENTER }), p(s("Zusatz: ____ / 2", { size: 22 }), { after: 40, align: AlignmentType.CENTER }), p(s("Note: ______", { size: 22 }), { after: 0, align: AlignmentType.CENTER })], { w: 2700, borders: borders(B(BorderStyle.SINGLE, 14, RED)), m: 100 }),
   ])]));
-  d.push(p(s("Lies jede Aufgabe genau und schreibe sauber. Du hast ca. 30 Minuten Zeit. Der Text „Paddy Fingal“ liegt bei (Verszählung am Rand).", { it: true, color: MUTED, size: 22 }), { before: 140, after: PLm ? 20 : 160 }));
-  if (PLm) { d.push(pl(PL.intro)); d.push(spacer(100)); }
+  d.push(p(s("Lies jede Aufgabe genau und schreibe sauber. Ca. 30 Minuten. Der Text „Paddy Fingal“ liegt bei (Verszählung am Rand).", { it: true, color: MUTED, size: 21 }), { before: 80, after: PLm ? 10 : 90 }));
+  if (PLm) { d.push(pl(PL.intro)); d.push(spacer(40)); }
 
   // Aufgabe 1
   const W = [IW - 3 * 1450, 1450, 1450, 1450];
@@ -116,13 +118,12 @@ function test(g, mode) { // mode: "s" Schüler, "l" Lösung, "pl" polnisch
   const a1 = [subA("a", "Kreuze bei jedem Merkmal genau eine Gattung an: die Gattung, für die das Merkmal typisch ist.", 6)];
   if (PLm) a1.push(pl(PL.a1a));
   a1.push(table(W, [
-    row([cell(p(t("Merkmal", { bold: true, size: 24, color: NAVY }), { after: 0 }), { w: W[0], borders: borders(B(BorderStyle.SINGLE, 10, NAVY)), ml: 120 }), gh("L", W[1]), gh("E", W[2]), gh("D", W[3])], 560),
-    ...D.merk.map(([m, k], i) => row([cell(p([t(`${i + 1}   `, { bold: true, size: 24, color: NAVY }), s(m, { size: 24 })], { after: 0 }), { w: W[0], ml: 120 }), ...["L", "E", "D"].map((x, j) => cell(p(t(sol && x === k ? "✗" : "☐", { size: 30, bold: sol && x === k, color: sol && x === k ? SOLC : "B9C6E8" }), { after: 0, align: AlignmentType.CENTER }), { w: W[j + 1] }))], 580)),
+    row([cell(p(t("Merkmal", { bold: true, size: 24, color: NAVY }), { after: 0 }), { w: W[0], borders: borders(B(BorderStyle.SINGLE, 10, NAVY)), ml: 120 }), gh("L", W[1]), gh("E", W[2]), gh("D", W[3])], 420),
+    ...D.merk.map(([m, k], i) => row([cell(p([t(`${i + 1}   `, { bold: true, size: 24, color: NAVY }), s(m, { size: 23 })], { after: 0 }), { w: W[0], ml: 120, m: 20 }), ...["L", "E", "D"].map((x, j) => cell(p(t(sol && x === k ? "✗" : "☐", { size: 26, bold: sol && x === k, color: sol && x === k ? SOLC : "B9C6E8" }), { after: 0, align: AlignmentType.CENTER }), { w: W[j + 1], m: 20 }))], 360)),
   ]));
-  a1.push(spacer(60));
   a1.push(subA("b", "Ergänze den Fachbegriff.", 3));
   if (PLm) a1.push(pl(PL.a1b));
-  D.fach.forEach(([q, a], i) => { a1.push(line([L(`${i + 1}  ${q}`, IW - 3300, { size: 24 }), F(3200, sol, a)], 540)); a1.push(spacer(60)); });
+  D.fach.forEach(([q, a], i) => { a1.push(line([L(`${i + 1}  ${q}`, IW - 3100, { size: 23 }), F(3000, sol, a)], 400)); });
   d.push(...aufgabe(1, "Merkmale den Gattungen zuordnen", 9, NAVY, a1));
 
   // Aufgabe 2 · Lyrik
@@ -130,42 +131,44 @@ function test(g, mode) { // mode: "s" Schüler, "l" Lösung, "pl" polnisch
   const a2 = [subA("a", "Wie viele Strophen hat die Ballade? Wie viele Verse hat jede Strophe?", 2, GC.L)];
   if (PLm) a2.push(pl(PL.a2a));
   a2.push(line([L("Strophen:", 1300), F(1000, sol, "11", { center: true }), G0(800), L("Verse je Strophe:", 2000), F(1000, sol, "5", { center: true })]));
-  a2.push(spacer(80));
+  a2.push(spacer(15));
   a2.push(subA("b", `Bestimme das Reimschema von Strophe ${D.rStr}: Trage für jeden Vers einen Buchstaben ein (Vers ohne Reim = x). Nenne die Reimart und zitiere ein Reimpaar.`, 3, GC.L));
   if (PLm) a2.push(pl(PL.a2b(D.rStr)));
   const lt = sch[0].split(" ");
   a2.push(line([L("Vers", 700), ...[1, 2, 3, 4, 5].flatMap((n) => [L(String(n), 300, { right: true }), F(600, sol, lt[n - 1], { center: true })]), G0(300), L("Reimart:", 1100), F(IW - 700 - 5 * 900 - 300 - 1100, sol, sch[1])]));
-  a2.push(spacer(80));
+  a2.push(spacer(15));
   const rp = sch[2].replace("z. B. ", "").split(" – ");
   a2.push(line([L("Reimpaar:", 1300), F(3400, sol, "„" + rp[0] + "“"), L("–", 400, { right: false }), F(3400, sol, "„" + rp[1] + "“")]));
-  a2.push(spacer(80));
+  a2.push(spacer(15));
   a2.push(subA("c", "Mit welchen zwei Wörtern endet jede Strophe? (Kehrreim)", 1, GC.L));
   if (PLm) a2.push(pl(PL.a2c));
   a2.push(line([L("Kehrreim:", 1300), F(4400, sol, "„Paddy Fingal“")]));
   d.push(...aufgabe(2, "Paddy Fingal als Gedicht", 6, GC.L, a2, { sub: "♪ Lyrik" }));
 
-  // Aufgabe 3 · Epik
-  const a3 = [subA("a", "Kreuze an: Wer erzählt die Geschichte?", 1, GC.E)];
+  // Aufgabe 3 · Epik und Aufgabe 4 · Dramatik nebeneinander (Erzähler ja – nein)
+  const HB = Math.floor((PW - 160) / 2), hw = HB - 300;
+  const a3 = [subA("a", "Wer erzählt die Geschichte?", 1, GC.E)];
   if (PLm) a3.push(pl(PL.a3a));
   a3.push(kreuzL(["Er-Erzähler", "Ich-Erzähler"], "Er-Erzähler", sol));
   a3.push(subA("b", `Kreuze die Zeitform an. Schreibe ein Verb aus Strophe ${D.vStr} als Beleg ab.`, 2, GC.E));
   if (PLm) a3.push(pl(PL.a3b(D.vStr)));
-  a3.push(kreuzL(["Präsens", "Präteritum", "Perfekt"], "Präteritum", sol));
-  a3.push(line([L(`Beleg (Str. ${D.vStr}):`, 1900), F(3600, sol, D.vSol)]));
-  d.push(...aufgabe(3, "Wer erzählt?", 3, GC.E, a3, { sub: "✎ Epik" }));
-
-  // Aufgabe 4 · Dramatik
+  a3.push(p(["Präsens", "Präteritum", "Perfekt"].map((o, i) => t(`${sol && o === "Präteritum" ? "☒" : "☐"}  ${o}${i < 2 ? "    " : ""}`, { size: 24, bold: sol && o === "Präteritum", color: sol && o === "Präteritum" ? SOLC : "000000" })), { before: 20, after: 60 }));
+  a3.push(line([L(`Beleg (Str. ${D.vStr}):`, 1900), F(hw - 1900, sol, D.vSol)]));
   const a4 = [subA("a", `Wer spricht in Strophe ${D.dStr}?`, 1, GC.D)];
   if (PLm) a4.push(pl(PL.a4a(D.dStr)));
-  a4.push(line([L("Es spricht:", 1300), F(4400, sol, D.dWho)]));
-  a4.push(spacer(60));
-  a4.push(subA("b", "Gibt es in dieser Strophe einen Erzähler? Kreuze an.", 1, GC.D));
+  a4.push(line([F(hw, sol, D.dWho)]));
+  a4.push(subA("b", "Gibt es in dieser Strophe einen Erzähler?", 1, GC.D));
   if (PLm) a4.push(pl(PL.a4b));
   a4.push(kreuzL(["ja", "nein"], "nein", sol));
   a4.push(subA("c", "Begründe in einem Satz, warum das ein Merkmal der Dramatik ist.", 2, GC.D));
   if (PLm) a4.push(pl(PL.a4c));
-  a4.push(bigField(IW, 1000, sol, D.dWhy));
-  d.push(...aufgabe(4, "Figuren sprechen", 4, GC.D, a4, { sub: "◆ Dramatik" }));
+  a4.push(bigField(hw, 900, sol, D.dWhy));
+  d.push(table([HB, 160, HB], [new TableRow({ cantSplit: true, children: [
+    cell([aufgabe(3, "Wer erzählt?", 3, GC.E, a3, { sub: "✎ Epik", w: HB, raw: true })], { w: HB, borders: NONE, m: 0, ml: 0, valign: VerticalAlign.TOP }),
+    cell(p(t(""), { after: 0 }), { w: 160, borders: NONE, m: 0, ml: 0 }),
+    cell([aufgabe(4, "Figuren sprechen", 4, GC.D, a4, { sub: "◆ Dramatik", w: HB, raw: true })], { w: HB, borders: NONE, m: 0, ml: 0, valign: VerticalAlign.TOP }),
+  ] })]));
+  d.push(spacer(70));
 
   // Aufgabe 5 · Belegen und Zitieren
   const a5 = [p(s("Belege jede Aussage mit einem Zitat: Strophe, Vers und die genauen Worte aus dem Text in Anführungszeichen."), { after: 60, keepNext: true })];
@@ -173,14 +176,14 @@ function test(g, mode) { // mode: "s" Schüler, "l" Lösung, "pl" polnisch
   a5.push(table([IW], [row([cell(p([s("Beispiel:  ", { bold: true, color: MUTED, size: 22 }), s("Paddy hat einen schwarzen Bart.   →   Str. 1, V. 2: „Sechs Ellen flog sein schwarzer Bart“", { it: true, color: MUTED, size: 22 })], { after: 0 }), { w: IW, borders: borders(B(BorderStyle.DASHED, 6, MUTED)), m: 60, ml: 120 })])]));
   D.bel.forEach(([a, z], i) => {
     a5.push(subA(["a", "b"][i], a, 2, RED));
-    a5.push(bigField(IW, 820, sol, z));
+    a5.push(bigField(IW, 520, sol, z));
   });
   d.push(...aufgabe(5, "Belegen und Zitieren", 4, RED, a5));
 
   // Zusatz
   const az = [p(s("Begründe in einem Satz mit „weil“, warum „Paddy Fingal“ eine Ballade ist. Unterstreiche das finite Verb im weil-Satz."), { after: 60 })];
   if (PLm) az.push(pl(PL.z));
-  az.push(sol ? p([solR("z. B. „Paddy Fingal“ ist eine Ballade, weil ein Erzähler eine spannende Geschichte in Strophen mit Reimen "), t("erzählt", { size: 24, it: true, bold: true, color: SOLC, u: true }), solR(".")], { before: 80, after: 0 }) : bigField(IW, 1000, false));
+  az.push(sol ? p([solR("z. B. „Paddy Fingal“ ist eine Ballade, weil ein Erzähler eine spannende Geschichte in Strophen mit Reimen "), t("erzählt", { size: 24, it: true, bold: true, color: SOLC, u: true }), solR(".")], { before: 80, after: 0 }) : bigField(IW, 800, false));
   d.push(...aufgabe(0, "Für Profis: weil-Satz", 2, MUTED, az, { dashed: true }));
   d.pop(); // kein Leerabsatz am Ende (sonst leere Folgeseite)
   return d;
@@ -217,7 +220,7 @@ function erwartung() {
 }
 
 const footer = (label) => new Footer({ children: [new Paragraph({ alignment: AlignmentType.RIGHT, children: [new TextRun({ font: "Calibri", size: 16, color: MUTED, children: [label + " · Seite ", PageNumber.CURRENT] })] })] });
-const props = { page: { size: { width: 11906, height: 16838 }, margin: { top: 700, bottom: 700, left: 850, right: 850, footer: 350 } } };
+const props = { page: { size: { width: 11906, height: 16838 }, margin: { top: 500, bottom: 450, left: 850, right: 850, footer: 250 } } };
 const styles = { default: { document: { run: { font: "Calibri", size: 22 } } } };
 const save = (name, children, label) => Packer.toBuffer(new Document({ styles, sections: [{ properties: props, footers: { default: footer(label) }, children }] })).then((buf) => fs.writeFileSync(__dirname + "/../" + name + ".docx", buf));
 for (const g of ["A", "B"]) {
