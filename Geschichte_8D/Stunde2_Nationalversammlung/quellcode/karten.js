@@ -36,13 +36,14 @@ const pg2 = [...Array(11).fill(["D"]), ...Array(3).fill(["D", true])];
 function stimm() {
   return [
     p([t("STIMMZETTEL · 8D", { size: 15, bold: true, color: MUTED })], { after: 20 }),
-    p(t("Abstimmung der Stände", { font: "Cambria", size: 24, bold: true, color: NAVY }), { after: 50 }),
-    p([t("Mein Stand:", { size: 20, bold: true })], { after: 20 }),
-    p(t("□ Klerus     □ Adel     □ Dritter Stand", { size: 20 }), { after: 70 }),
-    p([t("A  ", { size: 22, bold: true, color: RED }), t("Steuern auch für Adel und Klerus", { size: 19 })], { after: 20 }),
-    p(t("□ Ja        □ Nein", { size: 22, bold: true }), { after: 60 }),
-    p([t("B  ", { size: 22, bold: true, color: RED }), t("Stände abschaffen, gleiche Rechte", { size: 19 })], { after: 20 }),
-    p(t("□ Ja        □ Nein", { size: 22, bold: true }), { after: 0 }),
+    p(t("Abstimmung der Stände", { font: "Cambria", size: 24, bold: true, color: NAVY }), { after: 40 }),
+    p([t("Mein Stand:  ", { size: 20, bold: true }), t("□ Klerus   □ Adel   □ Dritter Stand", { size: 19 })], { after: 70 }),
+    p([t("Antrag A", { size: 21, bold: true, color: RED })], { after: 10 }),
+    p(t("Auch Adel und Klerus zahlen künftig Steuern.", { size: 20 }), { after: 20 }),
+    p(t("□ Ja            □ Nein", { size: 22, bold: true }), { after: 70 }),
+    p([t("Antrag B", { size: 21, bold: true, color: RED })], { after: 10 }),
+    p(t("Die Stände werden abgeschafft. Alle haben gleiche Rechte.", { size: 20 }), { after: 20 }),
+    p(t("□ Ja            □ Nein", { size: 22, bold: true }), { after: 0 }),
   ];
 }
 const sc = () => new TableCell({ children: stimm(), width: { size: CW, type: WidthType.DXA }, borders: { top: dash, bottom: dash, left: dash, right: dash }, margins: { top: 90, bottom: 60, left: 200, right: 170 }, verticalAlign: VerticalAlign.TOP });
