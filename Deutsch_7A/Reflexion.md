@@ -332,7 +332,11 @@ Die Lehrkraft möchte das weiterverfolgen, noch ohne Material. Die Satzklammer (
   - **Rückmeldung der Lehrkraft (10.11.):** Bei Aufgabe 2, 3 und 4 sollen die Schüler klar erkennen, dass sich die Aufgaben auf „Paddy Fingal“ beziehen.
   - **Rückmeldung der Lehrkraft (10.11.):** Inhaltliche Fragen zu Paddy Fingal sollen in den Test, dafür weniger zu den Gattungen. Neuer Aufbau wird besprochen. Reihenfolge-Aufgabe (Nummern 1–6) abgelehnt: Ein Fehler zieht die ganze Aufgabe mit.
   - **Neuer Aufbau (Lehrkraft: Variante „Wer tut was?“):** 1 Inhalt – a Wer tut das? (Figur ankreuzen, 3 Zeilen), b Warum flieht der Schotte? (5 P.) · 2 Aussagen prüfen mit Beleg und Zitat, falsche verbessern (6 P.) · 3 Merkmale den Gattungen zuordnen (6 P.) · 4 Paddy Fingal als Gedicht: Strophen/Verse, Reimschema und Reimart, Kehrreim (5 P.) · 5 Erzähler oder nicht? Er-/Ich-Erzähler, wer spricht in Str. 7 bzw. 9, Begründung Dramatik (4 P.) · Zusatz weil-Satz (2 P.). Inhalt 11 P., Gattungen 15 P., zusammen 26 + 2. Hinweis oben: „Die Aufgaben 1, 2, 4 und 5 beziehen sich auf die Ballade ‚Paddy Fingal‘.“ Schülerfassung und Lösung 2 Seiten, polnische Fassung 3 Seiten. Lehrkraft (10.11.): „super!“ – Test ist so freigegeben.
-  - **John Maynard** wird separat geplant (nicht am 11.11. im Anschluss an den Test).
+  - **John Maynard** – Korrektur der Lehrkraft (10.11.): beginnt doch am 11.11. im Anschluss an den Test, LB S. 132–133. Aufgaben der Lehrkraft:
+    - 1 a) Ballade still lesen, b) drei besonders spannende Textstellen nennen
+    - 2 mit verteilten Rollen laut vorlesen (welche Rollen?)
+    - 3 Was geschieht auf der „Schwalbe“? Wahl a/b/c: a Angaben zur Fahrt Strophe für Strophe, b was die Passagiere tun, c was man über John Maynard erfährt; d Inhalt anhand der Ergebnisse zusammenfassen
+    - Gewünscht: Präsentation und Lösungen. Umsetzung wird besprochen.
 - **Hospitationsfeedback (Mo 9.11.):** *(steht noch aus)*
 - **Rückmeldung der Lehrkraft (Mi 4.11.):** „Mittwoch hat sehr gut geklappt!“ Die Konzeption hat sich bewährt: Aufbau und Belegen vor den Aussagen, Aufdeck-Folien, Sprachtraining aus der Ballade heraus.
 
