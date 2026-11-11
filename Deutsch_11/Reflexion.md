@@ -168,6 +168,12 @@ Grundlage ist `Methoden/Literatur_Unterrichtsqualitaet.md` (AVIVA, Direkte Instr
 - **Was hat funktioniert:** „Lief sehr gut!“ – alle waren zufrieden; guter Transfer (eigene Situation aus dem Sport) und gute Reflexion.
 - **Nächster Schritt:** „Vor dem Gesetz“ (Do 12.11.), Einstieg mit Zitat statt Bildimpuls.
 
+### Stunde der Mentorin (Mo 9.11.): „kafkaesk“ und Klausurvorbereitung „Gibs auf!“
+- **Material:** zwei Arbeitsblätter der Mentorin (Scan vom 11.11., nicht im Repo).
+  - **AB „kafkaesk“:** Definition („rätselhafte, absurde, bürokratische Übermacht“, das Individuum ist einer anonymen, undurchschaubaren Gewalt ausgeliefert, logische Lösungsversuche scheitern → Ohnmacht, Schuldgefühle, Isolation). Vier Bausteine: **labyrinthische Bürokratie, grundlose Schuld, vergebliche Logik, unheimliche Normalität**. Gefühle ankreuzen (Hilflosigkeit und Ohnmacht, Angst und Isolation, Verwirrung und Orientierungslosigkeit). Teil 3 „Kafkaesk oder einfach nur nervig?“ mit zwei Szenarien: Zug 45 Min. verspätet wegen eingefrorener Weichen (ärgerlich); Strafe vom Amt mit „geheimer“ Akte, Formular 4B nur in Zimmer 103, das es nicht gibt (kafkaesk).
+  - **AB „Gibs auf!“ – Vorbereitung auf die Klausur (Parabelanalyse):** Text mit Quelle (Kafka: Sämtliche Erzählungen, hg. v. Paul Raabe, Fischer 1970, S. 320 f.); TATT-Einleitungssatz mit Deutungshypothese; Kommunikationssituation Ich-Erzähler – Schutzmann (Tabelle); Stilmittel und Bildebene zuordnen (A–D); Schreibwerkstatt mit Satzanfängen; Checkliste für die Klausur (Präsens, Zeilenbelege „vgl. Z. 4“, Fachbegriffe, Wirkung der Sprache deuten).
+- **Folgerungen:** Für „kafkaesk“ die Begriffe der Mentorin verwenden (vier Bausteine, Gefühle). In „Nervig oder kafkaesk?“ keine Szenarien wiederholen, die schon dran waren (Verspätung, Amt/Formular). Eine Klausur zur Parabelanalyse steht an: Zeilenbelege, Fachbegriffe und TATT-Satz in den Stunden mitüben. Der Wortlaut von „Gibs auf!“ mit Quelle liegt jetzt vor (der lange Satz läuft bis „nach dem Weg“, „glücklicherweise“, „irrewerden“).
+
 ## Hospitationsfeedback (gesammelt)
 
 *(noch keine Einträge; die Planungsmuster der Mentorin stehen bei den Grundsätzen)*
