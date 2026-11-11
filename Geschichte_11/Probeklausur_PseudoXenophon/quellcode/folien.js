@@ -31,7 +31,7 @@ function raster(s, rows, o = {}) {
     const y = y0 + i * (rh + gap);
     s.addText(l, { isTextBox: true, shape: pres.shapes.ROUNDED_RECTANGLE, rectRadius: 0.06, x: 0.45, y, w: lw, h: rh, fill: { color: C.sand }, color: C.dark, fontFace: B, fontSize: MIN, bold: true, align: "left", valign: "middle", margin: [0, 6, 0, 8] });
     s.addShape(pres.shapes.ROUNDED_RECTANGLE, { x: 0.45 + lw + 0.1, y, w: 9.1 - lw - 0.1, h: rh, rectRadius: 0.06, fill: { color: C.white }, line: { color: o.solved ? C.terra : C.soft, width: 1.5, dashType: o.solved ? "solid" : "dash" } });
-    if (r) txt(s, r, { x: 0.45 + lw + 0.25, y, w: 9.1 - lw - 0.4, h: rh, valign: "middle", color: C.terra, bold: true });
+    if (r) txt(s, r, { x: 0.45 + lw + 0.25, y, w: 9.1 - lw - 0.4, h: rh, valign: "middle", color: C.terra, bold: !o.plain });
   });
 }
 const slide = (bg = C.white) => { const s = pres.addSlide(); s.background = { color: bg }; return s; };
@@ -66,18 +66,28 @@ const ab = (s, n, art) => tag(s, art, art === "Lösung" ? C.gold : C.dark, art =
   num(s); s.addNotes("Ganzer Einleitungstext als Formulierungsvorschlag auf Aushang 1 (Tafelrückseite)."); }
 
 // ---------- Teil 2 ----------
-const POS = D.position.map(([a, , z]) => [z, ({ "Ablehnung der Demokratie": "Gemeine besser als Edle – abgelehnt", "Zugeständnis": "Volk rudert die Flotte → Anspruch", "Gleichheit nur scheinbar gerecht": "Gleichheit nur scheinbar gerecht", "Eigennutz bei den Ämtern": "Volk will nur Ämter mit Sold", "Lasten für die Reichen": "Lasten tragen die Reichen", "Parteiische Gerichte": "Gerichte: Vorteil statt Recht", "Menschenbild": "Adel gut, Volk ungebildet, gemein", "Freiheit statt Ordnung": "Volk will Freiheit, keine Ordnung", "Ideal: Herrschaft der Edlen": "Ideal: Edle herrschen allein" })[a]]);
+// ausformulierte Position je Sinnabschnitt (Wunsch der Lehrkraft: nicht zu stark abgekürzt)
+const LANG = ["Er lehnt die Demokratie ab: Dort haben es die einfachen Leute besser als die Adligen.",
+  "Er gibt zu: Das Volk rudert die Schiffe und sichert Athens Macht – daher sein Anspruch.",
+  "Gleiche Ämter und Redefreiheit für alle wirken nur auf den ersten Blick gerecht.",
+  "Das Volk überlässt die Heerführung anderen und will nur Ämter, die Geld bringen.",
+  "Teure Aufgaben wie Festchor oder Kriegsschiff zahlen die Reichen – das Volk verdient.",
+  "Vor Gericht urteilt das Volk nach seinem eigenen Vorteil, nicht nach dem Recht.",
+  "Adlige seien gerecht und gut, das Volk ungebildet und gemein – aus Armut.",
+  "Das Volk will frei sein und herrschen; eine gute Ordnung ist ihm egal.",
+  "Sein Ideal: Nur die Edlen regieren, das Volk wird in Zucht gehalten."];
+const POS = D.position.map(([, , z], i) => [z, LANG[i]]);
 { const s = slide(); title(s, "Teil 2: Position", 3); ab(s, 2, "Vorgehen");
   steps(s, ["Teile den Text in Sinnabschnitte.", "Notiere je Abschnitt die Position in Stichpunkten.", "Gib die Zeilen an.", "Fasse die Gesamtposition in einem Satz zusammen."], 1.35, 0.85);
   num(s); s.addNotes("Allein oder zu zweit, danach im Unterrichtsgespräch zusammentragen: Ist alles inhaltlich abgedeckt? Raster auf den nächsten Folien; Lösung danach. Stichpunkt-Zusammenfassung für die Lehrkraft: Aushang 2."); }
-[[0, 5], [5, 9]].forEach(([a, b], n) => { const s = slide(); title(s, `Position (${n + 1}/2)`, 3); ab(s, 2, "leer");
-  raster(s, POS.slice(a, b).map(([z]) => [z, ""]), { lw: 1.9, rh: 0.7, gap: 0.1 });
+[[0, 3], [3, 6], [6, 9]].forEach(([a, b], n) => { const s = slide(); title(s, `Position (${n + 1}/3)`, 3); ab(s, 2, "leer");
+  raster(s, POS.slice(a, b).map(([z]) => [z, ""]), { lw: 1.45, rh: 1.27, gap: 0.06 });
   num(s); s.addNotes("Raster mit den Zeilenabschnitten – zum Zusammentragen: Was sagt der Verfasser hier?"); });
-[[0, 5], [5, 9]].forEach(([a, b], n) => { const s = slide(); title(s, `Position (${n + 1}/2)`, 3); ab(s, 2, "Lösung");
-  raster(s, POS.slice(a, b), { lw: 1.9, rh: 0.7, gap: 0.1, solved: true });
+[[0, 3], [3, 6], [6, 9]].forEach(([a, b], n) => { const s = slide(); title(s, `Position (${n + 1}/3)`, 3); ab(s, 2, "Lösung");
+  raster(s, POS.slice(a, b), { lw: 1.45, rh: 1.27, gap: 0.06, solved: true, plain: true });
   num(s); s.addNotes("Abgleich mit den gesammelten Punkten. Ausführlich mit Zitaten: Aushang 2."); });
 { const s = slide(); title(s, "Gesamtposition", 3); ab(s, 2, "Lösung");
-  panel(s, "Gegner der Demokratie aus Sicht des Adels: Er erkennt den Flottendienst an, wirft dem Volk aber Eigennutz und Unbildung vor.", 0.45, 1.3, 9.1, 2.0, C.sand, C.dark);
+  panel(s, "Der Verfasser ist ein Gegner der Demokratie und spricht für den Adel. Er erkennt den Flottendienst des Volkes an, wirft ihm aber Eigennutz und Unbildung vor.", 0.45, 1.3, 9.1, 2.0, C.sand, C.dark);
   panel(s, "Sprache: wertend – „Edle“ gegen „gemeine Leute“.", 0.45, 3.5, 9.1, 0.9, C.dark, C.gold, { bold: true });
   num(s); s.addNotes(D.positionGesamt + " " + D.sprache); }
 

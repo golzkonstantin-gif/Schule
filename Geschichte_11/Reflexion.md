@@ -83,7 +83,7 @@
 - Rückmeldung der Lehrkraft: *(steht noch aus)*
 
 ### Probeklausur Pseudo-Xenophon (11.11., gemeinsame Bearbeitung)
-- Material: `Probeklausur_PseudoXenophon/` (Quellenblatt mit Zeilennummern im Blocksatz, Aufgabenblatt 2 × A5, Lösungsaushänge mit Formulierungsvorschlägen, 22 Folien je Abschnitt mit Vorgehen – leerer Vorlage – Lösung, Quellcode in `quellcode/`). Vorlage der Lehrkraft: Klausur „Die Volksherrschaft in Athen – Entmachtung des Adels?“ (Pseudo-Xenophon, Über den Staat der Athener).
+- Material: `Probeklausur_PseudoXenophon/` (Quellenblatt mit Zeilennummern im Blocksatz, Aufgabenblatt 2 × A5, Lösungsaushänge mit Formulierungsvorschlägen, 24 Folien je Abschnitt mit Vorgehen – leerer Vorlage – Lösung, Quellcode in `quellcode/`). Vorlage der Lehrkraft: Klausur „Die Volksherrschaft in Athen – Entmachtung des Adels?“ (Pseudo-Xenophon, Über den Staat der Athener).
 - Ablauf nach Wunsch der Lehrkraft: (1) Themenfrage und formale Analyse allein, Lösung an der Tafelrückseite; (2) Position des Verfassers in Stichpunkten, im UG zusammentragen; (3) Verfassungsorgane unter Kleisthenes und gesellschaftliche Gliederung mit Rechten; (4) Urteil. Jeder Abschnitt wird über einen Aushang mit Formulierungsvorschlag selbst kontrolliert (Grundlage: Übersicht Quelleninterpretation).
 - Rückmeldung der Lehrkraft: *(steht noch aus)*
 
