@@ -115,12 +115,10 @@ Grundlage ist `Methoden/Literatur_Unterrichtsqualitaet.md` (AVIVA, Direkte Instr
 - [ ] Übungsklausur Kafka (Tischregeln, S. 5) erst nach Kontextsicherung und mehr gelenkter Übung, oder mit einem leichteren Text
 - [ ] Rechtschreib-Schnipsel mit 10 Sätzen (Großschreibung, Komma auch ohne „dass“) liegt im Git-Verlauf von `Kafka_Appell/quellcode/schnipsel.js` und kann eingesetzt werden
 
-## Nächste Stunde (Do 5.11., 45 Min., Beamer)
+## Nächste Stunde (Do 12.11., 45 Min., Beamer)
 
-- „Gibs auf!“ (Kafka): Stilmittel wiederholen (Parataxe, Hypotaxe, Metapher, Symbol) und erweitern (Wiederholung, Vergleich, rhetorische Frage, Ellipse), Parabel wiederholen über einen Bildimpuls (Wegweiser), eigene Situation aus dem Sport als Gespräch schreiben, ein Text wird gemeinsam im Kommunikationsquadrat untersucht (*), Zielcheck.
-- Material: `Kafka_Gibs_auf/`.
-- Die Rede als Franz an den Vater entfällt (04.11.).
-- Korrektur der Lehrkraft (04.11.): Der Bildimpuls soll die **Parabel selbst** abbilden – ein Bild mit allen wesentlichen Elementen der Geschichte, an dem die Klasse sie nacherzählt und wiederholt (kein allgemeines Symbolbild wie der Wegweiser). Gewählt: **eine Szene** (Variante 1) statt einer Bildgeschichte in drei Bildern (04.11.).
+- Kafka, „Vor dem Gesetz“: Einstieg mit einem Kafka-Zitat als Impuls (Wunsch der Lehrkraft, statt Bildimpuls): „Mich brechen alle Hindernisse“ → Ohnmacht, Resignation. Wiederholung „kafkaesk“ (Vorwissen abprüfen) und Kafkas Ohnmacht vor Autoritäten (Vater, Schutzmann, Behörde; erster Satz des „Process“). Dann Erschließung von Inhalt (Handlungsschritte ordnen) und Symbolen (Bildebene → Sachebene, mit Leitwörtern), Deutung, Transfer (*), Zielcheck.
+- Material: `Kafka_Vor_dem_Gesetz/`. Die Klasse hat noch keine Textfassung; der Text steht auf dem Arbeitsblatt (aus dem Gedächtnis, vor dem Druck mit einer Ausgabe abgleichen).
 
 ## Stundenlog
 
@@ -163,6 +161,11 @@ Grundlage ist `Methoden/Literatur_Unterrichtsqualitaet.md` (AVIVA, Direkte Instr
 - **Beobachtungen beim Abgleich:** Der Text weicht vermutlich an einigen Stellen vom Original ab (z. B. Satzgrenze nach „nicht sehr gut aus“, „Zum Glück“, „irrewerden“) – vor weiterer Arbeit mit der Quelle abgleichen. Die Frage „Hypotaxe oder Parataxe?“ ist beim langen ersten Satz nicht eindeutig (Reihung von Hauptsätzen mit eingebetteten Nebensätzen). Das Organon-Modell war in unseren Stunden bisher nicht Thema.
 - **Rückmeldung:** „Die Stunde lief gut.“
 - **Nächster Schritt:** Do 5.11. (Beamer vorhanden): Stilmittel wiederholen und erweitern, Parabel wiederholen (Bildimpuls), eigene Situationen aus dem Sport schreiben und kommunikativ untersuchen. Material: `Kafka_Gibs_auf/`.
+
+### Kafka, „Gibs auf!“ – Stilmittel und eigenes Gespräch (Do 5.11., 45 Min.)
+- **Material:** `Kafka_Gibs_auf/` (Bildimpuls als eine Szene, Arbeitsblatt nach bekanntem Muster, Präsentation 27 pt, Tafelskript)
+- **Was hat funktioniert:** „Lief sehr gut!“ – alle waren zufrieden; guter Transfer (eigene Situation aus dem Sport) und gute Reflexion.
+- **Nächster Schritt:** „Vor dem Gesetz“ (Do 12.11.), Einstieg mit Zitat statt Bildimpuls.
 
 ## Hospitationsfeedback (gesammelt)
 
