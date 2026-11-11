@@ -82,6 +82,11 @@
 - Planungsentscheidungen: Kleisthenes-Wiederholung am Anfang (Prüffragen + Treppe), Begriffe Stratege und Diäten vorab, Daumenabfrage „Volk oder ein Mann?“ und Aha mit Thukydides, Zeitleiste 508 – 487 – 462 als Sicherung, Abschlussaufgabe „Bei uns herrscht in Wahrheit nur einer – Perikles. Hat er recht?“ (nie kürzen); Frage 8 mit *.
 - Rückmeldung der Lehrkraft: *(steht noch aus)*
 
+### Probeklausur Pseudo-Xenophon (11.11., gemeinsame Bearbeitung)
+- Material: `Probeklausur_PseudoXenophon/` (Quellenblatt mit Zeilennummern im Blocksatz, Aufgabenblatt 2 × A5, Lösungsaushänge mit Formulierungsvorschlägen, Quellcode in `quellcode/`). Vorlage der Lehrkraft: Klausur „Die Volksherrschaft in Athen – Entmachtung des Adels?“ (Pseudo-Xenophon, Über den Staat der Athener).
+- Ablauf nach Wunsch der Lehrkraft: (1) Themenfrage und formale Analyse allein, Lösung an der Tafelrückseite; (2) Position des Verfassers in Stichpunkten, im UG zusammentragen; (3) Verfassungsorgane unter Kleisthenes und gesellschaftliche Gliederung mit Rechten; (4) Urteil. Jeder Abschnitt wird über einen Aushang mit Formulierungsvorschlag selbst kontrolliert (Grundlage: Übersicht Quelleninterpretation).
+- Rückmeldung der Lehrkraft: *(steht noch aus)*
+
 ## Hospitationsfeedback (gesammelt)
 
 *(noch keine Einträge)*
