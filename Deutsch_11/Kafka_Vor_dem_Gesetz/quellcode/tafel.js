@@ -148,19 +148,10 @@ const page3 = [
   p(t(D.TATT.satz + " " + D.TATT.hypothese, { size: 18, italics: true }), { line: 270 }),
   h2("Aufgabe 3: Das Gespräch Schritt für Schritt"),
   table([4200, W - 4200], D.GESPRAECH.map(([mann, th, anker], i) => row([
-    cell(p(t((i + 1) + "  Der Mann " + mann, { size: 18 }), { after: 0 }), { w: 4200, fill: LIGHT }),
+    cell(p([t((i + 1) + "  Der Mann " + mann, { size: 18 }), t("  (vgl. " + D.MANN_Z[i] + ")", { size: 17, color: MUTED })], { after: 0 }), { w: 4200, fill: LIGHT }),
     cell(p([t("Der Türhüter " + th, { size: 18 }), t("  (vgl. " + D.zeilen(anker) + ")", { size: 17, color: MUTED })], { after: 0 }), { w: W - 4200 }),
   ]))),
   p(t(D.GESPRAECH_FAZIT.map(([k, v]) => k + " " + v).join(" ") + " " + D.GESPRAECH_ERGEBNIS, { size: 18 }), { before: 60, line: 270 }),
-  h2("Aufgabe 4: Symbole"),
-  table(lW, [
-    row([hdr("Bildebene", lW[0]), hdr("Zeile", lW[1]), hdr("Sachebene (Erwartung)", lW[2])]),
-    ...D.SYMBOLE.map(([b, anker, sach]) => row([
-      cell(p(t(b, { bold: true, size: 18, color: RED }), { after: 0 }), { w: lW[0], fill: LIGHT }),
-      cell(p(t("vgl. " + D.zeile(anker), { size: 18 }), { after: 0 }), { w: lW[1] }),
-      cell(p(t(sach, { size: 18 }), { after: 0 }), { w: lW[2] }),
-    ])),
-  ]),
 ];
 
 // ================= Seite 4: Umsetzung der Erkenntnisse =================
@@ -173,7 +164,16 @@ const refl = [
   ["Beobachtungsschwerpunkte", "Wie viel wissen die Schüler nach dem Sprint noch von „kafkaesk“? Erkennen sie die Bausteine in den Szenarien sicher? Kommt die Klasse selbst auf „asymmetrisch“? Reichen 6 Minuten für die Gesprächstabelle? Fällt der Unterschied wörtliche / indirekte Rede auf? Wie viele nennen im Zielcheck einen Baustein (→ Wiederholung nächste Stunde)?"],
 ];
 const page4 = [
-  kicker("TAFELSKRIPT · HEFT, HINWEISE, REFLEXION", true),
+  kicker("TAFELSKRIPT · LÖSUNGEN (FORTSETZUNG), HEFT, HINWEISE, REFLEXION", true),
+  h2("Aufgabe 4: Symbole"),
+  table(lW, [
+    row([hdr("Bildebene", lW[0]), hdr("Zeile", lW[1]), hdr("Sachebene (Erwartung)", lW[2])]),
+    ...D.SYMBOLE.map(([b, anker, sach]) => row([
+      cell(p(t(b, { bold: true, size: 18, color: RED }), { after: 0 }), { w: lW[0], fill: LIGHT }),
+      cell(p(t("vgl. " + D.zeile(anker), { size: 18 }), { after: 0 }), { w: lW[1] }),
+      cell(p(t(sach, { size: 18 }), { after: 0 }), { w: lW[2] }),
+    ])),
+  ]),
   h2("Zielcheck: Musterlösung"),
   p([t("Musterlösung Zielcheck: ", { bold: true, size: 18, color: GREEN }), t(D.ZIELCHECK.muster, { size: 18 }), t("  Kriterien: " + D.ZIELCHECK.kriterien.join(" · ") + ".", { size: 18, color: MUTED })], { line: 270 }),
   h2("So sehen Arbeitsblatt und Heft am Ende aus"),
@@ -184,7 +184,7 @@ const page4 = [
     p(t("Zitat (Folie 1): Kafka, Tagebuch, 21. Juli 1913 (Liste für und gegen die Heirat mit Felice Bauer) – Datum und Wortlaut bitte mit einer Ausgabe abgleichen.", { size: 17 }), { after: 30 }),
     p(t("„Komplementär“ (Watzlawick, 5. Axiom): Die Beziehung beruht auf Unterschiedlichkeit, die Rollen ergänzen sich als oben und unten. „Ergänzend“ heißt nicht harmonisch oder gelungen. Vorschlag: „komplementär (asymmetrisch)“ sagen – vorher mit der Mentorin abstimmen.", { size: 17 }), { after: 0 }),
   ], "FFF8EC"),
-  p(t(""), { after: 40 }),
+  kicker("TAFELSKRIPT · REFLEXION", true),
   h1("Umsetzung der Erkenntnisse zur Unterrichtsverbesserung"),
   table(rW, refl.map(([k, v]) => row([cell(p(t(k, { bold: true, color: NAVY, size: 19 }), { after: 0 }), { w: rW[0], fill: LIGHT }), cell(p(t(v, { size: 19 }), { after: 0, line: 270 }), { w: rW[1] })]))),
 ];

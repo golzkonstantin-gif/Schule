@@ -158,7 +158,7 @@ aufgabe(D.AUFGABE3, "Ansage: „Jetzt arbeitet ihr allein. Die Tabelle steht auf
   D.GESPRAECH.slice(a, b).forEach(([mann, th, anker], j) => {
     const y = 1.15 + j * (h + 0.12);
     rect(s, 0.5, y, 12.3, h, j % 2 ? WHITE : LIGHT, { line: "D5DCEC", lw: 0.75 });
-    txt(s, [{ text: (a + j + 1) + "  Der Mann " + mann, options: { bold: true, breakLine: true } }, { text: "Der Türhüter " + th + "  ", options: {} }, { text: "(vgl. " + D.zeilen(anker) + ")", options: { color: MUTED } }], { x: 0.8, y, w: 11.8, h, valign: "middle" });
+    txt(s, [{ text: (a + j + 1) + "  Der Mann " + mann + " ", options: { bold: true } }, { text: "(vgl. " + D.MANN_Z[a + j] + ")", options: { color: MUTED, breakLine: true } }, { text: "Der Türhüter " + th + "  ", options: {} }, { text: "(vgl. " + D.zeilen(anker) + ")", options: { color: MUTED } }], { x: 0.8, y, w: 11.8, h, valign: "middle" });
   });
   s.addNotes("Erst eine Antwort vom Platz, dann aufdecken. „Vergleicht und verbessert mit Grün.“ Von oben nach unten gelesen ist das die Handlung. Tafel ③.");
 });

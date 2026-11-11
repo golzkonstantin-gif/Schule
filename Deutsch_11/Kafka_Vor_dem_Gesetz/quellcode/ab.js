@@ -47,7 +47,7 @@ const gespraech = table(gW, [
   row([kopf("", gW[0]), kopf("Der Mann vom Lande …", gW[1]), kopf("Der Türhüter … (Zitat, vgl. Z. …)", gW[2])]),
   ...D.GESPRAECH.map(([mann], i) => row([
     cell(p(t(String(i + 1), { bold: true, color: NAVY, size: 19 }), { after: 0, align: AlignmentType.CENTER }), { w: gW[0], fill: LIGHT }),
-    cell(p(t(mann, { size: 19 }), { after: 0 }), { w: gW[1], fill: LIGHT }),
+    cell([p(t(mann, { size: 19 }), { after: 10 }), p(t("vgl. " + D.MANN_Z[i], { size: 17, color: MUTED }), { after: 0 })], { w: gW[1], fill: LIGHT }),
     cell(p(t(""), { after: 0 }), { w: gW[2] }),
   ], 820)),
 ]);

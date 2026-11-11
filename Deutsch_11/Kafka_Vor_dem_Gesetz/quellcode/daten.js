@@ -146,6 +146,16 @@ const GESPRAECH = [
 ];
 // Zeilenangabe für einen oder mehrere Anker
 const zeilen = (anker) => (Array.isArray(anker) ? anker : [anker]).map(zeile).join(", ").replace(/, Z\. /g, ", ");
+// Zeilen zu dem, was der Mann sagt oder tut (vorgegeben, damit die Klasse von dort aus weitersucht)
+const nr = (a) => parseInt(zeile(a).replace("Z. ", ""), 10);
+const bereich = (von, bis) => (bis ? "Z. " + nr(von) + "–" + nr(bis) : zeile(von));
+const MANN_Z = [
+  bereich("Zu diesem Türhüter kommt ein Mann"),
+  bereich("Der Mann überlegt und fragt"),
+  bereich("bückt sich der Mann"),
+  bereich("Der Türhüter gibt ihm einen Schemel", "um den Türhüter zu bestechen"),
+  bereich("Vor seinem Tode sammeln", "Einlass verlangt hat"),
+];
 const AUFGABE3 = {
   titel: "Aufgabe 3: Das Gespräch Schritt für Schritt",
   zeit: "6 Min.", form: "allein, auf dem Arbeitsblatt",
@@ -195,5 +205,5 @@ ZIELCHECK.muster = "Der Türhüter (vgl. " + zeile("Vor dem Gesetz steht ein Tü
 
 module.exports = {
   TITEL, AUTOR, TEXT, TEXT_HINWEIS, ZEILEN, zeile, ZITAT, PROCESS_SATZ, LERNZIELE, VERLAUF, VORWISSEN, KAFKAESK, SPRINT,
-  NK_KRITERIUM, SZENARIEN, NK_AUFGABE, KONTEXT, LESEAUFTRAG, TATT, GESPRAECH, zeilen, AUFGABE3, GESPRAECH_FAZIT, GESPRAECH_ERGEBNIS, SYMBOLE, AUFGABE4, VORMACHEN, ZIELCHECK,
+  NK_KRITERIUM, SZENARIEN, NK_AUFGABE, KONTEXT, LESEAUFTRAG, TATT, GESPRAECH, zeilen, MANN_Z, AUFGABE3, GESPRAECH_FAZIT, GESPRAECH_ERGEBNIS, SYMBOLE, AUFGABE4, VORMACHEN, ZIELCHECK,
 };
