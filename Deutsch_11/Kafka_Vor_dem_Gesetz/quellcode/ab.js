@@ -1,5 +1,5 @@
 // Arbeitsblatt „Vor dem Gesetz“ nach dem bekannten Muster (Kafka-Appell, „Gibs auf!“): Titel, Thema, Ziel, Info-Box,
-// 1. Textgrundlage mit Zeilennummern, 2. Information „kafkaesk“ (Begriffe der Mentorin), 3. Arbeitsaufträge 2–4 mit Platz zum Schreiben (2 Seiten, doppelseitig)
+// 1. Textgrundlage mit Zeilennummern, 2. Arbeitsaufträge 2–4 mit Platz zum Schreiben (Handlung über das Gespräch erschließen, Symbole) (2 Seiten, doppelseitig)
 const fs = require("fs");
 const {
   Document, Packer, Paragraph, TextRun, Table, TableRow, TableCell, WidthType, BorderStyle,
@@ -41,31 +41,35 @@ function textBlock(lines) {
 const schreibLinien = (n, w, h = 420) => table([w], Array.from({ length: n }, () => row([cell(p(t(""), { after: 0 }), { w, borders: { top: none, left: none, right: none, bottom: solid("9AA6C4", 4) }, m: 0, ml: 0 })], h)));
 const aufgabeKopf = (a) => p([t(a.titel, { bold: true, color: NAVY, size: 22 }), t("   (" + a.form + ", " + a.zeit + ")", { italics: true, color: MUTED, size: 18 })], { before: 140, after: 40, keepNext: true });
 
-// Aufgabe 3: Bildebene → Sachebene (das Tor macht die Lehrkraft vor)
-const a3W = [2600, 1100, W - 3700];
-const a3 = table(a3W, [
-  row([kopf("Bildebene", a3W[0]), kopf("Zeile", a3W[1]), kopf("Sachebene: Wofür steht es? Begründe mit dem Text.", a3W[2])]),
-  ...D.SYMBOLE.map(([b], i) => row([
-    cell([p(t(b, { bold: true, color: RED, size: 20 }), { after: 10 }), ...(i === 0 ? [p(t("(macht die Lehrkraft vor)", { size: 16, italics: true, color: MUTED }), { after: 0 })] : [])], { w: a3W[0], fill: LIGHT }),
-    cell(p(t("vgl. Z. ", { size: 19, color: MUTED }), { after: 0 }), { w: a3W[1] }),
-    cell(p(t(""), { after: 0 }), { w: a3W[2] }),
-  ], 1250)),
+// Aufgabe 3: das Gespräch Schritt für Schritt (Spalte „Der Mann“ vorgegeben)
+const gW = [450, 3500, W - 3950];
+const gespraech = table(gW, [
+  row([kopf("", gW[0]), kopf("Der Mann vom Lande …", gW[1]), kopf("Der Türhüter … (Zitat, vgl. Z. …)", gW[2])]),
+  ...D.GESPRAECH.map(([mann], i) => row([
+    cell(p(t(String(i + 1), { bold: true, color: NAVY, size: 19 }), { after: 0, align: AlignmentType.CENTER }), { w: gW[0], fill: LIGHT }),
+    cell(p(t(mann, { size: 19 }), { after: 0 }), { w: gW[1], fill: LIGHT }),
+    cell(p(t(""), { after: 0 }), { w: gW[2] }),
+  ], 820)),
 ]);
 
-// Aufgabe 4: Belege für die Asymmetrie
-const a4W = [2600, W - 2600];
-const a4 = table(a4W, [1, 2].map((n) => row([
-  cell(p(t("Beleg " + n + " (vgl. Z. …)", { bold: true, color: NAVY, size: 19 }), { after: 0 }), { w: a4W[0], fill: LIGHT, valign: VerticalAlign.CENTER }),
-  cell(p(t(""), { after: 0 }), { w: a4W[1] }),
-], 700)));
+// Aufgabe 4: Bildebene → Sachebene (das Tor macht die Lehrkraft vor)
+const a4W = [2600, 1100, W - 3700];
+const a4 = table(a4W, [
+  row([kopf("Bildebene", a4W[0]), kopf("Zeile", a4W[1]), kopf("Sachebene: Wofür steht es? Begründe mit dem Text.", a4W[2])]),
+  ...D.SYMBOLE.map(([b], i) => row([
+    cell([p(t(b, { bold: true, color: RED, size: 20 }), { after: 10 }), ...(i === 0 ? [p(t("(macht die Lehrkraft vor)", { size: 16, italics: true, color: MUTED }), { after: 0 })] : [])], { w: a4W[0], fill: LIGHT }),
+    cell(p(t("vgl. Z. ", { size: 19, color: MUTED }), { after: 0 }), { w: a4W[1] }),
+    cell(p(t(""), { after: 0 }), { w: a4W[2] }),
+  ], 1000)),
+]);
 
 const header = new Header({ children: [new Paragraph({ tabStops: [{ type: TabStopType.RIGHT, position: W }], children: [t("Deutsch · Klasse 11 · Kafka, „Vor dem Gesetz“", { size: 17, color: MUTED }), t("\tName: ______________________   Datum: ___________", { size: 17, color: MUTED })] })] });
 const footer = new Footer({ children: [new Paragraph({ alignment: AlignmentType.RIGHT, children: [t("Franz Kafka: „Vor dem Gesetz“ (1915), in heutiger Rechtschreibung", { size: 16, color: MUTED })] })] });
 
 const seite1 = [
-  p(t("Arbeitsblatt: Inhalt und Symbole in Kafkas „Vor dem Gesetz“", { font: "Cambria", size: 32, bold: true, color: NAVY }), { after: 50 }),
+  p(t("Arbeitsblatt: Gespräch und Symbole in Kafkas „Vor dem Gesetz“", { font: "Cambria", size: 32, bold: true, color: NAVY }), { after: 50 }),
   p([t("Thema: ", { bold: true, size: 20 }), t("Ohnmacht vor der Macht – eine kafkaeske Parabel", { size: 20 })], { after: 20 }),
-  p([t("Ziel: ", { bold: true, size: 20 }), t("Ich kann die zentralen Symbole der Parabel deuten und erklären, warum sie kafkaesk ist.", { size: 20 })], { after: 100 }),
+  p([t("Ziel: ", { bold: true, size: 20 }), t("Ich kann die Handlung über das Gespräch erschließen, die Symbole deuten und erklären, warum die Parabel kafkaesk ist.", { size: 20 })], { after: 100 }),
   box([
     p(t("Info-Box: Kontext", { bold: true, color: RED, size: 21 }), { after: 30 }),
     p(t(D.KONTEXT[0] + " Im Dom erzählt ein Geistlicher sie Josef K., der verhaftet wurde, ohne zu erfahren, warum.", { size: 19 }), { after: 0, line: 270 }),
@@ -75,22 +79,17 @@ const seite1 = [
 ];
 
 const seite2 = [
-  h2("2. Information: „kafkaesk“ (Wiederholung)", { pb: true, before: 0 }),
-  box([
-    p(t(D.KAFKAESK.definition, { bold: true, size: 19 }), { after: 40, line: 260 }),
-    ...D.KAFKAESK.bausteine.map(([b, e]) => p([t("▸ " + b + ": ", { bold: true, color: RED, size: 19 }), t(e, { size: 19 })], { after: 15 })),
-    p([t("Gefühle: ", { bold: true, size: 19 }), t(D.KAFKAESK.gefuehle, { size: 19 })], { before: 30, after: 0 }),
-  ]),
-  h2("3. Arbeitsaufträge"),
+  h2("2. Arbeitsaufträge", { pb: true, before: 0 }),
   p(t("Aufgabe 1 (Nervig oder kafkaesk?) und den Zielcheck schreibst du ins Heft.", { size: 18, italics: true, color: MUTED }), { after: 20 }),
   aufgabeKopf(D.TATT),
   p([t("Bausteine: ", { bold: true, size: 19 }), t(D.TATT.bausteine, { size: 19 })], { after: 30 }),
   schreibLinien(4, W, 400),
   aufgabeKopf(D.AUFGABE3),
   ...schritte(D.AUFGABE3.schritte),
-  a3,
-  aufgabeKopf(D.HYPOTHESE),
-  ...schritte(D.HYPOTHESE.schritte),
+  gespraech,
+  ...D.AUFGABE3.fragen.flatMap((q) => [p(t(q, { bold: true, size: 19, color: NAVY }), { before: 80, after: 0, keepNext: true }), schreibLinien(2, W, 380)]),
+  aufgabeKopf(D.AUFGABE4),
+  ...schritte(D.AUFGABE4.schritte),
   a4,
 ];
 

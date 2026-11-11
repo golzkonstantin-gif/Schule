@@ -147,7 +147,41 @@ aufgabe(D.NK_AUFGABE, "Szenarien-Blatt austeilen (halbes A4). Ansage: „Jetzt a
   s.addNotes("Nur aufdecken, wenn der gemeinsame Satz deutlich abweicht – sonst gilt der Satz der Klasse. „Komplementär“ im Sinne Watzlawicks: Die Rollen ergänzen sich als oben und unten – das heißt nicht, dass das Gespräch gelingt.");
 }
 
-// ===== V: Verarbeiten – Ich mache vor, Aufgabe 3 =====
+// ===== V: Verarbeiten – Aufgabe 3: das Gespräch Schritt für Schritt =====
+aufgabe(D.AUFGABE3, "Ansage: „Jetzt arbeitet ihr allein. Die Tabelle steht auf dem Arbeitsblatt, Aufgabe 3. Die linke Spalte ist schon ausgefüllt – ihr notiert, wie der Türhüter reagiert.“ Timer 6 Minuten. Herumgehen. Wer fertig ist: die beiden Fragen unter der Tabelle.", (s) => {
+  rect(s, 0.5, 4.75, 12.3, 1.8, LIGHT2);
+  txt(s, D.AUFGABE3.fragen.map((q, i) => ({ text: q, options: { bullet: { indent: 24 }, breakLine: i < 1 } })), { x: 0.8, y: 4.75, w: 11.8, h: 1.8, valign: "middle" });
+});
+[[0, 3], [3, 5]].forEach(([a, b], k) => {
+  const s = base("Lösung: Das Gespräch (" + (k + 1) + ")", { phase: "VERARBEITEN" });
+  const h = k ? 2.75 : 1.85;
+  D.GESPRAECH.slice(a, b).forEach(([mann, th, anker], j) => {
+    const y = 1.15 + j * (h + 0.12);
+    rect(s, 0.5, y, 12.3, h, j % 2 ? WHITE : LIGHT, { line: "D5DCEC", lw: 0.75 });
+    txt(s, [{ text: (a + j + 1) + "  Der Mann " + mann, options: { bold: true, breakLine: true } }, { text: "Der Türhüter " + th + "  ", options: {} }, { text: "(vgl. " + D.zeilen(anker) + ")", options: { color: MUTED } }], { x: 0.8, y, w: 11.8, h, valign: "middle" });
+  });
+  s.addNotes("Erst eine Antwort vom Platz, dann aufdecken. „Vergleicht und verbessert mit Grün.“ Von oben nach unten gelesen ist das die Handlung. Tafel ③.");
+});
+{
+  const s = base("Warum scheitert die Kommunikation?", { phase: "VERARBEITEN" });
+  D.GESPRAECH_FAZIT.forEach(([k, v], i) => {
+    const y = 1.15 + i * 2.0;
+    rect(s, 0.5, y, 12.3, 1.88, i % 2 ? WHITE : LIGHT, { line: "D5DCEC", lw: 0.75 });
+    txt(s, k, { x: 0.75, y, w: 2.9, h: 1.88, bold: true, color: RED, valign: "middle" });
+    txt(s, v, { x: 3.7, y, w: 9.0, h: 1.88, valign: "middle" });
+  });
+  s.addNotes("Die beiden Fragen unter der Tabelle im Unterrichtsgespräch klären, dann aufdecken. Beleg zur Rede: Der Mann „fragt dann, ob er also später werde eintreten dürfen“ (indirekt); wörtlich spricht er erst in Z. 40 f.");
+}
+{
+  const s = base("Unsere Hypothese", { phase: "VERARBEITEN" });
+  rect(s, 0.5, 1.3, 12.3, 1.9, LIGHT);
+  txt(s, D.TATT.hypothese, { x: 0.8, y: 1.3, w: 11.8, h: 1.9, valign: "middle", italic: true, color: MUTED });
+  rect(s, 0.5, 3.5, 12.3, 3.5, WHITE, { line: GOLD, lw: 2.5, r: 0.04 });
+  txt(s, D.GESPRAECH_ERGEBNIS, { x: 0.8, y: 3.5, w: 11.8, h: 3.5, valign: "middle", fontFace: HEAD });
+  s.addNotes("Zurück zur Hypothese aus dem Einleitungssatz: bestätigt. Rückgriff auf das Zitat vom Anfang: Der Mann vom Lande redet jahrelang mit niemandem außer dem Türhüter, am Ende wird der Eingang geschlossen – Kafka wollte sich selbst „von allen absperren“.");
+}
+
+// ===== V: Verarbeiten – Ich mache vor, Aufgabe 4: Symbole =====
 {
   const s = base("Ich mache vor: das offene Tor", { phase: "VERARBEITEN" });
   D.VORMACHEN.forEach(([k, v], i) => {
@@ -155,34 +189,21 @@ aufgabe(D.NK_AUFGABE, "Szenarien-Blatt austeilen (halbes A4). Ansage: „Jetzt a
     rect(s, 0.5, y, 12.3, 1.8, i === 2 ? LIGHT2 : LIGHT);
     txt(s, [{ text: k + "  ", options: { bold: true, color: i === 2 ? RED : NAVY } }, { text: v, options: i === 0 ? { italic: true } : {} }], { x: 0.8, y, w: 11.8, h: 1.8, valign: "middle" });
   });
-  s.addNotes("Laut denken, Schritt für Schritt: „Was steht da? → Was fällt auf? → Wofür steht es?“ Alle tragen die erste Zeile der Tabelle mit ein (vgl. " + D.zeile(D.SYMBOLE[0][1]) + "). Tafel ③, erste Zeile.");
+  s.addNotes("Laut denken, Schritt für Schritt: „Was steht da? → Was fällt auf? → Wofür steht es?“ Alle tragen die erste Zeile der Tabelle mit ein (vgl. " + D.zeile(D.SYMBOLE[0][1]) + "). Tafel ④, erste Zeile.");
 }
-aufgabe(D.AUFGABE3, "Ansage: „Jetzt arbeitet ihr allein. Die Tabelle steht auf dem Arbeitsblatt, Aufgabe 3.“ Timer 6 Minuten. Herumgehen, Hilfe nur als Frage: „Was fällt an dem Wort auf?“");
+aufgabe(D.AUFGABE4, "Ansage: „Jetzt arbeitet ihr allein. Die Tabelle steht auf dem Arbeitsblatt, Aufgabe 4.“ Timer 4 Minuten. Hilfe nur als Frage: „Was fällt an dem Wort auf?“");
 {
   const s = base("Lösung: Symbole", { phase: "VERARBEITEN" });
   D.SYMBOLE.slice(1).forEach(([b, anker, sach], i) => {
-    const y = 1.15 + i * 2.05;
-    rect(s, 0.5, y, 12.3, 1.9, i % 2 ? WHITE : LIGHT, { line: "D5DCEC", lw: 0.75 });
-    txt(s, [{ text: b, options: { bold: true, color: RED, breakLine: true } }, { text: "vgl. " + D.zeile(anker), options: { color: MUTED } }], { x: 0.7, y, w: 3.4, h: 1.9, valign: "middle" });
-    txt(s, sach, { x: 4.1, y, w: 8.6, h: 1.9, valign: "middle" });
+    const y = 1.2 + i * 2.6;
+    rect(s, 0.5, y, 12.3, 2.4, i % 2 ? WHITE : LIGHT, { line: "D5DCEC", lw: 0.75 });
+    txt(s, [{ text: b, options: { bold: true, color: RED, breakLine: true } }, { text: "vgl. " + D.zeile(anker), options: { color: MUTED } }], { x: 0.7, y, w: 3.4, h: 2.4, valign: "middle" });
+    txt(s, sach, { x: 4.1, y, w: 8.6, h: 2.4, valign: "middle" });
   });
-  s.addNotes("Erst eine Antwort vom Platz, dann aufdecken. „Vergleicht und verbessert mit Grün.“ Beim Gesetz ausdrücklich offen lassen: Recht, Wahrheit, Sinn, Gott – oder der Vater. Wichtig ist die Begründung am Text. Tafel ③.");
+  s.addNotes("Erst eine Antwort vom Platz, dann aufdecken. „Vergleicht und verbessert mit Grün.“ Beim Gesetz ausdrücklich offen lassen: Recht, Wahrheit, Sinn, Gott – oder der Vater. Das Schließen des Eingangs steckt schon in Gesprächsschritt 5: Der Weg war nur für ihn – und ist mit seinem Leben vorbei. Tafel ④.");
 }
 
-// ===== A: Auswerten – Hypothese prüfen, Zielcheck =====
-aufgabe(D.HYPOTHESE, "Eine Minute allein suchen, dann Stichproben. Belege nacheinander aufdecken (nächste Folie). Tafel ④.");
-{
-  const s = base("Belege für die Asymmetrie", { phase: "AUSWERTEN" });
-  D.HYPOTHESE.belege.forEach(([ebene, beleg, anker, erkl], i) => {
-    const y = 1.15 + i * 1.62;
-    rect(s, 0.5, y, 12.3, 1.5, i % 2 ? WHITE : LIGHT, { line: "D5DCEC", lw: 0.75 });
-    txt(s, [{ text: ebene, options: { bold: true, color: RED, breakLine: true } }, { text: "vgl. " + D.zeile(anker), options: { color: MUTED } }], { x: 0.7, y, w: 3.0, h: 1.5, valign: "middle" });
-    txt(s, erkl, { x: 3.8, y, w: 8.9, h: 1.5, valign: "middle" });
-  });
-  rect(s, 0.5, 6.05, 12.3, 1.25, WHITE, { line: GOLD, lw: 2.5, r: 0.04 });
-  txt(s, D.HYPOTHESE.fazit, { x: 0.8, y: 6.05, w: 11.8, h: 1.25, valign: "middle", fontFace: HEAD });
-  s.addNotes("Belege im Wortlaut: " + D.HYPOTHESE.belege.map(([e, b]) => e + ": " + b).join(" – ") + " Rückgriff auf das Zitat vom Anfang: Der Mann vom Lande redet jahrelang mit niemandem außer dem Türhüter, am Ende wird der Eingang geschlossen – Kafka wollte sich selbst „von allen absperren“.");
-}
+// ===== A: Auswerten – Zielcheck =====
 {
   const s = base("Zielcheck", { time: "4 Min." });
   txt(s, "Allein, im Heft.", { x: 0.5, y: 1.15, w: 12.3, h: 0.6, italic: true, color: MUTED });

@@ -60,15 +60,15 @@ const PROCESS_SATZ = "Jemand musste Josef K. verleumdet haben, denn ohne dass er
 
 // Lernziele (Ich kann …)
 const LERNZIELE = [
-  ["Ich kann die zentralen Symbole der Parabel deuten.", false],
-  ["Ich kann erklären, warum die Parabel kafkaesk ist.", false],
+  ["Ich kann die Handlung über das Gespräch erschließen und erklären, warum die Kommunikation scheitert.", false],
+  ["Ich kann die zentralen Symbole deuten und erklären, warum die Parabel kafkaesk ist.", false],
 ];
 const VERLAUF = [
   ["Ein Zitat: Was wissen wir über Kafka?", "Ankommen"],
   ["„kafkaesk“: Wiederholung · Begriffs-Sprint · nervig oder kafkaesk?", "Vorwissen"],
   ["„Vor dem Gesetz“ lesen · Einleitungssatz mit Hypothese", "Informieren"],
-  ["Symbole deuten", "Verarbeiten"],
-  ["Hypothese prüfen · Zielcheck", "Auswerten"],
+  ["Das Gespräch Schritt für Schritt · Symbole deuten", "Verarbeiten"],
+  ["Zielcheck", "Auswerten"],
 ];
 
 // Vorwissen: „kafkaesk“ mündlich wiederholen (Begriffe der Mentorin, AB vom 9.11.)
@@ -136,16 +136,42 @@ const TATT = {
   hypothese: "Es lässt sich vermuten, dass die Kommunikation scheitert, weil ein asymmetrisches (komplementäres) Gespräch stattfindet: Der Türhüter verfügt über Macht und Wissen, der Mann bleibt ohnmächtig.",
 };
 
-// Aufgabe 3: Symbole deuten – [Bildelement, Zitat für die Zeile, Sachebene (Lösung)]
+// Aufgabe 3: Die Handlung über das Gespräch erschließen (Muster der Mentorin) – [Der Mann … (vorgegeben), Der Türhüter … (Lösung), Anker für die Zeile]
+const GESPRAECH = [
+  ["bittet um Eintritt in das Gesetz.", "sagt, dass er ihm „jetzt den Eintritt nicht gewähren könne“.", "Aber der Türhüter sagt, dass"],
+  ["fragt, ob er später eintreten darf.", "„Es ist möglich, jetzt aber nicht.“", "Es ist möglich"],
+  ["bückt sich, um durch das Tor zu sehen.", "lacht, lädt ihn ein und droht: „Merke aber: Ich bin mächtig.“", "Als der Türhüter das merkt"],
+  ["wartet jahrelang, bittet und versucht zu bestechen.", "stellt „teilnahmslose Fragen, wie sie große Herren stellen“; „Ich nehme es nur an, damit du nicht glaubst, etwas versäumt zu haben.“", ["teilnahmslose Fragen", "Ich nehme es nur an"]],
+  ["stellt vor seinem Tod seine einzige Frage.", "brüllt: „… dieser Eingang war nur für dich bestimmt. Ich gehe jetzt und schließe ihn.“", "brüllt er ihn an"],
+];
+// Zeilenangabe für einen oder mehrere Anker
+const zeilen = (anker) => (Array.isArray(anker) ? anker : [anker]).map(zeile).join(", ").replace(/, Z\. /g, ", ");
+const AUFGABE3 = {
+  titel: "Aufgabe 3: Das Gespräch Schritt für Schritt",
+  zeit: "6 Min.", form: "allein, auf dem Arbeitsblatt",
+  schritte: [
+    "Lies, was der Mann sagt oder tut.",
+    "Notiere, wie der Türhüter reagiert – mit Zitat und Zeile.",
+    "Beantworte die beiden Fragen unter der Tabelle.",
+  ],
+  fragen: ["Wer bestimmt das Gespräch? Woran erkennst du das?", "Vergleiche: Wie wird die Rede der beiden wiedergegeben?"],
+};
+const GESPRAECH_FAZIT = [
+  ["Wer bestimmt?", "Der Türhüter entscheidet, droht, verhört und schließt. Der Mann bittet, fragt, wartet – er nimmt die untere Rolle an."],
+  ["Wie sprechen sie?", "Der Türhüter spricht in wörtlicher Rede. Der Mann wird bis kurz vor seinem Tod nur indirekt wiedergegeben – er hat keine eigene Stimme."],
+  ["Bild dafür", "„… der Größenunterschied hat sich sehr zuungunsten des Mannes verändert“ (vgl. " + zeile("Größenunterschied hat sich sehr") + ")."],
+];
+const GESPRAECH_ERGEBNIS = "Unsere Hypothese stimmt: Das Gespräch ist komplementär (asymmetrisch) – deshalb scheitert die Kommunikation. Der Mann redet mit niemandem außer dem Türhüter und ist am Ende ausgesperrt. Kafka: „von allen absperren“.";
+
+// Aufgabe 4: Symbole deuten – [Bildelement, Zitat für die Zeile, Sachebene (Lösung)]; das Tor macht die Lehrkraft vor
 const SYMBOLE = [
   ["das offene Tor", "Da das Tor zum Gesetz offensteht", "Der Zugang scheint möglich, das Ziel ist sichtbar – und bleibt doch unerreichbar: Hoffnung und Verbot zugleich."],
   ["der Türhüter", "Merke aber: Ich bin mächtig", "Eine Autorität (Beamter, Behörde, Staat), die den Zugang verwaltet. Ihre Macht kommt aus einer unsichtbaren Hierarchie – Gründe nennt sie nie."],
   ["das Gesetz", "das Gesetz soll doch jedem", "Recht und Gerechtigkeit – offen gedeutet auch Wahrheit, Sinn des Lebens oder Gott: das, wonach jeder Mensch strebt."],
-  ["das Schließen des Eingangs", "Hier konnte niemand sonst", "Der Weg war ganz persönlich; mit seinem Leben ist die Chance vorbei. Er hat sie durch sein Warten selbst verspielt."],
 ];
-const AUFGABE3 = {
-  titel: "Aufgabe 3: Symbole deuten",
-  zeit: "6 Min.", form: "allein, auf dem Arbeitsblatt",
+const AUFGABE4 = {
+  titel: "Aufgabe 4: Symbole deuten",
+  zeit: "4 Min.", form: "allein, auf dem Arbeitsblatt",
   schritte: [
     "Suche die Stelle im Text und notiere die Zeile.",
     "Deute: Wofür steht das Bildelement?",
@@ -159,22 +185,6 @@ const VORMACHEN = [
   ["3. Wofür steht es?", "Der Zugang scheint möglich, das Ziel ist sichtbar – und bleibt doch unerreichbar: Hoffnung und Verbot zugleich."],
 ];
 
-// Aufgabe 4: Hypothese prüfen – Belege für die Asymmetrie [Ebene, Beleg, Zitat für die Zeile, Erklärung]
-const HYPOTHESE = {
-  titel: "Aufgabe 4: Stimmt unsere Hypothese?",
-  zeit: "1 Min.", form: "allein suchen, dann gemeinsam",
-  schritte: [
-    "Suche einen Beleg dafür, dass das Gespräch asymmetrisch ist.",
-    "Notiere ihn mit Zeile (vgl. Z. …).",
-  ],
-  belege: [
-    ["Machtworte", "„Merke aber: Ich bin mächtig.“", "Merke aber: Ich bin mächtig", "Der Türhüter bestimmt, der Mann bittet."],
-    ["Raum und Körper", "„… der Größenunterschied hat sich sehr zuungunsten des Mannes verändert.“", "Größenunterschied hat sich sehr", "Die Asymmetrie wird zum Bild: oben und unten."],
-    ["Stimme", "Der Mann „fragt dann, ob er also später werde eintreten dürfen“.", "fragt dann, ob er also", "Der Türhüter spricht in wörtlicher Rede, der Mann meist nur indirekt – eine eigene Stimme bekommt er erst vor dem Tod."],
-  ],
-  fazit: "Die Hypothese stimmt: Das Gespräch ist komplementär (asymmetrisch). Der Mann redet mit niemandem außer dem Türhüter – am Ende ist er ausgesperrt. Kafka: „von allen absperren“.",
-};
-
 // Zielcheck (im Heft)
 const ZIELCHECK = {
   auftrag: "Erkläre in 2–3 Sätzen, warum „Vor dem Gesetz“ kafkaesk ist. Beziehe dich auf ein Symbol mit Zeilenangabe.",
@@ -185,5 +195,5 @@ ZIELCHECK.muster = "Der Türhüter (vgl. " + zeile("Vor dem Gesetz steht ein Tü
 
 module.exports = {
   TITEL, AUTOR, TEXT, TEXT_HINWEIS, ZEILEN, zeile, ZITAT, PROCESS_SATZ, LERNZIELE, VERLAUF, VORWISSEN, KAFKAESK, SPRINT,
-  NK_KRITERIUM, SZENARIEN, NK_AUFGABE, KONTEXT, LESEAUFTRAG, TATT, SYMBOLE, AUFGABE3, VORMACHEN, HYPOTHESE, ZIELCHECK,
+  NK_KRITERIUM, SZENARIEN, NK_AUFGABE, KONTEXT, LESEAUFTRAG, TATT, GESPRAECH, zeilen, AUFGABE3, GESPRAECH_FAZIT, GESPRAECH_ERGEBNIS, SYMBOLE, AUFGABE4, VORMACHEN, ZIELCHECK,
 };
