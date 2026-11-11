@@ -108,7 +108,7 @@ const ablauf = [
   ["4–5'", "Verlauf, Lernziele", "direkt", "Folie 2–3. Ziele und Ablauf an der Seitentafel.", "Seitentafel", "Folie 2–3"],
   ["5–6'", "V: Wiederholung", "Unterrichtsgespräch", "Folie 4: „kafkaesk“ mündlich (1–2 Stichproben), noch nichts anschreiben.", "–", "Folie 4"],
   ["6–9'", "V: Begriffs-Sprint", "Einzelarbeit", "Folie 5: „Stift in die Hand. Ihr schreibt eine Minute ohne Pause. Der Stift bleibt auf dem Papier, bis ich ‚Stopp‘ sage.“ Folie 6: Begriff erscheint, Timer 1 Min. „Stopp.“ 2–3 lesen vor. Folie 7: Lösung (vier Bausteine, Gefühle) an die Tafel.", "① Bausteine", "Folie 5–7"],
-  ["9–14'", "V: Nervig oder kafkaesk?", "allein, dann Besprechung", "Szenarien-Blatt austeilen. Folie 8: „Jetzt arbeitet ihr allein. Nur Nummer, N oder K und Baustein ins Heft.“ 3 Min. Folie 9–10: erst eine Begründung vom Platz, dann aufdecken, mit Grün verbessern.", "① nervig / kafkaesk", "Folie 8–10, Szenarien-Blatt"],
+  ["9–14'", "V: Nervig oder kafkaesk?", "allein, dann Besprechung", "Blatt austeilen. Folie 8: „Jetzt arbeitet ihr allein. Kreuzt an und begründet in Stichworten mit einem Merkmal.“ 4 Min. Folie 9–10: erst eine Begründung vom Platz, dann aufdecken, mit Grün verbessern.", "① nervig / kafkaesk", "Folie 8–10, Szenarien-Blatt"],
   ["14–19'", "I: Kontext, Lesen", "direkt", "Folie 11: Kontext; Process-Satz: „Welcher Baustein ist das?“ (grundlose Schuld). Arbeitsblatt austeilen. „Stifte liegen. Ihr lest auf dem Arbeitsblatt mit.“ Lehrkraft liest vor (Modell-Lesen, ca. 4 Min.). Leseauftrag: „" + D.LESEAUFTRAG + "“", "–", "Folie 11, AB Nr. 1"],
   ["19–21'", "I: Einleitungssatz", "gemeinsam (Ich – Wir)", "Folie 12: Lehrkraft beginnt den Satz, Klasse ergänzt das Thema. Impuls: „Wer hat im Gespräch die Macht? Wie nennen wir so eine Beziehung?“ → asymmetrisch / komplementär. Alle schreiben mit (AB Aufgabe 2). Folie 13 nur bei Bedarf.", "②", "Folie 12–13"],
   ["21–30'", "V: Das Gespräch Schritt für Schritt", "allein, dann Unterrichtsgespräch", "Folie 14: „Jetzt arbeitet ihr allein. Die linke Spalte ist ausgefüllt – ihr notiert, wie der Türhüter reagiert.“ Timer 6 Min. Folie 15–16: erst eine Antwort vom Platz, dann aufdecken, mit Grün verbessern. Folie 17: die beiden Fragen klären. Folie 18: Hypothese bestätigt; Rückgriff auf das Zitat („absperren“).", "③", "Folie 14–18, AB Aufgabe 3"],
@@ -177,7 +177,7 @@ const page4 = [
   h2("Zielcheck: Musterlösung"),
   p([t("Musterlösung Zielcheck: ", { bold: true, size: 18, color: GREEN }), t(D.ZIELCHECK.muster, { size: 18 }), t("  Kriterien: " + D.ZIELCHECK.kriterien.join(" · ") + ".", { size: 18, color: MUTED })], { line: 270 }),
   h2("So sehen Arbeitsblatt und Heft am Ende aus"),
-  p(t("Heft: Sprint-Text, Aufgabe 1 (Nummer, N/K, Baustein, mit Grün verbessert), Zielcheck (2–3 Sätze, mit Grün kontrolliert). Arbeitsblatt (in den Hefter): Einleitungssatz mit Hypothese, Gesprächstabelle (fünf Schritte, mit Grün verbessert) mit den beiden Fragen, Symboltabelle (drei Zeilen). Szenarien-Blatt einkleben.", { size: 18 }), { line: 270 }),
+  p(t("Heft: Sprint-Text, Zielcheck (2–3 Sätze, mit Grün kontrolliert). Arbeitsblatt (in den Hefter): Einleitungssatz mit Hypothese, Gesprächstabelle (fünf Schritte, mit Grün verbessert) mit den beiden Fragen, Symboltabelle (drei Zeilen). Blatt „Nervig oder kafkaesk?“ (angekreuzt, Begründung mit Merkmal, mit Grün verbessert) in den Hefter.", { size: 18 }), { line: 270 }),
   h2("Hinweise zu Text, Zitat und Begriff"),
   box([
     p(t(D.TEXT_HINWEIS, { size: 17 }), { after: 30 }),

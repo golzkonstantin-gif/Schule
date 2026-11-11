@@ -99,7 +99,7 @@ function aufgabe(a, notes, extra) {
 }
 
 // ===== Aufgabe 1: Nervig oder kafkaesk? =====
-aufgabe(D.NK_AUFGABE, "Szenarien-Blatt austeilen (halbes A4). Ansage: „Jetzt arbeitet ihr allein. Ihr schreibt nur Nummer, N oder K und den Baustein ins Heft.“ 3 Minuten.", (s) => {
+aufgabe(D.NK_AUFGABE, "Blatt „Nervig oder kafkaesk?“ austeilen. Ansage: „Jetzt arbeitet ihr allein. Kreuzt an und begründet in Stichworten mit einem Merkmal.“ 4 Minuten.", (s) => {
   D.NK_KRITERIUM.forEach(([k, v], i) => {
     const x = 0.5 + i * 6.25;
     rect(s, x, 4.55, 6.05, 2.0, i ? "FDECEA" : LIGHT, { line: i ? RED : "D5DCEC", lw: i ? 2 : 0.75 });

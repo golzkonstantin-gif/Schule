@@ -111,11 +111,11 @@ const SZENARIEN = [
 ];
 const NK_AUFGABE = {
   titel: "Aufgabe 1: Nervig oder kafkaesk?",
-  zeit: "3 Min.", form: "allein, Situationen auf dem Blatt, Antworten ins Heft",
+  zeit: "4 Min.", form: "allein, auf dem Blatt",
   schritte: [
     "Lies die sechs Situationen.",
-    "Notiere im Heft: Nummer und N (nervig) oder K (kafkaesk).",
-    "Bei K: Schreibe den Baustein dazu.",
+    "Kreuze an: nervig oder kafkaesk?",
+    "Begründe in Stichworten mit einem Merkmal von „kafkaesk“.",
   ],
 };
 
