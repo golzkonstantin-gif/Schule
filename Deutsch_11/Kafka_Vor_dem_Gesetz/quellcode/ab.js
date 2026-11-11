@@ -80,7 +80,6 @@ const seite1 = [
 
 const seite2 = [
   h2("2. Arbeitsaufträge", { pb: true, before: 0 }),
-  p(t("Aufgabe 1 und den Zielcheck schreibst du ins Heft.", { size: 18, italics: true, color: MUTED }), { after: 20 }),
   aufgabeKopf(D.TATT),
   p([t("Bausteine: ", { bold: true, size: 19 }), t(D.TATT.bausteine, { size: 19 })], { after: 30 }),
   schreibLinien(4, W, 400),
