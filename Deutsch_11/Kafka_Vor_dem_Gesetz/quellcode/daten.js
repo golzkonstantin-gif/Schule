@@ -1,4 +1,4 @@
-// Gemeinsame Daten der Stunde „Vor dem Gesetz“ – kafkaesk, Inhalt und Symbole der Parabel (Deutsch 11, Do 12.11., 45 Min.)
+// Gemeinsame Daten der Stunde „Vor dem Gesetz“ – kafkaesk, Inhalt und Symbole der Parabel (Deutsch 11, Do 12.11., 45 Min.; schlanke Fassung nach Rückmeldung 11.11.)
 // Text aus dem Gedächtnis wiedergegeben (Kafka, 1915; gemeinfrei), Schreibung an die heutige Rechtschreibung angepasst.
 // Die Textquellen im Netz waren bei der Erstellung gesperrt – bitte vor dem Druck mit einer Ausgabe abgleichen.
 const TITEL = "Vor dem Gesetz";
@@ -39,47 +39,40 @@ function zeile(zitat) {
 
 // Einstiegszitat (Ankommen) – aus Kafkas Nachlass (Notizen), Wortlaut bitte prüfen
 const ZITAT = {
-  text: "Auf Balzacs Spazierstockgriff: Ich breche alle Hindernisse. Auf meinem: Mich brechen alle Hindernisse. Gemeinsam ist das ‚alle‘.",
   quelle: "Franz Kafka, Notiz aus dem Nachlass",
   impuls: "Was sagt dieser Satz über Kafka?",
   erwartung: "Balzac (franz. Schriftsteller, 19. Jh.) sieht sich als Sieger über alle Hindernisse; Kafka dreht den Satz um: Er ist das Opfer, die Hindernisse sind stärker. Subjekt und Objekt tauschen die Rolle – Kafka erlebt sich als ohnmächtig, er hat resigniert. Bitterer Witz: „Gemeinsam ist das ‚alle‘.“",
 };
-// Kontext: erster Satz des „Process“ (Ohnmacht vor staatlichen Autoritäten)
 const PROCESS_SATZ = "Jemand musste Josef K. verleumdet haben, denn ohne dass er etwas Böses getan hätte, wurde er eines Morgens verhaftet.";
 
 // Lernziele (Ich kann …)
 const LERNZIELE = [
-  ["Ich kann den Inhalt von „Vor dem Gesetz“ in Handlungsschritten wiedergeben.", false],
-  ["Ich kann die Symbole der Parabel deuten (Bildebene → Sachebene) und am Text belegen.", false],
-  ["Ich kann erklären, warum die Parabel „kafkaesk“ ist.", false],
+  ["Ich kann die zentralen Symbole der Parabel deuten.", false],
+  ["Ich kann erklären, warum die Parabel kafkaesk ist.", false],
 ];
 const VERLAUF = [
   ["Ein Zitat von Kafka", "Ankommen"],
   ["„kafkaesk“: Wiederholung · Begriffs-Sprint · nervig oder kafkaesk?", "Vorwissen"],
-  ["„Vor dem Gesetz“ lesen: Worum geht es?", "Informieren"],
-  ["Handlungsschritte ordnen · Symbole deuten", "Verarbeiten"],
-  ["Deutung · Transfer* · Zielcheck", "Auswerten"],
+  ["„Vor dem Gesetz“ lesen · Einleitungssatz mit Hypothese", "Informieren"],
+  ["Symbole deuten", "Verarbeiten"],
+  ["Hypothese prüfen · Zielcheck", "Auswerten"],
 ];
 
-// Vorwissen: „kafkaesk“
+// Vorwissen: „kafkaesk“ mündlich wiederholen (Begriffe der Mentorin, AB vom 9.11.)
 const VORWISSEN = [
   ["Was bedeutet „kafkaesk“?", "Erklärt das Wort mit eigenen Worten."],
-  ["Wo ist es uns bei Kafka schon begegnet?", "Denkt an den „Brief an den Vater“ und an „Gibs auf!“."],
+  ["Woran erkennt man eine kafkaeske Situation?", "Denkt an das Arbeitsblatt vom Montag."],
 ];
 const KAFKAESK = {
-  duden: "kafkaesk: in der Art der Darstellungen Kafkas; auf unergründliche Weise bedrohlich (nach Duden)",
-  merkmale: [
-    "Ein Einzelner steht einer übermächtigen Instanz gegenüber (Behörde, Gericht, Vater).",
-    "Ihre Regeln bleiben undurchschaubar – niemand erklärt sich.",
-    "Der Einzelne ist ohnmächtig und fügt sich am Ende (Resignation).",
-    "Alles wird nüchtern erzählt – und wirkt doch wie ein Albtraum.",
+  definition: "kafkaesk: Situationen, die von einer rätselhaften, absurden und bürokratischen Übermacht geprägt sind. Der Einzelne ist einer anonymen, undurchschaubaren Gewalt ausgeliefert.",
+  bausteine: [
+    ["labyrinthische Bürokratie", "endlose Wege, unverständliche Regeln, niemand ist zuständig"],
+    ["grundlose Schuld", "beschuldigt oder bestraft, ohne zu erfahren, warum"],
+    ["vergebliche Logik", "je vernünftiger man handelt, desto tiefer verstrickt man sich"],
+    ["unheimliche Normalität", "alle finden das Absurde völlig normal"],
   ],
+  gefuehle: "Ohnmacht und Hilflosigkeit · Angst und Isolation · Verwirrung und Orientierungslosigkeit",
 };
-const KAFKA_MACHT = [
-  ["Vater", "„Brief an den Vater“: übermächtig – Kafka fühlt sich klein und schuldig"],
-  ["Schutzmann", "„Gibs auf!“: Wer helfen sollte, lacht und wendet sich ab"],
-  ["Behörde", "Jurist in einer Versicherungsbehörde in Prag (1908–1922): Bürokratie von innen"],
-];
 // Begriffs-Sprint (Regeln wie beim Sprint): 1 Minute ununterbrochen schreiben, danach lesen 2–3 vor, dann Lösung an die Tafel
 const SPRINT = {
   regeln: [
@@ -90,77 +83,61 @@ const SPRINT = {
   ],
   begriff: "kafkaesk",
 };
-// Nervig oder kafkaesk? – [Situation, N/K/?, Begründung]
+
+// Aufgabe 1: Nervig oder kafkaesk? – [Stichwort, Situation, N/K, Baustein bzw. Begründung]
 const NK_KRITERIUM = [
   ["nervig", "ärgerlich – aber der Grund ist klar, und du kannst etwas tun"],
-  ["kafkaesk", "eine übermächtige Instanz, undurchschaubare Regeln, kein Ausweg – du bist ohnmächtig"],
+  ["kafkaesk", "eine übermächtige Instanz, undurchschaubar, kein Ausweg – du bist ohnmächtig"],
 ];
 const SZENARIEN = [
-  ["Der Bus fährt dir vor der Nase weg. Der nächste kommt in 20 Minuten.", "N", "Pech, aber der Grund ist klar – du kannst warten oder laufen."],
-  ["Keine Kadernominierung. Auf Nachfrage: „Gründe nennen wir nicht.“ Wer zuständig ist, weiß keiner.", "K", "anonyme Macht, keine Gründe, kein Ansprechpartner"],
-  ["Nach einem Fehler lässt dich der Trainer zehn Extrarunden laufen.", "N", "Grund und Regel sind bekannt."],
-  ["Den Startpass gibt es nur mit Bescheinigung – die Bescheinigung nur mit Startpass.", "K", "Teufelskreis der Bürokratie, kein Ausweg"],
-  ["Disqualifiziert nach einer Regel, die niemand findet. Die Einspruchsfrist lief ab, bevor du davon wusstest.", "K", "undurchschaubare Regeln, ohnmächtig ausgeliefert"],
-  ["Hotline: eine Stunde Warteschleife, dann bist du raus. Am nächsten Tag beginnt alles von vorn.", "?", "Grenzfall: nervig – kafkaesk, wenn es nie endet und niemand zuständig ist"],
-  ["„" + "Jemand musste Josef K. verleumdet haben, denn ohne dass er etwas Böses getan hätte, wurde er eines Morgens verhaftet." + "“", "K", "Staatsmacht verhaftet ohne Grund – der erste Satz von Kafkas „Process“"],
+  ["Kursfahrt", "Deine Zulassung zur Kursfahrt fehlt. Das Sekretariat schickt dich zur Oberstufenkoordination, die schickt dich zur Schulleitung, die Schulleitung zurück ins Sekretariat. Am nächsten Morgen hängt eine Liste am Brett: „Nicht zugelassen“. Hinter deinem Namen steht als Grund: „siehe Antrag“.", "K", "labyrinthische Bürokratie", "Du wirst im Kreis geschickt, niemand ist zuständig, der Grund verweist auf sich selbst."],
+  ["Paketbox", "Die Paketbox ist voll. Dein Paket liegt beim Nachbarn, du kannst es heute Abend abholen.", "N", "", "ärgerlich, aber der Grund ist klar, und du kannst etwas tun."],
+  ["Klausur", "Laut Liste hast du eine Klausur verpasst. Du zeigst die benotete Arbeit. Die Antwort: „Wer eine Note hat, muss mitgeschrieben haben. Also hast du zweimal geschrieben – Täuschungsversuch.“", "K", "vergebliche Logik", "Gerade der Beweis macht dich schuldig – je logischer, desto tiefer die Verstrickung."],
+  ["Grauer Mantel", "Vor dem Training wartet ein Mann in einem grauen Mantel: „Ihr Verfahren läuft. Was Ihnen vorgeworfen wird, darf ich nicht sagen. Trainieren Sie ruhig weiter.“ Seitdem verstummen alle, wenn du die Kabine betrittst.", "K", "grundlose Schuld", "Ein Verfahren ohne Vorwurf – du erfährst nie, warum."],
+  ["Extrarunden", "Nach einem Fehlstart lässt dich der Trainer zehn Extrarunden laufen. So steht es in den Teamregeln.", "N", "", "Regel und Grund sind bekannt."],
+  ["Letzte Reihe", "Seit Wochen sitzt ein Fremder in der letzten Reihe deines Kurses und schreibt mit, was du sagst. Als du fragst, wer das ist, wundern sich alle: „Der sitzt da doch immer.“", "K", "unheimliche Normalität", "Niemand außer dir findet das seltsam."],
 ];
 const NK_AUFGABE = {
-  titel: "Nervig oder kafkaesk?",
-  zeit: "3 Min.", form: "allein, im Heft",
+  titel: "Aufgabe 1: Nervig oder kafkaesk?",
+  zeit: "3 Min.", form: "allein, Situationen auf dem Blatt, Antworten ins Heft",
   schritte: [
-    "Lies die Situationen 1–7.",
-    "Entscheide: N (nervig) oder K (kafkaesk).",
-    "Begründe mit einem Merkmal: „… ist kafkaesk / nur nervig, weil …“",
+    "Lies die sechs Situationen.",
+    "Notiere im Heft: Nummer und N (nervig) oder K (kafkaesk).",
+    "Bei K: Schreibe den Baustein dazu.",
   ],
 };
+
+// Informieren: Kontext und Lesen
 const KONTEXT = [
-  "Die Parabel ist ein Teil des Romans „Der Process“ (1914/15 geschrieben).",
-  "Josef K. wird verhaftet, ohne zu erfahren, warum. Ein Gericht, das er nie zu sehen bekommt, verhandelt gegen ihn.",
-  "Im Dom erzählt ihm ein Geistlicher die Geschichte vom Mann vor dem Gesetz. 1915 hat Kafka sie auch einzeln veröffentlicht.",
+  "Die Parabel ist ein Teil des Romans „Der Process“ (1914/15 geschrieben, 1915 einzeln veröffentlicht).",
+  "Im Dom erzählt ein Geistlicher sie Josef K. Der Roman beginnt so:",
 ];
-const LESEAUFTRAG = "Lest mit. Achtet darauf: Was will der Mann – und was hindert ihn?";
-const KERNBOTSCHAFT = "Ein Mann vom Lande wartet sein Leben lang vergeblich auf Einlass in das Gesetz – und erfährt erst im Sterben, dass der Eingang nur für ihn bestimmt war.";
+const LESEAUFTRAG = "Lest mit. Achtet darauf: Wer spricht wie – und wer hat die Macht?";
 
-// Aufgabe 1: Handlungsschritte ordnen (richtige Reihenfolge; angezeigt wird gemischt nach REIHE_GEMISCHT)
-const SCHRITTE = [
-  ["Ein Mann vom Lande bittet den Türhüter um Eintritt in das Gesetz.", "Zu diesem Türhüter kommt ein Mann vom Lande und bittet"],
-  ["Der Türhüter verweigert den Eintritt: „jetzt aber nicht“.", "jetzt aber nicht"],
-  ["Der Türhüter warnt vor seiner Macht und vor noch mächtigeren Türhütern.", "Ich bin mächtig"],
-  ["Der Mann wartet jahrelang auf einem Schemel und versucht, den Türhüter zu bestechen.", "Der Türhüter gibt ihm einen Schemel und lässt ihn seitwärts von der Tür sich niedersetzen"],
-  ["Kurz vor seinem Tod fragt er, warum niemand sonst Einlass verlangt hat.", "wieso kommt es"],
-  ["Der Türhüter antwortet, der Eingang sei nur für ihn bestimmt gewesen, und schließt ihn.", "Hier konnte niemand sonst Einlass erhalten, denn"],
-];
-const REIHE_GEMISCHT = [3, 5, 0, 2, 4, 1]; // Buchstaben A–F in dieser Reihenfolge
-const AUFGABE1 = {
-  titel: "Aufgabe 1: Handlungsschritte ordnen",
-  zeit: "3 Min.", form: "allein, auf dem Arbeitsblatt",
-  schritte: [
-    "Lies die sechs Handlungsschritte.",
-    "Nummeriere sie in der richtigen Reihenfolge (1–6).",
-    "Notiere zu jedem Schritt die Zeile im Text.",
-  ],
+// Aufgabe 2: Einleitungssatz (TATT) mit Deutungshypothese – gemeinsam
+const TATT = {
+  titel: "Aufgabe 2: Einleitungssatz mit Deutungshypothese",
+  zeit: "3 Min.", form: "gemeinsam, mitschreiben auf dem Arbeitsblatt",
+  bausteine: "Textart · Autor · Titel · Entstehungszeit · Thema + Deutungshypothese",
+  geruest: "In der Parabel „…“ von … (…) geht es um … . Es lässt sich vermuten, dass …",
+  satz: "In der Parabel „Vor dem Gesetz“ von Franz Kafka (1915) geht es um einen Mann vom Lande, der sein Leben lang vergeblich um Einlass in das Gesetz bittet.",
+  hypothese: "Es lässt sich vermuten, dass die Kommunikation scheitert, weil ein asymmetrisches (komplementäres) Gespräch stattfindet: Der Türhüter verfügt über Macht und Wissen, der Mann bleibt ohnmächtig.",
 };
 
-// Aufgabe 2: Symbole deuten – [Bildelement, Achte auf (Wort im Text), Zitat für die Zeile, Sachebene (Lösung), optional]
+// Aufgabe 3: Symbole deuten – [Bildelement, Zitat für die Zeile, Sachebene (Lösung)]
 const SYMBOLE = [
-  ["das offene Tor", "„offensteht wie immer“", "Da das Tor zum Gesetz offensteht", "Der Zugang scheint möglich, das Ziel ist sichtbar – und bleibt doch unerreichbar: Hoffnung und Verbot zugleich.", false],
-  ["der Türhüter", "„nur der unterste Türhüter“", "Merke aber: Ich bin mächtig", "Eine Autorität (Beamter, Behörde, Staat), die den Zugang verwaltet. Ihre Macht kommt aus einer unsichtbaren Hierarchie – Gründe nennt sie nie.", false],
-  ["das Gesetz", "„jedem und immer zugänglich“", "das Gesetz soll doch jedem", "Recht und Gerechtigkeit – offen gedeutet auch Wahrheit, Sinn des Lebens oder Gott: das, wonach jeder Mensch strebt.", false],
-  ["der Mann vom Lande", "„vom Lande“", "kommt ein Mann vom Lande", "Ein einfacher Mensch, der die Regeln der Institution nicht kennt – der Einzelne, jeder von uns.", false],
-  ["das Warten auf dem Schemel", "„Tage und Jahre“", "Dort sitzt er Tage und Jahre", "Das Leben vergeht mit Warten. Er gehorcht, statt zu handeln – Ohnmacht wird zur Resignation.", false],
-  ["die Bestechung", "„nur …, damit du nicht glaubst, etwas versäumt zu haben“", "Ich nehme es nur an", "Alle Mittel sind wirkungslos; die Macht lässt sich nicht beeinflussen. Sie nimmt alles – und gibt nur den Schein von Hoffnung.", false],
-  ["die Flöhe im Pelzkragen", "„bittet auch die Flöhe“", "bittet er auch die Flöhe", "Erniedrigung und Verlust der Würde: Er sucht Hilfe beim Kleinsten und verliert das eigentliche Ziel aus dem Blick.", true],
-  ["der Glanz aus der Tür", "„unverlöschlich“, „jetzt im Dunkel“", "Wohl aber erkennt er jetzt", "Wahrheit, Erkenntnis, Hoffnung – erst im Sterben sichtbar, zu spät.", true],
-  ["das Schließen des Eingangs", "„nur für dich bestimmt“", "Hier konnte niemand sonst", "Der Weg war ganz persönlich; mit seinem Leben ist die Chance vorbei. Paradox: Er selbst hat sie durch sein Warten verspielt.", true],
+  ["das offene Tor", "Da das Tor zum Gesetz offensteht", "Der Zugang scheint möglich, das Ziel ist sichtbar – und bleibt doch unerreichbar: Hoffnung und Verbot zugleich."],
+  ["der Türhüter", "Merke aber: Ich bin mächtig", "Eine Autorität (Beamter, Behörde, Staat), die den Zugang verwaltet. Ihre Macht kommt aus einer unsichtbaren Hierarchie – Gründe nennt sie nie."],
+  ["das Gesetz", "das Gesetz soll doch jedem", "Recht und Gerechtigkeit – offen gedeutet auch Wahrheit, Sinn des Lebens oder Gott: das, wonach jeder Mensch strebt."],
+  ["das Schließen des Eingangs", "Hier konnte niemand sonst", "Der Weg war ganz persönlich; mit seinem Leben ist die Chance vorbei. Er hat sie durch sein Warten selbst verspielt."],
 ];
-const AUFGABE2 = {
-  titel: "Aufgabe 2: Symbole deuten",
-  zeit: "8 Min.", form: "allein, auf dem Arbeitsblatt",
+const AUFGABE3 = {
+  titel: "Aufgabe 3: Symbole deuten",
+  zeit: "6 Min.", form: "allein, auf dem Arbeitsblatt",
   schritte: [
     "Suche die Stelle im Text und notiere die Zeile.",
-    "Achte auf die angegebenen Wörter.",
-    "Deute in Stichworten: Wofür steht das Bildelement?",
-    "Fertig? Bearbeite die Zeilen mit Stern (*).",
+    "Deute: Wofür steht das Bildelement?",
+    "Begründe mit einem Wort aus dem Text.",
   ],
 };
 // Ich mache vor: das offene Tor (lautes Denken in drei Schritten)
@@ -170,31 +147,31 @@ const VORMACHEN = [
   ["3. Wofür steht es?", "Der Zugang scheint möglich, das Ziel ist sichtbar – und bleibt doch unerreichbar: Hoffnung und Verbot zugleich."],
 ];
 
-// Deutung: Ohnmacht von außen und von innen; zurück zum Zitat
-const DEUTUNG = {
-  frage: "Warum kommt der Mann nicht hinein?",
-  aussen: "Von außen: Der Türhüter verbietet – hinter ihm eine unsichtbare Hierarchie von Mächtigeren.",
-  innen: "Von innen: Verboten war es nur „jetzt“. Er hätte es versuchen können – er wartet lieber und fügt sich.",
-  zitat: "„Mich brechen alle Hindernisse.“ – Kafkas Satz passt zum Mann vom Lande: Ohnmacht wird zur Resignation.",
-};
-// Transfer* (mündlich)
-const TRANSFER = {
-  titel: "Transfer *",
-  fragen: [
-    "Wo steht ihr vor einem „Tor“ mit einem „Türhüter“? (Kader, Nominierung, Behörde, Schule …)",
-    "Was würdet ihr anders machen als der Mann vom Lande?",
+// Aufgabe 4: Hypothese prüfen – Belege für die Asymmetrie [Ebene, Beleg, Zitat für die Zeile, Erklärung]
+const HYPOTHESE = {
+  titel: "Aufgabe 4: Stimmt unsere Hypothese?",
+  zeit: "1 Min.", form: "allein suchen, dann gemeinsam",
+  schritte: [
+    "Suche einen Beleg dafür, dass das Gespräch asymmetrisch ist.",
+    "Notiere ihn mit Zeile (vgl. Z. …).",
   ],
+  belege: [
+    ["Machtworte", "„Merke aber: Ich bin mächtig.“", "Merke aber: Ich bin mächtig", "Der Türhüter bestimmt, der Mann bittet."],
+    ["Raum und Körper", "„… der Größenunterschied hat sich sehr zuungunsten des Mannes verändert.“", "Größenunterschied hat sich sehr", "Die Asymmetrie wird zum Bild: oben und unten."],
+    ["Stimme", "Der Mann „fragt dann, ob er also später werde eintreten dürfen“.", "fragt dann, ob er also", "Der Türhüter spricht in wörtlicher Rede, der Mann meist nur indirekt – eine eigene Stimme bekommt er erst vor dem Tod."],
+  ],
+  fazit: "Die Hypothese stimmt: Das Gespräch ist komplementär (asymmetrisch). Der Mann nimmt die untere Rolle an – „Mich brechen alle Hindernisse.“",
 };
+
 // Zielcheck (im Heft)
 const ZIELCHECK = {
   auftrag: "Erkläre in 2–3 Sätzen, warum „Vor dem Gesetz“ kafkaesk ist. Beziehe dich auf ein Symbol mit Zeilenangabe.",
-  geruest: "Der / Das … (Z. …) steht für … . Das ist kafkaesk, weil …",
-  kriterien: ["Symbol mit Zeile", "Deutung auf der Sachebene", "ein Merkmal von „kafkaesk“ (übermächtig, undurchschaubar, Ohnmacht, Resignation)"],
+  geruest: "Der / Das … (vgl. Z. …) steht für … . Das ist kafkaesk, weil …",
+  kriterien: ["Symbol mit Zeile", "Deutung auf der Sachebene", "ein Baustein oder Gefühl von „kafkaesk“"],
 };
-ZIELCHECK.muster = "Der Türhüter (" + "Z. ?" + ") steht für eine staatliche Autorität, die den Zugang zum Recht verwaltet. Das ist kafkaesk, weil er keinen Grund nennt („jetzt aber nicht“) und hinter ihm eine unsichtbare Hierarchie steht: Der Mann ist dieser Macht ohnmächtig ausgeliefert und wartet sein Leben lang.";
-ZIELCHECK.muster = ZIELCHECK.muster.replace("Z. ?", zeile("Vor dem Gesetz steht ein Türhüter"));
+ZIELCHECK.muster = "Der Türhüter (vgl. " + zeile("Vor dem Gesetz steht ein Türhüter") + ") steht für eine staatliche Autorität, die den Zugang zum Recht verwaltet. Das ist kafkaesk, weil er keinen Grund nennt („jetzt aber nicht“, vgl. " + zeile("jetzt aber nicht") + ") und hinter ihm immer mächtigere Türhüter stehen (labyrinthische Bürokratie). Der Mann ist dieser Macht ohnmächtig ausgeliefert und wartet sein Leben lang.";
 
 module.exports = {
-  TITEL, AUTOR, TEXT, TEXT_HINWEIS, ZEILEN, zeile, ZITAT, PROCESS_SATZ, LERNZIELE, VERLAUF, VORWISSEN, KAFKAESK, KAFKA_MACHT,
-  SPRINT, NK_KRITERIUM, SZENARIEN, NK_AUFGABE, KONTEXT, LESEAUFTRAG, KERNBOTSCHAFT, SCHRITTE, REIHE_GEMISCHT, AUFGABE1, SYMBOLE, AUFGABE2, VORMACHEN, DEUTUNG, TRANSFER, ZIELCHECK,
+  TITEL, AUTOR, TEXT, TEXT_HINWEIS, ZEILEN, zeile, ZITAT, PROCESS_SATZ, LERNZIELE, VERLAUF, VORWISSEN, KAFKAESK, SPRINT,
+  NK_KRITERIUM, SZENARIEN, NK_AUFGABE, KONTEXT, LESEAUFTRAG, TATT, SYMBOLE, AUFGABE3, VORMACHEN, HYPOTHESE, ZIELCHECK,
 };

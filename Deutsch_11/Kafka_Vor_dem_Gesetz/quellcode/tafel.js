@@ -39,41 +39,41 @@ const TAFEL_SACH = [
   "Zugang scheint möglich – bleibt unerreichbar",
   "Autorität / Behörde; Macht durch unsichtbare Hierarchie",
   "Recht, Gerechtigkeit (offen: Wahrheit, Sinn, Gott, Vater)",
-  "einfacher Mensch, kennt die Regeln nicht – jeder",
-  "Leben vergeht; Gehorsam statt Handeln",
-  "Macht ist nicht beeinflussbar, Schein von Hoffnung",
-  "Erniedrigung, Ziel aus dem Blick",
-  "Wahrheit / Hoffnung – zu spät erkannt",
-  "die Chance war persönlich – vertan",
+  "die Chance war persönlich – durch Warten vertan",
 ];
-const bW = [3700, 1000, W - 4700];
+const bW = [3700, 1300, W - 5000];
 const board = table(bW, [
   row([bc([
     p(c("Franz Kafka: „Vor dem Gesetz“ – eine kafkaeske Parabel", { font: "Cambria", size: 30, bold: true }), { after: 20 }),
-    p(c("Seitentafel: Ziel „Ich kann die Symbole der Parabel deuten und erklären, warum sie kafkaesk ist.“ · Ablauf: Zitat – kafkaesk – Lesen – Handlungsschritte – Symbole – Deutung – Transfer* – Zielcheck", { size: 17, color: DIM, italics: true }), { after: 0 }),
+    p(c("Seitentafel: Ziele „Ich kann die zentralen Symbole der Parabel deuten.“ „Ich kann erklären, warum die Parabel kafkaesk ist.“ · Ablauf: Zitat – kafkaesk (Sprint, nervig oder kafkaesk?) – Lesen – Einleitungssatz – Symbole – Hypothese prüfen – Zielcheck", { size: 17, color: DIM, italics: true }), { after: 0 }),
   ], { w: W, span: 3, borders: { top: none, bottom: line, left: none, right: none } })]),
   row([bc([
     p([c("① kafkaesk", { bold: true, color: YEL, size: 22 }), c("   Zitat: „Mich brechen alle Hindernisse.“ → Ohnmacht · Resignation", { size: 19 })], { after: 30 }),
-    p([c("Antworten der Klasse → ", { bold: true }), c("übermächtige Instanz · undurchschaubare Regeln · Ohnmacht → man fügt sich · nüchtern erzählt, wirkt wie ein Albtraum")]),
-    p([c("Kafka ohnmächtig vor: ", { bold: true }), c("dem Vater (Brief) · dem Schutzmann („Gibs auf!“) · Behörde und Gericht („Der Process“)")], { after: 0 }),
-  ], { w: W, span: 3 })], 1100),
+    p([c("Bausteine: ", { bold: true }), c(D.KAFKAESK.bausteine.map(([b]) => b).join(" · "))]),
+    p([c("Gefühle: ", { bold: true }), c(D.KAFKAESK.gefuehle)]),
+    p([c("nervig ", { bold: true }), c("= Grund klar, ich kann etwas tun   ·   "), c("kafkaesk ", { bold: true, color: APP }), c("= übermächtig, undurchschaubar, kein Ausweg")], { after: 0 }),
+  ], { w: W, span: 3 })], 1300),
+  row([bc([
+    p(c("② Einleitungssatz mit Hypothese", { bold: true, color: YEL, size: 22 }), { after: 30 }),
+    p(c(D.TATT.satz + " " + D.TATT.hypothese, { size: 19, italics: true }), { after: 0 }),
+  ], { w: W, span: 3 })], 1000),
   row([
-    bc(p(c("② Bildebene", { bold: true, color: YEL })), { w: bW[0], fill: BOARD2 }),
-    bc(p(c("Z.", { bold: true, color: YEL })), { w: bW[1], fill: BOARD2 }),
+    bc(p(c("③ Bildebene", { bold: true, color: YEL })), { w: bW[0], fill: BOARD2 }),
+    bc(p(c("vgl. Z.", { bold: true, color: YEL })), { w: bW[1], fill: BOARD2 }),
     bc(p(c("Sachebene", { bold: true, color: YEL })), { w: bW[2], fill: BOARD2 }),
   ]),
-  ...D.SYMBOLE.map(([b, , anker, , stern], i) => row([
-    bc(p(c(b + (stern ? " *" : ""), { bold: true, color: stern ? DIM : APP, size: 19 }), { after: 0 }), { w: bW[0], m: 30 }),
+  ...D.SYMBOLE.map(([b, anker], i) => row([
+    bc(p(c(b, { bold: true, color: APP, size: 19 }), { after: 0 }), { w: bW[0], m: 30 }),
     bc(p(c(D.zeile(anker).replace("Z. ", ""), { size: 18 }), { after: 0 }), { w: bW[1], m: 30 }),
     bc(p(c(TAFEL_SACH[i], { size: 19 }), { after: 0 }), { w: bW[2], m: 30 }),
   ])),
   row([bc([
-    p([c("③ Warum kommt er nicht hinein?  ", { bold: true, color: YEL, size: 22 }), c("von außen: Türhüter + Hierarchie  ·  von innen: nur „jetzt“ verboten – er wartet und fügt sich", { size: 19 })], { after: 20 }),
-    p(c("→ Ohnmacht wird zur Resignation: „Mich brechen alle Hindernisse.“", { size: 19, italics: true }), { after: 0 }),
+    p([c("④ Hypothese geprüft:  ", { bold: true, color: YEL, size: 22 }), c(D.HYPOTHESE.belege.map(([e, , anker]) => e + " (vgl. " + D.zeile(anker) + ")").join(" · "), { size: 19 })], { after: 20 }),
+    p(c("→ komplementär (asymmetrisch): Der Mann nimmt die untere Rolle an – „Mich brechen alle Hindernisse.“", { size: 19, italics: true }), { after: 0 }),
   ], { w: W, span: 3, fill: BOARD2, borders: { top: line, bottom: none, left: none, right: none } })], 650),
 ]);
 const page1 = [
-  p([t("TAFELBILD IM ENDSTAND · ", { size: 17, bold: true, color: MUTED }), t("① im Ankommen und Vorwissen · ② bei der Besprechung von Aufgabe 2 (erste Zeile beim Vormachen) · ③ in der Deutung", { size: 17, color: MUTED })], { after: 60 }),
+  p([t("TAFELBILD IM ENDSTAND · ", { size: 17, bold: true, color: MUTED }), t("① Ankommen und Vorwissen (nach dem Sprint) · ② nach dem Lesen · ③ beim Vormachen und in der Besprechung · ④ Hypothese prüfen", { size: 17, color: MUTED })], { after: 60 }),
   board,
 ];
 
@@ -81,23 +81,24 @@ const page1 = [
 const kopfRows = [
   ["Ziel (Ich kann …)", D.LERNZIELE.map(([z]) => z).join(" ")],
   ["Prüfaufgabe", "Zielcheck im Heft: " + D.ZIELCHECK.auftrag],
-  ["Beitrag zur Reihe", "Nach „Gibs auf!“ (Schutzmann als Instanz, die Orientierung verweigert) die zweite Parabel: Der Türhüter ist eine noch mächtigere Instanz. „kafkaesk“ verbindet Kafkas Biografie (Vater, Behörde), den „Process“ und die Parabeln."],
-  ["Mindestziel", "Wiederholung „kafkaesk“, Text gelesen, Handlungsschritte, Symbole Tor, Türhüter, Gesetz gedeutet, Zielcheck. Mit *: Flöhe, Glanz, Schließen des Eingangs; Transfer (sonst Einstieg der nächsten Stunde)."],
-  ["Bezug zur letzten Stunde", "„Gibs auf!“ (5.11.) lief sehr gut, mit gutem Transfer und guter Reflexion. Darauf baut die Stunde auf: Bild- und Sachebene sind sicher, der Schutzmann wird zum Türhüter. Wiederholung von „kafkaesk“ als Brücke."],
+  ["Beitrag zur Reihe", "Zweite Parabel nach „Gibs auf!“: Der Türhüter ist eine noch mächtigere Instanz. Einleitungssatz mit Hypothese und „vgl. Z.“ üben für die Klausur; die Hypothese (asymmetrisches Gespräch) verbindet die Parabel mit Watzlawick."],
+  ["Mindestziel", "Bewusst schlank geplant (Rückmeldung 11.11.: 45 Minuten): kafkaesk wiederholt, Text gelesen, Einleitungssatz, drei Symbole gedeutet, Zielcheck. Bei Zeitnot wird die Hypothese nur an einem Beleg geprüft."],
+  ["Bezug zur letzten Stunde", "„Gibs auf!“ lief sehr gut (guter Transfer, gute Reflexion). Die Mentorin hat am 9.11. „kafkaesk“ mit vier Bausteinen eingeführt – diese Begriffe werden wiederholt; ihre Szenarien (Zug, Amt) werden nicht wiederholt."],
 ];
 const kW = [2800, W - 2800];
 const aW = [900, 2300, 7500, 2338, 2300];
 const ablauf = [
-  ["0–4'", "A: Ankommen", "indirekt (Impuls)", "Folie 1 (Zitat): „Stifte liegen. Lest den Satz still.“ – „" + D.ZITAT.impuls + "“ Nachfrage: „Was ist der Unterschied zwischen ‚Ich breche‘ und ‚Mich brechen‘?“ Stichworte Ohnmacht · Resignation an die Tafel. Gelenk: „Für dieses Gefühl gibt es ein eigenes Wort. Ihr kennt es schon.“", "① Zitat", "Folie 1"],
-  ["4–6'", "Verlauf, Lernziele", "direkt", "Folie 2–3. Ziel und Ablauf an der Seitentafel, Transfer und Symbole mit *.", "Seitentafel", "Folie 2–3"],
-  ["6–13'", "V: Vorwissen aktivieren", "direkt", "Folie 4: „Ihr habt eine Minute. Schreibt Stichworte ins Heft.“ Dann Stichproben (4–6, unterschiedliche Niveaus), Antworten an die Tafel (①). Folie 5: Definition aufdecken, mit der Tafel abgleichen. Folie 6: Kafka und die Macht kurz erzählen; Process-Satz: „Was ist daran kafkaesk?“", "① kafkaesk", "Folie 4–6"],
-  ["13–20'", "I: Informieren", "direkt", "Folie 7: Kontext. Arbeitsblatt austeilen. „Stifte liegen. Ihr lest auf dem Arbeitsblatt mit.“ Lehrkraft liest vor (Modell-Lesen, ca. 4 Min.). Leseauftrag: „" + D.LESEAUFTRAG + "“ Folie 8: „Worum geht es – in einem Satz?“ 2–3 Schüler, dann Kernbotschaft aufdecken.", "–", "Folie 7–8, AB Nr. 1"],
-  ["20–24'", "V: Aufgabe 1", "indirekt (angeleitet)", "Folie 9: „Jetzt arbeitet ihr allein. Die Aufgabe steht auf dem Arbeitsblatt, Nr. 3.“ 3 Min. Folie 10–11: Lösung, „Vergleicht und verbessert mit Grün.“", "–", "Folie 9–11, AB Aufgabe 1"],
-  ["24–26'", "Ich mache vor", "direkt (Modell)", "Folie 12: das offene Tor laut denkend in drei Schritten (Was steht da? → Was fällt auf? → Wofür steht es?). Alle tragen die erste Zeile mit ein. Tafel: erste Zeile in ②.", "② erste Zeile", "Folie 12"],
-  ["26–35'", "V: Aufgabe 2", "indirekt (selbstständig)", "Folie 13: „Jetzt arbeitet ihr allein. Die Tabelle steht auf dem Arbeitsblatt, Aufgabe 2.“ Timer 9 Min. Herumgehen; Hilfe nur als Frage: „Was fällt an dem Wort auf?“ Schnelle: Zeilen mit *.", "–", "Folie 13, AB Aufgabe 2"],
-  ["35–39'", "V: Besprechung", "Unterrichtsgespräch", "Folie 14–16: je erst eine Antwort vom Platz, dann aufdecken; alle verbessern mit Grün. Gesetz ausdrücklich offen deuten (Recht, Wahrheit, Sinn, Gott, Vater). Folie 16 (*) nur bei Zeit, sonst das Schließen mündlich.", "② vervollständigen", "Folie 14–16"],
-  ["39–41'", "A: Deutung (Transfer*)", "Unterrichtsgespräch", "Folie 17: „Warum kommt der Mann nicht hinein?“ Antworten sammeln, dann aufdecken: von außen / von innen; Rückgriff auf das Zitat. Folie 18 (Transfer*) nur, wenn noch mehr als 6 Min. bleiben.", "③", "Folie 17–18"],
-  ["41–45'", "A: Zielcheck", "indirekt, dann Kontrolle", "Folie 19: „Allein, im Heft. 4 Minuten.“ Herumgehen. Folie 20: Musterlösung und Kriterien, mit Grün kontrollieren. Rückblick auf die Lernziele. Nie streichen.", "–", "Folie 19–20"],
+  ["0–3'", "A: Ankommen", "indirekt (Impuls)", "Folie 1 (Zitat): „Stifte liegen. Lest den Satz still.“ – „" + D.ZITAT.impuls + "“ Nachfrage: „Was ist der Unterschied zwischen ‚Ich breche‘ und ‚Mich brechen‘?“ Ohnmacht · Resignation an die Tafel.", "① Zitat", "Folie 1"],
+  ["3–4'", "Verlauf, Lernziele", "direkt", "Folie 2–3. Ziele und Ablauf an der Seitentafel.", "Seitentafel", "Folie 2–3"],
+  ["4–6'", "V: Wiederholung", "Unterrichtsgespräch", "Folie 4: „kafkaesk“ mündlich wiederholen (Stichproben), noch nichts anschreiben.", "–", "Folie 4"],
+  ["6–9'", "V: Begriffs-Sprint", "Einzelarbeit", "Folie 5: „Stift in die Hand. Ihr schreibt eine Minute ohne Pause. Der Stift bleibt auf dem Papier, bis ich ‚Stopp‘ sage.“ Folie 6: Begriff erscheint, Timer 1 Min. „Stopp.“ 2–3 lesen vor. Folie 7: Lösung (vier Bausteine, Gefühle) an die Tafel.", "① Bausteine", "Folie 5–7"],
+  ["9–15'", "V: Nervig oder kafkaesk?", "allein, dann Besprechung", "Szenarien-Blatt austeilen. Folie 8: „Jetzt arbeitet ihr allein. Ihr schreibt nur Nummer, N oder K und den Baustein ins Heft.“ 3 Min. Folie 9–10: erst eine Begründung vom Platz („… ist kafkaesk, weil …“), dann aufdecken, mit Grün verbessern.", "① nervig / kafkaesk", "Folie 8–10, Szenarien-Blatt"],
+  ["15–21'", "I: Kontext, Lesen", "direkt", "Folie 11: Kontext; Process-Satz: „Welcher Baustein ist das?“ (grundlose Schuld). Arbeitsblatt austeilen. „Stifte liegen. Ihr lest auf dem Arbeitsblatt mit.“ Lehrkraft liest vor (Modell-Lesen, ca. 4 Min.). Leseauftrag: „" + D.LESEAUFTRAG + "“", "–", "Folie 11, AB Nr. 1"],
+  ["21–24'", "I: Einleitungssatz", "gemeinsam (Ich – Wir)", "Folie 12: Lehrkraft beginnt den Satz, Klasse ergänzt das Thema. Impuls: „Wer hat im Gespräch die Macht? Wie nennen wir so eine Beziehung?“ → asymmetrisch / komplementär. Alle schreiben auf dem AB mit (Aufgabe 2). Folie 13 nur bei Bedarf.", "②", "Folie 12–13, AB Aufgabe 2"],
+  ["24–31'", "V: Symbole", "Modell, dann allein", "Folie 14: das offene Tor laut denkend vormachen, alle tragen mit ein. Folie 15: „Jetzt arbeitet ihr allein. Die Tabelle steht auf dem Arbeitsblatt, Aufgabe 3.“ Timer 6 Min. Hilfe nur als Frage: „Was fällt an dem Wort auf?“", "③ erste Zeile", "Folie 14–15, AB Aufgabe 3"],
+  ["31–34'", "V: Besprechung", "Unterrichtsgespräch", "Folie 16: je erst eine Antwort vom Platz, dann aufdecken. „Vergleicht und verbessert mit Grün.“ Gesetz offen deuten.", "③", "Folie 16"],
+  ["34–38'", "A: Hypothese prüfen", "allein, dann gemeinsam", "Folie 17: „Sucht eine Minute allein einen Beleg für die Asymmetrie.“ Stichproben, Folie 18: Belege aufdecken; Rückgriff auf das Zitat vom Anfang.", "④", "Folie 17–18, AB Aufgabe 4"],
+  ["38–45'", "A: Zielcheck", "allein, dann Selbstkontrolle", "Folie 19: „Allein, im Heft. 4 Minuten.“ Herumgehen. Folie 20: Musterlösung und Kriterien, mit Grün kontrollieren. Rückblick auf die Lernziele. Nie streichen.", "–", "Folie 19–20"],
 ];
 const page2 = [
   kicker("TAFELSKRIPT · DEUTSCH 11 · DO 12.11. · 45 MIN. · BEAMER · PLANUNGSMODELL AVIVA", true),
@@ -117,50 +118,55 @@ const page2 = [
 ];
 
 // ================= Seite 3: Lösungen =================
-const lW = [3000, 1100, W - 4100];
+const lW = [3000, 1300, W - 4300];
 const page3 = [
   kicker("TAFELSKRIPT · LÖSUNGEN UND ERWARTUNGEN", true),
   h1("Lösungen"),
-  h2("Zitat (Folie 1) und Vorwissen (Folie 4–6)"),
-  p(t(D.ZITAT.erwartung + " – „kafkaesk“: " + D.KAFKAESK.merkmale.join(" ") + " Process-Satz: Josef K. hat nichts getan und erfährt keinen Grund – die Staatsmacht ist übermächtig und undurchschaubar.", { size: 18 }), { line: 270 }),
-  h2("Kernbotschaft (Folie 8) und Aufgabe 1"),
-  p(t(D.KERNBOTSCHAFT, { size: 18, italics: true }), { line: 270 }),
-  p(t("Reihenfolge: " + D.SCHRITTE.map((s, i) => (i + 1) + " = " + String.fromCharCode(65 + D.REIHE_GEMISCHT.indexOf(i)) + " (" + D.zeile(s[1]) + ")").join(" · ") + ". Zeilen ± 1 gelten als richtig.", { size: 18 }), { line: 270 }),
-  h2("Aufgabe 2: Symbole"),
+  h2("Zitat (Folie 1) und „kafkaesk“ (Folie 4–7)"),
+  p(t(D.ZITAT.erwartung + " – " + D.KAFKAESK.definition + " Bausteine: " + D.KAFKAESK.bausteine.map(([b, e]) => b + " (" + e + ")").join("; ") + ".", { size: 18 }), { line: 270 }),
+  h2("Aufgabe 1: Nervig oder kafkaesk?"),
+  table([3000, W - 3000], D.SZENARIEN.map(([stich, , nk, baustein, grund], i) => row([
+    cell(p([t((i + 1) + " " + stich + ": ", { bold: true, size: 18 }), t(nk === "K" ? "kafkaesk" : "nervig", { bold: true, size: 18, color: nk === "K" ? RED : GREEN })], { after: 0 }), { w: 3000, fill: LIGHT }),
+    cell(p(t((baustein ? baustein + " – " : "") + grund, { size: 18 }), { after: 0 }), { w: W - 3000 }),
+  ]))),
+  h2("Aufgabe 2: Einleitungssatz"),
+  p(t(D.TATT.satz + " " + D.TATT.hypothese, { size: 18, italics: true }), { line: 270 }),
+  h2("Aufgabe 3: Symbole"),
   table(lW, [
     row([hdr("Bildebene", lW[0]), hdr("Zeile", lW[1]), hdr("Sachebene (Erwartung)", lW[2])]),
-    ...D.SYMBOLE.map(([b, achte, anker, sach, stern]) => row([
-      cell([p(t(b + (stern ? " *" : ""), { bold: true, size: 18, color: RED }), { after: 0 }), p(t(achte, { size: 16, italics: true, color: MUTED }), { after: 0 })], { w: lW[0], fill: LIGHT }),
-      cell(p(t(D.zeile(anker), { size: 18 }), { after: 0 }), { w: lW[1] }),
+    ...D.SYMBOLE.map(([b, anker, sach]) => row([
+      cell(p(t(b, { bold: true, size: 18, color: RED }), { after: 0 }), { w: lW[0], fill: LIGHT }),
+      cell(p(t("vgl. " + D.zeile(anker), { size: 18 }), { after: 0 }), { w: lW[1] }),
       cell(p(t(sach, { size: 18 }), { after: 0 }), { w: lW[2] }),
     ])),
   ]),
-  h2("Deutung (Folie 17) und Zielcheck"),
-  p(t(D.DEUTUNG.aussen + " " + D.DEUTUNG.innen + " " + D.DEUTUNG.zitat, { size: 18 }), { line: 270 }),
+  h2("Aufgabe 4 und Zielcheck"),
+  p(t(D.HYPOTHESE.belege.map(([e, b, anker, erkl]) => e + ": " + b + " (vgl. " + D.zeile(anker) + ") – " + erkl).join(" · ") + " " + D.HYPOTHESE.fazit, { size: 18 }), { line: 270 }),
   p([t("Musterlösung Zielcheck: ", { bold: true, size: 18, color: GREEN }), t(D.ZIELCHECK.muster, { size: 18 }), t("  Kriterien: " + D.ZIELCHECK.kriterien.join(" · ") + ".", { size: 18, color: MUTED })], { line: 270 }),
 ];
 
 // ================= Seite 4: Umsetzung der Erkenntnisse =================
 const rW = [3000, W - 3000];
 const refl = [
-  ["AVIVA", "Alle fünf Phasen; das Auswerten (Zielcheck) wird nie gestrichen, der Stern trifft nur drei Symbole und den Transfer. Ankommen mit einem Zitat als Impuls (Wunsch der Lehrkraft statt Bildimpuls): Es führt direkt zu Ohnmacht und Resignation, und in der Deutung wird darauf zurückgegriffen – der Bogen schließt sich."],
-  ["Direkte Instruktion", "Ziel und Ablauf zu Beginn (Seitentafel, Folie). Vorwissen aktiv abgeprüft (erst allein, dann Stichproben, an die Tafel) – hat sich bewährt. Informieren kurz: Kontext, Modell-Lesen durch die Lehrkraft, Kernbotschaft vor der Analyse. Ich – Wir – Ihr: Das Tor wird laut denkend vorgemacht, die Klasse trägt mit ein, dann deutet sie allein. Rückmeldung: Lösungen nacheinander aufdecken, mit Grün verbessern; Zielcheck mit Kriterien."],
-  ["Muster der Mentorin und Rückmeldungen", "Kontext zuerst, ein Schwerpunkt (Symbole), Kernbotschaft vor der Analyse, Leitwörter zu jedem Bildelement („achte auf …“), Transfer (*). Aufgaben ohne Dopplungen: Handlungsschritte ordnen (Inhalt) → Symbole deuten (Analyse) → Zielcheck (Urteil „kafkaesk“). Erarbeitung allein, keine Partnerarbeit. 27 pt mit Verlauf und Lernzielen. Satzgerüst im Zielcheck übt nebenbei das Komma vor „weil“. Keine Hausaufgabe."],
-  ["Differenzierung", "Leitwörter in der Tabelle als eingebaute Hilfe; Mindestziel sechs Bildelemente, Schnelle bearbeiten die drei mit Stern; Hilfe beim Herumgehen nur als Frage („Was fällt an dem Wort auf?“); Satzgerüst für den Zielcheck."],
-  ["Beobachtungsschwerpunkte", "Kommt „kafkaesk“ aus der Klasse oder muss es neu erklärt werden? Reichen 4 Minuten für das Vorlesen und 9 Minuten für die Tabelle? Wird die Deutung des Gesetzes offen gehalten und am Text begründet? Erkennen die Schüler die Selbstbeschränkung des Mannes („jetzt aber nicht“)? Wie viele nennen im Zielcheck ein Merkmal von „kafkaesk“ (→ Wiederholung nächste Stunde)?"],
+  ["AVIVA", "Alle fünf Phasen; das Auswerten (Hypothese prüfen, Zielcheck) wird nie gestrichen. Ankommen mit einem Zitat als Impuls (Wunsch der Lehrkraft): Es führt zu Ohnmacht und Resignation, und beim Prüfen der Hypothese wird darauf zurückgegriffen. Vorwissen mit drei Zugängen zum selben Begriff: mündlich wiederholen, Begriffs-Sprint (alle schreiben), Anwendung auf Szenarien."],
+  ["Direkte Instruktion", "Ziel und Ablauf zu Beginn. Vorwissen aktiv abgeprüft. Informieren kurz: Kontext, Modell-Lesen, Einleitungssatz gemeinsam (Lehrkraft beginnt, Klasse ergänzt). Ich – Wir – Ihr bei den Symbolen: Das Tor wird laut denkend vorgemacht, die Klasse deutet drei weitere allein. Rückmeldung: Lösungen aufdecken, mit Grün verbessern; Zielcheck mit Kriterien."],
+  ["Rückmeldungen umgesetzt", "45 Minuten realistisch: nur vier Symbole statt neun, keine Handlungsschritte, kein Transfer, kein Stern. Szenarien eindeutig und fast unheimlich, nah an der Erfahrung der Schüler (Schule), nur zwei aus dem Sport, keine Wiederholung der Szenarien der Mentorin. Begriffe der Mentorin („kafkaesk“-Bausteine). Muster der Mentorin: Kontext zuerst, Modellsatz gemeinsam, ein Schwerpunkt. Klausurbezug: Einleitungssatz mit Hypothese, „vgl. Z.“. Erarbeitung allein, 27 pt, keine Hausaufgabe."],
+  ["Differenzierung", "Sprint ohne Richtig/Falsch – jeder kann etwas schreiben. Kriterium nervig/kafkaesk auf der Folie. Gerüst für Einleitungssatz und Zielcheck. Hilfe beim Herumgehen nur als Frage."],
+  ["Beobachtungsschwerpunkte", "Wie viel wissen die Schüler nach dem Sprint noch von „kafkaesk“? Erkennen sie die Bausteine in den Szenarien sicher? Kommt die Klasse selbst auf „asymmetrisch“? Reichen 6 Minuten für drei Symbole? Wie viele nennen im Zielcheck einen Baustein (→ Wiederholung nächste Stunde)?"],
 ];
 const page4 = [
   kicker("TAFELSKRIPT · HEFT, HINWEISE, REFLEXION", true),
   h2("So sehen Arbeitsblatt und Heft am Ende aus"),
-  p(t("Arbeitsblatt (in den Hefter): Aufgabe 1 nummeriert mit Zeilen, Aufgabe 2 Tabelle ausgefüllt (mindestens Tor, Türhüter, Gesetz, Mann, Warten, Bestechung), mit Grün verbessert. Heft: Stichworte zu „kafkaesk“ (Vorwissen), Zielcheck (2–3 Sätze, mit Grün kontrolliert).", { size: 18 }), { line: 270 }),
-  h2("Hinweise zu Text und Zitat"),
+  p(t("Heft: Sprint-Text, Aufgabe 1 (Nummer, N/K, Baustein, mit Grün verbessert), Zielcheck (2–3 Sätze, mit Grün kontrolliert). Arbeitsblatt (in den Hefter): Einleitungssatz mit Hypothese, Symboltabelle (vier Zeilen), zwei Belege für die Asymmetrie. Szenarien-Blatt einkleben.", { size: 18 }), { line: 270 }),
+  h2("Hinweise zu Text, Zitat und Begriff"),
   box([
     p(t(D.TEXT_HINWEIS, { size: 17 }), { after: 30 }),
-    p(t("Zitat (Folie 1): aus Kafkas Nachlass (Notizen), Wortlaut bitte mit einer Ausgabe abgleichen. Alternative zum Thema Behörden: „Die Fesseln der gequälten Menschheit sind aus Kanzleipapier.“ – nur bei Gustav Janouch („Gespräche mit Kafka“) überliefert, Echtheit umstritten; deshalb nicht als Einstieg gewählt.", { size: 17 }), { after: 0 }),
+    p(t("Zitat (Folie 1): aus Kafkas Nachlass (Notizen), Wortlaut bitte mit einer Ausgabe abgleichen.", { size: 17 }), { after: 30 }),
+    p(t("„Komplementär“ (Watzlawick, 5. Axiom): Die Beziehung beruht auf Unterschiedlichkeit, die Rollen ergänzen sich als oben und unten. „Ergänzend“ heißt nicht harmonisch oder gelungen. Vorschlag: „komplementär (asymmetrisch)“ sagen – vorher mit der Mentorin abstimmen.", { size: 17 }), { after: 0 }),
   ], "FFF8EC"),
   p(t(""), { after: 40 }),
   h1("Umsetzung der Erkenntnisse zur Unterrichtsverbesserung"),
-  table(rW, refl.map(([k, v]) => row([cell(p(t(k, { bold: true, color: NAVY, size: 19 }), { after: 0 }), { w: rW[0], fill: LIGHT }), cell(p(t(v, { size: 19 }), { after: 0, line: 280 }), { w: rW[1] })]))),
+  table(rW, refl.map(([k, v]) => row([cell(p(t(k, { bold: true, color: NAVY, size: 19 }), { after: 0 }), { w: rW[0], fill: LIGHT }), cell(p(t(v, { size: 19 }), { after: 0, line: 270 }), { w: rW[1] })]))),
 ];
 
 const footer = new Footer({ children: [new Paragraph({ alignment: AlignmentType.RIGHT, children: [new TextRun({ font: "Calibri", size: 16, color: MUTED, children: ["Tafelskript · Kafka, „Vor dem Gesetz“ · Seite ", PageNumber.CURRENT] })] })] });

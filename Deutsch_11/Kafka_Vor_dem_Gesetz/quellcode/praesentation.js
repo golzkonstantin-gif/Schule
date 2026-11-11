@@ -61,7 +61,7 @@ function aufgabe(a, notes, extra) {
     txt(s, phase, { x: 0.75, y, w: 3.2, h: 0.95, bold: true, color: RED, valign: "middle" });
     txt(s, inhalt, { x: 4.0, y, w: 8.6, h: 0.95, valign: "middle" });
   });
-  s.addNotes("Ziel und Ablauf stehen auch an der Seitentafel. Was eventuell nicht mehr geschafft wird, hat einen Stern (*): Transfer und die Symbole mit Stern.");
+  s.addNotes("Ziel und Ablauf stehen auch an der Seitentafel. Diesmal ohne Stern: Die Stunde ist bewusst schlank geplant.");
 }
 {
   const s = base("Lernziele");
@@ -69,7 +69,7 @@ function aufgabe(a, notes, extra) {
   s.addNotes("Lernziele vorlesen. Am Ende (Zielcheck) darauf zurückkommen.");
 }
 
-// ===== V: Vorwissen – kafkaesk =====
+// ===== V: Vorwissen – kafkaesk wiederholen, Begriffs-Sprint, Lösung =====
 {
   const s = base("Was wisst ihr noch?", { phase: "VORWISSEN" });
   D.VORWISSEN.forEach(([q, h], i) => {
@@ -77,59 +77,81 @@ function aufgabe(a, notes, extra) {
     rect(s, 0.5, y, 12.3, 2.3, i % 2 ? WHITE : LIGHT, { line: "D5DCEC", lw: 0.75 });
     txt(s, [{ text: q, options: { bold: true, breakLine: true } }, { text: h, options: { color: MUTED, italic: true } }], { x: 0.8, y, w: 11.8, h: 2.3, valign: "middle" });
   });
-  s.addNotes("Ansage: „Ihr habt eine Minute. Schreibt Stichworte ins Heft.“ Dann Stichproben (4–6 Schüler, unterschiedliche Niveaus). Antworten an die Tafel (①). Erwartung: kafkaesk = bedrohlich, ausweglos, undurchschaubar, man ist einer Macht ausgeliefert. Kafka ohnmächtig gegenüber: dem Vater (Brief an den Vater), dem Schutzmann (Gibs auf!) – und den Behörden.");
+  s.addNotes("Mündlich, 2 Minuten: Stichproben (4–5 Schüler, unterschiedliche Niveaus). Noch nichts anschreiben – die Lösung kommt nach dem Sprint an die Tafel. Grundlage: Arbeitsblatt der Mentorin vom 9.11.");
 }
 {
-  const s = base("„kafkaesk“", { phase: "VORWISSEN" });
-  rect(s, 0.5, 1.2, 12.3, 1.2, LIGHT2);
-  txt(s, D.KAFKAESK.duden, { x: 0.8, y: 1.2, w: 11.8, h: 1.2, valign: "middle", bold: true });
-  txt(s, D.KAFKAESK.merkmale.map((m, i) => ({ text: m, options: { bullet: { indent: 24 }, breakLine: i < 3, paraSpaceAfter: 10 } })), { x: 0.7, y: 2.65, w: 12.0, h: 4.6 });
-  s.addNotes("Erst nach den Schülerantworten aufdecken und mit der Tafel abgleichen: Was hatten wir schon, was fehlt? Steht auch auf dem Arbeitsblatt (Nr. 2).");
+  const s = base("Begriffs-Sprint", { time: "1 Min." });
+  txt(s, bullets(D.SPRINT.regeln, { num: true, space: 16 }), { x: 0.6, y: 1.5, w: 12.1, h: 5.0 });
+  s.addNotes("Regeln wie beim Sprint. Ansage: „Stift in die Hand. Ihr schreibt eine Minute ohne Pause. Der Stift bleibt auf dem Papier, bis ich ‚Stopp‘ sage.“ Erst wenn alle bereit sind: weiterklicken – dann erscheint der Begriff, Timer 1 Minute.");
 }
 {
-  const s = base("Kafka und die Macht", { phase: "VORWISSEN" });
-  D.KAFKA_MACHT.forEach(([k, v], i) => {
-    const y = 1.15 + i * 1.32;
-    rect(s, 0.5, y, 12.3, 1.22, i % 2 ? WHITE : LIGHT, { line: "D5DCEC", lw: 0.75 });
-    txt(s, k, { x: 0.75, y, w: 2.6, h: 1.22, bold: true, color: RED, valign: "middle" });
-    txt(s, v, { x: 3.4, y, w: 9.2, h: 1.22, valign: "middle" });
+  const s = pres.addSlide();
+  s.background = { color: NAVY };
+  txt(s, D.SPRINT.begriff, { x: 0, y: 2.2, w: 13.333, h: 2.2, fontFace: HEAD, fontSize: 110, bold: true, color: WHITE, align: "center", valign: "middle" });
+  txt(s, "1 Minute – Stift bleibt auf dem Papier", { x: 0, y: 5.2, w: 13.333, h: 0.8, color: GOLD, align: "center" });
+  s.addNotes("Timer 1 Minute. „Stopp.“ Dann lesen 2–3 Schüler vor (freiwillig oder aufgerufen). Danach die Lösung aufdecken (nächste Folie) und an die Tafel (①).");
+}
+{
+  const s = base("„kafkaesk“ – Lösung", { phase: "VORWISSEN" });
+  D.KAFKAESK.bausteine.forEach(([b, e], i) => {
+    const x = 0.5 + (i % 2) * 6.25, y = 1.2 + Math.floor(i / 2) * 2.15;
+    rect(s, x, y, 6.05, 1.95, i % 3 ? LIGHT : LIGHT2);
+    txt(s, [{ text: b, options: { bold: true, color: RED, breakLine: true } }, { text: e }], { x: x + 0.25, y, w: 5.6, h: 1.95, valign: "middle" });
   });
-  rect(s, 0.5, 5.2, 12.3, 1.9, WHITE, { line: RED, lw: 2.5, r: 0.04 });
-  txt(s, [{ text: "„Der Process“ beginnt so:", options: { bold: true, color: RED, breakLine: true } }, { text: "„" + D.PROCESS_SATZ + "“", options: { italic: true, fontFace: HEAD } }], { x: 0.8, y: 5.25, w: 11.8, h: 1.8, valign: "middle" });
-  s.addNotes("Kurz erzählen, nicht abfragen. Vater und Schutzmann kennt die Klasse; neu ist der Bezug zum Staat: Kafka war Jurist in einer Behörde. Impuls zum Process-Satz: „Was ist daran kafkaesk?“ (Er hat nichts getan, erfährt keinen Grund – die Staatsmacht ist übermächtig und undurchschaubar.) Gelenk: „In diesem Roman steht die Parabel, die wir heute lesen.“");
+  txt(s, [{ text: "Gefühle: ", options: { bold: true } }, { text: D.KAFKAESK.gefuehle }], { x: 0.5, y: 5.65, w: 12.3, h: 1.4, valign: "middle" });
+  s.addNotes("Nach dem Vorlesen aufdecken: Was davon kam im Sprint vor? Die vier Bausteine und die Gefühle kommen an die Tafel (①). Definition (Arbeitsblatt der Mentorin): " + D.KAFKAESK.definition + " Steht auch auf dem Arbeitsblatt (Nr. 2).");
 }
 
-// ===== I: Informieren – Kontext, Lesen, Kernbotschaft =====
-{
-  const s = base("„Vor dem Gesetz“ – Kontext", { phase: "INFORMIEREN" });
-  txt(s, bullets(D.KONTEXT, { space: 14 }), { x: 0.7, y: 1.3, w: 12.0, h: 3.6 });
-  rect(s, 0.5, 5.2, 12.3, 1.6, LIGHT2);
-  txt(s, [{ text: "Leseauftrag: ", options: { bold: true, color: RED } }, { text: D.LESEAUFTRAG }], { x: 0.8, y: 5.2, w: 11.8, h: 1.6, valign: "middle" });
-  s.addNotes("Arbeitsblatt austeilen. Ansage: „Stifte liegen. Ihr lest auf dem Arbeitsblatt mit.“ Die Lehrkraft liest den ganzen Text vor (Modell-Lesen, ca. 4 Min.: ruhig, Pausen an den Absätzen, die Rede des Türhüters deutlich). " + D.TEXT_HINWEIS);
-}
-{
-  const s = base("Worum geht es – in einem Satz?", { phase: "INFORMIEREN" });
-  txt(s, "Was will der Mann – und was hindert ihn?", { x: 0.5, y: 1.3, w: 12.3, h: 0.8, italic: true, color: MUTED });
-  rect(s, 0.5, 3.0, 12.3, 2.6, LIGHT);
-  txt(s, D.KERNBOTSCHAFT, { x: 0.9, y: 3.0, w: 11.5, h: 2.6, valign: "middle", fontFace: HEAD });
-  s.addNotes("Erst die Frage stellen, 2–3 Schüler formulieren lassen (Kernbotschaft vor der Analyse, Muster der Mentorin). Dann den Satz aufdecken (Animation oder erst später einblenden).");
-}
-
-// ===== V: Verarbeiten – Aufgabe 1 =====
-aufgabe(D.AUFGABE1, "Ansage: „Jetzt arbeitet ihr allein. Die Aufgabe steht auf dem Arbeitsblatt, Nr. 3.“ 3 Minuten. Herumgehen. Danach Lösung (nächste Folie), alle verbessern mit Grün.");
+// ===== Aufgabe 1: Nervig oder kafkaesk? =====
+aufgabe(D.NK_AUFGABE, "Szenarien-Blatt austeilen (halbes A4). Ansage: „Jetzt arbeitet ihr allein. Ihr schreibt nur Nummer, N oder K und den Baustein ins Heft.“ 3 Minuten.", (s) => {
+  D.NK_KRITERIUM.forEach(([k, v], i) => {
+    const x = 0.5 + i * 6.25;
+    rect(s, x, 4.55, 6.05, 2.0, i ? "FDECEA" : LIGHT, { line: i ? RED : "D5DCEC", lw: i ? 2 : 0.75 });
+    txt(s, [{ text: k, options: { bold: true, color: i ? RED : NAVY, breakLine: true } }, { text: v }], { x: x + 0.25, y: 4.55, w: 5.6, h: 2.0, valign: "middle" });
+  });
+});
 [0, 3].forEach((k) => {
-  const s = base("Lösung: Handlungsschritte (" + (k / 3 + 1) + ")", { phase: "VERARBEITEN" });
-  D.SCHRITTE.slice(k, k + 3).forEach(([text, anker], j) => {
-    const i = k + j, y = 1.2 + j * 1.95;
-    const buchstabe = String.fromCharCode(65 + D.REIHE_GEMISCHT.indexOf(i));
-    rect(s, 0.5, y, 12.3, 1.8, j % 2 ? WHITE : LIGHT, { line: "D5DCEC", lw: 0.75 });
-    txt(s, (i + 1) + " = " + buchstabe, { x: 0.75, y, w: 1.7, h: 1.8, bold: true, color: GREEN, valign: "middle" });
-    txt(s, [{ text: text }, { text: "  (" + D.zeile(anker) + ")", options: { color: MUTED } }], { x: 2.5, y, w: 10.1, h: 1.8, valign: "middle" });
+  const s = base("Nervig oder kafkaesk? – Lösung" + (k ? " (2)" : " (1)"), { phase: "VORWISSEN" });
+  D.SZENARIEN.slice(k, k + 3).forEach(([stich, , nk, baustein, grund], j) => {
+    const y = 1.2 + j * 1.95;
+    rect(s, 0.5, y, 12.3, 1.8, nk === "K" ? "FDECEA" : LIGHT, { line: "D5DCEC", lw: 0.75 });
+    txt(s, [{ text: (k + j + 1) + "  " + stich, options: { bold: true, breakLine: true } }, { text: nk === "K" ? "kafkaesk" : "nervig", options: { bold: true, color: nk === "K" ? RED : GREEN } }], { x: 0.75, y, w: 3.4, h: 1.8, valign: "middle" });
+    txt(s, [...(baustein ? [{ text: baustein + ": ", options: { bold: true, color: RED } }] : []), { text: grund }], { x: 4.2, y, w: 8.4, h: 1.8, valign: "middle" });
   });
-  s.addNotes("Reihenfolge: " + D.SCHRITTE.map((_, i) => String.fromCharCode(65 + D.REIHE_GEMISCHT.indexOf(i))).join(" – ") + ". Zeilenangaben gelten als richtig, wenn sie ± 1 Zeile stimmen. Alle verbessern mit Grün.");
+  s.addNotes("Erst eine Begründung vom Platz (mündlich, mit Baustein: „… ist kafkaesk, weil …“), dann aufdecken. Verbessern mit Grün.");
 });
 
-// ===== Ich mache vor: das offene Tor =====
+// ===== I: Informieren – Kontext mit Process-Satz, Lesen =====
+{
+  const s = base("„Vor dem Gesetz“ – Kontext", { phase: "INFORMIEREN" });
+  txt(s, bullets(D.KONTEXT, { space: 12 }), { x: 0.7, y: 1.2, w: 12.0, h: 2.0 });
+  rect(s, 0.5, 3.3, 12.3, 1.9, WHITE, { line: RED, lw: 2.5, r: 0.04 });
+  txt(s, "„" + D.PROCESS_SATZ + "“", { x: 0.8, y: 3.3, w: 11.8, h: 1.9, valign: "middle", italic: true, fontFace: HEAD });
+  rect(s, 0.5, 5.45, 12.3, 1.5, LIGHT2);
+  txt(s, [{ text: "Leseauftrag: ", options: { bold: true, color: RED } }, { text: D.LESEAUFTRAG }], { x: 0.8, y: 5.45, w: 11.8, h: 1.5, valign: "middle" });
+  s.addNotes("Impuls zum Process-Satz: „Welcher Baustein ist das?“ (grundlose Schuld). Arbeitsblatt austeilen. Ansage: „Stifte liegen. Ihr lest auf dem Arbeitsblatt mit.“ Die Lehrkraft liest den ganzen Text vor (Modell-Lesen, ca. 4 Min.: ruhig, Pausen an den Absätzen, die Rede des Türhüters deutlich). " + D.TEXT_HINWEIS);
+}
+
+// ===== Aufgabe 2: Einleitungssatz mit Deutungshypothese =====
+{
+  const s = base(D.TATT.titel.replace("Aufgabe 2: ", "Aufgabe 2: "), { time: D.TATT.zeit });
+  txt(s, D.TATT.form, { x: 0.5, y: 1.15, w: 12.3, h: 0.5, italic: true, color: MUTED });
+  rect(s, 0.5, 1.8, 12.3, 1.1, LIGHT);
+  txt(s, [{ text: "Bausteine: ", options: { bold: true } }, { text: D.TATT.bausteine }], { x: 0.8, y: 1.8, w: 11.8, h: 1.1, valign: "middle" });
+  txt(s, [{ text: "Gerüst: ", options: { bold: true, color: BLUE } }, { text: D.TATT.geruest, options: { italic: true } }], { x: 0.8, y: 3.2, w: 11.8, h: 1.6 });
+  txt(s, "Tipp: Wie verläuft das Gespräch zwischen Türhüter und Mann?", { x: 0.8, y: 5.2, w: 11.8, h: 1.0, color: MUTED });
+  s.addNotes("Gemeinsam, Ich – Wir: Die Lehrkraft beginnt („In der Parabel ‚Vor dem Gesetz‘ von Franz Kafka (1915) geht es um …“), die Klasse ergänzt das Thema. Dann Impuls zur Hypothese: „Wer hat im Gespräch die Macht? Wie nennen wir so eine Beziehung?“ → asymmetrisch / komplementär (Watzlawick). Satz an die Tafel (②), alle schreiben auf dem Arbeitsblatt mit. Hinweis Klausur: Eine Hypothese ist vorläufig – „Es lässt sich vermuten, dass …“.");
+}
+{
+  const s = base("Einleitungssatz: Vorschlag", { phase: "INFORMIEREN" });
+  rect(s, 0.5, 1.2, 12.3, 2.4, LIGHT);
+  txt(s, D.TATT.satz, { x: 0.8, y: 1.2, w: 11.8, h: 2.4, valign: "middle", fontFace: HEAD });
+  rect(s, 0.5, 3.85, 12.3, 3.1, WHITE, { line: RED, lw: 2.5, r: 0.04 });
+  txt(s, D.TATT.hypothese, { x: 0.8, y: 3.85, w: 11.8, h: 3.1, valign: "middle", fontFace: HEAD });
+  s.addNotes("Nur aufdecken, wenn der gemeinsame Satz deutlich abweicht – sonst gilt der Satz der Klasse. „Komplementär“ im Sinne Watzlawicks: Die Rollen ergänzen sich als oben und unten – das heißt nicht, dass das Gespräch gelingt.");
+}
+
+// ===== V: Verarbeiten – Ich mache vor, Aufgabe 3 =====
 {
   const s = base("Ich mache vor: das offene Tor", { phase: "VERARBEITEN" });
   D.VORMACHEN.forEach(([k, v], i) => {
@@ -137,38 +159,33 @@ aufgabe(D.AUFGABE1, "Ansage: „Jetzt arbeitet ihr allein. Die Aufgabe steht auf
     rect(s, 0.5, y, 12.3, 1.8, i === 2 ? LIGHT2 : LIGHT);
     txt(s, [{ text: k + "  ", options: { bold: true, color: i === 2 ? RED : NAVY } }, { text: v, options: i === 0 ? { italic: true } : {} }], { x: 0.8, y, w: 11.8, h: 1.8, valign: "middle" });
   });
-  s.addNotes("Laut denken, Schritt für Schritt (Ich-Phase): „Was steht da? → Was fällt auf? → Wofür steht es?“ Die Klasse trägt die erste Zeile der Tabelle mit ein (" + D.zeile(D.SYMBOLE[0][2]) + "). Genau diese drei Schritte machen alle in Aufgabe 2.");
+  s.addNotes("Laut denken, Schritt für Schritt: „Was steht da? → Was fällt auf? → Wofür steht es?“ Alle tragen die erste Zeile der Tabelle mit ein (vgl. " + D.zeile(D.SYMBOLE[0][1]) + "). Tafel ③, erste Zeile.");
 }
-aufgabe(D.AUFGABE2, "Ansage: „Jetzt arbeitet ihr allein. Die Tabelle steht auf dem Arbeitsblatt, Aufgabe 2.“ Timer 9 Minuten. Herumgehen, bei Bedarf die Frage stellen: „Was fällt an dem Wort auf?“ Wer schnell fertig ist: die Zeilen mit Stern.");
-
-// Lösungen in drei Portionen
-for (let k = 0; k < D.SYMBOLE.length; k += 3) {
-  const stern = D.SYMBOLE[k][4];
-  const s = base("Lösung: Symbole" + (stern ? " *" : " (" + (k / 3 + 1) + ")"), { phase: "VERARBEITEN" });
-  D.SYMBOLE.slice(k, k + 3).forEach(([b, , anker, sach], i) => {
+aufgabe(D.AUFGABE3, "Ansage: „Jetzt arbeitet ihr allein. Die Tabelle steht auf dem Arbeitsblatt, Aufgabe 3.“ Timer 6 Minuten. Herumgehen, Hilfe nur als Frage: „Was fällt an dem Wort auf?“");
+{
+  const s = base("Lösung: Symbole", { phase: "VERARBEITEN" });
+  D.SYMBOLE.slice(1).forEach(([b, anker, sach], i) => {
     const y = 1.15 + i * 2.05;
     rect(s, 0.5, y, 12.3, 1.9, i % 2 ? WHITE : LIGHT, { line: "D5DCEC", lw: 0.75 });
-    txt(s, [{ text: b, options: { bold: true, color: RED, breakLine: true } }, { text: D.zeile(anker), options: { color: MUTED } }], { x: 0.7, y, w: 3.4, h: 1.9, valign: "middle" });
+    txt(s, [{ text: b, options: { bold: true, color: RED, breakLine: true } }, { text: "vgl. " + D.zeile(anker), options: { color: MUTED } }], { x: 0.7, y, w: 3.4, h: 1.9, valign: "middle" });
     txt(s, sach, { x: 4.1, y, w: 8.6, h: 1.9, valign: "middle" });
   });
-  s.addNotes(stern ? "Nur, wenn Zeit ist; sonst kurz mündlich das Schließen des Eingangs – es führt zur Deutung." : (k ? "Erst eine Antwort vom Platz, dann aufdecken. „Vergleicht und verbessert mit Grün.“" : "Erst eine Antwort vom Platz, dann aufdecken. Beim Gesetz ausdrücklich offen lassen: Recht, Wahrheit, Sinn, Gott – oder der Vater. Kafka legt es nicht fest. Wichtig ist die Begründung am Text."));
+  s.addNotes("Erst eine Antwort vom Platz, dann aufdecken. „Vergleicht und verbessert mit Grün.“ Beim Gesetz ausdrücklich offen lassen: Recht, Wahrheit, Sinn, Gott – oder der Vater. Wichtig ist die Begründung am Text. Tafel ③.");
 }
 
-// ===== A: Auswerten – Deutung, Transfer*, Zielcheck =====
+// ===== A: Auswerten – Hypothese prüfen, Zielcheck =====
+aufgabe(D.HYPOTHESE, "Eine Minute allein suchen, dann Stichproben. Belege nacheinander aufdecken (nächste Folie). Tafel ④.");
 {
-  const s = base(D.DEUTUNG.frage, { phase: "AUSWERTEN" });
-  rect(s, 0.5, 1.2, 6.05, 3.3, LIGHT);
-  txt(s, D.DEUTUNG.aussen, { x: 0.75, y: 1.2, w: 5.6, h: 3.3, valign: "middle" });
-  rect(s, 6.75, 1.2, 6.05, 3.3, LIGHT2);
-  txt(s, D.DEUTUNG.innen, { x: 7.0, y: 1.2, w: 5.6, h: 3.3, valign: "middle" });
-  rect(s, 0.5, 4.8, 12.3, 2.2, WHITE, { line: GOLD, lw: 2.5, r: 0.04 });
-  txt(s, D.DEUTUNG.zitat, { x: 0.8, y: 4.8, w: 11.8, h: 2.2, valign: "middle", fontFace: HEAD });
-  s.addNotes("Erst die Frage stellen, Antworten sammeln, dann die beiden Felder aufdecken. Kern: Der Türhüter sagt „jetzt aber nicht“ und lädt sogar ein, es „trotz meines Verbotes“ zu versuchen. Der Mann fügt sich – die Ohnmacht wird zur Resignation. Rückgriff auf das Zitat vom Anfang. Tafel ③.");
-}
-{
-  const s = base(D.TRANSFER.titel, { phase: "AUSWERTEN" });
-  txt(s, bullets(D.TRANSFER.fragen, { space: 24 }), { x: 0.7, y: 1.5, w: 12.0, h: 4.5 });
-  s.addNotes("Nur, wenn mehr als 6 Minuten übrig sind; mündlich, 2–3 Beiträge. Sonst entfällt der Transfer – der Zielcheck bleibt. Sportbezug nur anbieten, nicht erzwingen.");
+  const s = base("Belege für die Asymmetrie", { phase: "AUSWERTEN" });
+  D.HYPOTHESE.belege.forEach(([ebene, beleg, anker, erkl], i) => {
+    const y = 1.15 + i * 1.62;
+    rect(s, 0.5, y, 12.3, 1.5, i % 2 ? WHITE : LIGHT, { line: "D5DCEC", lw: 0.75 });
+    txt(s, [{ text: ebene, options: { bold: true, color: RED, breakLine: true } }, { text: "vgl. " + D.zeile(anker), options: { color: MUTED } }], { x: 0.7, y, w: 3.0, h: 1.5, valign: "middle" });
+    txt(s, erkl, { x: 3.8, y, w: 8.9, h: 1.5, valign: "middle" });
+  });
+  rect(s, 0.5, 6.05, 12.3, 1.25, WHITE, { line: GOLD, lw: 2.5, r: 0.04 });
+  txt(s, D.HYPOTHESE.fazit, { x: 0.8, y: 6.05, w: 11.8, h: 1.25, valign: "middle", fontFace: HEAD });
+  s.addNotes("Belege im Wortlaut: " + D.HYPOTHESE.belege.map(([e, b]) => e + ": " + b).join(" – ") + " Rückgriff auf das Zitat vom Anfang: Der Mann nimmt die untere Rolle an – Ohnmacht wird zur Resignation.");
 }
 {
   const s = base("Zielcheck", { time: "4 Min." });
@@ -177,14 +194,14 @@ for (let k = 0; k < D.SYMBOLE.length; k += 3) {
   txt(s, D.ZIELCHECK.auftrag, { x: 0.8, y: 1.9, w: 11.8, h: 1.9, valign: "middle", bold: true });
   txt(s, [{ text: "Satzgerüst: ", options: { bold: true, color: BLUE } }, { text: D.ZIELCHECK.geruest, options: { italic: true } }], { x: 0.8, y: 4.1, w: 11.8, h: 1.3 });
   txt(s, "Fertig? Stift hinlegen.", { x: 0.5, y: 6.8, w: 12.3, h: 0.5, bold: true, color: GREEN, align: "right" });
-  s.addNotes("Auswerten wird nie gestrichen. Herumgehen. Achtung Komma vor „weil“. Danach Musterlösung und Kriterien, mit Grün kontrollieren. Wer noch kein Merkmal von „kafkaesk“ nennt, wird in der Wiederholung der nächsten Stunde gezielt aufgegriffen.");
+  s.addNotes("Auswerten wird nie gestrichen. Herumgehen. Achtung Komma vor „weil“. Danach Musterlösung und Kriterien, mit Grün kontrollieren. Wer noch keinen Baustein von „kafkaesk“ nennt, wird in der Wiederholung der nächsten Stunde gezielt aufgegriffen.");
 }
 {
   const s = base("Zielcheck: Musterlösung");
-  rect(s, 0.5, 1.2, 12.3, 3.3, LIGHT);
-  txt(s, D.ZIELCHECK.muster, { x: 0.8, y: 1.2, w: 11.8, h: 3.3, valign: "middle" });
-  txt(s, [{ text: "Prüft mit Grün: ", options: { bold: true, color: GREEN, breakLine: true } }, ...D.ZIELCHECK.kriterien.map((k, i) => ({ text: "✓ " + k, options: { breakLine: i < 2 } }))], { x: 0.8, y: 4.75, w: 11.8, h: 2.5 });
-  s.addNotes("Jedes Symbol ist richtig, wenn Zeile, Deutung und ein Merkmal von „kafkaesk“ stimmen. Rückblick auf die Lernziele: Was davon kann ich jetzt?");
+  rect(s, 0.5, 1.2, 12.3, 3.5, LIGHT);
+  txt(s, D.ZIELCHECK.muster, { x: 0.8, y: 1.2, w: 11.8, h: 3.5, valign: "middle" });
+  txt(s, [{ text: "Prüft mit Grün: ", options: { bold: true, color: GREEN, breakLine: true } }, ...D.ZIELCHECK.kriterien.map((k, i) => ({ text: "✓ " + k, options: { breakLine: i < 2 } }))], { x: 0.8, y: 4.9, w: 11.8, h: 2.3 });
+  s.addNotes("Jedes Symbol ist richtig, wenn Zeile, Deutung und ein Baustein oder Gefühl von „kafkaesk“ stimmen. Rückblick auf die Lernziele: Was davon kann ich jetzt?");
 }
 
 pres.writeFile({ fileName: "Praesentation_Vor_dem_Gesetz.pptx" });

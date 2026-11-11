@@ -1,5 +1,5 @@
 // Arbeitsblatt „Vor dem Gesetz“ nach dem bekannten Muster (Kafka-Appell, „Gibs auf!“): Titel, Thema, Ziel, Info-Box,
-// 1. Textgrundlage mit Zeilennummern, 2. Information „kafkaesk“, 3. Arbeitsaufträge mit Platz zum Schreiben (2 Seiten, doppelseitig)
+// 1. Textgrundlage mit Zeilennummern, 2. Information „kafkaesk“ (Begriffe der Mentorin), 3. Arbeitsaufträge 2–4 mit Platz zum Schreiben (2 Seiten, doppelseitig)
 const fs = require("fs");
 const {
   Document, Packer, Paragraph, TextRun, Table, TableRow, TableCell, WidthType, BorderStyle,
@@ -38,28 +38,26 @@ function textBlock(lines) {
   ])));
 }
 
-// Aufgabe 1: gemischte Handlungsschritte mit Kästchen für die Nummer und Spalte für die Zeile
-const a1W = [700, 800, W - 2900, 1400];
-const a1 = table(a1W, [
-  row([kopf("", a1W[0]), kopf("Nr.", a1W[1]), kopf("Handlungsschritt", a1W[2]), kopf("Zeile", a1W[3])]),
-  ...D.REIHE_GEMISCHT.map((k, i) => row([
-    cell(p(t(String.fromCharCode(65 + i), { bold: true, color: NAVY, size: 19 }), { after: 0, align: AlignmentType.CENTER }), { w: a1W[0], fill: LIGHT, valign: VerticalAlign.CENTER }),
-    cell(p(t(""), { after: 0 }), { w: a1W[1] }),
-    cell(p(t(D.SCHRITTE[k][0], { size: 19 }), { after: 0 }), { w: a1W[2], valign: VerticalAlign.CENTER }),
-    cell(p(t("Z. ", { size: 19, color: MUTED }), { after: 0 }), { w: a1W[3], valign: VerticalAlign.CENTER }),
-  ], 420)),
+const schreibLinien = (n, w, h = 420) => table([w], Array.from({ length: n }, () => row([cell(p(t(""), { after: 0 }), { w, borders: { top: none, left: none, right: none, bottom: solid("9AA6C4", 4) }, m: 0, ml: 0 })], h)));
+const aufgabeKopf = (a) => p([t(a.titel, { bold: true, color: NAVY, size: 22 }), t("   (" + a.form + ", " + a.zeit + ")", { italics: true, color: MUTED, size: 18 })], { before: 140, after: 40, keepNext: true });
+
+// Aufgabe 3: Bildebene → Sachebene (das Tor macht die Lehrkraft vor)
+const a3W = [2600, 1100, W - 3700];
+const a3 = table(a3W, [
+  row([kopf("Bildebene", a3W[0]), kopf("Zeile", a3W[1]), kopf("Sachebene: Wofür steht es? Begründe mit dem Text.", a3W[2])]),
+  ...D.SYMBOLE.map(([b], i) => row([
+    cell([p(t(b, { bold: true, color: RED, size: 20 }), { after: 10 }), ...(i === 0 ? [p(t("(macht die Lehrkraft vor)", { size: 16, italics: true, color: MUTED }), { after: 0 })] : [])], { w: a3W[0], fill: LIGHT }),
+    cell(p(t("vgl. Z. ", { size: 19, color: MUTED }), { after: 0 }), { w: a3W[1] }),
+    cell(p(t(""), { after: 0 }), { w: a3W[2] }),
+  ], 1250)),
 ]);
 
-// Aufgabe 2: Bildebene → Sachebene
-const a2W = [2900, 1000, W - 3900];
-const a2 = table(a2W, [
-  row([kopf("Bildebene (achte auf …)", a2W[0]), kopf("Zeile", a2W[1]), kopf("Sachebene: Wofür steht es?", a2W[2])]),
-  ...D.SYMBOLE.map(([b, achte, , , stern]) => row([
-    cell([p(t(b + (stern ? " *" : ""), { bold: true, color: stern ? MUTED : RED, size: 19 }), { after: 10 }), p(t(achte, { size: 17, italics: true, color: BLUE }), { after: 0 })], { w: a2W[0], fill: LIGHT }),
-    cell(p(t("Z. ", { size: 19, color: MUTED }), { after: 0 }), { w: a2W[1] }),
-    cell(p(t(""), { after: 0 }), { w: a2W[2] }),
-  ], 740)),
-]);
+// Aufgabe 4: Belege für die Asymmetrie
+const a4W = [2600, W - 2600];
+const a4 = table(a4W, [1, 2].map((n) => row([
+  cell(p(t("Beleg " + n + " (vgl. Z. …)", { bold: true, color: NAVY, size: 19 }), { after: 0 }), { w: a4W[0], fill: LIGHT, valign: VerticalAlign.CENTER }),
+  cell(p(t(""), { after: 0 }), { w: a4W[1] }),
+], 700)));
 
 const header = new Header({ children: [new Paragraph({ tabStops: [{ type: TabStopType.RIGHT, position: W }], children: [t("Deutsch · Klasse 11 · Kafka, „Vor dem Gesetz“", { size: 17, color: MUTED }), t("\tName: ______________________   Datum: ___________", { size: 17, color: MUTED })] })] });
 const footer = new Footer({ children: [new Paragraph({ alignment: AlignmentType.RIGHT, children: [t("Franz Kafka: „Vor dem Gesetz“ (1915), in heutiger Rechtschreibung", { size: 16, color: MUTED })] })] });
@@ -67,29 +65,33 @@ const footer = new Footer({ children: [new Paragraph({ alignment: AlignmentType.
 const seite1 = [
   p(t("Arbeitsblatt: Inhalt und Symbole in Kafkas „Vor dem Gesetz“", { font: "Cambria", size: 32, bold: true, color: NAVY }), { after: 50 }),
   p([t("Thema: ", { bold: true, size: 20 }), t("Ohnmacht vor der Macht – eine kafkaeske Parabel", { size: 20 })], { after: 20 }),
-  p([t("Ziel: ", { bold: true, size: 20 }), t("Ich kann die Symbole der Parabel deuten und erklären, warum sie kafkaesk ist.", { size: 20 })], { after: 100 }),
+  p([t("Ziel: ", { bold: true, size: 20 }), t("Ich kann die zentralen Symbole der Parabel deuten und erklären, warum sie kafkaesk ist.", { size: 20 })], { after: 100 }),
   box([
     p(t("Info-Box: Kontext", { bold: true, color: RED, size: 21 }), { after: 30 }),
-    p(t(D.KONTEXT.join(" "), { size: 19 }), { after: 0, line: 270 }),
+    p(t(D.KONTEXT[0] + " Im Dom erzählt ein Geistlicher sie Josef K., der verhaftet wurde, ohne zu erfahren, warum.", { size: 19 }), { after: 0, line: 270 }),
   ]),
   h2("1. Textgrundlage: Franz Kafka, „Vor dem Gesetz“", { before: 130 }),
   textBlock(D.ZEILEN),
 ];
 
 const seite2 = [
-  h2("2. Information: „kafkaesk“", { pb: true, before: 0 }),
+  h2("2. Information: „kafkaesk“ (Wiederholung)", { pb: true, before: 0 }),
   box([
-    p(t(D.KAFKAESK.duden, { bold: true, size: 20 }), { after: 40 }),
-    ...D.KAFKAESK.merkmale.map((m) => p([t("▸ ", { color: RED, size: 19 }), t(m, { size: 19 })], { after: 15 })),
+    p(t(D.KAFKAESK.definition, { bold: true, size: 19 }), { after: 40, line: 260 }),
+    ...D.KAFKAESK.bausteine.map(([b, e]) => p([t("▸ " + b + ": ", { bold: true, color: RED, size: 19 }), t(e, { size: 19 })], { after: 15 })),
+    p([t("Gefühle: ", { bold: true, size: 19 }), t(D.KAFKAESK.gefuehle, { size: 19 })], { before: 30, after: 0 }),
   ]),
   h2("3. Arbeitsaufträge"),
-  p(t("Aufgaben 1 und 2 löst du direkt auf diesem Blatt. Den Zielcheck schreibst du ins Heft.", { size: 18, italics: true, color: MUTED }), { after: 20 }),
-  aufgabe(D.AUFGABE1),
-  ...schritte(D.AUFGABE1.schritte),
-  a1,
-  aufgabe(D.AUFGABE2),
-  ...schritte(D.AUFGABE2.schritte),
-  a2,
+  p(t("Aufgabe 1 (Nervig oder kafkaesk?) und den Zielcheck schreibst du ins Heft.", { size: 18, italics: true, color: MUTED }), { after: 20 }),
+  aufgabeKopf(D.TATT),
+  p([t("Bausteine: ", { bold: true, size: 19 }), t(D.TATT.bausteine, { size: 19 })], { after: 30 }),
+  schreibLinien(4, W, 400),
+  aufgabeKopf(D.AUFGABE3),
+  ...schritte(D.AUFGABE3.schritte),
+  a3,
+  aufgabeKopf(D.HYPOTHESE),
+  ...schritte(D.HYPOTHESE.schritte),
+  a4,
 ];
 
 const doc = new Document({
