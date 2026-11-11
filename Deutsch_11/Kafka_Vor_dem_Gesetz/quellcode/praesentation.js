@@ -38,18 +38,14 @@ function aufgabe(a, notes, extra) {
   const s = pres.addSlide();
   s.background = { color: NAVY };
   s.addShape(pres.shapes.OVAL, { x: 10.6, y: -1.6, w: 4.6, h: 4.6, fill: { color: NAVY2 }, line: { type: "none" } });
-  txt(s, "„", { x: 0.7, y: 0.3, w: 1.5, h: 1.6, fontFace: HEAD, fontSize: 120, color: GOLD });
+  txt(s, "„", { x: 0.7, y: 0.6, w: 1.5, h: 1.6, fontFace: HEAD, fontSize: 120, color: GOLD });
   txt(s, [
-    { text: "Auf Balzacs Spazierstockgriff:", options: { breakLine: true, color: ICE } },
-    { text: "Ich breche alle Hindernisse.", options: { breakLine: true, bold: true } },
-    { text: " ", options: { breakLine: true, fontSize: 14 } },
-    { text: "Auf meinem:", options: { breakLine: true, color: ICE } },
-    { text: "Mich brechen alle Hindernisse.", options: { breakLine: true, bold: true, color: GOLD } },
-    { text: " ", options: { breakLine: true, fontSize: 14 } },
-    { text: "Gemeinsam ist das ‚alle‘.", options: { italic: true, color: ICE } },
-  ], { x: 1.6, y: 1.5, w: 10.5, h: 4.4, fontFace: HEAD, fontSize: 34, color: WHITE });
-  txt(s, "— " + D.ZITAT.quelle, { x: 1.6, y: 6.2, w: 10.5, h: 0.6, color: ICE });
-  s.addNotes("Ansage: „Stifte liegen. Lest den Satz still.“ 30 Sekunden. Impuls: „" + D.ZITAT.impuls + "“ Nachfragen: „Was ist der Unterschied zwischen ‚Ich breche‘ und ‚Mich brechen‘?“ Erwartung: " + D.ZITAT.erwartung + " Tafel (Seitentafel oder oben): Ohnmacht · Resignation. Gelenk: „Für dieses Gefühl gibt es ein eigenes Wort. Ihr kennt es schon.“ Zitat aus Kafkas Nachlass – Wortlaut vor der Stunde mit einer Ausgabe abgleichen.");
+    { text: D.ZITAT.text[0], options: { breakLine: true, bold: true } },
+    { text: " ", options: { breakLine: true, fontSize: 16 } },
+    { text: D.ZITAT.text[1], options: { color: GOLD, bold: true } },
+  ], { x: 1.6, y: 1.8, w: 10.8, h: 3.6, fontFace: HEAD, fontSize: 38, color: WHITE });
+  txt(s, "— " + D.ZITAT.quelle, { x: 1.6, y: 6.0, w: 10.5, h: 0.6, color: ICE });
+  s.addNotes("Reaktivierung des Wissens über Kafka (kafkaesk kommt erst danach). " + D.ZITAT.impulse.join(" – ") + " Antworten als Stichworte an die Tafel (①, Kasten „Kafka“). Erwartung: " + D.ZITAT.erwartung + " Auflösung in einem Satz: " + D.ZITAT.kontext + " Gelenk: " + D.ZITAT.gelenk + " Datum und Wortlaut des Zitats vor der Stunde mit einer Ausgabe abgleichen.");
 }
 
 // ===== Verlauf und Lernziele =====
@@ -73,11 +69,11 @@ function aufgabe(a, notes, extra) {
 {
   const s = base("Was wisst ihr noch?", { phase: "VORWISSEN" });
   D.VORWISSEN.forEach(([q, h], i) => {
-    const y = 1.35 + i * 2.6;
-    rect(s, 0.5, y, 12.3, 2.3, i % 2 ? WHITE : LIGHT, { line: "D5DCEC", lw: 0.75 });
+    const y = 2.0 + i * 2.6;
+    rect(s, 0.5, y, 12.3, 2.3, LIGHT, { line: "D5DCEC", lw: 0.75 });
     txt(s, [{ text: q, options: { bold: true, breakLine: true } }, { text: h, options: { color: MUTED, italic: true } }], { x: 0.8, y, w: 11.8, h: 2.3, valign: "middle" });
   });
-  s.addNotes("Mündlich, 2 Minuten: Stichproben (4–5 Schüler, unterschiedliche Niveaus). Noch nichts anschreiben – die Lösung kommt nach dem Sprint an die Tafel. Grundlage: Arbeitsblatt der Mentorin vom 9.11.");
+  s.addNotes("Mündlich, 1 Minute: Stichproben (4–5 Schüler, unterschiedliche Niveaus). Noch nichts anschreiben – die Lösung kommt nach dem Sprint an die Tafel. Grundlage: Arbeitsblatt der Mentorin vom 9.11.");
 }
 {
   const s = base("Begriffs-Sprint", { time: "1 Min." });
@@ -185,7 +181,7 @@ aufgabe(D.HYPOTHESE, "Eine Minute allein suchen, dann Stichproben. Belege nachei
   });
   rect(s, 0.5, 6.05, 12.3, 1.25, WHITE, { line: GOLD, lw: 2.5, r: 0.04 });
   txt(s, D.HYPOTHESE.fazit, { x: 0.8, y: 6.05, w: 11.8, h: 1.25, valign: "middle", fontFace: HEAD });
-  s.addNotes("Belege im Wortlaut: " + D.HYPOTHESE.belege.map(([e, b]) => e + ": " + b).join(" – ") + " Rückgriff auf das Zitat vom Anfang: Der Mann nimmt die untere Rolle an – Ohnmacht wird zur Resignation.");
+  s.addNotes("Belege im Wortlaut: " + D.HYPOTHESE.belege.map(([e, b]) => e + ": " + b).join(" – ") + " Rückgriff auf das Zitat vom Anfang: Der Mann vom Lande redet jahrelang mit niemandem außer dem Türhüter, am Ende wird der Eingang geschlossen – Kafka wollte sich selbst „von allen absperren“.");
 }
 {
   const s = base("Zielcheck", { time: "4 Min." });

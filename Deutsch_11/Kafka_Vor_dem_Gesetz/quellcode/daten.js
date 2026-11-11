@@ -37,11 +37,24 @@ function zeile(zitat) {
   return "Z. " + (i + 1) + (ZEILEN[i].includes(rest) ? "" : " f.");
 }
 
-// Einstiegszitat (Ankommen) – aus Kafkas Nachlass (Notizen), Wortlaut bitte prüfen
+// Einstiegszitat (Ankommen) – Reaktivierung des Wissens über Kafka; „kafkaesk“ kommt erst danach
+// Tagebuch, 21.7.1913 (Liste für und gegen die Heirat mit Felice Bauer) – Datum und Wortlaut bitte mit einer Ausgabe abgleichen
 const ZITAT = {
-  quelle: "Franz Kafka, Notiz aus dem Nachlass",
-  impuls: "Was sagt dieser Satz über Kafka?",
-  erwartung: "Balzac (franz. Schriftsteller, 19. Jh.) sieht sich als Sieger über alle Hindernisse; Kafka dreht den Satz um: Er ist das Opfer, die Hindernisse sind stärker. Subjekt und Objekt tauschen die Rolle – Kafka erlebt sich als ohnmächtig, er hat resigniert. Bitterer Witz: „Gemeinsam ist das ‚alle‘.“",
+  text: ["Ich werde mich bis zur Besinnungslosigkeit von allen absperren.", "Mit allen mich verfeinden, mit niemandem reden."],
+  quelle: "Franz Kafka, Tagebuch, 21. Juli 1913",
+  impulse: [
+    "„Stifte liegen. Lest den Satz still. Wie wirkt er auf euch?“",
+    "„Der Satz ist von Kafka. Wie kann jemand so etwas über sich sagen? Was wisst ihr über Kafka, das es erklärt?“",
+  ],
+  kontext: "Tagebuch, 21.7.1913: Kafka (30) überlegt, ob er Felice Bauer heiraten soll, und fürchtet, dass er dann nicht mehr schreiben kann.",
+  wissen: [
+    ["Vater", "übermächtig – Kafka fühlt sich klein und schuldig („Brief an den Vater“)"],
+    ["Schreiben", "braucht Einsamkeit – sein eigentliches Leben"],
+    ["Beruf", "Jurist in einer Versicherungsbehörde – das Büro als Last"],
+    ["Beziehungen", "Verlobungen, Angst vor Bindung"],
+  ],
+  erwartung: "Eindruck: radikal, verzweifelt, abweisend. Erklärung aus Kafkas Leben: Er will schreiben und braucht dafür völlige Einsamkeit; er fühlt sich beherrscht (Vater, Büro, Erwartung zu heiraten) – der Rückzug ist sein Selbstschutz. Wenn es aus der Klasse kommt: Prag, deutschsprachige Minderheit, Krankheit.",
+  gelenk: "„Kafka hat eine ganz eigene Weltsicht. Für Situationen, wie er sie beschreibt, gibt es ein eigenes Wort. Was bedeutet ‚kafkaesk‘?“",
 };
 const PROCESS_SATZ = "Jemand musste Josef K. verleumdet haben, denn ohne dass er etwas Böses getan hätte, wurde er eines Morgens verhaftet.";
 
@@ -51,7 +64,7 @@ const LERNZIELE = [
   ["Ich kann erklären, warum die Parabel kafkaesk ist.", false],
 ];
 const VERLAUF = [
-  ["Ein Zitat von Kafka", "Ankommen"],
+  ["Ein Zitat: Was wissen wir über Kafka?", "Ankommen"],
   ["„kafkaesk“: Wiederholung · Begriffs-Sprint · nervig oder kafkaesk?", "Vorwissen"],
   ["„Vor dem Gesetz“ lesen · Einleitungssatz mit Hypothese", "Informieren"],
   ["Symbole deuten", "Verarbeiten"],
@@ -60,8 +73,7 @@ const VERLAUF = [
 
 // Vorwissen: „kafkaesk“ mündlich wiederholen (Begriffe der Mentorin, AB vom 9.11.)
 const VORWISSEN = [
-  ["Was bedeutet „kafkaesk“?", "Erklärt das Wort mit eigenen Worten."],
-  ["Woran erkennt man eine kafkaeske Situation?", "Denkt an das Arbeitsblatt vom Montag."],
+  ["Was bedeutet „kafkaesk“?", "Erklärt das Wort mit eigenen Worten – denkt an das Arbeitsblatt vom Montag."],
 ];
 const KAFKAESK = {
   definition: "kafkaesk: Situationen, die von einer rätselhaften, absurden und bürokratischen Übermacht geprägt sind. Der Einzelne ist einer anonymen, undurchschaubaren Gewalt ausgeliefert.",
@@ -160,7 +172,7 @@ const HYPOTHESE = {
     ["Raum und Körper", "„… der Größenunterschied hat sich sehr zuungunsten des Mannes verändert.“", "Größenunterschied hat sich sehr", "Die Asymmetrie wird zum Bild: oben und unten."],
     ["Stimme", "Der Mann „fragt dann, ob er also später werde eintreten dürfen“.", "fragt dann, ob er also", "Der Türhüter spricht in wörtlicher Rede, der Mann meist nur indirekt – eine eigene Stimme bekommt er erst vor dem Tod."],
   ],
-  fazit: "Die Hypothese stimmt: Das Gespräch ist komplementär (asymmetrisch). Der Mann nimmt die untere Rolle an – „Mich brechen alle Hindernisse.“",
+  fazit: "Die Hypothese stimmt: Das Gespräch ist komplementär (asymmetrisch). Der Mann redet mit niemandem außer dem Türhüter – am Ende ist er ausgesperrt. Kafka: „von allen absperren“.",
 };
 
 // Zielcheck (im Heft)
