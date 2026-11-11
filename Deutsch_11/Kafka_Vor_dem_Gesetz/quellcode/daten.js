@@ -55,7 +55,7 @@ const LERNZIELE = [
 ];
 const VERLAUF = [
   ["Ein Zitat von Kafka", "Ankommen"],
-  ["Wiederholung: „kafkaesk“ – Kafka und die Macht", "Vorwissen"],
+  ["„kafkaesk“: Wiederholung · Begriffs-Sprint · nervig oder kafkaesk?", "Vorwissen"],
   ["„Vor dem Gesetz“ lesen: Worum geht es?", "Informieren"],
   ["Handlungsschritte ordnen · Symbole deuten", "Verarbeiten"],
   ["Deutung · Transfer* · Zielcheck", "Auswerten"],
@@ -63,8 +63,8 @@ const VERLAUF = [
 
 // Vorwissen: „kafkaesk“
 const VORWISSEN = [
-  ["Was bedeutet „kafkaesk“?", "Erklärt das Wort mit einem Beispiel."],
-  ["Wem stand Kafka ohnmächtig gegenüber?", "Denkt an den „Brief an den Vater“ und an „Gibs auf!“."],
+  ["Was bedeutet „kafkaesk“?", "Erklärt das Wort mit eigenen Worten."],
+  ["Wo ist es uns bei Kafka schon begegnet?", "Denkt an den „Brief an den Vater“ und an „Gibs auf!“."],
 ];
 const KAFKAESK = {
   duden: "kafkaesk: in der Art der Darstellungen Kafkas; auf unergründliche Weise bedrohlich (nach Duden)",
@@ -80,6 +80,39 @@ const KAFKA_MACHT = [
   ["Schutzmann", "„Gibs auf!“: Wer helfen sollte, lacht und wendet sich ab"],
   ["Behörde", "Jurist in einer Versicherungsbehörde in Prag (1908–1922): Bürokratie von innen"],
 ];
+// Begriffs-Sprint (Regeln wie beim Sprint): 1 Minute ununterbrochen schreiben, danach lesen 2–3 vor, dann Lösung an die Tafel
+const SPRINT = {
+  regeln: [
+    "Stift in die Hand, Heft auf.",
+    "Auf mein Zeichen erscheint ein Begriff.",
+    "Schreibt eine Minute ohne Pause alles, was euch dazu einfällt.",
+    "Der Stift bleibt auf dem Papier – bis „Stopp“.",
+  ],
+  begriff: "kafkaesk",
+};
+// Nervig oder kafkaesk? – [Situation, N/K/?, Begründung]
+const NK_KRITERIUM = [
+  ["nervig", "ärgerlich – aber der Grund ist klar, und du kannst etwas tun"],
+  ["kafkaesk", "eine übermächtige Instanz, undurchschaubare Regeln, kein Ausweg – du bist ohnmächtig"],
+];
+const SZENARIEN = [
+  ["Der Bus fährt dir vor der Nase weg. Der nächste kommt in 20 Minuten.", "N", "Pech, aber der Grund ist klar – du kannst warten oder laufen."],
+  ["Keine Kadernominierung. Auf Nachfrage: „Gründe nennen wir nicht.“ Wer zuständig ist, weiß keiner.", "K", "anonyme Macht, keine Gründe, kein Ansprechpartner"],
+  ["Nach einem Fehler lässt dich der Trainer zehn Extrarunden laufen.", "N", "Grund und Regel sind bekannt."],
+  ["Den Startpass gibt es nur mit Bescheinigung – die Bescheinigung nur mit Startpass.", "K", "Teufelskreis der Bürokratie, kein Ausweg"],
+  ["Disqualifiziert nach einer Regel, die niemand findet. Die Einspruchsfrist lief ab, bevor du davon wusstest.", "K", "undurchschaubare Regeln, ohnmächtig ausgeliefert"],
+  ["Hotline: eine Stunde Warteschleife, dann bist du raus. Am nächsten Tag beginnt alles von vorn.", "?", "Grenzfall: nervig – kafkaesk, wenn es nie endet und niemand zuständig ist"],
+  ["„" + "Jemand musste Josef K. verleumdet haben, denn ohne dass er etwas Böses getan hätte, wurde er eines Morgens verhaftet." + "“", "K", "Staatsmacht verhaftet ohne Grund – der erste Satz von Kafkas „Process“"],
+];
+const NK_AUFGABE = {
+  titel: "Nervig oder kafkaesk?",
+  zeit: "3 Min.", form: "allein, im Heft",
+  schritte: [
+    "Lies die Situationen 1–7.",
+    "Entscheide: N (nervig) oder K (kafkaesk).",
+    "Begründe mit einem Merkmal: „… ist kafkaesk / nur nervig, weil …“",
+  ],
+};
 const KONTEXT = [
   "Die Parabel ist ein Teil des Romans „Der Process“ (1914/15 geschrieben).",
   "Josef K. wird verhaftet, ohne zu erfahren, warum. Ein Gericht, das er nie zu sehen bekommt, verhandelt gegen ihn.",
@@ -122,7 +155,7 @@ const SYMBOLE = [
 ];
 const AUFGABE2 = {
   titel: "Aufgabe 2: Symbole deuten",
-  zeit: "9 Min.", form: "allein, auf dem Arbeitsblatt",
+  zeit: "8 Min.", form: "allein, auf dem Arbeitsblatt",
   schritte: [
     "Suche die Stelle im Text und notiere die Zeile.",
     "Achte auf die angegebenen Wörter.",
@@ -163,5 +196,5 @@ ZIELCHECK.muster = ZIELCHECK.muster.replace("Z. ?", zeile("Vor dem Gesetz steht 
 
 module.exports = {
   TITEL, AUTOR, TEXT, TEXT_HINWEIS, ZEILEN, zeile, ZITAT, PROCESS_SATZ, LERNZIELE, VERLAUF, VORWISSEN, KAFKAESK, KAFKA_MACHT,
-  KONTEXT, LESEAUFTRAG, KERNBOTSCHAFT, SCHRITTE, REIHE_GEMISCHT, AUFGABE1, SYMBOLE, AUFGABE2, VORMACHEN, DEUTUNG, TRANSFER, ZIELCHECK,
+  SPRINT, NK_KRITERIUM, SZENARIEN, NK_AUFGABE, KONTEXT, LESEAUFTRAG, KERNBOTSCHAFT, SCHRITTE, REIHE_GEMISCHT, AUFGABE1, SYMBOLE, AUFGABE2, VORMACHEN, DEUTUNG, TRANSFER, ZIELCHECK,
 };
