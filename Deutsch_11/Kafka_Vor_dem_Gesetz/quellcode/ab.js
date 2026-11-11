@@ -57,7 +57,7 @@ const a4W = [2600, 1100, W - 3700];
 const a4 = table(a4W, [
   row([kopf("Bildebene", a4W[0]), kopf("Zeile", a4W[1]), kopf("Sachebene: Wofür steht es? Begründe mit dem Text.", a4W[2])]),
   ...D.SYMBOLE.map(([b], i) => row([
-    cell([p(t(b, { bold: true, color: RED, size: 20 }), { after: 10 }), ...(i === 0 ? [p(t("(macht die Lehrkraft vor)", { size: 16, italics: true, color: MUTED }), { after: 0 })] : [])], { w: a4W[0], fill: LIGHT }),
+    cell(p(t(b, { bold: true, color: RED, size: 20 }), { after: 0 }), { w: a4W[0], fill: LIGHT }),
     cell(p(t("vgl. Z. ", { size: 19, color: MUTED }), { after: 0 }), { w: a4W[1] }),
     cell(p(t(""), { after: 0 }), { w: a4W[2] }),
   ], 1000)),
