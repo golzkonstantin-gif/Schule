@@ -33,6 +33,8 @@ Diese Punkte ergänzen die allgemeinen Vorlieben in `CLAUDE.md`. Sie stammen aus
 - Leitfragen, die auf einzelne Wörter zeigen; Formulierungshilfen mit Fachbegriff.
 - Immer ein Transfer mit klarem Umfang (z. B. Rede aus der Sicht einer Figur).
 - Zitate aus fremdem Material immer mit dem Original abgleichen.
+- **Bei Parabeln mit Gespräch die Handlung über die Kommunikation erschließen** (Stand 11.11., wie die Mentorin bei „Gibs auf!“): Wer sagt oder tut was, wie reagiert der andere? So werden Inhalt und Kommunikation zugleich klar.
+- Was die Klasse schon hat (z. B. Definition „kafkaesk“ vom AB der Mentorin), nicht noch einmal aufs Arbeitsblatt.
 
 **Rechtschreibung**
 - Fehlertexte korrigieren lassen statt nur Diktate (höchstens 10 Minuten). Die Lehrkraft macht den ersten Satz laut denkend vor.
@@ -119,6 +121,7 @@ Grundlage ist `Methoden/Literatur_Unterrichtsqualitaet.md` (AVIVA, Direkte Instr
 
 - Kafka, „Vor dem Gesetz“ (schlanke Fassung nach den Rückmeldungen vom 11.11.): Zitat als Impuls (**umgesetzt 11.11.: „Ich werde mich bis zur Besinnungslosigkeit von allen absperren. Mit allen mich verfeinden, mit niemandem reden.“** mit Fragen, wie jemand so etwas sagen kann; das Zitat dient der **Reaktivierung des Wissens über Kafka** (Biografie), „kafkaesk“ kommt erst danach); „kafkaesk“ mündlich wiederholen, Begriffs-Sprint, Lösung mit den vier Bausteinen der Mentorin an die Tafel; „Nervig oder kafkaesk?“ (6 Szenarien, Szenarien-Blatt); Kontext mit Process-Satz, Vorlesen; Einleitungssatz (TATT) mit Hypothese „asymmetrisches/komplementäres Gespräch“ gemeinsam; vier Symbole (Tor vorgemacht, Türhüter, Gesetz, Schließen des Eingangs); Hypothese mit Belegen prüfen; Zielcheck.
 - Ergänzung der Lehrkraft (11.11.): Nach der Wiederholung von „kafkaesk“ ein **Begriffs-Sprint** (Regeln wie beim Sprint: 1 Minute ununterbrochen schreiben, Stift nicht aus der Hand legen; auf das Zeichen der Lehrkraft erscheint der Begriff „kafkaesk“). Danach **„Nervig oder kafkaesk?“**: Szenarien entscheiden und begründen. Nach dem Sprint lesen 2–3 Schüler vor, dann kommt die Lösung (Merkmale) an die Tafel. Korrektur: Die Szenarien sollen **eindeutig** sein (keine Grenzfälle), die kafkaesken **noch kafkaesker, fast unheimlich** (11.11.); keine Wiederholung der Szenarien der Mentorin (Zug, Amt/Formular). Nicht alles aus dem Sport: zwei Sport-Beispiele reichen, sonst Alltag. Szenarien nah an der Erfahrung der Schüler (nicht Krankenhaus/„Anmeldung nebenan“, nicht Bank, nicht Wohnung/Schlüssel, nicht Handy/Account, nicht Klassenchat). Symboltabelle war zu umfangreich: In 45 Minuten nur wenige zentrale Symbole, insgesamt weniger Inhalt. Deutungshypothese (TATT-Satz) in Richtung: Die Kommunikation scheitert, weil in der Parabel ein asymmetrisches Gespräch stattfindet. Material wird nach Klärung angepasst.
+- Korrektur 11.11. (abends): Auf dem Arbeitsblatt keine Wiederholung von „kafkaesk“ (haben sie schon) – der Platz wird frei. **Die Handlung wird über die Kommunikation erschlossen** (wie bei der Mentorin), sodass Inhalt und Kommunikation zugleich klar werden.
 - Material: `Kafka_Vor_dem_Gesetz/`. Die Klasse hat noch keine Textfassung; der Text steht auf dem Arbeitsblatt (aus dem Gedächtnis, vor dem Druck mit einer Ausgabe abgleichen).
 
 ## Stundenlog
