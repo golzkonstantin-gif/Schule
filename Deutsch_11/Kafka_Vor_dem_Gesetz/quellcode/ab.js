@@ -25,7 +25,7 @@ const table = (widths, rows) => new Table({ width: { size: widths.reduce((a, b) 
 const row = (cells, h) => new TableRow({ children: cells, height: h ? { value: h, rule: HeightRule.ATLEAST } : undefined, cantSplit: true });
 const box = (paras, fill = LIGHT2) => table([W], [row([cell(paras, { w: W, fill, borders: all(none), m: 90, ml: 160 })])]);
 const h2 = (text, o = {}) => p(t(text, { font: "Cambria", size: 26, bold: true, color: NAVY }), { before: o.before ?? 160, after: 70, pb: o.pb, keepNext: true });
-const aufgabe = (a) => p([t(a.titel, { bold: true, color: NAVY, size: 22 }), t("   (" + a.form + ", " + a.zeit + ")", { italics: true, color: MUTED, size: 18 })], { before: 140, after: 40, keepNext: true });
+const aufgabe = (a) => p([t(a.titel, { bold: true, color: NAVY, size: 22 })], { before: 140, after: 40, keepNext: true });
 const schritte = (arr) => arr.map((x, i) => p([t((i + 1) + ".  ", { bold: true, color: NAVY, size: 20 }), t(x, { size: 20 })], { after: 30 }));
 const kopf = (x, w) => cell(p(t(x, { bold: true, color: "FFFFFF", size: 18 }), { after: 0 }), { w, fill: NAVY });
 
@@ -39,7 +39,7 @@ function textBlock(lines) {
 }
 
 const schreibLinien = (n, w, h = 420) => table([w], Array.from({ length: n }, () => row([cell(p(t(""), { after: 0 }), { w, borders: { top: none, left: none, right: none, bottom: solid("9AA6C4", 4) }, m: 0, ml: 0 })], h)));
-const aufgabeKopf = (a) => p([t(a.titel, { bold: true, color: NAVY, size: 22 }), t("   (" + a.form + ", " + a.zeit + ")", { italics: true, color: MUTED, size: 18 })], { before: 140, after: 40, keepNext: true });
+const aufgabeKopf = (a) => p([t(a.titel, { bold: true, color: NAVY, size: 22 })], { before: 140, after: 40, keepNext: true });
 
 // Aufgabe 3: das Gespräch Schritt für Schritt (Spalte „Der Mann“ vorgegeben)
 const gW = [450, 3500, W - 3950];
@@ -80,7 +80,7 @@ const seite1 = [
 
 const seite2 = [
   h2("2. Arbeitsaufträge", { pb: true, before: 0 }),
-  p(t("Aufgabe 1 (Nervig oder kafkaesk?) und den Zielcheck schreibst du ins Heft.", { size: 18, italics: true, color: MUTED }), { after: 20 }),
+  p(t("Aufgabe 1 und den Zielcheck schreibst du ins Heft.", { size: 18, italics: true, color: MUTED }), { after: 20 }),
   aufgabeKopf(D.TATT),
   p([t("Bausteine: ", { bold: true, size: 19 }), t(D.TATT.bausteine, { size: 19 })], { after: 30 }),
   schreibLinien(4, W, 400),

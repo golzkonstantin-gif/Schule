@@ -13,7 +13,7 @@ const cut = { style: BorderStyle.DASHED, size: 6, color: "9AA6C4" };
 
 function haelfte() {
   return [
-    p([t("Aufgabe 1: Nervig oder kafkaesk?", { font: "Cambria", size: 26, bold: true, color: NAVY }), t("   (allein, Antworten ins Heft, 3 Min.)", { size: 18, italics: true, color: MUTED })], { after: 40 }),
+    p([t("Aufgabe 1: Nervig oder kafkaesk?", { font: "Cambria", size: 26, bold: true, color: NAVY })], { after: 40 }),
     p(t("Notiere im Heft: Nummer und N (nervig) oder K (kafkaesk). Bei K: Schreibe den Baustein dazu.", { size: 19, italics: true, color: MUTED }), { after: 80 }),
     new Table({
       width: { size: W, type: WidthType.DXA }, columnWidths: [500, W - 500],

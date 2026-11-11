@@ -34,6 +34,7 @@ Diese Punkte ergänzen die allgemeinen Vorlieben in `CLAUDE.md`. Sie stammen aus
 - Immer ein Transfer mit klarem Umfang (z. B. Rede aus der Sicht einer Figur).
 - Zitate aus fremdem Material immer mit dem Original abgleichen.
 - **Bei Parabeln mit Gespräch die Handlung über die Kommunikation erschließen** (Stand 11.11., wie die Mentorin bei „Gibs auf!“): Wer sagt oder tut was, wie reagiert der andere? So werden Inhalt und Kommunikation zugleich klar.
+- **Auf Arbeitsblättern keine Klammerzusätze hinter den Aufgaben** (Arbeitsform, Zeit; Stand 11.11.) – das steht auf der Folie bzw. kommt als Ansage.
 - Was die Klasse schon hat (z. B. Definition „kafkaesk“ vom AB der Mentorin), nicht noch einmal aufs Arbeitsblatt.
 
 **Rechtschreibung**
