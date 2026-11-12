@@ -76,7 +76,7 @@ Vorbild: Stunde „Bürgeramt Athen“ (`Geschichte_11/Stunde_Buergeramt_Athen/`
 - **Entscheider-Perspektive ist erwünscht:** Die Schüler entscheiden als Fachleute über Fälle (Sachbearbeiter, Gutachter, Richter). Das hat Spaß gemacht und ist kein „Rollenspiel“ im abgelehnten Sinn.
 - **Stundentypen Geschichte 11:** **Einzelstunde (45 Min.) = Inhalt** (Puzzle-Prinzip, kein Werturteil nötig). **Doppelstunde = Methode:** Sie greift den Inhalt der Einzelstunde auf und vertieft ihn **quellengestützt** (Quellenanalyse); kein neuer Stoff.
 - **Quelleninterpretation nach den Arbeitsschritten der Fachschaft:** 1 Themenfrage – 2 Analyse (a formal nach der TATTEA-Formel: Titel, Autor, Textsorte, Thema, Entstehungszeit und -ort, Adressat; b inhaltlich: Aussagen, Schlüsselbegriffe, Textsprache) – 3 historischer Kontext – 4 Urteilen (a Sachurteil inkl. Absicht und Glaubwürdigkeit, b Werturteil aus heutiger Sicht mit Maßstab). Klausuraufgabe meist „Interpretieren Sie …“. Schüler-Übersicht: `Geschichte_11/Doppelstunde_Test_Quellenanalyse/Uebersicht_Quelleninterpretation.*`.
-- **Klausur Geschichte 11 am 25.11. (90 Min.):** Themenblock Tyrannis des Peisistratos – Kleisthenes – Perikles. Aufgaben (Stand 12.11.): Einleitung mit Themenfrage und TATTEA – Position des Verfassers herausarbeiten – Urteil (Sach- und Werturteil); keine eigene Beschreibungsaufgabe zu den Reformen.
+- **Klausur Geschichte 11 am 25.11. (90 Min.):** Themenblock Tyrannis des Peisistratos – Kleisthenes – Perikles. Aufgaben (Stand 12.11.): Einleitung mit Themenfrage und TATTEA – Position des Verfassers herausarbeiten – Urteil (Sach- und Werturteil); keine eigene Beschreibungsaufgabe zu den Reformen – das Wissen darüber wenden die Schüler im Urteil als Beleg an.
 
 ## Weitere Vorlieben
 

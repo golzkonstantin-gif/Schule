@@ -85,7 +85,7 @@
 ### Probeklausur Pseudo-Xenophon (11.11., gemeinsame Bearbeitung)
 - Material: `Probeklausur_PseudoXenophon/` (Quellenblatt mit Zeilennummern im Blocksatz, Aufgabenblatt 2 × A5, Lösungsaushänge mit Formulierungsvorschlägen, 24 Folien je Abschnitt mit Vorgehen – leerer Vorlage – Lösung, Quellcode in `quellcode/`). Vorlage der Lehrkraft: Klausur „Die Volksherrschaft in Athen – Entmachtung des Adels?“ (Pseudo-Xenophon, Über den Staat der Athener).
 - Ablauf nach Wunsch der Lehrkraft: (1) Themenfrage und formale Analyse allein, Lösung an der Tafelrückseite; (2) Position des Verfassers in Stichpunkten, im UG zusammentragen; (3) Verfassungsorgane unter Kleisthenes und gesellschaftliche Gliederung mit Rechten; (4) Urteil. Jeder Abschnitt wird über einen Aushang mit Formulierungsvorschlag selbst kontrolliert (Grundlage: Übersicht Quelleninterpretation).
-- Stand nach der Stunde (Mi 11.11.): bis zur **Position des Verfassers** bearbeitet; Zusammenfassung dazu: `Zusammenfassung_Stunde_11-11`. **Nächste Stunde: Urteilsbildung.** Die Beschreibung der Kleisthenes-Reformen (Aufgabe 3) entfällt, weil die Probeklausur auf 135 Min. ausgelegt ist, die eigene Klausur aber 90 Min. dauert.
+- Stand nach der Stunde (Mi 11.11.): bis zur **Position des Verfassers** bearbeitet; Zusammenfassung dazu: `Zusammenfassung_Stunde_11-11`. **Nächste Stunde: Urteilsbildung.** Die Beschreibung der Kleisthenes-Reformen (Aufgabe 3) wird nicht gemeinsam erarbeitet (Probeklausur auf 135 Min. ausgelegt, eigene Klausur 90 Min.); die Schüler wenden das Wissen über die Reformen selbstständig im Urteil an.
 - Rückmeldung der Lehrkraft: *(steht noch aus)*
 
 ## Hospitationsfeedback (gesammelt)

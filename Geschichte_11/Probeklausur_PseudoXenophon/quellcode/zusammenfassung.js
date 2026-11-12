@@ -46,7 +46,8 @@ const children = [
 
   H("4", "Ausblick"),
   li("**Nächste Stunde:** Urteilsbildung – Haben die Reformen die Vormachtstellung des Adels beendet? Dafür und dagegen abwägen, Fazit, Werturteil mit Maßstab."),
-  li("**Klausur am 25.11. (90 Minuten):** Einleitung mit Themenfrage und TATTEA, Position des Verfassers herausarbeiten, Urteil. Eine eigene Aufgabe zur Beschreibung der Reformen des Kleisthenes gibt es nicht – das Wissen über die Reihe brauchst du aber als Beleg im Urteil."),
+  li("**Die Reformen des Kleisthenes** erarbeiten wir nicht noch einmal gemeinsam – um die Themenfrage zu beantworten, wendest du dein Wissen aus der Reihe selbst an. Wiederhole dafür vorher: die zehn neuen Phylen aus Stadt, Küste und Binnenland, den Rat der 500, das Bürgerrecht über den Demos, den Ostrakismos – und was gleich blieb (Solons Vermögensklassen, Archonten und Areopag)."),
+  li("**Klausur am 25.11. (90 Minuten):** Einleitung mit Themenfrage und TATTEA, Position des Verfassers herausarbeiten, Urteil. Eine eigene Beschreibungsaufgabe zu den Reformen gibt es nicht – im Urteil musst du sie aber als Belege anwenden."),
 ];
 const doc = new Document({ styles: { default: { document: { run: { font: "Calibri", size: S, color: C.dark } } } },
   sections: [{ properties: { page: { size: { width: 11906, height: 16838 }, margin: { top: 800, bottom: 700, left: 992, right: 992 } } }, children }] });
