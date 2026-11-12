@@ -24,7 +24,7 @@ function tab(cw, head, rows, size = 20) {
 const children = [
   P("GESCHICHTE · KLASSE 11 · ZUSAMMENFASSUNG DER STUNDE VOM 11.11.", { size: 16, bold: true, color: C.terra, after: 30 }),
   P([R("Probeklausur: Pseudo-Xenophon über die Demokratie", { font: "Cambria", bold: true, size: 36 })], { after: 40 }),
-  P([R("Was wir erarbeitet haben – bis zur Position des Verfassers", { size: 22, italics: true, color: C.muted })], { after: 160 }),
+  P([R("Was wir erarbeitet haben – bis zur Position des Verfassers – und die Reformen des Kleisthenes für das Urteil", { size: 22, italics: true, color: C.muted })], { after: 160 }),
 
   H("1", "Worum es ging"),
   P("Wir haben an einer Probeklausur geübt, wie man eine Textquelle interpretiert – nach den Arbeitsschritten der Übersicht „So interpretierst du eine Textquelle“. Die Quelle ist ein Auszug aus „Über den Staat der Athener“ von einem unbekannten Verfasser („Pseudo-Xenophon“), geschrieben um 430–424 v. Chr. Er beschreibt die attische Demokratie aus der Sicht eines Gegners."),
@@ -44,9 +44,22 @@ const children = [
   P("**So kann die Position ausformuliert werden:**", { before: 100, after: 60, keepNext: true }),
   kasten(D.muster2),
 
-  H("4", "Ausblick"),
-  li("**Nächste Stunde:** Urteilsbildung – Haben die Reformen die Vormachtstellung des Adels beendet? Dafür und dagegen abwägen, Fazit, Werturteil mit Maßstab."),
-  li("**Die Reformen des Kleisthenes** erarbeiten wir nicht noch einmal gemeinsam – um die Themenfrage zu beantworten, wendest du dein Wissen aus der Reihe selbst an. Wiederhole dafür vorher: die zehn neuen Phylen aus Stadt, Küste und Binnenland, den Rat der 500, das Bürgerrecht über den Demos, den Ostrakismos – und was gleich blieb (Solons Vermögensklassen, Archonten und Areopag)."),
+  H("4", "Die Reformen des Kleisthenes (508/07 v. Chr.)"),
+  P("Dieses Wissen brauchst du, um die Themenfrage im Urteil zu beantworten.", { italics: true, color: C.muted, after: 80 }),
+  P("**Ausgangslage:** Nach dem Sturz der Tyrannis (510 v. Chr.) kämpften die Adelsfamilien wieder um die Macht. Ihre Macht beruhte auf ihrer Gegend: Abhängige Bauern folgten ihrem Adligen als geschlossener Block – so war auch Peisistratos an die Macht gekommen. Kleisthenes setzte sich mit Hilfe des Volkes gegen seinen Rivalen Isagoras durch."),
+  tab([2700, 7222], ["Maßnahme", "Was sich änderte"], [
+    ["Demen (Dörfer)", "Grundeinheit; Bürger ist, wer in der Liste seines Dorfes steht – nicht mehr die Familie entscheidet. Man nennt sich nach dem Dorf („aus Paiania“)."],
+    ["Trittyen (Bezirke)", "Attika in drei Gebiete geteilt (Stadt, Küste, Binnenland), jedes in zehn Bezirke: 30 Trittyen."],
+    ["10 neue Phylen", "Jede Phyle bekommt per Los je einen Bezirk aus Stadt, Küste und Binnenland – die Bürger werden „vermischt“. Die vier alten Phylen nach Abstammung verlieren ihre Bedeutung."],
+    ["Rat der 500", "50 Männer aus jeder Phyle (statt Rat der 400); bereitet die Beschlüsse der Volksversammlung vor."],
+    ["Ostrakismos", "Die Volksversammlung kann einen zu mächtigen Mann für zehn Jahre verbannen."],
+  ]),
+  P("**Wirkung:** Niemand musste umziehen und niemand verlor Land. Aber die Gefolgsleute eines Adligen verteilten sich nun auf mehrere Phylen, und in jeder Phyle waren sie nur ein Drittel. Kein Adliger hatte mehr seine Gegend als Machtblock hinter sich – im Rat, im Heer und beim Bürgerrecht entschieden Bürger aus ganz Attika gemeinsam.", { before: 120 }),
+  P("**Was gleich blieb:** Solons Vermögensklassen bestanden weiter. Archont konnte nur werden, wer zu den Reichsten gehörte; der Areopag aus ehemaligen Archonten beaufsichtigte die Beamten. Die Theten durften nur abstimmen und klagen. Frauen, Metöken und Sklaven hatten keine politischen Rechte. Adlige führten weiterhin die Politik."),
+  P("**Danach:** Themistokles ließ die Archonten ab 487/86 v. Chr. auslosen, die Strategen blieben gewählt; durch die Flotte wurden die Theten wichtig. 462 v. Chr. entmachteten Ephialtes und Perikles den Areopag, Perikles führte Diäten ein. Erst jetzt sprach man von „Demokratie“ – und erst darüber klagt der Verfasser um 430 v. Chr."),
+
+  H("5", "Ausblick"),
+  li("**Nächste Stunde:** Urteilsbildung – Haben die Reformen die Vormachtstellung des Adels beendet? Wende dafür dein Wissen über die Reformen (Abschnitt 4) an: dafür und dagegen abwägen, Fazit, Werturteil mit Maßstab."),
   li("**Klausur am 25.11. (90 Minuten):** Einleitung mit Themenfrage und TATTEA, Position des Verfassers herausarbeiten, Urteil. Eine eigene Beschreibungsaufgabe zu den Reformen gibt es nicht – im Urteil musst du sie aber als Belege anwenden."),
 ];
 const doc = new Document({ styles: { default: { document: { run: { font: "Calibri", size: S, color: C.dark } } } },
