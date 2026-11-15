@@ -39,7 +39,7 @@ const content = [
   table(W, [2300, 6338, 1000], ["Teil", "Erwartung", "Punkte"], [
     ["a) Ämter und Volksversammlung", "von links: Areopag – Archonten (Pfeil zum Areopag) – Rat der 400 – Geschworenengericht; unten: Volksversammlung", "je 1 = 5"],
     ["b) Rechte", "1. Klasse: alles · 2. und 3. Klasse: abstimmen, klagen, Rat – nicht Archont · Theten: nur abstimmen und klagen", "je Klasse 1 = 4"],
-    ["c) Pfeile", "1. Klasse → Archonten und Rat der 400; 2. und 3. Klasse → Rat der 400; Theten → kein Amt", "1"],
+    ["c) Pfeile", "1. Klasse → Archonten und Rat der 400; 2. und 3. Klasse → Rat der 400; Volksversammlung (alle Bürger, auch Theten) → Geschworenengericht", "1"],
   ], { firstFill: true }),
 
   h("Aufgabe 5 · Selbst urteilen (6 P.)"),

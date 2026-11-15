@@ -58,7 +58,8 @@ pfeil(653, 995, 984, 395)      # 1. Klasse → Archonten
 pfeil(728, 995, 1744, 395)     # 1. Klasse → Rat der 400
 pfeil(1208, 995, 1984, 395)    # 2. Klasse → Rat der 400
 pfeil(2029, 995, 2077, 395)    # 3. Klasse → Rat der 400
-text("kein Amt", COLS[3], 900, 60)
+pfeil(3146, 1024, 2960, 395)   # Volksversammlung (alle Bürger, auch Theten) → Geschworenengericht
+text("alle Bürger", 2850, 700, 56); text("(auch Theten)", 2830, 770, 56)
 
 cmd.append(OUT)
 subprocess.run(cmd, check=True)
