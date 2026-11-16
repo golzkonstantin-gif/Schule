@@ -72,6 +72,7 @@
 
 ### Wiederholung: Die Reform des Kleisthenes Schritt für Schritt (geplant)
 - Anlass (Rückmeldung der Lehrkraft, 4.11.): Die Schüler hatten Probleme, die Reform konkret nachzuvollziehen → muss wiederholt werden, schrittweise.
+- **Tafelbild Vorher/Nachher (16.11.):** `Tafelbild_Reform_Vorher_Nachher` (PNG/PDF, A4 quer, tintensparend; Quelle `quellcode/tafelbild.html`): ① Vorher-Kette (Adliger → Dörfer → alte Phyle → Rat der 400: Gegend = Phyle = Block), ② Nachher-Kette (Stadt/Küste/Binnenland → Los → gemischte Phyle, seine Leute ⅓ → Rat der 500: kein Block), ③ Tabelle geändert/bleibt mit A/B/C wie im Hilfeblatt Urteil, ④ Erklärsätze zum Nacherzählen.
 - Material: `Wiederholung_Kleisthenes_Reform/` (12 Folien ≥ 27 pt, Quellcode in `quellcode/`): Leitfrage → Ausgangslage (Gegenden als Blöcke, Peisistratos) → Schritt 1 Dorf (Demos) → 2 Bezirk (Trittys, 3 × 10) → 3 Los (je 1 Bezirk aus Stadt, Küste, Binnenland = 1 Phyle) → 4 zehn Phylen → 5 Rat und Heer → Folge für Thrasymachos → Treppe Dorf–Bezirk–Phyle–Rat → 5 Prüffragen mit Lösung. Sprechtext und Prüffragen je Schritt in den Notizen.
 - Rückmeldung der Lehrkraft: *(steht noch aus)*
 
