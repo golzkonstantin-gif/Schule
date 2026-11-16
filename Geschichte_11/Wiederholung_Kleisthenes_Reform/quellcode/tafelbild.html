@@ -7,9 +7,12 @@
   :root { --dark:#2B2318; --terra:#AD4426; --gold:#B8862B; --muted:#5A5044; --line:#BFB5A5;
           --stadt:#B8862B; --kueste:#3E5C76; --binnen:#3C783C; }
   * { box-sizing: border-box; margin: 0; padding: 0; }
-  body { width: 1600px; height: 1131px; background: #fff; color: var(--dark); font-family: Carlito, Calibri, sans-serif; padding: 34px 44px; }
-  h1 { font-family: Caladea, Cambria, serif; font-size: 44px; line-height: 1.05; }
-  .frage { font-size: 25px; color: var(--terra); font-weight: 700; margin: 6px 0 14px; }
+  body { width: 1600px; height: 1131px; background: #fff; color: var(--dark); font-family: Carlito, Calibri, sans-serif; padding: 26px 44px; }
+  h1 { font-family: Caladea, Cambria, serif; font-size: 40px; line-height: 1.05; }
+  .frage { font-size: 25px; color: var(--terra); font-weight: 700; margin: 4px 0 8px; }
+  .begriffe { display: grid; grid-template-columns: 1fr 1fr 1.25fr; gap: 12px; margin-bottom: 12px; }
+  .begriffe div { border: 2.5px solid var(--dark); border-radius: 9px; padding: 4px 12px; font-size: 21px; line-height: 1.2; }
+  .begriffe b { font-family: Caladea, Cambria, serif; font-size: 25px; color: var(--terra); }
   .top { display: grid; grid-template-columns: 1fr 120px 1.35fr; gap: 0; align-items: stretch; }
   .panel { border: 3px solid var(--dark); border-radius: 14px; padding: 12px 18px 12px; position: relative; }
   .panel h2 { font-family: Caladea, Cambria, serif; font-size: 32px; margin-bottom: 8px; display: flex; align-items: baseline; gap: 12px; }
@@ -32,21 +35,27 @@
   .phyle div:last-child { border-right: none; }
   .phyle .seine { outline: 3px dashed var(--terra); outline-offset: -5px; }
   .lbl { font-size: 20px; color: var(--muted); margin-top: 3px; text-align: center; }
-  table { width: 100%; border-collapse: collapse; margin-top: 16px; font-size: 25px; }
-  th, td { border: 1.5px solid var(--line); padding: 7px 10px; text-align: left; vertical-align: middle; line-height: 1.15; }
+  table { width: 100%; border-collapse: collapse; margin-top: 12px; font-size: 24px; }
+  th, td { border: 1.5px solid var(--line); padding: 4px 10px; text-align: left; vertical-align: middle; line-height: 1.15; }
   th { border-bottom: 3px solid var(--terra); font-size: 23px; }
   td.k { font-weight: 700; width: 235px; } td.k b { color: var(--terra); display: inline-block; width: 26px; }
   td.e { width: 125px; font-weight: 700; text-align: center; }
   .geaendert { color: var(--binnen); } .bleibt { color: var(--terra); }
   tr.trenn td { border-top: 3px solid var(--dark); }
-  .erklaer { margin-top: 16px; display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; }
+  .erklaer { margin-top: 10px; display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; }
   .erklaer div { border-left: 5px solid var(--terra); padding: 2px 10px; font-size: 23px; line-height: 1.2; }
   .erklaer b { color: var(--terra); }
-  .fazit { margin-top: 14px; font-size: 27px; font-weight: 700; text-align: center; }
+  .fazit { margin-top: 8px; font-size: 26px; font-weight: 700; text-align: center; }
   .fazit span { color: var(--terra); }
 </style></head><body>
 <h1>Die Reform des Kleisthenes (508/07 v. Chr.)</h1>
 <p class="frage">Wie brach Kleisthenes die Macht der Adelsfamilien – ohne ihnen Land wegzunehmen?</p>
+
+<div class="begriffe">
+  <div><b>Demos</b> (Mz. Demen) = Dorf<br>kleinste Einheit; hier steht man in der Bürgerliste</div>
+  <div><b>Trittys</b> (Mz. Trittyen) = Bezirk<br>mehrere Demen zusammen; 30 in ganz Attika</div>
+  <div><b>Phyle</b> (Mz. Phylen) = Großgruppe der Bürger<br>vorher 4 nach Abstammung · nachher 10 aus je 3 Trittyen</div>
+</div>
 
 <div class="top">
   <div class="panel">
@@ -54,10 +63,10 @@
     <div class="chain">
       <div class="box">Adliger</div>
       <div class="down">↓ <small>abhängige Bauern folgen ihm</small></div>
-      <div class="dorfrow"><span class="dorf">Dorf</span><span class="dorf">Dorf</span><span class="dorf">Dorf</span><span class="dorf">Dorf</span></div>
-      <div class="lbl">seine Gegend</div>
+      <div class="dorfrow"><span class="dorf">Demos</span><span class="dorf">Demos</span><span class="dorf">Demos</span><span class="dorf">Demos</span></div>
+      <div class="lbl">seine Gegend: mehrere Dörfer (Demen)</div>
       <div class="down">↓ <small>alle in derselben Phyle</small></div>
-      <div class="box">alte Phyle <span style="font-weight:400">(nach Abstammung)</span></div>
+      <div class="box">alte Phyle <span style="font-weight:400">(eine von 4, nach Abstammung)</span></div>
       <div class="down">↓ <small>stimmen gemeinsam ab</small></div>
       <div class="box">Rat der 400 <span style="font-weight:400">(100 je Phyle)</span></div>
     </div>
@@ -70,13 +79,13 @@
     <h2><span class="nr">②</span> Nachher</h2>
     <div class="chain">
       <div class="regions" style="width:100%">
-        <div class="reg stadt">Stadt<small>10 Bezirke</small></div>
-        <div class="reg kueste">Küste<small>10 Bezirke</small></div>
-        <div class="reg binnen">Binnenland<small>10 Bezirke · hier seine Gegend</small></div>
+        <div class="reg stadt">Stadt<small>10 Trittyen</small></div>
+        <div class="reg kueste">Küste<small>10 Trittyen</small></div>
+        <div class="reg binnen">Binnenland<small>10 Trittyen · eine davon: seine Demen</small></div>
       </div>
-      <div class="down">↓ <small>per Los: aus jedem Gebiet 1 Bezirk</small></div>
-      <div class="phyle"><div class="stadt">Stadt</div><div class="kueste">Küste</div><div class="binnen seine">seine Leute</div></div>
-      <div class="lbl">eine von 10 neuen Phylen (die anderen 9 genauso) · seine Leute sind nur ⅓</div>
+      <div class="down">↓ <small>per Los: aus jedem Gebiet 1 Trittys</small></div>
+      <div class="phyle"><div class="stadt">Trittys Stadt</div><div class="kueste">Trittys Küste</div><div class="binnen seine">seine Trittys</div></div>
+      <div class="lbl">= eine neue Phyle (10 Phylen, alle so gebaut) · seine Leute sind nur ⅓</div>
       <div class="down">↓ <small>jede Phyle schickt 50 Männer</small></div>
       <div class="box">Rat der 500 <span style="font-weight:400">(gemischt aus ganz Attika)</span></div>
     </div>
@@ -87,7 +96,7 @@
 <table>
   <tr><th>③ Was änderte sich – was blieb?</th><th>Vorher</th><th>Nachher</th><th style="text-align:center">Ergebnis</th></tr>
   <tr><td class="k"><b>A</b>Gefolgschaft</td><td>Adliger hat seine Gegend als geschlossenen Block hinter sich</td><td>Gefolgsleute auf mehrere Phylen verteilt – in jeder nur ⅓</td><td class="e geaendert">geändert</td></tr>
-  <tr><td class="k"><b>A</b>Bürgerrecht</td><td>Familie und Abstammung entscheiden</td><td>Dorfliste (Demos) entscheidet – niemand zieht um</td><td class="e geaendert">geändert</td></tr>
+  <tr><td class="k"><b>A</b>Bürgerrecht</td><td>Familie und Abstammung entscheiden</td><td>Bürgerliste des Demos (Dorf) entscheidet – niemand zieht um</td><td class="e geaendert">geändert</td></tr>
   <tr><td class="k"><b>A</b>Rat</td><td>Rat der 400 aus 4 alten Phylen</td><td>Rat der 500: 50 Männer je neuer Phyle</td><td class="e geaendert">geändert</td></tr>
   <tr><td class="k"><b>A</b>Schutz</td><td>–</td><td>Ostrakismos: zu mächtige Männer 10 Jahre verbannen</td><td class="e geaendert">neu</td></tr>
   <tr class="trenn"><td class="k"><b>B</b>Ämter</td><td>Archonten nur aus den Reichsten</td><td>gleich – Vermögensklassen Solons bleiben</td><td class="e bleibt">bleibt</td></tr>
