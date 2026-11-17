@@ -159,14 +159,18 @@ const SAGT = "„Wir sind euch entgegengekommen. Jetzt sind alle gleich. Was wol
 
 // ============ 1 Karikatur / Ankommen ============
 {
-  const s = blank("Ankommen", "Ein Gespräch in Versailles", 0, "Die Folie steht beim Betreten. Niemand muss etwas sagen. Die Karikatur ist selbst gezeichnet, keine historische Quelle. Die Aussage ist bewusst überspitzt: eine erfundene Selbstdarstellung von Klerus und Adel (großzügig, alles erledigt), die die Klasse am Ende selbst widerlegt (nicht freiwillig, sondern aus Angst vor den Aufständen; nicht gleich). Klerus und Adel sprechen, der Dritte Stand (Bauern und Bürger) hört zu. Sie sagen: „Wir sind euch entgegengekommen. Jetzt sind alle gleich. Was wollt ihr noch?“ Hintergrund: In der Nacht zum 4. August 1789 beschloss die Nationalversammlung, die Vorrechte abzuschaffen (Sie erklären das gleich in Phase 2). Die Klasse schreibt ihre Vermutung ins Heft (bleibt stehen, wird am Ende mit dem Ergebnis verglichen): „Reicht das dem Dritten Stand? Ich vermute …“ Keine Besprechung. Ansage: „Stifte liegen. Ihr hört nur zu.“ Danach Folie 2 bis 5 in zusammen etwa 2 Minuten.");
-  s.addImage({ path: IMG + "karikatur_drei_staende.png", x: 0.6, y: 1.45, w: 7.0, h: 4.375 });
-  bubbleTop(s, SAGT);
-  [["Klerus", 0.75, 1.75], ["Adel", 3.3, 1.4], ["Dritter Stand", 5.05, 2.45]].forEach(([n, x, w]) => {
-    box(s, x, 5.2, w, 0.52, WHITE, { line: NAVY, lw: 2 });
-    txt(s, n, { x, y: 5.2, w, h: 0.52, fontSize: 27, bold: true, color: NAVY, align: "center", valign: "middle" });
+  const s = blank("Ankommen", "Ein Gespräch in Versailles", 0, "Die Folie steht beim Betreten. Niemand muss etwas sagen. Die Karikatur ist selbst gezeichnet, keine historische Quelle. An der Wand hängen zwei Bilder: der Eid im Ballhaus (links) und der Sturm auf die Bastille (rechts). Davor stehen Klerus und Adel und sagen: „Wir sind euch entgegengekommen. Jetzt sind alle gleich. Was wollt ihr noch?“ Der Dritte Stand (Bauern und Bürger) hört zu. Die Aussage ist bewusst überspitzt, eine erfundene Selbstdarstellung. Die Bilder an der Wand sind der Hinweis: Das Entgegenkommen hat eine Vorgeschichte. Die Klasse schreibt ihre Vermutung ins Heft (bleibt stehen, wird am Ende mit dem Ergebnis verglichen): „Warum kommen uns Klerus und Adel entgegen? Ich vermute …“ Keine Besprechung. Ansage: „Stifte liegen. Ihr hört nur zu.“ Danach Folie 2 bis 5 in zusammen etwa 2 Minuten.");
+  const IW = 6.8, IH = (IW * 970) / 1280;
+  s.addImage({ path: IMG + "karikatur_rueckschau.png", x: 0.6, y: 1.4, w: IW, h: IH });
+  s.addShape(pres.shapes.ROUNDED_RECTANGLE, { x: 1.0, y: 3.35, w: 6.0, h: 1.5, rectRadius: 0.18, fill: { color: WHITE }, line: { color: NAVY, width: 3 } });
+  s.addShape(pres.shapes.ISOSCELES_TRIANGLE, { x: 3.7, y: 4.8, w: 0.6, h: 0.45, rotate: 180, fill: { color: WHITE }, line: { color: NAVY, width: 3 } });
+  s.addShape(pres.shapes.RECTANGLE, { x: 3.72, y: 4.77, w: 0.56, h: 0.1, fill: { color: WHITE }, line: { type: "none" } });
+  txt(s, SAGT, { x: 1.2, y: 3.35, w: 5.6, h: 1.5, fontFace: HEAD, fontSize: 27, color: NAVY, valign: "middle" });
+  [["Klerus", 0.95, 1.6], ["Adel", 3.3, 1.4], ["Dritter Stand", 5.0, 2.4]].forEach(([n, x, w]) => {
+    box(s, x, 6.0, w, 0.5, WHITE, { line: NAVY, lw: 2 });
+    txt(s, n, { x, y: 6.0, w, h: 0.5, fontSize: 27, bold: true, color: NAVY, align: "center", valign: "middle" });
   });
-  [["Heft raus. Datum und Überschrift.", 1.6, 1.0], ["Lies, was Klerus und Adel sagen. Der Dritte Stand hört zu.", 2.75, 1.4], ["Schreibe: Reicht das? Ich vermute …", 4.5, 1.5]].forEach(([x, y, h], i) => {
+  [["Heft raus. Datum und Überschrift.", 1.6, 1.0], ["Sieh dir die Bilder an. Lies, was Klerus und Adel sagen.", 2.75, 1.5], ["Schreibe: Warum kommen sie entgegen? Ich vermute …", 4.45, 1.6]].forEach(([x, y, h], i) => {
     numCircle(s, i + 1, 7.95, y + 0.05, 0.45, RED);
     txt(s, x, { x: 8.6, y, w: 4.15, h, fontSize: 27, bold: true, valign: "top" });
   });
@@ -211,7 +215,7 @@ const SAGT = "„Wir sind euch entgegengekommen. Jetzt sind alle gleich. Was wol
 // ============ 5 Ablauf ============
 {
   const s = blank("Ablauf", "So arbeiten wir heute", undefined, "Ablauf zeigen (30 Sekunden). Die Kreise oben rechts zeigen die Phase: A V I V A. Der Stern * bedeutet: wird eventuell nicht mehr geschafft (Ziel 3). Insgesamt 45 Minuten.");
-  const ph = [["A", "Ankommen", "Karikatur", "4 Min."], ["V", "Vorwissen", "Rückblick 1789", "5 Min."], ["I", "Informieren", "Quelle auswerten", "9 Min."], ["V", "Verarbeiten", "Arbeitsblatt, Urteil", "20 Min."], ["A", "Auswerten", "Antwort als Dritter Stand", "7 Min."]];
+  const ph = [["A", "Ankommen", "Karikatur", "4 Min."], ["V", "Vorwissen", "Rückschau", "5 Min."], ["I", "Informieren", "Quelle auswerten", "9 Min."], ["V", "Verarbeiten", "Arbeitsblatt, Urteil", "20 Min."], ["A", "Auswerten", "Antwort als Dritter Stand", "7 Min."]];
   ph.forEach(([l, n, x, m], i) => {
     const xx = 0.6 + i * 2.45;
     box(s, xx, 1.9, 2.3, 3.6, i % 2 ? LIGHT : LIGHT2);
@@ -224,32 +228,35 @@ const SAGT = "„Wir sind euch entgegengekommen. Jetzt sind alle gleich. Was wol
   bar(s, [{ text: "Wichtig: ", options: { bold: true } }, { text: "Wir arbeiten leise. Gesprochen wird nur nach Ansage.", options: {} }]);
 }
 
-// ============ 6 Rückblick: Wahr oder falsch ============
+// ============ 6 Rückschau: Bilder ============
 {
-  const { s } = taskSlide("V · Vorwissen aktivieren · Rückblick", "Das wissen wir schon: richtig oder falsch?", [
-    "Der Dritte Stand verlor die Abstimmung nach Ständen, obwohl er fast alle Menschen vertritt.",
-    "Beim Ballhausschwur schworen die Abgeordneten, nicht auseinanderzugehen, bis es eine Verfassung gibt.",
-    "Der Sturm auf die Bastille war ein gewaltloser Protest.",
-    "Der Ballhausschwur fand am 14. Juli 1789 statt.",
-  ], "2 Min. allein, 1 Min. Partner, 1 Min. Plenum", "Rückblick (5 Minuten, allein, Partnercheck, Plenum). Ansage: „Stifte liegen. Jetzt arbeitet ihr allein. Die Aufgabe steht rechts.“ Aufgabe: Schreibe W oder F ins Heft, bei falschen Aussagen die Korrektur. Dann: „Flüsterstufe. Nur dein Partner hört dich. Vergleicht.“ Dann Stichproben bei 3 bis 4 Personen unterschiedlichen Niveaus (kurze Antwort, kein Gespräch, unbenotet), dann Folie 7. Hinweis: Aussage 3 und 4 sind falsch. Aussage 4 ist ein typischer Fehler (Datum). Wurde in Stunde 3 etwas nicht geschafft (Ziel 2 mit Stern), steht es hier als Wiederholung: Passen Sie Aussage 3 an. Gelenk: „1789 hat der Dritte Stand gehandelt. Aber was haben Klerus und Adel danach getan? Das lest ihr jetzt.“", "Fertig? Stift hinlegen.", 12.15);
-  phaseTag(s, 1);
+  const s = blank("V · Vorwissen aktivieren · Rückschau", "Rückschau: Was zeigen die Bilder?", 1, "Rückschau (5 Minuten, allein, Partnercheck, Plenum). Ansage: „Stifte liegen. Ihr hört nur zu. Schaut auf die zwei Bilder an der Wand der Karikatur. Jetzt arbeitet ihr allein. Die Aufgabe steht rechts.“ Die Bilder sind unbeschriftet: Die Klasse erkennt selbst, welche Ereignisse sie zeigen (links der Eid im Ballhaus, 20. Juni, rechts der Sturm auf die Bastille, 14. Juli). 2 Minuten allein ins Heft: zu jedem Bild „Was geschah? Was bewirkte es?“ Dann 1 Minute Partnercheck: „Flüsterstufe. Nur dein Partner hört dich. Erklärt euch: Was haben die Bilder mit dem Entgegenkommen zu tun?“ Dann 2 Minuten Plenum: Stichproben bei 3 bis 4 Personen unterschiedlichen Niveaus (kurze Antwort, unbenotet), dann Folie 7. Wurde in Stunde 3 etwas nicht geschafft (zum Beispiel die Reihenfolge am Zeitstrahl), steht es hier als Wiederholung. Gelenk: „Die Bilder haben mit dem Entgegenkommen zu tun. Wie genau, seht ihr gleich.“");
+  const K = 0.0062, FW = 1280 * K, FH = 970 * K;
+  s.addImage({ path: IMG + "karikatur_rueckschau.png", x: 0.6, y: 1.5, w: FW, h: FH, sizing: { type: "crop", x: 30 * K, y: 22 * K, w: 580 * K, h: 336 * K } });
+  s.addImage({ path: IMG + "karikatur_rueckschau.png", x: 0.6, y: 1.5 + 336 * K + 0.12, w: FW, h: FH, sizing: { type: "crop", x: 670 * K, y: 22 * K, w: 580 * K, h: 336 * K } });
+  [["Schaue auf die zwei Bilder.", 1], ["Schreibe zu jedem Bild: Was geschah? Was bewirkte es?", 2], ["Erkläre deinem Partner: Was haben die Bilder mit dem Entgegenkommen zu tun?", 3]].forEach(([x, n], i) => {
+    const ys = [1.5, 2.45, 4.0], hs = [0.8, 1.45, 2.0];
+    box(s, 4.6, ys[i], 8.15, hs[i], i % 2 ? LIGHT : LIGHT2);
+    numCircle(s, n, 4.8, ys[i] + (hs[i] - 0.45) / 2, 0.45, NAVY);
+    txt(s, x, { x: 5.5, y: ys[i], w: 7.1, h: hs[i], fontSize: 27, bold: true, valign: "middle" });
+  });
+  bar(s, [{ text: "Zeit: ", options: { bold: true } }, { text: "2 Min. allein, 1 Min. Partner, 2 Min. Plenum      ", options: {} }, { text: "Fertig? Stift hinlegen.", options: { italic: true, color: ICE } }]);
 }
 
-// ============ 7 Auflösung Rückblick ============
+// ============ 7 Auflösung Rückschau ============
 {
-  const s = blank("V · Vorwissen aktivieren · Kontrolle", "Das stimmt", 1, "Auflösung (1 Minute). Ansage: „Vergleicht und verbessert mit Grün.“ 1 richtig (Klerus und Adel haben zusammen zwei von drei Stimmen), 2 richtig, 3 falsch (gewaltsam, etwa 100 Tote unter den Angreifern, siehe Stunde 3), 4 falsch (20. Juni 1789; 14. Juli ist die Bastille). Gelenk zu Phase 2: „Der Dritte Stand hat gehandelt. Und was passiert danach? Hört zu.“");
-  [["1", "richtig", JA_(), "Klerus und Adel haben zusammen zwei von drei Stimmen."], ["2", "richtig", JA_(), "Eid im Ballhaus, 20. Juni 1789."], ["3", "falsch", NEIN_(), "Die Bastille war gewaltsam: Schüsse, etwa 100 Tote."], ["4", "falsch", NEIN_(), "Ballhausschwur: 20. Juni. Bastille: 14. Juli."]].forEach(([n, v, col, x], i) => {
-    const y = 1.5 + i * 1.1;
-    box(s, 0.6, y, 12.15, 0.95, i % 2 ? LIGHT : LIGHT2);
-    numCircle(s, n, 0.8, y + 0.22, 0.5, NAVY);
-    box(s, 1.55, y + 0.15, 1.9, 0.65, col);
-    txt(s, v, { x: 1.55, y: y + 0.15, w: 1.9, h: 0.65, fontSize: 27, bold: true, color: WHITE, align: "center", valign: "middle" });
-    txt(s, x, { x: 3.65, y, w: 9.0, h: 0.95, fontFace: HEAD, fontSize: 27, valign: "middle" });
+  const s = blank("V · Vorwissen aktivieren · Kontrolle", "So hängt es zusammen", 1, "Auflösung (1 Minute). Ansage: „Vergleicht und verbessert mit Grün.“ Kette: 20. Juni Ballhausschwur: Die Abgeordneten schwören, nicht auseinanderzugehen, die Nationalversammlung bleibt zusammen (gewaltlos). 14. Juli Bastille: Die Pariser greifen die Festung an, der König zieht die Soldaten ab, im Land greifen Bauern Schlösser an. Sommer 1789: Klerus und Adel haben Angst vor weiteren Aufständen. Damit ist die Frage der Karikatur teilweise beantwortet: Das Entgegenkommen war nicht freiwillig. Die Klasse prüft ihre Vermutung. Warnung vor dem Fehler: Nicht „der König hat die Vorrechte abgeschafft“. Das tat die Nationalversammlung (Folie 8). Gelenk: „Und was beschließt die Nationalversammlung? Hört zu.“");
+  [["20. Juni 1789", "Ballhausschwur", "Die Versammlung bleibt zusammen.", "2E9E6B"], ["14. Juli 1789", "Sturm auf die Bastille", "Der König zieht die Soldaten ab. Aufstände im Land.", "D9534F"], ["Sommer 1789", "Klerus und Adel", "Sie haben Angst vor weiteren Aufständen.", "E8A33D"]].forEach(([d, h, x, col], i) => {
+    const xx = 0.6 + i * 4.2;
+    box(s, xx, 1.5, 3.7, 4.4, i % 2 ? LIGHT : LIGHT2);
+    s.addShape(pres.shapes.RECTANGLE, { x: xx, y: 1.5, w: 3.7, h: 0.16, fill: { color: col }, line: { type: "none" } });
+    txt(s, d, { x: xx + 0.2, y: 1.8, w: 3.3, h: 0.55, fontSize: 27, bold: true, color: RED });
+    txt(s, h, { x: xx + 0.2, y: 2.4, w: 3.3, h: 1.0, fontFace: HEAD, fontSize: 27, bold: true, valign: "top" });
+    txt(s, x, { x: xx + 0.2, y: 3.5, w: 3.3, h: 2.3, fontSize: 27 });
+    if (i < 2) s.addShape(pres.shapes.RIGHT_ARROW, { x: xx + 3.72, y: 3.4, w: 0.46, h: 0.5, fill: { color: NAVY }, line: { type: "none" } });
   });
-  bar(s, [{ text: "Jetzt: ", options: { bold: true } }, { text: "Verbessere falsche Aussagen mit Grün.", options: {} }]);
+  bar(s, [{ text: "Jetzt: ", options: { bold: true } }, { text: "Vergleiche mit deiner Vermutung. Verbessere mit Grün.", options: {} }]);
 }
-function JA_() { return "2E9E6B"; }
-function NEIN_() { return "D9534F"; }
 
 // ============ 8 Zeitstrahl Sommer 1789 (Portion 1) ============
 {
@@ -382,9 +389,9 @@ function NEIN_() { return "D9534F"; }
 // ============ 19 Abschlussfrage ============
 {
   const s = blank("A · Auswerten", "Abschlussfrage: Du bist der Dritte Stand", 4, "Ansage: „Stifte liegen. Ihr hört nur zu. Das ist die letzte Aufgabe. Schaut noch einmal auf die Karikatur vom Anfang. Ihr seid der Dritte Stand (Bauern und Bürger). Klerus und Adel haben gesagt: ‚Wir sind euch entgegengekommen. Jetzt sind alle gleich. Was wollt ihr noch?‘ Denkt zehn Sekunden nach. Ich rufe euch auf.“ Die Antwort kommt mündlich, in der Ich-Form, ohne Schnipsel: „Ich antworte euch: …, weil Artikel … sagt …“ Mehrere gute Antworten. Geprüft werden Position, ein Beleg aus der Quelle (Artikel) und ein „weil“. Erwartung (Auswahl, keine Musterlösung): „Das reicht uns nicht, weil Artikel 3 sagt, dass die Herrschaft vom Volk ausgeht, und wir wollen mitbestimmen.“ „Das ist ein Anfang, weil Artikel 6 sagt, dass das Gesetz für alle gleich ist. Aber dann müssen auch alle gleich zahlen.“ „Wir geben uns nicht zufrieden, weil auf dem Papier alles gleich ist, aber die Bauern noch Abgaben ablösen müssen.“ Form nach Verlauf: Blitzlicht (4 bis 6 Personen gezielt aufrufen, kein Kommentar) oder Duell zu zweit (leise). Vergleich mit der Vermutung vom Anfang: Wer hat umgedacht? Selbst gezeichnete Figuren sind keine historischen Quellen. Unbenotet.");
-  s.addImage({ path: IMG + "karikatur_drei_staende.png", x: 0.6, y: 1.5, w: 5.4, h: 3.375 });
-  box(s, 0.6, 5.0, 5.4, 0.75, WHITE, { line: NAVY, lw: 2 });
-  txt(s, "Klerus · Adel · Dritter Stand", { x: 0.6, y: 5.0, w: 5.4, h: 0.75, fontSize: 27, bold: true, color: NAVY, align: "center", valign: "middle" });
+  s.addImage({ path: IMG + "karikatur_rueckschau.png", x: 0.6, y: 1.5, w: 5.0, h: 3.789 });
+  box(s, 0.6, 5.4, 5.0, 0.7, WHITE, { line: NAVY, lw: 2 });
+  txt(s, "Klerus · Adel · Dritter Stand", { x: 0.6, y: 5.4, w: 5.0, h: 0.7, fontSize: 27, bold: true, color: NAVY, align: "center", valign: "middle" });
   bubble(s, 6.4, 1.5, 6.35, 2.2, WHITE, NAVY, "left", 2.6);
   txt(s, "Klerus und Adel: " + SAGT, { x: 6.7, y: 1.5, w: 5.85, h: 2.2, fontFace: HEAD, fontSize: 27, bold: true, color: NAVY, valign: "middle" });
   bubble(s, 6.4, 3.95, 6.35, 1.3, "FDF1D8", GOLD, "left", 4.6);

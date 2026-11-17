@@ -51,29 +51,29 @@ d.push(table([2600, 7606], [
   ["Prüfaufgabe: Woran erkenne ich es?", "Arbeitsblatt Seite 1 (Artikel 2, 4 und 6 selbst ausgefüllt), Urteil auf Seite 2 (Beleg, Wirkung, Urteil mit Maßstab, Gegenargument), mündliche Antwort als Dritter Stand („Ich antworte euch: …, weil Artikel … sagt …“). Freiwillige Abgabe, Rückmeldung nach drei Stufen. Punkte oder Noten gibt es heute nicht (später)."],
   ["Mindestziel", "Ziel 1 und 2. Ziel 3 hat einen Stern (Urteil auf zwei Sätze kürzbar). „Auswerten“ bleibt immer."],
   ["Beitrag zur Reihe", "Stunde 4 von 11 (Sequenz, Fassung vom 17.11.). Sie zeigt, wie sich die Rechte nach dem Ende der Vorrechte in einer Quelle niederschlagen, baut die Kompetenz Quellenauswertung auf (wiederkehrend, auch im Test) und führt mit „Für wen gelten die Rechte wirklich?“ zur Verfassung 1791 (Stunde 5)."],
-  ["Vorgehen", "Rückblick indirekt (allein, Partnercheck, Plenum), Quellenauswertung direkt: Vormachen (Lehrkraft denkt laut), angeleitet (Artikel 3 mit Hilfe), selbstständig (Artikel 2, 4, 6). Direktes Vorgehen, weil das Vorwissen zur Quellenarbeit gering ist. Urteil indirekt (offenes Format mit Satzanfängen). Direkt oder indirekt wird je Phase entschieden."],
+  ["Vorgehen", "Rückschau indirekt (allein, Partnercheck, Plenum), Quellenauswertung direkt: Vormachen (Lehrkraft denkt laut), angeleitet (Artikel 3 mit Hilfe), selbstständig (Artikel 2, 4, 6). Direktes Vorgehen, weil das Vorwissen zur Quellenarbeit gering ist. Urteil indirekt (offenes Format mit Satzanfängen). Direkt oder indirekt wird je Phase entschieden."],
 ].map(([a, b]) => row([tc(a, 2600, { fill: LIGHT, bold: true }), tc(b, 7606)], 340))));
 
 d.push(h3("Was aus den bisherigen Stunden übernommen wird"));
 d.push(...bullets([
-  "Stunde 3 (18.11.): Ballhausschwur und Bastille mit fünf Kriterien, Reihenfolge am Zeitstrahl, „wirksam heißt nicht gerechtfertigt“. Rückblick (Folie 6 und 7) wiederholt das; Artikel 3 und 2 knüpfen daran an (Macht geht vom Volk aus, Widerstand). Falls in Stunde 3 etwas nicht geschafft wurde, hier als Wiederholung aufgreifen.",
+  "Stunde 3 (18.11.): Ballhausschwur und Bastille mit fünf Kriterien, Reihenfolge am Zeitstrahl, „wirksam heißt nicht gerechtfertigt“. Die Rückschau (Folie 6 und 7) wiederholt das an zwei Bildern; Artikel 3 und 2 knüpfen daran an (Macht geht vom Volk aus, Widerstand). Falls in Stunde 3 etwas nicht geschafft wurde, hier als Wiederholung aufgreifen.",
   "Stunde 2 (11.11.): Ständeordnung und Abstimmung nach Ständen (Vorrechte). Sie ist der Vergleichsmaßstab für Schritt 2 „Einordnen“.",
-  "Karikatur als Einstieg und als Abschluss (Antwort in der Rolle des Dritten Stands): selbst gezeichnet, keine historische Quelle. Impuls, keine Analyse.",
+  "Karikatur als Einstieg, Rückschau und Abschluss (Antwort in der Rolle des Dritten Stands): selbst gezeichnet, keine historische Quelle. An der Wand hängen zwei Bilder (Eid im Ballhaus, Sturm auf die Bastille), davor sagen Klerus und Adel: „Wir sind euch entgegengekommen.“ Impuls, keine Analyse.",
   "Rückmeldung der Kollegin (Parallelklasse): Im ersten Teil wurden wichtige Ereignisse des Epochenjahrs 1789 wiederholt, im zweiten Teil gab es ein Arbeitsblatt zu Artikel 1, 2, 3, 4, 6, 10 und 11 mit Zuordnung der Begriffe Freiheit, Religionsfreiheit, Meinungsfreiheit, Volkssouveränität, Grundrechte und Gleichheit sowie Begründung eines wichtigen Artikels. Dieselben Artikel und Begriffe gelten hier (Vergleichbarkeit, Test).",
-  "Wunsch der Lehrkraft (17.11.): Schwerpunkt der Hospitation ist die Aktivierung mit Fokus auf einem didaktischen Schwerpunkt (hier: Kompetenzerwerb, Quelle auswerten). Punkte folgen später, freiwillige Abgabe mit Rückmeldung ist möglich.",
-  "Regel „höchstens drei Methoden“: Quellenauswertung mit Vormachen und Partnercheck, Urteil, mündliche Abschlussantwort. Karikatur und Rückblick sind Impuls beziehungsweise Routine.",
+  "Wunsch der Lehrkraft (17.11.): Die Karikatur soll eine Rückschau mit Bezug zu Bastille und Ballhaus sein (Bilder an der Wand, unbeschriftet; die Klasse erkennt sie selbst). Schwerpunkt der Hospitation ist die Aktivierung mit Fokus auf einem didaktischen Schwerpunkt (hier: Kompetenzerwerb, Quelle auswerten). Punkte folgen später, freiwillige Abgabe mit Rückmeldung ist möglich.",
+  "Regel „höchstens drei Methoden“: Quellenauswertung mit Vormachen und Partnercheck, Urteil, mündliche Abschlussantwort. Karikatur und Rückschau sind Impuls beziehungsweise Routine.",
 ]));
 
 d.push(h3("Zeitplan (45 Minuten)"));
 d.push(table([800, 2300, 4300, 2806], [
   row([th("Min.", 800), th("AVIVA", 2300), th("Phase", 4300), th("Arbeitsform", 2806)], 320),
-  ...[["4", "Ankommen", "0  Karikatur, Vermutung, Stundenfrage, Ziele, Ablauf", "still, allein"], ["5", "Vorwissen", "1  Rückblick 1789: richtig oder falsch", "allein, Partnercheck, Plenum"], ["9", "Informieren", "2  Zeitstrahl bis 26. August (3), Drei Schritte und Modell Artikel 1 (4), Prüffrage und Raster (2)", "hört zu, Stichprobe"], ["20", "Verarbeiten", "3  Artikel 3 mit Hilfe (3), Artikel 2, 4, 6 allein (6), Partnercheck (3), Kontrolle (3), Urteil (5)", "allein, zu zweit"], ["7", "Auswerten", "4  Antwort als Dritter Stand (4), Ziele, Abgabe, Ausblick (3)", "mündlich, still"]].map((r) => row(r.map((v, i) => tc(v, [800, 2300, 4300, 2806][i], { bold: i === 0 })), 340)),
+  ...[["4", "Ankommen", "0  Karikatur, Vermutung, Stundenfrage, Ziele, Ablauf", "still, allein"], ["5", "Vorwissen", "1  Rückschau: Was zeigen die Bilder? Kette bis zur Angst von Klerus und Adel", "allein, Partnercheck, Plenum"], ["9", "Informieren", "2  Zeitstrahl bis 26. August (3), Drei Schritte und Modell Artikel 1 (4), Prüffrage und Raster (2)", "hört zu, Stichprobe"], ["20", "Verarbeiten", "3  Artikel 3 mit Hilfe (3), Artikel 2, 4, 6 allein (6), Partnercheck (3), Kontrolle (3), Urteil (5)", "allein, zu zweit"], ["7", "Auswerten", "4  Antwort als Dritter Stand (4), Ziele, Abgabe, Ausblick (3)", "mündlich, still"]].map((r) => row(r.map((v, i) => tc(v, [800, 2300, 4300, 2806][i], { bold: i === 0 })), 340)),
 ]));
-d.push(note("ZEIT", "Die Stunde ist voll. Sollbruchstellen: (1) Rückblick: Plenum nur 1 Minute. (2) Übung 2: Wer nach 6 Minuten nur zwei Artikel hat, ist richtig. (3) Partnercheck: auf 2 Minuten kürzen. (4) Urteil: auf zwei Sätze kürzen (Ziel 3 mit Stern). Phase 4 „Auswerten“ wird nicht gestrichen. Die Übungsphase endet 5 Minuten vor Schluss."));
+d.push(note("ZEIT", "Die Stunde ist voll. Sollbruchstellen: (1) Rückschau: Plenum nur 1 Minute. (2) Übung 2: Wer nach 6 Minuten nur zwei Artikel hat, ist richtig. (3) Partnercheck: auf 2 Minuten kürzen. (4) Urteil: auf zwei Sätze kürzen (Ziel 3 mit Stern). Phase 4 „Auswerten“ wird nicht gestrichen. Die Übungsphase endet 5 Minuten vor Schluss."));
 
 d.push(h3("Worauf die Hospitation achten kann (Aktivierung)"));
 d.push(...bullets([
-  "Alle in jeder Phase aktiv: Ankommen (Vermutung im Heft), Rückblick (allein schreiben), Modell (Prüffrage mit Stichproben), Übungen (allein, Partner), Urteil (allein), Abschluss (alle denken, wenige sprechen).",
+  "Alle in jeder Phase aktiv: Ankommen (Vermutung im Heft), Rückschau (allein schreiben), Modell (Prüffrage mit Stichproben), Übungen (allein, Partner), Urteil (allein), Abschluss (alle denken, wenige sprechen).",
   "Kompetenzaufbau sichtbar: gleiche drei Schritte in Modell, angeleiteter und selbstständiger Phase; Hilfen werden abgebaut (Artikel 1 gelb ausgefüllt, Artikel 3 mit Hilfe, Artikel 2, 4, 6 ohne Hilfe).",
   "Differenzierung: gestufte Hilfen auf dem Blatt (Satzanfänge, Wortspeicher), Artikel 4 als leichter Einstieg, Zusatz* (Artikel 10 und 11) für Schnelle.",
   "Stichproben statt Gespräch (3 bis 6 Personen unterschiedlichen Niveaus, unbenotet), wenig Plenum, wörtliche Ansagen.",
@@ -83,7 +83,7 @@ d.push(h3("Lautstärke und Ansagen (wörtlich)"));
 d.push(table([4700, 5506], [
   ["„Stifte liegen. Ihr hört nur zu.“", "Sie erklären, niemand schreibt."],
   ["„Jetzt arbeitet ihr allein. Die Aufgabe steht rechts.“", "Einzelarbeit, leise."],
-  ["„Flüsterstufe. Nur dein Partner hört dich.“", "Rückblick und Partnercheck."],
+  ["„Flüsterstufe. Nur dein Partner hört dich.“", "Rückschau und Partnercheck."],
   ["„Vergleicht und verbessert mit Grün.“", "Kontrolle im eigenen Blatt."],
   ["„Es ist zu laut. Ab jetzt arbeitet ihr allein und schreibt.“", "Wenn es laut wird, keine Diskussion."],
 ].map(([a, b]) => row([tc(a, 4700, { fill: LIGHT, bold: true }), tc(b, 5506)], 340))));
@@ -92,7 +92,7 @@ d.push(h3("Material und Vorbereitung (Details: Materialliste)"));
 d.push(...bullets([
   "Arbeitsblatt_Menschenrechte_Quelle_8D.pdf: eine A4-Seite doppelseitig (Seite 1: Quelle und Auswertungstabelle, Seite 2: Zusatz*, Urteil, Rückmeldung). 26-mal drucken, doppelseitig.",
   "Loesung_Arbeitsblatt_Menschenrechte_8D.pdf (für Sie): Musterantworten für beide Seiten (Stichworte genügen).",
-  "Folien 1 bis 21 (Schrift mindestens 27 Punkt; Folie 1 und 19 mit der selbst gezeichneten Karikatur).",
+  "Folien 1 bis 21 (Schrift mindestens 27 Punkt; Folie 1, 6 und 19 mit der selbst gezeichneten Karikatur).",
   "Seitentafel: Stundenfrage, Ziele, Ablauf (siehe Phase 0). Mitte der Tafel leer.",
   "Kreide, Grün zum Verbessern, Uhr oder Timer. Kein Material für Schülerrollen, keine Karten.",
 ]));
@@ -104,7 +104,7 @@ d.push(sp());
 d.push(step("kommt an, schreibt leise", {
   say: "Stifte liegen. Ihr hört nur zu. Schaut auf die Folie und lest, was Klerus und Adel sagen. Schreibt ins Heft: Reicht das? Ich vermute …",
   do: [
-    "Folie 1 steht beim Betreten da: selbst gezeichnete Karikatur (keine historische Quelle) mit Klerus, Adel und dem Dritten Stand (Bauern und Bürger), der zuhört. Klerus und Adel sagen: „Wir sind euch entgegengekommen. Jetzt sind alle gleich. Was wollt ihr noch?“ Auftrag: Heft raus, Datum und Überschrift, Vermutung (ein bis zwei Sätze). Keine Besprechung.",
+    "Folie 1 steht beim Betreten da: selbst gezeichnete Karikatur (keine historische Quelle) mit Klerus, Adel und dem Dritten Stand (Bauern und Bürger), der zuhört. An der Wand hängen zwei unbeschriftete Bilder: der Eid im Ballhaus und der Sturm auf die Bastille. Klerus und Adel sagen: „Wir sind euch entgegengekommen. Jetzt sind alle gleich. Was wollt ihr noch?“ Auftrag: Heft raus, Datum und Überschrift, Vermutung („Warum kommen sie entgegen? Ich vermute …“, ein bis zwei Sätze). Keine Besprechung.",
     "Folie 2 „Das ist mir wichtig“ (20 Sekunden), Folie 3 (Stundenfrage und Begriff „Quelle“, 45 Sekunden), Folie 4 (Lernziele, 30 Sekunden), Folie 5 (Ablauf, 30 Sekunden). Alle Folien: Sie sprechen, die Klasse hört zu.",
   ],
   extra: [boardBox("Seitentafel · Stundenfrage, Ziel und Ablauf", [
@@ -112,21 +112,21 @@ d.push(step("kommt an, schreibt leise", {
     bl("Ich kann Artikel in eigenen Worten wiedergeben.", { after: 20 }),
     bl("Ich kann einen Artikel mit der Ständeordnung vergleichen.", { after: 20 }),
     bl("Ich kann begründen, welcher Artikel am wichtigsten ist.*", { after: 60 }),
-    bl("A Karikatur · V Rückblick · I Quelle auswerten · V Blatt, Urteil · A Antwort", { after: 0 }),
+    bl("A Karikatur · V Rückschau · I Quelle auswerten · V Blatt, Urteil · A Antwort", { after: 0 }),
   ]), gapP()],
 }));
 
 // Phase 1
-d.push(phase("1", "Rückblick: richtig oder falsch?", 5, "AVIVA: Vorwissen aktivieren"));
-d.push(warum("Der Stoff der Stunde 3 wird echt wiederholt (allein, Partnercheck, Plenum), und zwar mit Falschaussagen statt reiner Abfrage. Die zwei falschen Aussagen sind typische Fehler (Bastille gewaltlos, falsches Datum). Wer in Stunde 3 etwas nicht geschafft hat, sieht es hier noch einmal.", "„1789 hat der Dritte Stand gehandelt. Was geschah danach? Das hört ihr jetzt.“"));
+d.push(phase("1", "Rückschau: Was zeigen die Bilder?", 5, "AVIVA: Vorwissen aktivieren"));
+d.push(warum("Der Stoff der Stunde 3 wird echt wiederholt (allein, Partnercheck, Plenum), und zwar als Rückschau an zwei Bildern statt als reine Abfrage. Die Bilder sind unbeschriftet, die Klasse erkennt Ballhaus und Bastille selbst und verbindet sie mit der Frage der Karikatur. So wird das „Entgegenkommen“ als Folge der beiden Ereignisse sichtbar (Ursache und Folge). Wer in Stunde 3 etwas nicht geschafft hat, sieht es hier noch einmal.", "„Die Bilder haben mit dem Entgegenkommen zu tun. Wie genau, hört ihr jetzt.“"));
 d.push(sp());
 d.push(step("schreibt allein, vergleicht zu zweit", {
   say: "Stifte liegen. Ihr hört nur zu. Jetzt arbeitet ihr allein. Die Aufgabe steht rechts. … Flüsterstufe. Nur dein Partner hört dich. Vergleicht.",
   do: [
-    "Folie 6 (2 Minuten allein): Schreibe W oder F, verbessere falsche Aussagen ins Heft. Dann 1 Minute Partnercheck, 1 Minute Plenum: Stichproben bei 3 bis 4 Personen unterschiedlichen Niveaus (kurze Antwort, unbenotet).",
-    "Folie 7 (Auflösung): Aussage 1 und 2 richtig, 3 und 4 falsch. „Vergleicht und verbessert mit Grün.“",
+    "Folie 6 (2 Minuten allein): Zu jedem der beiden Bilder ins Heft: Was geschah? Was bewirkte es? Dann 1 Minute Partnercheck („Was haben die Bilder mit dem Entgegenkommen zu tun?“), 2 Minuten Plenum: Stichproben bei 3 bis 4 Personen unterschiedlichen Niveaus (kurze Antwort, unbenotet).",
+    "Folie 7 (Auflösung, 1 Minute): Kette 20. Juni Ballhausschwur (Versammlung bleibt zusammen) → 14. Juli Bastille (König zieht die Soldaten ab, Aufstände im Land) → Sommer 1789 Klerus und Adel haben Angst. „Vergleicht mit eurer Vermutung und verbessert mit Grün.“ Warnung vor dem Fehler: Nicht der König schaffte die Vorrechte ab, sondern die Nationalversammlung (Folie 8).",
   ],
-  sol: "Erwartung: 1 richtig (Klerus und Adel zusammen zwei von drei Stimmen), 2 richtig (Eid im Ballhaus, 20. Juni), 3 falsch (gewaltsam, Schüsse, etwa 100 Tote), 4 falsch (20. Juni, nicht 14. Juli).",
+  sol: "Erwartung: Bild links: Eid im Ballhaus am 20. Juni, die Abgeordneten wollen nicht auseinandergehen, die Versammlung bleibt (gewaltlos). Bild rechts: Sturm auf die Bastille am 14. Juli, Gewalt, der König zieht die Soldaten ab, Aufstände im Land. Zusammenhang: Die Ereignisse machten Klerus und Adel Angst, das Entgegenkommen war nicht freiwillig.",
 }));
 
 // Phase 2
@@ -197,7 +197,7 @@ d.push(h3("So sieht das Heft und das Blatt am Ende aus"));
 d.push(table([2300, 7906], [
   ["Überschrift", "Datum · Überschrift zur Stundenfrage (z. B. „Die Menschenrechte“)"],
   ["Vermutung", "„Reicht das? Ich vermute …“ (Beginn der Stunde)"],
-  ["Rückblick", "W oder F zu vier Aussagen, falsche verbessert (grün)"],
+  ["Rückschau", "zu jedem Bild: Was geschah? Was bewirkte es? Kette verbessert (grün)"],
   ["Blatt Seite 1", "Tabelle: Artikel 1 (gelb), Artikel 3 mit Hilfe, Artikel 2, 4, 6 selbst; Verbesserungen grün"],
   ["Blatt Seite 2", "Zusatz* (Artikel 10 und 11), Urteil mit Beleg, Wirkung, Urteil und Gegenargument; bei Abgabe Rückmeldung nach Stufen"],
 ].map(([a, b]) => row([tc(a, 2300, { bold: true, fill: LIGHT }), tc(b, 7906)], 340))));
