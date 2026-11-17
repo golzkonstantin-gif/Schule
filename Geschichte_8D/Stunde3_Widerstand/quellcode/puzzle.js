@@ -10,34 +10,27 @@ const noB = { style: BorderStyle.NONE, size: 0, color: "FFFFFF" };
 const brk = () => new Paragraph({ children: [new PageBreak()] });
 
 const TEXT = {
-  A: { titel: "Text A: Der Ballhausschwur (20. Juni 1789)", farbe: GREEN, sätze: [
-    "Am 17. Juni 1789 erklärt sich der Dritte Stand (Bauern und Bürger) zur Nationalversammlung, weil er nicht länger überstimmt werden will.",
-    "Der König ist dagegen und lässt den Sitzungssaal in Versailles sperren.",
-    "Am 20. Juni treffen sich die Abgeordneten in einer Ballhalle in der Nähe.",
-    "Dort schwören sie, nicht auseinanderzugehen, bis Frankreich eine Verfassung hat.",
-    "Sie benutzen keine Waffen, nur Worte und ihren Eid.",
-    "Es gibt keine Toten, aber die Abgeordneten riskieren, dass der König sie auflösen lässt.",
-    "Der König kann sie nicht zum Gehen zwingen.",
-    "Eine Woche später fordert er Klerus und Adel auf, sich der Nationalversammlung anzuschließen."],
-    wörter: "Ballhalle: Halle, in der man Ballspiele spielte · Eid: feierliches Versprechen · Verfassung: Gesetze, die festlegen, wer wie regiert" },
-  B: { titel: "Text B: Der Sturm auf die Bastille (14. Juli 1789)", farbe: RED, sätze: [
-    "In Paris herrscht Hunger, das Brot ist teuer.",
-    "Anfang Juli zieht der König Soldaten um Paris zusammen und entlässt den beliebten Finanzminister.",
-    "Die Pariser haben Angst, dass die Soldaten gegen die Stadt eingesetzt werden.",
-    "Am 14. Juli holen sich viele Menschen Gewehre und suchen Pulver.",
-    "Das Pulver liegt in der Bastille, einer Festung und einem Gefängnis des Königs.",
-    "Die Menge greift die Bastille an, es wird geschossen.",
-    "Nach Stunden ergibt sich der Gouverneur, doch die Menge tötet ihn danach.",
-    "Etwa 100 Angreifer sterben. In der Bastille sind nur sieben Gefangene.",
-    "Der König zieht danach die Soldaten ab. Die Bastille wird zum Symbol der Revolution."],
-    wörter: "Bastille: Festung und Gefängnis des Königs in Paris · Gouverneur: Befehlshaber der Festung · Pulver: Schießpulver für Waffen" },
+  A: { titel: "Text A: Der Ballhausschwur (20. Juni 1789)", farbe: GREEN, absätze: [
+    "Seit Wochen streiten die Stände in Versailles darüber, wie abgestimmt wird. Der Dritte Stand (Bauern und Bürger) vertritt fast alle Menschen in Frankreich, hat nach Ständen aber nur eine von drei Stimmen. Am 17. Juni 1789 erklärt er sich deshalb zur Nationalversammlung. Er sagt: Wir sprechen für die Nation. Einige Geistliche schließen sich an.",
+    "Der König will das nicht hinnehmen. Am Morgen des 20. Juni ist der Sitzungssaal in Versailles abgesperrt, Wachen stehen vor der Tür. Offiziell heißt es, der Saal werde für eine Sitzung des Königs hergerichtet.",
+    "Die Abgeordneten weichen aus. Sie gehen in eine nahe gelegene Ballhalle, in der sonst Ballspiele gespielt werden. Dort heben sie die Hand und schwören, nicht auseinanderzugehen, bis Frankreich eine Verfassung hat. Fast alle unterschreiben. Sie benutzen keine Waffen, sondern Worte, ihre Unterschrift und ihren Eid.",
+    "Niemand wird verletzt. Aber die Abgeordneten wissen, dass der König sie auflösen oder verhaften lassen könnte. Am 23. Juni befiehlt der König noch einmal, dass die Stände getrennt tagen. Die Abgeordneten bleiben sitzen.",
+    "Der König kann die Versammlung nicht zum Gehen zwingen. Am 27. Juni fordert er Klerus und Adel auf, sich der Nationalversammlung anzuschließen. In der Nationalversammlung zählt nun jeder Abgeordnete."],
+    wörter: "Ballhalle: Halle, in der man Ballspiele spielte · Eid: feierliches Versprechen · Verfassung: Gesetze, die festlegen, wer wie regiert · Abgeordnete: gewählte Vertreter" },
+  B: { titel: "Text B: Der Sturm auf die Bastille (14. Juli 1789)", farbe: RED, absätze: [
+    "Im Sommer 1789 hungern viele Menschen in Paris, das Brot ist so teuer wie nie. Anfang Juli zieht der König Soldaten um Paris und Versailles zusammen. Am 11. Juli entlässt er außerdem den beliebten Finanzminister Necker. In Paris glauben viele, dass die Soldaten gegen die Stadt und gegen die Nationalversammlung eingesetzt werden.",
+    "Am 14. Juli holen sich Tausende Pariser Gewehre aus einem Waffenlager. Es fehlt Pulver. Das liegt in der Bastille, einer Festung im Osten der Stadt, in der der König Gegner ohne Urteil einsperren lässt. Die Menge zieht vor die Bastille und verlangt die Herausgabe der Waffen.",
+    "Es kommt zum Kampf, es wird geschossen. Nach einigen Stunden ergibt sich der Gouverneur, der Befehlshaber der Festung. Die Menge dringt ein und befreit die Gefangenen. Den Gouverneur tötet sie auf dem Weg zum Rathaus.",
+    "Etwa 100 Angreifer sterben, auch einige Verteidiger. In der Bastille sitzen nur sieben Gefangene.",
+    "Der König erkennt, dass er sich nicht auf seine Soldaten verlassen kann, und zieht sie wenige Tage später ab. Aufstände breiten sich im ganzen Land aus. Die Bastille wird abgerissen, der 14. Juli ist bis heute Nationalfeiertag in Frankreich."],
+    wörter: "Bastille: Festung und Gefängnis des Königs in Paris · Gouverneur: Befehlshaber der Festung · Pulver: Schießpulver für Waffen · Nationalfeiertag: Feiertag für das ganze Land" },
 };
 const KRIT = [
-  ["1  Vorgeschichte", "Warum kam es dazu?", { A: "Sätze 1 bis 2", B: "Sätze 1 bis 3" }],
-  ["2  Verlauf", "Was geschah?", { A: "Sätze 3 bis 4", B: "Sätze 4 bis 7" }],
-  ["3  Mittel", "Gewalt: ja oder nein?", { A: "Satz 5", B: "Satz 6" }],
-  ["4  Opfer und Folgen", "Wer litt oder riskierte etwas?", { A: "Satz 6", B: "Sätze 7 bis 8" }],
-  ["5  Wirkung", "Was änderte sich?", { A: "Sätze 7 bis 8", B: "Satz 9" }],
+  ["1  Vorgeschichte", "Warum kam es dazu?"],
+  ["2  Verlauf", "Was geschah? Wer tat was?"],
+  ["3  Mittel", "Gewalt: ja oder nein? Woran erkennst du das?"],
+  ["4  Opfer und Folgen", "Wer litt oder riskierte etwas?"],
+  ["5  Wirkung", "Was änderte sich danach?"],
 ];
 const LOES = {
   1: ["Der Dritte Stand erklärt sich zur Nationalversammlung, der König lässt den Saal sperren.", "Hunger, Brot teuer; Soldaten um Paris, Finanzminister entlassen, Angst vor dem Militär."],
@@ -50,25 +43,31 @@ const LOES = {
 const cell = (children, o = {}) => new TableCell({ children: Array.isArray(children) ? children : [children], width: { size: o.w, type: WidthType.DXA }, shading: o.fill ? { fill: o.fill, type: ShadingType.CLEAR, color: "auto" } : undefined, borders: o.borders || all(solid("8A96B5", 6)), margins: { top: o.m ?? 70, bottom: o.m ?? 70, left: 110, right: 110 }, verticalAlign: o.valign || VerticalAlign.TOP });
 const footer = new Footer({ children: [new Paragraph({ alignment: AlignmentType.RIGHT, children: [new TextRun({ font: "Calibri", size: 16, color: MUTED, children: ["Geschichte 8D · Stunde 3 Widerstand · Seite ", PageNumber.CURRENT] })] })] });
 
-function blatt(me) {
-  const other = me === "A" ? "B" : "A";
+function textblatt(me) {
   const T = TEXT[me];
   const c = [];
-  c.push(p([t("GESCHICHTE 8D · PARTNERPUZZLE   ", { size: 16, bold: true, color: MUTED }), t("Name: ______________________", { size: 18, color: MUTED })], { after: 30 }));
-  c.push(p(t(T.titel, { font: "Cambria", size: 30, bold: true, color: T.farbe }), { after: 70 }));
-  T.sätze.forEach((s, i) => c.push(p([t((i + 1) + "  ", { bold: true, size: 20, color: T.farbe }), t(s, { font: "Cambria", size: 24 })], { after: 60, line: 288 })));
-  c.push(p(t(T.wörter, { size: 17, color: MUTED }), { before: 40, after: 80 }));
-  c.push(p([t("Aufgabe  ", { bold: true, color: RED, size: 20 }), t("1  Lies deinen Text und fülle deine Spalte aus (Stichworte).   2  Höre deinem Partner zu und fülle seine Spalte aus.", { size: 20 })], { after: 90 }));
+  c.push(p([t("GESCHICHTE 8D · PARTNERPUZZLE · TEXT   ", { size: 16, bold: true, color: MUTED }), t("Name: ______________________", { size: 18, color: MUTED })], { after: 30 }));
+  c.push(p(t(T.titel, { font: "Cambria", size: 32, bold: true, color: T.farbe }), { after: 120 }));
+  T.absätze.forEach((x) => c.push(p(t(x, { font: "Cambria", size: 25 }), { after: 130, line: 300, align: AlignmentType.JUSTIFIED })));
+  c.push(p(t(T.wörter, { size: 19, color: MUTED }), { before: 60, after: 120 }));
+  c.push(p([t("Aufgabe  ", { bold: true, color: RED, size: 22 }), t("Lies den Text genau. Unterstreiche, was zu den fünf Kriterien passt. Fülle dann die Tabelle für deinen Text aus.", { size: 22 })], { after: 0 }));
+  return c;
+}
+function tabelle() {
+  const c = [];
+  c.push(p([t("GESCHICHTE 8D · PARTNERPUZZLE · TABELLE   ", { size: 16, bold: true, color: MUTED }), t("Name: ______________________", { size: 18, color: MUTED })], { after: 30 }));
+  c.push(p(t("Ballhausschwur und Bastille im Vergleich", { font: "Cambria", size: 32, bold: true, color: NAVY }), { after: 90 }));
+  c.push(p([t("Aufgabe  ", { bold: true, color: RED, size: 20 }), t("1  Fülle die Spalte für deinen Text aus (Stichworte).   2  Höre deinem Partner zu und fülle die andere Spalte aus.", { size: 20 })], { after: 100 }));
   const CW = [2500, 4100, 4100];
-  const head = (txt, col, w) => cell(p(t(txt, { bold: true, color: "FFFFFF", size: 20 }), { after: 0, align: AlignmentType.CENTER }), { w, fill: col, valign: VerticalAlign.CENTER, borders: all(solid(col, 8)) });
-  const rows = [new TableRow({ children: [head("Kriterium", NAVY, CW[0]), head("Text A: Ballhausschwur" + (me === "A" ? " (dein Text)" : " (Partner)"), GREEN, CW[1]), head("Text B: Bastille" + (me === "B" ? " (dein Text)" : " (Partner)"), RED, CW[2])] })];
-  KRIT.forEach(([n, q, hint], i) => rows.push(new TableRow({ cantSplit: true, height: { value: 1620, rule: "atLeast" }, children: [
-    cell([p(t(n, { font: "Cambria", bold: true, size: 21, color: NAVY }), { after: 10 }), p(t(q, { size: 18 }), { after: 10 }), p(t("Hilfe: " + hint[me], { size: 16, color: MUTED, italics: true }), { after: 0 })], { w: CW[0], fill: i % 2 ? LIGHT : LIGHT2 }),
-    cell(p(t(""), { after: 0 }), { w: CW[1], fill: me === "A" ? "FFFFFF" : "F7F7F7" }),
-    cell(p(t(""), { after: 0 }), { w: CW[2], fill: me === "B" ? "FFFFFF" : "F7F7F7" }),
+  const head = (txt, col, w) => cell(p(t(txt, { bold: true, color: "FFFFFF", size: 21 }), { after: 0, align: AlignmentType.CENTER }), { w, fill: col, valign: VerticalAlign.CENTER, borders: all(solid(col, 8)) });
+  const rows = [new TableRow({ children: [head("Kriterium", NAVY, CW[0]), head("Text A: Ballhausschwur", GREEN, CW[1]), head("Text B: Bastille", RED, CW[2])] })];
+  KRIT.forEach(([n, q], i) => rows.push(new TableRow({ cantSplit: true, height: { value: 2050, rule: "atLeast" }, children: [
+    cell([p(t(n, { font: "Cambria", bold: true, size: 23, color: NAVY }), { after: 20 }), p(t(q, { size: 19 }), { after: 0 })], { w: CW[0], fill: i % 2 ? LIGHT : LIGHT2 }),
+    cell(p(t(""), { after: 0 }), { w: CW[1] }),
+    cell(p(t(""), { after: 0 }), { w: CW[2] }),
   ] })));
   c.push(new Table({ width: { size: W, type: WidthType.DXA }, columnWidths: CW, rows }));
-  c.push(p([t("□ Ich gebe das Blatt freiwillig ab.", { size: 20, bold: true }), t("          Punkte: ____ von 10", { size: 20 })], { before: 100, after: 0 }));
+  c.push(p([t("□ Ich gebe das Blatt freiwillig ab.", { size: 22, bold: true }), t("          Punkte: ____ von 10", { size: 22 })], { before: 120, after: 0 }));
   return c;
 }
 function loesung() {
@@ -90,9 +89,11 @@ function loesung() {
   return c;
 }
 (async () => {
-  const sec = (children) => ({ properties: { page: { size: { width: 11906, height: 16838 }, margin: { top: 650, bottom: 600, left: 600, right: 600 } } }, footers: { default: footer }, children });
-  const d1 = new Document({ styles: { default: { document: { run: { font: "Calibri", size: 21 } } } }, sections: [sec([...blatt("A"), brk(), ...blatt("B")])] });
-  fs.writeFileSync("../Partnerpuzzle_Blatt_A_und_B_8D.docx", await Packer.toBuffer(d1));
+  const sec = (children) => ({ properties: { page: { size: { width: 11906, height: 16838 }, margin: { top: 650, bottom: 600, left: 700, right: 700 } } }, footers: { default: footer }, children });
+  const d1 = new Document({ styles: { default: { document: { run: { font: "Calibri", size: 21 } } } }, sections: [sec([...textblatt("A"), brk(), ...textblatt("B")])] });
+  fs.writeFileSync("../Partnerpuzzle_Texte_A_und_B_8D.docx", await Packer.toBuffer(d1));
+  const d3 = new Document({ styles: { default: { document: { run: { font: "Calibri", size: 21 } } } }, sections: [sec(tabelle())] });
+  fs.writeFileSync("../Partnerpuzzle_Tabelle_8D.docx", await Packer.toBuffer(d3));
   const d2 = new Document({ styles: { default: { document: { run: { font: "Calibri", size: 21 } } } }, sections: [sec(loesung())] });
   fs.writeFileSync("../Loesung_Partnerpuzzle_8D.docx", await Packer.toBuffer(d2));
   console.log("ok");

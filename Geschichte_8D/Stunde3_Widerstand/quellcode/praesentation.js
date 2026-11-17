@@ -209,7 +209,7 @@ const IMG = "../material/";
 // ============ 5 Ablauf ============
 {
   const s = blank("Ablauf", "So arbeiten wir heute", undefined, "Ablauf zeigen (30 Sekunden). Die Kreise oben rechts zeigen die Phase: A V I V A. Der Stern * bedeutet: wird eventuell nicht mehr geschafft (Ziel 2). Insgesamt 45 Minuten.");
-  const ph = [["A", "Ankommen", "Karikatur", "4 Min."], ["V", "Vorwissen", "Rückblick", "3 Min."], ["I", "Informieren", "Text lesen", "8 Min."], ["V", "Verarbeiten", "Puzzle, Urteil", "25 Min."], ["A", "Auswerten", "Antwort", "5 Min."]];
+  const ph = [["A", "Ankommen", "Karikatur", "4 Min."], ["V", "Vorwissen", "Rückblick", "2 Min."], ["I", "Informieren", "Text lesen", "10 Min."], ["V", "Verarbeiten", "Puzzle, Urteil", "24 Min."], ["A", "Auswerten", "Antwort", "5 Min."]];
   ph.forEach(([l, n, x, m], i) => {
     const xx = 0.6 + i * 2.45;
     box(s, xx, 1.9, 2.3, 3.6, i % 2 ? LIGHT : LIGHT2);
@@ -224,7 +224,7 @@ const IMG = "../material/";
 
 // ============ 6 Wiederholung ============
 {
-  const s = blank("V · Vorwissen aktivieren · Wiederholung", "Das wissen wir schon", 1, "Wiederholung (3 Minuten). Ansage: „Stifte liegen. Ihr hört nur zu.“ Kurz an den Zeitstrahl und das Ergebnis der Abstimmung erinnern: Nach Ständen verlor der Dritte Stand (Bauern und Bürger) immer, obwohl er fast alle Menschen vertritt; 1789 gab es keine Abstimmung nach Köpfen. Dann: „Erklärt eurem Partner in einem Satz, warum der Dritte Stand die Abstimmung verlor.“ (Partnercheck, 1 Minute, Flüsterstufe: „Nur dein Partner hört dich.“) Danach gezielte Abfrage bei 2 Personen, kein Gespräch. Gelenk zum Puzzle: „Wählen bringt nichts. Welche Wege bleiben? Das lest ihr jetzt.“");
+  const s = blank("V · Vorwissen aktivieren · Wiederholung", "Das wissen wir schon", 1, "Wiederholung (2 Minuten). Ansage: „Stifte liegen. Ihr hört nur zu.“ Kurz an den Zeitstrahl und das Ergebnis der Abstimmung erinnern: Nach Ständen verlor der Dritte Stand (Bauern und Bürger) immer, obwohl er fast alle Menschen vertritt; 1789 gab es keine Abstimmung nach Köpfen. Dann: „Erklärt eurem Partner in einem Satz, warum der Dritte Stand die Abstimmung verlor.“ (Partnercheck, 1 Minute, Flüsterstufe: „Nur dein Partner hört dich.“) Danach gezielte Abfrage bei 2 Personen, kein Gespräch. Gelenk zum Puzzle: „Wählen bringt nichts. Welche Wege bleiben? Das lest ihr jetzt.“");
   const ev = [["5. Mai 1789", "Eröffnung, Streit um die Abstimmung"], ["17. Juni 1789", "Nationalversammlung"], ["20. Juni 1789", "Ballhausschwur"], ["Anfang Juli 1789", "Soldaten um Paris, Angst"]];
   s.addShape(pres.shapes.RECTANGLE, { x: 3.6, y: 1.7, w: 0.1, h: 3.5, fill: { color: NAVY }, line: { type: "none" } });
   ev.forEach(([d, e], i) => {
@@ -263,8 +263,8 @@ const IMG = "../material/";
 
 // ============ 9 Ü1 Einzelarbeit ============
 {
-  const { s } = taskSlide("I · Informieren · Übung 1", "Partnerpuzzle: Dein Text", ["Links sitzt Text A, rechts Text B.", "Lies deinen Text allein.", "Fülle deine Spalte aus: fünf Kriterien.", "Nutze die Sätze mit den Nummern."], "8 Minuten · allein · leise",
-    "Ansage: „Stifte liegen. Ihr hört nur zu. Das Blatt vor euch hat zwei Texte. Wer links sitzt, liest Text A, wer rechts sitzt, Text B. Jetzt arbeitet ihr allein. Die Aufgabe steht rechts.“ Die Blätter liegen vorab umgedreht auf den Tischen (Blatt A links, Blatt B rechts). 12 Paare, 24 Personen. Beide Blätter haben dieselbe Matrix, jede Person füllt zuerst die eigene Spalte aus. Die Sätze im Text sind nummeriert, die Leitfragen nennen die passenden Sätze. Sie gehen durch die Reihen (Heft-Stichprobe), nicht kommentieren. Wer früh fertig ist, liest den Text noch einmal und markiert, woran man erkennt, ob Gewalt im Spiel war. Nach 8 Minuten: Folie 10.");
+  const { s } = taskSlide("I · Informieren · Übung 1", "Partnerpuzzle: Dein Text", ["Links sitzt Text A, rechts Text B.", "Lies deinen Text genau. Unterstreiche.", "Fülle deine Spalte in der Tabelle aus.", "Nutze die fünf Kriterien."], "10 Minuten · allein · leise",
+    "Ansage: „Stifte liegen. Ihr hört nur zu. Vor euch liegen ein Text und eine Tabelle. Wer links sitzt, hat Text A, wer rechts sitzt, Text B. Jetzt arbeitet ihr allein. Die Aufgabe steht rechts.“ Die Texte (umgedreht) und die Tabellen liegen vorab auf den Tischen (Text A links, Text B rechts, pro Person eine Tabelle). 12 Paare, 24 Personen. Beide Tabellen sind gleich, jede Person füllt zuerst die eigene Spalte aus. Die Texte sind länger (fünf Absätze) und haben keine Hilfen: Die Schülerinnen und Schüler suchen selbst im Text, was zu den Kriterien passt, und unterstreichen. Sie gehen durch die Reihen (Heft-Stichprobe), nicht kommentieren. Wer früh fertig ist, markiert im Text, woran man erkennt, ob Gewalt im Spiel war. Nach 10 Minuten: Folie 10.");
   phaseTag(s, 2);
 }
 
@@ -318,7 +318,7 @@ AUF.forEach((_, k) => {
 
 // ============ 16 Bilanz ============
 {
-  const s = blank("V · Verarbeiten · Bilanz", "Was bewirkte es? Was kostete es?", 3, "Bilanz (2 Minuten, Sie sprechen, kein Gespräch). Ansage: „Stifte liegen. Ihr hört nur zu.“ Wirksam heißt nicht gerechtfertigt: Beide Wege bewirkten etwas, aber sie kosteten Unterschiedliches. Haltung: Beschreiben, nicht gutheißen. Ihr Satz: „Wir erklären, warum es dazu kam. Ob es richtig war, beurteilt ihr gleich mit einem Maßstab.“ Bastille: Zahlen aus dem Lehrbuch gegenprüfen (etwa 100 Tote unter den Angreifern, der Gouverneur wurde nach der Übergabe getötet, sieben Gefangene). Der Eid brachte keine Toten, aber das Risiko, vom König aufgelöst zu werden. Dann Folie 17.");
+  const s = blank("V · Verarbeiten · Bilanz", "Was bewirkte es? Was kostete es?", 3, "Bilanz (1 Minute, Sie sprechen, kein Gespräch). Ansage: „Stifte liegen. Ihr hört nur zu.“ Wirksam heißt nicht gerechtfertigt: Beide Wege bewirkten etwas, aber sie kosteten Unterschiedliches. Haltung: Beschreiben, nicht gutheißen. Ihr Satz: „Wir erklären, warum es dazu kam. Ob es richtig war, beurteilt ihr gleich mit einem Maßstab.“ Bastille: Zahlen aus dem Lehrbuch gegenprüfen (etwa 100 Tote unter den Angreifern, der Gouverneur wurde nach der Übergabe getötet, sieben Gefangene). Der Eid brachte keine Toten, aber das Risiko, vom König aufgelöst zu werden. Dann Folie 17.");
   [["Ballhausschwur", "2E9E6B", "Versammlung bleibt. König gibt nach.", "Keine Toten. Risiko: Auflösung."], ["Bastille", "D9534F", "Truppen abgezogen. Symbol der Revolution.", "Ca. 100 Tote. Gouverneur getötet. Nur 7 Gefangene."]].forEach(([n, col, win, cost], i) => {
     const x = 0.6 + i * 6.2;
     box(s, x, 1.5, 5.95, 4.5, LIGHT2);

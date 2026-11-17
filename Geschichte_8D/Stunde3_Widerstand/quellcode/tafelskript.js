@@ -65,7 +65,7 @@ d.push(...bullets([
 d.push(h3("Zeitplan (45 Minuten)"));
 d.push(table([800, 2300, 4300, 2806], [
   row([th("Min.", 800), th("AVIVA", 2300), th("Phase", 4300), th("Arbeitsform", 2806)], 320),
-  ...[["4", "Ankommen", "0  Karikatur, Vermutung, Stundenfrage, Ziele", "still, allein"], ["3", "Vorwissen", "1  Rückblick: Zeitstrahl und Abstimmung", "Partnercheck, Flüsterstufe"], ["8", "Informieren", "2  Partnerpuzzle: eigenen Text lesen, Spalte ausfüllen", "allein, leise"], ["25", "Verarbeiten", "3  Austausch (8), Kontrolle (3), Zeitstrahl-Aha (4), Bilanz (2), Urteil (8)", "zu zweit, allein"], ["5", "Auswerten", "4  Antwort als Dritter Stand, Ziele, Abgabe, Ausblick", "mündlich, still"]].map((r) => row(r.map((v, i) => tc(v, [800, 2300, 4300, 2806][i], { bold: i < 3 })), 320)),
+  ...[["4", "Ankommen", "0  Karikatur, Vermutung, Stundenfrage, Ziele", "still, allein"], ["2", "Vorwissen", "1  Rückblick: Zeitstrahl und Abstimmung", "Partnercheck, Flüsterstufe"], ["10", "Informieren", "2  Partnerpuzzle: eigenen Text lesen, Tabelle für den eigenen Text ausfüllen", "allein, leise"], ["24", "Verarbeiten", "3  Austausch (8), Kontrolle (3), Zeitstrahl-Aha (4), Bilanz (1), Urteil (8)", "zu zweit, allein"], ["5", "Auswerten", "4  Antwort als Dritter Stand, Ziele, Abgabe, Ausblick", "mündlich, still"]].map((r) => row(r.map((v, i) => tc(v, [800, 2300, 4300, 2806][i], { bold: i < 3 })), 320)),
 ]));
 d.push(note("ZEIT", "Die Stunde ist voll. Sollbruchstellen: (1) Austausch nach 6 Minuten kürzen, wenn ein Paar nicht wechselt. (2) Zeitstrahl-Aha: Schritt 1 und 2 zusammen zeigen (2 Minuten statt 4). (3) Urteil: nur ein Satz „Ich halte … für …, weil …“ statt drei Zeilen. Ziel 2 (*) fällt zuerst weg. Phase 4 wird nicht gestrichen."));
 
@@ -80,7 +80,7 @@ d.push(table([4700, 5506], [
 
 d.push(h3("Material und Vorbereitung (Details: Materialliste)"));
 d.push(...bullets([
-  "Partnerpuzzle_Blatt_A_und_B_8D.pdf: Seite 1 Blatt A (Ballhausschwur), Seite 2 Blatt B (Bastille), je 13-mal drucken (26 Blätter, 24 Schüler plus Reserve). Auf den Tisch legen: links Blatt A, rechts Blatt B, umgedreht. Auf dem Blatt: nummerierte Sätze, Wörter, Matrix mit Leitfragen und Hilfen (Satznummern), Name, „freiwillig abgeben“, Punkte.",
+  "Partnerpuzzle_Texte_A_und_B_8D.pdf: Seite 1 Text A (Ballhausschwur), Seite 2 Text B (Bastille), je 13-mal drucken (26 Blätter), Text mit fünf Absätzen und Wörtern, keine Satznummern. Partnerpuzzle_Tabelle_8D.pdf: eine Tabelle pro Person (24 plus 2 Reserve), mit fünf Kriterien und Leitfragen, Name, „freiwillig abgeben“, Punkte. Wer Papier sparen will, druckt Text und Tabelle doppelseitig (Text vorn, Tabelle hinten). Auf den Tisch legen: links Text A, rechts Text B, dazu je eine Tabelle, umgedreht.",
   "Loesung_Partnerpuzzle_8D.pdf (für Sie): erwartete Einträge je Feld, Punktevergabe, Hinweise zur Haltung. Notenschlüssel für 10 Punkte nach Ihrer Festlegung (Raster Folie 7: 0 bis 4, 5 bis 8, 9 bis 10 Punkte).",
   "Folien 1 bis 20 (Schrift mindestens 27 Punkt; Folie 1 und 18 mit der selbst gezeichneten Karikatur (Klerus, Adel, Dritter Stand)).",
   "Seitentafel: Stundenfrage, Ziele, Ablauf (siehe Phase 0). Mitte der Tafel leer lassen für die Reihenfolge der Ereignisse (optional).",
@@ -107,32 +107,32 @@ d.push(step("kommt an, schreibt leise", {
 }));
 
 // Phase 1
-d.push(phase("1", "Rückblick: Zeitstrahl und Abstimmung", 3, "AVIVA: Vorwissen aktivieren"));
+d.push(phase("1", "Rückblick: Zeitstrahl und Abstimmung", 2, "AVIVA: Vorwissen aktivieren"));
 d.push(warum("Der Stoff der Stunde 2 wird kurz gesichert, bevor Neues kommt (allein, Partnercheck, kurze Abfrage). Der Zeitstrahl endet bei „Soldaten um Paris“ und führt in den Text B hinein.", "„Wählen bringt nichts. Welche Wege bleiben? Das lest ihr jetzt.“"));
 d.push(sp());
 d.push(step("hört zu, spricht zu zweit", {
   say: "Stifte liegen. Ihr hört nur zu. … Flüsterstufe. Nur dein Partner hört dich. Erklärt eurem Partner in einem Satz: Warum verlor der Dritte Stand die Abstimmung?",
   do: [
-    "Folie 6 (Rückblick, 3 Minuten): Zeitstrahl mit vier Einträgen (5. Mai, 17. Juni, 20. Juni, Anfang Juli) und das Ergebnis der Abstimmung in einem Satz: Nach Ständen verlor der Dritte Stand (Bauern und Bürger) immer, obwohl er fast alle Menschen vertritt; 1789 gab es keine Abstimmung nach Köpfen. Partnercheck 1 Minute, danach gezielte Abfrage bei 2 Personen (kurz, kein Gespräch).",
+    "Folie 6 (Rückblick, 2 Minuten): Zeitstrahl mit vier Einträgen (5. Mai, 17. Juni, 20. Juni, Anfang Juli) und das Ergebnis der Abstimmung in einem Satz: Nach Ständen verlor der Dritte Stand (Bauern und Bürger) immer, obwohl er fast alle Menschen vertritt; 1789 gab es keine Abstimmung nach Köpfen. Partnercheck 1 Minute, danach gezielte Abfrage bei 1 bis 2 Personen (kurz, kein Gespräch).",
   ],
   sol: "Erwartung: Jeder Stand hat nur eine Stimme, Klerus und Adel haben zusammen zwei von drei Stimmen, obwohl sie nur etwa 3 % der Menschen sind.",
 }));
 
 // Phase 2
-d.push(phase("2", "Partnerpuzzle: Einzelarbeit", 8, "AVIVA: Informieren"));
-d.push(warum("Jede Person erarbeitet allein den eigenen Text (indirekt: Selbsterarbeitung mit nummerierten Sätzen und Hilfen). So muss später jede Person für ihren Text sprechen und niemand kann sich verstecken. Kein Vorlesen.", "„Zwei Wege, zwei Texte. Jeder von euch hat nur einen. Ihr braucht euren Partner, um beide zu kennen.“"));
+d.push(phase("2", "Partnerpuzzle: Einzelarbeit", 10, "AVIVA: Informieren"));
+d.push(warum("Jede Person erarbeitet allein den eigenen, ausführlichen Text (indirekt: Selbsterarbeitung, Unterstreichen, Tabelle; keine Satznummern, keine Hilfen). So muss später jede Person für ihren Text sprechen und niemand kann sich verstecken. Kein Vorlesen.", "„Zwei Wege, zwei Texte. Jeder von euch hat nur einen. Ihr braucht euren Partner, um beide zu kennen.“"));
 d.push(sp());
 d.push(step("liest allein", {
-  say: "Stifte liegen. Ihr hört nur zu. Das Blatt vor euch hat einen Text. Wer links sitzt, hat Text A, wer rechts sitzt, Text B. Jetzt arbeitet ihr allein. Die Aufgabe steht rechts.",
+  say: "Stifte liegen. Ihr hört nur zu. Vor euch liegen ein Text und eine Tabelle. Wer links sitzt, hat Text A, wer rechts sitzt, Text B. Jetzt arbeitet ihr allein. Die Aufgabe steht rechts.",
   do: [
-    "Folie 7 (So wird dein Blatt bewertet, 1 Minute): Raster vorstellen, nicht diskutieren (0 bis 4 Punkte, 5 bis 8 Punkte, 9 bis 10 Punkte; je Feld ein Punkt; Abgabe freiwillig, keine Selbsteinschätzung). Folie 8 (Die fünf Kriterien) zeigen. Folie 9 (Ü1, 8 Minuten): eigenen Text lesen, eigene Spalte ausfüllen (Stichworte). Hilfen: nummerierte Sätze, Satznummern bei jedem Kriterium.",
-    "Warnung vor dem Fehler: „Mittel“ heißt nicht „Waffe“, sondern: Wird Gewalt gebraucht, ja oder nein, und woran erkennt man das? Beim Ballhausschwur steht „keine Waffen, nur Worte“, bei der Bastille „es wird geschossen“.",
+    "Folie 7 (So wird dein Blatt bewertet, 1 Minute): Raster vorstellen, nicht diskutieren (0 bis 4 Punkte, 5 bis 8 Punkte, 9 bis 10 Punkte; je Feld ein Punkt; Abgabe freiwillig, keine Selbsteinschätzung). Folie 8 (Die fünf Kriterien) zeigen. Folie 9 (Ü1, 10 Minuten): eigenen Text (fünf Absätze) genau lesen, unterstreichen, eigene Spalte der Tabelle ausfüllen (Stichworte). Keine Hilfen: Die Schüler suchen selbst im Text.",
+    "Warnung vor dem Fehler: „Mittel“ heißt nicht „Waffe“, sondern: Wird Gewalt gebraucht, ja oder nein, und woran erkennt man das? Beim Ballhausschwur steht „sie benutzen keine Waffen, sondern Worte, ihre Unterschrift und ihren Eid“, bei der Bastille „es wird geschossen“.",
     "Heft-Stichprobe beim Durchgehen (nicht kommentieren, unbenotet). Wer früh fertig ist, markiert im Text, woran man erkennt, ob Gewalt im Spiel war.",
   ],
 }));
 
 // Phase 3
-d.push(phase("3", "Partnerpuzzle: Austausch, Aha, Bilanz, Urteil", 25, "AVIVA: Verarbeiten"));
+d.push(phase("3", "Partnerpuzzle: Austausch, Aha, Bilanz, Urteil", 24, "AVIVA: Verarbeiten"));
 d.push(warum("Beim gegenseitigen Erklären wird der Gegensatz gewaltlos gegen gewaltsam sichtbar (angeleitet). Der Zeitstrahl zeigt die Reihenfolge (Aha), die Bilanz trennt „wirksam“ von „gerechtfertigt“, das Urteil verlangt einen offengelegten Maßstab (geführt, dann selbstständig).", "„Beide wollten, dass der König nicht mehr allein entscheidet. Aber was hat bei der Reihenfolge gewirkt?“"));
 d.push(sp());
 d.push(step("3a  erklärt zu zweit (8 Min.)", {
@@ -159,7 +159,7 @@ d.push(step("3c  Zeitstrahl-Aha (4 Min.)", {
   ],
 }));
 d.push(sp());
-d.push(step("3d  Bilanz (2 Min.)", {
+d.push(step("3d  Bilanz (1 Min.)", {
   say: "Stifte liegen. Ihr hört nur zu. Wirksam heißt nicht gerechtfertigt.",
   do: [
     "Folie 16 (Was bewirkte es? Was kostete es?): Ballhausschwur: Versammlung bleibt, König gibt nach | keine Toten, Risiko Auflösung. Bastille: Truppen abgezogen, Symbol | etwa 100 Tote, Gouverneur getötet, nur sieben Gefangene. Ihr Satz: „Wir erklären, warum es dazu kam. Ob es richtig war, beurteilt ihr gleich mit einem Maßstab.“ Zahlen zur Bastille gegen das Lehrbuch prüfen.",
