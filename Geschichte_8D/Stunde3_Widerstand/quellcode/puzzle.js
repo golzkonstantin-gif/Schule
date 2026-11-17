@@ -59,9 +59,9 @@ function texthalf(me) {
   const c = [];
   c.push(p([t("GESCHICHTE 8D · PARTNERPUZZLE · TEXT   ", { size: 14, bold: true, color: MUTED }), t("Name: ____________________", { size: 16, color: MUTED })], { after: 20 }));
   c.push(p(t(T.titel, { font: "Cambria", size: 26, bold: true, color: T.farbe }), { after: 60 }));
-  T.absätze.forEach((x) => c.push(p(t(x, { font: "Cambria", size: 22 }), { after: 60, line: 262, align: AlignmentType.JUSTIFIED })));
-  c.push(p(t(T.wörter, { size: 16, color: MUTED }), { before: 30, after: 60 }));
-  c.push(p([t("Aufgabe  ", { bold: true, color: RED, size: 18 }), t("Lies den Text genau. Unterstreiche, was zu den fünf Kriterien passt. Fülle dann die Tabelle für deinen Text aus.", { size: 18 })], { after: 0 }));
+  T.absätze.forEach((x) => c.push(p(t(x, { font: "Cambria", size: 24 }), { after: 60, line: 270, align: AlignmentType.JUSTIFIED })));
+  c.push(p(t(T.wörter, { size: 18, color: MUTED }), { before: 30, after: 60 }));
+  c.push(p([t("Aufgabe  ", { bold: true, color: RED, size: 18 }), t("Lies den Text genau. Unterstreiche, was zu den fünf Kriterien passt. Fülle dann die Tabelle für deinen Text aus.", { size: 20 })], { after: 0 }));
   return new TableCell({ children: c, width: { size: W, type: WidthType.DXA }, borders: { top: dash, bottom: dash, left: dash, right: dash }, margins: { top: 80, bottom: 60, left: 180, right: 180 }, verticalAlign: VerticalAlign.TOP });
 }
 const textseite = () => new Table({ width: { size: W, type: WidthType.DXA }, columnWidths: [W], rows: ["A", "B"].map((me) => new TableRow({ cantSplit: true, height: { value: 7650, rule: "exact" }, children: [texthalf(me)] })) });

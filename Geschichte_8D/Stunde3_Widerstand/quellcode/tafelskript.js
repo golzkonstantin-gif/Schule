@@ -80,7 +80,7 @@ d.push(table([4700, 5506], [
 
 d.push(h3("Material und Vorbereitung (Details: Materialliste)"));
 d.push(...bullets([
-  "Partnerpuzzle_Texte_A_und_B_8D.pdf: eine Seite, oben Text A (Ballhausschwur), unten Text B (Bastille), 13-mal drucken und in der Mitte schneiden (13 A + 13 B, halbe A4-Seite, 11 Punkt), Text mit fünf Absätzen und Wörtern, keine Satznummern. Partnerpuzzle_Tabelle_8D.pdf: eine Tabelle pro Person (24 plus 2 Reserve), mit fünf Kriterien und Leitfragen, Name, „freiwillig abgeben“, Punkte. Auf den Tisch legen: links Text A, rechts Text B, dazu je eine Tabelle, umgedreht.",
+  "Partnerpuzzle_Texte_A_und_B_8D.pdf: eine Seite, oben Text A (Ballhausschwur), unten Text B (Bastille), 13-mal drucken und in der Mitte schneiden (13 A + 13 B, halbe A4-Seite, 12 Punkt), Text mit fünf Absätzen und Wörtern, keine Satznummern. Partnerpuzzle_Tabelle_8D.pdf: eine Tabelle pro Person (24 plus 2 Reserve), mit fünf Kriterien und Leitfragen, Name, „freiwillig abgeben“, Punkte. Auf den Tisch legen: links Text A, rechts Text B, dazu je eine Tabelle, umgedreht.",
   "Loesung_Partnerpuzzle_8D.pdf (für Sie): erwartete Einträge je Feld, Punktevergabe, Hinweise zur Haltung. Notenschlüssel für 10 Punkte nach Ihrer Festlegung (Raster Folie 7: 0 bis 4, 5 bis 8, 9 bis 10 Punkte).",
   "Folien 1 bis 20 (Schrift mindestens 27 Punkt; Folie 1 und 18 mit der selbst gezeichneten Karikatur (Klerus, Adel, Dritter Stand)).",
   "Seitentafel: Stundenfrage, Ziele, Ablauf (siehe Phase 0). Mitte der Tafel leer lassen für die Reihenfolge der Ereignisse (optional).",
