@@ -33,6 +33,8 @@ Diese Punkte ergänzen die allgemeinen Vorlieben in `CLAUDE.md`. Sie stammen aus
 - Leitfragen, die auf einzelne Wörter zeigen; Formulierungshilfen mit Fachbegriff.
 - Immer ein Transfer mit klarem Umfang (z. B. Rede aus der Sicht einer Figur).
 - Zitate aus fremdem Material immer mit dem Original abgleichen.
+- **Deutungshypothese = Was will der Protagonist, was wird dabei thematisiert?** (Stand 17.11.) Die Kommunikationssituation wird danach eigens untersucht, nicht in der Hypothese vorweggenommen.
+- **Vor jeder Analyse das Textverständnis sichern** (Stand 17.11., „Vor dem Gesetz“ scheiterte daran): z. B. markieren, wer was und wie sagt.
 - **Bei Parabeln mit Gespräch die Handlung über die Kommunikation erschließen** (Stand 11.11., wie die Mentorin bei „Gibs auf!“): Wer sagt oder tut was, wie reagiert der andere? So werden Inhalt und Kommunikation zugleich klar.
 - **Auf Arbeitsblättern keine Klammerzusätze hinter den Aufgaben** (Arbeitsform, Zeit; Stand 11.11.) – das steht auf der Folie bzw. kommt als Ansage.
 - Was die Klasse schon hat (z. B. Definition „kafkaesk“ vom AB der Mentorin), nicht noch einmal aufs Arbeitsblatt.
@@ -177,6 +179,17 @@ Grundlage ist `Methoden/Literatur_Unterrichtsqualitaet.md` (AVIVA, Direkte Instr
   - **AB „kafkaesk“:** Definition („rätselhafte, absurde, bürokratische Übermacht“, das Individuum ist einer anonymen, undurchschaubaren Gewalt ausgeliefert, logische Lösungsversuche scheitern → Ohnmacht, Schuldgefühle, Isolation). Vier Bausteine: **labyrinthische Bürokratie, grundlose Schuld, vergebliche Logik, unheimliche Normalität**. Gefühle ankreuzen (Hilflosigkeit und Ohnmacht, Angst und Isolation, Verwirrung und Orientierungslosigkeit). Teil 3 „Kafkaesk oder einfach nur nervig?“ mit zwei Szenarien: Zug 45 Min. verspätet wegen eingefrorener Weichen (ärgerlich); Strafe vom Amt mit „geheimer“ Akte, Formular 4B nur in Zimmer 103, das es nicht gibt (kafkaesk).
   - **AB „Gibs auf!“ – Vorbereitung auf die Klausur (Parabelanalyse):** Text mit Quelle (Kafka: Sämtliche Erzählungen, hg. v. Paul Raabe, Fischer 1970, S. 320 f.); TATT-Einleitungssatz mit Deutungshypothese; Kommunikationssituation Ich-Erzähler – Schutzmann (Tabelle); Stilmittel und Bildebene zuordnen (A–D); Schreibwerkstatt mit Satzanfängen; Checkliste für die Klausur (Präsens, Zeilenbelege „vgl. Z. 4“, Fachbegriffe, Wirkung der Sprache deuten).
 - **Folgerungen:** Für „kafkaesk“ die Begriffe der Mentorin verwenden (vier Bausteine, Gefühle). In „Nervig oder kafkaesk?“ keine Szenarien wiederholen, die schon dran waren (Verspätung, Amt/Formular). Eine Klausur zur Parabelanalyse steht an: Zeilenbelege, Fachbegriffe und TATT-Satz in den Stunden mitüben. Der Wortlaut von „Gibs auf!“ mit Quelle liegt jetzt vor (der lange Satz läuft bis „nach dem Weg“, „glücklicherweise“, „irrewerden“).
+
+### Kafka, „Vor dem Gesetz“ – kafkaesk, Gespräch, Symbole (Do 12.11., 45 Min.)
+- **Material:** `Kafka_Vor_dem_Gesetz/` (Präsentation, Arbeitsblatt mit Text, Blatt „Nervig oder kafkaesk?“, Tafelskript, Lösung)
+- **Rückmeldung:** Die Stunde ging nicht gut, weil die Schülerinnen und Schüler **Probleme mit dem Textverständnis** hatten.
+- **Korrektur zur Deutungshypothese:** Die Deutungshypothese fragt, **was der Protagonist will und was dabei thematisiert wird** (hier: Macht und Ohnmacht). Die Kommunikationssituation wird erst später ausdrücklich untersucht – nicht schon in der Hypothese.
+- **Nächster Schritt (Reihenfolge der Lehrkraft):**
+  1. Textverständnis sichern: im Text markieren, **wer was und wie gesagt hat**.
+  2. Einleitung Schritt für Schritt: TATTE, Inhalt und Thema, dann die Deutungshypothese in der Einleitung.
+  3. Kommunikationssituation prüfen: Warum scheitert die Kommunikation?
+  4. Zeigen, wie die Stilmittel die Deutungshypothese stützen.
+  Zuerst inhaltlich durchsprechen, dann Material.
 
 ## Hospitationsfeedback (gesammelt)
 
