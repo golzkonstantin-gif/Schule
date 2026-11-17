@@ -11,15 +11,15 @@ const brk = () => new Paragraph({ children: [new PageBreak()] });
 
 const TEXT = {
   A: { titel: "Text A: Der Ballhausschwur (20. Juni 1789)", farbe: GREEN, absätze: [
-    "Seit Wochen streiten die Stände in Versailles darüber, wie abgestimmt wird. Der Dritte Stand (Bauern und Bürger) vertritt fast alle Menschen in Frankreich, hat nach Ständen aber nur eine von drei Stimmen. Am 17. Juni 1789 erklärt er sich deshalb zur Nationalversammlung. Er sagt: Wir sprechen für die Nation. Einige Geistliche schließen sich an.",
-    "Der König will das nicht hinnehmen. Am Morgen des 20. Juni ist der Sitzungssaal in Versailles abgesperrt, Wachen stehen vor der Tür. Offiziell heißt es, der Saal werde für eine Sitzung des Königs hergerichtet.",
-    "Die Abgeordneten weichen aus. Sie gehen in eine nahe gelegene Ballhalle, in der sonst Ballspiele gespielt werden. Dort heben sie die Hand und schwören, nicht auseinanderzugehen, bis Frankreich eine Verfassung hat. Fast alle unterschreiben. Sie benutzen keine Waffen, sondern Worte, ihre Unterschrift und ihren Eid.",
+    "Seit Wochen streiten die Stände in Versailles darüber, wie abgestimmt wird. Der Dritte Stand (Bauern und Bürger) vertritt fast alle Menschen in Frankreich, hat nach Ständen aber nur eine von drei Stimmen. Am 17. Juni 1789 erklärt er sich deshalb zur Nationalversammlung. Er sagt: Wir sprechen für die Nation. Einige Geistliche schließen sich an. Der König hat diese Versammlung nicht erlaubt.",
+    "Bisher bestimmt der König allein, wer wann tagt. Er erkennt die Nationalversammlung nicht an. Am Morgen des 20. Juni lässt er den Sitzungssaal in Versailles absperren, Wachen stehen vor der Tür. Offiziell heißt es, der Saal werde für eine Sitzung des Königs hergerichtet. In Wirklichkeit sollen die Abgeordneten nicht mehr zusammenkommen.",
+    "Die Abgeordneten fügen sich nicht. Sie gehen in eine nahe gelegene Ballhalle, in der sonst Ballspiele gespielt werden. Dort heben sie die Hand und schwören, nicht auseinanderzugehen, bis Frankreich eine Verfassung hat. Damit erklären sie: Die Macht geht von der Nation aus, nicht vom König allein. Sie handeln gegen seinen Willen. Fast alle unterschreiben. Sie benutzen keine Waffen, sondern Worte, ihre Unterschrift und ihren Eid.",
     "Niemand wird verletzt. Aber die Abgeordneten wissen, dass der König sie auflösen oder verhaften lassen könnte. Am 23. Juni befiehlt der König noch einmal, dass die Stände getrennt tagen. Die Abgeordneten bleiben sitzen.",
     "Der König kann die Versammlung nicht zum Gehen zwingen. Am 27. Juni fordert er Klerus und Adel auf, sich der Nationalversammlung anzuschließen. In der Nationalversammlung zählt nun jeder Abgeordnete."],
     wörter: "Ballhalle: Halle, in der man Ballspiele spielte · Eid: feierliches Versprechen · Verfassung: Gesetze, die festlegen, wer wie regiert · Abgeordnete: gewählte Vertreter" },
   B: { titel: "Text B: Der Sturm auf die Bastille (14. Juli 1789)", farbe: RED, absätze: [
-    "Im Sommer 1789 hungern viele Menschen in Paris, das Brot ist so teuer wie nie. Anfang Juli zieht der König Soldaten um Paris und Versailles zusammen. Am 11. Juli entlässt er außerdem den beliebten Finanzminister Necker. In Paris glauben viele, dass die Soldaten gegen die Stadt und gegen die Nationalversammlung eingesetzt werden.",
-    "Am 14. Juli holen sich Tausende Pariser Gewehre aus einem Waffenlager. Es fehlt Pulver. Das liegt in der Bastille, einer Festung im Osten der Stadt, in der der König Gegner ohne Urteil einsperren lässt. Die Menge zieht vor die Bastille und verlangt die Herausgabe der Waffen.",
+    "Im Sommer 1789 hungern viele Menschen in Paris, das Brot ist so teuer wie nie. Anfang Juli zieht der König Soldaten um Paris und Versailles zusammen. Am 11. Juli entlässt er außerdem den beliebten Finanzminister Necker. In Paris glauben viele, dass die Soldaten gegen die Stadt und gegen die Nationalversammlung eingesetzt werden. Die Menschen wollen sich nicht einfach fügen.",
+    "Am 14. Juli holen sich Tausende Pariser Gewehre aus einem Waffenlager. Es fehlt Pulver. Das liegt in der Bastille, einer Festung im Osten der Stadt, in der der König Gegner ohne Urteil einsperren lässt. Für viele Pariser ist sie das Zeichen für die Willkür des Königs. Die Menge zieht vor die Bastille und verlangt die Herausgabe der Waffen.",
     "Es kommt zum Kampf, es wird geschossen. Nach einigen Stunden ergibt sich der Gouverneur, der Befehlshaber der Festung. Die Menge dringt ein und befreit die Gefangenen. Den Gouverneur tötet sie auf dem Weg zum Rathaus.",
     "Etwa 100 Angreifer sterben, auch einige Verteidiger. In der Bastille sitzen nur sieben Gefangene.",
     "Der König erkennt, dass er sich nicht auf seine Soldaten verlassen kann, und zieht sie wenige Tage später ab. Aufstände breiten sich im ganzen Land aus. Die Bastille wird abgerissen, der 14. Juli ist bis heute Nationalfeiertag in Frankreich."],
@@ -27,14 +27,14 @@ const TEXT = {
 };
 const KRIT = [
   ["1  Vorgeschichte", "Warum kam es dazu?"],
-  ["2  Verlauf", "Was geschah? Wer tat was?"],
+  ["2  Verlauf", "Was geschah? Gegen wen oder was richtet sich das Handeln?"],
   ["3  Mittel", "Gewalt: ja oder nein? Woran erkennst du das?"],
   ["4  Opfer und Folgen", "Wer litt oder riskierte etwas?"],
   ["5  Wirkung", "Was änderte sich danach?"],
 ];
 const LOES = {
   1: ["Der Dritte Stand erklärt sich zur Nationalversammlung, der König lässt den Saal sperren.", "Hunger, Brot teuer; Soldaten um Paris, Finanzminister entlassen, Angst vor dem Militär."],
-  2: ["Die Abgeordneten treffen sich in einer Ballhalle und schwören, nicht auseinanderzugehen, bis Frankreich eine Verfassung hat.", "Menschen holen Gewehre, suchen Pulver, greifen die Bastille an, der Gouverneur ergibt sich."],
+  2: ["Die Abgeordneten treffen sich trotz der Sperrung in einer Ballhalle und schwören, nicht auseinanderzugehen, bis Frankreich eine Verfassung hat. Das Handeln richtet sich gegen den König, der die Versammlung nicht anerkennt (Ungehorsam).", "Menschen holen Gewehre, suchen Pulver, greifen die Bastille an, der Gouverneur ergibt sich. Das Handeln richtet sich gegen die Soldaten des Königs und gegen das Symbol seiner Willkür."],
   3: ["Gewaltlos: Worte und Eid, keine Waffen.", "Gewaltsam: Waffen, Schüsse, Kampf."],
   4: ["Keine Toten; Risiko: Auflösung durch den König.", "Etwa 100 Tote unter den Angreifern, der Gouverneur wird getötet, nur sieben Gefangene."],
   5: ["Die Versammlung bleibt, der König kann sie nicht zum Gehen zwingen, später soll sich der Adel anschließen.", "Der König zieht die Soldaten ab, die Bastille wird zum Symbol der Revolution."],
@@ -85,7 +85,7 @@ function loesung() {
   ] })));
   c.push(new Table({ width: { size: W, type: WidthType.DXA }, columnWidths: CW, rows }));
   c.push(p(t("Hinweise zur Haltung", { font: "Cambria", size: 26, bold: true, color: NAVY }), { before: 200, after: 60 }));
-  ["Wirksam heißt nicht gerechtfertigt: Beide Wege bewirkten etwas, aber sie kosteten Unterschiedliches (Bilanz, Folie 16).", "Aha: Die Reihenfolge zeigt, dass der gewaltlose Schritt die Grundlage schuf und der Druck in Paris den König zum Rückzug zwang. Der Streit um die Frage, ob die Gewalt den König wirklich allein zum Nachgeben brachte, ist offen; die Klasse soll die Reihenfolge belegen, nicht Schuld verteilen.", "Gewalt war eine Reaktion auf die drohende Gewalt (Soldaten), das ist ein Anlass, keine Rechtfertigung. Die Aufgabe, ein Urteil mit einem offenen Maßstab (wirksam, gerecht, verantwortbar) zu begründen, lässt beide Antworten zu.", "Wirkung beim Ballhausschwur: Nach dem Schwur versuchte der König noch, die Beschlüsse zu kassieren (23. Juni); die Abgeordneten blieben. Am 27. Juni forderte er Klerus und Adel auf, sich anzuschließen. Zum Prüfen mit dem Lehrbuch."].forEach((x) => c.push(p([t("• ", { size: 20 }), t(x, { size: 20 })], { after: 50 })));
+  ["Wirksam heißt nicht gerechtfertigt: Beide Wege bewirkten etwas, aber sie kosteten Unterschiedliches (Bilanz, Folie 16).", "Aha: Die Reihenfolge zeigt, dass der gewaltlose Schritt die Grundlage schuf und der Druck in Paris den König zum Rückzug zwang. Der Streit um die Frage, ob die Gewalt den König wirklich allein zum Nachgeben brachte, ist offen; die Klasse soll die Reihenfolge belegen, nicht Schuld verteilen.", "Gewalt war eine Reaktion auf die drohende Gewalt (Soldaten), das ist ein Anlass, keine Rechtfertigung. Die Aufgabe, ein Urteil mit einem offenen Maßstab (wirksam, gerecht, verantwortbar) zu begründen, lässt beide Antworten zu.", "Warum ist der Ballhausschwur Widerstand? Die Abgeordneten fügen sich dem Verbot des Königs nicht (Ungehorsam), verpflichten sich mit dem Eid gegenseitig und behaupten: Die Macht geht von der Nation aus. Das stellt die Alleinherrschaft des Königs infrage, ohne Gewalt. Wirkung beim Ballhausschwur: Nach dem Schwur versuchte der König noch, die Beschlüsse zu kassieren (23. Juni); die Abgeordneten blieben. Am 27. Juni forderte er Klerus und Adel auf, sich anzuschließen. Zum Prüfen mit dem Lehrbuch."].forEach((x) => c.push(p([t("• ", { size: 20 }), t(x, { size: 20 })], { after: 50 })));
   return c;
 }
 (async () => {

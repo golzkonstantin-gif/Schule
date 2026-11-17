@@ -95,7 +95,7 @@ d.push(step("kommt an, schreibt leise", {
   say: "Stifte liegen. Ihr hört nur zu. Schaut auf die Folie und lest, was der Adlige sagt. Schreibt ins Heft: Was kann der Dritte Stand noch tun? Ich vermute …",
   do: [
     "Folie 1 steht beim Betreten da: selbst gezeichnete Karikatur (keine historische Quelle) mit drei Figuren: Klerus, Adel und der Dritte Stand (Bauern und Bürger), der zuhört. Der Adlige sagt: „Der Dritte Stand hat abgestimmt und verloren. Jetzt kann er sich nur noch fügen.“ Auftrag: Heft raus, Datum und Überschrift, „Was kann er noch tun? Ich vermute …“ (etwa 2 Minuten, keine Besprechung). Sie lesen beim Durchgehen bei 3 bis 4 Personen mit (nicht kommentieren).",
-    "Folie 2 „Das ist mir wichtig“ (20 Sekunden), Folie 3 (Stundenfrage, 30 Sekunden), Folie 4 (Lernziele, 30 Sekunden), Folie 5 (Ablauf, 30 Sekunden). Hinweis zum Stern: „Was wir eventuell nicht schaffen, hat einen Stern.“",
+    "Folie 2 „Das ist mir wichtig“ (20 Sekunden), Folie 3 (Stundenfrage und Begriff „Widerstand“, 45 Sekunden: „Man wehrt sich gegen die Herrschenden, obwohl man sich fügen soll.“), Folie 4 (Lernziele, 30 Sekunden), Folie 5 (Ablauf, 30 Sekunden). Hinweis zum Stern: „Was wir eventuell nicht schaffen, hat einen Stern.“",
   ],
   extra: [boardBox("Seitentafel · Stundenfrage, Ziel und Ablauf", [
     bl("Wie kann sich der Dritte Stand wehren, wenn Wählen nichts bringt?", { after: 40 }),
@@ -126,7 +126,7 @@ d.push(step("liest allein", {
   say: "Stifte liegen. Ihr hört nur zu. Vor euch liegen ein Text und eine Tabelle. Wer links sitzt, hat Text A, wer rechts sitzt, Text B. Jetzt arbeitet ihr allein. Die Aufgabe steht rechts.",
   do: [
     "Folie 7 (So wird dein Blatt bewertet, 1 Minute): Raster vorstellen, nicht diskutieren (0 bis 4 Punkte, 5 bis 8 Punkte, 9 bis 10 Punkte; je Feld ein Punkt; Abgabe freiwillig, keine Selbsteinschätzung). Folie 8 (Die fünf Kriterien) zeigen. Folie 9 (Ü1, 10 Minuten): eigenen Text (fünf Absätze) genau lesen, unterstreichen, eigene Spalte der Tabelle ausfüllen (Stichworte). Keine Hilfen: Die Schüler suchen selbst im Text.",
-    "Warnung vor dem Fehler: „Mittel“ heißt nicht „Waffe“, sondern: Wird Gewalt gebraucht, ja oder nein, und woran erkennt man das? Beim Ballhausschwur steht „sie benutzen keine Waffen, sondern Worte, ihre Unterschrift und ihren Eid“, bei der Bastille „es wird geschossen“.",
+    "Warnung vor dem Fehler: Der Ballhausschwur ist Widerstand, obwohl es keine Gewalt gibt: Die Abgeordneten fügen sich dem Verbot des Königs nicht (Ungehorsam). Und „Mittel“ heißt nicht „Waffe“, sondern: Wird Gewalt gebraucht, ja oder nein, und woran erkennt man das? Beim Ballhausschwur steht „sie benutzen keine Waffen, sondern Worte, ihre Unterschrift und ihren Eid“, bei der Bastille „es wird geschossen“.",
     "Heft-Stichprobe beim Durchgehen (nicht kommentieren, unbenotet). Wer früh fertig ist, markiert im Text, woran man erkennt, ob Gewalt im Spiel war.",
   ],
 }));
@@ -154,7 +154,7 @@ d.push(sp());
 d.push(step("3c  Zeitstrahl-Aha (4 Min.)", {
   say: "Stifte liegen. Ihr hört nur zu. Wir bringen die Ereignisse in die Reihenfolge.",
   do: [
-    "Folien 12 bis 15 (je 1 Minute, schrittweise): 20. Juni Ballhausschwur (gewaltlos); Anfang Juli der König zieht Soldaten zusammen (Drohung); 14. Juli Bastille (gewaltsam); Mitte Juli der König zieht die Soldaten ab (Wirkung). Fragen (jeweils still denken): „Wie reagiert der König?“ „Was passiert in Paris?“ „Wer hat die Gewalt angefangen?“ (ein Satz ins Heft) „Was hat gewirkt?“",
+    "Folien 12 bis 15 (je 1 Minute, schrittweise): 20. Juni Ballhausschwur (gewaltlos); Anfang Juli der König zieht Soldaten zusammen (Drohung); 14. Juli Bastille (gewaltsam); Mitte Juli der König zieht die Soldaten ab (Wirkung). Fragen (jeweils still denken): „Gegen wen richtet sich der Eid?“ (gegen den König und sein Verbot) „Wie reagiert der König?“ „Was passiert in Paris?“ „Wer hat die Gewalt angefangen?“ (ein Satz ins Heft) „Was hat gewirkt?“",
     "Aha: Der gewaltlose Schritt schuf die Grundlage, der Druck in Paris zwang den König zum Rückzug. Der Anlass der Gewalt war die Drohung (Soldaten), aber Anlass ist keine Rechtfertigung.",
   ],
 }));

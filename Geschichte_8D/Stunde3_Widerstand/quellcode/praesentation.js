@@ -187,11 +187,12 @@ const IMG = "../material/";
 
 // ============ 3 Stundenfrage ============
 {
-  const s = blank("Stundenfrage", "Das untersuchen wir heute", undefined, "Stundenfrage (30 Sekunden, Klasse hört nur zu): „Der Dritte Stand hat gesehen: Abstimmen bringt nichts. Welche Wege bleiben ihm? Heute vergleichen wir zwei Wege des Widerstands: den Ballhausschwur und die Bastille.“ Keine Antworten ins Plenum, die Vermutungen stehen im Heft.");
-  box(s, 0.6, 1.6, 12.15, 2.6, NAVY);
-  txt(s, "Wie kann sich der Dritte Stand (Bauern und Bürger) wehren, wenn Wählen nichts bringt?", { x: 1.0, y: 1.6, w: 11.35, h: 2.6, fontFace: HEAD, fontSize: 34, bold: true, color: WHITE, valign: "middle" });
-  box(s, 0.6, 4.5, 12.15, 1.4, LIGHT2);
-  txt(s, "Wir vergleichen zwei Wege: Ballhausschwur und Bastille.", { x: 1.0, y: 4.5, w: 11.35, h: 1.4, fontFace: HEAD, fontSize: 30, valign: "middle" });
+  const s = blank("Stundenfrage", "Das untersuchen wir heute", undefined, "Stundenfrage und Begriff (45 Sekunden, Klasse hört nur zu): „Der Dritte Stand hat gesehen: Abstimmen bringt nichts. Welche Wege bleiben ihm? Heute geht es um Widerstand. Widerstand heißt: Man wehrt sich gegen die Herrschenden, obwohl man sich fügen soll. Wir vergleichen zwei Wege: den Ballhausschwur und die Bastille.“ Wichtig: Der Begriff ist der Maßstab, an dem beide Texte gelesen werden (Gegen wen? Wie? Mit welchem Preis?). Keine Antworten ins Plenum, die Vermutungen stehen im Heft.");
+  box(s, 0.6, 1.5, 12.15, 2.2, NAVY);
+  txt(s, "Wie kann sich der Dritte Stand (Bauern und Bürger) wehren, wenn Wählen nichts bringt?", { x: 1.0, y: 1.5, w: 11.35, h: 2.2, fontFace: HEAD, fontSize: 34, bold: true, color: WHITE, valign: "middle" });
+  box(s, 0.6, 3.95, 12.15, 2.0, LIGHT2);
+  s.addText([{ text: "Widerstand: ", options: { bold: true, color: RED, fontFace: HEAD, fontSize: 27 } }, { text: "Man wehrt sich gegen die Herrschenden, obwohl man sich fügen soll.", options: { fontFace: HEAD, fontSize: 27, color: NAVY } }], { isTextBox: true, x: 1.0, y: 3.95, w: 11.35, h: 1.1, valign: "middle", margin: 0 });
+  txt(s, "Wir vergleichen zwei Wege: Ballhausschwur und Bastille.", { x: 1.0, y: 5.0, w: 11.35, h: 0.9, fontFace: HEAD, fontSize: 27, valign: "middle" });
 }
 
 // ============ 4 Lernziele ============
@@ -252,7 +253,7 @@ const IMG = "../material/";
 // ============ 8 Kriterien ============
 {
   const s = blank("V · Verarbeiten · Partnerpuzzle", "Die fünf Kriterien", 3, "Die Folie steht während der Einzelarbeit und des Austauschs. Sie nennt die fünf Kriterien mit Leitfragen. Alle Felder der Matrix auf dem Blatt entsprechen diesen Kriterien. Ansage: „Stifte liegen. Ihr hört nur zu.“ Dann Folie 9.");
-  [["1  Vorgeschichte", "Warum kam es dazu?"], ["2  Verlauf", "Was geschah?"], ["3  Mittel", "Gewalt: ja oder nein?"], ["4  Opfer und Folgen", "Wer litt, was riskierte jemand?"], ["5  Wirkung", "Was änderte sich?"]].forEach(([n, x], i) => {
+  [["1  Vorgeschichte", "Warum kam es dazu?"], ["2  Verlauf", "Was geschah? Gegen wen?"], ["3  Mittel", "Gewalt: ja oder nein?"], ["4  Opfer und Folgen", "Wer litt, was riskierte jemand?"], ["5  Wirkung", "Was änderte sich?"]].forEach(([n, x], i) => {
     const y = 1.5 + i * 0.9;
     box(s, 0.6, y, 12.15, 0.78, i % 2 ? LIGHT : LIGHT2);
     txt(s, n, { x: 0.8, y, w: 4.8, h: 0.78, fontFace: HEAD, fontSize: 27, bold: true, color: NAVY, valign: "middle" });
@@ -296,7 +297,7 @@ const IMG = "../material/";
 
 // ============ 12-15 Zeitstrahl-Auflösung ============
 const AUF = [
-  ["20. Juni 1789", "Ballhausschwur", "gewaltlos", "2E9E6B", "Wie reagiert der König?", "Aha-Moment, Schritt 1 (1 Minute). Ansage: „Stifte liegen. Ihr hört nur zu. Wir bringen die Ereignisse in die Reihenfolge.“ Zeigen Sie nur den ersten Eintrag. Frage an die Klasse (still denken, keine Antworten): „Wie reagiert der König auf den Eid der Abgeordneten?“ Dann Folie 13."],
+  ["20. Juni 1789", "Ballhausschwur", "gewaltlos", "2E9E6B", "Gegen wen richtet sich der Eid?", "Aha-Moment, Schritt 1 (1 Minute). Ansage: „Stifte liegen. Ihr hört nur zu. Wir bringen die Ereignisse in die Reihenfolge.“ Zeigen Sie nur den ersten Eintrag. Frage an die Klasse (still denken, keine Antworten): „Gegen wen richtet sich der Eid?“ Erwartung: gegen den König und sein Verbot, die Abgeordneten handeln gegen seinen Willen (Ungehorsam). Danach ergänzend: „Wie reagiert der König?“ Dann Folie 13."],
   ["Anfang Juli 1789", "König zieht Soldaten zusammen", "Drohung", "E8A33D", "Was passiert in Paris?", "Schritt 2 (1 Minute). Der König zieht Soldaten um Paris und Versailles zusammen und entlässt den beliebten Finanzminister. Das war die Antwort auf den gewaltlosen Widerstand. Frage (still denken): „Wie reagieren die Menschen in Paris?“ Dann Folie 14."],
   ["14. Juli 1789", "Sturm auf die Bastille", "gewaltsam", "D9534F", "Wer hat die Gewalt angefangen?", "Schritt 3 (1 Minute). Ansage: „Schreibt ins Heft: Wer hat die Gewalt angefangen? Ein Satz.“ Antwort nicht im Plenum, nur Heft (Stichprobe bei 3 bis 4 Personen). Mögliche Antworten: Die Drohung des Königs (Soldaten) und die Angst der Menschen sind der Anlass; die Menge griff dann selbst zur Gewalt. Es geht um Reihenfolge und Anlass, nicht um Schuld. Dann Folie 15."],
   ["Mitte Juli 1789", "König zieht Soldaten ab", "Wirkung", "3F7CC4", "Was hat gewirkt?", "Schritt 4 (1 Minute). Ansage: „Seht euch die Reihenfolge an. Was hat den König zum Nachgeben gebracht?“ Antwort mündlich nicht nötig, 10 Sekunden denken. Aha: Der Druck wirkte erst durch beides zusammen: Der gewaltlose Eid schuf die Grundlage (Verfassung), die Gewalt in Paris zwang den König zum Rückzug. Wichtig für die Haltung: Wirksam heißt nicht gerechtfertigt (siehe Bilanz auf Folie 16). Dann Folie 16."],
