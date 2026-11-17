@@ -24,16 +24,16 @@ const druck = [
   ["Lösung und Musterantworten (für dich)", "1 Blatt (zwei Seiten)", "Loesung_Arbeitsblatt_Menschenrechte_8D.pdf"],
 ];
 const prep = [
-  ["Tafelskript ausdrucken oder auf dem Tablet bereithalten", "Tafelskript_Stunde4_Menschenrechte_8D.pdf, 6 Seiten"],
-  ["Folien öffnen und einmal durchklicken", "Praesentation_Stunde4_Menschenrechte_8D.pptx, 21 Folien (27 Punkt); Folie 1 (Karikatur mit Sprechblase) steht beim Betreten da"],
-  ["Arbeitsblätter auf die Tische legen (umgedreht)", "Pro Person ein Blatt, doppelseitig, nach unten. Erst bei Folie 13 umdrehen lassen"],
+  ["Tafelskript ausdrucken oder auf dem Tablet bereithalten", "Tafelskript_Stunde4_Menschenrechte_8D.pdf, 7 Seiten"],
+  ["Folien öffnen und einmal durchklicken", "Praesentation_Stunde4_Menschenrechte_8D.pptx, 20 Folien (27 Punkt); Folie 1 (Karikatur mit Sprechblase und zwei Bildern an der Wand) steht beim Betreten da"],
+  ["Arbeitsblätter auf die Tische legen (umgedreht)", "Pro Person ein Blatt, doppelseitig, nach unten. Erst bei Folie 10 umdrehen lassen"],
   ["Wortlaut der Artikel mit Lehrbuch und Kollegin abgleichen", "Gekürzte, vereinfachte Fassung (Artikel 1, 2, 3, 4, 6, 10, 11), Wortlaut für den Test einheitlich halten"],
   ["Hintergrund zum 4. August im Lehrbuch lesen", "abgeschaffte Vorrechte, Ablösung der Abgaben, Bauernaufstände"],
   ["Rückmeldung der Hospitation absprechen", "Schwerpunkt: Aktivierung mit Fokus auf Kompetenzerwerb (Quelle auswerten); Punkte folgen später"],
   ["Kreide, Grün zum Verbessern, Uhr oder Timer", "Die Übungsphase endet 5 Minuten vor Schluss, „Auswerten“ bleibt immer"],
 ];
 const tafel = [
-  ["Seitentafel", "Stundenfrage („Was steht in der Erklärung der Menschenrechte, und was ändert sie für den Dritten Stand?“), Ziele („Ich kann …“, 3 Sätze, Satz 3 mit *) und Ablauf: A Karikatur · V Rückblick · I Quelle auswerten · V Blatt, Urteil · A Antwort"],
+  ["Seitentafel", "Stundenfrage („Was will der Dritte Stand noch? Was steht dazu in der Erklärung der Menschenrechte?“), Ziele („Ich kann …“, 3 Sätze, Satz 3 mit *) und Ablauf: A Karikatur · V Rückblick · I Quelle auswerten · V Blatt, Urteil · A Antwort"],
   ["Mitte", "leer lassen"],
 ];
 

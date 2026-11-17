@@ -37,12 +37,12 @@ function seite1(loesung) {
   c.push(p([t("Aufgabe  ", { bold: true, color: RED, size: 20 }), t("Werte jeden Artikel in drei Schritten aus: ", { size: 20 }), t("1 Lesen", { size: 20, bold: true }), t(" (in eigenen Worten), ", { size: 20 }), t("2 Einordnen", { size: 20, bold: true }), t(" (Was war vorher anders?), ", { size: 20 }), t("3 Begriff", { size: 20, bold: true }), t(" (Wortspeicher).", { size: 20 })], { after: 50 }));
   c.push(p(t(WORT, { size: 17, color: NAVY }), { after: 70 }));
   const CW = [3600, 2700, 2700, 1700];
-  const rows = [new TableRow({ children: [head("Quelle (Wortlaut)", CW[0]), head("1 Lesen", CW[1], "in eigenen Worten"), head("2 Einordnen", CW[2], "Vorher anders? Wer gewinnt?"), head("3 Begriff", CW[3])] })];
+  const rows = [new TableRow({ children: [head("Quelle (Wortlaut)", CW[0]), head("1 Lesen", CW[1], "in eigenen Worten"), head("2 Einordnen", CW[2], "Vorher anders? Passt ein Bild?"), head("3 Begriff", CW[3])] })];
   const L = {
     1: ["Alle Menschen haben von Geburt an dieselben Rechte.", "Vorher: Geburt entscheidet, zu welchem Stand man gehört (Vorrechte für Klerus und Adel). Wer gewinnt: Dritter Stand.", "Gleichheit"],
     3: ["Die Herrschaft geht vom Volk aus, nicht vom König allein.", "Vorher: König bestimmt allein. Passt zum Ballhausschwur (Macht geht von der Nation aus).", "Volkssouveränität"],
-    2: ["Der Staat muss Freiheit, Eigentum, Sicherheit und das Recht auf Widerstand gegen Unterdrückung schützen.", "Vorher: Ungehorsam gegen den König ist Verbrechen. Passt zum Ballhausschwur und zur Bastille.", "Grundrechte"],
-    4: ["Jeder darf tun, was anderen nicht schadet. Die Freiheit endet, wo sie anderen schadet.", "Vorher: Der König ließ Gegner ohne Urteil einsperren (Bastille).", "Freiheit"],
+    2: ["Der Staat muss Freiheit, Eigentum, Sicherheit und das Recht auf Widerstand gegen Unterdrückung schützen.", "Vorher: Ungehorsam gegen den König ist Verbrechen. Passt zur Bastille (Widerstand), nennt aber keine Gewalt.", "Grundrechte"],
+    4: ["Jeder darf tun, was anderen nicht schadet. Die Freiheit endet, wo sie anderen schadet.", "Vorher: Der König ließ Gegner ohne Urteil einsperren (Bastille). Begrenzt auch den Widerstand: Freiheit endet, wo sie anderen schadet.", "Freiheit"],
     6: ["Gleiches Gesetz für alle. Alle dürfen nach ihren Fähigkeiten ein Amt bekommen.", "Vorher: Klerus und Adel zahlen keine Steuern und bekommen die Ämter.", "Gleichheit"],
   };
   const order = [1, 3, 2, 4, 6];
@@ -73,20 +73,20 @@ function seite2(loesung) {
   c.push(new Table({ width: { size: W - 200, type: WidthType.DXA }, columnWidths: CW, rows }));
   // Urteil
   c.push(p([t("Urteil  ", { bold: true, color: RED, size: 22 }), t("Welcher Artikel ist für den Dritten Stand (Bauern und Bürger) am wichtigsten? Schreibe in ganzen Sätzen. Nutze die Satzanfänge.", { size: 20 })], { before: 120, after: 50 }));
-  const hilfen = [["Beleg", "Artikel … sagt: „…“"], ["Wirkung", "Das ändert für den Dritten Stand, dass …"], ["Urteil mit Maßstab", "Ich halte Artikel … für am wichtigsten, weil …"], ["Gegenargument", "Dagegen spricht, dass …"]];
+  const hilfen = [["Beleg", "Artikel … sagt: „…“"], ["Wirkung", "Das ändert für den Dritten Stand, dass …"], ["Maßstab", "Mein Maßstab: Wichtig ist für mich, was … (zum Beispiel: die meisten Menschen betrifft · am meisten verändert · vor Willkür und Gewalt schützt)"], ["Urteil", "Ich halte Artikel … für am wichtigsten, weil …"], ["Gegenargument", "Dagegen spricht, dass … (zum Beispiel aus Sicht von Klerus und Adel)"]];
   const HW = [2000, 8500];
-  c.push(new Table({ width: { size: W - 200, type: WidthType.DXA }, columnWidths: HW, rows: hilfen.map(([a, b], i) => new TableRow({ cantSplit: true, height: { value: 700, rule: "atLeast" }, children: [cell(p(t(a, { bold: true, size: 18, color: NAVY }), { after: 0 }), { w: HW[0], fill: LIGHT2, valign: VerticalAlign.CENTER }), cell(p(t(b, { size: 18, color: MUTED }), { after: 0 }), { w: HW[1], valign: VerticalAlign.TOP })] })) }));
+  c.push(new Table({ width: { size: W - 200, type: WidthType.DXA }, columnWidths: HW, rows: hilfen.map(([a, b], i) => new TableRow({ cantSplit: true, height: { value: 620, rule: "atLeast" }, children: [cell(p(t(a, { bold: true, size: 18, color: NAVY }), { after: 0 }), { w: HW[0], fill: LIGHT2, valign: VerticalAlign.CENTER }), cell(p(t(b, { size: 18, color: MUTED }), { after: 0 }), { w: HW[1], valign: VerticalAlign.TOP })] })) }));
   const lines = loesung
-    ? [t("„Artikel 6 sagt: ‚Das Gesetz muss für alle gleich sein.‘ Das ändert für den Dritten Stand, dass Klerus und Adel keine Vorrechte mehr haben. Ich halte Artikel 6 für am wichtigsten, weil der Dritte Stand sonst weiter Steuern zahlt, während andere frei ausgehen. Dagegen spricht, dass Gleichheit auf dem Papier noch nicht heißt, dass alle gleich behandelt werden.“", { size: 18, italics: true, color: "1B5E3A" })]
+    ? [t("„Artikel 6 sagt: ‚Das Gesetz muss für alle gleich sein.‘ Das ändert für den Dritten Stand, dass Klerus und Adel keine Vorrechte mehr haben. Mein Maßstab: Wichtig ist für mich, was die meisten Menschen betrifft. Ich halte Artikel 6 für am wichtigsten, weil der Dritte Stand sonst weiter Steuern zahlt, während andere frei ausgehen. Dagegen spricht aus Sicht von Klerus und Adel, dass sie ihre Vorrechte verlieren, und dass Gleichheit auf dem Papier noch nicht heißt, dass alle gleich behandelt werden.“", { size: 18, italics: true, color: "1B5E3A" })]
     : [];
   if (loesung) c.push(new Table({ width: { size: W - 200, type: WidthType.DXA }, columnWidths: [W - 200], rows: [new TableRow({ children: [cell(p(lines, { after: 0 }), { w: W - 200, fill: GOLD })] })] }));
   else {
-    c.push(new Table({ width: { size: W - 200, type: WidthType.DXA }, columnWidths: [W - 200], rows: [new TableRow({ cantSplit: true, height: { value: 2600, rule: "atLeast" }, children: [cell(p(t(""), { after: 0 }), { w: W - 200 })] })] }));
+    c.push(new Table({ width: { size: W - 200, type: WidthType.DXA }, columnWidths: [W - 200], rows: [new TableRow({ cantSplit: true, height: { value: 2000, rule: "atLeast" }, children: [cell(p(t(""), { after: 0 }), { w: W - 200 })] })] }));
   }
   // Rückmeldung
   c.push(p(t("Rückmeldung der Lehrkraft (wird nur bei freiwilliger Abgabe ausgefüllt)", { bold: true, size: 20, color: NAVY }), { before: 140, after: 50 }));
   const RW = [700, 9800];
-  const stufen = [["Stufe 1", "Ich kann einen Artikel in eigenen Worten wiedergeben."], ["Stufe 2", "Ich kann einen Artikel mit der Ständeordnung vergleichen (Was war vorher anders?)."], ["Stufe 3", "Ich kann mit einem Beleg aus der Quelle begründen, welcher Artikel am wichtigsten ist."]];
+  const stufen = [["Stufe 1", "Ich kann Artikel in eigenen Worten wiedergeben und den passenden Begriff nennen."], ["Stufe 2", "Ich kann einen Artikel mit der Ständeordnung vergleichen und einem Ereignis von 1789 zuordnen."], ["Stufe 3", "Ich kann mit Beleg und Maßstab begründen, welcher Artikel am wichtigsten ist."]];
   c.push(new Table({ width: { size: W - 200, type: WidthType.DXA }, columnWidths: RW, rows: stufen.map(([a, b], i) => new TableRow({ cantSplit: true, height: { value: 480, rule: "atLeast" }, children: [cell(p([t("□", { size: 26 })], { after: 0, align: AlignmentType.CENTER }), { w: RW[0], fill: i % 2 ? LIGHT : LIGHT2, valign: VerticalAlign.CENTER }), cell(p([t(a + "   ", { bold: true, size: 19, color: NAVY }), t(b, { size: 19 })], { after: 0 }), { w: RW[1], valign: VerticalAlign.CENTER })] })) }));
   c.push(p([t("□ Ich gebe das Blatt freiwillig ab.", { size: 22, bold: true }), t("          Rückmeldung: ________________________________", { size: 20, color: MUTED })], { before: 100, after: 0 }));
   return c;

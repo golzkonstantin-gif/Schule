@@ -149,19 +149,15 @@ function bubble(s, x, y, w, h, fill, line, side, tipY) {
 }
 const IMG = "../material/";
 
-const bubbleTop = (s, text) => {
-  s.addShape(pres.shapes.ROUNDED_RECTANGLE, { x: 0.85, y: 1.55, w: 6.5, h: 1.75, rectRadius: 0.18, fill: { color: WHITE }, line: { color: NAVY, width: 3 } });
-  s.addShape(pres.shapes.ISOSCELES_TRIANGLE, { x: 3.75, y: 3.25, w: 0.6, h: 0.5, rotate: 180, fill: { color: WHITE }, line: { color: NAVY, width: 3 } });
-  s.addShape(pres.shapes.RECTANGLE, { x: 3.77, y: 3.22, w: 0.56, h: 0.1, fill: { color: WHITE }, line: { type: "none" } });
-  txt(s, text, { x: 1.05, y: 1.55, w: 6.1, h: 1.75, fontFace: HEAD, fontSize: 27, color: NAVY, valign: "middle" });
-};
-const SAGT = "„Wir sind euch entgegengekommen. Jetzt sind alle gleich. Was wollt ihr noch?“";
+const SAGT = "„Ihr habt geschworen. Ihr habt die Bastille gestürmt. Wir kamen euch entgegen. Was wollt ihr noch?“";
+const K = 0.0062, FW = 1280 * K, FH = 970 * K;
+const crop = (s, which, x, y) => s.addImage({ path: IMG + "karikatur_rueckschau.png", x, y, w: FW, h: FH, sizing: { type: "crop", x: (which === "L" ? 30 : 670) * K, y: 22 * K, w: 580 * K, h: 336 * K } });
+const PH = 336 * K; // Höhe eines Gemäldeausschnitts
 
 // ============ 1 Karikatur / Ankommen ============
 {
-  const s = blank("Ankommen", "Ein Gespräch in Versailles", 0, "Die Folie steht beim Betreten. Niemand muss etwas sagen. Die Karikatur ist selbst gezeichnet, keine historische Quelle. An der Wand hängen zwei Bilder: der Eid im Ballhaus (links) und der Sturm auf die Bastille (rechts). Davor stehen Klerus und Adel und sagen: „Wir sind euch entgegengekommen. Jetzt sind alle gleich. Was wollt ihr noch?“ Der Dritte Stand (Bauern und Bürger) hört zu. Die Aussage ist bewusst überspitzt, eine erfundene Selbstdarstellung. Die Bilder an der Wand sind der Hinweis: Das Entgegenkommen hat eine Vorgeschichte. Die Klasse schreibt ihre Vermutung ins Heft (bleibt stehen, wird am Ende mit dem Ergebnis verglichen): „Warum kommen uns Klerus und Adel entgegen? Ich vermute …“ Keine Besprechung. Ansage: „Stifte liegen. Ihr hört nur zu.“ Danach Folie 2 bis 5 in zusammen etwa 2 Minuten.");
-  const IW = 6.8, IH = (IW * 970) / 1280;
-  s.addImage({ path: IMG + "karikatur_rueckschau.png", x: 0.6, y: 1.4, w: IW, h: IH });
+  const s = blank("Ankommen", "Ein Gespräch in Versailles", 0, "Dient Ziel: Stundenfrage und Vermutung (Vorher-Nachher). Die Folie steht beim Betreten. Niemand muss etwas sagen. Die Karikatur ist selbst gezeichnet, keine historische Quelle. An der Wand hängen zwei Bilder: der Eid im Ballhaus (links) und der Sturm auf die Bastille (rechts), beide unbeschriftet. Davor stehen Klerus und Adel und sagen: „Ihr habt geschworen. Ihr habt die Bastille gestürmt. Wir kamen euch entgegen. Was wollt ihr noch?“ Der Dritte Stand (Bauern und Bürger) hört zu. Die Aussage ist bewusst überspitzt (erfundene Selbstdarstellung): Entgegenkommen heißt Gnade von oben. Gegenpol, der am Ende der Stunde auftaucht: Rechte, die für alle gelten. Die Klasse schreibt ihre Vermutung ins Heft (bleibt stehen, wird am Ende mit der Antwort verglichen): „Was will der Dritte Stand noch? Ich vermute …“ Keine Besprechung. Ansage: „Stifte liegen. Ihr hört nur zu.“ Danach Folie 2 bis 4 in zusammen etwa 2 Minuten.");
+  s.addImage({ path: IMG + "karikatur_rueckschau.png", x: 0.6, y: 1.4, w: 6.8, h: (6.8 * 970) / 1280 });
   s.addShape(pres.shapes.ROUNDED_RECTANGLE, { x: 1.0, y: 3.35, w: 6.0, h: 1.5, rectRadius: 0.18, fill: { color: WHITE }, line: { color: NAVY, width: 3 } });
   s.addShape(pres.shapes.ISOSCELES_TRIANGLE, { x: 3.7, y: 4.8, w: 0.6, h: 0.45, rotate: 180, fill: { color: WHITE }, line: { color: NAVY, width: 3 } });
   s.addShape(pres.shapes.RECTANGLE, { x: 3.72, y: 4.77, w: 0.56, h: 0.1, fill: { color: WHITE }, line: { type: "none" } });
@@ -170,52 +166,37 @@ const SAGT = "„Wir sind euch entgegengekommen. Jetzt sind alle gleich. Was wol
     box(s, x, 6.0, w, 0.5, WHITE, { line: NAVY, lw: 2 });
     txt(s, n, { x, y: 6.0, w, h: 0.5, fontSize: 27, bold: true, color: NAVY, align: "center", valign: "middle" });
   });
-  [["Heft raus. Datum und Überschrift.", 1.6, 1.0], ["Sieh dir die Bilder an. Lies, was Klerus und Adel sagen.", 2.75, 1.5], ["Schreibe: Warum kommen sie entgegen? Ich vermute …", 4.45, 1.6]].forEach(([x, y, h], i) => {
+  [["Heft raus. Datum und Überschrift.", 1.6, 1.0], ["Sieh dir die Bilder an. Lies, was Klerus und Adel sagen.", 2.75, 1.5], ["Schreibe: Was will der Dritte Stand noch? Ich vermute …", 4.45, 1.6]].forEach(([x, y, h], i) => {
     numCircle(s, i + 1, 7.95, y + 0.05, 0.45, RED);
     txt(s, x, { x: 8.6, y, w: 4.15, h, fontSize: 27, bold: true, valign: "top" });
   });
 }
 
-// ============ 2 Erwartungen ============
+// ============ 2 Stundenfrage ============
 {
-  const s = blank("A · Ankommen · Zusammenarbeit", "Das ist mir wichtig", undefined, "Dauer: 20 Sekunden (bewährt), Sie sprechen, die Klasse hört nur zu, kein Gespräch. Ansage: „Stifte liegen. Ihr hört nur zu.“ Haltung (Neue Autorität): ruhig, präsent, wertschätzend. Sinngemäß: „Ich bin euer Lehrer und euer Coach. Mir ist wichtig, dass ihr Spaß habt und etwas lernt. Beides gelingt nur gemeinsam. Wir hören einander zu. Wir arbeiten leise, wenn Arbeitszeit ist. Wir machen mit, auch wenn es mal schwer ist. Ich bin da, ich helfe euch, und ich bleibe dran.“ Bei Hospitation unverändert lassen, damit die Stunde vertraut wirkt.");
-  box(s, 0.6, 1.5, 12.15, 1.15, NAVY2);
-  txt(s, "Ich bin euer Lehrer und Coach. Mir ist wichtig, dass ihr Spaß habt und lernt.", { x: 0.9, y: 1.5, w: 11.6, h: 1.15, fontFace: HEAD, fontSize: 27, bold: true, color: WHITE, valign: "middle" });
-  txt(s, "Das gelingt, wenn wir gemeinsam arbeiten:", { x: 0.6, y: 2.8, w: 12.1, h: 0.55, fontSize: 27, bold: true, color: NAVY });
-  ["Wir hören einander zu, wenn jemand spricht.", "Wir arbeiten leise, wenn Arbeitszeit ist.", "Wir machen mit, auch wenn es mal schwer ist."].forEach((x, i) => {
-    const y = 3.45 + i * 0.88;
-    box(s, 0.6, y, 12.15, 0.76, i % 2 ? LIGHT : LIGHT2);
-    numCircle(s, i + 1, 0.8, y + 0.17, 0.42, RED);
-    txt(s, x, { x: 1.4, y, w: 11.2, h: 0.76, fontSize: 27, valign: "middle" });
-  });
-  bar(s, [{ text: "Ich bin da und bleibe dran. ", options: { bold: true } }, { text: "Ich helfe euch.", options: {} }]);
-}
-
-// ============ 3 Stundenfrage ============
-{
-  const s = blank("Stundenfrage", "Das untersuchen wir heute", undefined, "Stundenfrage und Begriff (45 Sekunden, Klasse hört nur zu): „Klerus und Adel sagen: Wir sind euch entgegengekommen, jetzt sind alle gleich. Stimmt das? Wir prüfen es an einer Quelle: der Erklärung der Menschenrechte von 1789. Eine Quelle ist ein Text aus der Zeit selbst. Wir lesen sie nicht einfach, wir werten sie aus: Was steht da? Was war vorher anders?“ Wichtig: Die Frage lässt offen, was die Erklärung für den Dritten Stand (Bauern und Bürger) bedeutet. Keine Antworten ins Plenum, die Vermutungen stehen im Heft.");
+  const s = blank("Stundenfrage", "Das untersuchen wir heute", undefined, "Dient Ziel: alle drei (Orientierung). Stundenfrage und Begriff (45 Sekunden, Klasse hört nur zu): „Klerus und Adel sagen: Wir kamen euch entgegen. Was wollt ihr noch? Die Antwort steht in einer Quelle: der Erklärung der Menschenrechte von 1789. Eine Quelle ist ein Text aus der Zeit selbst. Wir lesen sie nicht einfach, wir werten sie aus: Was steht da? Was war vorher anders? Das braucht ihr bei jeder Quelle und im Test.“ Relevanz benennen, nicht diskutieren. Die Frage lässt offen, was die Erklärung für den Dritten Stand bedeutet. Keine Antworten ins Plenum, die Vermutungen stehen im Heft.");
   box(s, 0.6, 1.5, 12.15, 2.2, NAVY);
-  txt(s, "Was steht in der Erklärung der Menschenrechte, und was ändert sie für den Dritten Stand (Bauern und Bürger)?", { x: 1.0, y: 1.5, w: 11.35, h: 2.2, fontFace: HEAD, fontSize: 32, bold: true, color: WHITE, valign: "middle" });
+  txt(s, "Was will der Dritte Stand (Bauern und Bürger) noch? Was steht dazu in der Erklärung der Menschenrechte?", { x: 1.0, y: 1.5, w: 11.35, h: 2.2, fontFace: HEAD, fontSize: 32, bold: true, color: WHITE, valign: "middle" });
   box(s, 0.6, 3.95, 12.15, 2.0, LIGHT2);
-  s.addText([{ text: "Quelle: ", options: { bold: true, color: RED, fontFace: HEAD, fontSize: 27 } }, { text: "Ein Text aus der Zeit selbst. Wir lesen ihn nicht nur, wir werten ihn aus.", options: { fontFace: HEAD, fontSize: 27, color: NAVY } }], { isTextBox: true, x: 1.0, y: 3.95, w: 11.35, h: 2.0, valign: "middle", margin: 0 });
+  s.addText([{ text: "Quelle: ", options: { bold: true, color: RED, fontFace: HEAD, fontSize: 27 } }, { text: "Ein Text aus der Zeit selbst. Wir werten ihn aus. Das brauchst du bei jeder Quelle und im Test.", options: { fontFace: HEAD, fontSize: 27, color: NAVY } }], { isTextBox: true, x: 1.0, y: 3.95, w: 11.35, h: 2.0, valign: "middle", margin: 0 });
 }
 
-// ============ 4 Lernziele ============
+// ============ 3 Lernziele (zugleich Raster) ============
 {
-  const s = blank("Lernziele", "Das kannst du am Ende der Stunde", undefined, "Lernziele vorlesen (30 Sekunden). Mindestziel: Ziel 1 und 2. Ziel 3 hat einen Stern: Das Urteil wird verkürzt, wenn die Zeit knapp ist. Die Phase „Auswerten“ bleibt immer. Am Ende (Folie 20) prüft die Klasse still, ob die Ziele erreicht sind.");
-  [["1", "Ich kann Artikel der Erklärung der Menschenrechte in eigenen Worten wiedergeben."], ["2", "Ich kann einen Artikel mit der Ständeordnung vergleichen: Was war vorher anders?"], ["3", "Ich kann mit einem Beleg aus der Quelle begründen, welcher Artikel für den Dritten Stand am wichtigsten ist.*"]].forEach(([n, x], i) => {
-    const y = 1.75 + i * 1.5;
-    box(s, 0.6, y, 12.15, 1.25, i % 2 ? LIGHT : LIGHT2);
-    numCircle(s, n, 0.9, y + 0.37, 0.5, RED);
-    txt(s, x, { x: 1.7, y, w: 10.8, h: 1.25, fontFace: HEAD, fontSize: 27, valign: "middle" });
+  const s = blank("Lernziele", "Das kannst du am Ende der Stunde", undefined, "Dient Ziel: alle drei (Transparenz). Lernziele vorlesen (45 Sekunden). Sie sind zugleich das Raster für die Rückmeldung: Stufe 1 = Ziel 1, Stufe 2 = Ziel 2, Stufe 3 = Ziel 3. Die Abgabe des Blattes ist freiwillig, Sie geben Rückmeldung nach den Stufen, Punkte oder Noten gibt es heute nicht. Keine Selbsteinschätzung der Schülerinnen und Schüler. Mindestziel: Ziel 1 und 2. Ziel 3 hat einen Stern: Das Urteil wird gekürzt, wenn die Zeit knapp ist. Die Phase „Auswerten“ bleibt immer. Am Ende (Folie 19) prüft die Klasse still, ob die Ziele erreicht sind.");
+  [["1", "Ich kann Artikel der Erklärung der Menschenrechte in eigenen Worten wiedergeben und den passenden Begriff nennen."], ["2", "Ich kann einen Artikel mit der Ständeordnung vergleichen und einem Ereignis von 1789 zuordnen."], ["3", "Ich kann mit Beleg und Maßstab begründen, welcher Artikel für den Dritten Stand am wichtigsten ist.*"]].forEach(([n, x], i) => {
+    const y = 1.55 + i * 1.5;
+    box(s, 0.6, y, 12.15, 1.3, i % 2 ? LIGHT : LIGHT2);
+    numCircle(s, n, 0.9, y + 0.4, 0.5, RED);
+    txt(s, x, { x: 1.7, y, w: 10.8, h: 1.3, fontFace: HEAD, fontSize: 27, valign: "middle" });
   });
-  bar(s, [{ text: "Heute: ", options: { bold: true } }, { text: "Rückblick, Quelle auswerten, Urteil.", options: {} }]);
+  bar(s, [{ text: "Rückmeldung von mir: ", options: { bold: true } }, { text: "Stufe 1, 2 oder 3. Blatt freiwillig abgeben.", options: {} }]);
 }
 
-// ============ 5 Ablauf ============
+// ============ 4 Ablauf ============
 {
-  const s = blank("Ablauf", "So arbeiten wir heute", undefined, "Ablauf zeigen (30 Sekunden). Die Kreise oben rechts zeigen die Phase: A V I V A. Der Stern * bedeutet: wird eventuell nicht mehr geschafft (Ziel 3). Insgesamt 45 Minuten.");
-  const ph = [["A", "Ankommen", "Karikatur", "4 Min."], ["V", "Vorwissen", "Rückschau", "5 Min."], ["I", "Informieren", "Quelle auswerten", "9 Min."], ["V", "Verarbeiten", "Arbeitsblatt, Urteil", "20 Min."], ["A", "Auswerten", "Antwort als Dritter Stand", "7 Min."]];
+  const s = blank("Ablauf", "So arbeiten wir heute", undefined, "Dient Ziel: alle drei (Transparenz). Ablauf zeigen (30 Sekunden). Die Kreise oben rechts zeigen die Phase: A V I V A. Der Stern * bedeutet: wird eventuell nicht mehr geschafft (Ziel 3). Insgesamt 45 Minuten, davon eine kleine Reserve in „Informieren“ zum erneuten Erklären.");
+  const ph = [["A", "Ankommen", "Karikatur", "4 Min."], ["V", "Vorwissen", "Rückschau", "5 Min."], ["I", "Informieren", "Quelle auswerten", "8 Min."], ["V", "Verarbeiten", "Blatt, Urteil", "20 Min."], ["A", "Auswerten", "Merksatz, Antwort", "8 Min."]];
   ph.forEach(([l, n, x, m], i) => {
     const xx = 0.6 + i * 2.45;
     box(s, xx, 1.9, 2.3, 3.6, i % 2 ? LIGHT : LIGHT2);
@@ -228,55 +209,39 @@ const SAGT = "„Wir sind euch entgegengekommen. Jetzt sind alle gleich. Was wol
   bar(s, [{ text: "Wichtig: ", options: { bold: true } }, { text: "Wir arbeiten leise. Gesprochen wird nur nach Ansage.", options: {} }]);
 }
 
-// ============ 6 Rückschau: Bilder ============
+// ============ 5 Rückschau: Bilder ============
 {
-  const s = blank("V · Vorwissen aktivieren · Rückschau", "Rückschau: Was zeigen die Bilder?", 1, "Rückschau (5 Minuten, allein, Partnercheck, Plenum). Ansage: „Stifte liegen. Ihr hört nur zu. Schaut auf die zwei Bilder an der Wand der Karikatur. Jetzt arbeitet ihr allein. Die Aufgabe steht rechts.“ Die Bilder sind unbeschriftet: Die Klasse erkennt selbst, welche Ereignisse sie zeigen (links der Eid im Ballhaus, 20. Juni, rechts der Sturm auf die Bastille, 14. Juli). 2 Minuten allein ins Heft: zu jedem Bild „Was geschah? Was bewirkte es?“ Dann 1 Minute Partnercheck: „Flüsterstufe. Nur dein Partner hört dich. Erklärt euch: Was haben die Bilder mit dem Entgegenkommen zu tun?“ Dann 2 Minuten Plenum: Stichproben bei 3 bis 4 Personen unterschiedlichen Niveaus (kurze Antwort, unbenotet), dann Folie 7. Wurde in Stunde 3 etwas nicht geschafft (zum Beispiel die Reihenfolge am Zeitstrahl), steht es hier als Wiederholung. Gelenk: „Die Bilder haben mit dem Entgegenkommen zu tun. Wie genau, seht ihr gleich.“");
-  const K = 0.0062, FW = 1280 * K, FH = 970 * K;
-  s.addImage({ path: IMG + "karikatur_rueckschau.png", x: 0.6, y: 1.5, w: FW, h: FH, sizing: { type: "crop", x: 30 * K, y: 22 * K, w: 580 * K, h: 336 * K } });
-  s.addImage({ path: IMG + "karikatur_rueckschau.png", x: 0.6, y: 1.5 + 336 * K + 0.12, w: FW, h: FH, sizing: { type: "crop", x: 670 * K, y: 22 * K, w: 580 * K, h: 336 * K } });
-  [["Schaue auf die zwei Bilder.", 1], ["Schreibe zu jedem Bild: Was geschah? Was bewirkte es?", 2], ["Erkläre deinem Partner: Was haben die Bilder mit dem Entgegenkommen zu tun?", 3]].forEach(([x, n], i) => {
-    const ys = [1.5, 2.45, 4.0], hs = [0.8, 1.45, 2.0];
+  const s = blank("V · Vorwissen aktivieren · Rückschau", "Rückschau: Was meinen Klerus und Adel?", 1, "Dient Ziel 2 (Ereignisse von 1789 kennen, um sie später Artikeln zuzuordnen). Rückschau (5 Minuten mit Folie 6, allein, Partnercheck, Plenum). Ansage: „Stifte liegen. Ihr hört nur zu. Schaut auf die zwei Bilder. Jetzt arbeitet ihr allein. Die Aufgabe steht rechts.“ Die Bilder sind unbeschriftet: Die Klasse entschlüsselt „geschworen“ und „gestürmt“ selbst (links der Eid im Ballhaus, 20. Juni, rechts der Sturm auf die Bastille, 14. Juli). 2 Minuten allein ins Heft: zu jedem Bild „Was geschah? Was bewirkte es?“ Dann 1 Minute Partnercheck: „Flüsterstufe. Nur dein Partner hört dich. Erklärt euch: Was haben die Bilder mit dem Entgegenkommen zu tun?“ Dann 1 Minute Plenum: Stichproben bei 3 bis 4 Personen unterschiedlichen Niveaus (kurze Antwort, unbenotet), dann Folie 6. Wurde in Stunde 3 etwas nicht geschafft (zum Beispiel die Reihenfolge am Zeitstrahl), steht es hier als Wiederholung. Gelenk: „Die Bilder haben mit dem Entgegenkommen zu tun. Wie genau, seht ihr gleich.“");
+  crop(s, "L", 0.6, 1.5);
+  crop(s, "R", 0.6, 1.5 + PH + 0.12);
+  [["Schaue auf die zwei Bilder. Was meinen „geschworen“ und „gestürmt“?", 1], ["Schreibe zu jedem Bild: Was geschah? Was bewirkte es?", 2], ["Erkläre deinem Partner: Was haben die Bilder mit dem Entgegenkommen zu tun?", 3]].forEach(([x, n], i) => {
+    const ys = [1.5, 2.85, 4.1], hs = [1.2, 1.1, 1.75];
     box(s, 4.6, ys[i], 8.15, hs[i], i % 2 ? LIGHT : LIGHT2);
     numCircle(s, n, 4.8, ys[i] + (hs[i] - 0.45) / 2, 0.45, NAVY);
     txt(s, x, { x: 5.5, y: ys[i], w: 7.1, h: hs[i], fontSize: 27, bold: true, valign: "middle" });
   });
-  bar(s, [{ text: "Zeit: ", options: { bold: true } }, { text: "2 Min. allein, 1 Min. Partner, 2 Min. Plenum      ", options: {} }, { text: "Fertig? Stift hinlegen.", options: { italic: true, color: ICE } }]);
+  bar(s, [{ text: "Zeit: ", options: { bold: true } }, { text: "2 Min. allein, 1 Min. Partner, 1 Min. Plenum      ", options: {} }, { text: "Fertig? Stift hinlegen.", options: { italic: true, color: ICE } }]);
 }
 
-// ============ 7 Auflösung Rückschau ============
+// ============ 6 Kette und Portion 1 ============
 {
-  const s = blank("V · Vorwissen aktivieren · Kontrolle", "So hängt es zusammen", 1, "Auflösung (1 Minute). Ansage: „Vergleicht und verbessert mit Grün.“ Kette: 20. Juni Ballhausschwur: Die Abgeordneten schwören, nicht auseinanderzugehen, die Nationalversammlung bleibt zusammen (gewaltlos). 14. Juli Bastille: Die Pariser greifen die Festung an, der König zieht die Soldaten ab, im Land greifen Bauern Schlösser an. Sommer 1789: Klerus und Adel haben Angst vor weiteren Aufständen. Damit ist die Frage der Karikatur teilweise beantwortet: Das Entgegenkommen war nicht freiwillig. Die Klasse prüft ihre Vermutung. Warnung vor dem Fehler: Nicht „der König hat die Vorrechte abgeschafft“. Das tat die Nationalversammlung (Folie 8). Gelenk: „Und was beschließt die Nationalversammlung? Hört zu.“");
-  [["20. Juni 1789", "Ballhausschwur", "Die Versammlung bleibt zusammen.", "2E9E6B"], ["14. Juli 1789", "Sturm auf die Bastille", "Der König zieht die Soldaten ab. Aufstände im Land.", "D9534F"], ["Sommer 1789", "Klerus und Adel", "Sie haben Angst vor weiteren Aufständen.", "E8A33D"]].forEach(([d, h, x, col], i) => {
-    const xx = 0.6 + i * 4.2;
-    box(s, xx, 1.5, 3.7, 4.4, i % 2 ? LIGHT : LIGHT2);
-    s.addShape(pres.shapes.RECTANGLE, { x: xx, y: 1.5, w: 3.7, h: 0.16, fill: { color: col }, line: { type: "none" } });
-    txt(s, d, { x: xx + 0.2, y: 1.8, w: 3.3, h: 0.55, fontSize: 27, bold: true, color: RED });
-    txt(s, h, { x: xx + 0.2, y: 2.4, w: 3.3, h: 1.0, fontFace: HEAD, fontSize: 27, bold: true, valign: "top" });
-    txt(s, x, { x: xx + 0.2, y: 3.5, w: 3.3, h: 2.3, fontSize: 27 });
-    if (i < 2) s.addShape(pres.shapes.RIGHT_ARROW, { x: xx + 3.72, y: 3.4, w: 0.46, h: 0.5, fill: { color: NAVY }, line: { type: "none" } });
-  });
-  bar(s, [{ text: "Jetzt: ", options: { bold: true } }, { text: "Vergleiche mit deiner Vermutung. Verbessere mit Grün.", options: {} }]);
-}
-
-// ============ 8 Zeitstrahl Sommer 1789 (Portion 1) ============
-{
-  const s = blank("I · Informieren · Portion 1", "Was geschah nach dem 14. Juli?", 2, "Portion 1 (3 Minuten, Sie sprechen, Klasse hört nur zu; Stifte liegen). Ansage: „Stifte liegen. Ihr hört nur zu.“ Inhalt: Nach der Bastille wächst die Angst vor Aufständen. Im ganzen Land greifen Bauern Schlösser an und verbrennen Urkunden über ihre Abgaben. In der Nacht zum 4. August 1789 beschließt die Nationalversammlung, Vorrechte abzuschaffen (zum Beispiel die Steuerfreiheit von Klerus und Adel, Abgaben und Dienste der Bauern an den Adel, das alleinige Jagdrecht). Am 26. August 1789 beschließt sie die Erklärung der Menschen- und Bürgerrechte. Vorbild ist die amerikanische Unabhängigkeitserklärung von 1776. Warnung vor dem Fehler: Abgeschafft heißt nicht, dass sofort alle gleich leben. Viele Abgaben müssen die Bauern erst ablösen, also bezahlen (Lehrbuch gegenprüfen). Prüffrage (nach der Portion, Stichprobe bei 2 Personen): „Warum verzichten Klerus und Adel am 4. August?“ Erwartung: aus Angst vor den Aufständen der Bauern.");
-  const ev = [["14. Juli 1789", "Sturm auf die Bastille"], ["Sommer 1789", "Bauern greifen Schlösser an"], ["4. August 1789", "Vorrechte werden abgeschafft"], ["26. August 1789", "Erklärung der Menschenrechte"]];
-  s.addShape(pres.shapes.RECTANGLE, { x: 3.6, y: 1.7, w: 0.1, h: 3.7, fill: { color: NAVY }, line: { type: "none" } });
-  ev.forEach(([d, e], i) => {
-    const y = 1.5 + i * 1.0;
-    box(s, 0.6, y, 2.8, 0.8, i % 2 ? LIGHT : LIGHT2);
-    txt(s, d, { x: 0.7, y, w: 2.6, h: 0.8, fontSize: 27, bold: true, color: RED, align: "center", valign: "middle" });
-    s.addShape(pres.shapes.OVAL, { x: 3.5, y: y + 0.23, w: 0.34, h: 0.34, fill: { color: i >= 2 ? RED : NAVY }, line: { color: WHITE, width: 2 } });
-    txt(s, e, { x: 4.2, y, w: 8.5, h: 0.8, fontFace: HEAD, fontSize: 27, bold: i >= 2, valign: "middle" });
+  const s = blank("V · I · Kontrolle und Portion 1", "So hängt es zusammen", 1, "Dient Ziel 2 (Ereignisse 1789 und Rahmen für das „vorher anders“). Zwei Teile auf einer Folie (3 Minuten). Teil 1, Kontrolle der Rückschau (1 Minute): Ansage: „Vergleicht und verbessert mit Grün.“ Zeilen 1 bis 3: 20. Juni Ballhausschwur (die Versammlung bleibt zusammen, gewaltlos), 14. Juli Bastille (der König zieht die Soldaten ab), im Sommer greifen Bauern Schlösser an. Teil 2, Informieren, Portion 1 (2 Minuten, Sie sprechen, Stifte liegen): Ansage: „Stifte liegen. Ihr hört nur zu.“ Zeilen 4 und 5: In der Nacht zum 4. August 1789 beschließt die Nationalversammlung, die Vorrechte abzuschaffen (zum Beispiel die Steuerfreiheit von Klerus und Adel, Abgaben und Dienste der Bauern an den Adel). Klerus und Adel kamen der Klasse also entgegen, weil sie Angst vor den Aufständen hatten: Das war nicht freiwillig. Entgegenkommen ist Gnade von oben. Am 26. August 1789 folgt die Erklärung der Menschen- und Bürgerrechte, Vorbild ist die amerikanische Unabhängigkeitserklärung von 1776. Warnung vor dem Fehler: Abgeschafft heißt nicht, dass sofort alle gleich leben (viele Abgaben müssen die Bauern noch ablösen, im Lehrbuch gegenprüfen); und nicht der König, sondern die Nationalversammlung schaffte die Vorrechte ab. Prüffrage (Stichprobe, 2 Personen): „Warum kommen Klerus und Adel am 4. August entgegen?“ Erwartung: aus Angst vor den Aufständen der Bauern. Gelenk: „Entgegenkommen ist Gnade. Was ist der Gegenpol? Das lest ihr jetzt in der Quelle.“");
+  const ev = [["20. Juni 1789", "Ballhausschwur: Die Versammlung bleibt zusammen.", false], ["14. Juli 1789", "Bastille: Der König zieht die Soldaten ab.", false], ["Sommer 1789", "Bauern greifen Schlösser an.", false], ["4. August 1789", "Vorrechte werden abgeschafft.", true], ["26. August 1789", "Erklärung der Menschenrechte", true]];
+  s.addShape(pres.shapes.RECTANGLE, { x: 3.6, y: 1.7, w: 0.1, h: 4.4, fill: { color: NAVY }, line: { type: "none" } });
+  ev.forEach(([d, e, hl], i) => {
+    const y = 1.45 + i * 0.93;
+    box(s, 0.6, y, 2.8, 0.78, i % 2 ? LIGHT : LIGHT2);
+    txt(s, d, { x: 0.7, y, w: 2.6, h: 0.78, fontSize: 27, bold: true, color: RED, align: "center", valign: "middle" });
+    s.addShape(pres.shapes.OVAL, { x: 3.5, y: y + 0.22, w: 0.34, h: 0.34, fill: { color: hl ? RED : NAVY }, line: { color: WHITE, width: 2 } });
+    txt(s, e, { x: 4.2, y, w: 8.55, h: 0.78, fontFace: HEAD, fontSize: 27, bold: hl, valign: "middle" });
   });
   bar(s, [{ text: "Achtung: ", options: { bold: true } }, { text: "Abgeschafft heißt nicht, dass sofort alles anders ist.", options: {} }]);
 }
 
-// ============ 9 Drei Schritte ============
+// ============ 7 Drei Schritte ============
 {
-  const s = blank("I · Informieren · Portion 2", "Eine Quelle auswerten: drei Schritte", 2, "Portion 2, Teil 1 (1 Minute). Ansage: „Stifte liegen. Ihr hört nur zu.“ Wir lesen die Erklärung der Menschenrechte nicht nur, wir werten sie aus. Immer in dieser Reihenfolge: 1 Lesen: Was steht da? In eigenen Worten, so, dass es ein Freund versteht. 2 Einordnen: Was war vorher anders? Wer gewinnt, wer verliert dabei? Das wissen wir aus den Stunden 1 bis 3 (Ständeordnung, Vorrechte, König bestimmt allein). 3 Begriff: Welcher Fachbegriff passt? (Wortspeicher auf dem Blatt). Warnung vor dem Fehler: Nicht den Wortlaut abschreiben, sondern in eigene Worte fassen.");
-  [["1", "Lesen", "Was steht da? In eigenen Worten.", "2E9E6B"], ["2", "Einordnen", "Was war vorher anders? Wer gewinnt?", "E8A33D"], ["3", "Begriff", "Welcher Fachbegriff passt?", "3F7CC4"]].forEach(([n, h, x, col], i) => {
+  const s = blank("I · Informieren · Portion 2", "Eine Quelle auswerten: drei Schritte", 2, "Dient Ziel 1 und 2 (Methode der Auswertung). Portion 2, Teil 1 (1 Minute). Ansage: „Stifte liegen. Ihr hört nur zu.“ Wir lesen die Erklärung der Menschenrechte nicht nur, wir werten sie aus. Immer in dieser Reihenfolge: 1 Lesen: Was steht da? In eigenen Worten, so, dass es ein Freund versteht. 2 Einordnen: Was war vorher anders? Wer gewinnt, wer verliert dabei? Passt ein Bild von 1789 dazu? Das wissen wir aus den Stunden 1 bis 3 (Ständeordnung, Vorrechte, König bestimmt allein). 3 Begriff: Welcher Fachbegriff passt? (Wortspeicher auf dem Blatt). Warnung vor dem Fehler: Nicht den Wortlaut abschreiben, sondern in eigene Worte fassen.");
+  [["1", "Lesen", "Was steht da? In eigenen Worten.", "2E9E6B"], ["2", "Einordnen", "Was war vorher anders? Passt ein Bild?", "E8A33D"], ["3", "Begriff", "Welcher Fachbegriff passt?", "3F7CC4"]].forEach(([n, h, x, col], i) => {
     const xx = 0.6 + i * 4.1;
     box(s, xx, 1.6, 3.95, 3.9, LIGHT);
     s.addShape(pres.shapes.RECTANGLE, { x: xx, y: 1.6, w: 3.95, h: 0.16, fill: { color: col }, line: { type: "none" } });
@@ -287,9 +252,9 @@ const SAGT = "„Wir sind euch entgegengekommen. Jetzt sind alle gleich. Was wol
   bar(s, [{ text: "Drei Schritte, ", options: { bold: true } }, { text: "immer in dieser Reihenfolge.", options: {} }]);
 }
 
-// ============ 10 Modell Artikel 1 ============
+// ============ 8 Modell Artikel 1 ============
 {
-  const s = blank("I · Informieren · Portion 2 · Modell", "Ich mache es vor: Artikel 1", 2, "Portion 2, Teil 2 (3 Minuten, Sie denken laut). Ansage: „Stifte liegen. Ihr hört nur zu. Ich mache es vor, ihr schaut zu.“ Zeigen Sie zuerst nur den Artikel im roten Rahmen (decken Sie die drei Zeilen ab, zum Beispiel mit einem Blatt oder indem Sie die Folie erst später weiter zeigen). Denken Sie laut: „Schritt 1: Was steht da? ‚Frei und gleich an Rechten geboren.‘ Das heißt: Alle Menschen haben von Geburt an dieselben Rechte. Schritt 2: Was war vorher anders? In der Ständeordnung entschied die Geburt über den Stand und die Vorrechte. Wer gewinnt? Der Dritte Stand. Schritt 3: Der Begriff dafür heißt Gleichheit.“ Zeigen Sie dann die drei Zeilen. Auf dem Blatt (Seite 1) steht dasselbe gelb hinterlegt. Warnung vor dem Fehler: ‚Gleich an Rechten‘ heißt nicht, dass alle gleich reich oder gleich stark sind.");
+  const s = blank("I · Informieren · Portion 2 · Modell", "Ich mache es vor: Artikel 1", 2, "Dient Ziel 1 und 2 (Modell des Zielprodukts). Portion 2, Teil 2 (3 Minuten, Sie denken laut). Ansage: „Stifte liegen. Ihr hört nur zu. Ich mache es vor, ihr schaut zu.“ Zeigen Sie zuerst nur den Artikel im roten Rahmen (die drei Zeilen abdecken oder erst später aufdecken). Denken Sie laut: „Schritt 1: Was steht da? ‚Frei und gleich an Rechten geboren.‘ Das heißt: Alle Menschen haben von Geburt an dieselben Rechte. Schritt 2: Was war vorher anders? In der Ständeordnung entschied die Geburt über den Stand und die Vorrechte. Wer gewinnt? Der Dritte Stand. Schritt 3: Der Begriff dafür heißt Gleichheit.“ Zeigen Sie dann die drei Zeilen. Auf dem Blatt (Seite 1) steht dasselbe gelb hinterlegt. Warnung vor dem Fehler: ‚Gleich an Rechten‘ heißt nicht gleich reich oder gleich stark. Reserve (1 Minute, nur bei Bedarf): Schritt 2 noch einmal erklären.");
   s.addShape(pres.shapes.ROUNDED_RECTANGLE, { x: 0.6, y: 1.5, w: 12.15, h: 1.35, rectRadius: 0.08, fill: { color: WHITE }, line: { color: RED, width: 3 } });
   s.addText([{ text: "Artikel 1:  ", options: { bold: true, color: RED } }, { text: "„Die Menschen werden frei und gleich an Rechten geboren und bleiben es.“", options: {} }], { isTextBox: true, x: 0.95, y: 1.5, w: 11.45, h: 1.35, fontFace: HEAD, fontSize: 27, color: NAVY, valign: "middle", margin: 0 });
   [["1  Lesen", "Alle Menschen haben von Geburt an dieselben Rechte.", "2E9E6B"], ["2  Einordnen", "Vorher entschied die Geburt über Stand und Vorrechte. Gewinner: Dritter Stand.", "E8A33D"], ["3  Begriff", "Gleichheit", "3F7CC4"]].forEach(([h, x, col], i) => {
@@ -302,9 +267,9 @@ const SAGT = "„Wir sind euch entgegengekommen. Jetzt sind alle gleich. Was wol
   bar(s, [{ text: "Jetzt: ", options: { bold: true } }, { text: "Du schaust zu. Stifte liegen.", options: {} }]);
 }
 
-// ============ 11 Prüffrage ============
+// ============ 9 Prüffrage ============
 {
-  const s = blank("I · Informieren · Prüffrage", "Prüffrage", 2, "Prüffrage (1 Minute, unbenotet, getrennt von den mündlichen Noten). Ansage: „Stifte liegen. Ich rufe euch auf. Antwortet in einem Satz.“ Rufen Sie 4 bis 6 Personen unterschiedlichen Niveaus auf, kurze Antworten, kein Gespräch. Frage 1: Was machst du im Schritt 2? Erwartung: Ich frage, was vorher anders war und wer gewinnt. Frage 2: Warum schreibe ich den Artikel nicht einfach ab? Erwartung: Ich muss ihn in eigene Worte fassen, so zeigt sich, ob ich ihn verstanden habe. Wird die Prüffrage nicht richtig beantwortet, wiederholen Sie Schritt 2 am Artikel 1, bevor die Klasse beginnt. Es wird nicht weitergegangen, wenn etwas nicht verstanden ist.");
+  const s = blank("I · Informieren · Prüffrage", "Prüffrage", 2, "Dient Ziel 1 und 2 (Verständnisprüfung vor dem Üben). Prüffrage (1 Minute, unbenotet, getrennt von den mündlichen Noten). Ansage: „Stifte liegen. Ich rufe euch auf. Antwortet in einem Satz.“ Rufen Sie 4 bis 6 Personen unterschiedlichen Niveaus auf, kurze Antworten, kein Gespräch. Frage 1: Was machst du im Schritt 2? Erwartung: Ich frage, was vorher anders war, wer gewinnt und ob ein Bild passt. Frage 2: Warum schreibe ich den Artikel nicht einfach ab? Erwartung: Ich muss ihn in eigene Worte fassen, so zeigt sich, ob ich ihn verstanden habe. Wird die Prüffrage nicht richtig beantwortet, wiederholen Sie Schritt 2 am Artikel 1 (hier liegt die Reserve), bevor die Klasse beginnt. Es wird nicht weitergegangen, wenn etwas nicht verstanden ist. Gelenk: „Jetzt macht ihr es selbst, zuerst mit Hilfe.“");
   box(s, 0.6, 1.6, 12.15, 1.7, NAVY);
   txt(s, "Was machst du im Schritt 2 „Einordnen“?", { x: 1.0, y: 1.6, w: 11.35, h: 1.7, fontFace: HEAD, fontSize: 32, bold: true, color: WHITE, valign: "middle" });
   box(s, 0.6, 3.6, 12.15, 1.7, LIGHT2);
@@ -312,28 +277,16 @@ const SAGT = "„Wir sind euch entgegengekommen. Jetzt sind alle gleich. Was wol
   bar(s, [{ text: "Ich rufe auf. ", options: { bold: true } }, { text: "Antworte in einem Satz.", options: {} }]);
 }
 
-// ============ 12 Raster ============
+// ============ 10 Ü1 Artikel 3 ============
 {
-  const s = blank("V · Verarbeiten · Rückmeldung", "So bekommst du Rückmeldung", 3, "Raster vorstellen (45 Sekunden), nicht diskutieren. Ansage: „Stifte liegen. Ihr hört nur zu.“ Die Abgabe des Blattes ist freiwillig. Wer abgibt, erhält Rückmeldung nach den drei Stufen. Punkte oder Noten gibt es heute nicht (kommt später). Keine Selbsteinschätzung der Schülerinnen und Schüler. Auf dem Blatt (Seite 2) kreuzen Sie die Stufe an.");
-  [["Stufe 1", "Ich kann einen Artikel in eigenen Worten wiedergeben."], ["Stufe 2", "Ich kann einen Artikel mit der Ständeordnung vergleichen."], ["Stufe 3", "Ich kann mit einem Beleg aus der Quelle begründen, welcher Artikel am wichtigsten ist."]].forEach(([n, x], i) => {
-    const y = 1.5 + i * 1.5;
-    box(s, 0.6, y, 12.15, 1.3, i % 2 ? LIGHT : LIGHT2);
-    txt(s, n, { x: 0.8, y, w: 2.3, h: 1.3, fontFace: HEAD, fontSize: 27, bold: true, color: RED, valign: "middle" });
-    txt(s, x, { x: 3.2, y, w: 9.4, h: 1.3, fontFace: HEAD, fontSize: 27, valign: "middle" });
-  });
-  bar(s, [{ text: "Abgabe freiwillig: ", options: { bold: true } }, { text: "Du bekommst Rückmeldung von mir.", options: {} }]);
-}
-
-// ============ 13 Ü1 Artikel 3 ============
-{
-  const { s } = taskSlide("V · Verarbeiten · Übung 1", "Artikel 3 mit Hilfe", ["Arbeitsblatt, Seite 1. Lies Artikel 3.", "Fülle „Lesen“ und „Einordnen“ aus. Nutze die Hilfe.", "Der Begriff steht schon da.", "Vergleiche kurz mit deinem Partner."], "3 Min. · allein, dann Partner · leise",
-    "Angeleitetes Üben (3 Minuten). Ansage: „Stifte liegen. Ihr hört nur zu. Jetzt nehmt ihr das Arbeitsblatt. Jetzt arbeitet ihr allein. Die Aufgabe steht rechts.“ Das Arbeitsblatt liegt vorab auf den Tischen (umgedreht, jede Person ein Blatt, doppelseitig). Nach 2 Minuten: „Flüsterstufe. Nur dein Partner hört dich. Vergleicht.“ Durch die Reihen gehen (Heft-Stichprobe, nicht kommentieren). Warnung vor dem Fehler: Hilfen ausfüllen, nicht den Satz aus dem Artikel kopieren. Danach Folie 14.");
+  const { s } = taskSlide("V · Verarbeiten · Übung 1", "Artikel 3 mit Hilfe", ["Arbeitsblatt, Seite 1. Lies Artikel 3.", "Fülle „Lesen“ und „Einordnen“ aus. Nutze die Hilfe.", "Der Begriff steht schon da.", "Vergleiche kurz mit deinem Partner."], "2 Min. allein, 1 Min. Partner · leise",
+    "Dient Ziel 1 und 2 (erste Anwendung mit Hilfe). Angeleitetes Üben (3 Minuten mit Folie 11). Ansage: „Stifte liegen. Ihr hört nur zu. Jetzt nehmt ihr das Arbeitsblatt. Jetzt arbeitet ihr allein. Die Aufgabe steht rechts.“ Das Arbeitsblatt liegt vorab auf den Tischen (umgedreht, jede Person ein Blatt, doppelseitig). Nach 2 Minuten: „Flüsterstufe. Nur dein Partner hört dich. Vergleicht.“ Durch die Reihen gehen (Heft-Stichprobe, nicht kommentieren). Warnung vor dem Fehler: Hilfen ausfüllen, nicht den Satz aus dem Artikel kopieren. Danach Folie 11.");
   phaseTag(s, 3);
 }
 
-// ============ 14 Kontrolle Artikel 3 ============
+// ============ 11 Kontrolle Artikel 3 ============
 {
-  const s = blank("V · Verarbeiten · Kontrolle", "So sieht Artikel 3 aus", 3, "Kontrolle (1 Minute). Ansage: „Vergleicht und verbessert mit Grün.“ Stichprobe bei 2 Personen (kurz vorlesen, was sie geschrieben haben, kein Gespräch). Gelenk zu Übung 2: „Das war mit Hilfe. Jetzt macht ihr es allein, mit drei Artikeln.“ Warnung: Artikel 3 passt zum Ballhausschwur (Macht geht von der Nation aus). Das knüpft an die letzte Stunde an. Danach Folie 15.");
+  const s = blank("V · Verarbeiten · Kontrolle", "So sieht Artikel 3 aus", 3, "Dient Ziel 1 und 2 (Kontrolle der ersten Anwendung). Kontrolle (30 Sekunden bis 1 Minute). Ansage: „Vergleicht und verbessert mit Grün.“ Stichprobe bei 2 Personen (kurz vorlesen, was sie geschrieben haben, kein Gespräch). Gelenk: „Das war mit Hilfe. Jetzt macht ihr es allein, mit drei Artikeln.“ Artikel 3 passt zum Ballhausschwur (Macht geht von der Nation aus). Danach Folie 12.");
   box(s, 0.6, 1.5, 12.15, 1.15, WHITE, { line: RED, lw: 3 });
   s.addText([{ text: "Artikel 3:  ", options: { bold: true, color: RED } }, { text: "„Der Ursprung jeder Herrschaft liegt bei der Nation, also beim Volk.“", options: {} }], { isTextBox: true, x: 0.95, y: 1.5, w: 11.45, h: 1.15, fontFace: HEAD, fontSize: 27, color: NAVY, valign: "middle", margin: 0 });
   [["1  Lesen", "Die Herrschaft geht vom Volk aus, nicht vom König allein.", "2E9E6B"], ["2  Einordnen", "Vorher bestimmte der König allein. Passt zum Ballhausschwur.", "E8A33D"], ["3  Begriff", "Volkssouveränität", "3F7CC4"]].forEach(([h, x, col], i) => {
@@ -346,23 +299,23 @@ const SAGT = "„Wir sind euch entgegengekommen. Jetzt sind alle gleich. Was wol
   bar(s, [{ text: "Jetzt: ", options: { bold: true } }, { text: "Vergleiche und verbessere mit Grün.", options: {} }]);
 }
 
-// ============ 15 Ü2 Artikel 2, 4, 6 ============
+// ============ 12 Ü2 Artikel 2, 4, 6 ============
 {
   const { s } = taskSlide("V · Verarbeiten · Übung 2", "Artikel 2, 4 und 6 selbst", ["Lies Artikel 2, 4 und 6 auf Seite 1.", "Fülle „Lesen“, „Einordnen“ und „Begriff“ aus.", "Nutze den Wortspeicher.", "Fertig? Zusatz* auf Seite 2: Artikel 10 und 11."], "6 Min. · allein · leise",
-    "Selbstständiges Üben (6 Minuten). Ansage: „Stifte liegen. Jetzt arbeitet ihr allein. Die Aufgabe steht rechts.“ Keine Hilfen mehr. Durch die Reihen gehen (Heft-Stichprobe bei 4 bis 6 Personen unterschiedlichen Niveaus, mitlesen, nicht kommentieren; unbenotet). Differenzierung: Wer unsicher ist, beginnt mit Artikel 4 (kurzer Satz). Wer früh fertig ist, bearbeitet das Zusatz* (Artikel 10 und 11). Nach 6 Minuten: Folie 16. Ende der Übungsphase ist fest (Auswerten läuft immer, Sollbruchstelle: Urteil auf zwei Sätze kürzen).");
+    "Dient Ziel 1 und 2 (selbstständiges Üben). Selbstständiges Üben (6 Minuten). Ansage: „Stifte liegen. Jetzt arbeitet ihr allein. Die Aufgabe steht rechts.“ Keine Hilfen mehr, außer Wortspeicher. Durch die Reihen gehen (Heft-Stichprobe bei 4 bis 6 Personen unterschiedlichen Niveaus, mitlesen, nicht kommentieren; unbenotet). Differenzierung: Wer unsicher ist, beginnt mit Artikel 4 (kurzer Satz). Wer früh fertig ist, bearbeitet das Zusatz* (Artikel 10 und 11). Nach 6 Minuten: Folie 13. Ende der Übungsphase ist fest (Auswerten läuft immer; Sollbruchstelle: Urteil auf zwei Sätze kürzen).");
   phaseTag(s, 3);
 }
 
-// ============ 16 Ü partnercheck ============
+// ============ 13 Partnercheck und Zuordnung ============
 {
-  const { s } = taskSlide("V · Verarbeiten · Partnercheck", "Vergleicht zu zweit", ["Lest euch Artikel 2, 4 und 6 vor.", "Wo habt ihr etwas anderes geschrieben?", "Entscheidet gemeinsam, was besser passt.", "Verbessert mit Grün."], "3 Min. · zu zweit · Flüsterstufe",
-    "Partnercheck (3 Minuten). Ansage: „Stifte liegen. Flüsterstufe. Nur dein Partner hört dich. Vergleicht Artikel 2, 4 und 6. Verbessert mit Grün.“ Jede Person liest vor, nicht nur abschreiben. Sie gehen durch die Reihen und hören bei 4 bis 6 Paaren kurz zu, ohne zu helfen. Sollbruchstelle: Schaffen Paare nur zwei Artikel, genügt das. Nach 3 Minuten: Folie 17.");
+  const { s } = taskSlide("V · Verarbeiten · Partnercheck", "Vergleicht und ordnet zu", ["Lest euch Artikel 2, 4 und 6 vor. Verbessert mit Grün.", "Welches Bild passt zu Artikel 3, welches zu Artikel 2?", "Begründet mit einem Wort aus dem Artikel.", "Prüft: Was sagt Artikel 4 dazu, wie weit man gehen darf?"], "4 Min. · zu zweit · Flüsterstufe",
+    "Dient Ziel 2 (Einordnen: einem Ereignis zuordnen). Partnercheck mit Zuordnung (4 Minuten). Ansage: „Stifte liegen. Flüsterstufe. Nur dein Partner hört dich. Vergleicht Artikel 2, 4 und 6. Dann ordnet ihr zu: Welches Bild an der Wand der Karikatur passt zu welchem Artikel? Begründet mit einem Wort aus dem Artikel.“ Die Bilder sind auf Folie 5 und 14 zu sehen (hier nicht gezeigt, damit die Klasse sich erinnern muss; bei Bedarf Folie 5 einblenden). Sie gehen durch die Reihen und hören bei 4 bis 6 Paaren kurz zu, ohne zu helfen. Sollbruchstelle: Reicht die Zeit nicht, genügt der Vergleich und eine Zuordnung. Nach 4 Minuten: Folie 14.");
   phaseTag(s, 3);
 }
 
-// ============ 17 Kontrolle Artikel 2, 4, 6 ============
+// ============ 14 Kontrolle Artikel 2, 4, 6 ============
 {
-  const s = blank("V · Verarbeiten · Kontrolle", "So sehen Artikel 2, 4 und 6 aus", 3, "Kontrolle (3 Minuten). Ansage: „Vergleicht und verbessert mit Grün.“ Die Folie zeigt Stichworte, andere richtige Formulierungen zählen. Stichprobe: Rufen Sie 2 Personen auf, die ihren Eintrag vorlesen. Wichtig (Haltung, Warnung vor dem Fehler): Artikel 2 nennt das Recht auf Widerstand, aber nicht Gewalt. Das Recht auf Freiheit endet nach Artikel 4, wo man anderen schadet. Das knüpft an Stunde 3 an: Wirksam heißt nicht gerechtfertigt. Sagen Sie: „Wir beschreiben, was dort steht. Wir erklären nicht, dass Gewalt gut ist.“ Gelenk: „Welcher Artikel ist für den Dritten Stand am wichtigsten? Das entscheidet ihr jetzt.“");
+  const s = blank("V · Verarbeiten · Kontrolle", "So sehen Artikel 2, 4 und 6 aus", 3, "Dient Ziel 1 und 2 (Kontrolle). Kontrolle (2 Minuten). Ansage: „Vergleicht und verbessert mit Grün.“ Die Folie zeigt Stichworte, andere richtige Formulierungen zählen. Stichprobe: Rufen Sie 2 Personen auf, die ihren Eintrag vorlesen. Gelenk: „Und welches Bild passt zu welchem Artikel? Seht auf die nächste Folie.“ Danach Folie 15.");
   const cols = [["", 1.7, NAVY], ["Lesen", 3.8, "2E9E6B"], ["Einordnen", 4.35, "E8A33D"], ["Begriff", 2.3, "3F7CC4"]];
   let x0 = 0.6; const xs = cols.map(([, w]) => { const v = x0; x0 += w; return v; });
   cols.forEach(([n, w, c], i) => {
@@ -376,26 +329,51 @@ const SAGT = "„Wir sind euch entgegengekommen. Jetzt sind alle gleich. Was wol
       txt(s, v, { x: xs[i] + 0.1, y, w: cols[i][1] - 0.2, h: 1.35, fontSize: 27, bold: i === 0 || i === 3, align: i === 0 || i === 3 ? "center" : "left", valign: "middle", fontFace: i === 0 ? HEAD : BODY });
     });
   });
-  bar(s, [{ text: "Achtung: ", options: { bold: true } }, { text: "Artikel 2 nennt Widerstand, nicht Gewalt.", options: {} }]);
+  bar(s, [{ text: "Jetzt: ", options: { bold: true } }, { text: "Vergleiche und verbessere mit Grün.", options: {} }]);
 }
 
-// ============ 18 Ü3 Urteil ============
+// ============ 15 Aha: Bild und Artikel ============
 {
-  const { s } = taskSlide("V · Verarbeiten · Übung 3", "Dein Urteil", ["Wähle einen Artikel, der für den Dritten Stand am wichtigsten ist.", "Schreibe auf Seite 2 mit den Satzanfängen.", "Gib einen Beleg aus der Quelle an (Zitat).", "Nenne auch ein Gegenargument."], "5 Min. · allein · leise",
-    "Urteil (5 Minuten). Ansage: „Stifte liegen. Jetzt arbeitet ihr allein. Die Aufgabe steht rechts.“ Es gibt kein richtiges Urteil. Sachurteil mit Beleg (Zitat aus dem Artikel), dann Werturteil mit offengelegtem Maßstab (Satzanfänge auf Seite 2: „Artikel … sagt: …“, „Das ändert für den Dritten Stand, dass …“, „Ich halte Artikel … für am wichtigsten, weil …“, „Dagegen spricht, dass …“). Heft- oder Blatt-Stichprobe bei 4 bis 6 Personen (mitlesen, nicht kommentieren, unbenotet). Differenzierung: Wer unsicher ist, schreibt nur die ersten beiden Satzanfänge. Wird die Zeit knapp: Urteil auf zwei Sätze kürzen (Ziel 3 hat einen Stern). Danach: „Wer das Blatt abgeben möchte, legt es jetzt vorn ab.“ Nach 5 Minuten: Folie 19.");
+  const s = blank("V · Verarbeiten · Aha", "Was sie taten, wird zum Recht", 3, "Dient Ziel 2 (Ereignis zuordnen) und bereitet Ziel 3 vor (Beleg, Maßstab). Aha-Moment (1 Minute, Sie sprechen, Klasse vergleicht mit ihrer Zuordnung aus dem Partnercheck). Ansage: „Stifte liegen. Ihr hört nur zu. Vergleicht mit eurer Zuordnung.“ Ballhaus passt zu Artikel 3: Die Herrschaft geht vom Volk aus (Volkssouveränität); die Abgeordneten handelten gegen den Willen des Königs. Bastille passt zu Artikel 2: Das Recht auf Widerstand gegen Unterdrückung. Artikel 2 nennt aber nicht Gewalt. Haltung: Wir beschreiben, was dort steht, wir erklären nicht, dass Gewalt gut ist. Artikel 4 begrenzt das Ganze: Die Freiheit endet, wo sie anderen schadet. Das knüpft an Stunde 3 an: wirksam heißt nicht gerechtfertigt. Die Ereignisse von 1789 stehen ab dem 26. August als Recht in der Erklärung. Gelenk: „Welcher Artikel ist für den Dritten Stand am wichtigsten? Das entscheidet ihr jetzt.“ Danach Folie 16.");
+  crop(s, "L", 0.6, 1.5);
+  crop(s, "R", 0.6, 1.5 + PH + 0.12);
+  [[0, "Artikel 3", "Die Herrschaft geht vom Volk aus."], [1, "Artikel 2", "Recht auf Widerstand gegen Unterdrückung."]].forEach(([i, h, x]) => {
+    const y = 1.5 + i * (PH + 0.12);
+    s.addShape(pres.shapes.RIGHT_ARROW, { x: 4.3, y: y + PH / 2 - 0.25, w: 0.6, h: 0.5, fill: { color: NAVY }, line: { type: "none" } });
+    box(s, 5.1, y, 7.65, PH, i % 2 ? LIGHT : LIGHT2);
+    txt(s, h, { x: 5.35, y: y + 0.12, w: 7.2, h: 0.55, fontFace: HEAD, fontSize: 27, bold: true, color: RED });
+    txt(s, x, { x: 5.35, y: y + 0.75, w: 7.2, h: PH - 0.85, fontSize: 27 });
+  });
+  bar(s, [{ text: "Artikel 4: ", options: { bold: true } }, { text: "Die Freiheit endet, wo sie anderen schadet.", options: {} }]);
+}
+
+// ============ 16 Ü3 Urteil ============
+{
+  const { s } = taskSlide("V · Verarbeiten · Übung 3", "Dein Urteil", ["Wähle einen Artikel, der für den Dritten Stand am wichtigsten ist.", "Schreibe auf Seite 2 mit den Satzanfängen.", "Gib Beleg und Maßstab an. Was heißt „wichtig“?", "Nenne auch ein Gegenargument."], "4 Min. · allein · leise",
+    "Dient Ziel 3 (Beleg und Maßstab). Urteil (4 Minuten). Ansage: „Stifte liegen. Jetzt arbeitet ihr allein. Die Aufgabe steht rechts.“ Es gibt kein richtiges Urteil. Sachurteil mit Beleg (Zitat aus dem Artikel), dann Werturteil mit offengelegtem Maßstab (Satzanfänge auf Seite 2: „Artikel … sagt: …“, „Das ändert für den Dritten Stand, dass …“, „Mein Maßstab: Wichtig ist für mich, was …“, „Ich halte Artikel … für am wichtigsten, weil …“, „Dagegen spricht, dass …“). Mögliche Maßstäbe stehen als Bausteine auf dem Blatt (betrifft die meisten Menschen, ändert am meisten, schützt vor Willkür und Gewalt). Das Gegenargument ist die zweite Perspektive; es kann die Sicht von Klerus und Adel sein. Heft- oder Blatt-Stichprobe bei 4 bis 6 Personen (mitlesen, nicht kommentieren, unbenotet). Differenzierung: Wer unsicher ist, schreibt nur die ersten drei Satzanfänge. Wird die Zeit knapp: Urteil auf zwei Sätze kürzen (Ziel 3 hat einen Stern). Nach 4 Minuten: Folie 17.");
   phaseTag(s, 3);
 }
 
-// ============ 19 Abschlussfrage ============
+// ============ 17 Merksatz ============
 {
-  const s = blank("A · Auswerten", "Abschlussfrage: Du bist der Dritte Stand", 4, "Ansage: „Stifte liegen. Ihr hört nur zu. Das ist die letzte Aufgabe. Schaut noch einmal auf die Karikatur vom Anfang. Ihr seid der Dritte Stand (Bauern und Bürger). Klerus und Adel haben gesagt: ‚Wir sind euch entgegengekommen. Jetzt sind alle gleich. Was wollt ihr noch?‘ Denkt zehn Sekunden nach. Ich rufe euch auf.“ Die Antwort kommt mündlich, in der Ich-Form, ohne Schnipsel: „Ich antworte euch: …, weil Artikel … sagt …“ Mehrere gute Antworten. Geprüft werden Position, ein Beleg aus der Quelle (Artikel) und ein „weil“. Erwartung (Auswahl, keine Musterlösung): „Das reicht uns nicht, weil Artikel 3 sagt, dass die Herrschaft vom Volk ausgeht, und wir wollen mitbestimmen.“ „Das ist ein Anfang, weil Artikel 6 sagt, dass das Gesetz für alle gleich ist. Aber dann müssen auch alle gleich zahlen.“ „Wir geben uns nicht zufrieden, weil auf dem Papier alles gleich ist, aber die Bauern noch Abgaben ablösen müssen.“ Form nach Verlauf: Blitzlicht (4 bis 6 Personen gezielt aufrufen, kein Kommentar) oder Duell zu zweit (leise). Vergleich mit der Vermutung vom Anfang: Wer hat umgedacht? Selbst gezeichnete Figuren sind keine historischen Quellen. Unbenotet.");
+  const s = merkSlide(1, "Erklärung der Menschen- und Bürgerrechte",
+    "Am **4. August 1789** schafft die Nationalversammlung die Vorrechte ab, am **26. August** beschließt sie die **Erklärung der Menschen- und Bürgerrechte**: **Freiheit**, **Gleichheit**, Recht auf **Widerstand**, Macht beim Volk (**Volkssouveränität**).",
+    "Artikel 6: Das Gesetz gilt für alle gleich. Früher zahlten Klerus und Adel keine Steuern.",
+    "**Recht** gilt für alle, **Vorrecht** nur für wenige (nach Geburt).",
+    "Dient Ziel 1 und 2 (Ergebnissicherung, Wissen für den Test). Ansage: „Jetzt schreibt ihr von der Folie ab: Merksatz 1. Rahmt ihn rot ein.“ Warten, bis alle den Stift hingelegt haben (2 Minuten). Der Merksatz sichert Datum, Begriffe und den Gegensatz Recht und Vorrecht. Gelenk: „Jetzt antwortet ihr Klerus und Adel.“ Danach Folie 18.");
+  phaseTag(s, 4);
+}
+
+// ============ 18 Abschlussfrage ============
+{
+  const s = blank("A · Auswerten", "Abschlussfrage: Du bist der Dritte Stand", 4, "Dient Ziel 1, 2 und 3 (Abschlussaufgabe, prüft alle Ziele). Ansage: „Stifte liegen. Ihr hört nur zu. Das ist die letzte Aufgabe. Schaut noch einmal auf die Karikatur vom Anfang. Ihr seid der Dritte Stand (Bauern und Bürger). Klerus und Adel haben gesagt: ‚Ihr habt geschworen. Ihr habt die Bastille gestürmt. Wir kamen euch entgegen. Was wollt ihr noch?‘ Denkt zehn Sekunden nach. Ich rufe euch auf.“ Die Antwort kommt mündlich, in der Ich-Form, ohne Schnipsel: „Ich antworte euch: Wir wollen …, weil Artikel … sagt …, früher war …“ Mehrere gute Antworten. Geprüft werden Position, Beleg aus der Quelle (Artikel mit eigenen Worten), der Vergleich mit „früher“ und ein „weil“. Erwartung (Auswahl, keine Musterlösung): „Wir wollen keine Gnade, sondern Rechte, weil Artikel 6 sagt, dass das Gesetz für alle gleich ist, früher hatten Klerus und Adel Vorrechte.“ „Wir wollen mitbestimmen, weil Artikel 3 sagt, dass die Herrschaft vom Volk ausgeht, früher bestimmte der König allein.“ „Wir wollen frei sein, weil Artikel 4 sagt, dass man alles tun darf, was anderen nicht schadet, früher konnte der König jemanden ohne Urteil einsperren.“ Form nach Verlauf: Blitzlicht (4 bis 6 Personen unterschiedlichen Niveaus gezielt aufrufen, kein Kommentar) oder Duell zu zweit (leise: eine Person Klerus und Adel, eine Dritter Stand). Vergleich mit der Vermutung vom Anfang: Wer hat umgedacht? Die Antwort zeigt den Lernzuwachs (Vorher-Nachher). Selbst gezeichnete Figuren sind keine historischen Quellen. Unbenotet.");
   s.addImage({ path: IMG + "karikatur_rueckschau.png", x: 0.6, y: 1.5, w: 5.0, h: 3.789 });
   box(s, 0.6, 5.4, 5.0, 0.7, WHITE, { line: NAVY, lw: 2 });
   txt(s, "Klerus · Adel · Dritter Stand", { x: 0.6, y: 5.4, w: 5.0, h: 0.7, fontSize: 27, bold: true, color: NAVY, align: "center", valign: "middle" });
-  bubble(s, 6.4, 1.5, 6.35, 2.2, WHITE, NAVY, "left", 2.6);
-  txt(s, "Klerus und Adel: " + SAGT, { x: 6.7, y: 1.5, w: 5.85, h: 2.2, fontFace: HEAD, fontSize: 27, bold: true, color: NAVY, valign: "middle" });
-  bubble(s, 6.4, 3.95, 6.35, 1.3, "FDF1D8", GOLD, "left", 4.6);
-  txt(s, "Du, Dritter Stand:  „Ich antworte euch: …, weil Artikel … sagt …“", { x: 6.7, y: 3.95, w: 5.85, h: 1.3, fontFace: HEAD, fontSize: 27, bold: true, color: NAVY, valign: "middle" });
+  bubble(s, 6.4, 1.5, 6.35, 2.1, WHITE, NAVY, "left", 2.5);
+  txt(s, "Klerus und Adel: " + SAGT, { x: 6.7, y: 1.5, w: 5.85, h: 2.1, fontFace: HEAD, fontSize: 27, bold: true, color: NAVY, valign: "middle" });
+  bubble(s, 6.4, 3.75, 6.35, 1.55, "FDF1D8", GOLD, "left", 4.5);
+  txt(s, "Du, Dritter Stand:  „Ich antworte euch: Wir wollen …, weil Artikel … sagt …“", { x: 6.7, y: 3.75, w: 5.85, h: 1.55, fontFace: HEAD, fontSize: 27, bold: true, color: NAVY, valign: "middle" });
   [["Position", 1.8], ["Beleg (Artikel)", 2.8], ["„weil“", 1.3]].reduce((xx, [lab, ww], i) => {
     box(s, xx, 5.4, ww, 0.62, i % 2 ? LIGHT : LIGHT2);
     s.addText([{ text: lab, options: { bold: true, fontFace: HEAD, fontSize: 27, color: NAVY } }], { isTextBox: true, x: xx + 0.05, y: 5.4, w: ww - 0.1, h: 0.62, valign: "middle", align: "center", margin: 0 });
@@ -404,21 +382,21 @@ const SAGT = "„Wir sind euch entgegengekommen. Jetzt sind alle gleich. Was wol
   bar(s, [{ text: "Zeit: ", options: { bold: true } }, { text: "4 Min. · erst denken, dann mündlich      ", options: {} }, { text: "Alle denken mit.", options: { italic: true, color: ICE } }]);
 }
 
-// ============ 20 Ziele prüfen ============
+// ============ 19 Ziele prüfen ============
 {
-  const s = blank("A · Auswerten", "Haben wir die Ziele erreicht?", 4, "Die Klasse prüft still: Kann ich das? Keine Antworten ins Plenum, keine Abfrage von Selbsteinschätzungen (30 Sekunden). Wenn Ziel 3 (*) nicht mehr geschafft wurde, kommt es in Stunde 5 als Wiederholung. Wer das Blatt abgeben möchte, legt es vorn ab. Danach Folie 21.");
-  [["Ich kann Artikel der Erklärung der Menschenrechte in eigenen Worten wiedergeben."], ["Ich kann einen Artikel mit der Ständeordnung vergleichen: Was war vorher anders?"], ["Ich kann mit einem Beleg aus der Quelle begründen, welcher Artikel für den Dritten Stand am wichtigsten ist.*"]].forEach(([x], i) => {
-    const y = 1.7 + i * 1.4;
-    box(s, 0.6, y, 12.15, 1.15, i % 2 ? LIGHT : LIGHT2);
-    s.addShape(pres.shapes.OVAL, { x: 0.9, y: y + 0.3, w: 0.55, h: 0.55, fill: { color: WHITE }, line: { color: NAVY, width: 2 } });
-    txt(s, x, { x: 1.75, y, w: 10.8, h: 1.15, fontFace: HEAD, fontSize: 27, valign: "middle" });
+  const s = blank("A · Auswerten", "Haben wir die Ziele erreicht?", 4, "Dient Ziel 1, 2 und 3 (Zielprüfung). Die Klasse prüft still: Kann ich das? Keine Antworten ins Plenum, keine Abfrage von Selbsteinschätzungen (30 Sekunden). Wenn Ziel 3 (*) nicht mehr geschafft wurde, kommt es in Stunde 5 als Wiederholung. Wer das Blatt abgeben möchte, legt es vorn ab. Danach Folie 20.");
+  [["Ich kann Artikel der Erklärung der Menschenrechte in eigenen Worten wiedergeben und den passenden Begriff nennen."], ["Ich kann einen Artikel mit der Ständeordnung vergleichen und einem Ereignis von 1789 zuordnen."], ["Ich kann mit Beleg und Maßstab begründen, welcher Artikel für den Dritten Stand am wichtigsten ist.*"]].forEach(([x], i) => {
+    const y = 1.6 + i * 1.45;
+    box(s, 0.6, y, 12.15, 1.25, i % 2 ? LIGHT : LIGHT2);
+    s.addShape(pres.shapes.OVAL, { x: 0.9, y: y + 0.35, w: 0.55, h: 0.55, fill: { color: WHITE }, line: { color: NAVY, width: 2 } });
+    txt(s, x, { x: 1.75, y, w: 10.8, h: 1.25, fontFace: HEAD, fontSize: 27, valign: "middle" });
   });
   bar(s, [{ text: "Jetzt: ", options: { bold: true } }, { text: "Schau auf die Ziele. Blatt freiwillig abgeben.", options: {} }]);
 }
 
-// ============ 21 Ausblick ============
+// ============ 20 Ausblick ============
 {
-  const s = blank("A · Auswerten · Ausblick", "Wie geht es weiter?", 4, "Folie nur lesen (30 Sekunden). Ausblick: In Artikel 1 steht „die Menschen“, in Artikel 6 „alle Bürger“. Gilt das wirklich für alle: für Frauen, für Arme, für Sklaven in den Kolonien? Das sehen wir in der nächsten Stunde bei der Verfassung von 1791 (Wahlrecht, Aktivbürger und Passivbürger). Danach folgt der erste Test (Stunden 1 bis 5 am 9.12.).");
+  const s = blank("A · Auswerten · Brücke zu Stunde 5", "Wie geht es weiter?", 4, "Brücke zur Reihe (kein Ziel der Stunde). Folie nur lesen (30 Sekunden). Ausblick: In Artikel 1 steht „die Menschen“, in Artikel 6 „alle Bürger“. Gilt das wirklich für alle: für Frauen, für Arme, für Sklaven in den Kolonien? Das sehen wir in der nächsten Stunde bei der Verfassung von 1791 (Wahlrecht, Aktivbürger und Passivbürger). Danach folgt der erste Test (Stunden 1 bis 5 am 9.12.).");
   box(s, 0.6, 1.8, 12.15, 2.0, NAVY);
   txt(s, "Für wen gelten diese Rechte wirklich?", { x: 0.95, y: 1.8, w: 11.45, h: 2.0, fontFace: HEAD, fontSize: 32, bold: true, color: WHITE, valign: "middle" });
   box(s, 0.6, 4.1, 12.15, 1.6, LIGHT2);
