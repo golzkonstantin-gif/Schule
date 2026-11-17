@@ -104,7 +104,7 @@ d.push(sp());
 d.push(step("kommt an, schreibt leise", {
   say: "Stifte liegen. Ihr hört nur zu. Schaut auf die Folie und lest, was Klerus und Adel sagen. Schreibt ins Heft: Reicht das? Ich vermute …",
   do: [
-    "Folie 1 steht beim Betreten da: selbst gezeichnete Karikatur (keine historische Quelle) mit Klerus, Adel und dem Dritten Stand (Bauern und Bürger), der zuhört. Klerus und Adel sagen: „Wir haben auf unsere Vorrechte verzichtet. Jetzt sind alle gleich. Was wollt ihr noch?“ Auftrag: Heft raus, Datum und Überschrift, Vermutung (ein bis zwei Sätze). Keine Besprechung.",
+    "Folie 1 steht beim Betreten da: selbst gezeichnete Karikatur (keine historische Quelle) mit Klerus, Adel und dem Dritten Stand (Bauern und Bürger), der zuhört. Klerus und Adel sagen: „Wir sind euch entgegengekommen. Jetzt sind alle gleich. Was wollt ihr noch?“ Auftrag: Heft raus, Datum und Überschrift, Vermutung (ein bis zwei Sätze). Keine Besprechung.",
     "Folie 2 „Das ist mir wichtig“ (20 Sekunden), Folie 3 (Stundenfrage und Begriff „Quelle“, 45 Sekunden), Folie 4 (Lernziele, 30 Sekunden), Folie 5 (Ablauf, 30 Sekunden). Alle Folien: Sie sprechen, die Klasse hört zu.",
   ],
   extra: [boardBox("Seitentafel · Stundenfrage, Ziel und Ablauf", [
@@ -209,7 +209,7 @@ d.push(...bullets([
   "Wortlaut der Artikel: gekürzte und vereinfachte Fassung, mit der Kollegin und dem Lehrbuch abgleichen (Artikel 3: im Original „Nation“, hier „Nation, also Volk“). Der Test sollte denselben Wortlaut nutzen.",
   "4. August: Aufzählung der abgeschafften Vorrechte und die Ablösepflicht für Bauern gegen das Lehrbuch lesen. Die Aussage „viele Abgaben müssen abgelöst werden“ ist allgemeines Wissen.",
   "Artikel 10 (Zusatz): „Vorher hatte der katholische Glaube Vorrang“ ist eine Vereinfachung (Protestanten waren benachteiligt). Artikel 11: Zensur durch den König. Beides steht nur in der Lösung und im Zusatz*.",
-  "Die Karikatur (Klerus, Adel und Dritter Stand) ist selbst gezeichnet, keine historische Quelle. Die Figuren sprechen eine erfundene Aussage.",
+  "Die Karikatur (Klerus, Adel und Dritter Stand) ist selbst gezeichnet, keine historische Quelle. Die Aussage der Figuren („Wir sind euch entgegengekommen. Jetzt sind alle gleich.“) ist bewusst überspitzt, eine erfundene Selbstdarstellung. Historisch war der Verzicht am 4. August nicht freiwillig (Angst vor den Bauernaufständen), und viele Abgaben mussten abgelöst werden. Die Klasse widerlegt die Aussage am Ende selbst (Prüffrage Folie 8, Abschlussantwort).",
   "Die Notenfrage (Punkte, Schlüssel) ist offen: Die Tabelle liefert pro Artikel Felder, das Urteil gibt eine Stufe. Das können wir später ergänzen.",
 ]));
 
