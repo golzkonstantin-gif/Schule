@@ -108,6 +108,8 @@ Er ergänzt das bisherige Muster (AVIVA, Ziel und Ablauf an der Tafel, feste Ans
 7. **Rückmeldung der Klasse** als ein Satz im Exit-Ticket („Das war klar / Das hat gefehlt“).
 8. **Reflexion nach der Stunde** im Reflexionslog: Passten Ziel, Inhalt und Methode zusammen? Zeit? Sozialformen? Wie viel echte Lernzeit? (Zeile „Selbstreflexion“ der Planungsmatrix.)
 
+9. **Vorwissen in jedem Element prüfen (ab 17.11., gilt sofort und für alle Klassen und Fächer):** Für jede Phase, Erklär-Portion, Übung, Aufgabe, jeden Merksatz und jedes Material wird gefragt, was es voraussetzt und wo dieses Vorwissen aktiv reaktiviert wird. Im Skript steht dazu eine Zeile „Vorwissen: Voraussetzung → wo reaktiviert“. Kritische Fragen: Reaktivieren alle oder nur einige? Liegt es lange zurück? Hat die Klasse es laut Reflexionslog wirklich sicher gezeigt? Fehlt die Reaktivierung, wird sie ergänzt oder das Element gekürzt bzw. verschoben, und verbleibende Risiken werden der Lehrkraft vor der Übergabe genannt. Hintergrund: Die Direkte Instruktion nennt notwendiges Vorwissen ausdrücklich als Stolperstelle (einige erinnern sich, das ist kein Signal für die ganze Klasse), und die gescheiterten Stunden (Zeitformen bauen, Präteritum) setzten zu viel Vorwissen voraus.
+
 Dazu gelten:
 - Ergebnissicherung nicht in die Hausaufgabe schieben. Die Leistungsbewertung folgt erst danach.
 - Material vorab bereitlegen oder verteilen lassen, damit keine Austeilaktionen Zeit kosten.
