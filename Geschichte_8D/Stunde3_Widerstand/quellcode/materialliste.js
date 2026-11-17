@@ -21,7 +21,7 @@ const box = () => p(t("□", { size: 26 }), { after: 0, align: AlignmentType.CEN
 const DW = [550, 3500, 1700, 4456];
 const druck = [
   ["Partnerpuzzle Texte: oben Text A (Ballhausschwur), unten Text B (Bastille)", "13 Blatt, in der Mitte schneiden (13 A + 13 B, 24 Personen plus Reserve)", "Partnerpuzzle_Texte_A_und_B_8D.pdf, 13-mal drucken, einseitig"],
-  ["Partnerpuzzle Tabelle (zwei pro A4)", "13 Blatt, in der Mitte schneiden (26 Tabellen: 24 + 2 Reserve), eine pro Person", "Partnerpuzzle_Tabelle_8D.pdf, 13-mal drucken"],
+  ["Partnerpuzzle Tabelle (eine ganze Seite, Platz zum Eintragen)", "26 Blatt (24 + 2 Reserve), eine pro Person, nicht geteilt", "Partnerpuzzle_Tabelle_8D.pdf, 26-mal drucken, einseitig"],
   ["Lösung und Punkteschema (für dich)", "1 Blatt", "Loesung_Partnerpuzzle_8D.pdf"],
 ];
 // Vorbereitung
