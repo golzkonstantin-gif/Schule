@@ -1,6 +1,6 @@
 // Blatt „Argumente und Beispielurteil“ (Rückmeldung 17.11.: Vorwissen zu Kleisthenes fehlte, Tafelbild nicht verstanden).
 // Vorne: Argumente zur Ausgangsfrage schon sortiert (dafür/dagegen), je Argument „Was?“ und „Was bedeutet das für den Adel?“ in einfacher Sprache.
-// Hinten: Beispiel-Sachurteil und -Werturteil zu einem bekannten Thema (Solon), damit die Antwort zu Kleisthenes nicht vorweggenommen wird.
+// Hinten: Beispiel-Sachurteil und -Werturteil zu einem bekannten Thema (Peisistratos; nicht Solon, das ist Klausurthema), damit die Antwort zu Kleisthenes nicht vorweggenommen wird.
 // A4 doppelseitig, tintensparend (keine Flächen, Farbe nur in Schrift und Linien).
 const fs = require("fs");
 const { Document, Packer, Paragraph, TextRun, Table, TableRow, TableCell, WidthType, BorderStyle, VerticalAlign, AlignmentType, PageBreak, TabStopType } = require("docx");
@@ -73,7 +73,7 @@ const vorne = [
   ]),
 ];
 
-// ---------- Rückseite: Beispielurteil zu Solon ----------
+// ---------- Rückseite: Beispielurteil zu Peisistratos ----------
 function muster(rows) {
   const cw = [1000, W - 1000];
   return new Table({ columnWidths: cw, width: { size: W, type: WidthType.DXA }, rows: rows.map(([b, name, t]) => new TableRow({ cantSplit: true, children: [
@@ -83,20 +83,20 @@ function muster(rows) {
 }
 const hinten = [
   new Paragraph({ children: [new PageBreak()] }),
-  P([R("So sieht ein Urteil aus – ein Beispiel zu Solon", { font: "Cambria", bold: true, size: 34 })], { after: 60 }),
-  P("Das Thema kennst du schon aus dem Test. **Fett** sind die Satzanfänge, am Rand steht der Baustein. Baue dein Urteil zu Kleisthenes genauso.", { size: 21, color: C.muted, after: 80 }),
-  P([R("Frage: ", { bold: true, size: 24 }), R("Haben die Reformen Solons (594/93 v. Chr.) die Krise in Athen beendet?", { size: 24, italics: true })],
+  P([R("So sieht ein Urteil aus – ein Beispiel zu Peisistratos", { font: "Cambria", bold: true, size: 34 })], { after: 60 }),
+  P("Das Thema kennst du schon aus dem Unterricht. **Fett** sind die Satzanfänge, am Rand steht der Baustein. Baue dein Urteil zu Kleisthenes genauso.", { size: 21, color: C.muted, after: 80 }),
+  P([R("Frage: ", { bold: true, size: 24 }), R("War die Tyrannis des Peisistratos (561–527 v. Chr.) ein Wegbereiter der Demokratie?", { size: 24, italics: true })],
     { indent: { left: 160 }, after: 120, border: { left: { style: BorderStyle.SINGLE, size: 24, color: C.terra, space: 8 } } }),
   P([R("Beispiel-Sachurteil", { font: "Cambria", bold: true, size: 26, color: C.terra }), R("   aus der Sicht der damaligen Zeit, mit Belegen", { size: 19, italics: true, color: C.muted })], { after: 60, keepNext: true }),
   muster([
-    ["a", "Einstieg", "**Im Folgenden soll beurteilt werden, ob** die Reformen Solons die Krise in Athen beendet haben. **Um diese Frage zu beantworten, muss man klären, worin die Krise bestand:** Viele Bauern waren hoch verschuldet, manche wurden sogar versklavt, und Adel und Bauern standen sich feindlich gegenüber."],
-    ["b", "dafür", "**Für ein Ende der Krise spricht, dass** Solon die Schulden strich und die Schuldknechtschaft verbot. **Dadurch konnte** kein Athener mehr wegen Schulden versklavt werden. **Hinzu kommt, dass** er versklavte Athener zurückkaufte und alle Bürger an der Volksversammlung teilnehmen durften."],
-    ["c", "dagegen", "**Dagegen spricht jedoch, dass** Solon das Land nicht neu verteilte: Die Großgrundbesitzer behielten ihren Besitz, die armen Bauern blieben arm. **Zwar** richteten sich die Rechte nun nach dem Besitz statt nach der Herkunft, **aber** die höchsten Ämter blieben den Reichen vorbehalten. **Weiterhin blieb** die Unruhe, sodass Peisistratos wenige Jahrzehnte später als Tyrann die Macht ergreifen konnte."],
-    ["d", "Fazit", "**Schwerer wiegt meines Erachtens** die Abschaffung der Schuldknechtschaft, **weil** sie die schlimmste Not beendete. **Zugegebenermaßen** blieben Armut und Streit, **allerdings** war die größte Gefahr gebannt. **Daher komme ich zu dem Ergebnis, dass** Solons Reformen die Krise nur teilweise beendet haben."],
+    ["a", "Einstieg", "**Im Folgenden soll beurteilt werden, ob** die Tyrannis des Peisistratos ein Wegbereiter der Demokratie war. **Um diese Frage zu beantworten, muss man klären, was die Demokratie braucht:** Bürger, die selbst entscheiden können und nicht von einem Adligen abhängig sind, und eine Ordnung, die für alle gilt."],
+    ["b", "dafür", "**Für einen Wegbereiter spricht, dass** Peisistratos den Bauern Land der verbannten Adligen und Kredite gab. **Dadurch konnten** viele Bauern selbstständig wirtschaften und waren nicht mehr von einem Adligen abhängig. **Hinzu kommt, dass** er die Macht der Adelsfamilien schwächte, indem er seine Gegner verbannte, und dass Solons Ordnung mit Volksversammlung und Ämtern weiter bestehen blieb."],
+    ["c", "dagegen", "**Dagegen spricht jedoch, dass** Peisistratos die Macht mit Gewalt eroberte und mit einer Leibwache und Söldnern sicherte. **Zwar** blieben Solons Ämter bestehen, **aber** er sorgte dafür, dass seine Anhänger sie bekamen. **Weiterhin blieb** das Volk ohne echte Entscheidung: Ein Einzelner herrschte, und nach seinem Tod regierten seine Söhne weiter, bis die Tyrannis 510 v. Chr. gestürzt wurde."],
+    ["d", "Fazit", "**Schwerer wiegt meines Erachtens** die Stärkung der Bauern, **weil** sie damit unabhängig vom Adel wurden – eine Voraussetzung dafür, dass sie später selbst mitbestimmen konnten. **Zugegebenermaßen** war die Tyrannis selbst keine Herrschaft des Volkes, **allerdings** bereitete sie den Boden dafür. **Daher komme ich zu dem Ergebnis, dass** Peisistratos ein Wegbereiter der Demokratie war, ohne es zu wollen."],
   ]),
   P([R("Beispiel-Werturteil", { font: "Cambria", bold: true, size: 26, color: C.terra }), R("   aus heutiger Sicht, mit Maßstab", { size: 19, italics: true, color: C.muted })], { before: 160, after: 60, keepNext: true }),
   muster([
-    ["e", "Maßstab", "**Gemessen am Maßstab** des Schutzes der Schwachen **halte ich** Solons Reformen **für** einen wichtigen Fortschritt, **weil** niemand mehr wegen Schulden seine Freiheit verlor. **Kritisch dagegen** ist, dass die Armen kein Land bekamen und keine Ämter übernehmen durften. **Ein Beispiel dafür ist**, dass ein Thete zwar abstimmen, aber nie Archont werden konnte."],
+    ["e", "Maßstab", "**Gemessen am Maßstab** gleicher Regeln für alle **halte ich** die Tyrannis **für** nicht gerechtfertigt, **weil** Peisistratos die Macht mit Gewalt an sich riss und über dem Gesetz stand. **Positiv ist**, dass es vielen armen Bauern besser ging, **kritisch dagegen**, dass Gegner einfach verbannt wurden. **Ein Beispiel dafür ist**, dass die Alkmeoniden Athen verlassen mussten, ohne dass das Volk darüber entschieden hatte."],
   ]),
   P("**Achtung:** Im Sachurteil zählt, was damals galt – im Werturteil sagst du, welchen Maßstab du heute anlegst.", { size: 21, before: 140, color: C.muted }),
 ];
