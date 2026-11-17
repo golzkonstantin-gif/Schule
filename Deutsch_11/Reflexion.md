@@ -190,6 +190,7 @@ Grundlage ist `Methoden/Literatur_Unterrichtsqualitaet.md` (AVIVA, Direkte Instr
   3. Kommunikationssituation prüfen: Warum scheitert die Kommunikation?
   4. Zeigen, wie die Stilmittel die Deutungshypothese stützen.
   Zuerst inhaltlich durchsprechen, dann Material.
+- **Entscheidungen (17.11.):** Von vorne anfangen (45 Min.). Text in **Sinnabschnitten** mit Überschriften. Nach dem Markieren spielen **zwei Schüler** die Szene vor, damit Macht und Ohnmacht sichtbar werden. Deutungshypothese ohne „weil er sich unterwirft“. Für die Stilmittel **vier bekannte** auswählen.
 
 ## Hospitationsfeedback (gesammelt)
 
