@@ -190,7 +190,7 @@ Grundlage ist `Methoden/Literatur_Unterrichtsqualitaet.md` (AVIVA, Direkte Instr
   3. Kommunikationssituation prüfen: Warum scheitert die Kommunikation?
   4. Zeigen, wie die Stilmittel die Deutungshypothese stützen.
   Zuerst inhaltlich durchsprechen, dann Material.
-- **Entscheidungen (17.11.):** Von vorne anfangen (45 Min.). Keine Sinnabschnitte und kein Vorlesen: Die Klasse kennt den Text und wird direkt aktiviert, indem sie die Kommunikation markiert (wer sagt was, wie) – so wird auch die Handlung reaktiviert. Kein eigener Einstieg, direkt in den Text. Nach dem Markieren spielen **zwei Schüler** die Szene vor, damit Macht und Ohnmacht sichtbar werden (Spielvorlage nur mit den Sätzen der beiden Figuren). Deutungshypothese ohne „weil er sich unterwirft“. Für die Stilmittel **vier bekannte** auswählen.
+- **Entscheidungen (17.11.):** Von vorne anfangen (45 Min.). Keine Sinnabschnitte und kein Vorlesen: Die Klasse kennt den Text und wird direkt aktiviert, indem sie die Kommunikation markiert (wer sagt was, wie) – so wird auch die Handlung reaktiviert. Kein eigener Einstieg, direkt in den Text. Nach dem Markieren spielen **zwei Schüler** die Szene vor, damit Macht und Ohnmacht sichtbar werden (Spielvorlage nur mit den Sätzen der beiden Figuren). Markierauftrag: **markieren, wer was sagt; einkreisen, wie sie es sagen.** Kommunikationsanalyse (Warum scheitert sie? widersprüchliche Aussagen des Türhüters, der Mann fragt nicht, Machtgefälle) schon in dieser Stunde; Erklärbeispiel Trainer/Sportler mit widersprüchlicher Botschaft. Deutungshypothese ohne „weil er sich unterwirft“. Für die Stilmittel **vier bekannte** auswählen.
 
 ## Hospitationsfeedback (gesammelt)
 
