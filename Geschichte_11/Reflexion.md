@@ -91,6 +91,7 @@
   - Lösung Sortierung: dafür 1, 2, 4, 6, 10 · dagegen 3, 5, 7, 8, 9, 11, 12.
 - **Rückmeldung der Lehrkraft (17.11.): Stunde lief nicht.** Das Vorwissen reichte nicht: Die Schüler wussten nichts mehr von den Reformen des Kleisthenes und konnten deshalb nicht urteilen. Hilfeblatt und Satzanfänge helfen beim Formulieren, ersetzen aber nicht das Sachwissen.
 - Konsequenz: Vor dem Urteil die Reformen neu aufbauen (DI, Vorwissen gering) – mit dem Tafelbild Vorher/Nachher, Prüffragen nach jeder Portion, Schüler erklären selbst. Erst wenn das sitzt, wieder urteilen. Allgemein: Wissen aus früheren Stunden, das eine Anwendungsaufgabe braucht, zu Beginn aktiv abrufen und prüfen; nicht auf eine Zusammenfassung zum Nachlesen verlassen.
+- **Neuer Anlauf (Entscheidung der Lehrkraft, 17.11.):** keine tiefe Wiederholung, Schwerpunkt bleibt das Schreiben von Sach- und Werturteil; Tafelbild verstehen die Schüler nicht. Deshalb `Argumente_und_Beispielurteil` (A4 doppelseitig): vorne die Argumente zur Ausgangsfrage schon sortiert (4 dafür, 4 dagegen, je „Was?“ und „→ Für den Adel“ in einfacher Sprache, dazu die Quellenbelege), Arbeitsauftrag; hinten Beispiel-Sachurteil und -Werturteil zu Solon (bekanntes Thema, verrät die Kleisthenes-Antwort nicht), Bausteine a–e am Rand, Satzanfänge fett. Satzanfänge zum Abhaken weiter vom Hilfeblatt (Rückseite); Musterurteil zum Vergleich: `Hilfeblatt_Urteil_Loesung`.
 
 ## Hospitationsfeedback (gesammelt)
 
