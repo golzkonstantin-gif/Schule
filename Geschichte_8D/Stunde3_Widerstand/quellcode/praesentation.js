@@ -153,17 +153,17 @@ const IMG = "../material/";
 
 // ============ 1 Karikatur / Ankommen ============
 {
-  const s = blank("Ankommen", "Ein Gespräch in Versailles", 0, "Die Folie steht beim Betreten. Niemand muss etwas sagen. Die Karikatur ist selbst gezeichnet, keine historische Quelle. Der Adlige sagt: „Der Dritte Stand hat abgestimmt und verloren. Jetzt kann er sich nur noch fügen.“ Klerus und Adel unterhalten sich. Die Klasse schreibt ihre Vermutung ins Heft (bleibt stehen, wird am Ende der Stunde mit dem Ergebnis verglichen): „Was kann der Dritte Stand noch tun? Ich vermute …“ Keine Besprechung, kein Urteil. Ansage: „Stifte liegen. Ihr hört nur zu.“ Danach Folie 2 bis 5 in zusammen etwa 2 Minuten.");
-  s.addImage({ path: IMG + "karikatur_klerus_adel.png", x: 0.6, y: 1.45, w: 7.0, h: 4.375 });
+  const s = blank("Ankommen", "Ein Gespräch in Versailles", 0, "Die Folie steht beim Betreten. Niemand muss etwas sagen. Die Karikatur ist selbst gezeichnet, keine historische Quelle. Drei Figuren: Klerus, Adel und der Dritte Stand (Bauern und Bürger), der zuhört. Der Adlige sagt: „Der Dritte Stand hat abgestimmt und verloren. Jetzt kann er sich nur noch fügen.“ Klerus und Adel sprechen, der Dritte Stand hört zu. Die Klasse schreibt ihre Vermutung ins Heft (bleibt stehen, wird am Ende der Stunde mit dem Ergebnis verglichen): „Was kann der Dritte Stand noch tun? Ich vermute …“ Keine Besprechung, kein Urteil. Ansage: „Stifte liegen. Ihr hört nur zu.“ Danach Folie 2 bis 5 in zusammen etwa 2 Minuten.");
+  s.addImage({ path: IMG + "karikatur_drei_staende.png", x: 0.6, y: 1.45, w: 7.0, h: 4.375 });
   s.addShape(pres.shapes.ROUNDED_RECTANGLE, { x: 0.85, y: 1.55, w: 6.5, h: 1.55, rectRadius: 0.18, fill: { color: WHITE }, line: { color: NAVY, width: 3 } });
-  s.addShape(pres.shapes.ISOSCELES_TRIANGLE, { x: 5.5, y: 3.05, w: 0.6, h: 0.5, rotate: 180, fill: { color: WHITE }, line: { color: NAVY, width: 3 } });
-  s.addShape(pres.shapes.RECTANGLE, { x: 5.52, y: 3.02, w: 0.56, h: 0.1, fill: { color: WHITE }, line: { type: "none" } });
+  s.addShape(pres.shapes.ISOSCELES_TRIANGLE, { x: 3.75, y: 3.05, w: 0.6, h: 0.5, rotate: 180, fill: { color: WHITE }, line: { color: NAVY, width: 3 } });
+  s.addShape(pres.shapes.RECTANGLE, { x: 3.77, y: 3.02, w: 0.56, h: 0.1, fill: { color: WHITE }, line: { type: "none" } });
   txt(s, "„Der Dritte Stand hat abgestimmt und verloren. Jetzt kann er sich nur noch fügen.“", { x: 1.05, y: 1.55, w: 6.1, h: 1.55, fontFace: HEAD, fontSize: 27, color: NAVY, valign: "middle" });
-  [["Klerus", 1.2], ["Adel", 4.7]].forEach(([n, x]) => {
-    box(s, x, 5.2, n === "Klerus" ? 1.9 : 1.6, 0.52, WHITE, { line: NAVY, lw: 2 });
-    txt(s, n, { x, y: 5.2, w: n === "Klerus" ? 1.9 : 1.6, h: 0.52, fontSize: 27, bold: true, color: NAVY, align: "center", valign: "middle" });
+  [["Klerus", 0.75, 1.75], ["Adel", 3.3, 1.4], ["Dritter Stand", 5.05, 2.45]].forEach(([n, x, w]) => {
+    box(s, x, 5.2, w, 0.52, WHITE, { line: NAVY, lw: 2 });
+    txt(s, n, { x, y: 5.2, w, h: 0.52, fontSize: 27, bold: true, color: NAVY, align: "center", valign: "middle" });
   });
-  [["Heft raus. Datum und Überschrift.", 1.6, 1.0], ["Lies, was der Adlige sagt.", 2.85, 1.0], ["Schreibe: Was kann er noch tun? Ich vermute …", 4.1, 1.7]].forEach(([x, y, h], i) => {
+  [["Heft raus. Datum und Überschrift.", 1.6, 1.0], ["Lies, was der Adlige sagt. Der Dritte Stand hört zu.", 2.75, 1.4], ["Schreibe: Was kann er noch tun? Ich vermute …", 4.3, 1.5]].forEach(([x, y, h], i) => {
     numCircle(s, i + 1, 7.95, y + 0.05, 0.45, RED);
     txt(s, x, { x: 8.6, y, w: 4.15, h, fontSize: 27, bold: true, valign: "top" });
   });
@@ -339,16 +339,16 @@ AUF.forEach((_, k) => {
   phaseTag(s, 3);
 }
 
-// ============ 18 Abschlussfrage ============
+// ============ 18 Abschlussfrage: Du bist der Dritte Stand ============
 {
-  const s = blank("A · Auswerten", "Abschlussfrage: Was antwortest du ihm?", 4, "Ansage: „Stifte liegen. Ihr hört nur zu. Das ist die letzte Aufgabe. Schaut noch einmal auf die Karikatur vom Anfang. Denkt zehn Sekunden nach. Ich rufe euch auf.“ Die Klasse nimmt Bezug auf die Aussage des Adligen vom Anfang: „Der Dritte Stand hat abgestimmt und verloren. Jetzt kann er sich nur noch fügen.“ Die Antwort kommt mündlich, ohne Schnipsel: „Ich antworte dir, …, weil …“. Mehrere gute Antworten, geprüft werden Position, ein Sachargument aus der Stunde (Eid, Bastille, Reihenfolge, Opfer) und ein „weil“. Erwartung (Auswahl, keine Musterlösung): „Das stimmt nicht, weil der Dritte Stand sich in der Ballhalle zur Nationalversammlung erklärte und der König nachgeben musste.“ „Er kann sich wehren, aber Gewalt kostet Menschenleben, wie bei der Bastille.“ „Fügen war nie nötig: Erst der Druck von beiden Seiten brachte den König zum Rückzug.“ Form nach Verlauf: Blitzlicht (4 bis 6 Personen unterschiedlichen Niveaus gezielt aufrufen, kein Kommentar) oder Duell zu zweit (leise). Vergleich mit der Vermutung vom Anfang: Wer hat umgedacht? Abgabe-Hinweis: Wer das Blatt abgeben möchte, legt es jetzt vorn ab.");
-  s.addImage({ path: IMG + "karikatur_klerus_adel.png", x: 0.6, y: 1.5, w: 5.4, h: 3.375 });
+  const s = blank("A · Auswerten", "Abschlussfrage: Du bist der Dritte Stand", 4, "Ansage: „Stifte liegen. Ihr hört nur zu. Das ist die letzte Aufgabe. Schaut noch einmal auf die Karikatur vom Anfang. Jetzt seid ihr der Dritte Stand (Bauern und Bürger). Klerus und Adel haben gesagt: ‚Der Dritte Stand hat abgestimmt und verloren. Jetzt kann er sich nur noch fügen.‘ Denkt zehn Sekunden nach. Ich rufe euch auf.“ Die Antwort kommt mündlich, in der Ich-Form, ohne Schnipsel: „Ich antworte euch: …, weil …“ Die Klasse antwortet als Dritter Stand auf die Aussage vom Anfang. Mehrere gute Antworten, geprüft werden Position, ein Sachargument aus der Stunde (Eid, Bastille, Reihenfolge, Opfer) und ein „weil“. Erwartung (Auswahl, keine Musterlösung): „Wir fügen uns nicht, weil wir fast alle Menschen vertreten und uns zur Nationalversammlung erklärt haben.“ „Wir wehren uns, aber ohne Gewalt, weil die Bastille viele Tote gekostet hat.“ „Erst der Druck von beiden Seiten hat den König zum Rückzug gebracht, also fügen wir uns nicht.“ Form nach Verlauf: Blitzlicht (4 bis 6 Personen unterschiedlichen Niveaus gezielt aufrufen, kein Kommentar) oder Duell zu zweit (leise: eine Person ist Klerus und Adel, eine antwortet als Dritter Stand). Vergleich mit der Vermutung vom Anfang: Wer hat umgedacht? Abgabe-Hinweis: Wer das Blatt abgeben möchte, legt es jetzt vorn ab. Unbenotet.");
+  s.addImage({ path: IMG + "karikatur_drei_staende.png", x: 0.6, y: 1.5, w: 5.4, h: 3.375 });
   box(s, 0.6, 5.0, 5.4, 0.75, WHITE, { line: NAVY, lw: 2 });
-  txt(s, "Klerus und Adel", { x: 0.6, y: 5.0, w: 5.4, h: 0.75, fontSize: 27, bold: true, color: NAVY, align: "center", valign: "middle" });
+  txt(s, "Klerus · Adel · Dritter Stand", { x: 0.6, y: 5.0, w: 5.4, h: 0.75, fontSize: 27, bold: true, color: NAVY, align: "center", valign: "middle" });
   bubble(s, 6.4, 1.5, 6.35, 2.2, WHITE, NAVY, "left", 2.6);
-  txt(s, "„Der Dritte Stand hat abgestimmt und verloren. Jetzt kann er sich nur noch fügen.“", { x: 6.7, y: 1.5, w: 5.85, h: 2.2, fontFace: HEAD, fontSize: 27, bold: true, color: NAVY, valign: "middle" });
+  txt(s, "Klerus und Adel: „Der Dritte Stand hat abgestimmt und verloren. Jetzt kann er sich nur noch fügen.“", { x: 6.7, y: 1.5, w: 5.85, h: 2.2, fontFace: HEAD, fontSize: 27, bold: true, color: NAVY, valign: "middle" });
   bubble(s, 6.4, 4.0, 6.35, 1.2, "FDF1D8", GOLD, "left", 4.6);
-  txt(s, "Du antwortest:  „Ich antworte dir, …, weil …“", { x: 6.7, y: 4.0, w: 5.85, h: 1.2, fontFace: HEAD, fontSize: 27, bold: true, color: NAVY, valign: "middle" });
+  txt(s, "Du, Dritter Stand:  „Ich antworte euch: …, weil …“", { x: 6.7, y: 4.0, w: 5.85, h: 1.2, fontFace: HEAD, fontSize: 27, bold: true, color: NAVY, valign: "middle" });
   [["Position", 1.8], ["Sachargument", 2.9], ["„weil“", 1.3]].reduce((xx, [lab, ww], i) => {
     box(s, xx, 5.4, ww, 0.62, i % 2 ? LIGHT : LIGHT2);
     s.addText([{ text: lab, options: { bold: true, fontFace: HEAD, fontSize: 27, color: NAVY } }], { isTextBox: true, x: xx + 0.05, y: 5.4, w: ww - 0.1, h: 0.62, valign: "middle", align: "center", margin: 0 });

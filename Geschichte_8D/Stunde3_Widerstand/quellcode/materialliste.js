@@ -27,7 +27,7 @@ const druck = [
 // Vorbereitung
 const prep = [
   ["Tafelskript ausdrucken oder auf dem Tablet bereithalten", "Tafelskript_Stunde3_Widerstand_8D.pdf, 5 Seiten"],
-  ["Folien öffnen und einmal durchklicken", "Praesentation_Stunde3_Widerstand_8D.pptx, 20 Folien (27 Punkt); Folie 1 (Karikatur) steht beim Betreten da"],
+  ["Folien öffnen und einmal durchklicken", "Praesentation_Stunde3_Widerstand_8D.pptx, 20 Folien (27 Punkt); Folie 1 (Karikatur mit drei Figuren) steht beim Betreten da"],
   ["Blätter auf die Tische legen (umgedreht)", "Pro Paar: links Blatt A, rechts Blatt B, Matrix und Text nach unten. 12 Paare, 24 Personen; bei Fehlzeiten Dreier-Teams mit Reserveblatt"],
   ["Notenschlüssel für 10 Punkte festlegen", "Raster auf Folie 7 (0 bis 4, 5 bis 8, 9 bis 10 Punkte) ist vorgegeben, der Schlüssel liegt bei dir"],
   ["Zahlen zur Bastille mit dem Lehrbuch prüfen", "etwa 100 Tote unter den Angreifern, sieben Gefangene, Gouverneur nach der Übergabe getötet; Datum des Truppenabzugs"],
@@ -35,7 +35,7 @@ const prep = [
 ];
 // Tafel
 const tafel = [
-  ["Seitentafel", "Stundenfrage („Wie kann sich der Dritte Stand wehren, wenn Wählen nichts bringt?“), Ziele („Ich kann …“, 3 Sätze, Satz 2 mit *) und Ablauf: A Karikatur · V Rückblick · I Text lesen · V Puzzle, Urteil · A Antwort"],
+  ["Seitentafel", "Stundenfrage („Wie kann sich der Dritte Stand wehren, wenn Wählen nichts bringt?“), Ziele („Ich kann …“, 3 Sätze, Satz 2 mit *) und Ablauf: A Karikatur · V Rückblick · I Text lesen · V Puzzle, Urteil · A Antwort als Dritter Stand"],
   ["Mitte", "leer lassen (Platz für die Reihenfolge der Ereignisse, falls du sie an der Tafel mitschreibst)"],
 ];
 
@@ -56,7 +56,7 @@ const TW = [2000, 8206];
 d.push(table(TW, [hdr(["Wo", "Was steht dort"], TW), ...tafel.map(([a, b]) => row([cell(p(t(a, { bold: true, size: 20 }), { after: 0 }), { w: TW[0], fill: LIGHT }), cell(p(t(b, { size: 20 }), { after: 0 }), { w: TW[1] })], 520))]));
 
 d.push(h2("4 Kurz vor Beginn (5 Minuten)"));
-["Folie 1 (Karikatur) steht, Beamer an", "Blätter liegen umgedreht auf den Tischen: links A, rechts B", "Seitentafel beschrieben, Mitte leer", "Lösungsblatt und Notenschlüssel griffbereit", "Ansagen im Kopf: „Stifte liegen. Ihr hört nur zu.“ · „Flüsterstufe. Nur dein Partner hört dich.“ · „Vergleicht und verbessert mit Grün.“"].forEach((x) => d.push(p([t("□  ", { size: 24 }), t(x, { size: 20 })], { after: 50 })));
+["Folie 1 (Karikatur mit drei Figuren) steht, Beamer an", "Blätter liegen umgedreht auf den Tischen: links A, rechts B", "Seitentafel beschrieben, Mitte leer", "Lösungsblatt und Notenschlüssel griffbereit", "Ansagen im Kopf: „Stifte liegen. Ihr hört nur zu.“ · „Flüsterstufe. Nur dein Partner hört dich.“ · „Vergleicht und verbessert mit Grün.“"].forEach((x) => d.push(p([t("□  ", { size: 24 }), t(x, { size: 20 })], { after: 50 })));
 
 (async () => {
   const doc = new Document({ styles: { default: { document: { run: { font: "Calibri", size: 21 } } } }, sections: [{ properties: { page: { size: { width: 11906, height: 16838 }, margin: { top: 800, bottom: 700, left: 850, right: 850 } } }, footers: { default: footer }, children: d }] });

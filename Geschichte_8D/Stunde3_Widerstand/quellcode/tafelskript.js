@@ -43,12 +43,12 @@ const warum = (why, gelenk) => table([W - 20], [row([cell([p([t("Warum  ", { bol
 
 const d = [];
 d.push(kicker("Tafelskript für die Lehrkraft · Einzelstunde (45 Min.) · 24 Schülerinnen und Schüler (12 Paare) · eine Lehrkraft · Mittwoch 18.11.2026"), h1("Welche Wege des Widerstands hat der Dritte Stand?"));
-d.push(p(t("Ziel: Die Stunde knüpft an die Abstimmung an: Der Dritte Stand (Bauern und Bürger) kann nach Ständen nichts durch Wahlen ändern. Die Stunde beginnt mit einer selbst gezeichneten Karikatur (Klerus und Adel: „Jetzt kann er sich nur noch fügen.“). In einem Partnerpuzzle (zwei Texte, fünf Kriterien, 10 Punkte) vergleichen die Paare zwei Wege des Widerstands: den gewaltlosen Ballhausschwur und den gewaltsamen Sturm auf die Bastille. Der Zeitstrahl zeigt die Reihenfolge (Aha-Moment), eine Bilanz trennt „wirksam“ von „gerechtfertigt“, und die Klasse beurteilt mit einem Maßstab. Am Ende antwortet sie dem Adligen von der Karikatur mündlich.", { size: 21, color: MUTED }), { after: 100 }));
+d.push(p(t("Ziel: Die Stunde knüpft an die Abstimmung an: Der Dritte Stand (Bauern und Bürger) kann nach Ständen nichts durch Wahlen ändern. Die Stunde beginnt mit einer selbst gezeichneten Karikatur (Klerus und Adel sprechen, der Dritte Stand hört zu: „Jetzt kann er sich nur noch fügen.“). In einem Partnerpuzzle (zwei Texte, fünf Kriterien, 10 Punkte) vergleichen die Paare zwei Wege des Widerstands: den gewaltlosen Ballhausschwur und den gewaltsamen Sturm auf die Bastille. Der Zeitstrahl zeigt die Reihenfolge (Aha-Moment), eine Bilanz trennt „wirksam“ von „gerechtfertigt“, und die Klasse beurteilt mit einem Maßstab. Am Ende antwortet sie in der Rolle des Dritten Stands (Bauern und Bürger) mündlich auf die Aussage von Klerus und Adel.", { size: 21, color: MUTED }), { after: 100 }));
 
 d.push(h3("Kopf der Planung"));
 d.push(table([2600, 7606], [
   ["Ziel (Ich kann …)", "… den Ballhausschwur und den Sturm auf die Bastille mit fünf Kriterien vergleichen. … an der Reihenfolge der Ereignisse erklären, wie die Wege zusammenwirkten.* … beurteilen, welcher Weg berechtigt war, und das mit einem Maßstab begründen."],
-  ["Prüfaufgabe: Woran erkenne ich es?", "Matrix auf dem Blatt (10 Felder, 10 Punkte, freiwillige Abgabe, Rückmeldung und Bewertung nach Raster), Satz im Heft zur Frage „Wer hat die Gewalt angefangen?“, Urteil im Heft mit Maßstab (Sachurteil mit Beleg, dann Werturteil), mündliche Antwort an den Adligen."],
+  ["Prüfaufgabe: Woran erkenne ich es?", "Matrix auf dem Blatt (10 Felder, 10 Punkte, freiwillige Abgabe, Rückmeldung und Bewertung nach Raster), Satz im Heft zur Frage „Wer hat die Gewalt angefangen?“, Urteil im Heft mit Maßstab (Sachurteil mit Beleg, dann Werturteil), mündliche Antwort als Dritter Stand (Ich-Form)."],
   ["Mindestziel", "Ziel 1 und 3. Ziel 2 hat einen Stern. „Auswerten“ bleibt immer."],
   ["Beitrag zur Reihe", "Stunde 3 von 11 (Sequenz, Fassung vom 17.11.). Sie zeigt, wie der Dritte Stand mit gewaltlosem und gewaltsamem Widerstand auf die verlorene Abstimmung reagiert, und bereitet Stunde 4 vor (Ende der Vorrechte, Menschenrechte; Artikel 2 nennt den Widerstand gegen Unterdrückung)."],
   ["Vorgehen", "Rückblick direkt (Partnercheck), Partnerpuzzle indirekt (Selbsterarbeitung, dann gegenseitiges Erklären), Aha, Bilanz und Urteil geführt (Beschreiben statt Gutheißen). Direkt oder indirekt wird je Phase entschieden."],
@@ -65,7 +65,7 @@ d.push(...bullets([
 d.push(h3("Zeitplan (45 Minuten)"));
 d.push(table([800, 2300, 4300, 2806], [
   row([th("Min.", 800), th("AVIVA", 2300), th("Phase", 4300), th("Arbeitsform", 2806)], 320),
-  ...[["4", "Ankommen", "0  Karikatur, Vermutung, Stundenfrage, Ziele", "still, allein"], ["3", "Vorwissen", "1  Rückblick: Zeitstrahl und Abstimmung", "Partnercheck, Flüsterstufe"], ["8", "Informieren", "2  Partnerpuzzle: eigenen Text lesen, Spalte ausfüllen", "allein, leise"], ["25", "Verarbeiten", "3  Austausch (8), Kontrolle (3), Zeitstrahl-Aha (4), Bilanz (2), Urteil (8)", "zu zweit, allein"], ["5", "Auswerten", "4  Antwort an den Adligen, Ziele, Abgabe, Ausblick", "mündlich, still"]].map((r) => row(r.map((v, i) => tc(v, [800, 2300, 4300, 2806][i], { bold: i < 3 })), 320)),
+  ...[["4", "Ankommen", "0  Karikatur, Vermutung, Stundenfrage, Ziele", "still, allein"], ["3", "Vorwissen", "1  Rückblick: Zeitstrahl und Abstimmung", "Partnercheck, Flüsterstufe"], ["8", "Informieren", "2  Partnerpuzzle: eigenen Text lesen, Spalte ausfüllen", "allein, leise"], ["25", "Verarbeiten", "3  Austausch (8), Kontrolle (3), Zeitstrahl-Aha (4), Bilanz (2), Urteil (8)", "zu zweit, allein"], ["5", "Auswerten", "4  Antwort als Dritter Stand, Ziele, Abgabe, Ausblick", "mündlich, still"]].map((r) => row(r.map((v, i) => tc(v, [800, 2300, 4300, 2806][i], { bold: i < 3 })), 320)),
 ]));
 d.push(note("ZEIT", "Die Stunde ist voll. Sollbruchstellen: (1) Austausch nach 6 Minuten kürzen, wenn ein Paar nicht wechselt. (2) Zeitstrahl-Aha: Schritt 1 und 2 zusammen zeigen (2 Minuten statt 4). (3) Urteil: nur ein Satz „Ich halte … für …, weil …“ statt drei Zeilen. Ziel 2 (*) fällt zuerst weg. Phase 4 wird nicht gestrichen."));
 
@@ -82,7 +82,7 @@ d.push(h3("Material und Vorbereitung (Details: Materialliste)"));
 d.push(...bullets([
   "Partnerpuzzle_Blatt_A_und_B_8D.pdf: Seite 1 Blatt A (Ballhausschwur), Seite 2 Blatt B (Bastille), je 13-mal drucken (26 Blätter, 24 Schüler plus Reserve). Auf den Tisch legen: links Blatt A, rechts Blatt B, umgedreht. Auf dem Blatt: nummerierte Sätze, Wörter, Matrix mit Leitfragen und Hilfen (Satznummern), Name, „freiwillig abgeben“, Punkte.",
   "Loesung_Partnerpuzzle_8D.pdf (für Sie): erwartete Einträge je Feld, Punktevergabe, Hinweise zur Haltung. Notenschlüssel für 10 Punkte nach Ihrer Festlegung (Raster Folie 7: 0 bis 4, 5 bis 8, 9 bis 10 Punkte).",
-  "Folien 1 bis 20 (Schrift mindestens 27 Punkt; Folie 1 und 18 mit der selbst gezeichneten Karikatur).",
+  "Folien 1 bis 20 (Schrift mindestens 27 Punkt; Folie 1 und 18 mit der selbst gezeichneten Karikatur (Klerus, Adel, Dritter Stand)).",
   "Seitentafel: Stundenfrage, Ziele, Ablauf (siehe Phase 0). Mitte der Tafel leer lassen für die Reihenfolge der Ereignisse (optional).",
   "Kreide, Grün zum Verbessern, Uhr oder Timer.",
 ]));
@@ -94,7 +94,7 @@ d.push(sp());
 d.push(step("kommt an, schreibt leise", {
   say: "Stifte liegen. Ihr hört nur zu. Schaut auf die Folie und lest, was der Adlige sagt. Schreibt ins Heft: Was kann der Dritte Stand noch tun? Ich vermute …",
   do: [
-    "Folie 1 steht beim Betreten da: selbst gezeichnete Karikatur (keine historische Quelle). Der Adlige sagt: „Der Dritte Stand hat abgestimmt und verloren. Jetzt kann er sich nur noch fügen.“ Auftrag: Heft raus, Datum und Überschrift, „Was kann er noch tun? Ich vermute …“ (etwa 2 Minuten, keine Besprechung). Sie lesen beim Durchgehen bei 3 bis 4 Personen mit (nicht kommentieren).",
+    "Folie 1 steht beim Betreten da: selbst gezeichnete Karikatur (keine historische Quelle) mit drei Figuren: Klerus, Adel und der Dritte Stand (Bauern und Bürger), der zuhört. Der Adlige sagt: „Der Dritte Stand hat abgestimmt und verloren. Jetzt kann er sich nur noch fügen.“ Auftrag: Heft raus, Datum und Überschrift, „Was kann er noch tun? Ich vermute …“ (etwa 2 Minuten, keine Besprechung). Sie lesen beim Durchgehen bei 3 bis 4 Personen mit (nicht kommentieren).",
     "Folie 2 „Das ist mir wichtig“ (20 Sekunden), Folie 3 (Stundenfrage, 30 Sekunden), Folie 4 (Lernziele, 30 Sekunden), Folie 5 (Ablauf, 30 Sekunden). Hinweis zum Stern: „Was wir eventuell nicht schaffen, hat einen Stern.“",
   ],
   extra: [boardBox("Seitentafel · Stundenfrage, Ziel und Ablauf", [
@@ -175,16 +175,16 @@ d.push(step("3e  urteilt allein (8 Min.)", {
 }));
 
 // Phase 4
-d.push(phase("4", "Auswerten: Antwort an den Adligen", 5, "AVIVA: Auswerten"));
-d.push(warum("Die Klasse nimmt Bezug auf die Aussage des Adligen vom Anfang und prüft damit offen, was sie gelernt hat (mehrere gute Antworten, Vorstufe zu den Urteilsaufgaben der Reihe). Der Vergleich mit der Vermutung zeigt den Lernzuwachs. Diese Phase wird nie gestrichen.", "„Der Adlige sagte: Jetzt bleibt ihm nur noch, sich zu fügen. Was antwortet ihr ihm?“"));
+d.push(phase("4", "Auswerten: Antwort als Dritter Stand", 5, "AVIVA: Auswerten"));
+d.push(warum("Die Klasse nimmt Bezug auf die Aussage von Klerus und Adel vom Anfang und antwortet als Dritter Stand: Das prüft offen, was sie gelernt hat (mehrere gute Antworten, Vorstufe zu den Urteilsaufgaben der Reihe). Der Vergleich mit der Vermutung zeigt den Lernzuwachs. Diese Phase wird nie gestrichen.", "„Klerus und Adel sagten: Jetzt bleibt ihm nur noch, sich zu fügen. Ihr seid der Dritte Stand. Was antwortet ihr?“"));
 d.push(sp());
-d.push(step("schaut auf die Karikatur, denkt, dann mündlich", {
-  say: "Stifte liegen. Ihr hört nur zu. Das ist die letzte Aufgabe. Schaut noch einmal auf die Karikatur vom Anfang. Denkt zehn Sekunden nach. Ich rufe euch auf.",
+d.push(step("schaut auf die Karikatur, denkt, antwortet als Dritter Stand", {
+  say: "Stifte liegen. Ihr hört nur zu. Das ist die letzte Aufgabe. Schaut noch einmal auf die Karikatur vom Anfang. Jetzt seid ihr der Dritte Stand. Denkt zehn Sekunden nach. Ich rufe euch auf.",
   do: [
-    "Folie 18 (Abschlussfrage, 3 Minuten): Die Karikatur erscheint wieder mit der Aussage des Adligen. Auftrag: „Was antwortest du dem Adligen?“ Die Antwort kommt mündlich, ohne Schnipsel: „Ich antworte dir, …, weil …“. Mehrere gute Antworten, geprüft werden Position, ein Sachargument aus der Stunde (Eid, Bastille, Reihenfolge, Opfer) und ein „weil“. Form: (a) Blitzlicht (empfohlen): 4 bis 6 Personen unterschiedlichen Niveaus gezielt aufrufen, kein Kommentar. (b) Duell zu zweit, leise: eine Person ist der Adlige, die andere antwortet. Unbenotet. Zum Schluss ein Blick ins Heft: Wer hat seine Vermutung geändert? (keine Abfrage).",
+    "Folie 18 (Abschlussfrage, 3 Minuten): Die Karikatur erscheint wieder mit der Aussage von Klerus und Adel. Auftrag: „Du bist der Dritte Stand. Was antwortest du Klerus und Adel?“ Die Antwort kommt mündlich in der Ich-Form, ohne Schnipsel: „Ich antworte euch: …, weil …“. Mehrere gute Antworten, geprüft werden Position, ein Sachargument aus der Stunde (Eid, Bastille, Reihenfolge, Opfer) und ein „weil“. Form: (a) Blitzlicht (empfohlen): 4 bis 6 Personen unterschiedlichen Niveaus gezielt aufrufen, kein Kommentar. (b) Duell zu zweit, leise: eine Person ist Klerus und Adel, die andere antwortet als Dritter Stand. Unbenotet. Zum Schluss ein Blick ins Heft: Wer hat seine Vermutung geändert? (keine Abfrage).",
     "Folie 19 (Ziele prüfen, 30 Sekunden, still): Haben wir die Ziele erreicht? Wer das Blatt abgeben möchte, legt es jetzt vorn ab. Folie 20 (Ausblick, 30 Sekunden, nur lesen): „Worauf berufen sich die Menschen, wenn sie sich wehren? Das sehen wir in der nächsten Stunde.“ Ihr Satz am Ende: Was passiert, wenn Gewalt zum normalen Mittel wird, sehen wir bei den Jakobinern.",
   ],
-  sol: "Mögliche Antworten an den Adligen (Auswahl, keine Musterlösung). „Das stimmt nicht, weil sich der Dritte Stand in der Ballhalle zur Nationalversammlung erklärte und der König nicht gewaltsam einschreiten konnte.“ „Er kann sich wehren, aber Gewalt kostet Menschenleben, wie bei der Bastille.“ „Erst der Druck von beiden Seiten brachte den König zum Rückzug, Fügen war nicht nötig.“ Kriterien: Position, ein Sachargument aus der Stunde, ein „weil“.",
+  sol: "Mögliche Antworten als Dritter Stand (Auswahl, keine Musterlösung). „Wir fügen uns nicht, weil wir fast alle Menschen vertreten und uns zur Nationalversammlung erklärt haben.“ „Wir wehren uns, aber ohne Gewalt, weil die Bastille viele Tote gekostet hat.“ „Erst der Druck von beiden Seiten hat den König zum Rückzug gebracht, also fügen wir uns nicht.“ Kriterien: Position, ein Sachargument aus der Stunde, ein „weil“.",
 }));
 
 d.push(h3("So sieht das Heft und das Blatt am Ende aus"));
@@ -203,7 +203,7 @@ d.push(...bullets([
   "Zahlen zur Bastille (etwa 100 Tote unter den Angreifern, sieben Gefangene, Gouverneur nach der Übergabe getötet) stammen aus allgemeinem Wissen und sind gegen das Lehrbuch zu lesen. Wirkung des Ballhausschwurs: Am 23. Juni versuchte der König noch, die Beschlüsse aufzuheben, am 27. Juni forderte er Klerus und Adel auf, sich anzuschließen.",
   "Die Aussage „Der König zieht die Soldaten ab“ (Mitte Juli) steht im Text B und auf Folie 15. Das genaue Datum im Lehrbuch gegenprüfen.",
   "Ob die Gewalt in Paris den König allein zum Nachgeben brachte, ist offen. Im Tafelskript steht die Deutung „der Druck wirkte erst durch beides“, die Klasse belegt sie mit der Reihenfolge.",
-  "Die Karikatur (Klerus und Adel) ist selbst gezeichnet, keine historische Quelle.",
+  "Die Karikatur (Klerus, Adel und Dritter Stand) ist selbst gezeichnet, keine historische Quelle.",
 ]));
 
 (async () => {
