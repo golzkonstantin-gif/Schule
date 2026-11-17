@@ -65,23 +65,25 @@ function texthalf(me) {
   return new TableCell({ children: c, width: { size: W, type: WidthType.DXA }, borders: { top: dash, bottom: dash, left: dash, right: dash }, margins: { top: 80, bottom: 60, left: 180, right: 180 }, verticalAlign: VerticalAlign.TOP });
 }
 const textseite = () => new Table({ width: { size: W, type: WidthType.DXA }, columnWidths: [W], rows: ["A", "B"].map((me) => new TableRow({ cantSplit: true, height: { value: 7650, rule: "exact" }, children: [texthalf(me)] })) });
-function tabelle() {
+function tabellehalf() {
+  const dash = { style: BorderStyle.DASHED, size: 6, color: "8A96B5" };
   const c = [];
-  c.push(p([t("GESCHICHTE 8D · PARTNERPUZZLE · TABELLE   ", { size: 16, bold: true, color: MUTED }), t("Name: ______________________", { size: 18, color: MUTED })], { after: 30 }));
-  c.push(p(t("Ballhausschwur und Bastille im Vergleich", { font: "Cambria", size: 32, bold: true, color: NAVY }), { after: 90 }));
-  c.push(p([t("Aufgabe  ", { bold: true, color: RED, size: 20 }), t("1  Fülle die Spalte für deinen Text aus (Stichworte).   2  Höre deinem Partner zu und fülle die andere Spalte aus.", { size: 20 })], { after: 100 }));
-  const CW = [2500, 4100, 4100];
-  const head = (txt, col, w) => cell(p(t(txt, { bold: true, color: "FFFFFF", size: 21 }), { after: 0, align: AlignmentType.CENTER }), { w, fill: col, valign: VerticalAlign.CENTER, borders: all(solid(col, 8)) });
+  c.push(p([t("GESCHICHTE 8D · PARTNERPUZZLE · TABELLE   ", { size: 14, bold: true, color: MUTED }), t("Name: ____________________", { size: 16, color: MUTED })], { after: 20 }));
+  c.push(p(t("Ballhausschwur und Bastille im Vergleich", { font: "Cambria", size: 26, bold: true, color: NAVY }), { after: 40 }));
+  c.push(p([t("Aufgabe  ", { bold: true, color: RED, size: 18 }), t("1  Fülle die Spalte für deinen Text aus (Stichworte).   2  Höre deinem Partner zu und fülle die andere Spalte aus.", { size: 18 })], { after: 60 }));
+  const CW = [2300, 4200, 4200];
+  const head = (txt, col, w) => cell(p(t(txt, { bold: true, color: "FFFFFF", size: 19 }), { after: 0, align: AlignmentType.CENTER }), { w, fill: col, valign: VerticalAlign.CENTER, borders: all(solid(col, 8)), m: 40 });
   const rows = [new TableRow({ children: [head("Kriterium", NAVY, CW[0]), head("Text A: Ballhausschwur", GREEN, CW[1]), head("Text B: Bastille", RED, CW[2])] })];
-  KRIT.forEach(([n, q], i) => rows.push(new TableRow({ cantSplit: true, height: { value: 2050, rule: "atLeast" }, children: [
-    cell([p(t(n, { font: "Cambria", bold: true, size: 23, color: NAVY }), { after: 20 }), p(t(q, { size: 19 }), { after: 0 })], { w: CW[0], fill: i % 2 ? LIGHT : LIGHT2 }),
-    cell(p(t(""), { after: 0 }), { w: CW[1] }),
-    cell(p(t(""), { after: 0 }), { w: CW[2] }),
+  KRIT.forEach(([n, q], i) => rows.push(new TableRow({ cantSplit: true, height: { value: 1200, rule: "atLeast" }, children: [
+    cell([p(t(n, { font: "Cambria", bold: true, size: 20, color: NAVY }), { after: 10 }), p(t(q, { size: 16 }), { after: 0 })], { w: CW[0], fill: i % 2 ? LIGHT : LIGHT2, m: 40 }),
+    cell(p(t(""), { after: 0 }), { w: CW[1], m: 40 }),
+    cell(p(t(""), { after: 0 }), { w: CW[2], m: 40 }),
   ] })));
-  c.push(new Table({ width: { size: W, type: WidthType.DXA }, columnWidths: CW, rows }));
-  c.push(p([t("□ Ich gebe das Blatt freiwillig ab.", { size: 22, bold: true }), t("          Punkte: ____ von 10", { size: 22 })], { before: 120, after: 0 }));
-  return c;
+  c.push(new Table({ width: { size: 10700 - 360, type: WidthType.DXA }, columnWidths: CW, rows }));
+  c.push(p([t("□ Ich gebe das Blatt freiwillig ab.", { size: 19, bold: true }), t("          Punkte: ____ von 10", { size: 19 })], { before: 70, after: 0 }));
+  return new TableCell({ children: c, width: { size: W, type: WidthType.DXA }, borders: { top: dash, bottom: dash, left: dash, right: dash }, margins: { top: 70, bottom: 50, left: 180, right: 180 }, verticalAlign: VerticalAlign.TOP });
 }
+const tabelle = () => new Table({ width: { size: W, type: WidthType.DXA }, columnWidths: [W], rows: [0, 1].map(() => new TableRow({ cantSplit: true, height: { value: 7650, rule: "exact" }, children: [tabellehalf()] })) });
 function loesung() {
   const c = [];
   c.push(p(t("LÖSUNG FÜR DIE LEHRKRAFT · GESCHICHTE 8D · STUNDE 3", { size: 17, bold: true, color: RED }), { after: 20 }));
@@ -104,7 +106,7 @@ function loesung() {
   const sec = (children) => ({ properties: { page: { size: { width: 11906, height: 16838 }, margin: { top: 450, bottom: 400, left: 600, right: 600 } } }, footers: { default: footer }, children });
   const d1 = new Document({ styles: { default: { document: { run: { font: "Calibri", size: 21 } } } }, sections: [{ properties: { page: { size: { width: 11906, height: 16838 }, margin: { top: 450, bottom: 300, left: 600, right: 600 } } }, children: [textseite()] }] });
   fs.writeFileSync("../Partnerpuzzle_Texte_A_und_B_8D.docx", await Packer.toBuffer(d1));
-  const d3 = new Document({ styles: { default: { document: { run: { font: "Calibri", size: 21 } } } }, sections: [sec(tabelle())] });
+  const d3 = new Document({ styles: { default: { document: { run: { font: "Calibri", size: 21 } } } }, sections: [{ properties: { page: { size: { width: 11906, height: 16838 }, margin: { top: 450, bottom: 300, left: 600, right: 600 } } }, children: [tabelle()] }] });
   fs.writeFileSync("../Partnerpuzzle_Tabelle_8D.docx", await Packer.toBuffer(d3));
   const d2 = new Document({ styles: { default: { document: { run: { font: "Calibri", size: 21 } } } }, sections: [sec(loesung())] });
   fs.writeFileSync("../Loesung_Partnerpuzzle_8D.docx", await Packer.toBuffer(d2));
