@@ -1,6 +1,6 @@
 // Blatt „Argumente und Beispielurteil“ (Rückmeldung 17.11.: Vorwissen zu Kleisthenes fehlte, Tafelbild nicht verstanden).
 // Vorne: Argumente zur Ausgangsfrage schon sortiert (dafür/dagegen), je Argument „Was?“ und „Was bedeutet das für den Adel?“ in einfacher Sprache.
-// Hinten: Beispiel-Sachurteil und -Werturteil zu einem bekannten Thema (Peisistratos; nicht Solon, das ist Klausurthema), damit die Antwort zu Kleisthenes nicht vorweggenommen wird.
+// Hinten: angefangenes Sachurteil zur selben Frage – a und das erste Argument von b als Muster, der Rest selbst (Teillösung); Satzanfänge zum Abhaken.
 // A4 doppelseitig, tintensparend (keine Flächen, Farbe nur in Schrift und Linien).
 const fs = require("fs");
 const { Document, Packer, Paragraph, TextRun, Table, TableRow, TableCell, WidthType, BorderStyle, VerticalAlign, AlignmentType, PageBreak, TabStopType } = require("docx");
@@ -67,38 +67,51 @@ const vorne = [
   P([R("Arbeitsauftrag", { font: "Cambria", bold: true, size: 26, color: C.terra })], { after: 60, keepNext: true }),
   ...auftrag([
     "**Lies** die Argumente. **Kreuze** in jeder Spalte die zwei Argumente an, die du am wichtigsten findest.",
-    "**Lies** das Beispiel auf der Rückseite: So ist ein Sachurteil gebaut (Bausteine a–d).",
-    "**Schreibe** dein Sachurteil ins Heft – genauso gebaut. Nutze die Satzanfänge vom Hilfeblatt und hake sie ab.",
-    "**Schreibe** dein Werturteil: Wähle einen Maßstab (Gleichheit, Leistung, Schutz der Schwachen, gleiche Regeln für alle) und begründe.",
+    "**Lies** auf der Rückseite, wie das Sachurteil beginnt (Muster: a und das erste Argument von b).",
+    "**Schreibe** das Sachurteil im Heft **weiter**: dein zweites Argument dafür (b), die Argumente dagegen (c), das Fazit (d). **Hake** die Satzanfänge **ab**, die du benutzt.",
+    "**Schreibe** dein Werturteil (e) mit Maßstab.",
   ]),
 ];
 
-// ---------- Rückseite: Beispielurteil zu Peisistratos ----------
-function muster(rows) {
-  const cw = [1000, W - 1000];
-  return new Table({ columnWidths: cw, width: { size: W, type: WidthType.DXA }, rows: rows.map(([b, name, t]) => new TableRow({ cantSplit: true, children: [
-    cell([P(b, { font: "Cambria", bold: true, size: 30, color: C.terra, after: 0, align: AlignmentType.CENTER }), P(name, { size: 17, color: C.muted, after: 0, align: AlignmentType.CENTER, line: 200 })], cw[0],
-      { mt: 70, borders: { top: none, bottom: none, left: none, right: { style: BorderStyle.SINGLE, size: 12, color: C.terra } } }),
-    cell([P(t, { size: 28, line: 350, after: 0, align: AlignmentType.JUSTIFIED, hl: C.terra })], cw[1], { mt: 70, mb: 170, borders: { top: none, bottom: none, left: none, right: none } })] })) });
+// ---------- Rückseite: angefangenes Urteil zur Kleisthenes-Frage (Teillösung, von Muster zu selbstständig) ----------
+// Kein Beispiel zu einem anderen Thema (verwirrt; Solon ist Klausurthema). Muster nur für a und das erste Argument von b.
+const fade = (t, o = {}) => P(t, { size: o.size || 26, line: o.line || 330, after: o.after ?? 40, align: o.align, hl: C.terra, color: o.color, italics: o.italics });
+const sp = arr => arr.map(t => P([R("☐  ", { size: 26, color: C.terra }), ...runs(t, { size: 25 })], { indent: { left: 400, hanging: 400 }, after: 60, line: 280 }));
+function zwei(arr) {
+  const h = Math.ceil(arr.length / 2), w = (W - 1000) / 2;
+  return new Table({ columnWidths: [w, w], width: { size: W - 1000, type: WidthType.DXA }, rows: [new TableRow({ children: [arr.slice(0, h), arr.slice(h)].map(c =>
+    cell(sp(c), w, { mt: 20, mb: 20, borders: { top: none, bottom: none, left: none, right: none } })) })] });
 }
+function bau(rows) {
+  const cw = [1000, W - 1000];
+  return new Table({ columnWidths: cw, width: { size: W, type: WidthType.DXA }, rows: rows.map(([b, wer, kids]) => new TableRow({ cantSplit: true, children: [
+    cell([P(b, { font: "Cambria", bold: true, size: 30, color: C.terra, after: 0, align: AlignmentType.CENTER }),
+      P(wer, { size: 17, bold: true, color: wer === "Muster" ? C.muted : C.terra, after: 0, align: AlignmentType.CENTER, line: 200 })], cw[0],
+      { mt: 70, borders: { top: none, bottom: none, left: none, right: { style: BorderStyle.SINGLE, size: 12, color: C.terra } } }),
+    cell(kids, cw[1], { mt: 70, mb: 220, borders: { top: none, bottom: none, left: none, right: none } })] })) });
+}
+const du = t => P([R("→ " + t, { size: 25, bold: true, color: C.terra })], { after: 70, line: 280 });
 const hinten = [
   new Paragraph({ children: [new PageBreak()] }),
-  P([R("So sieht ein Urteil aus – ein Beispiel zu Peisistratos", { font: "Cambria", bold: true, size: 34 })], { after: 60 }),
-  P("Das Thema kennst du schon aus dem Unterricht. **Fett** sind die Satzanfänge, am Rand steht der Baustein. Baue dein Urteil zu Kleisthenes genauso.", { size: 21, color: C.muted, after: 80 }),
-  P([R("Frage: ", { bold: true, size: 24 }), R("War die Tyrannis des Peisistratos (561–527 v. Chr.) ein Wegbereiter der Demokratie?", { size: 24, italics: true })],
-    { indent: { left: 160 }, after: 120, border: { left: { style: BorderStyle.SINGLE, size: 24, color: C.terra, space: 8 } } }),
-  P([R("Beispiel-Sachurteil", { font: "Cambria", bold: true, size: 26, color: C.terra }), R("   aus der Sicht der damaligen Zeit, mit Belegen", { size: 19, italics: true, color: C.muted })], { after: 60, keepNext: true }),
-  muster([
-    ["a", "Einstieg", "**Im Folgenden soll beurteilt werden, ob** die Tyrannis des Peisistratos ein Wegbereiter der Demokratie war. **Um diese Frage zu beantworten, muss man klären, was die Demokratie braucht:** Bürger, die selbst entscheiden können und nicht von einem Adligen abhängig sind, und eine Ordnung, die für alle gilt."],
-    ["b", "dafür", "**Für einen Wegbereiter spricht, dass** Peisistratos den Bauern Land der verbannten Adligen und Kredite gab. **Dadurch konnten** viele Bauern selbstständig wirtschaften und waren nicht mehr von einem Adligen abhängig. **Hinzu kommt, dass** er die Macht der Adelsfamilien schwächte, indem er seine Gegner verbannte, und dass Solons Ordnung mit Volksversammlung und Ämtern weiter bestehen blieb."],
-    ["c", "dagegen", "**Dagegen spricht jedoch, dass** Peisistratos die Macht mit Gewalt eroberte und mit einer Leibwache und Söldnern sicherte. **Zwar** blieben Solons Ämter bestehen, **aber** er sorgte dafür, dass seine Anhänger sie bekamen. **Weiterhin blieb** das Volk ohne echte Entscheidung: Ein Einzelner herrschte, und nach seinem Tod regierten seine Söhne weiter, bis die Tyrannis 510 v. Chr. gestürzt wurde."],
-    ["d", "Fazit", "**Schwerer wiegt meines Erachtens** die Stärkung der Bauern, **weil** sie damit unabhängig vom Adel wurden – eine Voraussetzung dafür, dass sie später selbst mitbestimmen konnten. **Zugegebenermaßen** war die Tyrannis selbst keine Herrschaft des Volkes, **allerdings** bereitete sie den Boden dafür. **Daher komme ich zu dem Ergebnis, dass** Peisistratos ein Wegbereiter der Demokratie war, ohne es zu wollen."],
+  P([R("So beginnt dein Sachurteil – schreibe weiter", { font: "Cambria", bold: true, size: 34 })], { after: 60 }),
+  P("Am Rand steht der Baustein und wer schreibt: **Muster** = schon vorgemacht, **du** = schreibst du im Heft. **Fett** sind die Satzanfänge.", { size: 21, color: C.muted, after: 80 }),
+  P([R("Frage: ", { bold: true, size: 24 }), R("Haben die Reformen des Kleisthenes der Vormachtstellung des Adels in der attischen Polis ein Ende gesetzt?", { size: 24, italics: true })],
+    { indent: { left: 160 }, after: 120, line: 285, border: { left: { style: BorderStyle.SINGLE, size: 24, color: C.terra, space: 8 } } }),
+  bau([
+    ["a", "Muster", [fade("**Im Folgenden soll beurteilt werden, ob** die Reformen des Kleisthenes der Vormachtstellung des Adels ein Ende gesetzt haben. **Um diese Frage zu beantworten, muss man klären, worauf die Macht des Adels beruhte:** auf den abhängigen Bauern, die ihrem Adligen geschlossen folgten, auf den Ämtern und auf dem Reichtum.", { align: AlignmentType.JUSTIFIED })]],
+    ["b", "Muster + du", [
+      fade("**Für ein Ende der Vormachtstellung spricht, dass** Kleisthenes die Bürger in zehn neue Gruppen (Phylen) einteilte, die aus Stadt, Küste und Binnenland zusammengelost wurden. **Dadurch** landeten die Bauern eines Adligen in verschiedenen Gruppen, sodass er sie nicht mehr geschlossen für sich abstimmen lassen konnte.", { align: AlignmentType.JUSTIFIED, after: 100 }),
+      du("Du: ein zweites Argument dafür (Vorderseite), mit Erklärung „Für den Adel …“"),
+      zwei(["„Hinzu kommt, dass …“", "„Ein weiteres Argument ist …“", "„Dadurch konnte ein Adliger nicht mehr …“", "„Auch die Quelle bestätigt dies: … (Z. …)“"])]],
+    ["c", "du", [du("Du: mindestens zwei Argumente dagegen, jeweils mit Erklärung"),
+      zwei(["„Dagegen spricht jedoch, dass …“", "„Allerdings muss man bedenken, dass …“", "„Zwar …, aber …“", "„Weiterhin blieb …“"])]],
+    ["d", "du", [du("Du: Welche Seite wiegt schwerer – und warum? Beantworte am Ende die Frage."),
+      zwei(["„Schwerer wiegt meines Erachtens …, weil …“", "„Zugegebenermaßen …, allerdings …“", "„Insgesamt haben die Reformen die Vormachtstellung des Adels …, weil …“", "„Daher komme ich zu dem Ergebnis, dass …“"])]],
+    ["e", "du", [du("Du: Werturteil aus heutiger Sicht. Maßstab ankreuzen:"),
+      P([R("☐ Gleichheit     ☐ Leistung     ☐ Schutz der Schwachen     ☐ gleiche Regeln für alle", { size: 23, bold: true })], { after: 60 }),
+      zwei(["„Gemessen am Maßstab der … halte ich die Reformen für …, weil …“", "„Positiv ist …, kritisch dagegen …“", "„Ein Beispiel dafür ist …“", "„Diesem Urteil liegt der Maßstab … zugrunde.“"])]],
   ]),
-  P([R("Beispiel-Werturteil", { font: "Cambria", bold: true, size: 26, color: C.terra }), R("   aus heutiger Sicht, mit Maßstab", { size: 19, italics: true, color: C.muted })], { before: 160, after: 60, keepNext: true }),
-  muster([
-    ["e", "Maßstab", "**Gemessen am Maßstab** gleicher Regeln für alle **halte ich** die Tyrannis **für** nicht gerechtfertigt, **weil** Peisistratos die Macht mit Gewalt an sich riss und über dem Gesetz stand. **Positiv ist**, dass es vielen armen Bauern besser ging, **kritisch dagegen**, dass Gegner einfach verbannt wurden. **Ein Beispiel dafür ist**, dass die Alkmeoniden Athen verlassen mussten, ohne dass das Volk darüber entschieden hatte."],
-  ]),
-  P("**Achtung:** Im Sachurteil zählt, was damals galt – im Werturteil sagst du, welchen Maßstab du heute anlegst.", { size: 21, before: 140, color: C.muted }),
+  P("**Achtung:** Im Sachurteil zählt, was damals galt – im Werturteil sagst du, welchen Maßstab du heute anlegst.", { size: 21, before: 60, color: C.muted }),
 ];
 
 const doc = new Document({ styles: { default: { document: { run: { font: "Calibri", size: S, color: C.dark } } } },
