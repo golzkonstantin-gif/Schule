@@ -53,6 +53,18 @@ function textblatt(me) {
   c.push(p([t("Aufgabe  ", { bold: true, color: RED, size: 22 }), t("Lies den Text genau. Unterstreiche, was zu den fünf Kriterien passt. Fülle dann die Tabelle für deinen Text aus.", { size: 22 })], { after: 0 }));
   return c;
 }
+function texthalf(me) {
+  const T = TEXT[me];
+  const dash = { style: BorderStyle.DASHED, size: 6, color: "8A96B5" };
+  const c = [];
+  c.push(p([t("GESCHICHTE 8D · PARTNERPUZZLE · TEXT   ", { size: 14, bold: true, color: MUTED }), t("Name: ____________________", { size: 16, color: MUTED })], { after: 20 }));
+  c.push(p(t(T.titel, { font: "Cambria", size: 26, bold: true, color: T.farbe }), { after: 60 }));
+  T.absätze.forEach((x) => c.push(p(t(x, { font: "Cambria", size: 22 }), { after: 60, line: 262, align: AlignmentType.JUSTIFIED })));
+  c.push(p(t(T.wörter, { size: 16, color: MUTED }), { before: 30, after: 60 }));
+  c.push(p([t("Aufgabe  ", { bold: true, color: RED, size: 18 }), t("Lies den Text genau. Unterstreiche, was zu den fünf Kriterien passt. Fülle dann die Tabelle für deinen Text aus.", { size: 18 })], { after: 0 }));
+  return new TableCell({ children: c, width: { size: W, type: WidthType.DXA }, borders: { top: dash, bottom: dash, left: dash, right: dash }, margins: { top: 80, bottom: 60, left: 180, right: 180 }, verticalAlign: VerticalAlign.TOP });
+}
+const textseite = () => new Table({ width: { size: W, type: WidthType.DXA }, columnWidths: [W], rows: ["A", "B"].map((me) => new TableRow({ cantSplit: true, height: { value: 7650, rule: "exact" }, children: [texthalf(me)] })) });
 function tabelle() {
   const c = [];
   c.push(p([t("GESCHICHTE 8D · PARTNERPUZZLE · TABELLE   ", { size: 16, bold: true, color: MUTED }), t("Name: ______________________", { size: 18, color: MUTED })], { after: 30 }));
@@ -89,8 +101,8 @@ function loesung() {
   return c;
 }
 (async () => {
-  const sec = (children) => ({ properties: { page: { size: { width: 11906, height: 16838 }, margin: { top: 650, bottom: 600, left: 700, right: 700 } } }, footers: { default: footer }, children });
-  const d1 = new Document({ styles: { default: { document: { run: { font: "Calibri", size: 21 } } } }, sections: [sec([...textblatt("A"), brk(), ...textblatt("B")])] });
+  const sec = (children) => ({ properties: { page: { size: { width: 11906, height: 16838 }, margin: { top: 450, bottom: 400, left: 600, right: 600 } } }, footers: { default: footer }, children });
+  const d1 = new Document({ styles: { default: { document: { run: { font: "Calibri", size: 21 } } } }, sections: [{ properties: { page: { size: { width: 11906, height: 16838 }, margin: { top: 450, bottom: 300, left: 600, right: 600 } } }, children: [textseite()] }] });
   fs.writeFileSync("../Partnerpuzzle_Texte_A_und_B_8D.docx", await Packer.toBuffer(d1));
   const d3 = new Document({ styles: { default: { document: { run: { font: "Calibri", size: 21 } } } }, sections: [sec(tabelle())] });
   fs.writeFileSync("../Partnerpuzzle_Tabelle_8D.docx", await Packer.toBuffer(d3));
