@@ -67,6 +67,7 @@ Vorbild: Stunde „Bürgeramt Athen“ (`Geschichte_11/Stunde_Buergeramt_Athen/`
 
 ## Feste Planungsschritte Geschichte 11
 
+- **Wissens-Check bei Anwendungsstunden (Rückmeldung 17.11.):** Braucht eine Stunde Wissen aus früheren Stunden (z. B. Urteil über die Kleisthenes-Reformen), wird dieses Wissen zu Beginn aktiv abgerufen und mit Stichproben geprüft. Sitzt es nicht, wird es erst neu aufgebaut, bevor angewendet wird. Eine Zusammenfassung zum Nachlesen oder Satzanfänge ersetzen das Sachwissen nicht.
 - **Begriffs-Check bei jeder Planung:** „Kennen die Schüler die Begriffe und Konzepte, die der Auftrag voraussetzt?“ Jeder noch nicht gesicherte Begriff bekommt eine Begriffsfolie **vor** der Aufgabe, die ihn braucht (Phase Informieren). In der Handreichung die vorausgesetzten Begriffe nennen.
 - **Vormachen (= Modellieren der DI):** Bevor die Gruppen arbeiten, macht die Lehrkraft einen Fall vor der Klasse vor – laut denkend, Schritt für Schritt. Eigene Folie „So geht's – ein Beispiel“, Fall in der Handreichung als Musterlösung.
 - **Anzahl der Fälle an die Klasse anpassen:** Zusammenarbeit meist in **Paaren** (8 Paare). Einen Fall mehr als Paare planen – der übrige ist der Vormach-Fall.
