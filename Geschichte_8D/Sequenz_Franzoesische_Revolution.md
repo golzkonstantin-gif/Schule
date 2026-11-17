@@ -25,17 +25,16 @@ Status: geplant · gelaufen · Rückmeldung (R) im Reflexionslog.
 |---|---|---|---|---|---|---|
 | 1 | 04.11. | 16.10. | Generalstände: Weg zu 1789, Abstimmung nach Ständen | Ursachen; Rekonstruktion | gelaufen (R: UG-lastig, Schulbeispiel zu abstrakt, Text gut) | gelaufen, sehr gut; Abstimmung (Ständespiel) nicht geschafft, wird in Stunde 2 aufgegriffen (R: `Geschichte_8D/Reflexion.md`) |
 | 2 | 11.11. | 06.11. | Dritter Stand handelt: Nationalversammlung, Ballhausschwur; Karikatur analysieren (8D: Kurzstunde, ohne Karikatur) | Epochenjahr 1789; **Karikatur** (8C) | gelaufen („mäßig“, zu viele Methoden) | geplant als Kurzstunde, 25 Min. (`Geschichte_8D/Stunde2_Nationalversammlung/`) |
-| 3 | 18.11. | 13.11. | Bastille, Ende der Vorrechte, Menschen- und Bürgerrechte | Epochenjahr 1789; Menschenrechtserklärung | offen | offen |
-| 4 | 25.11. | 20.11. | Verfassung 1791: konstitutionelle Monarchie | **Verfassungsschaubild** | offen | offen |
-| 5 | 02.12. | 27.11. | **Test 1** | | offen | offen |
-| 6 | 09.12. | 04.12. | Vom König zur Republik: Flucht, Krieg, Hinrichtung | Zusammenhänge rekonstruieren | offen | offen |
-| 7 | 16.12. | 11.12. | Jakobinerherrschaft und Terror | **Sach- und Werturteil** (Modell) | offen | offen |
+| 3 | 18.11. | 13.11. | Wege des Widerstands: Ballhausschwur und Bastille (Partnerpuzzle, Urteil) | Zusammenhänge rekonstruieren; **Urteil mit Maßstab** | Menschenrechte von der Kollegin behandelt (Details offen) | geplant (`Geschichte_8D/Stunde3_Widerstand/`) |
+| 4 | 25.11. | 20.11. | Ende der Vorrechte (4. August) und Menschenrechte (26. August; Artikel 2 Widerstand); Hospitation | Menschenrechtserklärung | offen | offen |
+| 5 | 02.12. | 27.11. | Verfassung 1791: konstitutionelle Monarchie | **Verfassungsschaubild** | offen | offen |
+| 6 | 09.12. | 04.12. | **Test 1** (Stunden 1 bis 5) | | offen | offen |
+| 7 | 16.12. | 11.12. | Vom König zur Republik: Flucht, Krieg, Hinrichtung | Zusammenhänge rekonstruieren | offen | offen |
 | – | | | Weihnachtsferien | | | |
-| 8 | 06.01. | 18.12. | Ende der Revolution 1795–1799, Aufstieg Napoleons | Zusammenhänge rekonstruieren | offen | offen |
-| 9 | 13.01. | 08.01. | Napoleon: Reformen und Fall; Urteil angeleitet („Erbe der Revolution oder Verrat?“) | Urteil (angeleitet) | offen | offen |
-| 10 | 20.01. | 15.01. | **Test 2** (Stunden 6–9) mit Urteilsaufgabe | Urteil (selbstständig) | offen | offen |
-| 11 | 27.01. | 22.01. | Rückgabe und Berichtigung Test 2; Wiener Kongress; Gesamturteil „War die Revolution ein Erfolg?“ | Urteil (Reihenabschluss) | offen | offen |
-| R | – | 29.01. | 8C: Reserve, Rückgabe, Ausblick Industrielle Revolution (8D hat keine Reserve) | | | |
+| 8 | 06.01. | 18.12. | Jakobinerherrschaft und Terror | **Sach- und Werturteil** (Modell) | offen | offen |
+| 9 | 13.01. | 08.01. | Ende der Revolution (Direktorium) und Napoleon (Aufstieg, Herrschaft, Fall); Urteil angeleitet | Urteil (angeleitet) | offen | offen |
+| 10 | 20.01. | 15.01. | **Test 2** (Stunden 7 bis 9) mit Urteilsaufgabe | Urteil (selbstständig) | offen | offen |
+| 11 | 27.01. | 22.01. | Gesamturteil zur Revolution, Wiener Kongress nur als * | Vergleich mit der Eingangsdiagnose | offen | offen |
 
 **Entscheidung 27.10.:** Test 2 liegt am 20.01. (Stunde 10), damit die Rückgabe vor dem Halbjahresende möglich ist. Die Urteilsstunde und der Wiener Kongress rücken dadurch auf Stunde 11 (27.01.), der Wiener Kongress bleibt mit *.
 
@@ -44,6 +43,8 @@ Status: geplant · gelaufen · Rückmeldung (R) im Reflexionslog.
 - **Stunde 4 (8D 25.11., 8C 20.11.): Menschenrechte (26. August, zwei Artikel) als Einstieg und Verfassung 1791.** Die Menschenrechtserklärung wird kurz (Text, zwei Artikel, Zuordnung zu den Ständen von früher) mit dem Verfassungsschaubild verbunden (drei Gewalten, Wahlrecht der Aktivbürger). Die Spielidee „Wahl mit Steuerkarten“ entfällt, sie wird auf eine Folie mit Beispiel reduziert. Mindestziel: zwei Artikel und Wahlrecht.
 - **8C:** Die 8C nutzt ihre Reserve in Stunde 4 (oder zieht Menschenrechte als eigene Stunde vor), sodass dort getestet werden kann, wie viel in eine Stunde passt. Test 1 (Stunde 5) bleibt auf dem 02.12. (8D) und 27.11. (8C).
 - **Offen:** Bestätigung oder Alternative. Das Karikatur-Beurteilen (Schritt 3) bleibt in der 8C Zusatz (*).
+
+**Anpassung 17.11. (beschlossen):** Der Test 1 rutscht nach hinten (Hospitation nächste Woche) und liegt am 09.12. (8D) mit den Stunden 1 bis 5. Stunde 3 ist jetzt „Wege des Widerstands“ (Ballhausschwur und Bastille als Partnerpuzzle mit fünf Kriterien, 10 Punkte zur Benotung, freiwillige Abgabe; Aha: Reihenfolge der Ereignisse; Bilanz „wirksam heißt nicht gerechtfertigt“, Urteil mit Maßstab). Ende der Vorrechte und Menschenrechte folgen in Stunde 4, die Verfassung 1791 in Stunde 5. Weil der Test eine Stunde belegt, sind das Ende der Revolution und Napoleon in Stunde 9 zusammengelegt. Die 8C (eine Stunde voraus, Menschenrechte bereits durch die Kollegin behandelt) wird nach Rückmeldung angepasst.
 
 ## Die Stunden im Einzelnen
 
