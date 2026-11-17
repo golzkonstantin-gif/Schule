@@ -29,7 +29,7 @@ function cell(children, o = {}) {
   return new TableCell({
     children: Array.isArray(children) ? children : [children],
     width: { size: o.w, type: WidthType.DXA },
-    shading: o.fill ? { fill: o.fill, type: ShadingType.CLEAR, color: "auto" } : undefined,
+    shading: undefined, // Tinte sparen: keine Farbflächen
     borders: o.borders || thin,
     verticalAlign: o.valign || VerticalAlign.CENTER,
     margins: { top: o.m ?? 60, bottom: o.m ?? 60, left: o.ml ?? 100, right: 100 },
@@ -38,7 +38,7 @@ function cell(children, o = {}) {
 }
 const table = (widths, rows) => new Table({ width: { size: widths.reduce((a, b) => a + b, 0), type: WidthType.DXA }, columnWidths: widths, rows });
 const row = (cells, h, rule = HeightRule.ATLEAST) => new TableRow({ children: cells, height: h ? { value: h, rule } : undefined, cantSplit: true });
-const hdr = (txt, w, fill = NAVY, size = 20) => cell(p(t(txt, { bold: true, color: "FFFFFF", size }), { align: AlignmentType.CENTER, after: 0 }), { w, fill });
+const hdr = (txt, w, fill = NAVY, size = 20) => cell(p(t(txt, { bold: true, color: NAVY, size }), { align: AlignmentType.CENTER, after: 0 }), { w, fill });
 const tc = (txt, w, o = {}) => cell(p(Array.isArray(txt) ? txt : t(txt, { size: o.size || 21, bold: o.bold, color: o.color, font: o.font, italics: o.it }), { after: 0, align: o.align }), { w, fill: o.fill });
 
 // simple grid table: header + rows of strings/runs
@@ -160,7 +160,7 @@ const rich = (txt, base) => txt.split(/(\{[rybg]:[^}]*\})/).filter(Boolean).map(
 const de = (word, gram) => cell([p(rich(word, { bold: true, size: f + 1, color: NAVY }), { after: 0 }), ...(gram ? [p(t(gram, { size: f - 3, color: MUTED }), { after: 0 })] : [])], { w: DW, borders: bd, m: 25, ml: 80 });
 const pl = (txt) => cell(p(txt.split("**").map((x, i) => t(x, { size: f, bold: i % 2 === 1 })), { after: 0 }), { w: PLW, borders: bd, m: 25, ml: 80, fill: "FBFCFF" });
 const bsp = (txt) => cell(p(rich(txt, { size: f - 1, color: "33405F" }), { after: 0 }), { w: BW2, borders: bd, m: 25, ml: 80 });
-const sec = (a, b, col) => row([cell(p([t(a, { bold: true, size: f + 2, color: "FFFFFF", font: "Cambria" }), t("   " + b, { size: f, color: "FFFFFF", italics: true })], { after: 0 }), { w: PWD, fill: col, borders: bd, m: 40, ml: 80, span: 3 })]);
+const sec = (a, b, col) => row([cell(p([t(a, { bold: true, size: f + 2, color: col, font: "Cambria" }), t("   " + b, { size: f, color: col, italics: true })], { after: 0 }), { w: PWD, borders: allBorders(solid(col, 10)), m: 40, ml: 80, span: 3 })]); // ohne Farbfläche (Tinte sparen)
 const r = (w, g, x, b = "") => row([de(w, g), pl(x), bsp(b)], 0);
 const head = () => row([hdr("Deutsch", DW), hdr("Polski", PLW), hdr("Beispiel", BW2)]);
 
@@ -265,8 +265,11 @@ const rows = [
   r("mit / ohne Erzähler", "", "**z narratorem** (epika) · **bez narratora** (dramat)", "Str. 7: nur Schaya spricht"),
   r("die Spannung · der Konflikt", "", "**napięcie** · **konflikt**", "Paddy gegen den Schotten"),
   r("die Zwischenüberschrift · gliedern", "", "**śródtytuł** · **podzielić tekst na części**", "Str. 10: Flucht"),
-  sec("6  Meine neuen Wörter", "moje nowe słowa – dopisuj sama", MUTED),
-  ...Array.from({ length: 4 }, () => row([cell(p(t("")), { w: DW, borders: bd }), cell(p(t("")), { w: PLW, borders: bd, fill: "FBFCFF" }), cell(p(t("")), { w: BW2, borders: bd })], 520)),
+  sec("6  Sachtexte", "teksty informacyjne", NAVY),
+  r("der Sachtext", "die Sachtexte", "**tekst informacyjny**", "Ein Sachtext informiert."),
+  r("die Teilüberschrift · der Absatz", "die Teilüberschriften · die Absätze", "**śródtytuł** · **akapit**", "„Bedeutung der Zeichen“"),
+  r("die Zeile (Z.) · die Fußnote", "die Zeilen · die Fußnoten", "**linijka** · **przypis**", "Z. 20–22"),
+  r("sachlich · die Meinung", "die Meinungen", "**rzeczowy** · **opinia**", "keine Meinung, kein „ich“"),
 ];
 
 const doc = [
