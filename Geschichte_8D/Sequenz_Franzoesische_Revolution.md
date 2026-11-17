@@ -25,8 +25,8 @@ Status: geplant · gelaufen · Rückmeldung (R) im Reflexionslog.
 |---|---|---|---|---|---|---|
 | 1 | 04.11. | 16.10. | Generalstände: Weg zu 1789, Abstimmung nach Ständen | Ursachen; Rekonstruktion | gelaufen (R: UG-lastig, Schulbeispiel zu abstrakt, Text gut) | gelaufen, sehr gut; Abstimmung (Ständespiel) nicht geschafft, wird in Stunde 2 aufgegriffen (R: `Geschichte_8D/Reflexion.md`) |
 | 2 | 11.11. | 06.11. | Dritter Stand handelt: Nationalversammlung, Ballhausschwur; Karikatur analysieren (8D: Kurzstunde, ohne Karikatur) | Epochenjahr 1789; **Karikatur** (8C) | gelaufen („mäßig“, zu viele Methoden) | geplant als Kurzstunde, 25 Min. (`Geschichte_8D/Stunde2_Nationalversammlung/`) |
-| 3 | 18.11. | 13.11. | Wege des Widerstands: Ballhausschwur und Bastille (Partnerpuzzle, Urteil) | Zusammenhänge rekonstruieren; **Urteil mit Maßstab** | Menschenrechte von der Kollegin behandelt (Details offen) | geplant (`Geschichte_8D/Stunde3_Widerstand/`) |
-| 4 | 25.11. | 13.11. (gehalten) | Ende der Vorrechte (4. August) und Menschenrechte (26. August; Artikel 2 Widerstand); Hospitation; Schwerpunkt Quelle auswerten (Kompetenz) | Menschenrechtserklärung | Material fertig (8D); 8C hat die Menschenrechte am 13.11. gehabt (Epochenjahr 1789 wiederholt, Arbeitsblatt zu Artikel 1, 2, 3, 4, 6, 10, 11) | offen |
+| 3 | 18.11. | 20.11. (nach Stunde 4) | Wege des Widerstands: Ballhausschwur und Bastille (Partnerpuzzle, Urteil) | Zusammenhänge rekonstruieren; **Urteil mit Maßstab** | Menschenrechte von der Kollegin behandelt (Details offen) | geplant (`Geschichte_8D/Stunde3_Widerstand/`) |
+| 4 | 25.11. | 13.11. (gehalten, vor Stunde 3) | Ende der Vorrechte (4. August) und Menschenrechte (26. August; Artikel 2 Widerstand); Hospitation; Schwerpunkt Quelle auswerten (Kompetenz) | Menschenrechtserklärung | Material fertig (8D); 8C hat die Menschenrechte am 13.11. gehabt (Epochenjahr 1789 wiederholt, Arbeitsblatt zu Artikel 1, 2, 3, 4, 6, 10, 11) | offen |
 | 5 | 02.12. | 27.11. | Verfassung 1791: konstitutionelle Monarchie | **Verfassungsschaubild** | offen | offen |
 | 6 | 09.12. | 04.12. | **Test 1** (Stunden 1 bis 5) | | offen | offen |
 | 7 | 16.12. | 11.12. | Vom König zur Republik: Flucht, Krieg, Hinrichtung | Zusammenhänge rekonstruieren | offen | offen |
@@ -127,3 +127,5 @@ Stand 27.10. Offene Abschlussfrage mit mehreren guten Antworten, bevorzugt im Be
 ## Vorwissen-Formate (Orientierung, kein festes Muster)
 
 Stand 27.10. Die Wiederholung am Stundenbeginn nutzt abwechselnd Fehlertext, Falschbehauptungen (schriftlich begründen) oder ein Bild. Nur Wissen verwenden, das die Klasse schon hat. Beispiele: Stunde 1 (8D) Buchstabenrätsel (Suchsel) zu Absolutismus und Ständen (so geplant, die zehn Lösungswörter bleiben als Begriffsspeicher und werden in Stunde 2 und vor Test 1 wiederholt, z. B. als „Antwort gegeben – Frage gesucht“), Stunde 2 Fehlertext zur Stunde 1 (Ständeabstimmung), Stunde 4 Schaubild mit Fehlern, Stunde 7 Falschbehauptungen zum König.
+
+**Reihenfolge 8C (Stand 17.11., Lehrkraft):** 13.11. Menschenrechte (Kollegin, Epochenjahr 1789 und Arbeitsblatt), 20.11. Bastille und Ballhausschwur (Stunde-3-Material, hatten sie noch nicht), 27.11. Verfassung 1791 (Stunde 5), 04.12. Test 1. Die 8C tauscht also Stunde 3 und 4 gegenüber der 8D.
