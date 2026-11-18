@@ -157,18 +157,29 @@ const DAGEGEN = [["Ämter nur für Reiche", "Ämter bleiben beim Adel"], ["Areop
   num(s); s.addNotes("39–45 Min. Nie streichen. Zwei Schüler gezielt aufrufen (ein sicherer, ein unsicherer), Fazit vorlesen. Danach 2–3 Stichproben zu den Prüfpunkten. Dann Lösungsfolie 16.\n\nMögliche gute Fazits: „teilweise“ (Gefolgschaft gebrochen, Ämter und Reichtum blieben) – „eher ja“ (Grundlage der Adelsmacht zerstört, Weg zur Demokratie) – „eher nein“ (Adel führte weiter, Ende erst 462). Alle richtig, wenn begründet.");
 }
 
-// 16 Lösung Fazit
-{ const s = slide(); title(s, "Fazit – Beispiel", 4); tag(s, "Lösung", C.gold, C.dark);
-  txt(s, rich("**Schwerer wiegt meines Erachtens** die neue Einteilung, **weil** der Adel seine Bauern nicht mehr als Block hinter sich hatte. **Zugegebenermaßen** blieben Ämter und Reichtum beim Adel. **Insgesamt** haben die Reformen die Macht des Adels also nur teilweise beendet."),
-    { x: 0.45, y: 1.35, w: 9.1, h: 3.9, valign: "top", lineSpacingMultiple: 1.05 });
-  num(s); s.addNotes("Auch „ja“ oder „nein“ sind richtig, wenn sie begründet abwägen. Ausführliches Musterurteil: Hilfeblatt_Urteil_Loesung (Rückseite).");
+// 16–25 Musterlösung komplett: so sieht das fertige Urteil aus (Wunsch der Lehrkraft, 18.11.). Baustein a und erstes Argument von b wortgleich mit dem Blatt.
+const Dq = require("./data.js");
+const ZQ = (a, b) => "Z. " + Dq.zeileVon(a) + "–" + Dq.zeileVon(b);
+{ const s = slide(C.dark);
+  txt(s, "MUSTERLÖSUNG", { x: 0.7, y: 1.2, w: 8.6, h: 0.5, bold: true, color: C.gold, charSpacing: 3 });
+  txt(s, "So sieht das fertige Urteil aus", { x: 0.7, y: 1.8, w: 8.6, h: 1.2, fontSize: 40, bold: true, fontFace: H, color: C.white });
+  txt(s, "Sachurteil a–d · Werturteil e · fett = Satzanfänge", { x: 0.7, y: 3.3, w: 8.6, h: 0.6, color: "E8DFD0" });
+  num(s); s.addNotes("Nach dem Auswerten (oder zu Beginn der nächsten Stunde): Die Schüler vergleichen ihr Heft Baustein für Baustein mit dem Muster und ergänzen in einer anderen Farbe. Andere Positionen („eher ja“, „eher nein“) sind ebenfalls richtig, wenn sie abwägen und begründen.");
 }
-
-// 17 Lösung Werturteil
-{ const s = slide(); title(s, "Werturteil – Beispiel", 4); tag(s, "Lösung", C.gold, C.dark);
-  txt(s, rich("**Gemessen am Maßstab der** Gleichheit **halte ich** die Reformen **für** einen wichtigen, aber unvollständigen Schritt, **weil** viele Bürger mitbestimmten, die Ämter aber vom Besitz abhingen. **Ein Beispiel dafür ist**, dass ein Thete kein Amt übernehmen durfte."),
-    { x: 0.45, y: 1.35, w: 9.1, h: 3.9, valign: "top", lineSpacingMultiple: 1.05 });
-  num(s); s.addNotes("Andere Maßstäbe sind ebenso richtig: Leistung (Theten rudern die Flotte, aber kein Amt), Schutz der Schwachen (Scherbengericht schützt vor einem neuen Tyrannen), gleiche Regeln (Abstimmung für alle gleich, Ämter nicht).");
-}
+const MUSTER = [
+  ["a · Einstieg", "Sachurteil (1/8)", "**Im Folgenden soll beurteilt werden, ob** die Reformen des Kleisthenes der Vormachtstellung des Adels ein Ende gesetzt haben. **Um diese Frage zu beantworten, muss man klären, worauf die Macht des Adels beruhte:** auf den abhängigen Bauern, die ihrem Adligen geschlossen folgten, auf den Ämtern und auf dem Reichtum."],
+  ["b · dafür", "Sachurteil (2/8)", "**Für ein Ende der Vormachtstellung spricht, dass** Kleisthenes die Bürger in zehn neue Gruppen (Phylen) einteilte, die aus Stadt, Küste und Binnenland zusammengelost wurden. **Dadurch** landeten die Bauern eines Adligen in verschiedenen Gruppen, **sodass** er sie nicht mehr geschlossen für sich abstimmen lassen konnte."],
+  ["b · dafür", "Sachurteil (3/8)", "**Hinzu kommt, dass** im Rat der 500 nun Bürger aus ganz Attika gemischt saßen. **Dadurch konnte ein Adliger** dort **nicht mehr** auf einen eigenen Block zählen. **Auch die Quelle bestätigt dies:** Um 430 v. Chr. klagt ein Adliger, die „gemeinen Leute“ hätten es besser als die „Edlen“ (" + ZQ("Was die Staatsform", "die gemeinen Leute besser") + ")."],
+  ["c · dagegen", "Sachurteil (4/8)", "**Dagegen spricht jedoch, dass** Solons Vermögensklassen bestehen blieben: Archont konnte nur werden, wer zu den Reichsten gehörte. **Dadurch** blieben die wichtigsten Ämter beim Adel. **Weiterhin blieb** der Areopag, ein Rat aus ehemaligen Archonten, der die Beamten beaufsichtigte."],
+  ["c · dagegen", "Sachurteil (5/8)", "**Zwar** verlor der Adel seinen Block, **aber** er verlor kein Land und blieb reich und angesehen. Adlige führten weiter die Politik – Kleisthenes selbst war Adliger. **Auch die Quelle zeigt,** dass das Volk die militärische Führung anderen überließ (" + ZQ("Jedoch: Alle Ämter", "militärischen Führung") + ")."],
+  ["d · Fazit", "Sachurteil (6/8)", "**Schwerer wiegt meines Erachtens** die neue Einteilung der Bürger, **weil** sie die wichtigste Grundlage der Adelsmacht zerstörte: die Bauern, die geschlossen hinter ihrem Adligen standen."],
+  ["d · Fazit", "Sachurteil (7/8)", "**Zugegebenermaßen** blieben Ämter und Reichtum beim Adel, **allerdings** entschieden nun Bürger aus ganz Attika gemeinsam. **Daher komme ich zu dem Ergebnis, dass** die Reformen die Vormachtstellung des Adels nur teilweise beendet haben."],
+  ["e · Werturteil", "Werturteil (8/8)", "**Gemessen am Maßstab der** Gleichheit **halte ich** die Reformen **für** einen wichtigen, aber unvollständigen Schritt, **weil** viele Bürger nun mitbestimmten, die Ämter aber vom Besitz abhingen. **Ein Beispiel dafür ist,** dass ein Thete zwar abstimmen, aber kein Amt übernehmen durfte."],
+];
+MUSTER.forEach(([bau, t, text]) => {
+  const s = slide(); title(s, t, 4); tag(s, bau, C.gold, C.dark);
+  txt(s, rich(text), { x: 0.45, y: 1.35, w: 9.1, h: 3.95, valign: "top", lineSpacingMultiple: 1.05 });
+  num(s); s.addNotes("Musterlösung, Baustein " + bau + ". Vergleichen: Steht bei jedem Argument, was es für den Adel bedeutet (Dadurch …, sodass …, weil …)?" + (bau.startsWith("e") ? "\nAndere Maßstäbe ebenso richtig: Leistung (Theten rudern die Flotte, aber kein Amt), Schutz der Schwachen (Scherbengericht schützt vor einem neuen Tyrannen), gleiche Regeln (Abstimmung für alle gleich, Ämter nicht). Kritisch auch: Frauen, Metöken und Sklaven blieben ausgeschlossen." : ""));
+});
 
 pres.writeFile({ fileName: OUT }).then(() => console.log("done"));
