@@ -106,7 +106,7 @@ const beob = table(bW, [
 // ---------- Aufgabe 4: Gründe ----------
 const gruende = D.GRUENDE.flatMap(([k, v, anker], i) => [
   p([t((i + 1) + "  ", { bold: true, color: RED, size: 20 }), t(k, { bold: true, size: 20 })], { before: 80, after: 20, keepNext: true }),
-  feld(2, v + (anker.length ? " (vgl. " + anker.map(D.zeile).join("; ") + ")" : "")),
+  feld(3, v + (anker.length ? " (vgl. " + anker.map(D.zeile).join("; ") + ")" : "")),
 ]);
 
 // ---------- Aufgabe 5*: Stilmittel zuordnen ----------
@@ -152,7 +152,7 @@ const seite3 = [
   ...aufgabe(D.AUFGABE4),
   ...gruende,
   label("Ergebnis: Stimmt unsere Deutungshypothese?"),
-  feld(2, D.ERGEBNIS),
+  feld(3, D.ERGEBNIS),
 ];
 
 const doc = new Document({
