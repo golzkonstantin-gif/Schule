@@ -157,7 +157,34 @@ zeilen(D.TATTE.map(([k, v]) => [k, v]), "TATTE: Textsorte, Autor, Titel, Thema, 
   txt(s, D.SPIEL_REGIE, { x: 0.8, y: 1.25, w: 11.8, h: 1.2, color: MUTED, italic: true });
   txt(s, "Alle anderen achten auf:", { x: 0.8, y: 2.55, w: 11.8, h: 0.6, bold: true });
   txt(s, bullets(D.SPIEL_FRAGEN.map(([k]) => k)), { x: 0.9, y: 3.2, w: 11.6, h: 3.8 });
-  s.addNotes("Zwei Freiwillige mit der Spielvorlage. Stuhl als Schemel, „seitwärts“ vom Pult (Tor). Spieldauer ca. 2 Minuten. Danach mündlich, je Merkmal eine Stichprobe: " + D.SPIEL_FRAGEN.map(([k, v]) => k + ": " + v).join(" – ") + " Brücke: „So sieht es auf der Bildebene aus. Wofür stehen die beiden?“");
+  s.addNotes("Zwei Freiwillige mit der Spielvorlage. Stuhl als Schemel, „seitwärts“ vom Pult (Tor). Spieldauer ca. 2 Minuten. Danach mündlich, je Merkmal eine Stichprobe: " + D.SPIEL_FRAGEN.map(([k, v]) => k + ": " + v).join(" – ") + " Danach die Trainer-Szene (nächste Folien).");
+}
+
+// ===== Trainer-Beispiel: Brücke zur Sachebene, zeitlicher Vergleich =====
+{
+  const s = base("Der Spieler auf der Bank");
+  rect(s, 0.5, 1.2, 12.3, 1.9, LIGHT);
+  txt(s, [{ text: "Trainer: ", options: { bold: true, color: RED } }, { text: D.TRAINER.zitat, options: { italic: true } }], { x: 0.8, y: 1.2, w: 11.8, h: 1.9, valign: "middle" });
+  txt(s, D.TRAINER.bank, { x: 0.8, y: 3.3, w: 11.8, h: 1.2, italic: true, color: MUTED });
+  rect(s, 0.5, 4.8, 12.3, 1.6, WHITE, { line: GOLD, lw: 2.5, r: 0.04 });
+  txt(s, D.TRAINER.frage, { x: 0.8, y: 4.8, w: 11.8, h: 1.6, valign: "middle", bold: true, fontSize: 32 });
+  s.addNotes("Zwei Minuten, mündlich. Erst die Klasse antworten lassen (Leistungssportler nennen meist aktive Wege): " + D.TRAINER.reaktionen.join(" · ") + ". Dann: „Und was tut der Mann vom Lande?“ – nächste Folie.");
+}
+{
+  const s = base("Spieler und Mann vom Lande");
+  const cw = [2.7, 4.8, 4.8];
+  let y = 1.12;
+  D.TRAINER.vergleich.forEach((r, i) => {
+    const h = i === 0 ? 0.75 : 1.98;
+    let x = 0.5;
+    r.forEach((v, j) => {
+      rect(s, x, y, cw[j] - 0.08, h - 0.08, i === 0 ? NAVY : (j === 0 ? LIGHT : WHITE), { line: "D5DCEC", lw: 0.75, r: 0.04 });
+      txt(s, v, { x: x + 0.15, y, w: cw[j] - 0.35, h: h - 0.08, valign: "middle", bold: i === 0 || j === 0, color: i === 0 ? WHITE : (j === 0 ? RED : NAVY) });
+      x += cw[j];
+    });
+    y += h;
+  });
+  s.addNotes(D.TRAINER.ergebnis + " Brücke: „So sieht es auf der Bildebene aus. Wofür stehen Türhüter und Mann also?“ → Aufgabe 3.");
 }
 
 // ===== Aufgabe 3: Bild- und Sachebene =====

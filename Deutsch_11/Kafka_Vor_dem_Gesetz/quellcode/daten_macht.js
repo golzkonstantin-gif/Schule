@@ -158,6 +158,22 @@ const SPIEL_FRAGEN = [
   ["Verhalten am Ende", "Mann: erstarrt, stellt seine einzige echte Frage · Türhüter: brüllt, schließt den Eingang"],
 ];
 
+
+// ---------- Trainer-Beispiel nach dem Spiel: Brücke von der Bildebene zur Sachebene (Beispiel bewusst nicht aus dem Text) ----------
+const TRAINER = {
+  zitat: "„Wenn du meinst, dass du's besser weißt, dann lauf doch deine eigene Taktik. Aber denk dran, wer die Aufstellung macht.“",
+  bank: "Am Samstag sitzt der Spieler auf der Bank. Spiel für Spiel. Der Trainer sagt nichts.",
+  frage: "Was würdet ihr als Spieler tun?",
+  reaktionen: ["nachfragen: „Was muss ich tun, um wieder zu spielen?“", "im Training Leistung zeigen", "mit Co-Trainer oder Sportdirektor sprechen", "den Verein wechseln", "… oder sich fügen und warten"],
+  vergleich: [
+    ["", "Der Spieler", "Der Mann vom Lande"],
+    ["Was tut er?", "fragt nach, zeigt Leistung, sucht Hilfe", "wartet, bittet, besticht – fragt nicht nach"],
+    ["Wie lange?", "Wochen, vielleicht eine Saison", "sein ganzes Leben („Tage und Jahre“)"],
+    ["Danach?", "nächstes Spiel, nächste Saison – eine neue Chance", "keine: „Ich gehe jetzt und schließe ihn.“ – er kommt nicht wieder"],
+  ],
+  ergebnis: "Der Spieler hat Möglichkeiten und eine zweite Chance. Der Mann vom Lande hätte Möglichkeiten gehabt, nutzt sie aber nicht – und seine Chance kommt nie wieder. So wird aus Ohnmacht Resignation.",
+};
+
 // ---------- Zielcheck (im Heft) ----------
 const ZIELCHECK = {
   auftrag: "Der Türhüter trägt einen Pelzmantel. Erkläre in 1–2 Sätzen, wofür der Pelzmantel steht und wie er die Deutungshypothese stützt.",
@@ -170,5 +186,5 @@ ZIELCHECK.muster = "Der Pelzmantel ist ein Symbol für die Macht und den Rang de
 module.exports = Object.assign({}, B, {
   ZIEL, LEITFRAGE, MARKIERUNG, AUFGABE1, TATTE, EINLEITUNG, AUFGABE2,
   BILD_SACH, MERKSATZ, ERGEBNIS, AUFGABE3, STILMITTEL, STIL_ERGEBNIS, STIL_WIEDERHOLUNG, AUFGABE4: AUFGABE5,
-  VERLAUF, EINGEKREIST, AUSWERTUNG, AUSWERTUNG_ZUSATZ, TAFEL_SPALTEN, SPIEL, SPIEL_REGIE, SPIEL_FRAGEN, ZIELCHECK,
+  VERLAUF, EINGEKREIST, AUSWERTUNG, AUSWERTUNG_ZUSATZ, TAFEL_SPALTEN, SPIEL, SPIEL_REGIE, SPIEL_FRAGEN, TRAINER, ZIELCHECK,
 });
