@@ -78,29 +78,31 @@ const AUFGABE3 = {
   ],
 };
 
-// Aufgabe 5*: Stilmittel zuordnen (Format der Mentorin: Buchstaben eintragen) – [Stilmittel, Textstelle, Anker, richtige Deutung (Buchstabe), Macht/Ohnmacht]
-const DEUTUNGEN = {
-  A: "Das lebenslange Warten wird nüchtern und beiläufig erzählt – es wirkt ausweglos.",
-  B: "Die Macht wird immer wieder betont und wirkt unüberwindbar.",
-  C: "Der Platz unten und am Rand zeigt die Stellung des Wartenden ohne Macht.",
-  D: "Das Gespräch wird zum Verhältnis von Herr und Untertan; echtes Interesse fehlt.",
-};
+// Aufgabe 4: Stilmittel – Wirkung beschreiben und Bezug zur Deutungshypothese (Macht/Ohnmacht); Wiederholung macht die Lehrkraft vor
+// [Stilmittel, Textstelle, Anker für die Zeile, Wirkung (Lösung), Bezug zur Hypothese (Lösung)]
 const STILMITTEL = [
-  ["Wiederholung", "„Ich bin mächtig“ … „einer mächtiger als der andere“", "Merke aber: Ich bin mächtig", "B", "Macht"],
-  ["Vergleich", "„teilnahmslose Fragen, wie sie große Herren stellen“", "teilnahmslose Fragen", "D", "Macht"],
-  ["Symbol", "der Schemel „seitwärts von der Tür“", "Der Türhüter gibt ihm einen Schemel", "C", "Ohnmacht"],
-  ["Parataxe", "„Dort sitzt er Tage und Jahre. Er macht viele Versuche …“", "Dort sitzt er Tage", "A", "Ohnmacht"],
+  ["Wiederholung", "„Ich bin mächtig“ … „einer mächtiger als der andere“", "Merke aber: Ich bin mächtig", "Die Macht wird immer wieder betont und wirkt endlos gesteigert.", "Macht: Die Instanz erscheint unüberwindbar."],
+  ["Vergleich", "„teilnahmslose Fragen, wie sie große Herren stellen“", "teilnahmslose Fragen", "Der Türhüter wirkt herablassend und desinteressiert.", "Macht: Das Verhältnis ist das von Herr und Untertan."],
+  ["Symbol", "der Schemel „seitwärts von der Tür“", "Der Türhüter gibt ihm einen Schemel", "Der Mann sitzt unten und am Rand, abseits vom Eingang.", "Ohnmacht: Sein Platz zeigt seine untergeordnete Stellung."],
+  ["Metapher", "„Eintritt in das Gesetz“", "um Eintritt in das Gesetz", "Das Gesetz, etwas Abstraktes, wird zu einem Gebäude mit Toren, Sälen und Wächtern (Probe: Das Gesetz ist wie ein Gebäude).", "Macht und Ohnmacht: Das Recht ist nicht frei zugänglich, sondern bewacht – der Einzelne steht davor."],
 ];
-const STIL_ERGEBNIS = "Auch die Sprache stützt die Hypothese: Wiederholung und Vergleich zeigen die Macht des Türhüters, Symbol und Parataxe die Ohnmacht des Mannes.";
+const STIL_ERGEBNIS = "Die Stilmittel stützen die Hypothese: Wiederholung und Vergleich zeigen die Macht des Türhüters, das Symbol des Schemels die Ohnmacht des Mannes; die Metapher macht das Gesetz zu einem bewachten Ort, zu dem der Einzelne keinen Zugang hat.";
+// Wiederholung der Stilmittel (Präsentation) – Beispiele bewusst nicht aus dem Text
+const STIL_WIEDERHOLUNG = [
+  ["Vergleich", "mit „wie“", "„Sie kämpfte wie eine Löwin.“"],
+  ["Metapher", "ohne „wie“ – direkter Vergleich. Probe: Ein „wie“ lässt sich einsetzen.", "„Sie ist eine Löwin.“ → „Sie ist (wie) eine Löwin.“"],
+  ["Wiederholung", "dasselbe Wort mehrmals", "„Weiter, weiter, nicht stehen bleiben!“"],
+  ["Symbol", "ein Gegenstand steht für etwas Abstraktes", "die Uhr für Zeitdruck"],
+];
 const AUFGABE5 = {
   titel: "Aufgabe 4: Wie stützt die Sprache die Hypothese?",
   schritte: [
-    "Ordne jedem Stilmittel die passende Deutung zu (Buchstabe A–D).",
-    "Entscheide: Zeigt es Macht oder Ohnmacht?",
+    "Beschreibe die Wirkung des Stilmittels.",
+    "Stelle den Bezug zur Deutungshypothese her: Zeigt es Macht oder Ohnmacht?",
   ],
 };
 
 module.exports = Object.assign({}, B, {
   ZIEL, LEITFRAGE, MARKIERUNG, AUFGABE1, TATTE, EINLEITUNG, AUFGABE2,
-  BILD_SACH, MERKSATZ, ERGEBNIS, AUFGABE3, DEUTUNGEN, STILMITTEL, STIL_ERGEBNIS, AUFGABE4: AUFGABE5,
+  BILD_SACH, MERKSATZ, ERGEBNIS, AUFGABE3, STILMITTEL, STIL_ERGEBNIS, STIL_WIEDERHOLUNG, AUFGABE4: AUFGABE5,
 });

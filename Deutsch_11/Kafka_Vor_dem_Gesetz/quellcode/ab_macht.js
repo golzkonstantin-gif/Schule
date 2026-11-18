@@ -104,17 +104,15 @@ const bildSach = table(bsW, [
 ]);
 const merksatz = table([W], [row([cell(D.MERKSATZ.map(([k, v]) => p([t(k + ": ", { bold: true, color: RED, size: 19 }), t(v, { size: 19 })], { after: 10 })), { w: W, fill: LIGHT2, borders: all(none), m: 80, ml: 160 })])]);
 
-// ---------- Aufgabe 4: Stilmittel zuordnen ----------
-const sW = [3500, 1000, W - 3500 - 1000 - 1500, 1500];
-const buchst = Object.keys(D.DEUTUNGEN);
+// ---------- Aufgabe 4: Stilmittel – Wirkung und Bezug zur Hypothese ----------
+const sW = [3300, (W - 3300) / 2, (W - 3300) / 2];
 const stil = table(sW, [
-  row([kopf("Stilmittel und Textstelle", sW[0]), kopf("Buchstabe", sW[1]), kopf("Deutung", sW[2]), kopf("Macht oder Ohnmacht?", sW[3])]),
-  ...D.STILMITTEL.map(([sm, stelle, anker, lsg, mo], i) => row([
+  row([kopf("Stilmittel und Textstelle", sW[0]), kopf("Wirkung", sW[1]), kopf("Bezug zur Hypothese: Macht oder Ohnmacht?", sW[2])]),
+  ...D.STILMITTEL.map(([sm, stelle, anker, wirkung, bezug], i) => row([
     cell([p(t((i + 1) + ". " + sm, { bold: true, color: RED, size: 19 }), { after: 10 }), p([t(stelle, { size: 18, italics: true }), t("  (vgl. " + D.zeile(anker) + ")", { size: 17, color: MUTED })], { after: 0 })], { w: sW[0], fill: LIGHT }),
-    cell(p(LOES ? g(lsg, { bold: true, size: 24 }) : t(""), { after: 0, align: AlignmentType.CENTER }), { w: sW[1], valign: VerticalAlign.CENTER }),
-    cell(p([t(buchst[i] + "  ", { bold: true, color: NAVY, size: 19 }), t(D.DEUTUNGEN[buchst[i]], { size: 18 })], { after: 0 }), { w: sW[2] }),
-    cell(p(LOES ? g(mo, { bold: true, size: 19 }) : t(""), { after: 0, align: AlignmentType.CENTER }), { w: sW[3], valign: VerticalAlign.CENTER }),
-  ], 900)),
+    cell(p(LOES ? g(wirkung, { size: 18 }) : t(""), { after: 0 }), { w: sW[1] }),
+    cell(p(LOES ? g(bezug, { size: 18 }) : t(""), { after: 0 }), { w: sW[2] }),
+  ], 1500)),
 ]);
 
 const header = new Header({ children: [new Paragraph({ tabStops: [{ type: TabStopType.RIGHT, position: W }], children: [t("Deutsch · Klasse 11 · Kafka, „Vor dem Gesetz“", { size: 17, color: MUTED }), LOES ? t("\tLÖSUNG (für die Lehrkraft)", { size: 17, bold: true, color: GREEN }) : t("\tName: ______________________   Datum: ___________", { size: 17, color: MUTED })] })] });
@@ -149,7 +147,8 @@ const seite3 = [
   p(t(""), { pb: true, after: 0 }),
   ...aufgabe(D.AUFGABE4),
   stil,
-  ...(LOES ? [p(g(D.STIL_ERGEBNIS, { size: 19 }), { before: 80 })] : []),
+  label("Ergebnis: Wie stützen die Stilmittel die Hypothese?"),
+  feld(3, D.STIL_ERGEBNIS),
 ];
 
 const doc = new Document({
