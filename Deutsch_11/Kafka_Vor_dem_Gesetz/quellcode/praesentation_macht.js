@@ -157,44 +157,7 @@ zeilen(D.TATTE.map(([k, v]) => [k, v]), "TATTE: Textsorte, Autor, Titel, Thema, 
   txt(s, D.SPIEL_REGIE, { x: 0.8, y: 1.25, w: 11.8, h: 1.2, color: MUTED, italic: true });
   txt(s, "Alle anderen achten auf:", { x: 0.8, y: 2.55, w: 11.8, h: 0.6, bold: true });
   txt(s, bullets(D.SPIEL_FRAGEN.map(([k]) => k)), { x: 0.9, y: 3.2, w: 11.6, h: 3.8 });
-  s.addNotes("Zwei Freiwillige mit der Spielvorlage. Stuhl als Schemel, „seitwärts“ vom Pult (Tor). Spieldauer ca. 2 Minuten. Danach mündlich, je Merkmal eine Stichprobe: " + D.SPIEL_FRAGEN.map(([k, v]) => k + ": " + v).join(" – ") + " Danach die Fußball-Szene (nächste Folien).");
-}
-
-// ===== Fußball-Szene: Der Vierte Offizielle an der Wechselzone (ein Spiel als Zeitrahmen) =====
-[[0, 4], [4, 7]].forEach(([a, b], k) => {
-  const s = base("An der Wechselzone" + (k ? " (2)" : " (1)"));
-  let y = 1.15;
-  D.FUSSBALL.szene.slice(a, b).forEach(([wer, was]) => {
-    const lang = was.length > 120, h = lang ? 2.15 : (was.length > 60 ? 1.45 : 0.95);
-    if (wer) {
-      rect(s, 0.5, y, 12.3, h, LIGHT);
-      txt(s, [{ text: wer + ": ", options: { bold: true, color: RED } }, { text: was }], { x: 0.8, y, w: 11.8, h, valign: "middle" });
-    } else {
-      txt(s, was, { x: 0.8, y, w: 11.8, h, valign: "middle", italic: true, color: MUTED });
-    }
-    y += h + 0.15;
-  });
-  s.addNotes(k ? "Pause nach „Abpfiff.“ wirken lassen. Offene Variante: Folie 2 weglassen und nach der 75. Minute nur „Abpfiff.“ sagen." : "Vorlesen oder von zwei Schülern lesen lassen. Zeitrahmen: ein einziges Spiel – der Abpfiff entspricht dem Schließen des Eingangs.");
-});
-{
-  const s = base("Was fällt euch auf?");
-  D.FUSSBALL.fragen.forEach(([q], i) => {
-    const y = 1.2 + i * 1.5;
-    rect(s, 0.5, y, 12.3, 1.35, i % 2 ? WHITE : LIGHT, { line: "D5DCEC", lw: 0.75 });
-    txt(s, (i + 1) + "  " + q, { x: 0.8, y, w: 11.8, h: 1.35, valign: "middle" });
-  });
-  s.addNotes("Je 2–3 Stichproben. Erwartung: " + D.FUSSBALL.fragen.map(([q, a], i) => (i + 1) + ") " + a).join(" ") + " Ergebnis: " + D.FUSSBALL.ergebnis);
-}
-{
-  const s = base("Fußball und „Vor dem Gesetz“");
-  D.FUSSBALL.vergleich.forEach(([fb, vdg], i) => {
-    const y = 1.12 + i * 1.02;
-    rect(s, 0.5, y, 6.05, 0.94, i % 2 ? WHITE : LIGHT, { line: "D5DCEC", lw: 0.75, r: 0.04 });
-    txt(s, fb, { x: 0.7, y, w: 5.7, h: 0.94, valign: "middle" });
-    rect(s, 6.75, y, 6.05, 0.94, i % 2 ? WHITE : LIGHT2, { line: "D5DCEC", lw: 0.75, r: 0.04 });
-    txt(s, vdg, { x: 6.95, y, w: 5.7, h: 0.94, valign: "middle", italic: true });
-  });
-  s.addNotes("Erst nach dem Gespräch aufdecken. " + D.FUSSBALL.ergebnis + " Brücke: „Wofür stehen Türhüter und Mann also?“ → Aufgabe 3.");
+  s.addNotes("Zwei Freiwillige mit der Spielvorlage. Stuhl als Schemel, „seitwärts“ vom Pult (Tor). Spieldauer ca. 2 Minuten. Danach mündlich, je Merkmal eine Stichprobe: " + D.SPIEL_FRAGEN.map(([k, v]) => k + ": " + v).join(" – ") + " Danach die Fußball-Szene mündlich erzählen (Tafelskript). Brücke: „Wofür stehen Türhüter und Mann also?“");
 }
 
 // ===== Aufgabe 3: Bild- und Sachebene =====
