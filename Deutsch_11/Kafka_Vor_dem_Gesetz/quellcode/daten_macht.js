@@ -2,8 +2,8 @@
 // Aufbau wie das Klausurvorbereitungsblatt der Mentorin: Einleitung → Kommunikationssituation → Stilmittel → Schreiben
 const B = require("./daten"); // Text, Zeilen, zeile()
 
-const ZIEL = "Ich kann die Einleitung einer Parabelanalyse schreiben und erklären, warum die Kommunikation scheitert.";
-const LEITFRAGE = "Wer hat die Macht – und warum kommt der Mann nicht hinein?";
+const ZIEL = "Ich kann die Einleitung einer Parabelanalyse schreiben und Bild- und Sachebene unterscheiden.";
+const LEITFRAGE = "Wer hat die Macht – und wofür stehen die Figuren?";
 
 // Aufgabe 1: Wer sagt was – und wie? Markierungen für die Lösung: [Textstelle, T/M = was gesagt, TW/MW = wie gesagt (einkreisen)]
 const MARKIERUNG = [
@@ -57,28 +57,25 @@ const AUFGABE2 = {
   ],
 };
 
-// Aufgabe 3: Beobachtungsbogen zum Spiel (Format der Mentorin: Merkmal | Mann | Türhüter)
-const BEOBACHTUNG = [
-  ["Status / Gefühlslage", "unterlegen; hofft, wartet – am Ende resigniert und erschöpft", "überlegen, sicher, gleichgültig („teilnahmslose Fragen“)"],
-  ["Absicht im Gespräch", "will Einlass in das Gesetz; bittet und versucht zu bestechen", "verweigert den Eintritt, ohne Gründe zu nennen; hält ihn hin"],
-  ["Wie spricht er?", "bittet, fragt, verflucht, brummt – fast nur indirekt wiedergegeben", "sagt, lacht, verhört, brüllt – in wörtlicher Rede"],
-  ["Verhalten am Ende", "erstarrt; stellt erst jetzt seine einzige echte Frage", "brüllt ihn an und schließt den Eingang"],
+// Aufgabe 3: Bild- und Sachebene (Figuren haben auf der Bildebene eine Rolle und stehen auf der Sachebene für etwas)
+const BILD_SACH = [
+  ["der Türhüter", "Wächter am Tor, kontrolliert den Zugang; „nur der unterste“ einer Hierarchie", "eine übermächtige Instanz (Behörde, Staat, Vater, Gott)", "nur der unterste Türhüter"],
+  ["der Mann vom Lande", "Bittsteller, will hinein; namenlos, nur über seine Herkunft bestimmt", "der Einzelne, der Zugang sucht – jeder von uns", "kommt ein Mann vom Lande"],
+  ["das Gesetz", "Gebäude mit Sälen hinter dem Tor, angeblich „jedem und immer zugänglich“", "Recht und Gerechtigkeit – offen auch Wahrheit, Sinn, Gott", "das Gesetz soll doch jedem"],
+  ["das Tor / der Eingang", "steht offen, wird am Ende geschlossen; „nur für dich bestimmt“", "die persönliche Chance, die er nie nutzt", "Hier konnte niemand sonst"],
 ];
+const MERKSATZ = [
+  ["Bildebene", "Was ist die Figur in der Geschichte? → ihre Rolle"],
+  ["Sachebene", "Wofür steht sie? → die Übertragung"],
+  ["Symbol", "nur Gegenstände (Tor, Schemel, Pelzmantel)"],
+];
+const ERGEBNIS = "Auf der Bildebene sind die Rollen ungleich verteilt: Der Türhüter kontrolliert, der Mann bittet. Auf der Sachebene zeigt sich darin die Ohnmacht des Einzelnen gegenüber einer übermächtigen Instanz – die Deutungshypothese stimmt.";
 const AUFGABE3 = {
-  titel: "Das Gespräch im Spiel (mündlich)",
-  schritte: ["Beobachte das Spiel und fülle die Tabelle aus."],
-};
-
-// Aufgabe 4: Warum scheitert die Kommunikation?
-const GRUENDE = [
-  ["Der Türhüter widerspricht sich:", "„Es ist möglich, jetzt aber nicht“; „versuche es doch, trotz meines Verbotes … Merke aber: Ich bin mächtig“ – Hoffnung und Verbot, Einladung und Drohung zugleich.", ["Es ist möglich", "Wenn es dich so lockt"]],
-  ["Der Mann fragt nicht nach:", "Er bittet nur, fragt, ob er „später“ eintreten darf, und besticht. Die entscheidende Frage stellt er erst im Sterben.", ["ob er also später werde", "wieso kommt es, dass"]],
-  ["Grund für beides – das Machtgefälle:", "Der Mächtige muss nichts erklären, der Ohnmächtige wagt nicht zu fragen. Die Beziehung ist komplementär (asymmetrisch).", []],
-];
-const ERGEBNIS = "Die Macht zeigt sich im widersprüchlichen Sprechen des Türhüters, die Ohnmacht im Schweigen und Warten des Mannes – die Deutungshypothese stimmt.";
-const AUFGABE4 = {
-  titel: "Aufgabe 4: Warum scheitert die Kommunikation?",
-  schritte: ["Nenne drei Gründe und belege sie mit dem Text (vgl. Z. …)."],
+  titel: "Aufgabe 3: Bild- und Sachebene",
+  schritte: [
+    "Bildebene: Notiere, welche Rolle die Figur oder das Element in der Geschichte hat (mit Zeile).",
+    "Sachebene: Notiere, wofür sie oder es steht.",
+  ],
 };
 
 // Aufgabe 5*: Stilmittel zuordnen (Format der Mentorin: Buchstaben eintragen) – [Stilmittel, Textstelle, Anker, richtige Deutung (Buchstabe), Macht/Ohnmacht]
@@ -96,7 +93,7 @@ const STILMITTEL = [
 ];
 const STIL_ERGEBNIS = "Auch die Sprache stützt die Hypothese: Wiederholung und Vergleich zeigen die Macht des Türhüters, Symbol und Parataxe die Ohnmacht des Mannes.";
 const AUFGABE5 = {
-  titel: "Aufgabe 3: Wie stützt die Sprache die Hypothese?",
+  titel: "Aufgabe 4: Wie stützt die Sprache die Hypothese?",
   schritte: [
     "Ordne jedem Stilmittel die passende Deutung zu (Buchstabe A–D).",
     "Entscheide: Zeigt es Macht oder Ohnmacht?",
@@ -104,6 +101,6 @@ const AUFGABE5 = {
 };
 
 module.exports = Object.assign({}, B, {
-  ZIEL, LEITFRAGE, MARKIERUNG, AUFGABE1, TATTE, EINLEITUNG, AUFGABE2, BEOBACHTUNG, AUFGABE3,
-  GRUENDE, ERGEBNIS, AUFGABE4, DEUTUNGEN, STILMITTEL, STIL_ERGEBNIS, AUFGABE5,
+  ZIEL, LEITFRAGE, MARKIERUNG, AUFGABE1, TATTE, EINLEITUNG, AUFGABE2,
+  BILD_SACH, MERKSATZ, ERGEBNIS, AUFGABE3, DEUTUNGEN, STILMITTEL, STIL_ERGEBNIS, AUFGABE4: AUFGABE5,
 });

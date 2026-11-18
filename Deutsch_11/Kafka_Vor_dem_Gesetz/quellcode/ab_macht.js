@@ -92,24 +92,19 @@ const tatte = table(tW2, D.TATTE.map(([k, v]) => row([
 ], 430)));
 const label = (x) => p(t(x, { bold: true, size: 19, color: NAVY }), { before: 100, after: 20, keepNext: true });
 
-// ---------- Aufgabe 3: Beobachtungsbogen ----------
-const bW = [2300, (W - 2300) / 2, (W - 2300) / 2];
-const beob = table(bW, [
-  row([kopf("Merkmal", bW[0]), kopf("Der Mann vom Lande", bW[1]), kopf("Der Türhüter", bW[2])]),
-  ...D.BEOBACHTUNG.map(([m, mann, th]) => row([
-    cell(p(t(m, { bold: true, size: 19, color: NAVY }), { after: 0 }), { w: bW[0], fill: LIGHT }),
-    cell(p(LOES ? g(mann, { size: 19 }) : t(""), { after: 0 }), { w: bW[1] }),
-    cell(p(LOES ? g(th, { size: 19 }) : t(""), { after: 0 }), { w: bW[2] }),
-  ], 900)),
+// ---------- Aufgabe 3: Bild- und Sachebene ----------
+const bsW = [2300, (W - 2300) / 2, (W - 2300) / 2];
+const bildSach = table(bsW, [
+  row([kopf("", bsW[0]), kopf("Bildebene: Was ist es in der Geschichte?", bsW[1]), kopf("Sachebene: Wofür steht es?", bsW[2])]),
+  ...D.BILD_SACH.map(([el, bild, sach, anker]) => row([
+    cell(p(t(el, { bold: true, size: 20, color: RED }), { after: 0 }), { w: bsW[0], fill: LIGHT, valign: VerticalAlign.CENTER }),
+    cell(p(LOES ? [g(bild, { size: 19 }), g("  (vgl. " + D.zeile(anker) + ")", { size: 17 })] : t(""), { after: 0 }), { w: bsW[1] }),
+    cell(p(LOES ? g(sach, { size: 19 }) : t(""), { after: 0 }), { w: bsW[2] }),
+  ], 850)),
 ]);
+const merksatz = table([W], [row([cell(D.MERKSATZ.map(([k, v]) => p([t(k + ": ", { bold: true, color: RED, size: 19 }), t(v, { size: 19 })], { after: 10 })), { w: W, fill: LIGHT2, borders: all(none), m: 80, ml: 160 })])]);
 
-// ---------- Aufgabe 4: Gründe ----------
-const gruende = D.GRUENDE.flatMap(([k, v, anker], i) => [
-  p([t((i + 1) + "  ", { bold: true, color: RED, size: 20 }), t(k, { bold: true, size: 20 })], { before: 80, after: 20, keepNext: true }),
-  feld(3, v + (anker.length ? " (vgl. " + anker.map(D.zeile).join("; ") + ")" : "")),
-]);
-
-// ---------- Aufgabe 5*: Stilmittel zuordnen ----------
+// ---------- Aufgabe 4: Stilmittel zuordnen ----------
 const sW = [3500, 1000, W - 3500 - 1000 - 1500, 1500];
 const buchst = Object.keys(D.DEUTUNGEN);
 const stil = table(sW, [
@@ -142,17 +137,19 @@ const seite2 = [
   label("Deutungshypothese:"),
   ...(LOES ? [] : [p(t(D.EINLEITUNG.geruest, { size: 19, italics: true, color: BLUE }), { after: 0 })]),
   feld(3, D.EINLEITUNG.hypothese),
-  ...aufgabe(D.AUFGABE5),
-  stil,
-  ...(LOES ? [p(g(D.STIL_ERGEBNIS, { size: 19 }), { before: 80 })] : []),
+  // Das Spiel wird mündlich ausgewertet – kein Beobachtungsbogen auf dem Arbeitsblatt (Entscheidung 18.11.)
+  ...aufgabe(D.AUFGABE3),
+  merksatz,
+  p(t(""), { after: 60 }),
+  bildSach,
+  label("Ergebnis: Stimmt unsere Deutungshypothese?"),
+  feld(3, D.ERGEBNIS),
 ];
-// Das Gespräch im Spiel (Beobachtungsbogen) wird mündlich besprochen – nicht auf dem Arbeitsblatt (Entscheidung 18.11.)
 const seite3 = [
   p(t(""), { pb: true, after: 0 }),
   ...aufgabe(D.AUFGABE4),
-  ...gruende,
-  label("Ergebnis: Stimmt unsere Deutungshypothese?"),
-  feld(3, D.ERGEBNIS),
+  stil,
+  ...(LOES ? [p(g(D.STIL_ERGEBNIS, { size: 19 }), { before: 80 })] : []),
 ];
 
 const doc = new Document({
