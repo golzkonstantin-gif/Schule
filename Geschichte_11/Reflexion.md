@@ -97,6 +97,7 @@
 - Vorlage der Lehrkraft: Klausur „Peisistratos – politische Fürsorge oder gezielte Machtsicherung?“ mit M1 Athenaion politeia, Kap. 16 (Scan, ohne Schulnamen übernommen). Teil 1 der Stunde: Urteil Kleisthenes (`Folien_Urteil_Kleisthenes`).
 - Material: `Klausur_Peisistratos_Aristoteles/` – Uebungsklausur_Peisistratos (A4 doppelseitig, Zeilen 1–16 wie im Original, Tippfehler berichtigt), TATTEA_Einleitung_A5 (Tabelle ohne Hinweise + Satzanfänge zum Abhaken), 17 Folien ≥ 27 pt, Handreichung mit Lösung TATTEA, Muster-Einleitung und Stolpersteinen; Lösungsblatt TATTEA_Einleitung_Loesung_A5 im Layout des Arbeitsblatts.
 - Planungsentscheidungen: Wissens-Check TATTEA aus dem Gedächtnis zuerst (Regel vom 17.11.); Begriffe Fürsorge/Machtsicherung; Fundstellen; Warnung vor zwei Fallen (Autor umstritten, Entstehung 200 Jahre nach Peisistratos → kein Augenzeuge); Vormachen Titel und Autor; Abschluss: Fehler-Einleitung „Ich rate dir …, weil …“.
+- **Schaubild Peisistratos** (`Schaubild_Peisistratos`, PNG/PDF A4 quer, tintensparend, bewusst einfach): ① Entstehung der Herrschaft in drei Schritten (nach Solon – Bürgerkrieg – 546 Söldner/Akropolis), ② Sicherung (er gibt → Gruppen unterstützen ihn; Ämter an Anhänger, Gegner verbannt, Söldner im Hintergrund), ③ Themenfrage: Belege aus M1 für Fürsorge und Machtsicherung mit Zeilen, Merksatz „Vieles ist beides“, Hinweis zur Glaubwürdigkeit (200 Jahre später, Gewalt nicht erwähnt).
 - Rückmeldung der Lehrkraft: *(steht noch aus)*
 
 ## Hospitationsfeedback (gesammelt)
