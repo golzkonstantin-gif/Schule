@@ -65,7 +65,7 @@ const BEOBACHTUNG = [
   ["Verhalten am Ende", "erstarrt; stellt erst jetzt seine einzige echte Frage", "brüllt ihn an und schließt den Eingang"],
 ];
 const AUFGABE3 = {
-  titel: "Aufgabe 3: Das Gespräch im Spiel",
+  titel: "Das Gespräch im Spiel (mündlich)",
   schritte: ["Beobachte das Spiel und fülle die Tabelle aus."],
 };
 
@@ -96,7 +96,7 @@ const STILMITTEL = [
 ];
 const STIL_ERGEBNIS = "Auch die Sprache stützt die Hypothese: Wiederholung und Vergleich zeigen die Macht des Türhüters, Symbol und Parataxe die Ohnmacht des Mannes.";
 const AUFGABE5 = {
-  titel: "Aufgabe 5*: Wie stützt die Sprache die Hypothese?",
+  titel: "Aufgabe 3: Wie stützt die Sprache die Hypothese?",
   schritte: [
     "Ordne jedem Stilmittel die passende Deutung zu (Buchstabe A–D).",
     "Entscheide: Zeigt es Macht oder Ohnmacht?",

@@ -142,18 +142,17 @@ const seite2 = [
   label("Deutungshypothese:"),
   ...(LOES ? [] : [p(t(D.EINLEITUNG.geruest, { size: 19, italics: true, color: BLUE }), { after: 0 })]),
   feld(3, D.EINLEITUNG.hypothese),
-  ...aufgabe(D.AUFGABE3),
-  beob,
+  ...aufgabe(D.AUFGABE5),
+  stil,
+  ...(LOES ? [p(g(D.STIL_ERGEBNIS, { size: 19 }), { before: 80 })] : []),
 ];
+// Das Gespräch im Spiel (Beobachtungsbogen) wird mündlich besprochen – nicht auf dem Arbeitsblatt (Entscheidung 18.11.)
 const seite3 = [
   p(t(""), { pb: true, after: 0 }),
   ...aufgabe(D.AUFGABE4),
   ...gruende,
   label("Ergebnis: Stimmt unsere Deutungshypothese?"),
   feld(2, D.ERGEBNIS),
-  ...aufgabe(D.AUFGABE5),
-  stil,
-  ...(LOES ? [p(g(D.STIL_ERGEBNIS, { size: 19 }), { before: 80 })] : []),
 ];
 
 const doc = new Document({
