@@ -20,15 +20,13 @@ const IMG = fs.readFileSync(path.join(B, "DGS_Fingeralphabet.png"));
 const PAGEW = 16838, MARG = 400, GAP = 500;
 const CW = Math.floor((PAGEW - 2 * MARG - GAP) / 2);
 function copy() {
-  const imgH = 470, imgW = Math.round(imgH * 462 / 680); // px (≈ 12,4 cm hoch)
-  const boxes = table(Array(10).fill(Math.floor((CW - 400) / 10)), [new TableRow({ height: { value: 620, rule: HeightRule.EXACT }, children: Array(10).fill(0).map(() => cell([p(t(""))], Math.floor((CW - 400) / 10), { borders: bs({ style: BorderStyle.SINGLE, size: 6, color: GRAY }) })) })]);
+  const imgH = 520, imgW = Math.round(imgH * 462 / 680); // px (≈ 12,4 cm hoch)
   return table([CW], [new TableRow({ children: [cell([
     p(t("Das Fingeralphabet der Deutschen Gebärdensprache (DGS)", { font: "Cambria", bold: true, size: 26, color: NAVY }), { after: 30 }),
     p(t("Mit dem Fingeralphabet buchstabiert man Namen und Wörter, für die es keine eigene Gebärde gibt. Man gebärdet mit einer Hand, die Handfläche zeigt meist zum Gegenüber.", { size: 18, color: MUTED }), { after: 80 }),
     p(new ImageRun({ type: "png", data: IMG, transformation: { width: imgW, height: imgH } }), { align: AlignmentType.CENTER, after: 60 }),
     p([t("Bewegung: ", { bold: true, size: 18, color: RED }), t("Z wird in die Luft gezeichnet. Bei Ä, Ö, Ü bewegt sich die Hand kurz nach unten. SCH ist ein eigenes Zeichen.", { size: 18 })], { after: 80 }),
-    p([t("Auftrag: ", { bold: true, size: 20, color: NAVY }), t("Buchstabiere deinen Vornamen. Schreibe ihn zuerst in die Kästchen – ein Buchstabe pro Kästchen (SCH, Ä, Ö, Ü zählen als ein Zeichen).", { size: 19 })], { after: 60 }),
-    boxes,
+    p([t("Auftrag: ", { bold: true, size: 20, color: NAVY }), t("Buchstabiere deinen Vornamen mit dem Fingeralphabet.", { size: 19 })], { after: 0 }),
   ], CW, { borders: bs({ style: BorderStyle.DASHED, size: 6, color: GRAY }), m: 140, ml: 200 })] })]);
 }
 const cut = cell([p(t("✂", { color: GRAY, size: 18 }), { align: AlignmentType.CENTER })], GAP, { valign: VerticalAlign.CENTER });
@@ -90,7 +88,7 @@ beispiel("SCH – U – L – E", ["SCH", "U", "L", "E"], ["SCH", "U", "L", "E"]
 // Auftrag
 {
   const s = base("Gebärdensprache · Ü", "Ü  Buchstabiere deinen Namen", "Ansage: „Jetzt arbeitet ihr zu zweit. Erst allein üben, dann zeigt ihr euren Namen. Der Partner liest mit und schreibt den Namen auf. Stimmt er? Dann wechseln.“");
-  [["1", "Schreibe deinen Vornamen in die Kästchen auf dem Blatt."], ["2", "Suche zu jedem Buchstaben das Zeichen und übe es langsam."], ["3", "Zeige deinem Partner deinen Namen. Er liest mit und schreibt ihn auf."], ["4", "Vergleicht: Stimmt der Name? Dann wechselt."]].forEach(([n, x], i) => {
+  [["1", "Suche zu jedem Buchstaben deines Vornamens das Zeichen."], ["2", "Übe die Zeichen langsam nacheinander."], ["3", "Zeige deinem Partner deinen Namen. Er liest mit und schreibt ihn auf."], ["4", "Vergleicht: Stimmt der Name? Dann wechselt."]].forEach(([n, x], i) => {
     const y = 1.7 + i * 0.85;
     s.addShape(pres.shapes.OVAL, { x: 0.6, y, w: 0.5, h: 0.5, fill: { color: NAVY }, line: { type: "none" } });
     txt(s, n, { x: 0.6, y, w: 0.5, h: 0.5, fontSize: 16, bold: true, color: WHITE, align: "center", valign: "middle" });
