@@ -52,6 +52,7 @@ Diese Punkte ergänzen die allgemeinen Vorlieben in `CLAUDE.md`. Sie stammen aus
 
 **Material**
 - **Präsentationen: Schriftgröße 27 pt**, Überschriften größer. Lieber eine Folie mehr.
+- **Auf jeder Aufgabenfolie Aufgabe und Muster** (Stand 18.11.): oben der Auftrag, unten ein Muster (aus einem anderen Text oder als Satzgerüst, damit die Lösung nicht vorweggenommen wird).
 - Präsentationen beginnen mit **Verlauf und Lernzielen** (Ich-Sätze), beim Übergang zu einem neuen Teil den Verlauf noch einmal zeigen.
 - Drucke sparen: Arbeitsblätter enthalten möglichst nur den Text. Bei der Kafka-Appell-Stunde wurde ein Arbeitsblatt mit Aufträgen nach dem Muster der Mentorin erprobt (mit Schreiblinien, auch im Kommunikationsquadrat).
 
