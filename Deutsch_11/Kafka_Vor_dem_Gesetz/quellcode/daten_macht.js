@@ -119,6 +119,24 @@ const EINGEKREIST = {
   tuerhueter: ["sagt", "lacht und sagt", "„Merke aber“", "stellt Verhöre an, fragt ihn aus", "„teilnahmslose Fragen, wie sie große Herren stellen“", "sagt immer wieder", "brüllt ihn an"],
   mann: ["bittet", "überlegt und fragt", "denkt", "ermüdet ihn durch seine Bitten", "verflucht, „rücksichtslos und laut“", "brummt nur noch", "bittet auch die Flöhe", "winkt ihm zu"],
 };
+
+// Abgleich nach Aufgabe 1 (Präsentation, 2 Folien): das Wichtigste – wie (eingekreist) und was (markiert)
+const ABGLEICH = {
+  tuerhueter: [
+    ["sagt", "„Es ist möglich, jetzt aber nicht.“"],
+    ["lacht und sagt", "„versuche es doch, trotz meines Verbotes … Merke aber: Ich bin mächtig.“"],
+    ["verhört teilnahmslos", "fragt ihn über seine Heimat aus; kann ihn „noch nicht einlassen“"],
+    ["sagt dabei", "„Ich nehme es nur an, damit du nicht glaubst, etwas versäumt zu haben.“"],
+    ["brüllt", "„nur für dich bestimmt. Ich gehe jetzt und schließe ihn.“"],
+  ],
+  mann: [
+    ["bittet", "um Eintritt in das Gesetz"],
+    ["überlegt und fragt", "ob er später eintreten darf"],
+    ["ermüdet ihn durch seine Bitten", "eingelassen zu werden"],
+    ["verflucht, brummt", "den unglücklichen Zufall"],
+    ["sagt – das einzige Mal wörtlich", "„wieso kommt es, dass … niemand außer mir Einlass verlangt hat?“"],
+  ],
+};
 const AUSWERTUNG = [
   ["Schaut aufs Blatt: Welche Farbe überwiegt? Wer spricht mehr?", "Der Türhüter – das sieht man, ohne zu lesen."],
   ["Vergleicht die eingekreisten Wörter: Wie sprechen die beiden?", "Der Türhüter bestimmt (sagt, lacht, verhört, brüllt), der Mann bittet und klagt (bittet, fragt, verflucht, brummt)."],
@@ -201,5 +219,5 @@ ZIELCHECK.muster = "Der Pelzmantel ist ein Symbol für die Macht und den Rang de
 module.exports = Object.assign({}, B, {
   ZIEL, LEITFRAGE, MARKIERUNG, AUFGABE1, TATTE, EINLEITUNG, AUFGABE2,
   BILD_SACH, MERKSATZ, ERGEBNIS, AUFGABE3, STILMITTEL, STIL_ERGEBNIS, STIL_WIEDERHOLUNG, AUFGABE4: AUFGABE5,
-  VERLAUF, EINGEKREIST, AUSWERTUNG, AUSWERTUNG_ZUSATZ, TAFEL_SPALTEN, SPIEL, SPIEL_REGIE, SPIEL_FRAGEN, FUSSBALL, ZIELCHECK,
+  VERLAUF, EINGEKREIST, ABGLEICH, AUSWERTUNG, AUSWERTUNG_ZUSATZ, TAFEL_SPALTEN, SPIEL, SPIEL_REGIE, SPIEL_FRAGEN, FUSSBALL, ZIELCHECK,
 });

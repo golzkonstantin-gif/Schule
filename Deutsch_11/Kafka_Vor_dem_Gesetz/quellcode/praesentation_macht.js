@@ -80,16 +80,21 @@ aufgabe(D.AUFGABE1, "5 Min.", "allein, auf dem Arbeitsblatt", "Ansage: „Jetzt 
     { text: " = wie er es sagt", options: { color: MUTED } },
   ],
 });
-{
-  const s = base("Abgleich: Wie sprechen sie?");
-  [["Türhüter", D.EINGEKREIST.tuerhueter, T_FILL, RED], ["Mann vom Lande", D.EINGEKREIST.mann, M_FILL, BLUE]].forEach(([k, arr, fill, col], i) => {
-    const x = 0.5 + i * 6.25;
-    rect(s, x, 1.15, 6.05, 6.1, fill);
-    txt(s, k, { x: x + 0.25, y: 1.25, w: 5.6, h: 0.6, bold: true, color: col });
-    txt(s, arr.join("\n"), { x: x + 0.25, y: 1.9, w: 5.6, h: 5.3, paraSpaceAfter: 4 });
+[["Abgleich: Der Türhüter", D.ABGLEICH.tuerhueter, T_FILL, RED], ["Abgleich: Der Mann vom Lande", D.ABGLEICH.mann, M_FILL, BLUE]].forEach(([titel, zeilen, fill, col], k) => {
+  const s = base(titel);
+  rect(s, 0.5, 1.12, 3.7, 0.55, col, { r: 0.04 });
+  txt(s, "Wie? (eingekreist)", { x: 0.65, y: 1.12, w: 3.5, h: 0.55, bold: true, color: WHITE, valign: "middle", });
+  rect(s, 4.3, 1.12, 8.5, 0.55, col, { r: 0.04 });
+  txt(s, "Was? (markiert)", { x: 4.45, y: 1.12, w: 8.3, h: 0.55, bold: true, color: WHITE, valign: "middle" });
+  zeilen.forEach(([wie, was], i) => {
+    const y = 1.78 + i * 1.1;
+    rect(s, 0.5, y, 3.7, 1.0, WHITE, { line: col, lw: 1.5, r: 0.04 });
+    txt(s, wie, { x: 0.65, y, w: 3.45, h: 1.0, bold: true, color: col, valign: "middle" });
+    rect(s, 4.3, y, 8.5, 1.0, fill, { r: 0.04 });
+    txt(s, was, { x: 4.45, y, w: 8.2, h: 1.0, valign: "middle" });
   });
-  s.addNotes("„Vergleicht und verbessert mit Grün.“ Das sind die eingekreisten Wörter (wie). Der vollständig markierte Text steht auf dem Lösungsblatt – bei Bedarf unter die Dokumentenkamera legen.");
-}
+  s.addNotes((k ? "Der Mann bittet, fragt, klagt – und spricht fast nur in indirekter Rede; wörtlich erst ganz am Ende. " : "Der Türhüter bestimmt: Verbot, Einladung und Drohung, Verhör, Spott, Schließen – alles in wörtlicher Rede. ") + "„Vergleicht und verbessert mit Grün.“ Das Wichtigste – der vollständig markierte Text steht auf dem Lösungsblatt.");
+});
 {
   const s = base("Was fällt euch auf?");
   D.AUSWERTUNG.forEach(([q], i) => {
