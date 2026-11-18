@@ -159,19 +159,34 @@ const SPIEL_FRAGEN = [
 ];
 
 
-// ---------- Trainer-Beispiel nach dem Spiel: Brücke von der Bildebene zur Sachebene (Beispiel bewusst nicht aus dem Text) ----------
-const TRAINER = {
-  zitat: "„Wenn du meinst, dass du's besser weißt, dann lauf doch deine eigene Taktik. Aber denk dran, wer die Aufstellung macht.“",
-  bank: "Am Samstag sitzt der Spieler auf der Bank. Spiel für Spiel. Der Trainer sagt nichts.",
-  frage: "Was würdet ihr als Spieler tun?",
-  reaktionen: ["nachfragen: „Was muss ich tun, um wieder zu spielen?“", "im Training Leistung zeigen", "mit Co-Trainer oder Sportdirektor sprechen", "den Verein wechseln", "… oder sich fügen und warten"],
-  vergleich: [
-    ["", "Der Spieler", "Der Mann vom Lande"],
-    ["Was tut er?", "fragt nach, zeigt Leistung, sucht Hilfe", "wartet, bittet, besticht – fragt nicht nach"],
-    ["Wie lange?", "Wochen, vielleicht eine Saison", "sein ganzes Leben („Tage und Jahre“)"],
-    ["Danach?", "nächstes Spiel, nächste Saison – eine neue Chance", "keine: „Ich gehe jetzt und schließe ihn.“ – er kommt nicht wieder"],
+// ---------- Fußball-Szene nach dem Spiel (Impuls der Lehrkraft, nur im Tafelskript): Brücke von der Bildebene zur Sachebene ----------
+// Ein einziges Spiel als Zeitrahmen: Abpfiff = Schließen des Eingangs, die Chance kommt nicht wieder.
+const FUSSBALL = {
+  szene: [
+    ["", "Der Trainer hat dich zum Einwechseln geschickt. An der Wechselzone hält dich der Vierte Offizielle auf:"],
+    ["Vierter Offizieller", "„Jetzt nicht. Bei der nächsten Unterbrechung vielleicht.“"],
+    ["", "(Unterbrechung. Du stehst bereit.)"],
+    ["Vierter Offizieller", "„Jetzt aber nicht. Und merk dir: Ich bin nur der Vierte Offizielle. Über mir stehen die Linienrichter, darüber der Schiedsrichter, darüber der Videoassistent – einer mächtiger als der andere.“"],
+    ["", "(Du wartest. 60. Minute, 75. Minute. Du sprichst niemanden sonst an.)"],
+    ["Spieler, 89. Minute", "„Warum will eigentlich kein anderer hier rein?“"],
+    ["Vierter Offizieller", "„Diese Wechselzone war heute nur für dich offen. Abpfiff.“"],
   ],
-  ergebnis: "Der Spieler hat Möglichkeiten und eine zweite Chance. Der Mann vom Lande hätte Möglichkeiten gehabt, nutzt sie aber nicht – und seine Chance kommt nie wieder. So wird aus Ohnmacht Resignation.",
+  offen: "Offene Variante ohne Pointe: Die Szene endet nach der 75. Minute mit „Abpfiff.“ – dann entdeckt die Klasse die Parallele zum Schluss der Parabel selbst.",
+  vergleich: [
+    ["der Vierte Offizielle an der Wechselzone", "der Türhüter am Tor"],
+    ["„Jetzt nicht. … vielleicht.“", "„Es ist möglich, jetzt aber nicht.“"],
+    ["Linienrichter → Schiedsrichter → Videoassistent", "„von Saal zu Saal … einer mächtiger als der andere“"],
+    ["warten an der Seitenlinie bis zur 89. Minute", "„Tage und Jahre“ auf dem Schemel"],
+    ["die Frage erst kurz vor Schluss", "die Frage erst vor dem Tod"],
+    ["„nur für dich offen“ – Abpfiff", "„nur für dich bestimmt … Ich gehe jetzt und schließe ihn.“"],
+  ],
+  fragen: [
+    ["Was hätte der Spieler tun können?", "zum Schiedsrichter gehen, den Trainer rufen, einfach aufs Feld laufen"],
+    ["Hat er den Schiedsrichter je gesehen?", "Nein – die Macht wird nur behauptet; er lässt sich von der Drohung abhalten, nicht von der Macht selbst."],
+    ["Wie ist das beim Mann vom Lande?", "Er sieht nie mehr als den untersten Türhüter; den dritten „kann nicht einmal“ der Türhüter selbst ertragen. Er könnte es „versuchen“ – tut es aber nicht."],
+    ["Wofür stehen also Türhüter und Mann?", "→ Aufgabe 3: Sachebene"],
+  ],
+  ergebnis: "Beide werden von einer behaupteten, unsichtbaren Hierarchie abgehalten und fragen zu spät. Beim Spieler endet es mit dem Abpfiff, beim Mann mit dem Tod – die Chance kommt nicht wieder. Aus Ohnmacht wird Resignation.",
 };
 
 // ---------- Zielcheck (im Heft) ----------
@@ -186,5 +201,5 @@ ZIELCHECK.muster = "Der Pelzmantel ist ein Symbol für die Macht und den Rang de
 module.exports = Object.assign({}, B, {
   ZIEL, LEITFRAGE, MARKIERUNG, AUFGABE1, TATTE, EINLEITUNG, AUFGABE2,
   BILD_SACH, MERKSATZ, ERGEBNIS, AUFGABE3, STILMITTEL, STIL_ERGEBNIS, STIL_WIEDERHOLUNG, AUFGABE4: AUFGABE5,
-  VERLAUF, EINGEKREIST, AUSWERTUNG, AUSWERTUNG_ZUSATZ, TAFEL_SPALTEN, SPIEL, SPIEL_REGIE, SPIEL_FRAGEN, TRAINER, ZIELCHECK,
+  VERLAUF, EINGEKREIST, AUSWERTUNG, AUSWERTUNG_ZUSATZ, TAFEL_SPALTEN, SPIEL, SPIEL_REGIE, SPIEL_FRAGEN, FUSSBALL, ZIELCHECK,
 });

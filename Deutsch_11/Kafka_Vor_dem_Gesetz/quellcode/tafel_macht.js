@@ -64,10 +64,10 @@ const ablauf = [
   ["2–7'", "Aufgabe 1: Markieren", "allein", "Folie 3 (Muster: der erste Satz des Türhüters, markiert und eingekreist): „Jetzt arbeitet ihr allein. Zwei Farben: eine für den Türhüter, eine für den Mann. Einkreisen, wie sie es sagen.“ 5 Min. Herumgehen.", "–", "Folie 3, AB S. 1"],
   ["7–11'", "Auswertung", "Unterrichtsgespräch", "Folie 4: „Vergleicht und verbessert mit Grün.“ Folie 5: drei Fragen, je 2–3 Stichproben (Farbe – Wörter – Redeform). Zwei Spalten an die Tafel, die Überschriften Macht / Ohnmacht zuletzt aus der Klasse. Folie 6 als Sicherung.", "①", "Folie 4–6"],
   ["11–20'", "Aufgabe 2: Einleitung", "gemeinsam – allein – gemeinsam", "Folie 7 (Aufgabe 2.1–2.2, Muster: TATTE und Satzgerüst): Bausteine gemeinsam (Folie 9), daraus gemeinsam den TATTE-Satz (Folie 10). Folie 8 (Aufgabe 2.3–2.4, Muster: Gerüste): Inhalt allein: „Erzählt den Ablauf anhand eurer Farben. 1–3 Sätze, ein Satz genügt.“ (Folie 11). Hypothese: „Was will der Mann? Was wird thematisiert?“ – die Antwort steht an der Tafel. Lehrkraft beginnt den Satz, Klasse vervollständigt (Folie 12).", "②", "Folie 7–12, AB S. 2"],
-  ["20–27'", "Spiel und Trainer-Szene", "zwei spielen, alle beobachten; Unterrichtsgespräch", "Folie 13: zwei Freiwillige mit der Spielvorlage; Türhüter steht, Mann sitzt seitwärts. Danach mündlich je Merkmal eine Stichprobe (Status, Absicht, Wie spricht er?, Verhalten am Ende). Folie 14: Trainer-Szene – „Was würdet ihr als Spieler tun?“ Folie 15: Vergleich Spieler / Mann (was er tut, wie lange, danach): Der Spieler bekommt eine neue Chance, der Mann kommt nicht wieder. Brücke: „Wofür stehen Türhüter und Mann also?“", "–", "Folie 13–15, Spielvorlage"],
-  ["27–33'", "Aufgabe 3: Bild- und Sachebene", "allein, dann Besprechung", "Folie 16: Merksatz (Figuren haben eine Rolle und stehen für etwas; Symbole nur Gegenstände). Folie 17 (Muster: der Schutzmann aus „Gibs auf!“): „Jetzt arbeitet ihr allein. Die Bildebene steht schon da – ihr ergänzt die Sachebene.“ 4 Min. Folie 18–19: aufdecken, mit Grün verbessern. Folie 20: Hypothese stimmt – Ergebnis notieren.", "③", "Folie 16–20, AB S. 2"],
-  ["33–41'", "Aufgabe 4: Stilmittel", "Muster gemeinsam, dann allein", "Folie 21: Wiederholung (Vergleich mit „wie“, Metapher ohne „wie“). Folie 22: Das Muster ist Zeile 1 (Wiederholung) – laut denkend vormachen, alle schreiben mit; Zeilen 2–4 allein, 4 Min. Folie 23–24: Lösung, Folie 25: Ergebnis notieren.", "④", "Folie 21–25, AB S. 3"],
-  ["41–45'", "Zielcheck", "allein, dann Kontrolle", "Folie 26 (Muster: Satzgerüst): „Allein, im Heft. 3 Minuten.“ Folie 27: Musterlösung, mit Grün kontrollieren. Rückblick auf das Ziel. Nie streichen.", "–", "Folie 26–27"],
+  ["20–27'", "Spiel und Fußball-Szene", "zwei spielen, alle beobachten; Unterrichtsgespräch", "Folie 13: zwei Freiwillige mit der Spielvorlage; Türhüter steht, Mann sitzt seitwärts. Danach mündlich je Merkmal eine Stichprobe (Status, Absicht, Wie spricht er?, Verhalten am Ende). Dann die Fußball-Szene mündlich erzählen (Wortlaut S. 4): der Vierte Offizielle an der Wechselzone, ein Spiel lang warten, Abpfiff. Fragen: Was hätte der Spieler tun können? Hat er den Schiedsrichter je gesehen? Wie ist das beim Mann? Brücke: „Wofür stehen Türhüter und Mann also?“", "–", "Folie 13, Spielvorlage, S. 4"],
+  ["27–33'", "Aufgabe 3: Bild- und Sachebene", "allein, dann Besprechung", "Folie 14: Merksatz (Figuren haben eine Rolle und stehen für etwas; Symbole nur Gegenstände). Folie 15 (Muster: der Schutzmann aus „Gibs auf!“): „Jetzt arbeitet ihr allein. Die Bildebene steht schon da – ihr ergänzt die Sachebene.“ 4 Min. Folie 16–17: aufdecken, mit Grün verbessern. Folie 18: Hypothese stimmt – Ergebnis notieren.", "③", "Folie 14–18, AB S. 2"],
+  ["33–41'", "Aufgabe 4: Stilmittel", "Muster gemeinsam, dann allein", "Folie 19: Wiederholung (Vergleich mit „wie“, Metapher ohne „wie“). Folie 20: Das Muster ist Zeile 1 (Wiederholung) – laut denkend vormachen, alle schreiben mit; Zeilen 2–4 allein, 4 Min. Folie 21–22: Lösung, Folie 23: Ergebnis notieren.", "④", "Folie 19–23, AB S. 3"],
+  ["41–45'", "Zielcheck", "allein, dann Kontrolle", "Folie 24 (Muster: Satzgerüst): „Allein, im Heft. 3 Minuten.“ Folie 25: Musterlösung, mit Grün kontrollieren. Rückblick auf das Ziel. Nie streichen.", "–", "Folie 24–25"],
 ];
 const page2 = [
   kicker("TAFELSKRIPT · DEUTSCH 11 · „VOR DEM GESETZ“ – NEUSTART · 45 MIN. · BEAMER · PLANUNGSMODELL AVIVA", true),
@@ -91,7 +91,7 @@ const rW = [3000, W - 3000];
 const erw = [
   ["Auswertung Aufgabe 1", D.AUSWERTUNG.map(([q, a]) => q + " → " + a).join(" · ") + " Zusatz: " + D.AUSWERTUNG_ZUSATZ.join(" → ")],
   ["Spiel (mündlich)", D.SPIEL_FRAGEN.map(([k, v]) => k + ": " + v).join(" · ")],
-  ["Trainer-Szene", "Reaktionen: " + D.TRAINER.reaktionen.join(" · ") + ". Vergleich: " + D.TRAINER.vergleich.slice(1).map((r) => r[0] + " Spieler: " + r[1] + " – Mann: " + r[2]).join(" · ") + " → " + D.TRAINER.ergebnis],
+  ["Fußball-Szene", D.FUSSBALL.fragen.map(([q, a]) => q + " → " + a).join(" · ") + " Ergebnis: " + D.FUSSBALL.ergebnis],
   ["Aufgaben 2–4", "siehe Arbeitsblatt_Macht_Ohnmacht_Loesung (Einleitung, Bild- und Sachebene, Stilmittel mit Wirkung und Bezug)."],
   ["Zielcheck", D.ZIELCHECK.muster + " Kriterien: " + D.ZIELCHECK.kriterien.join(" · ") + "."],
 ];
@@ -111,9 +111,29 @@ const page3 = [
   table(rW, refl.map(([k, v]) => row([cell(p(t(k, { bold: true, color: NAVY, size: 18 }), { after: 0 }), { w: rW[0], fill: LIGHT }), cell(p(t(v, { size: 18 }), { after: 0, line: 260 }), { w: rW[1] })]))),
   p(t("Text aus dem Gedächtnis wiedergegeben (heutige Rechtschreibung) – vor dem Druck mit einer Ausgabe abgleichen.", { size: 16, italics: true, color: MUTED }), { before: 80 }),
 ];
+
+// ===== Seite 4: Fußball-Szene (Impuls der Lehrkraft nach dem Spiel) =====
+const fW = [2600, W - 2600];
+const vW = [W / 2, W / 2];
+const page4 = [
+  kicker("TAFELSKRIPT · IMPULS NACH DEM SPIEL", true),
+  h1("Fußball-Szene: Der Vierte Offizielle an der Wechselzone"),
+  p(t("Mündlich erzählen (ca. 3 Min.). Zeitrahmen: ein einziges Spiel – der Abpfiff entspricht dem Schließen des Eingangs, die Chance kommt nicht wieder.", { size: 18, italics: true, color: MUTED }), { after: 60 }),
+  table(fW, D.FUSSBALL.szene.map(([wer, was]) => row([
+    cell(p(t(wer, { bold: true, size: 18, color: NAVY }), { after: 0 }), { w: fW[0], fill: LIGHT }),
+    cell(p(t(was, { size: 19, italics: !wer }), { after: 0 }), { w: fW[1] }),
+  ]))),
+  p(t(D.FUSSBALL.offen, { size: 17, italics: true, color: MUTED }), { before: 60, after: 60 }),
+  h2("Was sich entspricht"),
+  table(vW, [row([hdr("Fußball", vW[0]), hdr("„Vor dem Gesetz“", vW[1])]), ...D.FUSSBALL.vergleich.map(([a, b]) => row([cell(p(t(a, { size: 18 }), { after: 0 }), { w: vW[0] }), cell(p(t(b, { size: 18 }), { after: 0 }), { w: vW[1] })]))]),
+  h2("Fragen an die Klasse"),
+  table(fW, D.FUSSBALL.fragen.map(([q, a]) => row([cell(p(t(q, { bold: true, size: 18, color: NAVY }), { after: 0 }), { w: fW[0], fill: LIGHT }), cell(p(t(a, { size: 18 }), { after: 0 }), { w: fW[1] })]))),
+  p([t("Ergebnis: ", { bold: true, size: 18 }), t(D.FUSSBALL.ergebnis, { size: 18 })], { before: 80 }),
+];
+
 const footer = new Footer({ children: [new Paragraph({ alignment: AlignmentType.RIGHT, children: [new TextRun({ font: "Calibri", size: 16, color: MUTED, children: ["Tafelskript · Kafka, „Vor dem Gesetz“ – Macht und Ohnmacht · Seite ", PageNumber.CURRENT] })] })] });
 const doc = new Document({
   styles: { default: { document: { run: { font: "Calibri", size: 19 } } } },
-  sections: [{ properties: { page: { size: { width: 11906, height: 16838, orientation: PageOrientation.LANDSCAPE }, margin: { top: 600, bottom: 500, left: 750, right: 750, footer: 300 } } }, footers: { default: footer }, children: [...page1, ...page2, ...page3] }],
+  sections: [{ properties: { page: { size: { width: 11906, height: 16838, orientation: PageOrientation.LANDSCAPE }, margin: { top: 600, bottom: 500, left: 750, right: 750, footer: 300 } } }, footers: { default: footer }, children: [...page1, ...page2, ...page3, ...page4] }],
 });
 Packer.toBuffer(doc).then((b) => fs.writeFileSync("../Macht_Ohnmacht/Tafelskript_Macht_Ohnmacht.docx", b));
