@@ -43,7 +43,7 @@ const TATTE = [
 ];
 const EINLEITUNG = {
   satz1: "In der Parabel „Vor dem Gesetz“ von Franz Kafka, die 1915 veröffentlicht wurde, geht es um das Verhältnis zwischen dem Einzelnen und einer übermächtigen Instanz.",
-  inhalt: "Ein Mann vom Lande bittet einen Türhüter um Einlass in das Gesetz. Der Türhüter verweigert ihm den Eintritt, und der Mann wartet sein Leben lang vergeblich vor dem offenen Tor. Erst kurz vor seinem Tod erfährt er, dass der Eingang nur für ihn bestimmt war.",
+  inhalt: "Ein Mann vom Lande bittet einen Türhüter um Einlass in das Gesetz, wartet sein Leben lang vergeblich und erfährt erst im Sterben, dass der Eingang nur für ihn bestimmt war.",
   hypothese: "Es lässt sich vermuten, dass Kafka die Ohnmacht des Einzelnen gegenüber einer übermächtigen, undurchschaubaren Macht thematisiert, die ihm den Zugang zu dem verwehrt, was er sich am meisten wünscht.",
   leitfragen: "Was will der Mann? Was wird dabei thematisiert?",
   geruest: "Es lässt sich vermuten, dass …",
@@ -52,7 +52,7 @@ const AUFGABE2 = {
   titel: "Aufgabe 2: Die Einleitung",
   schritte: [
     "Ergänze die Bausteine (TATTE).",
-    "Fasse den Inhalt in 1–3 Sätzen zusammen (Präsens).",
+    "Schreibe den Inhalt in 1–3 Sätzen auf (Präsens) – auch ein einziger Satz genügt.",
     "Formuliere die Deutungshypothese: " + EINLEITUNG.leitfragen,
   ],
 };

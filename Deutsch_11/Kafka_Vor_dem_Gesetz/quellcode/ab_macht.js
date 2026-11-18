@@ -131,7 +131,7 @@ const seite2 = [
   ...aufgabe(D.AUFGABE2),
   tatte,
   label("Inhalt in 1–3 Sätzen:"),
-  feld(4, D.EINLEITUNG.inhalt),
+  feld(3, D.EINLEITUNG.inhalt),
   label("Deutungshypothese:"),
   ...(LOES ? [] : [p(t(D.EINLEITUNG.geruest, { size: 19, italics: true, color: BLUE }), { after: 0 })]),
   feld(3, D.EINLEITUNG.hypothese),
