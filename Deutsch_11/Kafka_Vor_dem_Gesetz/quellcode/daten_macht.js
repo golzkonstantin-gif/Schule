@@ -102,7 +102,72 @@ const AUFGABE5 = {
   ],
 };
 
+
+// ---------- Verlauf (45 Min.) ----------
+const VERLAUF = [
+  ["Wer sagt was – und wie? (markieren)", "Verarbeiten"],
+  ["Die Einleitung: TATTE, Inhalt, Deutungshypothese", "Verarbeiten"],
+  ["Die Szene spielen", "Verarbeiten"],
+  ["Bild- und Sachebene", "Verarbeiten"],
+  ["Stilmittel: Wie stützt die Sprache die Hypothese?", "Auswerten"],
+  ["Zielcheck", "Auswerten"],
+];
+
+// ---------- Auswertung der Markierungen ----------
+const EINGEKREIST = {
+  tuerhueter: ["sagt", "lacht und sagt", "„Merke aber“", "stellt Verhöre an, fragt ihn aus", "„teilnahmslose Fragen, wie sie große Herren stellen“", "sagt immer wieder", "brüllt ihn an"],
+  mann: ["bittet", "überlegt und fragt", "denkt", "ermüdet ihn durch seine Bitten", "verflucht, „rücksichtslos und laut“", "brummt nur noch", "bittet auch die Flöhe", "winkt ihm zu"],
+};
+const AUSWERTUNG = [
+  ["Schaut aufs Blatt: Welche Farbe überwiegt? Wer spricht mehr?", "Der Türhüter – das sieht man, ohne zu lesen."],
+  ["Vergleicht die eingekreisten Wörter: Wie sprechen die beiden?", "Der Türhüter bestimmt (sagt, lacht, verhört, brüllt), der Mann bittet und klagt (bittet, fragt, verflucht, brummt)."],
+  ["In welcher Form wird ihre Rede wiedergegeben?", "Der Türhüter spricht in wörtlicher Rede, der Mann fast nur indirekt („fragt, ob er … werde eintreten dürfen“) – wörtlich erst kurz vor dem Tod."],
+];
+const AUSWERTUNG_ZUSATZ = ["Wie verändert sich der Mann?", "Er verflucht erst „laut“, dann „brummt“ er nur noch, am Ende „winkt“ er nur – der Verfall der Ohnmacht."];
+const TAFEL_SPALTEN = [
+  ["Türhüter", "sagt, lacht, „Merke aber“, verhört, brüllt", "wörtliche Rede", "Macht"],
+  ["Mann vom Lande", "bittet, fragt, verflucht, brummt, winkt", "meist indirekte Rede", "Ohnmacht"],
+];
+
+// ---------- Spiel: Spielvorlage (nur die Sätze der Figuren; umgeformt = aus indirekter Rede) und mündliche Auswertung ----------
+// [Figur, Regieanweisung, Satz, umgeformt?]
+const SPIEL = [
+  ["Mann", "steht vor dem Tor, bittet", "Lass mich bitte in das Gesetz eintreten.", true],
+  ["Türhüter", "", "Jetzt kann ich dir den Eintritt nicht gewähren.", true],
+  ["Mann", "überlegt", "Darf ich also später eintreten?", true],
+  ["Türhüter", "", "Es ist möglich, jetzt aber nicht.", false],
+  ["Mann", "bückt sich, um durch das Tor zu sehen", "", false],
+  ["Türhüter", "lacht", "Wenn es dich so lockt, versuche es doch, trotz meines Verbotes hineinzugehn. Merke aber: Ich bin mächtig. Und ich bin nur der unterste Türhüter. Von Saal zu Saal stehn aber Türhüter, einer mächtiger als der andere. Schon den Anblick des dritten kann nicht einmal ich mehr ertragen.", false],
+  ["Türhüter", "gibt ihm einen Schemel; der Mann setzt sich seitwärts", "", false],
+  ["Mann", "bittet immer wieder", "Bitte, lass mich doch hinein.", true],
+  ["Türhüter", "teilnahmslos, fragt ihn aus", "Woher kommst du? … Ich kann dich noch nicht einlassen.", true],
+  ["Mann", "gibt ihm Geschenke", "", false],
+  ["Türhüter", "nimmt alles an", "Ich nehme es nur an, damit du nicht glaubst, etwas versäumt zu haben.", false],
+  ["Mann", "verflucht laut den Zufall, später brummt er nur noch vor sich hin", "", false],
+  ["Mann", "wird schwach, winkt den Türhüter heran; der Türhüter beugt sich tief hinunter", "", false],
+  ["Türhüter", "", "Was willst du denn jetzt noch wissen? Du bist unersättlich.", false],
+  ["Mann", "", "Alle streben doch nach dem Gesetz. Wieso kommt es, dass in den vielen Jahren niemand außer mir Einlass verlangt hat?", false],
+  ["Türhüter", "brüllt", "Hier konnte niemand sonst Einlass erhalten, denn dieser Eingang war nur für dich bestimmt. Ich gehe jetzt und schließe ihn.", false],
+];
+const SPIEL_REGIE = "Der Türhüter steht und spricht laut. Der Mann sitzt auf einem Stuhl (Schemel) und spricht leise.";
+const SPIEL_FRAGEN = [
+  ["Status / Gefühlslage", "Mann: unterlegen, hoffend, am Ende resigniert · Türhüter: überlegen, sicher, gleichgültig"],
+  ["Absicht im Gespräch", "Mann: will Einlass, bittet, besticht · Türhüter: verweigert, ohne Gründe zu nennen"],
+  ["Wie spricht er?", "Mann: leise, bittend, kurze Sätze · Türhüter: laut, bestimmend, lange Sätze"],
+  ["Verhalten am Ende", "Mann: erstarrt, stellt seine einzige echte Frage · Türhüter: brüllt, schließt den Eingang"],
+];
+
+// ---------- Zielcheck (im Heft) ----------
+const ZIELCHECK = {
+  auftrag: "Der Türhüter trägt einen Pelzmantel. Erkläre in 1–2 Sätzen, wofür der Pelzmantel steht und wie er die Deutungshypothese stützt.",
+  anker: "in seinem Pelzmantel genauer ansieht",
+  muster: "",
+  kriterien: ["Symbol erkannt (Gegenstand für etwas Abstraktes)", "Deutung: Zeichen von Macht und Rang", "Bezug zur Hypothese mit Beleg (vgl. Z. …)"],
+};
+ZIELCHECK.muster = "Der Pelzmantel ist ein Symbol für die Macht und den Rang des Türhüters: Als der Mann ihn „in seinem Pelzmantel genauer ansieht“, „entschließt er sich, doch lieber zu warten“ (vgl. Z. " + parseInt(B.zeile("in seinem Pelzmantel genauer ansieht").slice(3), 10) + "–" + (parseInt(B.zeile("entschließt er sich, doch lieber").slice(3), 10) + 1) + "). Die äußeren Zeichen der Macht schüchtern ihn ein – das stützt die Hypothese von der Ohnmacht des Einzelnen.";
+
 module.exports = Object.assign({}, B, {
   ZIEL, LEITFRAGE, MARKIERUNG, AUFGABE1, TATTE, EINLEITUNG, AUFGABE2,
   BILD_SACH, MERKSATZ, ERGEBNIS, AUFGABE3, STILMITTEL, STIL_ERGEBNIS, STIL_WIEDERHOLUNG, AUFGABE4: AUFGABE5,
+  VERLAUF, EINGEKREIST, AUSWERTUNG, AUSWERTUNG_ZUSATZ, TAFEL_SPALTEN, SPIEL, SPIEL_REGIE, SPIEL_FRAGEN, ZIELCHECK,
 });
