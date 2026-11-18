@@ -52,7 +52,7 @@ const AUFGABE2 = {
   titel: "Aufgabe 2: Die Einleitung",
   schritte: [
     "Ergänze die Bausteine (TATTE).",
-    "Fasse den Inhalt in drei Sätzen zusammen (Präsens).",
+    "Fasse den Inhalt in 1–3 Sätzen zusammen (Präsens).",
     "Formuliere die Deutungshypothese: " + EINLEITUNG.leitfragen,
   ],
 };

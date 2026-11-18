@@ -130,7 +130,7 @@ const seite2 = [
   h2("Arbeitsaufträge", { pb: true, before: 0 }),
   ...aufgabe(D.AUFGABE2),
   tatte,
-  label("Inhalt in drei Sätzen:"),
+  label("Inhalt in 1–3 Sätzen:"),
   feld(4, D.EINLEITUNG.inhalt),
   label("Deutungshypothese:"),
   ...(LOES ? [] : [p(t(D.EINLEITUNG.geruest, { size: 19, italics: true, color: BLUE }), { after: 0 })]),
