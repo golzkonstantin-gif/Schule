@@ -101,8 +101,15 @@ aufgabe(D.AUFGABE1, "5 Min.", "allein, auf dem Arbeitsblatt", "Ansage: „Jetzt 
 }
 
 // ===== Aufgabe 2: Einleitung =====
-aufgabe(D.AUFGABE2, "10 Min.", "TATTE gemeinsam · Inhalt allein · Hypothese gemeinsam", "Schritt für Schritt: 1. TATTE gemeinsam (3 Min.). 2. Inhalt allein (3 Min.): „Erzählt den Ablauf anhand eurer Farben.“ 1–3 Sätze, ein Satz genügt; dann 2 Stichproben. 3. Deutungshypothese gemeinsam: Die Antwort auf „Was wird thematisiert?“ steht schon an der Tafel (Macht/Ohnmacht). Lehrkraft beginnt den Satz, die Klasse vervollständigt.");
+aufgabe(D.AUFGABE2, "10 Min.", "TATTE gemeinsam · Inhalt allein · Hypothese gemeinsam", "Schritt für Schritt: 1. TATTE-Bausteine gemeinsam (2 Min.). 2. TATTE-Satz gemeinsam (2 Min.). 3. Inhalt allein (3 Min.): „Erzählt den Ablauf anhand eurer Farben.“ 1–3 Sätze, ein Satz genügt; dann 2 Stichproben. 4. Deutungshypothese gemeinsam: Die Antwort auf „Was wird thematisiert?“ steht schon an der Tafel (Macht/Ohnmacht). Lehrkraft beginnt den Satz, die Klasse vervollständigt.");
 zeilen(D.TATTE.map(([k, v]) => [k, v]), "TATTE: Textsorte, Autor, Titel, Thema, Erscheinungsjahr. Das Thema bewusst allgemein – Macht und Ohnmacht kommen erst in die Hypothese.", "Einleitung: TATTE", { kw: 3.6 });
+{
+  const s = base("Einleitung: TATTE-Satz");
+  txt(s, [{ text: "Gerüst: ", options: { bold: true, color: BLUE } }, { text: "In der Parabel „…“ von …, die … veröffentlicht wurde, geht es um …", options: { italic: true } }], { x: 0.8, y: 1.3, w: 11.8, h: 1.3 });
+  rect(s, 0.5, 2.9, 12.3, 3.2, LIGHT);
+  txt(s, D.EINLEITUNG.satz1, { x: 0.8, y: 2.9, w: 11.8, h: 3.2, valign: "middle", fontFace: HEAD });
+  s.addNotes("Aus den Bausteinen gemeinsam einen Satz bauen: Lehrkraft beginnt („In der Parabel …“), die Klasse ergänzt Autor, Jahr und Thema. Lösung erst danach aufdecken. Entstanden 1914, veröffentlicht 1915 – „veröffentlicht“ ist eindeutig.");
+}
 {
   const s = base("Einleitung: Inhalt");
   rect(s, 0.5, 1.4, 12.3, 3.0, LIGHT);

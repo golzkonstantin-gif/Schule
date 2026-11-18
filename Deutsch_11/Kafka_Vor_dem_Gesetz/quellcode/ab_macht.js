@@ -33,7 +33,7 @@ const aufgabe = (a) => [
   p(t(a.titel, { bold: true, color: NAVY, size: 22 }), { before: 160, after: 40, keepNext: true }),
   ...a.schritte.map((x, i) => p([t((i + 1) + ".  ", { bold: true, color: NAVY, size: 20 }), t(x, { size: 20 })], { after: 30, keepNext: true })),
 ];
-const linien = (n, w = W, h = 400) => table([w], Array.from({ length: n }, () => row([cell(p(t(""), { after: 0 }), { w, borders: { top: none, left: none, right: none, bottom: solid("9AA6C4", 4) }, m: 0, ml: 0 })], h)));
+const linien = (n, w = W, h = 370) => table([w], Array.from({ length: n }, () => row([cell(p(t(""), { after: 0 }), { w, borders: { top: none, left: none, right: none, bottom: solid("9AA6C4", 4) }, m: 0, ml: 0 })], h)));
 // Schreibfeld: leer = Linien, Lösung = grüner Text über einer Linie
 const feld = (n, text, w = W) => LOES
   ? table([w], [row([cell(p(g(text), { after: 0, line: 300 }), { w, borders: { top: none, left: none, right: none, bottom: solid("9AA6C4", 4) }, m: 40, ml: 0 })], n * 400)])
@@ -89,7 +89,7 @@ const tW2 = [2400, W - 2400];
 const tatte = table(tW2, D.TATTE.map(([k, v]) => row([
   cell(p([t(k[0], { bold: true, color: RED, size: 20 }), t(k.slice(1), { bold: true, color: NAVY, size: 20 })], { after: 0 }), { w: tW2[0], fill: LIGHT, valign: VerticalAlign.CENTER }),
   cell(p(LOES ? g(v) : t(""), { after: 0 }), { w: tW2[1], valign: VerticalAlign.CENTER }),
-], 430)));
+], 380)));
 const label = (x) => p(t(x, { bold: true, size: 19, color: NAVY }), { before: 100, after: 20, keepNext: true });
 
 // ---------- Aufgabe 3: Bild- und Sachebene ----------
@@ -100,7 +100,7 @@ const bildSach = table(bsW, [
     cell(p(t(el, { bold: true, size: 20, color: RED }), { after: 0 }), { w: bsW[0], fill: LIGHT, valign: VerticalAlign.CENTER }),
     cell(p(LOES ? [g(bild, { size: 19 }), g("  (vgl. " + D.zeile(anker) + ")", { size: 17 })] : t(""), { after: 0 }), { w: bsW[1] }),
     cell(p(LOES ? g(sach, { size: 19 }) : t(""), { after: 0 }), { w: bsW[2] }),
-  ], 850)),
+  ], 720)),
 ]);
 const merksatz = table([W], [row([cell(D.MERKSATZ.map(([k, v]) => p([t(k + ": ", { bold: true, color: RED, size: 19 }), t(v, { size: 19 })], { after: 10 })), { w: W, fill: LIGHT2, borders: all(none), m: 80, ml: 160 })])]);
 
@@ -130,6 +130,9 @@ const seite2 = [
   h2("Arbeitsaufträge", { pb: true, before: 0 }),
   ...aufgabe(D.AUFGABE2),
   tatte,
+  label("TATTE-Satz:"),
+  ...(LOES ? [] : [p(t("In der Parabel „…“ von …, die … veröffentlicht wurde, geht es um …", { size: 19, italics: true, color: BLUE }), { after: 0 })]),
+  feld(2, D.EINLEITUNG.satz1),
   label("Inhalt in 1–3 Sätzen:"),
   feld(3, D.EINLEITUNG.inhalt),
   label("Deutungshypothese:"),
