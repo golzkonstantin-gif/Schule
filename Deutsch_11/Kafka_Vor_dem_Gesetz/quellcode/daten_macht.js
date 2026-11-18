@@ -74,8 +74,8 @@ const ERGEBNIS = "Auf der Bildebene sind die Rollen ungleich verteilt: Der Türh
 const AUFGABE3 = {
   titel: "Aufgabe 3: Bild- und Sachebene",
   schritte: [
-    "Bildebene: Notiere, welche Rolle die Figur oder das Element in der Geschichte hat (mit Zeile).",
-    "Sachebene: Notiere, wofür sie oder es steht.",
+    "Lies die Bildebene: Welche Rolle hat die Figur oder das Element in der Geschichte?",
+    "Ergänze die Sachebene: Wofür steht sie oder es?",
   ],
 };
 

@@ -144,7 +144,7 @@ zeilen(D.TATTE.map(([k, v]) => [k, v]), "TATTE: Textsorte, Autor, Titel, Thema, 
   });
   s.addNotes("Figuren sind keine Symbole: Auf der Bildebene haben sie eine Rolle (Wächter, Bittsteller), auf der Sachebene stehen sie für etwas. Beide sind namenlos – nur über Funktion und Herkunft bestimmt: typisierte Stellvertreter. Symbole sind nur Gegenstände.");
 }
-aufgabe(D.AUFGABE3, "5 Min.", "allein, auf dem Arbeitsblatt", "Ansage: „Jetzt arbeitet ihr allein. Die Verben an der Tafel helfen euch bei der Bildebene: Wer verhört und brüllt, ist …?“ 5 Minuten.");
+aufgabe(D.AUFGABE3, "4 Min.", "allein, auf dem Arbeitsblatt", "Ansage: „Jetzt arbeitet ihr allein. Die Bildebene steht schon da – ihr ergänzt die Sachebene: Wofür steht es?“ 4 Minuten. Hilfe: auf die Tafel zeigen (Macht/Ohnmacht).");
 [[0, 2], [2, 4]].forEach(([a, b], k) => {
   const s = base("Lösung: Bild- und Sachebene (" + (k + 1) + ")");
   D.BILD_SACH.slice(a, b).forEach(([el, bild, sach, anker], j) => {

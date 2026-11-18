@@ -98,7 +98,7 @@ const bildSach = table(bsW, [
   row([kopf("", bsW[0]), kopf("Bildebene: Was ist es in der Geschichte?", bsW[1]), kopf("Sachebene: Wofür steht es?", bsW[2])]),
   ...D.BILD_SACH.map(([el, bild, sach, anker]) => row([
     cell(p(t(el, { bold: true, size: 20, color: RED }), { after: 0 }), { w: bsW[0], fill: LIGHT, valign: VerticalAlign.CENTER }),
-    cell(p(LOES ? [g(bild, { size: 19 }), g("  (vgl. " + D.zeile(anker) + ")", { size: 17 })] : t(""), { after: 0 }), { w: bsW[1] }),
+    cell(p([t(bild, { size: 19 }), t("  (vgl. " + D.zeile(anker) + ")", { size: 17, color: MUTED })], { after: 0 }), { w: bsW[1], fill: LIGHT }),
     cell(p(LOES ? g(sach, { size: 19 }) : t(""), { after: 0 }), { w: bsW[2] }),
   ], 720)),
 ]);
