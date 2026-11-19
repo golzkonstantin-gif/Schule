@@ -21,14 +21,14 @@ const merk = (x) => p([t("Merke: ", { bold: true, color: GREEN }), t(x, { bold: 
 const inhalt = [
   p(t("Podcast-Skript", { size: 20, color: MUTED, bold: true }), { after: 0 }),
   p(t("Wie man „Vor dem Gesetz“ knackt – Kafkas Parabel in fünf Schritten", { font: "Cambria", size: 36, bold: true, color: NAVY }), { after: 80 }),
-  p(t("Deutsch · Klasse 11 · Länge ca. 13 Minuten · Grundlage zum Einsprechen, frei anpassbar · Ziel: Vorbereitung auf die 90-Minuten-Klausur mit einer unbekannten Kafka-Parabel", { size: 20, color: MUTED }), { after: 60 }),
+  p(t("Deutsch · Klasse 11 · Länge ca. 13 Minuten · Grundlage zum Einsprechen, frei anpassbar · Ziel: Vorbereitung auf die Klausur mit einer unbekannten Kafka-Parabel", { size: 20, color: MUTED }), { after: 60 }),
   p(t("Sprechhinweis: ruhig und klar, kurze Pausen bei [Pause]. Zitate langsamer und etwas betont. Zeilenangaben nach dem Arbeitsblatt „Macht und Ohnmacht“.", { size: 20, italics: true, color: MUTED }), { after: 200 }),
 
   teil("0:00", "Intro"),
   regie("kurzer Jingle"),
   sprich("Hey, willkommen! Heute knacken wir einen Text, bei dem viele erst mal denken: Hä? Was soll das? – „Vor dem Gesetz“ von Franz Kafka."),
   sprich("Die gute Nachricht: Diese Parabel ist kein Rätsel, das man nur mit Glück löst. Es gibt einen Weg, wie man sie Schritt für Schritt aufschließt. Ich erkläre ihn dir am Beispiel von „Vor dem Gesetz“."),
-  sprich("Aber Achtung: In der Klausur bekommst du nicht diesen Text, sondern eine andere Parabel von Kafka – und du hast 90 Minuten Zeit. Deshalb geht es heute nicht nur um diese eine Geschichte, sondern um das Werkzeug. Nach jedem Schritt frage ich dich deshalb: Wie würdest du das an einer anderen Parabel erkennen?"),
+  sprich("Aber Achtung: In der Klausur bekommst du nicht diesen Text, sondern eine andere Parabel von Kafka. Deshalb geht es heute nicht nur um diese eine Geschichte, sondern um das Werkzeug. Nach jedem Schritt frage ich dich deshalb: Wie würdest du das an einer anderen Parabel erkennen?"),
   sprich("Fünf Schritte – los geht’s."),
   regie("Pause"),
 
@@ -106,10 +106,8 @@ const inhalt = [
   teil("10:30", "Und warum ist das kafkaesk?"),
   sprich("Ein Wort zum Schluss, das du kennst: kafkaesk. Eine übermächtige, undurchschaubare Macht. Regeln, die niemand erklärt. Ein Mensch, der ohnmächtig wartet. Und alles wird ganz nüchtern erzählt, als wäre es normal. „Vor dem Gesetz“ ist dafür das perfekte Beispiel."),
 
-  teil("11:00", "Dein Klausur-Check: 90 Minuten, eine neue Parabel"),
-  sprich("In der Klausur gehst du genau diese fünf Schritte – nur an einem Text, den du noch nicht kennst. Ein Vorschlag, wie du deine 90 Minuten einteilst:"),
-  ...[["15 Minuten", "lesen und markieren: Wer sagt was, und wie?"], ["10 Minuten", "Bild- und Sachebene notieren, Hypothese formulieren, Gliederung"], ["10 Minuten", "Einleitung schreiben: TATTE-Satz, Inhalt, Hypothese"], ["40 Minuten", "Hauptteil: Bild- und Sachebene, Gespräch, Stilmittel – immer mit Beleg"], ["5 Minuten", "Schluss: Stimmt die Hypothese?"], ["10 Minuten", "überarbeiten: Präsens, Zitate, Kommas"]].map(([z, w]) => p([t(z + ": ", { bold: true }), t(w)], { after: 40 })),
-  p(t(""), { after: 80 }),
+  teil("11:00", "Dein Klausur-Check: eine neue Parabel"),
+  sprich("In der Klausur gehst du genau diese fünf Schritte – nur an einem Text, den du noch nicht kennst."),
   sprich("Bevor du abgibst, prüf vier Dinge: Hast du im Präsens geschrieben? Hast du deine Zitate mit Zeilenangaben belegt – zum Beispiel „vergleiche Zeile 4“? Hast du die Fachbegriffe genutzt – Parabel, Bildebene, Sachebene, die Stilmittel? Und hast du nicht nur nacherzählt, sondern die Wirkung der Sprache gedeutet?"),
   sprich("Das war’s! Fünf Schritte: verstehen, einleiten, Hypothese aufstellen, Bild- und Sachebene unterscheiden, mit den Stilmitteln belegen. Erklärt habe ich sie dir an „Vor dem Gesetz“ – aber sie funktionieren bei jeder Parabel von Kafka. Probier es gleich aus, zum Beispiel noch einmal an „Gibs auf!“: Wer sagt was? Wofür steht der Schutzmann? Welche Stilmittel stützen deine Hypothese? Bis zum nächsten Mal!"),
   regie("Jingle, Ende"),
