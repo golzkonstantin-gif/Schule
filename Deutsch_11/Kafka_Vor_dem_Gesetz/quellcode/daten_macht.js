@@ -60,17 +60,17 @@ const AUFGABE2 = {
 
 // Aufgabe 3: Bild- und Sachebene (Figuren haben auf der Bildebene eine Rolle und stehen auf der Sachebene für etwas)
 const BILD_SACH = [
-  ["der Türhüter", "Wächter am Tor, kontrolliert den Zugang; „nur der unterste“ einer Hierarchie", "eine übermächtige Instanz (Behörde, Staat, Vater, Gott)", "nur der unterste Türhüter"],
-  ["der Mann vom Lande", "Bittsteller, will hinein; namenlos, nur über seine Herkunft bestimmt", "der Einzelne, der Zugang sucht – jeder von uns", "kommt ein Mann vom Lande"],
-  ["das Gesetz", "Gebäude mit Sälen hinter dem Tor, angeblich „jedem und immer zugänglich“", "Recht und Gerechtigkeit – offen auch Wahrheit, Sinn, Gott", "das Gesetz soll doch jedem"],
-  ["das Tor / der Eingang", "steht offen, wird am Ende geschlossen; „nur für dich bestimmt“", "die persönliche Chance, die er nie nutzt", "Hier konnte niemand sonst"],
+  ["der Türhüter", "Wächter am Tor, kontrolliert den Zugang; „nur der unterste“ einer Hierarchie", "eine übermächtige, undurchschaubare Instanz (Behörde, Staat, Vater, Gott)", "nur der unterste Türhüter"],
+  ["der Mann vom Lande", "Bittsteller, will hinein; namenlos, nur über seine Herkunft bestimmt", "der Einzelne, der ihr ohnmächtig gegenübersteht – jeder von uns", "kommt ein Mann vom Lande"],
+  ["das Gesetz", "Gebäude mit Sälen hinter dem Tor, angeblich „jedem und immer zugänglich“", "Recht und Gerechtigkeit – offen auch Wahrheit, Sinn, Gott: das, was er sich am meisten wünscht", "das Gesetz soll doch jedem"],
+  ["das Tor / der Eingang", "steht offen, wird am Ende geschlossen; „nur für dich bestimmt“", "der Zugang, der ihm bis zuletzt verwehrt bleibt", "Hier konnte niemand sonst"],
 ];
 const MERKSATZ = [
   ["Bildebene", "Was ist die Figur in der Geschichte? → ihre Rolle"],
   ["Sachebene", "Wofür steht sie? → die Übertragung"],
   ["Symbol", "nur Gegenstände (Tor, Schemel, Pelzmantel)"],
 ];
-const ERGEBNIS = "Auf der Bildebene sind die Rollen ungleich verteilt: Der Türhüter kontrolliert, der Mann bittet. Auf der Sachebene zeigt sich darin die Ohnmacht des Einzelnen gegenüber einer übermächtigen Instanz – die Deutungshypothese stimmt.";
+const ERGEBNIS = "Die Bild- und Sachebene bestätigt die Hypothese: Der Türhüter steht für eine übermächtige, undurchschaubare Instanz, der Mann für den Einzelnen, der ihr ohnmächtig gegenübersteht. Das Gesetz ist das, was er sich am meisten wünscht – und der Eingang bleibt ihm bis zuletzt verwehrt.";
 const AUFGABE3 = {
   titel: "Aufgabe 3: Bild- und Sachebene",
   schritte: [
