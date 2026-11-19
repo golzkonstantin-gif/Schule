@@ -12,21 +12,29 @@ const farbe = { "Erzähler": [E_FILL, NAVY], "Türhüter": [T_FILL, RED], "Mann"
 const cW = [1500, W - 1500];
 const rows = D.SPIEL_ERZAEHLER.map(([rolle, text, regie]) => {
   const [fill, col] = farbe[rolle];
-  const erz = rolle === "Erzähler";
-  const inhalt = [];
-  if (regie) inhalt.push(t("(" + regie + ") ", { italics: true, color: MUTED, size: 19 }));
-  inhalt.push(t(erz ? text : "„" + text + "“", { size: erz ? 21 : 23, bold: rolle === "Mann" }));
+  let inhalt;
+  if (rolle === "Mann") {
+    inhalt = [
+      p([t("Du machst: ", { bold: true, color: BLUE, size: 20 }), t(text.macht, { italics: true, size: 21 })], { after: 20, line: 270 }),
+      p([t("Du sagst: ", { bold: true, color: BLUE, size: 20 }), t(text.sagt, { bold: text.sagt.startsWith("„"), size: text.sagt.startsWith("„") ? 23 : 21, color: text.sagt === "nichts" ? MUTED : "000000" })], { after: 0, line: 270 }),
+    ];
+  } else {
+    const runs = [];
+    if (regie) runs.push(t("(" + regie + ") ", { italics: true, color: MUTED, size: 19 }));
+    runs.push(t(rolle === "Erzähler" ? text : "„" + text + "“", { size: rolle === "Erzähler" ? 21 : 23 }));
+    inhalt = [p(runs, { after: 0, line: 280 })];
+  }
   return new TableRow({ cantSplit: true, children: [
-    new TableCell({ width: { size: cW[0], type: WidthType.DXA }, borders: all(none), shading: { fill, type: ShadingType.CLEAR, color: "auto" }, verticalAlign: VerticalAlign.TOP, margins: { top: 60, bottom: 60, left: 120, right: 80 }, children: [p(t(rolle, { bold: true, color: col, size: 21 }), { after: 0 })] }),
-    new TableCell({ width: { size: cW[1], type: WidthType.DXA }, borders: { top: none, left: none, right: none, bottom: { style: BorderStyle.SINGLE, size: 4, color: "D5DCEC" } }, margins: { top: 60, bottom: 60, left: 160, right: 80 }, children: [p(inhalt, { after: 0, line: 280 })] }),
+    new TableCell({ width: { size: cW[0], type: WidthType.DXA }, borders: all(none), shading: { fill, type: ShadingType.CLEAR, color: "auto" }, verticalAlign: VerticalAlign.TOP, margins: { top: 35, bottom: 35, left: 120, right: 80 }, children: [p(t(rolle, { bold: true, color: col, size: 21 }), { after: 0 })] }),
+    new TableCell({ width: { size: cW[1], type: WidthType.DXA }, shading: rolle === "Mann" ? { fill: "F3F8FE", type: ShadingType.CLEAR, color: "auto" } : undefined, borders: { top: none, left: none, right: none, bottom: { style: BorderStyle.SINGLE, size: 4, color: "D5DCEC" } }, margins: { top: 35, bottom: 35, left: 160, right: 80 }, children: inhalt }),
   ] });
 });
 const doc = new Document({
   styles: { default: { document: { run: { font: "Calibri", size: 22 } } } },
-  sections: [{ properties: { page: { size: { width: 11906, height: 16838 }, margin: { top: 700, bottom: 560, left: 850, right: 850 } } }, children: [
+  sections: [{ properties: { page: { size: { width: 11906, height: 16838 }, margin: { top: 600, bottom: 450, left: 800, right: 800 } } }, children: [
     p(t("Spielvorlage mit Erzähler: „Vor dem Gesetz“", { font: "Cambria", size: 32, bold: true, color: NAVY }), { after: 60 }),
     p(t(D.SPIEL_ERZAEHLER_REGIE, { size: 20, color: MUTED }), { after: 30 }),
-    p(t("In Klammern = was ihr tut. Text nach Kafka, gekürzt.", { size: 18, italics: true, color: MUTED }), { after: 120 }),
+    p(t("In Klammern = was ihr tut. Blaue Zeilen = was der Mann macht und sagt. Text nach Kafka, gekürzt.", { size: 18, italics: true, color: MUTED }), { after: 120 }),
     new Table({ width: { size: W, type: WidthType.DXA }, columnWidths: cW, rows }),
   ] }],
 });

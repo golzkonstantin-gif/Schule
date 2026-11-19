@@ -212,21 +212,27 @@ const FUSSBALL = {
 // Erzählertext und Figurenrede nach dem Text (gekürzt). Der Mann spricht nur seine einzige wörtliche Rede aus dem Original.
 // [Rolle, Text, Regieanweisung]
 const SPIEL_ERZAEHLER = [
-  ["Erzähler", "Vor dem Gesetz steht ein Türhüter. Zu diesem Türhüter kommt ein Mann vom Lande und bittet um Eintritt in das Gesetz. Aber der Türhüter sagt, dass er ihm jetzt den Eintritt nicht gewähren könne. Der Mann überlegt und fragt dann, ob er also später werde eintreten dürfen.", "Türhüter steht vor der Tür, Mann tritt heran"],
+  ["Erzähler", "Vor dem Gesetz steht ein Türhüter. Zu diesem Türhüter kommt ein Mann vom Lande und bittet um Eintritt in das Gesetz. Aber der Türhüter sagt, dass er ihm jetzt den Eintritt nicht gewähren könne. Der Mann überlegt und fragt dann, ob er also später werde eintreten dürfen.", "Türhüter steht vor der Tür"],
+  ["Mann", { macht: "tritt vor den Türhüter, zeigt auf das Tor; überlegt nach dem Verbot", sagt: "leise: „Später?“" }],
   ["Türhüter", "Es ist möglich, jetzt aber nicht.", ""],
-  ["Erzähler", "Da das Tor zum Gesetz offensteht wie immer und der Türhüter beiseite tritt, bückt sich der Mann, um durch das Tor in das Innere zu sehn. Als der Türhüter das merkt, lacht er und sagt:", "Mann bückt sich"],
+  ["Erzähler", "Da das Tor zum Gesetz offensteht wie immer und der Türhüter beiseite tritt, bückt sich der Mann, um durch das Tor in das Innere zu sehn. Als der Türhüter das merkt, lacht er und sagt:", ""],
+  ["Mann", { macht: "bückt sich und späht durch das Tor; zuckt zurück, als der Türhüter lacht", sagt: "nichts" }],
   ["Türhüter", "Wenn es dich so lockt, versuche es doch, trotz meines Verbotes hineinzugehn. Merke aber: Ich bin mächtig. Und ich bin nur der unterste Türhüter. Von Saal zu Saal stehn aber Türhüter, einer mächtiger als der andere. Schon den Anblick des dritten kann nicht einmal ich mehr ertragen.", "lacht"],
-  ["Erzähler", "Solche Schwierigkeiten hat der Mann vom Lande nicht erwartet; er entschließt sich, doch lieber zu warten. Der Türhüter gibt ihm einen Schemel und lässt ihn seitwärts von der Tür sich niedersetzen. Dort sitzt er Tage und Jahre. Er macht viele Versuche, eingelassen zu werden, und ermüdet den Türhüter durch seine Bitten.", "Mann setzt sich seitwärts auf den Stuhl"],
-  ["Erzähler", "Der Türhüter stellt öfters kleine Verhöre mit ihm an – teilnahmslose Fragen, wie sie große Herren stellen – und sagt ihm immer wieder, dass er ihn noch nicht einlassen könne. Der Mann verwendet alles, um den Türhüter zu bestechen. Dieser nimmt zwar alles an, aber sagt dabei:", "Mann reicht Geschenke"],
+  ["Erzähler", "Solche Schwierigkeiten hat der Mann vom Lande nicht erwartet; er entschließt sich, doch lieber zu warten. Der Türhüter gibt ihm einen Schemel und lässt ihn seitwärts von der Tür sich niedersetzen. Dort sitzt er Tage und Jahre. Er macht viele Versuche, eingelassen zu werden, und ermüdet den Türhüter durch seine Bitten.", "Türhüter stellt den Stuhl seitwärts hin"],
+  ["Mann", { macht: "setzt sich seitwärts auf den Stuhl; steht immer wieder auf und bittet mit den Händen", sagt: "leise: „Bitte …“" }],
+  ["Erzähler", "Der Türhüter stellt öfters kleine Verhöre mit ihm an – teilnahmslose Fragen, wie sie große Herren stellen – und sagt ihm immer wieder, dass er ihn noch nicht einlassen könne. Der Mann verwendet alles, um den Türhüter zu bestechen. Dieser nimmt zwar alles an, aber sagt dabei:", ""],
+  ["Mann", { macht: "reicht dem Türhüter nacheinander Geschenke (z. B. Uhr, Mäppchen, Jacke)", sagt: "nichts" }],
   ["Türhüter", "Ich nehme es nur an, damit du nicht glaubst, etwas versäumt zu haben.", "nimmt alles, ohne hinzusehen"],
-  ["Erzähler", "Der Mann verflucht den unglücklichen Zufall, in den ersten Jahren laut, später brummt er nur noch vor sich hin. Er wird kindisch, und er bittet sogar die Flöhe im Pelzkragen des Türhüters, ihm zu helfen. Schließlich wird sein Augenlicht schwach. Wohl aber erkennt er jetzt im Dunkel einen Glanz, der unverlöschlich aus der Türe des Gesetzes bricht.", "Mann sinkt zusammen, schaut zur Tür"],
-  ["Erzähler", "Nun lebt er nicht mehr lange. Er winkt den Türhüter heran. Der muss sich tief zu ihm hinunterneigen.", "Mann winkt; Türhüter beugt sich herab"],
-  ["Türhüter", "Was willst du denn jetzt noch wissen? Du bist unersättlich.", ""],
-  ["Mann", "Alle streben doch nach dem Gesetz. Wieso kommt es, dass in den vielen Jahren niemand außer mir Einlass verlangt hat?", "leise, mit letzter Kraft"],
+  ["Erzähler", "Der Mann verflucht den unglücklichen Zufall, in den ersten Jahren laut, später brummt er nur noch vor sich hin. Er wird kindisch, und er bittet sogar die Flöhe im Pelzkragen des Türhüters, ihm zu helfen. Schließlich wird sein Augenlicht schwach. Wohl aber erkennt er jetzt im Dunkel einen Glanz, der unverlöschlich aus der Türe des Gesetzes bricht.", ""],
+  ["Mann", { macht: "ballt die Faust, dann murmelt er nur noch; sinkt auf dem Stuhl zusammen; starrt zur Tür", sagt: "murmelt unverständlich" }],
+  ["Erzähler", "Nun lebt er nicht mehr lange. Er winkt den Türhüter heran. Der muss sich tief zu ihm hinunterneigen.", ""],
+  ["Mann", { macht: "winkt den Türhüter mit letzter Kraft heran", sagt: "nichts" }],
+  ["Türhüter", "Was willst du denn jetzt noch wissen? Du bist unersättlich.", "beugt sich tief herab"],
+  ["Mann", { macht: "hebt den Kopf", sagt: "„Alle streben doch nach dem Gesetz. Wieso kommt es, dass in den vielen Jahren niemand außer mir Einlass verlangt hat?“" }],
   ["Erzähler", "Der Türhüter erkennt, dass der Mann schon an seinem Ende ist, und brüllt ihn an:", ""],
   ["Türhüter", "Hier konnte niemand sonst Einlass erhalten, denn dieser Eingang war nur für dich bestimmt. Ich gehe jetzt und schließe ihn.", "brüllt; geht ab"],
 ];
-const SPIEL_ERZAEHLER_REGIE = "Drei Rollen: Erzähler (liest), Türhüter (steht, spricht laut), Mann (sitzt auf einem Stuhl seitwärts; spricht nur ein einziges Mal).";
+const SPIEL_ERZAEHLER_REGIE = "Drei Rollen: Erzähler (liest), Türhüter (steht, spricht laut), Mann (sitzt auf einem Stuhl seitwärts; spielt vor allem mit dem Körper und spricht fast nichts – sein einziger ganzer Satz kommt am Ende).";
 
 // ---------- Zielcheck (im Heft) ----------
 const ZIELCHECK = {
