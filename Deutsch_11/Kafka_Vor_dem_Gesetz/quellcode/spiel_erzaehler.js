@@ -1,41 +1,54 @@
-// Spielvorlage mit Erzähler: Der Erzähler vermittelt das Geschehen, der Türhüter spricht, der Mann sagt fast nichts (3 Exemplare drucken)
+// Spielvorlage mit Erzähler als Dramentext: Personenverzeichnis, Bühne; vor jeder Rede steht, wer spricht und was er dabei tut
+// (Regieanweisungen kursiv in Klammern, Rede ohne Anführungszeichen wie im Drama). 3 Exemplare drucken.
 const fs = require("fs");
-const { Document, Packer, Paragraph, TextRun, Table, TableRow, TableCell, WidthType, BorderStyle, ShadingType, VerticalAlign } = require("docx");
+const { Document, Packer, Paragraph, TextRun, AlignmentType } = require("docx");
 const D = require("./daten_macht");
-const NAVY = "1E2761", MUTED = "5B6B8C", RED = "D9534F", BLUE = "3F7CC4", T_FILL = "FBD9D7", M_FILL = "D6E6F8", E_FILL = "EEEEEE";
-const W = 10206;
-const t = (text, o = {}) => new TextRun({ text, font: o.font || "Calibri", size: o.size || 22, bold: o.bold, italics: o.italics, color: o.color || "000000" });
-const p = (runs, o = {}) => new Paragraph({ children: Array.isArray(runs) ? runs : [runs], spacing: { before: o.before ?? 0, after: o.after ?? 60, line: o.line } });
-const none = { style: BorderStyle.NONE, size: 0, color: "FFFFFF" };
-const all = (b) => ({ top: b, bottom: b, left: b, right: b });
-const farbe = { "Erzähler": [E_FILL, NAVY], "Türhüter": [T_FILL, RED], "Mann": [M_FILL, BLUE] };
-const cW = [1500, W - 1500];
-const rows = D.SPIEL_ERZAEHLER.map(([rolle, text, regie]) => {
-  const [fill, col] = farbe[rolle];
-  let inhalt;
+const NAVY = "1E2761", MUTED = "5B6B8C", RED = "D9534F", BLUE = "3F7CC4", GREY = "444444";
+const t = (text, o = {}) => new TextRun({ text, font: o.font || "Cambria", size: o.size || 22, bold: o.bold, italics: o.italics, color: o.color || "000000", smallCaps: o.caps });
+const p = (runs, o = {}) => new Paragraph({ children: Array.isArray(runs) ? runs : [runs], alignment: o.align, indent: o.indent, spacing: { before: o.before ?? 0, after: o.after ?? 100, line: o.line ?? 290 } });
+const ohne = (x) => x.replace(/^„|“$/g, "");
+const farbe = { "Erzähler": GREY, "Türhüter": RED, "Mann": BLUE };
+const name = { "Erzähler": "Erzähler", "Türhüter": "Türhüter", "Mann": "Der Mann vom Lande" };
+
+const zeilen = [];
+D.SPIEL_ERZAEHLER.forEach(([rolle, text, regie]) => {
   if (rolle === "Mann") {
-    inhalt = [
-      p([t("Du machst: ", { bold: true, color: BLUE, size: 20 }), t(text.macht, { italics: true, size: 21 })], { after: 20, line: 270 }),
-      p([t("Du sagst: ", { bold: true, color: BLUE, size: 20 }), t(text.sagt, { bold: text.sagt.startsWith("„"), size: text.sagt.startsWith("„") ? 23 : 21, color: text.sagt === "nichts" ? MUTED : "000000" })], { after: 0, line: 270 }),
-    ];
-  } else {
-    const runs = [];
-    if (regie) runs.push(t("(" + regie + ") ", { italics: true, color: MUTED, size: 19 }));
-    runs.push(t(rolle === "Erzähler" ? text : "„" + text + "“", { size: rolle === "Erzähler" ? 21 : 23 }));
-    inhalt = [p(runs, { after: 0, line: 280 })];
+    const stumm = text.sagt === "nichts";
+    if (stumm) {
+      // nur Handlung: eigene Regieanweisung, eingerückt
+      zeilen.push(p(t("(Der Mann " + text.macht.replace(/; /g, ", ").replace(/ (dich|du|deinen|dir)\b/g, " sich") + ".)", { italics: true, color: BLUE, size: 21 }), { indent: { left: 567 } }));
+    } else {
+      const leise = text.sagt.startsWith("leise: ");
+      const rede = ohne(text.sagt.replace(/^leise: /, ""));
+      const murmelt = text.sagt.startsWith("murmelt");
+      zeilen.push(p([
+        t(name[rolle].toUpperCase(), { bold: true, color: BLUE, size: 21 }),
+        t(" (" + text.macht + (leise ? "; leise" : "") + ")", { italics: true, color: BLUE, size: 21 }),
+        t(murmelt ? "" : ": ", { size: 22 }),
+        t(murmelt ? " – murmelt unverständlich." : rede, { size: 22, italics: murmelt, color: murmelt ? BLUE : "000000", bold: !murmelt && !leise }),
+      ]));
+    }
+    return;
   }
-  return new TableRow({ cantSplit: true, children: [
-    new TableCell({ width: { size: cW[0], type: WidthType.DXA }, borders: all(none), shading: { fill, type: ShadingType.CLEAR, color: "auto" }, verticalAlign: VerticalAlign.TOP, margins: { top: 35, bottom: 35, left: 120, right: 80 }, children: [p(t(rolle, { bold: true, color: col, size: 21 }), { after: 0 })] }),
-    new TableCell({ width: { size: cW[1], type: WidthType.DXA }, shading: rolle === "Mann" ? { fill: "F3F8FE", type: ShadingType.CLEAR, color: "auto" } : undefined, borders: { top: none, left: none, right: none, bottom: { style: BorderStyle.SINGLE, size: 4, color: "D5DCEC" } }, margins: { top: 35, bottom: 35, left: 160, right: 80 }, children: inhalt }),
-  ] });
+  const runs = [t(name[rolle].toUpperCase(), { bold: true, color: farbe[rolle], size: 21 })];
+  if (regie) runs.push(t(" (" + regie + ")", { italics: true, color: MUTED, size: 21 }));
+  runs.push(t(": ", { size: 22 }));
+  runs.push(t(ohne(text), { size: rolle === "Erzähler" ? 21 : 22, color: rolle === "Erzähler" ? GREY : "000000" }));
+  zeilen.push(p(runs));
 });
+
 const doc = new Document({
-  styles: { default: { document: { run: { font: "Calibri", size: 22 } } } },
-  sections: [{ properties: { page: { size: { width: 11906, height: 16838 }, margin: { top: 600, bottom: 450, left: 800, right: 800 } } }, children: [
-    p(t("Spielvorlage mit Erzähler: „Vor dem Gesetz“", { font: "Cambria", size: 32, bold: true, color: NAVY }), { after: 60 }),
-    p(t(D.SPIEL_ERZAEHLER_REGIE, { size: 20, color: MUTED }), { after: 30 }),
-    p(t("In Klammern = was ihr tut. Blaue Zeilen = was der Mann macht und sagt. Text nach Kafka, gekürzt.", { size: 18, italics: true, color: MUTED }), { after: 120 }),
-    new Table({ width: { size: W, type: WidthType.DXA }, columnWidths: cW, rows }),
+  styles: { default: { document: { run: { font: "Cambria", size: 22 } } } },
+  sections: [{ properties: { page: { size: { width: 11906, height: 16838 }, margin: { top: 650, bottom: 500, left: 900, right: 900 } } }, children: [
+    p(t("Vor dem Gesetz", { size: 34, bold: true, color: NAVY }), { after: 0, align: AlignmentType.CENTER }),
+    p(t("Szene nach Franz Kafka (gekürzt)", { size: 20, italics: true, color: MUTED }), { after: 140, align: AlignmentType.CENTER }),
+    p(t("Personen", { size: 22, bold: true, color: NAVY }), { after: 30 }),
+    p([t("ERZÄHLER", { bold: true, color: GREY, size: 20 }), t(" – steht am Rand und liest", { size: 20 })], { after: 0 }),
+    p([t("TÜRHÜTER", { bold: true, color: RED, size: 20 }), t(" – steht vor dem Tor, spricht laut", { size: 20 })], { after: 0 }),
+    p([t("DER MANN VOM LANDE", { bold: true, color: BLUE, size: 20 }), t(" – spielt vor allem mit dem Körper und spricht fast nichts", { size: 20 })], { after: 80 }),
+    p([t("Bühne: ", { bold: true, size: 20 }), t("Ein offenes Tor (Tür des Klassenraums oder Pult). Seitwärts davon ein Stuhl.", { size: 20, italics: true })], { after: 160 }),
+    ...zeilen,
+    p(t("(Der Türhüter geht ab. Das Tor ist geschlossen.)", { italics: true, color: MUTED, size: 21 }), { before: 60, indent: { left: 567 } }),
   ] }],
 });
 Packer.toBuffer(doc).then((b) => fs.writeFileSync("../Macht_Ohnmacht/Spielvorlage_mit_Erzaehler.docx", b));
