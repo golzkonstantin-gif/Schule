@@ -7,7 +7,9 @@ const {
   ShadingType, AlignmentType, VerticalAlign, HeightRule, Header, Footer, TabStopType,
 } = require("docx");
 const D = require("./daten_macht");
-const LOES = process.argv[2] === "loesung";
+// node ab_macht.js schueler → Musterlösung zum Hochladen für die Klasse (ohne Lehrkraft-Hinweise)
+const SCHUELER = process.argv[2] === "schueler";
+const LOES = process.argv[2] === "loesung" || SCHUELER;
 
 const NAVY = "1E2761", MUTED = "5B6B8C", LIGHT = "F4F7FD", LIGHT2 = "EAF0FA", RED = "D9534F", BLUE = "3F7CC4", GREEN = "2E9E6B";
 const T_FILL = "FBD9D7", M_FILL = "D6E6F8";
@@ -76,7 +78,7 @@ function textBlock() {
   return table([nW, tW], rows);
 }
 const legende = p([
-  t("Lösung: ", { bold: true, size: 18, color: GREEN }),
+  t(SCHUELER ? "So sieht es markiert aus: " : "Lösung: ", { bold: true, size: 18, color: GREEN }),
   t(" Türhüter: was ", { size: 18, run: { shading: { type: ShadingType.CLEAR, fill: T_FILL, color: "auto" } } }), t("  ", { size: 18 }),
   t("wie", { size: 18, bold: true, run: { border: { style: BorderStyle.SINGLE, size: 8, color: RED, space: 1 } } }), t("     ", { size: 18 }),
   t(" Mann: was ", { size: 18, run: { shading: { type: ShadingType.CLEAR, fill: M_FILL, color: "auto" } } }), t("  ", { size: 18 }),
@@ -115,12 +117,13 @@ const stil = table(sW, [
   ], 1500)),
 ]);
 
-const header = new Header({ children: [new Paragraph({ tabStops: [{ type: TabStopType.RIGHT, position: W }], children: [t("Deutsch · Klasse 11 · Kafka, „Vor dem Gesetz“", { size: 17, color: MUTED }), LOES ? t("\tLÖSUNG (für die Lehrkraft)", { size: 17, bold: true, color: GREEN }) : t("\tName: ______________________   Datum: ___________", { size: 17, color: MUTED })] })] });
-const footer = new Footer({ children: [new Paragraph({ alignment: AlignmentType.RIGHT, children: [t("Franz Kafka: „Vor dem Gesetz“ (1915), in heutiger Rechtschreibung" + (LOES ? " · Zeilenangaben ± 1 gelten als richtig" : ""), { size: 16, color: MUTED })] })] });
+const header = new Header({ children: [new Paragraph({ tabStops: [{ type: TabStopType.RIGHT, position: W }], children: [t("Deutsch · Klasse 11 · Kafka, „Vor dem Gesetz“", { size: 17, color: MUTED }), LOES ? t(SCHUELER ? "\tMUSTERLÖSUNG" : "\tLÖSUNG (für die Lehrkraft)", { size: 17, bold: true, color: GREEN }) : t("\tName: ______________________   Datum: ___________", { size: 17, color: MUTED })] })] });
+const footer = new Footer({ children: [new Paragraph({ alignment: AlignmentType.RIGHT, children: [t("Franz Kafka: „Vor dem Gesetz“ (1915), in heutiger Rechtschreibung" + (LOES && !SCHUELER ? " · Zeilenangaben ± 1 gelten als richtig" : ""), { size: 16, color: MUTED })] })] });
 
 const seite1 = [
-  p(t("Arbeitsblatt: Macht und Ohnmacht in Kafkas „Vor dem Gesetz“", { font: "Cambria", size: 32, bold: true, color: NAVY }), { after: 50 }),
-  p([t("Leitfrage: ", { bold: true, size: 20 }), t(D.LEITFRAGE, { size: 20 })], { after: 20 }),
+  p(t((SCHUELER ? "Musterlösung" : "Arbeitsblatt") + ": Macht und Ohnmacht in Kafkas „Vor dem Gesetz“", { font: "Cambria", size: 32, bold: true, color: NAVY }), { after: 50 }),
+  ...(SCHUELER ? [p(t("Vergleiche mit deinem Arbeitsblatt und verbessere mit Grün. Andere Formulierungen sind richtig, wenn du sie am Text belegst.", { size: 18, italics: true, color: MUTED }), { after: 60 })] : []),
+  ...(SCHUELER ? [] : [p([t("Leitfrage: ", { bold: true, size: 20 }), t(D.LEITFRAGE, { size: 20 })], { after: 20 })]),
   p([t("Ziel: ", { bold: true, size: 20 }), t(D.ZIEL, { size: 20 })], { after: 40 }),
   ...aufgabe(D.AUFGABE1),
   ...(LOES ? [legende] : [p(t(""), { after: 40 })]),
@@ -158,5 +161,5 @@ const doc = new Document({
   styles: { default: { document: { run: { font: "Calibri", size: 21 } } } },
   sections: [{ properties: { page: { size: { width: 11906, height: 16838 }, margin: { top: 760, bottom: 620, left: 850, right: 850, header: 340, footer: 340 } } }, headers: { default: header }, footers: { default: footer }, children: [...seite1, ...seite2, ...seite3] }],
 });
-const name = "../Macht_Ohnmacht/Arbeitsblatt_Macht_Ohnmacht" + (LOES ? "_Loesung" : "") + ".docx";
+const name = "../Macht_Ohnmacht/Arbeitsblatt_Macht_Ohnmacht" + (SCHUELER ? "_Musterloesung" : LOES ? "_Loesung" : "") + ".docx";
 Packer.toBuffer(doc).then((b) => fs.writeFileSync(name, b));
