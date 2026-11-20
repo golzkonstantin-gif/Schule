@@ -106,3 +106,10 @@
 - Gesamteindruck der Lehrkraft: lief „so mäßig“. Die Rückmeldung (auch der Klasse) ergab: **Für 45 Minuten waren es zu viele Methoden** (Buchstabenrätsel mit Presenter, Text mit Zeitstrahl, Karikatur-Dreischritt mit Hilfekarten, Abschlussfrage, dazu Eingangsdiagnose).
 - Folgerung (vorläufig, Details offen): pro Stunde höchstens zwei bis drei Methoden, jede mit genug Zeit; Karikatur und Spiele eher als eigene Schwerpunkte. Genaue Beobachtungen (wo hing es, wie war die Zeit) noch nicht berichtet.
 - Für die 8D-Stunde 2 (Mi 11.11., ca. 25 Minuten): Abstimmung mit Beobachtungsbogen, danach Text bis zum Truppenzusammenzug vor Paris. Planung wird besprochen, noch kein Material.
+
+### Planung 8C Stunde 3 (Fr 20.11., 45 Min., 12 Schülerinnen und Schüler): Wege des Widerstands
+- Material: `Geschichte_8/Stunde3_Widerstand/` (aus der 8D-Stunde vom 18.11. übernommen, Rückmeldung der 8D steht noch aus).
+- Stand der Klasse (Lehrkraft, 17./20.11.): Die Menschenrechte hatte die 8C schon am 13.11. (Epochenjahr 1789 wiederholt, Arbeitsblatt zu Artikel 1, 2, 3, 4, 6, 10, 11). Bastille und Ballhausschwur als Widerstand hatten sie noch nicht (Ballhausschwur und Soldaten um Paris kamen in Stunde 2 am 6.11. kurz vor).
+- Anpassungen: 12 statt 24 Personen (6 Paare, Texte 7-mal drucken, Tabelle 14 Blatt), Datum, Folie 20 (Ausblick: Die Menschenrechte geben dem Widerstand ein Recht, Wie wird es gesichert? Verfassung 1791), Hinweis zur Abschlussantwort (Bezug auf Artikel 2 und 3 möglich). Sonst unverändert.
+- Reihenfolge danach: 27.11. Verfassung 1791, 04.12. Test 1.
+- Zu beobachten: Austausch und Lautstärke im Paar-Puzzle, Aha-Moment, Urteile (wirksam gegen verantwortbar), Zahl der Abgaben; Wissen aus den Menschenrechten in der Abschlussantwort.
