@@ -270,6 +270,8 @@ const rows = [
   r("die Teilüberschrift · der Absatz", "die Teilüberschriften · die Absätze", "**śródtytuł** · **akapit**", "„Bedeutung der Zeichen“"),
   r("die Zeile (Z.) · die Fußnote", "die Zeilen · die Fußnoten", "**linijka** · **przypis**", "Z. 20–22"),
   r("sachlich · die Meinung", "die Meinungen", "**rzeczowy** · **opinia**", "keine Meinung, kein „ich“"),
+  r("die Funktion · die Absicht", "die Funktionen · die Absichten", "**funkcja** · **cel, zamiar**", "informieren, auffordern, überzeugen"),
+  r("der Imperativ", "die Imperative", "**tryb rozkazujący**", "Nimm! Lies! Gebt ab!"),
 ];
 
 const doc = [
