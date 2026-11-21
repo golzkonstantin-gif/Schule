@@ -20,14 +20,14 @@ const box = () => p(t("□", { size: 26 }), { after: 0, align: AlignmentType.CEN
 // Druck
 const DW = [550, 3500, 1700, 4456];
 const druck = [
-  ["Arbeitsblatt „Die Erklärung der Menschenrechte ins Heute übersetzen“ (Seite 1: Quelle, Begriff heute, Vorher; Seite 2: 1789 oder heute?, Historische Bedeutung, Rückmeldung)", "26 Blatt (24 + 2 Reserve), doppelseitig, eine pro Person", "Arbeitsblatt_Menschenrechte_Quelle_8D.pdf, 26-mal drucken, doppelseitig (Wenden an der kurzen Seite)"],
+  ["Arbeitsblatt „Die Erklärung der Menschenrechte ins Heute übersetzen“ (ohne Tabelle; Seite 1: Wortspeicher mit Erklärungen und fünf Artikel-Blöcke; Seite 2: 1789 oder heute?, Historische Bedeutung, Rückmeldung)", "26 Blatt (24 + 2 Reserve), doppelseitig, eine pro Person", "Arbeitsblatt_Menschenrechte_Quelle_8D.pdf, 26-mal drucken, doppelseitig (Wenden an der kurzen Seite)"],
   ["Lösung und Musterantworten (für dich)", "1 Blatt (zwei Seiten)", "Loesung_Arbeitsblatt_Menschenrechte_8D.pdf"],
 ];
 const prep = [
   ["Tafelskript ausdrucken oder auf dem Tablet bereithalten", "Tafelskript_Stunde4_Menschenrechte_8D.pdf, 8 Seiten"],
   ["Folien öffnen und einmal durchklicken", "Praesentation_Stunde4_Menschenrechte_8D.pptx, 22 Folien (27 Punkt); Folie 1 (Karikatur mit Sprechblase und zwei Bildern an der Wand) steht beim Betreten da"],
   ["Arbeitsblätter auf die Tische legen (umgedreht)", "Pro Person ein Blatt, doppelseitig, nach unten. Erst bei Folie 11 umdrehen lassen, Seite 2 erst bei Folie 16"],
-  ["Wortlaut der Artikel und des Grundgesetzes (Art. 3, 5, 14, 20) abgleichen", "Gekürzte, vereinfachte Fassung (Artikel 1, 2, 3, 4, 6, 10, 11, 17), Artikel 6 wie im Original, neu: Eigentumsrecht; Wortlaut für den Test einheitlich halten"],
+  ["Wortlaut der Artikel und des Grundgesetzes (Art. 3, 5, 14, 20) abgleichen", "Gekürzte, vereinfachte Fassung (Blatt: Artikel 1, 3, 6, 11, 17; Folie 14 zusätzlich 2, 4, 10), Artikel 6 wie im Original, neu: Eigentumsrecht; Wortlaut für den Test einheitlich halten"],
   ["Hintergrund zum 4. August im Lehrbuch lesen (abgeschaffte Vorrechte, Ablösung)", "abgeschaffte Vorrechte, Ablösung der Abgaben, Bauernaufstände"],
   ["Rückmeldung der Hospitation absprechen", "Schwerpunkt: Aktivierung mit Fokus auf Kompetenzerwerb (Quelle ins Heute übersetzen), lehrergesteuert mit Einzelarbeit, Sicherung, Transfer; Punkte folgen später"],
   ["Kreide, Grün zum Verbessern, Uhr oder Timer", "Die Übungsphase endet 9 Minuten vor Schluss, „Auswerten“ bleibt immer"],
