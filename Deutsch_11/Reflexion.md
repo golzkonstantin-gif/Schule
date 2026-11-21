@@ -135,7 +135,8 @@ Grundlage ist `Methoden/Literatur_Unterrichtsqualitaet.md` (AVIVA, Direkte Instr
 - Literatur der Lehrkraft: Inhaltsverzeichnis eines Unterrichtsmodells (acht Bausteine von Schlagbaum bis Rezeption); T. von Brand, „Ganzschriften im Deutschunterricht“ – laut Impressum keine Nutzung durch KI-Systeme, daher nicht ausgewertet.
 - Leitidee: Brücke von Kafka zu Kleist – der Mann vom Lande wartet, Kohlhaas nimmt das Recht selbst in die Hand. Leitfrage „Was tun, wenn das Recht versagt?“; Rahmen: „einer der rechtschaffensten zugleich und entsetzlichsten Menschen seiner Zeit“.
 - Entscheidungen (21.11.): **Die Klasse liest die Novelle vollständig**, voraussichtlich in den Weihnachtsferien. Mo 21.12. ist noch Unterricht. Keine besonderen Vorgaben aus dem Curriculum.
-- Offen: Klausurtermin und -format, Ende der Ferien.
+- Unterricht wieder ab Mo 4.1. Sequenzplan (Entwurf): `Deutsch_11/Kohlhaas/Sequenzplan_Michael_Kohlhaas` – vor den Ferien 7 Stunden (erstes Drittel gemeinsam), Ferienlektüre in drei Etappen, danach 10 Stunden bis zur Klausur (Vorschlag ab 8.2.).
+- Offen: Klausurtermin und -format, Seitenangaben nach Reclam.
 
 ## Stundenlog
 
