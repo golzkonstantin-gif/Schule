@@ -134,7 +134,8 @@ Grundlage ist `Methoden/Literatur_Unterrichtsqualitaet.md` (AVIVA, Direkte Instr
 - Start Mo 30.11. Stundenplan: **Montag Doppelstunde, Donnerstag Einzelstunde.** Textausgabe: Reclam (Seiten- und Zeilenangaben danach). Klausur folgt später (Format noch offen).
 - Literatur der Lehrkraft: Inhaltsverzeichnis eines Unterrichtsmodells (acht Bausteine von Schlagbaum bis Rezeption); T. von Brand, „Ganzschriften im Deutschunterricht“ – laut Impressum keine Nutzung durch KI-Systeme, daher nicht ausgewertet.
 - Leitidee: Brücke von Kafka zu Kleist – der Mann vom Lande wartet, Kohlhaas nimmt das Recht selbst in die Hand. Leitfrage „Was tun, wenn das Recht versagt?“; Rahmen: „einer der rechtschaffensten zugleich und entsetzlichsten Menschen seiner Zeit“.
-- Offen: Lektüreform (keine Hausaufgaben!), Klausurformat, Vorgaben des schulinternen Curriculums.
+- Entscheidungen (21.11.): **Die Klasse liest die Novelle vollständig**, voraussichtlich in den Weihnachtsferien. Mo 21.12. ist noch Unterricht. Keine besonderen Vorgaben aus dem Curriculum.
+- Offen: Klausurtermin und -format, Ende der Ferien.
 
 ## Stundenlog
 
