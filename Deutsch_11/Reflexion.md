@@ -129,6 +129,13 @@ Grundlage ist `Methoden/Literatur_Unterrichtsqualitaet.md` (AVIVA, Direkte Instr
 - Korrektur 11.11. (abends): Auf dem Arbeitsblatt keine Wiederholung von „kafkaesk“ (haben sie schon) – der Platz wird frei. **Die Handlung wird über die Kommunikation erschlossen** (wie bei der Mentorin), sodass Inhalt und Kommunikation zugleich klar werden.
 - Material: `Kafka_Vor_dem_Gesetz/`. Die Klasse hat noch keine Textfassung; der Text steht auf dem Arbeitsblatt (aus dem Gedächtnis, vor dem Druck mit einer Ausgabe abgleichen).
 
+## Nächste Einheit: Kleist, „Michael Kohlhaas“ (Planung ab 21.11.)
+
+- Start Mo 30.11. Stundenplan: **Montag Doppelstunde, Donnerstag Einzelstunde.** Textausgabe: Reclam (Seiten- und Zeilenangaben danach). Klausur folgt später (Format noch offen).
+- Literatur der Lehrkraft: Inhaltsverzeichnis eines Unterrichtsmodells (acht Bausteine von Schlagbaum bis Rezeption); T. von Brand, „Ganzschriften im Deutschunterricht“ – laut Impressum keine Nutzung durch KI-Systeme, daher nicht ausgewertet.
+- Leitidee: Brücke von Kafka zu Kleist – der Mann vom Lande wartet, Kohlhaas nimmt das Recht selbst in die Hand. Leitfrage „Was tun, wenn das Recht versagt?“; Rahmen: „einer der rechtschaffensten zugleich und entsetzlichsten Menschen seiner Zeit“.
+- Offen: Lektüreform (keine Hausaufgaben!), Klausurformat, Vorgaben des schulinternen Curriculums.
+
 ## Stundenlog
 
 ### Kommunikationsstörungen lösen (Doppelstunde)
