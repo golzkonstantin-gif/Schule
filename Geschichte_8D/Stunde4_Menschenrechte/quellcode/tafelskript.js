@@ -43,191 +43,185 @@ const warum = (why, gelenk) => table([W - 20], [row([cell([p([t("Warum  ", { bol
 
 
 const d = [];
-d.push(kicker("Tafelskript für die Lehrkraft · Einzelstunde (45 Min.) · 24 Schülerinnen und Schüler · eine Lehrkraft · Mittwoch 25.11.2026 · Hospitation"), h1("Menschenrechte: Eine Quelle auswerten"));
-d.push(p(t("Ziel: Die Stunde knüpft an die Wege des Widerstands (Stunde 3) an. In der Karikatur sprechen Klerus und Adel vor zwei Bildern (Eid im Ballhaus, Sturm auf die Bastille): „Ihr habt geschworen. Ihr habt die Bastille gestürmt. Wir kamen euch entgegen. Was wollt ihr noch?“ Die Rückschau erschließt die Ereignisse, die Informationsphase erklärt den 4. und den 26. August, und die Klasse wertet die Erklärung der Menschen- und Bürgerrechte in drei Schritten aus (Lesen in eigenen Worten, Einordnen, Begriff). Der Dritte Stand antwortet am Ende mit Beleg: Gnade oder Recht? Schwerpunkt der Hospitation ist die Aktivierung mit Fokus auf dem Kompetenzerwerb (Quelle auswerten).", { size: 21 }), { after: 100 }));
+d.push(kicker("Tafelskript für die Lehrkraft · Einzelstunde (45 Min.) · 24 Schülerinnen und Schüler · eine Lehrkraft · Mittwoch 25.11.2026 · Hospitation"), h1("Vorrechte weg, Menschenrechte da: Quelle ins Heute übersetzen"));
+d.push(p(t("Ziel: Die Stunde knüpft an die Wege des Widerstands (Stunde 3) an und ist nach dem Partnerpuzzle bewusst lehrergesteuert mit Einzelarbeit. In der Karikatur zählen Klerus und Adel ihr Entgegenkommen auf („Ihr habt geschworen. Ihr habt die Bastille gestürmt. Wir kamen euch entgegen. Was wollt ihr noch?“), zwei Bilder an der Wand (Ballhaus, Bastille) liefern die Rückschau. Die Klasse erfährt, was am 4. August (Verzicht auf die Vorrechte) und am 26. August (Erklärung der Menschenrechte) geschah, übersetzt die Artikel in heutige Begriffe (Gleichheit vor dem Gesetz, Eigentumsrecht, Meinungsfreiheit, Volkssouveränität) und stellt fest, was sich für den Dritten Stand (Bauern und Bürger) verbessert hat. Im Aha-Moment „1789 oder heute?“ zeigt sich, dass vieles fast wörtlich im Grundgesetz steht (Vorbildwirkung). Zum Schluss sichert die Klasse das Ergebnis (Merksatz, Abschlussaufgabe als Dritter Stand).", { size: 21 }), { after: 100 }));
 
 d.push(h3("Kopf der Planung"));
 d.push(table([2600, 7606], [
-  ["Ziel (Ich kann …)", "1  … Artikel der Erklärung der Menschenrechte in eigenen Worten wiedergeben und den passenden Begriff nennen.  2  … einen Artikel mit der Ständeordnung vergleichen und einem Ereignis von 1789 zuordnen.  3  … mit Beleg und Maßstab begründen, welcher Artikel für den Dritten Stand am wichtigsten ist.*"],
-  ["Prüfaufgabe: Woran erkenne ich es?", "Arbeitsblatt Seite 1 (Artikel 2, 4 und 6 selbst ausgefüllt), Zuordnung Bild und Artikel im Partnercheck, Urteil auf Seite 2 (Beleg, Wirkung, Maßstab, Urteil, Gegenargument), mündliche Antwort als Dritter Stand („Ich antworte euch: Wir wollen …, weil Artikel … sagt …, früher …“). Freiwillige Abgabe, Rückmeldung nach drei Stufen (gleich den Zielen). Punkte oder Noten gibt es heute nicht (später)."],
-  ["Mindestziel", "Ziel 1 und 2. Ziel 3 hat einen Stern (Urteil auf zwei Sätze kürzbar). „Auswerten“ bleibt immer."],
-  ["Beitrag zur Reihe", "Stunde 4 von 11 (Sequenz, Fassung vom 17.11.). Sie zeigt, wie sich die Rechte nach dem Ende der Vorrechte in einer Quelle niederschlagen, baut die Kompetenz Quellenauswertung auf (wiederkehrend, auch im Test) und führt mit „Für wen gelten die Rechte wirklich?“ zur Verfassung 1791 (Stunde 5). Der 4. August ist Rahmen und Merksatz-Inhalt, nicht eigenes Ziel."],
-  ["Vorgehen", "Rückschau indirekt (allein, Partnercheck, Plenum), Quellenauswertung direkt: Vormachen (Lehrkraft denkt laut), angeleitet (Artikel 3 mit Hilfe), selbstständig (Artikel 2, 4, 6). Direktes Vorgehen, weil das Vorwissen zur Quellenarbeit gering ist. Urteil indirekt (offenes Format mit Satzanfängen). Direkt oder indirekt wird je Phase entschieden."],
+  ["Ziel (Ich kann …)", "1  … erklären, was sich durch den Verzicht auf die Vorrechte und die Menschenrechte für den Dritten Stand verbessert hat.  2  … Artikel von 1789 in heutige Begriffe übersetzen (zum Beispiel Eigentumsrecht).  3  … an einem Grundgesetz-Artikel zeigen, dass die Erklärung bis heute nachwirkt.*"],
+  ["Prüfaufgabe: Woran erkenne ich es?", "Arbeitsblatt Seite 1 (Begriff heute zu allen Artikeln, Vorher bei 6, 11 und 17), Seite 2 (Aufgabe A „1789 oder heute?“, Aufgabe B „Historische Bedeutung“ mit Satzanfängen), Abschlussaufgabe: schriftlich und mündlich als Dritter Stand („Wir wollen …, weil Artikel … sagt. Früher …, heute …“). Freiwillige Abgabe, Rückmeldung nach drei Stufen (gleich den Zielen). Punkte oder Noten gibt es heute nicht (später)."],
+  ["Mindestziel", "Ziel 1 und 2. Ziel 3 hat einen Stern (Transfer gekürzt). „Auswerten“ bleibt immer."],
+  ["Beitrag zur Reihe", "Stunde 4 von 11 (Sequenz, Fassung vom 17.11.). Sie zeigt, wie der Verzicht auf die Vorrechte und die Erklärung der Menschenrechte die Lage des Dritten Standes verbessern, baut die Kompetenz Quellenauswertung auf (wiederkehrend, auch im Test) und führt mit „Für wen galten die Rechte 1789 wirklich?“ zur Verfassung 1791 (Stunde 5)."],
+  ["Vorgehen", "Rückschau indirekt (allein, Plenum), Informieren und Quellenauswertung direkt: Portionen, Vormachen (Lehrkraft denkt laut), angeleitet (Artikel 3 mit Hilfe), selbstständig (sechs Artikel). Direktes Vorgehen, weil das Vorwissen zur Quellenarbeit gering ist. Aha und Sicherung geführt. Direkt oder indirekt wird je Phase entschieden."],
 ].map(([a, b]) => row([tc(a, 2600, { fill: LIGHT, bold: true }), tc(b, 7606)], 340))));
 
 d.push(h3("Bezug jedes Schritts zum Ziel (Prüfung)"));
 d.push(table([4400, 1500, 4306], [
   row([th("Schritt", 4400), th("Ziel", 1500), th("Begründung", 4306)], 320),
   ...[
-    ["Karikatur und Vermutung (Folie 1)", "Rahmen", "Stundenfrage, Vorher-Nachher mit der Abschlussantwort"],
-    ["Rückschau an den Bildern (Folie 5)", "2", "Ereignisse 1789 kennen, um sie Artikeln zuzuordnen"],
-    ["Kette und 4./26. August (Folie 6)", "2", "Rahmen und Gegensatz Gnade/Vorrecht und Recht; Merksatz-Inhalt"],
-    ["Drei Schritte, Modell, Prüffrage (Folie 7 bis 9)", "1, 2", "Methode der Auswertung modellieren, Verständnis prüfen"],
-    ["Artikel 3 mit Hilfe, Artikel 2, 4, 6 (Folie 10 bis 14)", "1, 2", "angeleitet, dann selbstständig üben; Begriff und Einordnen"],
-    ["Zuordnung Bild und Artikel (Folie 13, 15)", "2", "Ereignis zuordnen, Aha: Was sie taten, wird zum Recht"],
-    ["Urteil (Folie 16)", "3", "Beleg und Maßstab, zweite Perspektive im Gegenargument"],
-    ["Merksatz (Folie 17)", "1, 2", "Ergebnissicherung, Wissen für den Test"],
-    ["Abschlussfrage (Folie 18)", "1, 2, 3", "prüft alle Ziele, Vergleich mit der Vermutung"],
-    ["Ziele prüfen (Folie 19)", "1, 2, 3", "Zielprüfung, Abgabe"],
-    ["Ausblick (Folie 20)", "Brücke", "kein Ziel der Stunde, bereitet Stunde 5 vor"],
+    ["Karikatur und Vermutung (Folie 1)", "Rahmen", "Stundenfrage, Vorher-Nachher mit der Abschlussaufgabe"],
+    ["Rückschau an den Bildern (Folie 5, 6)", "1", "Ereignisse 1789 als Voraussetzung für „vorher, nachher“"],
+    ["Verzicht auf die Vorrechte (Folie 7)", "1", "Vorher und Nachher, Bedeutung des 4. August"],
+    ["Quelle ins Heute übersetzen, Modell, Prüffrage (Folie 8 bis 10)", "2", "Methode modellieren, Verständnis prüfen"],
+    ["Artikel 3 mit Hilfe, sechs Artikel selbst (Folie 11 bis 14)", "1, 2", "angeleitet, dann selbstständig üben; Begriff heute und Vorher"],
+    ["Was hat sich verbessert? (Folie 15)", "1", "Vorher und Seitdem (Bedeutung)"],
+    ["1789 oder heute? Echo (Folie 16 bis 18)", "3", "Transfer, Aha: Vorbildwirkung im Grundgesetz"],
+    ["Merksatz (Folie 19)", "1, 2, 3", "Ergebnissicherung, Wissen für den Test"],
+    ["Abschlussaufgabe (Folie 20)", "1, 2, 3", "prüft alle Ziele, Vergleich mit der Vermutung"],
+    ["Ziele prüfen (Folie 21)", "1, 2, 3", "Zielprüfung, Abgabe"],
+    ["Ausblick (Folie 22)", "Brücke", "kein Ziel der Stunde, bereitet Stunde 5 vor"],
   ].map((r) => row(r.map((v, i) => tc(v, [4400, 1500, 4306][i], { bold: i === 1 })), 320)),
 ]));
 
-d.push(h3("Was aus den bisherigen Stunden übernommen wird"));
+d.push(h3("Was aus den bisherigen Stunden und Rückmeldungen übernommen wird"));
 d.push(...bullets([
-  "Stunde 3 (18.11.): Ballhausschwur und Bastille mit fünf Kriterien, Reihenfolge am Zeitstrahl, „wirksam heißt nicht gerechtfertigt“. Die Rückschau (Folie 5 und 6) wiederholt das an zwei Bildern; Artikel 3 und 2 knüpfen daran an (Macht geht vom Volk aus, Widerstand). Falls in Stunde 3 etwas nicht geschafft wurde, hier als Wiederholung aufgreifen. Die 8C macht Stunde 3 ebenfalls und danach die Menschenrechte: Dasselbe Material passt, da die Rückschau die Vorgeschichte liefert.",
-  "Stunde 2 (11.11.): Ständeordnung und Abstimmung nach Ständen (Vorrechte). Sie ist der Vergleichsmaßstab für Schritt 2 „Einordnen“.",
-  "Karikatur als Einstieg, Rückschau und Abschluss (Antwort in der Rolle des Dritten Stands): selbst gezeichnet, keine historische Quelle. An der Wand hängen zwei unbeschriftete Bilder, davor sprechen Klerus und Adel. Die Aussage ist bewusst überspitzt (Entgegenkommen als Gnade, historisch nicht freiwillig).",
-  "Parallelklasse (Rückmeldung der Lehrkraft): erster Teil Epochenjahr 1789, zweiter Teil Arbeitsblatt zu Artikel 1, 2, 3, 4, 6, 10, 11 mit Begriffen Freiheit, Religionsfreiheit, Meinungsfreiheit, Volkssouveränität, Grundrechte, Gleichheit. Dieselben Artikel und Begriffe gelten hier (Vergleichbarkeit, Test).",
-  "Wunsch der Lehrkraft (17.11.): Schwerpunkt der Hospitation ist die Aktivierung mit Fokus auf Kompetenzerwerb (Quelle auswerten). Punkte folgen später, freiwillige Abgabe mit Rückmeldung. „Das ist mir wichtig“ entfällt, weil es eingeführt ist.",
-  "Regel „höchstens drei Methoden“: Quellenauswertung (Vormachen, angeleitet, selbstständig, Partnercheck), Urteil, mündliche Abschlussantwort. Karikatur und Rückschau sind Impuls beziehungsweise Routine.",
+  "Rückmeldung zur Hospitation (Lehrkraft, 21.11.): Nach dem Gruppenpuzzle ist eine eher lehrergesteuerte Stunde mit Einzelarbeit sinnvoll (kein ständiges Sozialformfeuerwerk). Die Sicherung am Ende ist wichtig. Die Artikel werden in heutiges Vokabular übersetzt (Gleichheit vor dem Gesetz, Eigentumsrecht, Meinungsfreiheit), um Kontinuität und Vorbildwirkung seit 1789 zu zeigen; der Transfer zu ausgewählten Grundgesetz-Artikeln soll der Aha-Moment werden; die Bedeutung (was wurde verbessert?) soll deutlich werden; das Blatt der Kollegin dient als Vorbild.",
+  "Stunde 3 (18.11.): Ballhausschwur und Bastille als Widerstand, wirksam heißt nicht gerechtfertigt. Die Rückschau (Folie 5 und 6) wiederholt das an zwei Bildern. Falls in Stunde 3 etwas nicht geschafft wurde, hier als Wiederholung aufgreifen.",
+  "8C (20.11.): Die Stunde 3 hat in der 8C gut funktioniert (Rückmeldung der Lehrkraft, 21.11.). Für die 8C entfällt diese Stunde (die Menschenrechte hatte sie am 13.11.).",
+  "Entscheidungen der Lehrkraft (21.11.): Artikel wie im Original (Artikel 6, nicht 5 wie in einem anderen Buch), Wortlaut in der gekürzten Fassung, Eigentumsrecht übernehmen (Artikel 17), Transfer als Aha-Moment („1789 oder heute?“), Blatt der Kollegin anpassen (eigene Fassung mit dem Wortspeicher der Kollegin plus Eigentumsrecht). Das Buch mit den Fotos ist ein anderes Buch und nur Inspiration. Die Nummerierung des Buches wird nicht übernommen.",
+  "Karikatur als Einstieg, Rückschau und Abschluss (Antwort in der Rolle des Dritten Stands): selbst gezeichnet, keine historische Quelle. Die Aussage ist bewusst überspitzt (Entgegenkommen als Gnade, historisch nicht freiwillig).",
+  "Regel „höchstens drei Methoden“: Quellenauswertung (Vormachen, angeleitet, selbstständig), Aha „1789 oder heute?“, Abschlussaufgabe. Karikatur und Rückschau sind Impuls beziehungsweise Routine.",
 ]));
 
 d.push(h3("Zeitplan (45 Minuten)"));
 d.push(table([800, 2300, 4300, 2806], [
   row([th("Min.", 800), th("AVIVA", 2300), th("Phase", 4300), th("Arbeitsform", 2806)], 320),
-  ...[["4", "Ankommen", "0  Karikatur, Vermutung, Stundenfrage, Ziele, Ablauf", "still, allein"], ["5", "Vorwissen", "1  Rückschau an den Bildern (4), Kette (1)", "allein, Partnercheck, Plenum"], ["8", "Informieren", "2  4. und 26. August (2), Drei Schritte (1), Modell Artikel 1 (3), Prüffrage (1), Reserve (1)", "hört zu, Stichprobe"], ["20", "Verarbeiten", "3  Artikel 3 mit Hilfe (3), Artikel 2, 4, 6 allein (6), Partnercheck und Zuordnung (4), Kontrolle und Aha (3), Urteil (4)", "allein, zu zweit"], ["8", "Auswerten", "4  Merksatz (2), Antwort als Dritter Stand (4), Ziele (1), Ausblick (1)", "schreibt, mündlich, still"]].map((r) => row(r.map((v, i) => tc(v, [800, 2300, 4300, 2806][i], { bold: i === 0 })), 340)),
+  ...[["4", "Ankommen", "0  Karikatur, Vermutung, Stundenfrage, Ziele, Ablauf", "still, allein"], ["4", "Vorwissen", "1  Rückschau an den Bildern (3), Kette (1)", "allein, Plenum"], ["10", "Informieren", "2  Verzicht auf die Vorrechte (3), Erklärung und drei Schritte (1), Modell Artikel 1 (3), Prüffrage (1), Reserve (2)", "hört zu, Stichprobe"], ["18", "Verarbeiten", "3  Artikel 3 mit Hilfe (3), sechs Artikel allein (6), Kontrolle Begriffe und Bilanz (3), Aha „1789 oder heute?“ (4), Reserve (2)", "allein, Plenum"], ["9", "Auswerten", "4  Merksatz (2), Abschlussaufgabe (5), Ziele (1), Ausblick (1)", "schreiben, mündlich, still"]].map((r) => row(r.map((v, i) => tc(v, [800, 2300, 4300, 2806][i], { bold: i === 0 })), 340)),
 ]));
-d.push(note("ZEIT", "Die Stunde ist dicht. Sollbruchstellen: (1) Rückschau: Plenum nur 30 Sekunden. (2) Reserve in Phase 2 (1 Minute) für erneutes Erklären, sonst weiter. (3) Übung 2: Wer nach 6 Minuten nur zwei Artikel hat, ist richtig. (4) Partnercheck: nur eine Zuordnung genügt. (5) Urteil: auf zwei Sätze kürzen (Ziel 3 mit Stern). Phase 4 „Auswerten“ wird nicht gestrichen. Die Übungsphase endet 8 Minuten vor Schluss."));
+d.push(note("ZEIT", "Die Stunde ist dicht. Sollbruchstellen: (1) Rückschau: Plenum nur 30 Sekunden. (2) Reserve in Phase 2 (2 Minuten) für erneutes Erklären. (3) Übung 2: Wer nach 6 Minuten nur den Begriff bei allen Artikeln hat, ist richtig; „Vorher“ nur bei Artikel 6. (4) Aha: Zeigen Sie nur die ersten zwei Paare, wenn die Zeit knapp ist (Ziel 3 mit Stern). (5) Abschlussaufgabe: nur mündlich, ohne 2 Minuten Schreiben. Phase 4 „Auswerten“ wird nicht gestrichen. Die Übungsphase endet 9 Minuten vor Schluss."));
 
-d.push(h3("Worauf die Hospitation achten kann (Aktivierung)"));
+d.push(h3("Worauf die Hospitation achten kann (Aktivierung, Kompetenz, Sicherung)"));
 d.push(...bullets([
-  "Alle in jeder Phase aktiv: Ankommen (Vermutung im Heft), Rückschau (allein schreiben, Partner), Modell (Prüffrage mit Stichproben), Übungen (allein, Partner), Urteil (allein), Merksatz (abschreiben), Abschluss (alle denken, wenige sprechen).",
-  "Kompetenzaufbau sichtbar: gleiche drei Schritte in Modell, angeleiteter und selbstständiger Phase; Hilfen werden abgebaut (Artikel 1 gelb ausgefüllt, Artikel 3 mit Hilfe, Artikel 2, 4, 6 ohne Hilfe).",
-  "Kognitive Aktivierung: Entschlüsseln der Sprechblase an den Bildern, Zuordnung Bild und Artikel mit Begründung, Maßstab und Gegenargument im Urteil.",
-  "Differenzierung: gestufte Hilfen auf dem Blatt (Satzanfänge, Wortspeicher), Artikel 4 als leichter Einstieg, Zusatz* (Artikel 10 und 11) für Schnelle.",
-  "Stichproben statt Gespräch (3 bis 6 Personen unterschiedlichen Niveaus, unbenotet), wenig Plenum, wörtliche Ansagen.",
+  "Lehrergesteuert mit Einzelarbeit: Portionen, Modell, angeleitet, selbstständig, Stichproben. Partnerarbeit nur kurz (Vergleichen nach Artikel 3).",
+  "Alle in jeder Phase aktiv: Ankommen (Vermutung im Heft), Rückschau (allein schreiben), Prüffrage (Stichprobe), Übungen (allein), Aha (allein ankreuzen), Abschluss (alle schreiben, wenige sprechen).",
+  "Kompetenzaufbau sichtbar: gleiche drei Schritte (Lesen, Begriff heute, Vorher) in Modell, angeleiteter und selbstständiger Phase; Hilfen werden abgebaut.",
+  "Kognitive Aktivierung: Entschlüsseln der Sprechblase an den Bildern, Übersetzen ins heutige Vokabular, Raten „1789 oder heute?“ und das Aha.",
+  "Sicherung: Vorher-Nachher-Bilanz, Merksatz, schriftliche und mündliche Abschlussaufgabe, Zielprüfung, Vergleich mit der Vermutung.",
+  "Differenzierung: Wortspeicher, Hilfe bei Artikel 3, kurze Artikel zuerst, Zusatz* (Vorher bei 2, 4, 10), Satzanfänge bei Aufgabe B.",
 ]));
 
 d.push(h3("Lautstärke und Ansagen (wörtlich)"));
 d.push(table([4700, 5506], [
   ["„Stifte liegen. Ihr hört nur zu.“", "Sie erklären, niemand schreibt."],
   ["„Jetzt arbeitet ihr allein. Die Aufgabe steht rechts.“", "Einzelarbeit, leise."],
-  ["„Flüsterstufe. Nur dein Partner hört dich.“", "Rückschau und Partnercheck."],
+  ["„Flüsterstufe. Nur dein Partner hört dich.“", "kurzer Vergleich nach Artikel 3."],
   ["„Vergleicht und verbessert mit Grün.“", "Kontrolle im eigenen Blatt."],
   ["„Es ist zu laut. Ab jetzt arbeitet ihr allein und schreibt.“", "Wenn es laut wird, keine Diskussion."],
 ].map(([a, b]) => row([tc(a, 4700, { fill: LIGHT, bold: true }), tc(b, 5506)], 340))));
 
 d.push(h3("Material und Vorbereitung (Details: Materialliste)"));
 d.push(...bullets([
-  "Arbeitsblatt_Menschenrechte_Quelle_8D.pdf: eine A4-Seite doppelseitig (Seite 1: Quelle und Auswertungstabelle, Seite 2: Zusatz*, Urteil, Rückmeldung). 26-mal drucken, doppelseitig.",
+  "Arbeitsblatt_Menschenrechte_Quelle_8D.pdf: eine A4-Seite doppelseitig (Seite 1: Quelle, Begriff heute, Vorher; Seite 2: „1789 oder heute?“, Historische Bedeutung, Rückmeldung). 26-mal drucken, doppelseitig.",
   "Loesung_Arbeitsblatt_Menschenrechte_8D.pdf (für Sie): Musterantworten für beide Seiten (Stichworte genügen).",
-  "Folien 1 bis 20 (Schrift mindestens 27 Punkt; Folie 1, 5, 15 und 18 mit der selbst gezeichneten Karikatur beziehungsweise den Bildern aus ihr).",
+  "Folien 1 bis 22 (Schrift mindestens 27 Punkt; Folie 1, 5, 6 und 20 mit der selbst gezeichneten Karikatur beziehungsweise den Bildern aus ihr).",
   "Seitentafel: Stundenfrage, Ziele, Ablauf (siehe Phase 0). Mitte der Tafel leer.",
   "Kreide, Grün zum Verbessern, Uhr oder Timer.",
 ]));
 
 // Phase 0
 d.push(phase("0", "Ankommen: Karikatur und Vermutung", 4, "AVIVA: Ankommen"));
-d.push(warum("Klerus und Adel zählen ihr Entgegenkommen auf („Ihr habt geschworen. Ihr habt die Bastille gestürmt. Wir kamen euch entgegen.“) und fragen: „Was wollt ihr noch?“ Das ist die Stundenfrage. Die Vermutung im Heft wird am Ende mit der Antwort verglichen (Vorher-Nachher). Alle haben beim Ankommen etwas zu tun (direkt: Aufträge auf der Folie).", "„Das prüfen wir an einer Quelle. Zuerst: Was meinen Klerus und Adel?“"));
+d.push(warum("Klerus und Adel zählen ihr Entgegenkommen auf („Ihr habt geschworen. Ihr habt die Bastille gestürmt. Wir kamen euch entgegen.“) und fragen: „Was wollt ihr noch?“ Das ist die Stundenfrage. Die Vermutung im Heft wird am Ende mit der Abschlussaufgabe verglichen (Vorher-Nachher). Alle haben beim Ankommen etwas zu tun (direkt: Aufträge auf der Folie).", "„Was haben Ballhaus und Bastille mit dem Entgegenkommen zu tun?“"));
 d.push(sp());
 d.push(step("kommt an, schreibt leise", {
   say: "Stifte liegen. Ihr hört nur zu. Schaut auf die Folie und lest, was Klerus und Adel sagen. Schreibt ins Heft: Was will der Dritte Stand noch? Ich vermute …",
   ziel: "Rahmen (Stundenfrage), Vorher-Nachher für Ziel 1 bis 3.",
   do: [
     "Folie 1 steht beim Betreten da: selbst gezeichnete Karikatur (keine historische Quelle) mit Klerus, Adel und dem Dritten Stand (Bauern und Bürger), der zuhört. An der Wand hängen zwei unbeschriftete Bilder: der Eid im Ballhaus und der Sturm auf die Bastille. Auftrag: Heft raus, Datum und Überschrift, Vermutung („Was will der Dritte Stand noch? Ich vermute …“, ein bis zwei Sätze). Keine Besprechung.",
-    "Folie 2 (Stundenfrage und Begriff „Quelle“, mit Relevanz: bei jeder Quelle und im Test, 45 Sekunden), Folie 3 (Lernziele, zugleich Raster der Rückmeldung, 45 Sekunden), Folie 4 (Ablauf, 30 Sekunden). Alle Folien: Sie sprechen, die Klasse hört zu.",
+    "Folie 2 (Stundenfrage und Begriff „Quelle“, 45 Sekunden), Folie 3 (Lernziele, zugleich Raster der Rückmeldung, 45 Sekunden), Folie 4 (Ablauf, 30 Sekunden). Alle Folien: Sie sprechen, die Klasse hört zu.",
   ],
   extra: [boardBox("Seitentafel · Stundenfrage, Ziel und Ablauf", [
-    bl("Was will der Dritte Stand noch? Was steht dazu in der Erklärung der Menschenrechte?", { after: 40 }),
-    bl("Ich kann Artikel in eigenen Worten wiedergeben und den Begriff nennen.", { after: 20 }),
-    bl("Ich kann einen Artikel mit früher vergleichen und einem Ereignis zuordnen.", { after: 20 }),
-    bl("Ich kann mit Beleg und Maßstab begründen, welcher Artikel am wichtigsten ist.*", { after: 60 }),
-    bl("A Karikatur · V Rückschau · I Quelle auswerten · V Blatt, Urteil · A Merksatz, Antwort", { after: 0 }),
+    bl("Was will der Dritte Stand noch? Was ändern die Abschaffung der Vorrechte und die Menschenrechte?", { after: 40 }),
+    bl("Ich kann erklären, was sich für den Dritten Stand verbessert hat.", { after: 20 }),
+    bl("Ich kann Artikel von 1789 in heutige Begriffe übersetzen.", { after: 20 }),
+    bl("Ich kann an einem Grundgesetz-Artikel zeigen, dass die Erklärung nachwirkt.*", { after: 60 }),
+    bl("A Karikatur · V Rückschau · I Vorrechte, Modell · V Blatt, Aha · A Merksatz, Antwort", { after: 0 }),
   ]), gapP()],
 }));
 
 // Phase 1
-d.push(phase("1", "Rückschau: Was meinen Klerus und Adel?", 5, "AVIVA: Vorwissen aktivieren"));
-d.push(warum("Der Stoff der Stunde 3 wird echt wiederholt (allein, Partnercheck, Plenum), und zwar als Rückschau an zwei Bildern statt als reine Abfrage. Die Bilder sind unbeschriftet, die Klasse entschlüsselt „geschworen“ und „gestürmt“ selbst und verbindet sie mit dem Entgegenkommen (Ursache und Folge). Wer in Stunde 3 etwas nicht geschafft hat, sieht es hier noch einmal.", "„Die Bilder haben mit dem Entgegenkommen zu tun. Wie genau, seht ihr gleich.“"));
+d.push(phase("1", "Rückschau: Was meinen Klerus und Adel?", 4, "AVIVA: Vorwissen aktivieren"));
+d.push(warum("Der Stoff der Stunde 3 wird echt wiederholt (allein, Plenum), und zwar als Rückschau an zwei Bildern statt als reine Abfrage. Die Bilder sind unbeschriftet, die Klasse entschlüsselt „geschworen“ und „gestürmt“ selbst und verbindet sie mit dem Entgegenkommen (Ursache und Folge). Kein Partnercheck, weil die Stunde lehrergesteuert ist. Wer in Stunde 3 etwas nicht geschafft hat, sieht es hier noch einmal.", "„Klerus und Adel kamen entgegen, weil sie Angst hatten. Was genau haben sie aufgegeben? Hört zu.“"));
 d.push(sp());
-d.push(step("schreibt allein, vergleicht zu zweit", {
-  say: "Stifte liegen. Ihr hört nur zu. Jetzt arbeitet ihr allein. Die Aufgabe steht rechts. … Flüsterstufe. Nur dein Partner hört dich. Vergleicht.",
-  ziel: "Ziel 2 (Ereignisse von 1789 kennen).",
+d.push(step("schreibt allein, antwortet in Stichproben", {
+  say: "Stifte liegen. Ihr hört nur zu. Jetzt arbeitet ihr allein. Die Aufgabe steht rechts.",
+  ziel: "Ziel 1 (Ereignisse 1789 als Voraussetzung).",
   do: [
-    "Folie 5 (4 Minuten): Zu jedem Bild ins Heft: Was geschah? Was bewirkte es? (2 Minuten allein), Partnercheck („Was haben die Bilder mit dem Entgegenkommen zu tun?“, 1 Minute), Plenum: Stichproben bei 3 bis 4 Personen unterschiedlichen Niveaus (30 Sekunden, kurze Antwort, unbenotet).",
-    "Folie 6, erster Teil (1 Minute): Kette 20. Juni Ballhausschwur (Versammlung bleibt zusammen) → 14. Juli Bastille (König zieht die Soldaten ab) → Sommer: Bauern greifen Schlösser an. „Vergleicht und verbessert mit Grün.“",
+    "Folie 5 (3 Minuten): Zu jedem Bild ins Heft: Was geschah? Was bewirkte es? (2 Minuten allein), Plenum: Stichproben bei 3 bis 4 Personen unterschiedlichen Niveaus (1 Minute, kurze Antwort, unbenotet).",
+    "Folie 6 (1 Minute): Kette 20. Juni Ballhausschwur (Versammlung bleibt zusammen) → 14. Juli Bastille (König zieht die Soldaten ab) → Sommer: Bauern greifen Schlösser an; die Zeilen 4. und 26. August nur nennen. „Vergleicht und verbessert mit Grün.“",
   ],
-  sol: "Erwartung: Bild links: Eid im Ballhaus am 20. Juni, die Abgeordneten wollen nicht auseinandergehen, die Versammlung bleibt (gewaltlos). Bild rechts: Sturm auf die Bastille am 14. Juli, Gewalt, der König zieht die Soldaten ab, Aufstände im Land. Zusammenhang: Die Ereignisse machten Klerus und Adel Angst, das Entgegenkommen war nicht freiwillig.",
+  sol: "Erwartung: Bild links: Eid im Ballhaus am 20. Juni, die Abgeordneten wollen nicht auseinandergehen (gewaltlos). Bild rechts: Sturm auf die Bastille am 14. Juli, Gewalt, der König zieht die Soldaten ab, Aufstände im Land. Zusammenhang: Die Ereignisse machten Klerus und Adel Angst, das Entgegenkommen war nicht freiwillig.",
 }));
 
 // Phase 2
-d.push(phase("2", "Quelle auswerten: 4./26. August, drei Schritte, Modell", 8, "AVIVA: Informieren"));
-d.push(warum("Direktes Vorgehen, weil das Vorwissen zur Quellenarbeit gering ist. Zwei Portionen: erst der historische Rahmen (4. und 26. August, 2 Minuten), dann die Methode mit Modell. Lehrkraft denkt laut an Artikel 1, die Klasse sieht, wie die Schritte zusammengehören. Prüffrage mit Stichprobe, eine Minute Reserve zum erneuten Erklären. Es wird nicht weitergegangen, wenn etwas nicht verstanden ist.", "„Entgegenkommen ist Gnade von oben. Was ist der Gegenpol? Das lest ihr jetzt in der Quelle. Auf dem Blatt steht dasselbe in der Tabelle: gelb ist mein Beispiel.“"));
+d.push(phase("2", "Vorrechte, Erklärung, Quelle ins Heute übersetzen", 10, "AVIVA: Informieren"));
+d.push(warum("Direktes Vorgehen, weil das Vorwissen zur Quellenarbeit gering ist. Portion 1: Verzicht auf die Vorrechte (4. August, vorher und nachher). Portion 2: Erklärung vom 26. August und die Methode (Lesen, Begriff heute, Vorher), Modell an Artikel 1. Prüffrage mit Stichprobe, zwei Minuten Reserve zum erneuten Erklären. Es wird nicht weitergegangen, wenn etwas nicht verstanden ist.", "„Entgegenkommen ist Gnade von oben. Was ist der Gegenpol? Das lest ihr jetzt in der Quelle. Auf dem Blatt steht dasselbe in der Tabelle: gelb ist mein Beispiel.“"));
 d.push(sp());
 d.push(step("hört zu, antwortet in Stichproben", {
   say: "Stifte liegen. Ihr hört nur zu. … Ich mache es vor, ihr schaut zu.",
-  ziel: "Ziel 2 (Rahmen, Einordnen) und Ziel 1 und 2 (Methode).",
+  ziel: "Ziel 1 (vorher, nachher) und Ziel 2 (Methode, Begriff heute).",
   do: [
-    "Portion 1 (Folie 6, zweiter Teil, 2 Minuten): In der Nacht zum 4. August 1789 beschließt die Nationalversammlung, die Vorrechte abzuschaffen (zum Beispiel die Steuerfreiheit von Klerus und Adel, Abgaben und Dienste der Bauern an den Adel). Klerus und Adel kommen entgegen, weil sie Angst vor den Aufständen haben: nicht freiwillig. Am 26. August folgt die Erklärung der Menschen- und Bürgerrechte, Vorbild ist die amerikanische Unabhängigkeitserklärung von 1776. Warnung vor dem Fehler: Abgeschafft heißt nicht, dass sofort alle gleich leben (viele Abgaben müssen Bauern noch ablösen); nicht der König, sondern die Nationalversammlung schaffte die Vorrechte ab. Prüffrage (Stichprobe, 2 Personen): „Warum kommen Klerus und Adel am 4. August entgegen?“ Erwartung: aus Angst vor den Aufständen.",
-    "Portion 2, Teil 1 (Folie 7, 1 Minute): Drei Schritte, immer in dieser Reihenfolge: Lesen (in eigenen Worten), Einordnen (Was war vorher anders? Passt ein Bild?), Begriff (Wortspeicher). Warnung vor dem Fehler: nicht abschreiben, in eigene Worte fassen.",
-    "Portion 2, Teil 2 (Folie 8, 3 Minuten): Sie denken laut an Artikel 1: „Was steht da? Alle Menschen haben von Geburt an dieselben Rechte. Was war vorher anders? Die Geburt entschied über den Stand. Wer gewinnt? Der Dritte Stand. Welcher Begriff? Gleichheit.“ Warnung vor dem Fehler: Gleich an Rechten heißt nicht gleich reich.",
-    "Prüffrage (Folie 9, 1 Minute) und Reserve (1 Minute): „Was machst du im Schritt 2?“ und „Warum schreibst du nicht einfach ab?“ Stichprobe bei 4 bis 6 Personen unterschiedlichen Niveaus (unbenotet, getrennt von den mündlichen Noten). Bei Unsicherheit Schritt 2 am Artikel 1 wiederholen (Reserve). Dann „Jetzt macht ihr es selbst.“",
+    "Portion 1 (Folie 7, 3 Minuten): In der Nacht zum 4. August 1789 beschließt die Nationalversammlung, die Vorrechte abzuschaffen. Klerus und Adel geben nach, weil sie Angst vor den Aufständen der Bauern haben: nicht freiwillig, Gnade von oben. Vorher: Klerus und Adel zahlen keine Steuern, die Bauern leisten Abgaben und Dienste an den Adel, Ämter und Jagd sind Vorrechte. Nachher: Die Steuerfreiheit fällt, viele Abgaben fallen weg oder werden abgelöst. Warnung vor dem Fehler: Abgeschafft heißt nicht, dass sofort alle gleich leben (viele Abgaben müssen Bauern noch ablösen); nicht der König, sondern die Nationalversammlung beschloss es. Prüffrage (Stichprobe, 2 Personen): „Warum geben Klerus und Adel nach?“ Erwartung: aus Angst vor den Aufständen.",
+    "Portion 2, Teil 1 (Folie 8, 1 Minute): Am 26. August beschließt die Nationalversammlung die Erklärung der Menschen- und Bürgerrechte, Vorbild ist die amerikanische Unabhängigkeitserklärung von 1776. Drei Schritte, immer in dieser Reihenfolge: Lesen, Begriff heute (Wortspeicher), Vorher (bei Artikel 6, 11 und 17). Warnung vor dem Fehler: nicht abschreiben, den heutigen Begriff suchen.",
+    "Portion 2, Teil 2 (Folie 9, 3 Minuten): Sie denken laut an Artikel 1: „Was steht da? Alle Menschen haben von Geburt an dieselben Rechte. Welches Wort sagen wir heute? Gleichheit. Was war vorher anders? Die Geburt entschied über den Stand. Wer gewinnt? Der Dritte Stand.“ Warnung vor dem Fehler: Gleich an Rechten heißt nicht gleich reich.",
+    "Prüffrage (Folie 10, 1 Minute) und Reserve (2 Minuten): „Was machst du im Schritt 2 Begriff heute?“ und „Warum steht Gleichheit nicht wörtlich im Artikel?“ Stichprobe bei 4 bis 6 Personen unterschiedlichen Niveaus (unbenotet, getrennt von den mündlichen Noten). Bei Unsicherheit Schritt 2 am Artikel 1 wiederholen (Reserve). Dann „Jetzt macht ihr es selbst.“",
   ],
-  sol: "Erwartung zur Prüffrage: Ich frage, was vorher anders war, wer gewinnt und ob ein Bild passt. / Ich muss es in eigene Worte fassen, so zeigt sich, ob ich es verstanden habe.",
+  sol: "Erwartung zur Prüffrage: Ich suche das Wort, das wir heute dafür sagen. / Die Erklärung ist von 1789, wir sagen heute ein anderes Wort für dieselbe Sache.",
 }));
 
 // Phase 3
-d.push(phase("3", "Arbeitsblatt: angeleitet, selbstständig, Zuordnung, Urteil", 20, "AVIVA: Verarbeiten"));
-d.push(warum("Progression der direkten Instruktion: erste Anwendung (Artikel 3 mit Hilfe), selbstständiges Üben (Artikel 2, 4, 6 ohne Hilfe), Partnercheck mit Zuordnung (Bild und Artikel), Kontrolle mit Aha („Was sie taten, wird zum Recht“), dann das Urteil als Sachurteil mit Beleg und Werturteil mit offengelegtem Maßstab. Artikel 2 und 4 verknüpfen mit Stunde 3 (Widerstand, Freiheit endet, wo sie anderen schadet).", "„Welcher Artikel ist für den Dritten Stand am wichtigsten? Das entscheidet ihr jetzt.“"));
+d.push(phase("3", "Arbeitsblatt: angeleitet, selbstständig, Bilanz, Aha", 18, "AVIVA: Verarbeiten"));
+d.push(warum("Progression der direkten Instruktion in Einzelarbeit: erste Anwendung (Artikel 3 mit Hilfe), selbstständiges Üben (sechs Artikel), Kontrolle mit Bilanz (Was hat sich verbessert?), dann der Aha-Moment „1789 oder heute?“. Die Aufgabe A auf Seite 2 sagt nicht, dass es Paare gibt: Das Echo im Grundgesetz soll überraschen.", "„Das war vor 237 Jahren. Was davon gilt noch heute? Dreht Seite 2 um.“"));
 d.push(sp());
 d.push(step("3a  Artikel 3 mit Hilfe (3 Min.)", {
   say: "Stifte liegen. Ihr hört nur zu. Jetzt nehmt ihr das Arbeitsblatt. Jetzt arbeitet ihr allein. Die Aufgabe steht rechts.",
   ziel: "Ziel 1 und 2 (erste Anwendung).",
   do: [
-    "Folie 10: Arbeitsblatt Seite 1, Artikel 3 lesen, „Lesen“ und „Einordnen“ mit den Hilfen ausfüllen (Begriff steht schon). Nach 2 Minuten: „Flüsterstufe. Nur dein Partner hört dich. Vergleicht.“ Folie 11 (30 Sekunden): Lösung, „Vergleicht und verbessert mit Grün.“ Stichprobe bei 2 Personen.",
+    "Folie 11: Arbeitsblatt Seite 1, Artikel 3 lesen, Begriff steht schon, bei „Vorher“ die Hilfe ergänzen. Nach 2 Minuten: „Flüsterstufe. Nur dein Partner hört dich. Vergleicht.“ Folie 12 (30 Sekunden): Lösung, „Vergleicht und verbessert mit Grün.“ Stichprobe bei 2 Personen.",
   ],
-  sol: "Lesen: Die Herrschaft geht vom Volk aus, nicht vom König allein. Einordnen: Vorher bestimmte der König allein, passt zum Ballhausschwur. Begriff: Volkssouveränität.",
+  sol: "Begriff: Volkssouveränität. Vorher: Der König bestimmte allein.",
 }));
 d.push(sp());
-d.push(step("3b  Artikel 2, 4, 6 selbst (6 Min.)", {
+d.push(step("3b  Sechs Artikel selbst (6 Min.)", {
   say: "Stifte liegen. Jetzt arbeitet ihr allein. Die Aufgabe steht rechts.",
   ziel: "Ziel 1 und 2 (selbstständiges Üben).",
   do: [
-    "Folie 12: Selbstständiges Üben ohne Hilfen (Wortspeicher bleibt). Durch die Reihen gehen (Heft-Stichprobe bei 4 bis 6 Personen unterschiedlichen Niveaus, mitlesen, nicht kommentieren). Differenzierung: Wer unsicher ist, beginnt mit Artikel 4. Wer früh fertig ist, bearbeitet das Zusatz* (Artikel 10 und 11).",
+    "Folie 13: Artikel 2, 4, 6, 10, 11 und 17: Begriff heute (Wortspeicher), bei 6, 11 und 17 „Vorher“. Durch die Reihen gehen (Heft-Stichprobe bei 4 bis 6 Personen unterschiedlichen Niveaus, mitlesen, nicht kommentieren). Differenzierung: Wer unsicher ist, beginnt mit Artikel 4 und 17. Wer früh fertig ist, bearbeitet das Zusatz* (Vorher bei 2, 4, 10).",
   ],
 }));
 d.push(sp());
-d.push(step("3c  Partnercheck und Zuordnung (4 Min.)", {
-  say: "Stifte liegen. Flüsterstufe. Nur dein Partner hört dich. Vergleicht Artikel 2, 4 und 6. Dann ordnet ihr zu: Welches Bild passt zu welchem Artikel? Begründet mit einem Wort aus dem Artikel.",
-  ziel: "Ziel 2 (einem Ereignis von 1789 zuordnen).",
+d.push(step("3c  Kontrolle und Bilanz (3 Min.)", {
+  say: "Stifte liegen. Vergleicht und verbessert mit Grün. … Ihr hört nur zu. Vergleicht mit euren Einträgen bei Artikel 6, 11 und 17.",
+  ziel: "Ziel 2 (Kontrolle der Übersetzung), Ziel 1 (Bilanz: Was hat sich verbessert?).",
   do: [
-    "Folie 13: Jede Person liest vor, Unterschiede klären, mit Grün verbessern. Dann ordnen die Paare die zwei Bilder (aus Folie 5) Artikeln zu und begründen mit einem Wort aus dem Artikel. Sie hören bei 4 bis 6 Paaren zu, ohne zu helfen. Sollbruchstelle: Reicht die Zeit nicht, genügt eine Zuordnung.",
+    "Folie 14 (1,5 Minuten): Begriffe zu allen Artikeln. Stichprobe bei 2 Personen. Hinweis: Artikel 2 nennt das Recht auf Widerstand (Stunde 3), aber nicht Gewalt; Artikel 4 begrenzt die Freiheit (sie endet, wo sie anderen schadet): wirksam heißt nicht gerechtfertigt.",
+    "Folie 15 (1,5 Minuten): Vorher und Seitdem bei Artikel 3, 6, 11 und 17. Bedeutung: gleiche Rechte statt Vorrechte nach Geburt, Schutz statt Willkür des Königs, Macht beim Volk. Haltung: ein großer Schritt auf dem Papier; ob die Rechte für alle galten, ist die Frage der nächsten Stunde.",
   ],
+  sol: "Art. 1 Gleichheit, Art. 2 Grundrechte (auch Widerstand), Art. 3 Volkssouveränität, Art. 4 Freiheit, Art. 6 Gleichheit vor dem Gesetz, Art. 10 Religionsfreiheit, Art. 11 Meinungsfreiheit, Art. 17 Eigentumsrecht. Vorher: 3 der König bestimmt allein; 6 Vorrechte für Klerus und Adel, keine Steuern; 11 der König kontrolliert, was gedruckt wird; 17 Bauern geben Ernte und Dienste ab, Eigentum nicht gesichert.",
 }));
 d.push(sp());
-d.push(step("3d  Kontrolle und Aha (3 Min.)", {
-  say: "Stifte liegen. Vergleicht und verbessert mit Grün. … Ihr hört nur zu. Vergleicht mit eurer Zuordnung.",
-  ziel: "Ziel 1 und 2 (Kontrolle), Aha für Ziel 2 und Vorbereitung auf Ziel 3.",
+d.push(step("3d  Aha: 1789 oder heute? (4 Min.)", {
+  say: "Stifte liegen. Ihr hört nur zu. Jetzt dreht ihr Seite 2 um. Jetzt arbeitet ihr allein. Die Aufgabe steht rechts. … Stifte liegen. Ihr hört nur zu. Schaut auf eure Sätze A bis H.",
+  ziel: "Ziel 3 (Transfer, Vorbildwirkung).",
   do: [
-    "Folie 14 (2 Minuten): Lösung der Tabelle (Stichworte, andere richtige Formulierungen zählen). Stichprobe bei 2 Personen.",
-    "Folie 15 (1 Minute, Aha): Ballhaus passt zu Artikel 3 (Herrschaft geht vom Volk aus), Bastille zu Artikel 2 (Recht auf Widerstand). Artikel 2 nennt aber nicht Gewalt; Artikel 4 begrenzt: Die Freiheit endet, wo sie anderen schadet. Haltung: Wir beschreiben, was dort steht, wir erklären nicht, dass Gewalt gut ist (wirksam heißt nicht gerechtfertigt, Stunde 3). Was sie taten, steht ab dem 26. August als Recht in der Erklärung.",
+    "Folie 16 (2 Minuten allein): Aufgabe A auf Seite 2: acht Sätze ohne Jahr, vier aus der Erklärung von 1789 (Artikel 3, 6, 11, 17), vier aus dem Grundgesetz (Artikel 3, 5, 14, 20), gemischt. Ankreuzen: 1789 oder heute, raten ist erlaubt. Sagen Sie nicht, dass es Paare gibt.",
+    "Folie 17 und 18 (je 1 Minute, Sie sprechen): Zu jedem Satz von 1789 das Echo im Grundgesetz, fast wörtlich. Aussage: „Was ihr eben als Recht aus 1789 gelesen habt, steht nach 237 Jahren fast wörtlich in unserem Grundgesetz. Die Erklärung war ein Vorbild.“ Haltung: Heute gelten die Rechte für alle, 1789 galten sie nicht für alle (nächste Stunde). Lassen Sie den Aha-Moment wirken, kein Gespräch.",
   ],
-  sol: "Art. 2: Der Staat muss die Rechte schützen, auch das Recht auf Widerstand. Vorher: Ungehorsam war Verbrechen. Grundrechte. Art. 4: Jeder darf tun, was anderen nicht schadet. Vorher: Einsperren ohne Urteil. Freiheit. Art. 6: Gleiches Gesetz für alle. Vorher: Steuerfreiheit, Ämter nur für Adel. Gleichheit.",
-}));
-d.push(sp());
-d.push(step("3e  urteilt allein (4 Min.)", {
-  say: "Stifte liegen. Jetzt arbeitet ihr allein. Die Aufgabe steht rechts.",
-  ziel: "Ziel 3 (Beleg und Maßstab).",
-  do: [
-    "Folie 16: Wähle einen Artikel, der für den Dritten Stand am wichtigsten ist; auf Seite 2 mit den Satzanfängen: Beleg („Artikel … sagt: …“), Wirkung („Das ändert für den Dritten Stand, dass …“), Maßstab („Mein Maßstab: Wichtig ist für mich, was …“, mögliche Bausteine: die meisten Menschen betrifft, am meisten verändert, vor Willkür und Gewalt schützt), Urteil („Ich halte Artikel … für am wichtigsten, weil …“), Gegenargument („Dagegen spricht, dass …“, zum Beispiel aus Sicht von Klerus und Adel). Kein richtiges Urteil. Stichprobe bei 4 bis 6 Personen (unbenotet). Wer das Blatt abgeben möchte, legt es nach der Stunde vorn ab.",
-  ],
-  sol: "Mögliche Urteile (Auswahl, keine Musterlösung). Artikel 6 (gleiches Gesetz für alle: keine Steuerfreiheit mehr; Maßstab: betrifft die meisten). Artikel 3 (Volk bestimmt; Maßstab: ändert am meisten). Artikel 4 (kein Einsperren ohne Urteil; Maßstab: schützt vor Willkür). Artikel 2 (Widerstand ist ein Recht, ohne Gewalt zu nennen). Gegenargument: Auf dem Papier alles gleich, aber wer darf wählen? Oder aus Sicht von Klerus und Adel: Verlust der Vorrechte.",
+  sol: "Lösung Aufgabe A: A 1789 (Art. 6), B heute (GG Art. 20 Abs. 2), C 1789 (Art. 11), D heute (GG Art. 14 Abs. 1), E heute (GG Art. 3 Abs. 1), F 1789 (Art. 3), G 1789 (Art. 17), H heute (GG Art. 5 Abs. 1). Paare: A und E, C und H, F und B, G und D.",
 }));
 
 // Phase 4
-d.push(phase("4", "Auswerten: Merksatz und Antwort als Dritter Stand", 8, "AVIVA: Auswerten"));
-d.push(warum("Der Merksatz sichert das Ergebnis (Datum, Begriffe, Recht und Vorrecht) für den Test. Dann greift die Klasse die Aussage von Klerus und Adel vom Anfang auf und antwortet als Dritter Stand mit Beleg aus der Quelle (mehrere gute Antworten: Position, Beleg, Vergleich mit früher, „weil“). Das prüft alle drei Ziele. Der Vergleich mit der Vermutung zeigt den Lernzuwachs, ohne Floskel.", "„Gilt das für alle? Das sehen wir nächste Woche.“"));
+d.push(phase("4", "Auswerten: Merksatz und Abschlussaufgabe", 9, "AVIVA: Auswerten"));
+d.push(warum("Der Merksatz sichert das Ergebnis (Daten, heutige Begriffe, Recht statt Vorrecht, Echo im Grundgesetz) für den Test. Die Abschlussaufgabe prüft alle drei Ziele: Die Klasse antwortet als Dritter Stand schriftlich (Aufgabe B „Historische Bedeutung“) und mündlich mit Artikel, Vorher, Heute. Der Vergleich mit der Vermutung zeigt den Lernzuwachs, ohne Floskel.", "„Gilt das für alle? Das sehen wir nächste Woche.“"));
 d.push(sp());
-d.push(step("schreibt ab, denkt, antwortet als Dritter Stand", {
-  say: "Stifte liegen. Ihr hört nur zu. Jetzt schreibt ihr von der Folie ab: Merksatz 1. Rahmt ihn rot ein. … Das ist die letzte Aufgabe. Schaut noch einmal auf die Karikatur vom Anfang. Ihr seid der Dritte Stand. Denkt zehn Sekunden nach. Ich rufe euch auf.",
-  ziel: "Ziel 1 und 2 (Merksatz), Ziel 1, 2 und 3 (Abschlussantwort).",
+d.push(step("schreibt ab, schreibt, antwortet als Dritter Stand", {
+  say: "Stifte liegen. Ihr hört nur zu. Jetzt schreibt ihr von der Folie ab: Merksatz 1. Rahmt ihn rot ein. … Schaut noch einmal auf die Karikatur vom Anfang. Ihr seid der Dritte Stand. Schreibt eure Antwort auf. Jetzt arbeitet ihr allein.",
+  ziel: "Ziel 1, 2 und 3 (Merksatz, Abschlussaufgabe).",
   do: [
-    "Folie 17 (Merksatz, 2 Minuten): Abschreiben und rot umrahmen, Beispiel (Artikel 6) und Test („Recht gilt für alle, Vorrecht nur für wenige“) mit auf die Folie, kein „Wofür“. Gelenk: „Jetzt antwortet ihr Klerus und Adel.“",
-    "Folie 18 (Abschlussfrage, 4 Minuten): Mündlich, in der Ich-Form, ohne Schnipsel: „Ich antworte euch: Wir wollen …, weil Artikel … sagt …, früher …“. Form nach Verlauf: Blitzlicht (4 bis 6 Personen unterschiedlichen Niveaus gezielt aufrufen, kein Kommentar) oder Duell zu zweit (leise: eine Person Klerus und Adel, eine Dritter Stand). Wer hat umgedacht? Vergleich mit der Vermutung vom Anfang.",
-    "Folie 19 (Ziele prüfen, 1 Minute, still): Haben wir die Ziele erreicht? Wer das Blatt abgeben möchte, legt es vorn ab. Folie 20 (Ausblick, nur lesen, Brücke zu Stunde 5): „Für wen gelten diese Rechte wirklich?“",
+    "Folie 19 (Merksatz, 2 Minuten): Abschreiben und rot umrahmen, Beispiel (Artikel 6 und Grundgesetz Artikel 3) und Test („Recht gilt für alle, Vorrecht nur für wenige“) mit auf die Folie, kein „Wofür“.",
+    "Folie 20 (Abschlussaufgabe, 5 Minuten): 2 Minuten still schreiben auf Seite 2, Aufgabe B „Historische Bedeutung“ (Vorher, Seit 1789, Heute, mit Satzanfängen). Dann 3 Minuten mündlich: Blitzlicht bei 4 bis 6 Personen unterschiedlichen Niveaus, in der Ich-Form: „Ich antworte euch: Wir wollen …, weil Artikel … sagt. Früher …, heute steht im Grundgesetz …“ Wer hat umgedacht? Vergleich mit der Vermutung vom Anfang. Bei Zeitnot: nur mündlich.",
+    "Folie 21 (Ziele prüfen, 1 Minute, still): Haben wir die Ziele erreicht? Wer das Blatt abgeben möchte, legt es vorn ab. Folie 22 (Ausblick, nur lesen, Brücke zu Stunde 5): „Für wen galten diese Rechte 1789 wirklich?“",
   ],
-  sol: "Mögliche Antworten als Dritter Stand (Auswahl, keine Musterlösung). „Wir wollen keine Gnade, sondern Rechte, weil Artikel 6 sagt, dass das Gesetz für alle gleich ist, früher hatten Klerus und Adel Vorrechte.“ „Wir wollen mitbestimmen, weil Artikel 3 sagt, dass die Herrschaft vom Volk ausgeht, früher bestimmte der König allein.“ „Wir wollen frei sein, weil Artikel 4 sagt, dass man alles tun darf, was anderen nicht schadet, früher konnte der König jemanden ohne Urteil einsperren.“",
+  sol: "Mögliche Antworten als Dritter Stand (Auswahl, keine Musterlösung). „Wir wollen Gleichheit, weil Artikel 6 sagt, dass das Gesetz für alle gleich ist. Früher hatten Klerus und Adel Vorrechte, heute steht im Grundgesetz, dass alle Menschen vor dem Gesetz gleich sind.“ „Wir wollen frei reden, weil Artikel 11 das erlaubt. Früher kontrollierte der König den Druck, heute steht die Meinungsfreiheit im Grundgesetz Artikel 5.“ „Wir wollen mitbestimmen, weil Artikel 3 sagt, dass die Herrschaft vom Volk ausgeht, früher bestimmte der König allein, heute steht im Grundgesetz, dass alle Staatsgewalt vom Volke ausgeht.“",
 }));
 
 d.push(h3("So sieht das Heft und das Blatt am Ende aus"));
@@ -235,21 +229,22 @@ d.push(table([2300, 7906], [
   ["Überschrift", "Datum · Überschrift zur Stundenfrage (z. B. „Die Menschenrechte“)"],
   ["Vermutung", "„Was will der Dritte Stand noch? Ich vermute …“ (Beginn der Stunde)"],
   ["Rückschau", "zu jedem Bild: Was geschah? Was bewirkte es? Verbesserungen grün"],
-  ["Blatt Seite 1", "Tabelle: Artikel 1 (gelb), Artikel 3 mit Hilfe, Artikel 2, 4, 6 selbst; Verbesserungen grün"],
-  ["Blatt Seite 2", "Zusatz* (Artikel 10 und 11), Urteil mit Beleg, Wirkung, Maßstab, Urteil und Gegenargument; bei Abgabe Rückmeldung nach Stufen"],
+  ["Blatt Seite 1", "Tabelle: Artikel 1 (gelb), Artikel 3 mit Hilfe, sechs Artikel selbst (Begriff heute, Vorher bei 6, 11, 17); Verbesserungen grün"],
+  ["Blatt Seite 2", "Aufgabe A „1789 oder heute?“ angekreuzt, Aufgabe B „Historische Bedeutung“ (Vorher, Seit 1789, Heute), Rückmeldung nach Stufen bei Abgabe"],
   ["Heft", "Merksatz 1 (abgeschrieben, rot umrahmt)"],
 ].map(([a, b]) => row([tc(a, 2300, { bold: true, fill: LIGHT }), tc(b, 7906)], 340))));
 
 d.push(h3("Nach der Stunde festhalten (Reflexionslog)"));
-d.push(...bullets(["Passten Ziel, Inhalt und Methode zusammen? Wie lief die Zeit? Wie viel echte Lernzeit hatte die Klasse?", "Haben die Schritte „Lesen, Einordnen, Begriff“ gesessen? Wo hakte es (Prüffrage, Artikel 3, selbstständige Phase, Zuordnung)?", "Wie viele Blätter wurden abgegeben, auf welcher Stufe lagen sie?", "Wie lief die Aktivierung (Hospitationsrückmeldung zum Kompetenzerwerb)? Was nimmst du mit?", "Wie lief Stunde 3 (Rückmeldung nachtragen), und wie lief die Rückschau an den Bildern?", "Kam die Pointe „Gnade oder Recht“ in der Abschlussantwort an? Gab es Antworten mit Beleg und Vergleich mit früher?"]));
+d.push(...bullets(["Passten Ziel, Inhalt und Methode zusammen? Wie lief die Zeit? Wie viel echte Lernzeit hatte die Klasse?", "Haben die Schritte „Lesen, Begriff heute, Vorher“ gesessen? Wo hakte es (Prüffrage, Artikel 3, selbstständige Phase)?", "Wie lief der Aha-Moment „1789 oder heute?“ (Raten, Reaktion)? Wie gut war die Sicherung (Merksatz, Aufgabe B, mündliche Antworten)?", "Wie viele Blätter wurden abgegeben, auf welcher Stufe lagen sie?", "Hospitationsrückmeldung zur Aktivierung und zum Kompetenzerwerb: Was nimmst du mit?", "Wie lief Stunde 3 (Rückmeldung nachtragen)?"]));
 d.push(h3("Zum Prüfen"));
 d.push(...bullets([
-  "Wortlaut der Artikel: gekürzte und vereinfachte Fassung, mit der Kollegin und dem Lehrbuch abgleichen (Artikel 3: im Original „Nation“, hier „Nation, also Volk“). Der Test sollte denselben Wortlaut nutzen.",
-  "4. August: Aufzählung der abgeschafften Vorrechte und die Ablösepflicht für Bauern gegen das Lehrbuch lesen. Die Aussage „viele Abgaben müssen abgelöst werden“ ist allgemeines Wissen. Dass die Aufstände der Bauern ein wichtiger Grund für den Verzicht waren, ist die gängige Darstellung.",
-  "Artikel 10 (Zusatz): „Vorher hatte der katholische Glaube Vorrang“ ist eine Vereinfachung (Protestanten waren benachteiligt). Artikel 11: Zensur durch den König. Beides steht nur in der Lösung und im Zusatz*.",
-  "Die Karikatur (Klerus, Adel und Dritter Stand, zwei Bilder an der Wand) ist selbst gezeichnet, keine historische Quelle. Die Aussage der Figuren („Wir kamen euch entgegen.“) ist bewusst überspitzt, eine erfundene Selbstdarstellung. Historisch war der Verzicht am 4. August nicht freiwillig (Angst vor den Bauernaufständen). Die Klasse widerlegt die Aussage am Ende selbst.",
-  "Zuordnung Bild und Artikel (Ballhaus zu Artikel 3, Bastille zu Artikel 2) ist eine Deutung, die Klasse darf andere Zuordnungen begründen. Artikel 2 nennt das Recht auf Widerstand, nicht Gewalt.",
-  "Die Notenfrage (Punkte, Schlüssel) ist offen: Die Tabelle liefert pro Artikel Felder, das Urteil gibt eine Stufe. Das können wir später ergänzen.",
+  "Wortlaut der Artikel: gekürzte und vereinfachte Fassung (Entscheidung der Lehrkraft); Nummerierung wie im Original (Artikel 6, in einem anderen Buch steht 5). Mit der Kollegin abgleichen. Neu: Artikel 17 (Eigentum) und der Begriff Eigentumsrecht; der Wortspeicher der Kollegin enthält ihn nicht (Test vergleichbar halten).",
+  "Grundgesetz: Wortlaut der Artikel 3 Abs. 1, 5 Abs. 1, 14 Abs. 1 und 20 Abs. 2 ist leicht gekürzt, bitte mit dem Original abgleichen.",
+  "4. August: Aufzählung der abgeschafften Vorrechte und die Ablösepflicht für Bauern gegen das Lehrbuch lesen. Dass die Aufstände der Bauern ein wichtiger Grund für den Verzicht waren, ist die gängige Darstellung.",
+  "Vereinfachung: Auf Folie 7 und 15 stehen Stichworte. Zum Beispiel wurden manche Abgaben sofort aufgehoben, andere mussten abgelöst werden.",
+  "Die Karikatur (Klerus, Adel und Dritter Stand, zwei Bilder an der Wand) ist selbst gezeichnet, keine historische Quelle. Die Aussage der Figuren („Wir kamen euch entgegen.“) ist bewusst überspitzt, eine erfundene Selbstdarstellung. Historisch war der Verzicht nicht freiwillig.",
+  "Vormerken für Stunde 5 (Verfassung 1791): Der König weigerte sich zunächst, die Erklärung zu unterschreiben, und tat es erst nach dem Marsch der Frauen nach Versailles im Oktober 1789 (als Einstieg möglich).",
+  "Die Notenfrage (Punkte, Schlüssel) ist offen: Das Blatt liefert Felder und Stufen. Das können wir später ergänzen.",
 ]));
 
 (async () => {
