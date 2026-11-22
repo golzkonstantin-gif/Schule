@@ -14,7 +14,7 @@ const hdr = (x, w) => cell(p(t(x, { bold: true, color: "FFFFFF", size: 17 }), { 
 // Gerüst: Inhaltsverzeichnis des Unterrichtsmodells der Lehrkraft (Bausteine B1–B8, Arbeitsblätter AB, Zusatzmaterial Z)
 const PHASEN = [
   ["Vor den Ferien: Einführung, Kleist und Hintergründe, Beginn der Gewaltspirale (gemeinsam lesen)", [
-    ["Mo 30.11.", "DS", "Rechtsgefühl – was tun, wenn das Recht versagt?", "Einstieg: Fehlentscheidung im Sport, gegen die man nichts tun kann; Maßstäbe meines Handelns. Brücke zu Kafka (der Mann vom Lande wartet – und du?). Erwartungen an den Klappentext. Handlungsverlauf von Anfang an dokumentieren (Vorlage). Lesebeginn.", "Anfang", "B1.1–1.3, AB 1"],
+    ["Mo 30.11.", "DS", "Rechtsgefühl – was tun, wenn das Recht versagt?", "Einstieg: Fehlentscheidung im Sport, gegen die man nichts tun kann; Woran richte ich mein Handeln aus – hinnehmen, beschweren oder wehren? Erwartungen an den Klappentext. Handlungsverlauf von Anfang an dokumentieren (Vorlage). Lesebeginn.", "Anfang", "B1.1–1.3, AB 1"],
     ["Do 3.12.", "ES", "Die Einleitung", "Der erste Absatz: „einer der rechtschaffensten zugleich und entsetzlichsten Menschen seiner Zeit“ – Antithese, Erzählerhaltung; Leitfrage der Einheit an die Tafel.", "erster Absatz", "B2.3"],
     ["Mo 7.12.", "DS", "Kleist und seine Zeit", "Teil 1 Kleist (ca. 35 Min.): Zitat aus der Kant-Krise als Einstieg („Wie kann jemand so etwas sagen?“), Kleist in fünf Stationen, das historische Vorbild Hans Kohlhase (Berlin, Kohlhasenbrück). Teil 2 Hintergründe (ca. 45 Min.): Bürgertum im 18. Jh., Rechts- und Sozialverhältnisse im 16. Jh. und zu Kleists Zeit, Reformen in Preußen – kurz und gezielt.", "–", "B2.1–2.2, AB 2–3, Z3, Z5"],
     ["Do 10.12.", "ES", "Am Schlagbaum", "Wer sagt was – und wie? (markieren, einkreisen) Machtgefälle Kohlhaas – Burgvogt – Junker; der Passschein.", "Schlagbaum", "B3.1"],
@@ -46,7 +46,7 @@ const PHASEN = [
     ["Do 25.2.", "ES", "Ambivalenz des Schlusses", "Rückkehr zur Leitfrage: rechtschaffen und entsetzlich?", "Schluss", "–"],
     ["Mo 1.3.", "DS", "Novelle und Erzähltechnik", "Definition der Novelle („unerhörte Begebenheit“), Erzählstrategie, Erzählerkommentar.", "Auszüge", "B7.2–7.3, AB 7–8"],
     ["Do 4.3.", "ES", "Grundbegriffe der Erzähltechnik", "Fachbegriffe sichern (für die Klausur).", "–", "AB 7"],
-    ["Mo 8.3.", "DS", "Rezeption", "Kohlhaas heute: das Kohlhaas-Motiv; Vergleich Kohlhaas – Kafkas Mann vom Lande.", "–", "B8, AB 9"],
+    ["Mo 8.3.", "DS", "Rezeption", "Kohlhaas heute: das Kohlhaas-Motiv; Rückblick: Vergleich Kohlhaas – Kafkas Mann vom Lande (der eine wartet, der andere nimmt sich sein Recht).", "–", "B8, AB 9"],
     ["Do 11.3.", "ES", "Transfer", "Leitfrage abschließend: Was tun, wenn das Recht versagt?", "–", "–"],
     ["Mo 15.3.", "DS", "Klausurvorbereitung", "Übungsanalyse eines Auszugs mit Stellungnahme; Schreibwerkstatt.", "Auszug", "–"],
     ["Do 18.3.", "ES", "Rückmeldung", "Rückmeldung; Checkliste (Präsens, „vgl. Z.“, Fachbegriffe, Wirkung deuten).", "–", "–"],
@@ -60,7 +60,7 @@ const OFFEN = [
   ["Zwischenleistung", "Schreibwerkstatt im Februar als Stellungnahme – oder lieber eine Übungsklausur?"],
   ["Textausgabe", "Welche Reclam-Ausgabe genau (Seitenzählung)? Danach werden die Textstellen ergänzt."],
   ["Ferienlektüre", "Leseplan in drei Etappen mit Stichworten und Zitat – reicht das, oder soll es ein kurzes Lesetagebuch geben?"],
-  ["Kleist-Fakten", "Biografische Angaben, das Zitat aus der Kant-Krise und den Bezug Kafka – Kleist vor dem Einsatz an einer Quelle prüfen."],
+  ["Kleist-Fakten", "Biografische Angaben, das Zitat aus der Kant-Krise vor dem Einsatz an einer Quelle prüfen."],
   ["Literatur", "Gedanken aus T. von Brand, „Ganzschriften im Deutschunterricht“, bei Bedarf in eigenen Worten nachreichen (das Buch selbst ist laut Impressum für KI-Nutzung gesperrt)."],
   ["Mentorin", "Gibt es Absprachen oder Material der Mentorin zur Einheit?"],
 ];
@@ -84,7 +84,7 @@ const kW = [2800, W - 2800];
 const kopf = [
   ["Leitfrage", "Was tun, wenn das Recht versagt? – Rahmen: Kohlhaas war „einer der rechtschaffensten zugleich und entsetzlichsten Menschen seiner Zeit“."],
   ["Gerüst", "Die acht Bausteine des Unterrichtsmodells (Inhaltsverzeichnis der Lehrkraft): B1 Einführung, B2 Hintergründe, B3 Gewaltspirale, B4 Selbstjustiz, B5 Individuum und Staat, B6 Ereignisse in Sachsen, B7 Ereignisse in Brandenburg/Novelle, B8 Rezeption; AB = Arbeitsblatt, Z = Zusatzmaterial des Modells."],
-  ["Leitidee", "Brücke von Kafka zu Kleist: Der Mann vom Lande wartet ein Leben lang vor dem Gesetz – Kohlhaas nimmt das Recht selbst in die Hand. Beide stehen einer Macht gegenüber, die ihnen ihr Recht verweigert."],
+  ["Leitidee", "Ein rechtschaffener Mann wird durch erlittenes Unrecht zum Gewalttäter – wo kippt Rechtsgefühl in Selbstjustiz? Die Einheit startet eigenständig mit Kohlhaas; der Vergleich mit Kafkas „Vor dem Gesetz“ folgt erst als Rückblick in der Rezeptionsphase."],
   ["Lektüre", "Vollständig. Das erste Drittel gemeinsam im Unterricht (bis zu den Mandaten), der Rest in den Weihnachtsferien nach Leseplan; Textausgabe Reclam."],
   ["Rhythmus", "Montag Doppelstunde (Erarbeitung, Textarbeit, Schreiben) · Donnerstag Einzelstunde (Lesen, Sichern, Wiederholen)."],
   ["Grundsätze", "Vorwissen in jeder Stunde abprüfen · Textverständnis vor Deutung · kurze Auszüge, ein Schwerpunkt pro Stunde · Erarbeitung allein · Aufgabe und Muster auf jeder Aufgabenfolie · Zielcheck · Transfer · 27 pt · keine Hausaufgaben (Ausnahme: Ferienlektüre)."],
