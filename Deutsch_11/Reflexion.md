@@ -133,6 +133,7 @@ Grundlage ist `Methoden/Literatur_Unterrichtsqualitaet.md` (AVIVA, Direkte Instr
 
 - Start Mo 30.11. Stundenplan: **Montag Doppelstunde, Donnerstag Einzelstunde.** Textausgabe: Reclam (Seiten- und Zeilenangaben danach). Klausur folgt später (Format noch offen).
 - Literatur der Lehrkraft: Inhaltsverzeichnis eines Unterrichtsmodells (acht Bausteine von Schlagbaum bis Rezeption); T. von Brand, „Ganzschriften im Deutschunterricht“ – laut Impressum keine Nutzung durch KI-Systeme, daher nicht ausgewertet.
+- Rückmeldung 22.11.: **kein Sport-Einstieg** (Mo 30.11. stattdessen Gedankenexperiment „Unrecht erlitten, keiner hilft – hinnehmen, beschweren, selbst handeln?“). **Sequenzpläne stichpunktartig**, nicht ausformuliert.
 - Rückmeldung 22.11.: **kein direkter Kafka-Einstieg** – die Einheit startet eigenständig mit Kohlhaas; der Vergleich mit Kafka höchstens später (Rezeption).
 - Leitidee (angepasst 22.11.): Ein rechtschaffener Mann wird durch erlittenes Unrecht zum Gewalttäter – wo kippt Rechtsgefühl in Selbstjustiz? Kafka-Vergleich nur als Rückblick in der Rezeption (Mo 8.3.). Leitfrage „Was tun, wenn das Recht versagt?“; Rahmen: „einer der rechtschaffensten zugleich und entsetzlichsten Menschen seiner Zeit“.
 - Entscheidungen (21.11.): **Die Klasse liest die Novelle vollständig**, voraussichtlich in den Weihnachtsferien. Mo 21.12. ist noch Unterricht. Keine besonderen Vorgaben aus dem Curriculum.
