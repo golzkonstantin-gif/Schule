@@ -111,7 +111,7 @@ d.push(table([4700, 5506], [
 
 d.push(h3("Material und Vorbereitung (Details: Materialliste)"));
 d.push(...bullets([
-  "Arbeitsblatt_Menschenrechte_Quelle_8D.pdf: eine A4-Seite doppelseitig, ohne Tabelle (Seite 1: Wortspeicher mit Erklärungen und fünf Artikel-Blöcke mit „Meine Worte, Begriff ankreuzen, Vorher“; Seite 2: „1789 oder heute?“, Historische Bedeutung, Rückmeldung). 26-mal drucken, doppelseitig.",
+  "Arbeitsblatt_Menschenrechte_Quelle_8D.pdf: eine A4-Seite doppelseitig, ohne Tabelle (Seite 1: Wortspeicher mit Erklärungen und fünf Artikel-Blöcke mit „Meine Worte, Begriff ankreuzen, Vorher“; Seite 2: „1789 oder heute?“, Historische Bedeutung). 26-mal drucken, doppelseitig.",
   "Loesung_Arbeitsblatt_Menschenrechte_8D.pdf (für Sie): Musterantworten für beide Seiten (Stichworte genügen).",
   "Folien 1 bis 22 (Schrift mindestens 27 Punkt; Folie 1, 5, 6 und 20 mit der selbst gezeichneten Karikatur beziehungsweise den Bildern aus ihr).",
   "Seitentafel: Stundenfrage, Ziele, Ablauf (siehe Phase 0). Mitte der Tafel leer.",
@@ -230,7 +230,7 @@ d.push(table([2300, 7906], [
   ["Vermutung", "„Was will der Dritte Stand noch? Ich vermute …“ (Beginn der Stunde)"],
   ["Rückschau", "zu jedem Bild: Was geschah? Was bewirkte es? Verbesserungen grün"],
   ["Blatt Seite 1", "Artikel 1 (Beispiel, gelb), Artikel 3 mit Hilfe, Artikel 6, 11 und 17 selbst (Meine Worte, Begriff angekreuzt, Vorher); Verbesserungen grün"],
-  ["Blatt Seite 2", "Aufgabe A „1789 oder heute?“ angekreuzt, Aufgabe B „Historische Bedeutung“ (Vorher, Seit 1789, Heute), Rückmeldung nach Stufen bei Abgabe"],
+  ["Blatt Seite 2", "Aufgabe A „1789 oder heute?“ angekreuzt, Aufgabe B „Historische Bedeutung“ (Vorher, Seit 1789, Heute)"],
   ["Heft", "Merksatz 1 (abgeschrieben, rot umrahmt)"],
 ].map(([a, b]) => row([tc(a, 2300, { bold: true, fill: LIGHT }), tc(b, 7906)], 340))));
 

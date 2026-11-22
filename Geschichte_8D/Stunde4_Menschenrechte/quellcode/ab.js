@@ -90,10 +90,7 @@ function seite2(loesung) {
   });
   c.push(p([t("Aufgabe B  ", { bold: true, color: RED, size: 20 }), t("Historische Bedeutung: Was haben die Menschenrechte für den Dritten Stand (Bauern und Bürger) verbessert? Schreibe in ganzen Sätzen. Nutze die Satzanfänge.", { size: 20 })], { before: 160, after: 60 }));
   const B = [["Vorher:", "Vor 1789 mussten die Menschen im Dritten Stand …", "Vor 1789 mussten die Menschen im Dritten Stand Steuern und Abgaben zahlen, während Klerus und Adel Vorrechte hatten, und der König bestimmte allein."], ["Seit 1789:", "Durch die Erklärung der Menschenrechte …  (Artikel …)", "Durch die Erklärung der Menschenrechte gilt das Gesetz für alle gleich (Artikel 6), man darf frei reden und drucken (Artikel 11), das Eigentum ist geschützt (Artikel 17), und die Macht geht vom Volk aus (Artikel 3)."], ["Heute:", "Noch heute steht im Grundgesetz …", "Noch heute steht im Grundgesetz: Alle Menschen sind vor dem Gesetz gleich (Artikel 3), jeder darf seine Meinung frei äußern (Artikel 5), die Staatsgewalt geht vom Volke aus (Artikel 20)."]];
-  B.forEach(([a, h, s]) => { c.push(wline(a, s, loesung, h)); if (!loesung) c.push(emptyLine()); });
-  c.push(p(t("Rückmeldung der Lehrkraft (nur bei freiwilliger Abgabe)", { bold: true, size: 20, color: NAVY }), { before: 140, after: 50 }));
-  [["Stufe 1", "Ich kann erklären, was sich durch den Verzicht auf die Vorrechte und die Menschenrechte für den Dritten Stand verbessert hat."], ["Stufe 2", "Ich kann Artikel von 1789 in heutige Begriffe übersetzen (zum Beispiel Eigentumsrecht)."], ["Stufe 3", "Ich kann an einem Grundgesetz-Artikel zeigen, dass die Erklärung bis heute nachwirkt.*"]].forEach(([a, b]) => c.push(p([t("□  ", { size: 24 }), t(a + "   ", { bold: true, size: 18, color: NAVY }), t(b, { size: 18 })], { after: 50 })));
-  c.push(p([t("□ Ich gebe das Blatt freiwillig ab.", { size: 22, bold: true }), t("          Rückmeldung: ________________________________", { size: 20, color: MUTED })], { before: 100, after: 0 }));
+  B.forEach(([a, h, s]) => { c.push(wline(a, s, loesung, h)); if (!loesung) { c.push(emptyLine()); c.push(emptyLine()); } });
   return c;
 }
 
