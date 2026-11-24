@@ -15,7 +15,10 @@ function ticket() {
   c.push(new Table({ width: { size: RW, type: WidthType.DXA }, columnWidths: [1560, 1560, 1580], rows: [new TableRow({ height: { value: 70, rule: "exact" }, children: [["1F4E9C", "1F4E9C"], ["FFFFFF", "B9C6E8"], ["D9534F", "D9534F"]].map(([f, l], i) => new TableCell({ width: { size: i === 2 ? 1580 : 1560, type: WidthType.DXA }, shading: { type: ShadingType.CLEAR, fill: f, color: "auto" }, borders: { top: { style: BorderStyle.SINGLE, size: 4, color: l }, bottom: { style: BorderStyle.SINGLE, size: 4, color: l }, left: noB, right: noB }, children: [new Paragraph({ children: [] })] })) })] }));
   c.push(p([t("EXIT-TICKET · Geschichte 8D   ", { bold: true, size: 16, color: MUTED }), t("Name: ________________", { size: 16, color: MUTED }), t("   "), ic], { before: 50, after: 40 }));
   c.push(p([t("Ausgangsfrage. ", { bold: true, size: 19, color: NAVY }), t("Klerus und Adel sagen: „Ihr habt geschworen. Ihr habt die Bastille gestürmt. Wir kamen euch entgegen. Was wollt ihr noch?“ Du bist der Dritte Stand (Bauern und Bürger). Antworte:", { size: 18 })], { after: 70 }));
-  c.push(line("Wir wollen Menschenrechte, damit wir endlich …")); c.push(more()); c.push(more()); c.push(more());
+  c.push(line("Wir wollen Menschenrechte, damit wir endlich …")); c.push(more()); c.push(more());
+  c.push(p([t("Das steht heute auch im Grundgesetz. Kreuze an, was zu deinem Satz passt:", { bold: true, size: 17, color: NAVY })], { before: 60, after: 50 }));
+  c.push(p([t("□ Art. 3: Gleichheit vor dem Gesetz     □ Art. 5: Meinungsfreiheit", { size: 17 })], { after: 40 }));
+  c.push(p([t("□ Art. 14: Eigentum     □ Art. 20: Die Macht geht vom Volk aus", { size: 17 })], { after: 60 }));
   c.push(p([t("Das war mir unklar (freiwillig): ", { size: 16, color: MUTED, italics: true }), t("\t")], { tabs: lineTabs, after: 0, before: 40 }));
   return c;
 }
