@@ -97,7 +97,7 @@ d.push(...bullets([
   "Kompetenzaufbau sichtbar: gleiche drei Schritte (Meine Worte, Begriff heute, Vorher) in Modell, angeleiteter und selbstständiger Phase; Hilfen werden abgebaut.",
   "Kognitive Aktivierung: Entschlüsseln der Sprechblase an den Bildern, Übersetzen ins heutige Vokabular, Raten „1789 oder Grundgesetz?“ und das Aha.",
   "Sicherung: Vorher-Nachher-Bilanz, Merksatz, Exit-Ticket (Ausgangsfrage, alle schreiben), Zielprüfung, Vergleich mit der Vermutung.",
-  "Differenzierung: Wortspeicher, Hilfe bei Artikel 3, kurze Artikel zuerst, Zusatz* (Vorher bei 2, 4, 10), Satzanfänge bei Aufgabe B.",
+  "Differenzierung: Wortspeicher mit Erklärungen, Vorher-Speicher, Hilfe bei Artikel 3, kurzer Artikel 17 zuerst, Satzanfänge auf dem Exit-Ticket.",
 ]));
 
 d.push(h3("Lautstärke und Ansagen (wörtlich)"));
