@@ -49,7 +49,7 @@ d.push(p(t("Ziel: Die Stunde knüpft an die Wege des Widerstands (Stunde 3) an u
 d.push(h3("Kopf der Planung"));
 d.push(table([2600, 7606], [
   ["Ziel (Ich kann …)", "1  … erklären, was sich durch den Verzicht auf die Vorrechte und die Menschenrechte für den Dritten Stand verbessert hat.  2  … Artikel von 1789 in heutige Begriffe übersetzen (zum Beispiel Eigentumsrecht).  3  … an einem Grundgesetz-Artikel zeigen, dass die Erklärung bis heute nachwirkt.*"],
-  ["Prüfaufgabe: Woran erkenne ich es?", "Arbeitsblatt Seite 1 (Artikel 6, 11, 17 in den drei Schritten), Seite 2 (Aufgabe A „1789 oder heute?“, Aufgabe B „Historische Bedeutung“ mit Satzanfängen), Abschlussaufgabe: schriftlich und mündlich als Dritter Stand („Wir wollen …, weil Artikel … sagt. Früher …, heute …“). Freiwillige Abgabe, Rückmeldung nach drei Stufen (gleich den Zielen). Punkte oder Noten gibt es heute nicht (später)."],
+  ["Prüfaufgabe: Woran erkenne ich es?", "Arbeitsblatt Seite 1 (Artikel 6, 11, 17 in den drei Schritten), Seite 2 (Aufgabe A „1789 oder heute?“), Abschlussaufgabe: mündlich als Dritter Stand („Wir wollen …, weil Artikel … sagt. Früher …, heute …“). Freiwillige Abgabe, Rückmeldung nach drei Stufen (gleich den Zielen). Punkte oder Noten gibt es heute nicht (später)."],
   ["Mindestziel", "Ziel 1 und 2. Ziel 3 hat einen Stern (Transfer gekürzt). „Auswerten“ bleibt immer."],
   ["Beitrag zur Reihe", "Stunde 4 von 11 (Sequenz, Fassung vom 17.11.). Sie zeigt, wie der Verzicht auf die Vorrechte und die Erklärung der Menschenrechte die Lage des Dritten Standes verbessern, baut die Kompetenz Quellenauswertung auf (wiederkehrend, auch im Test) und führt mit „Für wen galten die Rechte 1789 wirklich?“ zur Verfassung 1791 (Stunde 5)."],
   ["Vorgehen", "Rückschau indirekt (allein, Plenum), Informieren und Quellenauswertung direkt: Portionen, Vormachen (Lehrkraft denkt laut), angeleitet (Artikel 3 mit Hilfe), selbstständig (drei Artikel). Direktes Vorgehen, weil das Vorwissen zur Quellenarbeit gering ist. Aha und Sicherung geführt. Direkt oder indirekt wird je Phase entschieden."],
@@ -86,7 +86,7 @@ d.push(...bullets([
 d.push(h3("Zeitplan (45 Minuten)"));
 d.push(table([800, 2300, 4300, 2806], [
   row([th("Min.", 800), th("AVIVA", 2300), th("Phase", 4300), th("Arbeitsform", 2806)], 320),
-  ...[["4", "Ankommen", "0  Karikatur, Vermutung, Stundenfrage, Ziele, Ablauf", "still, allein"], ["4", "Vorwissen", "1  Rückschau an den Bildern (3), Kette (1)", "allein, Plenum"], ["10", "Informieren", "2  Verzicht auf die Vorrechte (3), Erklärung und drei Schritte (1), Modell Artikel 1 (3), Prüffrage (1), Reserve (2)", "hört zu, Stichprobe"], ["18", "Verarbeiten", "3  Artikel 3 mit Hilfe (3), drei Artikel allein (6), Kontrolle Begriffe und Bilanz (3), Aha „1789 oder heute?“ (4), Reserve (2)", "allein, Plenum"], ["9", "Auswerten", "4  Merksatz (2), Abschlussaufgabe (5), Ziele (1), Ausblick (1)", "schreiben, mündlich, still"]].map((r) => row(r.map((v, i) => tc(v, [800, 2300, 4300, 2806][i], { bold: i === 0 })), 340)),
+  ...[["4", "Ankommen", "0  Karikatur, Vermutung, Stundenfrage, Ziele, Ablauf", "still, allein"], ["4", "Vorwissen", "1  Rückschau an den Bildern (3), Kette (1)", "allein, Plenum"], ["10", "Informieren", "2  Verzicht auf die Vorrechte (3), Erklärung und drei Schritte (1), Modell Artikel 1 (3), Prüffrage (1), Reserve (2)", "hört zu, Stichprobe"], ["18", "Verarbeiten", "3  Artikel 3 mit Hilfe (3), drei Artikel allein (6), Kontrolle Begriffe und Bilanz (3), Aha „1789 oder heute?“ (4), Reserve (2)", "allein, Plenum"], ["9", "Auswerten", "4  Merksatz (2), Abschlussaufgabe mündlich (5), Ziele (1), Ausblick (1)", "schreiben, mündlich, still"]].map((r) => row(r.map((v, i) => tc(v, [800, 2300, 4300, 2806][i], { bold: i === 0 })), 340)),
 ]));
 d.push(note("ZEIT", "Die Stunde ist dicht. Sollbruchstellen: (1) Rückschau: Plenum nur 30 Sekunden. (2) Reserve in Phase 2 (2 Minuten) für erneutes Erklären. (3) Übung 2: Wer nach 6 Minuten nur Artikel 6 und 11 hat, ist richtig. (4) Aha: Zeigen Sie nur die ersten zwei Paare, wenn die Zeit knapp ist (Ziel 3 mit Stern). (5) Abschlussaufgabe: nur mündlich, ohne 2 Minuten Schreiben. Phase 4 „Auswerten“ wird nicht gestrichen. Die Übungsphase endet 9 Minuten vor Schluss."));
 
@@ -111,7 +111,7 @@ d.push(table([4700, 5506], [
 
 d.push(h3("Material und Vorbereitung (Details: Materialliste)"));
 d.push(...bullets([
-  "Arbeitsblatt_Menschenrechte_Quelle_8D.pdf: eine A4-Seite doppelseitig, ohne Tabelle (Seite 1: Wortspeicher mit Erklärungen und fünf Artikel-Blöcke mit „Meine Worte, Begriff ankreuzen, Vorher“; Seite 2: „1789 oder heute?“, Historische Bedeutung). 26-mal drucken, doppelseitig.",
+  "Arbeitsblatt_Menschenrechte_Quelle_8D.pdf: eine A4-Seite doppelseitig, ohne Tabelle (Seite 1: Wortspeicher und Vorher-Speicher nebeneinander, fünf Artikel-Blöcke mit „Meine Worte, Begriff ankreuzen, Vorher“; Seite 2: „1789 oder heute?“, Historische Bedeutung). 26-mal drucken, doppelseitig.",
   "Loesung_Arbeitsblatt_Menschenrechte_8D.pdf (für Sie): Musterantworten für beide Seiten (Stichworte genügen).",
   "Folien 1 bis 22 (Schrift mindestens 27 Punkt; Folie 1, 5, 6 und 20 mit der selbst gezeichneten Karikatur beziehungsweise den Bildern aus ihr).",
   "Seitentafel: Stundenfrage, Ziele, Ablauf (siehe Phase 0). Mitte der Tafel leer.",
@@ -185,7 +185,7 @@ d.push(step("3b  Drei Artikel selbst (6 Min.)", {
   say: "Stifte liegen. Jetzt arbeitet ihr allein. Die Aufgabe steht rechts.",
   ziel: "Ziel 1 und 2 (selbstständiges Üben).",
   do: [
-    "Folie 13: Artikel 6, 11 und 17, jeweils ① in eigenen Worten, ② Begriff ankreuzen (Wortspeicher mit Erklärungen), ③ Vorher. Durch die Reihen gehen (Heft-Stichprobe bei 4 bis 6 Personen unterschiedlichen Niveaus, mitlesen, nicht kommentieren). Differenzierung: Wer unsicher ist, beginnt mit dem kurzen Artikel 17 und schreibt bei ① und ③ nur einen Satzteil. Wer früh fertig ist, erklärt seinem Nachbarn einen Artikel.",
+    "Folie 13: Artikel 6, 11 und 17, jeweils ① in eigenen Worten, ② Begriff ankreuzen (Wortspeicher mit Erklärungen), ③ Vorher (aus dem Vorher-Speicher: Das Wissen stammt aus Stunde 1 bis 3 und Folie 7, Zensur steht nur im Speicher). Durch die Reihen gehen (Heft-Stichprobe bei 4 bis 6 Personen unterschiedlichen Niveaus, mitlesen, nicht kommentieren). Differenzierung: Wer unsicher ist, beginnt mit dem kurzen Artikel 17 und schreibt bei ① und ③ nur einen Satzteil. Wer früh fertig ist, erklärt seinem Nachbarn einen Artikel.",
   ],
 }));
 d.push(sp());
@@ -211,14 +211,14 @@ d.push(step("3d  Aha: 1789 oder heute? (4 Min.)", {
 
 // Phase 4
 d.push(phase("4", "Auswerten: Merksatz und Abschlussaufgabe", 9, "AVIVA: Auswerten"));
-d.push(warum("Der Merksatz sichert das Ergebnis (Daten, heutige Begriffe, Recht statt Vorrecht, Echo im Grundgesetz) für den Test. Die Abschlussaufgabe prüft alle drei Ziele: Die Klasse antwortet als Dritter Stand schriftlich (Aufgabe B „Historische Bedeutung“) und mündlich mit Artikel, Vorher, Heute. Der Vergleich mit der Vermutung zeigt den Lernzuwachs, ohne Floskel.", "„Gilt das für alle? Das sehen wir nächste Woche.“"));
+d.push(warum("Der Merksatz sichert das Ergebnis (Daten, heutige Begriffe, Recht statt Vorrecht, Echo im Grundgesetz) für den Test. Die Abschlussaufgabe prüft alle drei Ziele: Die Klasse antwortet als Dritter Stand mündlich mit Artikel, Vorher, Heute (die frühere Aufgabe B auf dem Blatt ist gestrichen). Der Vergleich mit der Vermutung zeigt den Lernzuwachs, ohne Floskel.", "„Gilt das für alle? Das sehen wir nächste Woche.“"));
 d.push(sp());
 d.push(step("schreibt ab, schreibt, antwortet als Dritter Stand", {
   say: "Stifte liegen. Ihr hört nur zu. Jetzt schreibt ihr von der Folie ab: Merksatz 1. Rahmt ihn rot ein. … Schaut noch einmal auf die Karikatur vom Anfang. Ihr seid der Dritte Stand. Schreibt eure Antwort auf. Jetzt arbeitet ihr allein.",
   ziel: "Ziel 1, 2 und 3 (Merksatz, Abschlussaufgabe).",
   do: [
     "Folie 19 (Merksatz, 2 Minuten): Abschreiben und rot umrahmen, Beispiel (Artikel 6 und Grundgesetz Artikel 3) und Test („Recht gilt für alle, Vorrecht nur für wenige“) mit auf die Folie, kein „Wofür“.",
-    "Folie 20 (Abschlussaufgabe, 5 Minuten): 2 Minuten still schreiben auf Seite 2, Aufgabe B „Historische Bedeutung“ (Vorher, Seit 1789, Heute, mit Satzanfängen). Dann 3 Minuten mündlich: Blitzlicht bei 4 bis 6 Personen unterschiedlichen Niveaus, in der Ich-Form: „Ich antworte euch: Wir wollen …, weil Artikel … sagt. Früher …, heute steht im Grundgesetz …“ Wer hat umgedacht? Vergleich mit der Vermutung vom Anfang. Bei Zeitnot: nur mündlich.",
+    "Folie 20 (Abschlussaufgabe, 5 Minuten, nur mündlich): 20 Sekunden still nachdenken, dann Blitzlicht bei 4 bis 6 Personen unterschiedlichen Niveaus, in der Ich-Form: „Ich antworte euch: Wir wollen …, weil Artikel … sagt. Früher …, heute steht im Grundgesetz …“ Wer hat umgedacht? Vergleich mit der Vermutung vom Anfang. Bei Zeitnot: 3 Antworten genügen.",
     "Folie 21 (Ziele prüfen, 1 Minute, still): Haben wir die Ziele erreicht? Wer das Blatt abgeben möchte, legt es vorn ab. Folie 22 (Ausblick, nur lesen, Brücke zu Stunde 5): „Für wen galten diese Rechte 1789 wirklich?“",
   ],
   sol: "Mögliche Antworten als Dritter Stand (Auswahl, keine Musterlösung). „Wir wollen Gleichheit, weil Artikel 6 sagt, dass das Gesetz für alle gleich ist. Früher hatten Klerus und Adel Vorrechte, heute steht im Grundgesetz, dass alle Menschen vor dem Gesetz gleich sind.“ „Wir wollen frei reden, weil Artikel 11 das erlaubt. Früher kontrollierte der König den Druck, heute steht die Meinungsfreiheit im Grundgesetz Artikel 5.“ „Wir wollen mitbestimmen, weil Artikel 3 sagt, dass die Herrschaft vom Volk ausgeht, früher bestimmte der König allein, heute steht im Grundgesetz, dass alle Staatsgewalt vom Volke ausgeht.“",
@@ -230,12 +230,12 @@ d.push(table([2300, 7906], [
   ["Vermutung", "„Was will der Dritte Stand noch? Ich vermute …“ (Beginn der Stunde)"],
   ["Rückschau", "zu jedem Bild: Was geschah? Was bewirkte es? Verbesserungen grün"],
   ["Blatt Seite 1", "Artikel 1 (Beispiel, gelb), Artikel 3 mit Hilfe, Artikel 6, 11 und 17 selbst (Meine Worte, Begriff angekreuzt, Vorher); Verbesserungen grün"],
-  ["Blatt Seite 2", "Aufgabe A „1789 oder heute?“ angekreuzt, Aufgabe B „Historische Bedeutung“ (Vorher, Seit 1789, Heute)"],
+  ["Blatt Seite 2", "Aufgabe A „1789 oder heute?“ angekreuzt"],
   ["Heft", "Merksatz 1 (abgeschrieben, rot umrahmt)"],
 ].map(([a, b]) => row([tc(a, 2300, { bold: true, fill: LIGHT }), tc(b, 7906)], 340))));
 
 d.push(h3("Nach der Stunde festhalten (Reflexionslog)"));
-d.push(...bullets(["Passten Ziel, Inhalt und Methode zusammen? Wie lief die Zeit? Wie viel echte Lernzeit hatte die Klasse?", "Haben die Schritte „Meine Worte, Begriff heute, Vorher“ gesessen? Wo hakte es (Prüffrage, Artikel 3, selbstständige Phase)?", "Wie lief der Aha-Moment „1789 oder heute?“ (Raten, Reaktion)? Wie gut war die Sicherung (Merksatz, Aufgabe B, mündliche Antworten)?", "Wie viele Blätter wurden abgegeben, auf welcher Stufe lagen sie?", "Hospitationsrückmeldung zur Aktivierung und zum Kompetenzerwerb: Was nimmst du mit?", "Wie lief Stunde 3 (Rückmeldung nachtragen)?"]));
+d.push(...bullets(["Passten Ziel, Inhalt und Methode zusammen? Wie lief die Zeit? Wie viel echte Lernzeit hatte die Klasse?", "Haben die Schritte „Meine Worte, Begriff heute, Vorher“ gesessen? Wo hakte es (Prüffrage, Artikel 3, selbstständige Phase)?", "Wie lief der Aha-Moment „1789 oder heute?“ (Raten, Reaktion)? Wie gut war die Sicherung (Merksatz, mündliche Antworten)?", "Wie viele Blätter wurden abgegeben, auf welcher Stufe lagen sie?", "Hospitationsrückmeldung zur Aktivierung und zum Kompetenzerwerb: Was nimmst du mit?", "Wie lief Stunde 3 (Rückmeldung nachtragen)?"]));
 d.push(h3("Zum Prüfen"));
 d.push(...bullets([
   "Wortlaut der Artikel: gekürzte und vereinfachte Fassung (Entscheidung der Lehrkraft); Nummerierung wie im Original (Artikel 6, in einem anderen Buch steht 5). Mit der Kollegin abgleichen. Neu: Artikel 17 (Eigentum) und der Begriff Eigentumsrecht; der Wortspeicher der Kollegin enthält ihn nicht (Test vergleichbar halten).",

@@ -1,5 +1,5 @@
 const fs = require("fs");
-const { Document, Packer, Paragraph, TextRun, BorderStyle, ShadingType, AlignmentType, TabStopType, LeaderType, Footer, PageNumber } = require("docx");
+const { Document, Packer, Paragraph, TextRun, BorderStyle, ShadingType, AlignmentType, TabStopType, LeaderType, Footer, PageNumber, PageBreak, ImageRun, Table, TableRow, TableCell, WidthType, VerticalAlign } = require("docx");
 const NAVY = "1E2761", MUTED = "5B6B8C", LIGHT2 = "EAF0FA", RED = "D9534F", GOLDF = "FFF6E0", GREEN = "1B5E3A";
 const R = 10500; // Zeilenbreite (Tabstopp rechts)
 const t = (text, o = {}) => new TextRun({ text, font: o.font || "Calibri", size: o.size || 21, bold: o.bold, italics: o.italics, color: o.color || "000000" });
@@ -7,11 +7,17 @@ const p = (runs, o = {}) => new Paragraph({ children: Array.isArray(runs) ? runs
 const bd = (c, s = 6) => ({ style: BorderStyle.SINGLE, size: s, color: c, space: 4 });
 const box = (c) => ({ top: bd(c), bottom: bd(c), left: bd(c), right: bd(c) });
 const footer = new Footer({ children: [new Paragraph({ alignment: AlignmentType.RIGHT, children: [new TextRun({ font: "Calibri", size: 16, color: MUTED, children: ["Geschichte 8D · Stunde 4 Menschenrechte · Seite ", PageNumber.CURRENT] })] })] });
-const KOPF = (txt, pb) => p([t("GESCHICHTE 8D · QUELLENARBEIT · " + txt + "   ", { size: 16, bold: true, color: MUTED }), t("Name: ______________________", { size: 18, color: MUTED })], { after: 40, pb });
+const IC = (n) => new ImageRun({ type: "png", data: fs.readFileSync("../material/icon_" + n + ".png"), transformation: { width: 46, height: 46 } });
+const noB = { style: BorderStyle.NONE, size: 0, color: "FFFFFF" };
+const noBorders = { top: noB, bottom: noB, left: noB, right: noB };
+// Tricolore-Band als Erkennungsmerkmal der Reihe „Französische Revolution“
+const tricolore = () => new Table({ width: { size: 10500, type: WidthType.DXA }, columnWidths: [3500, 3500, 3500], rows: [new TableRow({ height: { value: 110, rule: "exact" }, children: [["1F4E9C", "1F4E9C"], ["FFFFFF", "B9C6E8"], ["D9534F", "D9534F"]].map(([f, l]) => new TableCell({ width: { size: 3500, type: WidthType.DXA }, shading: { type: ShadingType.CLEAR, fill: f, color: "auto" }, borders: { top: { style: BorderStyle.SINGLE, size: 4, color: l }, bottom: { style: BorderStyle.SINGLE, size: 4, color: l }, left: noB, right: noB }, children: [new Paragraph({ children: [] })] })) })] });
+const KOPF = (txt, pb) => [...(pb ? [new Paragraph({ children: [new PageBreak()], spacing: { after: 0 } })] : []), tricolore(), p([t("GESCHICHTE 8D · MENSCHENRECHTE · " + txt + "   ", { size: 16, bold: true, color: MUTED }), t("Name: ______________________", { size: 18, color: MUTED })], { after: 40, before: 60 })];
+const TITEL = (txt, icons) => p([t(txt, { font: "Cambria", size: 30, bold: true, color: NAVY }), t("\t"), ...icons.map((n) => IC(n))], { after: 50, tabs: [{ type: TabStopType.RIGHT, position: R }] });
 // Schreiblinie mit Beschriftung
 const lineTabs = [{ type: TabStopType.RIGHT, position: R, leader: LeaderType.UNDERSCORE }];
-const wline = (label, text, loesung, hint) => p(loesung && text ? [t(label + " ", { bold: true, size: 20, color: NAVY }), t(text, { size: 20, color: GREEN, italics: true })] : [t(label + " ", { bold: true, size: 19, color: NAVY }), ...(hint ? [t(hint + " ", { size: 17, color: MUTED, italics: true })] : []), t("\t")], { tabs: lineTabs, after: 140, before: 70 });
-const emptyLine = () => p([t("\t")], { tabs: lineTabs, after: 140, before: 70 });
+const wline = (label, text, loesung, hint) => p(loesung && text ? [t(label + " ", { bold: true, size: 20, color: NAVY }), t(text, { size: 20, color: GREEN, italics: true })] : [t(label + " ", { bold: true, size: 19, color: NAVY }), ...(hint ? [t(hint + " ", { size: 17, color: MUTED, italics: true })] : []), t("\t")], { tabs: lineTabs, after: 150, before: 80 });
+const emptyLine = () => p([t("\t")], { tabs: lineTabs, after: 150, before: 80 });
 
 const ART = {
   1: "Die Menschen werden frei und gleich an Rechten geboren und bleiben es.",
@@ -27,6 +33,13 @@ const WORT = [
   ["Eigentumsrecht", "Was jemandem gehört, darf ihm niemand wegnehmen."],
   ["Volkssouveränität", "Die Macht im Staat geht vom Volk aus."],
 ];
+const VORHER = [
+  "Die Geburt entscheidet über den Stand.",
+  "Der König bestimmt allein.",
+  "Klerus und Adel zahlen keine Steuern, Ämter bekommen vor allem Adlige.",
+  "Bauern geben einen Teil der Ernte und Dienste an Adel und Kirche ab.",
+  "Der König kontrolliert, was gedruckt wird (Zensur), und lässt Gegner ohne Urteil einsperren.",
+];
 const OPT = "□ Gleichheit     □ Meinungsfreiheit     □ Eigentumsrecht     □ Volkssouveränität";
 const L = {
   1: ["Alle Menschen haben von Geburt an dieselben Rechte.", "Gleichheit", "Die Geburt entschied über den Stand und die Vorrechte."],
@@ -39,7 +52,7 @@ const optLine = (right, loesung, gold) => {
   const names = ["Gleichheit", "Meinungsfreiheit", "Eigentumsrecht", "Volkssouveränität"];
   const runs = [t("② Das heißt heute:  ", { bold: true, size: 19, color: NAVY })];
   names.forEach((n) => { const on = (loesung || gold) && n === right; runs.push(t((on ? "☒ " : "□ ") + n + "     ", { size: 19, bold: on, color: on ? GREEN : "000000" })); });
-  return p(runs, { after: 130, before: 60 });
+  return p(runs, { after: 100, before: 50 });
 };
 // Karte für einen Artikel
 function karte(n, loesung) {
@@ -53,19 +66,21 @@ function karte(n, loesung) {
   c.push(optLine(L[n][1], loesung, n === 1 || n === 3));
   if (n === 3 && !loesung) c.push(wline("③ Vorher war es anders:", "", false, "Vorher bestimmte der … allein."));
   else c.push(wline("③ Vorher war es anders:", L[n][2], show));
-  if (!show && n !== 3) c.push(emptyLine());
   return c;
 }
 function seite1(loesung) {
   const c = [];
-  c.push(KOPF("SEITE 1", false));
-  c.push(p(t("Die Erklärung der Menschenrechte ins Heute übersetzen", { font: "Cambria", size: 30, bold: true, color: NAVY }), { after: 40 }));
+  c.push(...KOPF("SEITE 1", false));
+  c.push(TITEL("Die Erklärung der Menschenrechte ins Heute übersetzen", ["tafeln", "waage", "buch"]));
   c.push(p(t(QUELLE, { size: 17, color: MUTED }), { after: 50 }));
-  c.push(p([t("Aufgabe  ", { bold: true, color: RED, size: 20 }), t("Gehe bei jedem Artikel in drei Schritten vor:  ", { size: 20 }), t("① Schreibe in eigenen Worten, was dort steht.  ② Kreuze an, wie wir heute dazu sagen.  ③ Schreibe, was vorher anders war.", { size: 20, bold: true })], { after: 60 }));
-  c.push(p([t("Wortspeicher", { bold: true, size: 19, color: NAVY })], { after: 20, border: { top: bd("8A96B5"), left: bd("8A96B5"), right: bd("8A96B5"), bottom: { style: BorderStyle.NONE, size: 0, color: "FFFFFF", space: 0 } }, shading: { type: ShadingType.CLEAR, fill: GOLDF, color: "auto" }, indent: { left: 80, right: 80 } }));
-  WORT.forEach(([a, b], i) => c.push(p([t(a + ":  ", { bold: true, size: 18, color: NAVY }), t(b, { size: 18 })], { after: i === WORT.length - 1 ? 60 : 10, border: { left: bd("8A96B5"), right: bd("8A96B5"), bottom: i === WORT.length - 1 ? bd("8A96B5") : { style: BorderStyle.NONE, size: 0, color: "FFFFFF", space: 0 }, top: { style: BorderStyle.NONE, size: 0, color: "FFFFFF", space: 0 } }, shading: { type: ShadingType.CLEAR, fill: GOLDF, color: "auto" }, indent: { left: 80, right: 80 } })));
+  c.push(p([t("Aufgabe  ", { bold: true, color: RED, size: 20 }), t("Gehe bei jedem Artikel in drei Schritten vor:  ", { size: 20 }), t("① Schreibe in eigenen Worten, was dort steht.  ② Kreuze an, wie wir heute dazu sagen.  ③ Schreibe, was vorher anders war. Nutze den Vorher-Speicher.", { size: 20, bold: true })], { after: 60 }));
+  const cellP = (runs, o = {}) => new Paragraph({ children: runs, spacing: { after: o.after ?? 40 } });
+  const wortKids = [cellP([t("Wortspeicher: Wie sagen wir heute dazu?", { bold: true, size: 19, color: NAVY })], { after: 50 }), ...WORT.map(([a, b]) => cellP([t(a + ": ", { bold: true, size: 17, color: NAVY }), t(b, { size: 17 })]))];
+  const vorherKids = [cellP([t("Vorher-Speicher: So war es vor 1789", { bold: true, size: 19, color: NAVY })], { after: 50 }), ...VORHER.map((x) => cellP([t("•  " + x, { size: 17 })]))];
+  const spCell = (kids, fill, w) => new TableCell({ width: { size: w, type: WidthType.DXA }, shading: { type: ShadingType.CLEAR, fill, color: "auto" }, borders: { top: bd("8A96B5"), bottom: bd("8A96B5"), left: bd("8A96B5"), right: bd("8A96B5") }, margins: { top: 70, bottom: 50, left: 110, right: 110 }, verticalAlign: VerticalAlign.TOP, children: kids });
+  c.push(new Table({ width: { size: 10500, type: WidthType.DXA }, columnWidths: [5150, 200, 5150], rows: [new TableRow({ cantSplit: true, children: [spCell(wortKids, GOLDF, 5150), new TableCell({ width: { size: 200, type: WidthType.DXA }, borders: noBorders, children: [new Paragraph({ children: [] })] }), spCell(vorherKids, LIGHT2, 5150)] })] }));
+  c.push(p([], { after: 20 }));
   [1, 3, 6, 11, 17].forEach((n) => c.push(...karte(n, loesung)));
-  c.push(p(t("Beispiel (Artikel 1) und Hilfe (Artikel 3) sind vorgegeben. Artikel 6, 11 und 17 arbeitest du selbst.", { size: 16, color: MUTED, italics: true }), { before: 50, after: 0 }));
   return c;
 }
 
@@ -81,16 +96,13 @@ const AUSS = [
 ];
 function seite2(loesung) {
   const c = [];
-  c.push(KOPF("SEITE 2", true));
-  c.push(p(t("Aus welchem Jahr? Und was bedeutet das?", { font: "Cambria", size: 30, bold: true, color: NAVY }), { after: 60 }));
+  c.push(...KOPF("SEITE 2", true));
+  c.push(TITEL("Aus welchem Jahr? 1789 oder heute?", ["buch", "waage", "tafeln"]));
   c.push(p([t("Aufgabe A  ", { bold: true, color: RED, size: 20 }), t("Welche Sätze stammen aus der Erklärung von 1789, welche aus dem Grundgesetz von heute? Kreuze an. Rate, wenn du unsicher bist.", { size: 20 })], { after: 90 }));
   AUSS.forEach(([a, j, q], i) => {
     const x1 = loesung && j === "1789", x2 = loesung && j === "heute";
-    c.push(p([t(String.fromCharCode(65 + i) + "   ", { bold: true, size: 20, color: NAVY }), t("„" + a + "“", { size: 20 }), t("\t"), t((x1 ? "☒" : "□") + " 1789", { size: 20, bold: x1, color: x1 ? GREEN : "000000" }), t("      "), t((x2 ? "☒" : "□") + " heute", { size: 20, bold: x2, color: x2 ? GREEN : "000000" }), ...(loesung ? [t("   (" + q + ")", { size: 15, color: MUTED })] : [])], { tabs: [{ type: TabStopType.LEFT, position: 7000 }], after: 200, border: { bottom: bd("D0D7E8", 4) } }));
+    c.push(p([t(String.fromCharCode(65 + i) + "   ", { bold: true, size: 20, color: NAVY }), t("„" + a + "“", { size: 20 }), t("\t"), t((x1 ? "☒" : "□") + " 1789", { size: 20, bold: x1, color: x1 ? GREEN : "000000" }), t("      "), t((x2 ? "☒" : "□") + " heute", { size: 20, bold: x2, color: x2 ? GREEN : "000000" }), ...(loesung ? [t("   (" + q + ")", { size: 15, color: MUTED })] : [])], { tabs: [{ type: TabStopType.LEFT, position: 7000 }], after: 330, border: { bottom: bd("D0D7E8", 4) } }));
   });
-  c.push(p([t("Aufgabe B  ", { bold: true, color: RED, size: 20 }), t("Historische Bedeutung: Was haben die Menschenrechte für den Dritten Stand (Bauern und Bürger) verbessert? Schreibe in ganzen Sätzen. Nutze die Satzanfänge.", { size: 20 })], { before: 160, after: 60 }));
-  const B = [["Vorher:", "Vor 1789 mussten die Menschen im Dritten Stand …", "Vor 1789 mussten die Menschen im Dritten Stand Steuern und Abgaben zahlen, während Klerus und Adel Vorrechte hatten, und der König bestimmte allein."], ["Seit 1789:", "Durch die Erklärung der Menschenrechte …  (Artikel …)", "Durch die Erklärung der Menschenrechte gilt das Gesetz für alle gleich (Artikel 6), man darf frei reden und drucken (Artikel 11), das Eigentum ist geschützt (Artikel 17), und die Macht geht vom Volk aus (Artikel 3)."], ["Heute:", "Noch heute steht im Grundgesetz …", "Noch heute steht im Grundgesetz: Alle Menschen sind vor dem Gesetz gleich (Artikel 3), jeder darf seine Meinung frei äußern (Artikel 5), die Staatsgewalt geht vom Volke aus (Artikel 20)."]];
-  B.forEach(([a, h, s]) => { c.push(wline(a, s, loesung, h)); if (!loesung) { c.push(emptyLine()); c.push(emptyLine()); } });
   return c;
 }
 

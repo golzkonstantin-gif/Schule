@@ -20,7 +20,7 @@ const box = () => p(t("□", { size: 26 }), { after: 0, align: AlignmentType.CEN
 // Druck
 const DW = [550, 3500, 1700, 4456];
 const druck = [
-  ["Arbeitsblatt „Die Erklärung der Menschenrechte ins Heute übersetzen“ (ohne Tabelle; Seite 1: Wortspeicher mit Erklärungen und fünf Artikel-Blöcke; Seite 2: 1789 oder heute?, Historische Bedeutung)", "26 Blatt (24 + 2 Reserve), doppelseitig, eine pro Person", "Arbeitsblatt_Menschenrechte_Quelle_8D.pdf, 26-mal drucken, doppelseitig (Wenden an der kurzen Seite)"],
+  ["Arbeitsblatt „Die Erklärung der Menschenrechte ins Heute übersetzen“ (ohne Tabelle, mit kleinen Bildern im Kopf; Seite 1: Wortspeicher und Vorher-Speicher, fünf Artikel-Blöcke; Seite 2: 1789 oder heute?)", "26 Blatt (24 + 2 Reserve), doppelseitig, eine pro Person", "Arbeitsblatt_Menschenrechte_Quelle_8D.pdf, 26-mal drucken, doppelseitig (Wenden an der kurzen Seite)"],
   ["Lösung und Musterantworten (für dich)", "1 Blatt (zwei Seiten)", "Loesung_Arbeitsblatt_Menschenrechte_8D.pdf"],
 ];
 const prep = [
