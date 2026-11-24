@@ -16,8 +16,8 @@ const KOPF = (txt, pb) => [...(pb ? [new Paragraph({ children: [new PageBreak()]
 const TITEL = (txt, icons) => p([t(txt, { font: "Cambria", size: 30, bold: true, color: NAVY }), t("\t"), ...icons.map((n) => IC(n))], { after: 50, tabs: [{ type: TabStopType.RIGHT, position: R }] });
 // Schreiblinie mit Beschriftung
 const lineTabs = [{ type: TabStopType.RIGHT, position: R, leader: LeaderType.UNDERSCORE }];
-const wline = (label, text, loesung, hint) => p(loesung && text ? [t(label + " ", { bold: true, size: 20, color: NAVY }), t(text, { size: 20, color: GREEN, italics: true })] : [t(label + " ", { bold: true, size: 19, color: NAVY }), ...(hint ? [t(hint + " ", { size: 17, color: MUTED, italics: true })] : []), t("\t")], { tabs: lineTabs, after: 150, before: 80 });
-const emptyLine = () => p([t("\t")], { tabs: lineTabs, after: 150, before: 80 });
+const wline = (label, text, loesung, hint) => p(loesung && text ? [t(label + " ", { bold: true, size: 20, color: NAVY }), t(text, { size: 20, color: GREEN, italics: true })] : [t(label + " ", { bold: true, size: 19, color: NAVY }), ...(hint ? [t(hint + " ", { size: 17, color: MUTED, italics: true })] : []), t("\t")], { tabs: lineTabs, after: 170, before: 90 });
+const emptyLine = () => p([t("\t")], { tabs: lineTabs, after: 170, before: 90 });
 
 const ART = {
   1: "Die Menschen werden frei und gleich an Rechten geboren und bleiben es.",
@@ -70,7 +70,7 @@ function karte(n, loesung) {
 }
 function seite1(loesung) {
   const c = [];
-  c.push(...KOPF("SEITE 1", false));
+  c.push(...KOPF("ARBEITSBLATT", false));
   c.push(TITEL("Die Erklärung der Menschenrechte ins Heute übersetzen", ["tafeln", "waage", "buch"]));
   c.push(p(t(QUELLE, { size: 17, color: MUTED }), { after: 50 }));
   c.push(p([t("Aufgabe  ", { bold: true, color: RED, size: 20 }), t("Gehe bei jedem Artikel in drei Schritten vor:  ", { size: 20 }), t("① Schreibe in eigenen Worten, was dort steht.  ② Kreuze an, wie wir heute dazu sagen.  ③ Schreibe, was vorher anders war. Nutze den Vorher-Speicher.", { size: 20, bold: true })], { after: 60 }));
@@ -109,7 +109,7 @@ function seite2(loesung) {
 (async () => {
   const sec = (children) => ({ properties: { page: { size: { width: 11906, height: 16838 }, margin: { top: 450, bottom: 400, left: 700, right: 700 } } }, footers: { default: footer }, children });
   const st = { default: { document: { run: { font: "Calibri", size: 21 } } } };
-  fs.writeFileSync("../Arbeitsblatt_Menschenrechte_Quelle_8D.docx", await Packer.toBuffer(new Document({ styles: st, sections: [sec([...seite1(false), ...seite2(false)])] })));
-  fs.writeFileSync("../Loesung_Arbeitsblatt_Menschenrechte_8D.docx", await Packer.toBuffer(new Document({ styles: st, sections: [sec([p([t("LÖSUNG FÜR DIE LEHRKRAFT · GESCHICHTE 8D · STUNDE 4", { size: 17, bold: true, color: RED }), t("   Musterantworten (andere richtige Formulierungen zählen)", { size: 17, color: MUTED })], { after: 40 }), ...seite1(true), ...seite2(true)])] })));
+  fs.writeFileSync("../Arbeitsblatt_Menschenrechte_Quelle_8D.docx", await Packer.toBuffer(new Document({ styles: st, sections: [sec([...seite1(false)])] })));
+  fs.writeFileSync("../Loesung_Arbeitsblatt_Menschenrechte_8D.docx", await Packer.toBuffer(new Document({ styles: st, sections: [sec([p([t("LÖSUNG FÜR DIE LEHRKRAFT · GESCHICHTE 8D · STUNDE 4", { size: 17, bold: true, color: RED }), t("   Musterantworten (andere richtige Formulierungen zählen)", { size: 17, color: MUTED })], { after: 40 }), ...seite1(true)])] })));
   console.log("ok");
 })();

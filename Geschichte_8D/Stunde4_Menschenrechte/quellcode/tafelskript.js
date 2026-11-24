@@ -44,12 +44,12 @@ const warum = (why, gelenk) => table([W - 20], [row([cell([p([t("Warum  ", { bol
 
 const d = [];
 d.push(kicker("Tafelskript für die Lehrkraft · Einzelstunde (45 Min.) · 24 Schülerinnen und Schüler · eine Lehrkraft · Mittwoch 25.11.2026 · Hospitation"), h1("Vorrechte weg, Menschenrechte da: Quelle ins Heute übersetzen"));
-d.push(p(t("Ziel: Die Stunde knüpft an die Wege des Widerstands (Stunde 3) an und ist nach dem Partnerpuzzle bewusst lehrergesteuert mit Einzelarbeit. In der Karikatur zählen Klerus und Adel ihr Entgegenkommen auf („Ihr habt geschworen. Ihr habt die Bastille gestürmt. Wir kamen euch entgegen. Was wollt ihr noch?“), zwei Bilder an der Wand (Ballhaus, Bastille) liefern die Rückschau. Die Klasse erfährt, was am 4. August (Verzicht auf die Vorrechte) und am 26. August (Erklärung der Menschenrechte) geschah, übersetzt die Artikel in heutige Begriffe (Gleichheit vor dem Gesetz, Eigentumsrecht, Meinungsfreiheit, Volkssouveränität) und stellt fest, was sich für den Dritten Stand (Bauern und Bürger) verbessert hat. Im Aha-Moment „1789 oder heute?“ zeigt sich, dass vieles fast wörtlich im Grundgesetz steht (Vorbildwirkung). Zum Schluss sichert die Klasse das Ergebnis (Merksatz, Abschlussaufgabe als Dritter Stand).", { size: 21 }), { after: 100 }));
+d.push(p(t("Ziel: Die Stunde knüpft an die Wege des Widerstands (Stunde 3) an und ist nach dem Partnerpuzzle bewusst lehrergesteuert mit Einzelarbeit. In der Karikatur zählen Klerus und Adel ihr Entgegenkommen auf („Ihr habt geschworen. Ihr habt die Bastille gestürmt. Wir kamen euch entgegen. Was wollt ihr noch?“), zwei Bilder an der Wand (Ballhaus, Bastille) liefern die Rückschau. Die Klasse erfährt, was am 4. August (Verzicht auf die Vorrechte) und am 26. August (Erklärung der Menschenrechte) geschah, übersetzt die Artikel in heutige Begriffe (Gleichheit vor dem Gesetz, Eigentumsrecht, Meinungsfreiheit, Volkssouveränität) und stellt fest, was sich für den Dritten Stand (Bauern und Bürger) verbessert hat. Im Aha-Moment („1789 oder Grundgesetz?“, nur auf den Folien) zeigt sich, dass vieles fast wörtlich im Grundgesetz steht (Vorbildwirkung von 1789). Zum Schluss sichert die Klasse das Ergebnis (Merksatz, Exit-Ticket mit der Ausgangsfrage der Karikatur).", { size: 21 }), { after: 100 }));
 
 d.push(h3("Kopf der Planung"));
 d.push(table([2600, 7606], [
   ["Ziel (Ich kann …)", "1  … erklären, was sich durch den Verzicht auf die Vorrechte und die Menschenrechte für den Dritten Stand verbessert hat.  2  … Artikel von 1789 in heutige Begriffe übersetzen (zum Beispiel Eigentumsrecht).  3  … an einem Grundgesetz-Artikel zeigen, dass die Erklärung bis heute nachwirkt.*"],
-  ["Prüfaufgabe: Woran erkenne ich es?", "Arbeitsblatt Seite 1 (Artikel 6, 11, 17 in den drei Schritten), Seite 2 (Aufgabe A „1789 oder heute?“), Abschlussaufgabe: mündlich als Dritter Stand („Wir wollen …, weil Artikel … sagt. Früher …, heute …“). Freiwillige Abgabe, Rückmeldung nach drei Stufen (gleich den Zielen). Punkte oder Noten gibt es heute nicht (später)."],
+  ["Prüfaufgabe: Woran erkenne ich es?", "Arbeitsblatt (Artikel 6, 11, 17 in den drei Schritten), Notiz im Heft zu Folie 17 („1789 oder Grundgesetz?“), Exit-Ticket mit der Ausgangsfrage von Folie 1 („Wir wollen …, Artikel … sagt …, früher …, heute im Grundgesetz …“). Rückmeldung nach drei Stufen (gleich den Zielen), Zettel werden abgegeben. Punkte oder Noten gibt es heute nicht (später)."],
   ["Mindestziel", "Ziel 1 und 2. Ziel 3 hat einen Stern (Transfer gekürzt). „Auswerten“ bleibt immer."],
   ["Beitrag zur Reihe", "Stunde 4 von 11 (Sequenz, Fassung vom 17.11.). Sie zeigt, wie der Verzicht auf die Vorrechte und die Erklärung der Menschenrechte die Lage des Dritten Standes verbessern, baut die Kompetenz Quellenauswertung auf (wiederkehrend, auch im Test) und führt mit „Für wen galten die Rechte 1789 wirklich?“ zur Verfassung 1791 (Stunde 5)."],
   ["Vorgehen", "Rückschau indirekt (allein, Plenum), Informieren und Quellenauswertung direkt: Portionen, Vormachen (Lehrkraft denkt laut), angeleitet (Artikel 3 mit Hilfe), selbstständig (drei Artikel). Direktes Vorgehen, weil das Vorwissen zur Quellenarbeit gering ist. Aha und Sicherung geführt. Direkt oder indirekt wird je Phase entschieden."],
@@ -59,17 +59,17 @@ d.push(h3("Bezug jedes Schritts zum Ziel (Prüfung)"));
 d.push(table([4400, 1500, 4306], [
   row([th("Schritt", 4400), th("Ziel", 1500), th("Begründung", 4306)], 320),
   ...[
-    ["Karikatur und Vermutung (Folie 1)", "Rahmen", "Stundenfrage, Vorher-Nachher mit der Abschlussaufgabe"],
+    ["Karikatur und Vermutung (Folie 1)", "Rahmen", "Stundenfrage, Vorher-Nachher mit dem Exit-Ticket"],
     ["Rückschau an den Bildern (Folie 5, 6)", "1", "Ereignisse 1789 als Voraussetzung für „vorher, nachher“"],
     ["Verzicht auf die Vorrechte (Folie 7)", "1", "Vorher und Nachher, Bedeutung des 4. August"],
     ["Quelle ins Heute übersetzen, Modell, Prüffrage (Folie 8 bis 10)", "2", "Methode modellieren, Verständnis prüfen"],
     ["Artikel 3 mit Hilfe, sechs Artikel selbst (Folie 11 bis 14)", "1, 2", "angeleitet, dann selbstständig üben; Begriff heute und Vorher"],
     ["Was hat sich verbessert? (Folie 15)", "1", "Vorher und Seitdem (Bedeutung)"],
-    ["1789 oder heute? Echo (Folie 16 bis 18)", "3", "Transfer, Aha: Vorbildwirkung im Grundgesetz"],
-    ["Merksatz (Folie 19)", "1, 2, 3", "Ergebnissicherung, Wissen für den Test"],
-    ["Abschlussaufgabe (Folie 20)", "1, 2, 3", "prüft alle Ziele, Vergleich mit der Vermutung"],
-    ["Ziele prüfen (Folie 21)", "1, 2, 3", "Zielprüfung, Abgabe"],
-    ["Ausblick (Folie 22)", "Brücke", "kein Ziel der Stunde, bereitet Stunde 5 vor"],
+    ["Grundgesetz, 1789 oder Grundgesetz?, Echo, Bedeutung (Folie 16 bis 19)", "3", "Transfer, Aha: Vorbildwirkung von 1789 für das Grundgesetz"],
+    ["Merksatz (Folie 20)", "1, 2, 3", "Ergebnissicherung, Wissen für den Test"],
+    ["Exit-Ticket mit der Ausgangsfrage (Folie 21)", "1, 2, 3", "prüft alle Ziele bei allen, Vergleich mit der Vermutung"],
+    ["Ziele prüfen (Folie 22)", "1, 2, 3", "Zielprüfung"],
+    ["Ausblick (Folie 23)", "Brücke", "kein Ziel der Stunde, bereitet Stunde 5 vor"],
   ].map((r) => row(r.map((v, i) => tc(v, [4400, 1500, 4306][i], { bold: i === 1 })), 320)),
 ]));
 
@@ -78,25 +78,25 @@ d.push(...bullets([
   "Rückmeldung zur Hospitation (Lehrkraft, 21.11.): Nach dem Gruppenpuzzle ist eine eher lehrergesteuerte Stunde mit Einzelarbeit sinnvoll (kein ständiges Sozialformfeuerwerk). Die Sicherung am Ende ist wichtig. Die Artikel werden in heutiges Vokabular übersetzt (Gleichheit vor dem Gesetz, Eigentumsrecht, Meinungsfreiheit), um Kontinuität und Vorbildwirkung seit 1789 zu zeigen; der Transfer zu ausgewählten Grundgesetz-Artikeln soll der Aha-Moment werden; die Bedeutung (was wurde verbessert?) soll deutlich werden; das Blatt der Kollegin dient als Vorbild.",
   "Stunde 3 (18.11.): Ballhausschwur und Bastille als Widerstand, wirksam heißt nicht gerechtfertigt. Die Rückschau (Folie 5 und 6) wiederholt das an zwei Bildern. Falls in Stunde 3 etwas nicht geschafft wurde, hier als Wiederholung aufgreifen.",
   "8C (20.11.): Die Stunde 3 hat in der 8C gut funktioniert (Rückmeldung der Lehrkraft, 21.11.). Für die 8C entfällt diese Stunde (die Menschenrechte hatte sie am 13.11.).",
-  "Entscheidungen der Lehrkraft (21.11.): Artikel wie im Original (Artikel 6, nicht 5 wie in einem anderen Buch), Wortlaut in der gekürzten Fassung, Eigentumsrecht übernehmen (Artikel 17), Transfer als Aha-Moment („1789 oder heute?“), Blatt der Kollegin anpassen (eigene Fassung mit dem Wortspeicher der Kollegin plus Eigentumsrecht). Das Buch mit den Fotos ist ein anderes Buch und nur Inspiration. Die Nummerierung des Buches wird nicht übernommen.",
+  "Entscheidungen der Lehrkraft (21.11.): Artikel wie im Original (Artikel 6, nicht 5 wie in einem anderen Buch), Wortlaut in der gekürzten Fassung, Eigentumsrecht übernehmen (Artikel 17), Transfer als Aha-Moment („1789 oder Grundgesetz?“ nur auf den Folien, nicht auf dem Blatt; Ausgangsfrage als Exit-Ticket, 24.11.), Blatt der Kollegin anpassen (eigene Fassung mit dem Wortspeicher der Kollegin plus Eigentumsrecht). Das Buch mit den Fotos ist ein anderes Buch und nur Inspiration. Die Nummerierung des Buches wird nicht übernommen.",
   "Karikatur als Einstieg, Rückschau und Abschluss (Antwort in der Rolle des Dritten Stands): selbst gezeichnet, keine historische Quelle. Die Aussage ist bewusst überspitzt (Entgegenkommen als Gnade, historisch nicht freiwillig).",
-  "Regel „höchstens drei Methoden“: Quellenauswertung (Vormachen, angeleitet, selbstständig), Aha „1789 oder heute?“, Abschlussaufgabe. Karikatur und Rückschau sind Impuls beziehungsweise Routine.",
+  "Regel „höchstens drei Methoden“: Quellenauswertung (Vormachen, angeleitet, selbstständig), Aha „1789 oder Grundgesetz?“, Exit-Ticket. Karikatur und Rückschau sind Impuls beziehungsweise Routine.",
 ]));
 
 d.push(h3("Zeitplan (45 Minuten)"));
 d.push(table([800, 2300, 4300, 2806], [
   row([th("Min.", 800), th("AVIVA", 2300), th("Phase", 4300), th("Arbeitsform", 2806)], 320),
-  ...[["4", "Ankommen", "0  Karikatur, Vermutung, Stundenfrage, Ziele, Ablauf", "still, allein"], ["4", "Vorwissen", "1  Rückschau an den Bildern (3), Kette (1)", "allein, Plenum"], ["10", "Informieren", "2  Verzicht auf die Vorrechte (3), Erklärung und drei Schritte (1), Modell Artikel 1 (3), Prüffrage (1), Reserve (2)", "hört zu, Stichprobe"], ["18", "Verarbeiten", "3  Artikel 3 mit Hilfe (3), drei Artikel allein (6), Kontrolle Begriffe und Bilanz (3), Aha „1789 oder heute?“ (4), Reserve (2)", "allein, Plenum"], ["9", "Auswerten", "4  Merksatz (2), Abschlussaufgabe mündlich (5), Ziele (1), Ausblick (1)", "schreiben, mündlich, still"]].map((r) => row(r.map((v, i) => tc(v, [800, 2300, 4300, 2806][i], { bold: i === 0 })), 340)),
+  ...[["4", "Ankommen", "0  Karikatur, Vermutung, Stundenfrage, Ziele, Ablauf", "still, allein"], ["4", "Vorwissen", "1  Rückschau an den Bildern (3), Kette (1)", "allein, Plenum"], ["10", "Informieren", "2  Verzicht auf die Vorrechte (3), Erklärung und drei Schritte (1), Modell Artikel 1 (3), Prüffrage (1), Reserve (2)", "hört zu, Stichprobe"], ["18", "Verarbeiten", "3  Artikel 3 mit Hilfe (3), drei Artikel allein (6), Kontrolle Begriffe und Bilanz (3), Aha: Grundgesetz, 1789 oder Grundgesetz?, Echo, Bedeutung (4), Reserve (2)", "allein, Plenum"], ["9", "Auswerten", "4  Merksatz (2), Exit-Ticket (5), Ziele (1), Ausblick (1)", "schreiben, mündlich, still"]].map((r) => row(r.map((v, i) => tc(v, [800, 2300, 4300, 2806][i], { bold: i === 0 })), 340)),
 ]));
-d.push(note("ZEIT", "Die Stunde ist dicht. Sollbruchstellen: (1) Rückschau: Plenum nur 30 Sekunden. (2) Reserve in Phase 2 (2 Minuten) für erneutes Erklären. (3) Übung 2: Wer nach 6 Minuten nur Artikel 6 und 11 hat, ist richtig. (4) Aha: Zeigen Sie nur die ersten zwei Paare, wenn die Zeit knapp ist (Ziel 3 mit Stern). (5) Abschlussaufgabe: nur mündlich, ohne 2 Minuten Schreiben. Phase 4 „Auswerten“ wird nicht gestrichen. Die Übungsphase endet 9 Minuten vor Schluss."));
+d.push(note("ZEIT", "Die Stunde ist dicht. Sollbruchstellen: (1) Rückschau: Plenum nur 30 Sekunden. (2) Reserve in Phase 2 (2 Minuten) für erneutes Erklären. (3) Übung 2: Wer nach 6 Minuten nur Artikel 6 und 11 hat, ist richtig. (4) Aha: nur Folie 17 und 18, Folie 19 mündlich in einem Satz (Ziel 3 mit Stern). (5) Exit-Ticket: Vorlesen entfällt. Phase 4 „Auswerten“ wird nicht gestrichen. Die Übungsphase endet 9 Minuten vor Schluss."));
 
 d.push(h3("Worauf die Hospitation achten kann (Aktivierung, Kompetenz, Sicherung)"));
 d.push(...bullets([
   "Lehrergesteuert mit Einzelarbeit: Portionen, Modell, angeleitet, selbstständig, Stichproben. Partnerarbeit nur kurz (Vergleichen nach Artikel 3).",
-  "Alle in jeder Phase aktiv: Ankommen (Vermutung im Heft), Rückschau (allein schreiben), Prüffrage (Stichprobe), Übungen (allein), Aha (allein ankreuzen), Abschluss (alle schreiben, wenige sprechen).",
+  "Alle in jeder Phase aktiv: Ankommen (Vermutung im Heft), Rückschau (allein schreiben), Prüffrage (Stichprobe), Übungen (allein), Aha (allein im Heft notieren), Exit-Ticket (alle schreiben).",
   "Kompetenzaufbau sichtbar: gleiche drei Schritte (Meine Worte, Begriff heute, Vorher) in Modell, angeleiteter und selbstständiger Phase; Hilfen werden abgebaut.",
-  "Kognitive Aktivierung: Entschlüsseln der Sprechblase an den Bildern, Übersetzen ins heutige Vokabular, Raten „1789 oder heute?“ und das Aha.",
-  "Sicherung: Vorher-Nachher-Bilanz, Merksatz, schriftliche und mündliche Abschlussaufgabe, Zielprüfung, Vergleich mit der Vermutung.",
+  "Kognitive Aktivierung: Entschlüsseln der Sprechblase an den Bildern, Übersetzen ins heutige Vokabular, Raten „1789 oder Grundgesetz?“ und das Aha.",
+  "Sicherung: Vorher-Nachher-Bilanz, Merksatz, Exit-Ticket (Ausgangsfrage, alle schreiben), Zielprüfung, Vergleich mit der Vermutung.",
   "Differenzierung: Wortspeicher, Hilfe bei Artikel 3, kurze Artikel zuerst, Zusatz* (Vorher bei 2, 4, 10), Satzanfänge bei Aufgabe B.",
 ]));
 
@@ -111,9 +111,9 @@ d.push(table([4700, 5506], [
 
 d.push(h3("Material und Vorbereitung (Details: Materialliste)"));
 d.push(...bullets([
-  "Arbeitsblatt_Menschenrechte_Quelle_8D.pdf: eine A4-Seite doppelseitig, ohne Tabelle (Seite 1: Wortspeicher und Vorher-Speicher nebeneinander, fünf Artikel-Blöcke mit „Meine Worte, Begriff ankreuzen, Vorher“; Seite 2: „1789 oder heute?“, Historische Bedeutung). 26-mal drucken, doppelseitig.",
+  "Arbeitsblatt_Menschenrechte_Quelle_8D.pdf: eine A4-Seite, einseitig, ohne Tabelle (Wortspeicher und Vorher-Speicher nebeneinander, fünf Artikel-Blöcke mit „Meine Worte, Begriff ankreuzen, Vorher“). 26-mal drucken. Exit-Ticket_Menschenrechte_8D.pdf: 6 Zettel pro A4, 5-mal drucken und schneiden (30 Zettel).",
   "Loesung_Arbeitsblatt_Menschenrechte_8D.pdf (für Sie): Musterantworten für beide Seiten (Stichworte genügen).",
-  "Folien 1 bis 22 (Schrift mindestens 27 Punkt; Folie 1, 5, 6 und 20 mit der selbst gezeichneten Karikatur beziehungsweise den Bildern aus ihr).",
+  "Folien 1 bis 23 (Schrift mindestens 27 Punkt; Folie 1, 5, 6 und 21 mit der selbst gezeichneten Karikatur beziehungsweise den Bildern aus ihr).",
   "Seitentafel: Stundenfrage, Ziele, Ablauf (siehe Phase 0). Mitte der Tafel leer.",
   "Kreide, Grün zum Verbessern, Uhr oder Timer.",
 ]));
@@ -170,7 +170,7 @@ d.push(step("hört zu, antwortet in Stichproben", {
 
 // Phase 3
 d.push(phase("3", "Arbeitsblatt: angeleitet, selbstständig, Bilanz, Aha", 18, "AVIVA: Verarbeiten"));
-d.push(warum("Progression der direkten Instruktion in Einzelarbeit: erste Anwendung (Artikel 3 mit Hilfe), selbstständiges Üben (drei Artikel: 6, 11, 17), Kontrolle mit Bilanz (Was hat sich verbessert?), dann der Aha-Moment „1789 oder heute?“. Die Aufgabe A auf Seite 2 sagt nicht, dass es Paare gibt: Das Echo im Grundgesetz soll überraschen.", "„Das war vor 237 Jahren. Was davon gilt noch heute? Dreht Seite 2 um.“"));
+d.push(warum("Progression der direkten Instruktion in Einzelarbeit: erste Anwendung (Artikel 3 mit Hilfe), selbstständiges Üben (drei Artikel: 6, 11, 17), Kontrolle mit Bilanz (Was hat sich verbessert?), dann der Aha-Moment nur über die Folien (Grundgesetz kurz erklärt, drei Sätze „1789 oder Grundgesetz?“, Auflösung als Paare, Bedeutung von 1789). Die Folien sagen nicht, dass es Paare gibt: Das Echo im Grundgesetz soll überraschen.", "„Das war vor 237 Jahren. Was davon gilt noch heute? Das Grundgesetz kennt ihr alle.“"));
 d.push(sp());
 d.push(step("3a  Artikel 3 mit Hilfe (3 Min.)", {
   say: "Stifte liegen. Ihr hört nur zu. Jetzt nehmt ihr das Arbeitsblatt. Jetzt arbeitet ihr allein. Die Aufgabe steht rechts.",
@@ -199,29 +199,31 @@ d.push(step("3c  Kontrolle und Bilanz (3 Min.)", {
   sol: "Art. 1 Gleichheit, Art. 2 Grundrechte (auch Widerstand), Art. 3 Volkssouveränität, Art. 4 Freiheit, Art. 6 Gleichheit vor dem Gesetz, Art. 10 Religionsfreiheit, Art. 11 Meinungsfreiheit, Art. 17 Eigentumsrecht. Vorher: 3 der König bestimmt allein; 6 Vorrechte für Klerus und Adel, keine Steuern; 11 der König kontrolliert, was gedruckt wird; 17 Bauern geben Ernte und Dienste ab, Eigentum nicht gesichert.",
 }));
 d.push(sp());
-d.push(step("3d  Aha: 1789 oder heute? (4 Min.)", {
-  say: "Stifte liegen. Ihr hört nur zu. Jetzt dreht ihr Seite 2 um. Jetzt arbeitet ihr allein. Die Aufgabe steht rechts. … Stifte liegen. Ihr hört nur zu. Schaut auf eure Sätze A bis H.",
-  ziel: "Ziel 3 (Transfer, Vorbildwirkung).",
+d.push(step("3d  Aha: Grundgesetz, 1789 oder Grundgesetz?, Echo, Bedeutung (4 Min.)", {
+  say: "Stifte liegen. Ihr hört nur zu. … Überlegt allein: 1789 oder Grundgesetz? Notiert A, B und C ins Heft. … Vergleicht mit euren Notizen.",
+  ziel: "Ziel 3 (Transfer, Vorbildwirkung, Bedeutung von 1789 für das Grundgesetz).",
   do: [
-    "Folie 16 (2 Minuten allein): Aufgabe A auf Seite 2: acht Sätze ohne Jahr, vier aus der Erklärung von 1789 (Artikel 3, 6, 11, 17), vier aus dem Grundgesetz (Artikel 3, 5, 14, 20), gemischt. Ankreuzen: 1789 oder heute, raten ist erlaubt. Sagen Sie nicht, dass es Paare gibt.",
-    "Folie 17 und 18 (je 1 Minute, Sie sprechen): Zu jedem Satz von 1789 das Echo im Grundgesetz, fast wörtlich. Aussage: „Was ihr eben als Recht aus 1789 gelesen habt, steht nach 237 Jahren fast wörtlich in unserem Grundgesetz. Die Erklärung war ein Vorbild.“ Haltung: Heute gelten die Rechte für alle, 1789 galten sie nicht für alle (nächste Stunde). Lassen Sie den Aha-Moment wirken, kein Gespräch.",
+    "Folie 16 (30 Sekunden, Sie sprechen): Das Grundgesetz ist die Verfassung der Bundesrepublik Deutschland, es gilt seit 1949, am Anfang stehen die Grundrechte (Artikel 1 bis 19). Wenn es sich anbietet, knüpfen Sie an die Frage eines Schülers an („Wofür braucht man Geschichte?“): Hier ist ein Beispiel.",
+    "Folie 17 (1 Minute allein, Denkphase): Drei Sätze ohne Jahr: A „Das Gesetz muss für alle gleich sein.“, B „Alle Staatsgewalt geht vom Volke aus.“, C „Das Eigentum und das Erbrecht werden gewährleistet.“ Die Klasse notiert ins Heft: 1789 oder Grundgesetz (Raten erlaubt). Sagen Sie nicht, dass es Paare gibt. Stichprobe bei 2 bis 3 Personen: Was habt ihr und woran habt ihr es erkannt? Nichts auflösen.",
+    "Folie 18 (1,5 Minuten, Sie sprechen): Auflösung mit Paaren: links 1789, rechts Grundgesetz (Art. 6 und GG Art. 3, Art. 3 und GG Art. 20, Art. 17 und GG Art. 14). Aussage: „Fast niemand konnte es sicher sagen, weil die Sätze so ähnlich sind. Was ihr als Recht aus 1789 gelesen habt, steht fast wörtlich im Grundgesetz.“",
+    "Folie 19 (1 Minute, kurze Stichproben): „Was fällt euch auf? Was bedeutet 1789 für unser Grundgesetz?“ 2 bis 3 Antworten, dann die Antwort zeigen: 1789 war ein Vorbild, Rechte aus der Erklärung stehen noch heute im Grundgesetz. Haltung: heute gelten sie für alle, 1789 nicht (Stunde 5).",
   ],
-  sol: "Lösung Aufgabe A: A 1789 (Art. 6), B heute (GG Art. 20 Abs. 2), C 1789 (Art. 11), D heute (GG Art. 14 Abs. 1), E heute (GG Art. 3 Abs. 1), F 1789 (Art. 3), G 1789 (Art. 17), H heute (GG Art. 5 Abs. 1). Paare: A und E, C und H, F und B, G und D.",
+  sol: "Lösung Folie 17: A 1789 (Art. 6), B Grundgesetz (Art. 20 Abs. 2), C Grundgesetz (Art. 14 Abs. 1). Paare: Art. 6 und GG Art. 3 (1) Gleichheit vor dem Gesetz; Art. 3 und GG Art. 20 (2) Volkssouveränität; Art. 17 und GG Art. 14 (1) Eigentum. Erwartung zur Bedeutung: Die Erklärung von 1789 war ein Vorbild für das Grundgesetz; viele Rechte, die wir heute selbstverständlich haben, wurden damals zum ersten Mal aufgeschrieben.",
 }));
 
 // Phase 4
-d.push(phase("4", "Auswerten: Merksatz und Abschlussaufgabe", 9, "AVIVA: Auswerten"));
-d.push(warum("Der Merksatz sichert das Ergebnis (Daten, heutige Begriffe, Recht statt Vorrecht, Echo im Grundgesetz) für den Test. Die Abschlussaufgabe prüft alle drei Ziele: Die Klasse antwortet als Dritter Stand mündlich mit Artikel, Vorher, Heute (die frühere Aufgabe B auf dem Blatt ist gestrichen). Der Vergleich mit der Vermutung zeigt den Lernzuwachs, ohne Floskel.", "„Gilt das für alle? Das sehen wir nächste Woche.“"));
+d.push(phase("4", "Auswerten: Merksatz und Exit-Ticket", 9, "AVIVA: Auswerten"));
+d.push(warum("Der Merksatz sichert das Ergebnis (Daten, heutige Begriffe, Recht statt Vorrecht, Echo im Grundgesetz) für den Test. Das Exit-Ticket greift die Ausgangsfrage der Karikatur auf: Jede Person antwortet als Dritter Stand schriftlich mit Artikel, früher und heute (Grundgesetz). Das prüft alle drei Ziele bei allen, nicht nur bei einigen, und zeigt den Lernzuwachs (Vermutung am Anfang gegen Antwort am Ende), ohne Floskel. Die freiwillige Zeile „Das war mir unklar“ ist die Rückmeldung der Klasse.", "„Gilt das für alle? Das sehen wir nächste Woche.“"));
 d.push(sp());
-d.push(step("schreibt ab, schreibt, antwortet als Dritter Stand", {
-  say: "Stifte liegen. Ihr hört nur zu. Jetzt schreibt ihr von der Folie ab: Merksatz 1. Rahmt ihn rot ein. … Schaut noch einmal auf die Karikatur vom Anfang. Ihr seid der Dritte Stand. Schreibt eure Antwort auf. Jetzt arbeitet ihr allein.",
-  ziel: "Ziel 1, 2 und 3 (Merksatz, Abschlussaufgabe).",
+d.push(step("schreibt ab, beantwortet die Ausgangsfrage", {
+  say: "Stifte liegen. Ihr hört nur zu. Jetzt schreibt ihr von der Folie ab: Merksatz 1. Rahmt ihn rot ein. … Schaut noch einmal auf die Karikatur vom Anfang. Ihr seid der Dritte Stand. Ihr bekommt einen Zettel. Jetzt arbeitet ihr allein. Antwortet mit den Satzanfängen. Den Zettel gebt ihr beim Hinausgehen ab.",
+  ziel: "Ziel 1, 2 und 3 (Merksatz, Exit-Ticket).",
   do: [
-    "Folie 19 (Merksatz, 2 Minuten): Abschreiben und rot umrahmen, Beispiel (Artikel 6 und Grundgesetz Artikel 3) und Test („Recht gilt für alle, Vorrecht nur für wenige“) mit auf die Folie, kein „Wofür“.",
-    "Folie 20 (Abschlussaufgabe, 5 Minuten, nur mündlich): 20 Sekunden still nachdenken, dann Blitzlicht bei 4 bis 6 Personen unterschiedlichen Niveaus, in der Ich-Form: „Ich antworte euch: Wir wollen …, weil Artikel … sagt. Früher …, heute steht im Grundgesetz …“ Wer hat umgedacht? Vergleich mit der Vermutung vom Anfang. Bei Zeitnot: 3 Antworten genügen.",
-    "Folie 21 (Ziele prüfen, 1 Minute, still): Haben wir die Ziele erreicht? Wer das Blatt abgeben möchte, legt es vorn ab. Folie 22 (Ausblick, nur lesen, Brücke zu Stunde 5): „Für wen galten diese Rechte 1789 wirklich?“",
+    "Folie 20 (Merksatz, 2 Minuten): Abschreiben und rot umrahmen, Beispiel (Artikel 6 und Grundgesetz Artikel 3) und Test („Recht gilt für alle, Vorrecht nur für wenige“) mit auf die Folie, kein „Wofür“.",
+    "Folie 21 (Exit-Ticket, 5 Minuten): Die Zettel (Exit-Ticket_Menschenrechte_8D, 6 pro A4, ausgeschnitten, 26 Stück) liegen umgedreht. 4 Minuten allein schreiben (Satzanfänge: Wir wollen … / Artikel … sagt … / Früher …, heute im Grundgesetz …), Heft-Stichprobe beim Durchgehen. Danach 1 Minute: 2 bis 3 Personen lesen freiwillig vor, kein Kommentar. Wer hat umgedacht? Vergleich mit der Vermutung vom Anfang. Bei Zeitnot: nur schreiben, Vorlesen entfällt.",
+    "Folie 22 (Ziele prüfen, 1 Minute, still): Haben wir die Ziele erreicht? Folie 23 (Ausblick, nur lesen, Brücke zu Stunde 5): „Für wen galten diese Rechte 1789 wirklich?“ Die Zettel geben die Schüler beim Hinausgehen ab. Sie lesen sie nach der Stunde und geben Rückmeldung nach den Stufen (Stufe 1 bis 3 = Ziel 1 bis 3). Unbenotet.",
   ],
-  sol: "Mögliche Antworten als Dritter Stand (Auswahl, keine Musterlösung). „Wir wollen Gleichheit, weil Artikel 6 sagt, dass das Gesetz für alle gleich ist. Früher hatten Klerus und Adel Vorrechte, heute steht im Grundgesetz, dass alle Menschen vor dem Gesetz gleich sind.“ „Wir wollen frei reden, weil Artikel 11 das erlaubt. Früher kontrollierte der König den Druck, heute steht die Meinungsfreiheit im Grundgesetz Artikel 5.“ „Wir wollen mitbestimmen, weil Artikel 3 sagt, dass die Herrschaft vom Volk ausgeht, früher bestimmte der König allein, heute steht im Grundgesetz, dass alle Staatsgewalt vom Volke ausgeht.“",
+  sol: "Mögliche Antworten als Dritter Stand (Auswahl, keine Musterlösung). „Wir wollen Gleichheit. Artikel 6 sagt, dass das Gesetz für alle gleich ist. Früher hatten Klerus und Adel Vorrechte, heute steht im Grundgesetz, dass alle Menschen vor dem Gesetz gleich sind.“ „Wir wollen mitbestimmen. Artikel 3 sagt, dass die Herrschaft vom Volk ausgeht. Früher bestimmte der König allein, heute geht alle Staatsgewalt vom Volke aus.“ „Wir wollen unser Eigentum behalten. Artikel 17 schützt es. Früher gaben Bauern einen Teil der Ernte ab, heute gewährleistet das Grundgesetz das Eigentum.“ Stufe 1: nennt, was sich verbessert hat; Stufe 2: Artikel in heutigem Begriff; Stufe 3: Grundgesetz-Artikel genannt.",
 }));
 
 d.push(h3("So sieht das Heft und das Blatt am Ende aus"));
@@ -230,12 +232,12 @@ d.push(table([2300, 7906], [
   ["Vermutung", "„Was will der Dritte Stand noch? Ich vermute …“ (Beginn der Stunde)"],
   ["Rückschau", "zu jedem Bild: Was geschah? Was bewirkte es? Verbesserungen grün"],
   ["Blatt Seite 1", "Artikel 1 (Beispiel, gelb), Artikel 3 mit Hilfe, Artikel 6, 11 und 17 selbst (Meine Worte, Begriff angekreuzt, Vorher); Verbesserungen grün"],
-  ["Blatt Seite 2", "Aufgabe A „1789 oder heute?“ angekreuzt"],
-  ["Heft", "Merksatz 1 (abgeschrieben, rot umrahmt)"],
+  ["Heft", "Notiz zu Folie 17: A, B, C = 1789 oder Grundgesetz"],
+  ["Heft", "Merksatz 1 (abgeschrieben, rot umrahmt)"], ["Exit-Ticket", "Antwort auf die Ausgangsfrage (Wir wollen …, Artikel … sagt …, Früher …, heute im Grundgesetz …), wird abgegeben"],
 ].map(([a, b]) => row([tc(a, 2300, { bold: true, fill: LIGHT }), tc(b, 7906)], 340))));
 
 d.push(h3("Nach der Stunde festhalten (Reflexionslog)"));
-d.push(...bullets(["Passten Ziel, Inhalt und Methode zusammen? Wie lief die Zeit? Wie viel echte Lernzeit hatte die Klasse?", "Haben die Schritte „Meine Worte, Begriff heute, Vorher“ gesessen? Wo hakte es (Prüffrage, Artikel 3, selbstständige Phase)?", "Wie lief der Aha-Moment „1789 oder heute?“ (Raten, Reaktion)? Wie gut war die Sicherung (Merksatz, mündliche Antworten)?", "Wie viele Blätter wurden abgegeben, auf welcher Stufe lagen sie?", "Hospitationsrückmeldung zur Aktivierung und zum Kompetenzerwerb: Was nimmst du mit?", "Wie lief Stunde 3 (Rückmeldung nachtragen)?"]));
+d.push(...bullets(["Passten Ziel, Inhalt und Methode zusammen? Wie lief die Zeit? Wie viel echte Lernzeit hatte die Klasse?", "Haben die Schritte „Meine Worte, Begriff heute, Vorher“ gesessen? Wo hakte es (Prüffrage, Artikel 3, selbstständige Phase)?", "Wie lief der Aha-Moment „1789 oder Grundgesetz?“ (Raten, Reaktion, Bedeutung von 1789)? Was stand auf den Exit-Tickets (Stufen, „Das war mir unklar“)? Wie gut war die Sicherung (Merksatz, mündliche Antworten)?", "Wie viele Blätter wurden abgegeben, auf welcher Stufe lagen sie?", "Hospitationsrückmeldung zur Aktivierung und zum Kompetenzerwerb: Was nimmst du mit?", "Wie lief Stunde 3 (Rückmeldung nachtragen)?"]));
 d.push(h3("Zum Prüfen"));
 d.push(...bullets([
   "Wortlaut der Artikel: gekürzte und vereinfachte Fassung (Entscheidung der Lehrkraft); Nummerierung wie im Original (Artikel 6, in einem anderen Buch steht 5). Mit der Kollegin abgleichen. Neu: Artikel 17 (Eigentum) und der Begriff Eigentumsrecht; der Wortspeicher der Kollegin enthält ihn nicht (Test vergleichbar halten).",

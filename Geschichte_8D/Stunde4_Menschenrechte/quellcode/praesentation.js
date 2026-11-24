@@ -183,14 +183,14 @@ const PH = 336 * K; // Höhe eines Gemäldeausschnitts
 
 // ============ 3 Lernziele ============
 {
-  const s = blank("Lernziele", "Das kannst du am Ende der Stunde", undefined, "Dient Ziel 1 bis 3 (Transparenz). Lernziele vorlesen (45 Sekunden). Sie sind zugleich das Raster für die Rückmeldung: Stufe 1 = Ziel 1, Stufe 2 = Ziel 2, Stufe 3 = Ziel 3. Die Abgabe des Blattes ist freiwillig, Sie geben Rückmeldung nach den Stufen, Punkte oder Noten gibt es heute nicht. Keine Selbsteinschätzung der Schülerinnen und Schüler. Mindestziel: Ziel 1 und 2. Ziel 3 hat einen Stern: Der Transfer wird gekürzt, wenn die Zeit knapp ist. Die Phase „Auswerten“ bleibt immer. Am Ende (Folie 21) prüft die Klasse still, ob die Ziele erreicht sind.");
+  const s = blank("Lernziele", "Das kannst du am Ende der Stunde", undefined, "Dient Ziel 1 bis 3 (Transparenz). Lernziele vorlesen (45 Sekunden). Sie sind zugleich das Raster für die Rückmeldung: Stufe 1 = Ziel 1, Stufe 2 = Ziel 2, Stufe 3 = Ziel 3. Am Ende beantwortet jede Person die Ausgangsfrage (Karikatur) auf einem Exit-Ticket; Sie lesen die Zettel und geben Rückmeldung nach den Stufen. Punkte oder Noten gibt es heute nicht. Keine Selbsteinschätzung der Schülerinnen und Schüler. Mindestziel: Ziel 1 und 2. Ziel 3 hat einen Stern: Der Transfer wird gekürzt, wenn die Zeit knapp ist. Die Phase „Auswerten“ bleibt immer. Am Ende (Folie 22) prüft die Klasse still, ob die Ziele erreicht sind.");
   [["1", "Ich kann erklären, was sich durch den Verzicht auf die Vorrechte und die Menschenrechte für den Dritten Stand verbessert hat."], ["2", "Ich kann Artikel von 1789 in heutige Begriffe übersetzen (zum Beispiel Eigentumsrecht)."], ["3", "Ich kann an einem Grundgesetz-Artikel zeigen, dass die Erklärung bis heute nachwirkt.*"]].forEach(([n, x], i) => {
     const y = 1.55 + i * 1.5;
     box(s, 0.6, y, 12.15, 1.3, i % 2 ? LIGHT : LIGHT2);
     numCircle(s, n, 0.9, y + 0.4, 0.5, RED);
     txt(s, x, { x: 1.7, y, w: 10.8, h: 1.3, fontFace: HEAD, fontSize: 27, valign: "middle" });
   });
-  bar(s, [{ text: "Rückmeldung von mir: ", options: { bold: true } }, { text: "Stufe 1, 2 oder 3. Blatt freiwillig abgeben.", options: {} }]);
+  bar(s, [{ text: "Rückmeldung von mir: ", options: { bold: true } }, { text: "Ausgangsfrage als Exit-Ticket am Ende.", options: {} }]);
 }
 
 // ============ 4 Ablauf ============
@@ -351,67 +351,91 @@ const PH = 336 * K; // Höhe eines Gemäldeausschnitts
   bar(s, [{ text: "Bedeutung: ", options: { bold: true } }, { text: "Gleiche Rechte statt Vorrechte.", options: {} }]);
 }
 
-// ============ 16 Ü3 1789 oder heute ============
+// ============ 16 Das Grundgesetz ============
 {
-  const { s } = taskSlide("V · Verarbeiten · Übung 3", "1789 oder heute?", ["Dreh Seite 2 um. Lies Aufgabe A.", "Kreuze bei jedem Satz an: 1789 oder heute.", "Rate, wenn du unsicher bist.", "Fertig? Stift hinlegen."], "2 Min. · allein · leise",
-    "Dient Ziel 3 (Transfer, Aha-Moment). Ansage: „Stifte liegen. Ihr hört nur zu. Jetzt dreht ihr Seite 2 um. Jetzt arbeitet ihr allein. Die Aufgabe steht rechts.“ Es geht nicht darum, alles richtig zu haben. Acht Sätze stehen ohne Jahr auf dem Blatt: vier aus der Erklärung von 1789 (Artikel 3, 6, 11, 17), vier aus dem Grundgesetz (Artikel 3, 5, 14, 20), gemischt. Die Klasse kreuzt allein an, was sie für 1789 und was für heute hält. Sagen Sie nicht, dass es Paare gibt, das ist der Aha-Moment. Differenzierung: Wer fertig ist, versucht zu erklären, woran er es erkannt hat. Nach 2 Minuten: Folie 17.");
-  phaseTag(s, 3);
+  const s = blank("V · Verarbeiten · Transfer", "Und heute? Das Grundgesetz", 3, "Dient Ziel 3 (Transfer). Kurze Erklärung (30 Sekunden, Sie sprechen, Stifte liegen). Ansage: „Stifte liegen. Ihr hört nur zu.“ Das Grundgesetz ist die Verfassung der Bundesrepublik Deutschland, es gilt seit 1949. Am Anfang stehen die Grundrechte (Artikel 1 bis 19). Diese Rechte gelten heute für alle, die in Deutschland leben. Überleitung zur Frage eines Schülers (bitte nur anbringen, wenn es sich anbietet): „Neulich hat jemand gefragt, wofür man Geschichte braucht. Hier ist ein Beispiel.“ Gelenk: „Gleich seht ihr drei Sätze. Überlegt: Aus welchem Jahr?“ Danach Folie 17.");
+  s.addImage({ path: IMG + "icon_buch.png", x: 0.7, y: 1.6, w: 2.6, h: 2.6 });
+  box(s, 3.7, 1.55, 9.05, 3.0, LIGHT2);
+  txt(s, "Das Grundgesetz ist die Verfassung der Bundesrepublik Deutschland. Es gilt seit 1949. Am Anfang stehen die Grundrechte.", { x: 4.0, y: 1.55, w: 8.5, h: 3.0, fontFace: HEAD, fontSize: 30, bold: true, valign: "middle" });
+  box(s, 0.6, 4.85, 12.15, 1.15, LIGHT);
+  txt(s, "Die Grundrechte gelten heute für alle, die in Deutschland leben.", { x: 0.9, y: 4.85, w: 11.6, h: 1.15, fontFace: HEAD, fontSize: 28, valign: "middle" });
+  bar(s, [{ text: "Gleich: ", options: { bold: true } }, { text: "drei Sätze, aus welchem Jahr?", options: {} }]);
 }
 
-// ============ 17 und 18 Aha-Auflösung ============
-const PAIRS = [["1789 · Art. 6", "Das Gesetz muss für alle gleich sein.", "Grundgesetz Art. 3 (1)", "Alle Menschen sind vor dem Gesetz gleich."], ["1789 · Art. 11", "Jeder Bürger kann frei reden, schreiben und drucken.", "Grundgesetz Art. 5 (1)", "Jeder hat das Recht, seine Meinung in Wort, Schrift und Bild frei zu äußern."], ["1789 · Art. 3", "Der Ursprung jeder Herrschaft liegt beim Volk.", "Grundgesetz Art. 20 (2)", "Alle Staatsgewalt geht vom Volke aus."], ["1789 · Art. 17", "Das Eigentum ist ein unverletzliches und heiliges Recht.", "Grundgesetz Art. 14 (1)", "Das Eigentum und das Erbrecht werden gewährleistet."]];
-[0, 1].forEach((k) => {
-  const notes = k === 0
-    ? "Dient Ziel 3 (Transfer, Aha-Moment). Auflösung, Teil 1 (1 Minute, Sie sprechen). Ansage: „Stifte liegen. Ihr hört nur zu. Schaut auf eure Sätze A bis H.“ Zeigen Sie die ersten zwei Paare: links der Satz von 1789, rechts der Satz von heute. Fragen Sie nicht, wer es richtig hatte, sondern lassen Sie es wirken: „Fast dasselbe, 237 Jahre später.“ Lösung der Aufgabe A: A 1789, B heute, C 1789, D heute, E heute, F 1789, G 1789, H heute. Den Wortlaut des Grundgesetzes (Artikel 3 Abs. 1, 5 Abs. 1, 14 Abs. 1, 20 Abs. 2) mit dem Original abgleichen (hier leicht gekürzt). Danach Folie 18."
-    : "Dient Ziel 3 (Transfer, Aha-Moment). Auflösung, Teil 2 (1 Minute, Sie sprechen). Zeigen Sie die Paare 3 und 4. Aussage: „Was ihr eben als Recht aus 1789 gelesen habt, steht nach 237 Jahren fast wörtlich in unserem Grundgesetz. Die Erklärung war ein Vorbild.“ Haltung: Die Rechte von 1789 gelten heute für alle, 1789 aber nicht (siehe nächste Stunde). Danach Folie 19.";
-  const s = blank("V · Verarbeiten · Aha", k === 0 ? "Das Echo von 1789 (1)" : "Das Echo von 1789 (2)", 3, notes);
-  PAIRS.slice(k * 2, k * 2 + 2).forEach(([a1, t1, a2, t2], i) => {
-    const y = 1.45 + i * 2.35;
-    box(s, 0.6, y, 5.6, 2.15, i % 2 ? LIGHT : LIGHT2);
-    box(s, 6.95, y, 5.8, 2.15, i % 2 ? LIGHT : LIGHT2);
-    s.addShape(pres.shapes.RIGHT_ARROW, { x: 6.27, y: y + 0.82, w: 0.6, h: 0.5, fill: { color: RED }, line: { type: "none" } });
-    s.addText([{ text: a1 + "\n", options: { bold: true, color: RED, fontSize: 20, fontFace: BODY } }, { text: t1, options: { fontSize: 27, fontFace: HEAD, color: NAVY } }], { isTextBox: true, x: 0.8, y, w: 5.25, h: 2.15, valign: "middle", margin: 0 });
-    s.addText([{ text: a2 + "\n", options: { bold: true, color: "2E9E6B", fontSize: 20, fontFace: BODY } }, { text: t2, options: { fontSize: 27, fontFace: HEAD, color: NAVY } }], { isTextBox: true, x: 7.15, y, w: 5.45, h: 2.15, valign: "middle", margin: 0 });
+// ============ 17 1789 oder Grundgesetz ============
+{
+  const s = blank("V · Verarbeiten · Aha", "1789 oder Grundgesetz?", 3, "Dient Ziel 3 (Transfer, Aha-Moment). Denkphase (1 Minute, allein, still). Ansage: „Stifte liegen. Ihr hört nur zu. Auf der Folie stehen drei Sätze. Überlegt allein: Stammt der Satz aus der Erklärung von 1789 oder aus dem Grundgesetz? Notiert A, B und C mit 1789 oder GG ins Heft. Raten ist erlaubt.“ Zeigen Sie nicht, dass es Paare gibt. Die Sätze: A „Das Gesetz muss für alle gleich sein.“ (Artikel 6 von 1789), B „Alle Staatsgewalt geht vom Volke aus.“ (Grundgesetz Artikel 20 Absatz 2), C „Das Eigentum und das Erbrecht werden gewährleistet.“ (Grundgesetz Artikel 14 Absatz 1). Stichprobe bei 2 bis 3 Personen: Was habt ihr und woran habt ihr es erkannt? (kurz, kein Gespräch, nichts auflösen). Danach Folie 18.");
+  [["A", "Das Gesetz muss für alle gleich sein."], ["B", "Alle Staatsgewalt geht vom Volke aus."], ["C", "Das Eigentum und das Erbrecht werden gewährleistet."]].forEach(([l, x], i) => {
+    const y = 1.5 + i * 1.5;
+    box(s, 0.6, y, 12.15, 1.3, i % 2 ? LIGHT : LIGHT2);
+    numCircle(s, l, 0.9, y + 0.4, 0.5, RED);
+    txt(s, "„" + x + "“", { x: 1.7, y, w: 10.8, h: 1.3, fontFace: HEAD, fontSize: 30, valign: "middle" });
   });
-  bar(s, k === 0 ? [{ text: "Aha: ", options: { bold: true } }, { text: "Links 1789, rechts heute.", options: {} }] : [{ text: "Aha: ", options: { bold: true } }, { text: "237 Jahre später fast wörtlich im Grundgesetz.", options: {} }]);
-});
+  bar(s, [{ text: "Heft: ", options: { bold: true } }, { text: "A, B, C: 1789 oder Grundgesetz?      ", options: {} }, { text: "Raten ist erlaubt.", options: { italic: true, color: ICE } }]);
+}
 
-// ============ 18 Merksatz ============
+// ============ 18 Das Echo von 1789 ============
+{
+  const s = blank("V · Verarbeiten · Aha", "Das Echo von 1789", 3, "Dient Ziel 3 (Aha-Moment). Auflösung (1,5 Minuten, Sie sprechen). Ansage: „Stifte liegen. Ihr hört nur zu. Vergleicht mit euren Notizen.“ Zu jedem Satz zeigt die Folie das Gegenstück: links 1789, rechts das Grundgesetz. Lösung: A 1789 (Artikel 6), B Grundgesetz (Artikel 20 Absatz 2), C Grundgesetz (Artikel 14 Absatz 1). Aussage: „Fast niemand konnte es sicher sagen, weil die Sätze so ähnlich sind. Was ihr als Recht aus 1789 gelesen habt, steht fast wörtlich im Grundgesetz.“ Den Wortlaut des Grundgesetzes (hier leicht gekürzt) mit dem Original abgleichen. Danach Folie 19.");
+  const pairs = [["1789 · Art. 6", "Das Gesetz muss für alle gleich sein.", "Grundgesetz Art. 3 (1)", "Alle Menschen sind vor dem Gesetz gleich."], ["1789 · Art. 3", "Der Ursprung jeder Herrschaft liegt beim Volk.", "Grundgesetz Art. 20 (2)", "Alle Staatsgewalt geht vom Volke aus."], ["1789 · Art. 17", "Das Eigentum ist ein unverletzliches und heiliges Recht.", "Grundgesetz Art. 14 (1)", "Das Eigentum und das Erbrecht werden gewährleistet."]];
+  pairs.forEach(([a1, t1, a2, t2], i) => {
+    const y = 1.4 + i * 1.6;
+    box(s, 0.6, y, 5.6, 1.5, i % 2 ? LIGHT : LIGHT2);
+    box(s, 6.95, y, 5.8, 1.5, i % 2 ? LIGHT : LIGHT2);
+    s.addShape(pres.shapes.RIGHT_ARROW, { x: 6.27, y: y + 0.5, w: 0.6, h: 0.5, fill: { color: RED }, line: { type: "none" } });
+    s.addText([{ text: a1 + "\n", options: { bold: true, color: RED, fontSize: 20, fontFace: BODY } }, { text: t1, options: { fontSize: 27, fontFace: HEAD, color: NAVY } }], { isTextBox: true, x: 0.8, y, w: 5.25, h: 1.5, valign: "middle", margin: 0 });
+    s.addText([{ text: a2 + "\n", options: { bold: true, color: "2E9E6B", fontSize: 20, fontFace: BODY } }, { text: t2, options: { fontSize: 27, fontFace: HEAD, color: NAVY } }], { isTextBox: true, x: 7.1, y, w: 5.45, h: 1.5, valign: "middle", margin: 0 });
+  });
+  bar(s, [{ text: "Aha: ", options: { bold: true } }, { text: "Links 1789, rechts Grundgesetz.", options: {} }]);
+}
+
+// ============ 19 Bedeutung von 1789 für das Grundgesetz ============
+{
+  const s = blank("V · Verarbeiten · Bedeutung", "Was bedeutet 1789 für unser Grundgesetz?", 3, "Dient Ziel 3 (Bedeutung erkennen). Kurzes Gespräch mit Stichproben (1 Minute, nur 2 bis 3 Antworten, kein Gespräch). Ansage: „Stifte liegen. Ich rufe euch auf. Was fällt euch auf? Was bedeutet 1789 für unser Grundgesetz?“ Erst die Frage zeigen, die Antwort unten abdecken. Erwartung (Auswahl): Die Erklärung von 1789 war ein Vorbild. Viele Rechte, die wir heute selbstverständlich haben, sind damals zum ersten Mal aufgeschrieben worden. Danach die Antwort zeigen: „1789 war ein Vorbild: Rechte aus der Erklärung stehen noch heute im Grundgesetz.“ Haltung: Heute gelten sie für alle, 1789 galten sie nicht für alle (Stunde 5). Gelenk: „Das schreibt ihr jetzt ab.“ Danach Folie 20.");
+  box(s, 0.6, 1.5, 12.15, 2.2, NAVY);
+  txt(s, "Was fällt euch auf? Was bedeutet 1789 für unser Grundgesetz?", { x: 1.0, y: 1.5, w: 11.35, h: 2.2, fontFace: HEAD, fontSize: 32, bold: true, color: WHITE, valign: "middle" });
+  box(s, 0.6, 3.95, 12.15, 2.0, LIGHT2);
+  s.addText([{ text: "Antwort: ", options: { bold: true, color: RED, fontFace: HEAD, fontSize: 27 } }, { text: "1789 war ein Vorbild. Rechte aus der Erklärung stehen noch heute im Grundgesetz.", options: { fontFace: HEAD, fontSize: 28, color: NAVY, bold: true } }], { isTextBox: true, x: 1.0, y: 3.95, w: 11.35, h: 2.0, valign: "middle", margin: 0 });
+}
+
+// ============ 20 Merksatz ============
 {
   const s = merkSlide(1, "Vorrechte weg, Menschenrechte da",
     "Am **4. August 1789** fallen die Vorrechte, am **26. August** folgt die **Erklärung der Menschen- und Bürgerrechte**: **Gleichheit vor dem Gesetz**, **Freiheit**, **Eigentumsrecht**, **Volkssouveränität**. Vieles steht noch heute im **Grundgesetz**.",
     "Artikel 6 (1789): Das Gesetz muss für alle gleich sein. Grundgesetz Artikel 3: Alle Menschen sind vor dem Gesetz gleich.",
     "**Recht** gilt für alle, **Vorrecht** nur für wenige (nach Geburt).",
-    "Dient Ziel 1 bis 3 (Ergebnissicherung, Wissen für den Test). Ansage: „Jetzt schreibt ihr von der Folie ab: Merksatz 1. Rahmt ihn rot ein.“ Warten, bis alle den Stift hingelegt haben (2 Minuten). Der Merksatz sichert Daten, heutige Begriffe, die Bedeutung (Recht statt Vorrecht) und das Echo im Grundgesetz. Gelenk: „Jetzt antwortet ihr Klerus und Adel.“ Danach Folie 20.");
+    "Dient Ziel 1 bis 3 (Ergebnissicherung, Wissen für den Test). Ansage: „Jetzt schreibt ihr von der Folie ab: Merksatz 1. Rahmt ihn rot ein.“ Warten, bis alle den Stift hingelegt haben (2 Minuten). Der Merksatz sichert Daten, heutige Begriffe, die Bedeutung (Recht statt Vorrecht) und das Echo im Grundgesetz. Gelenk: „Jetzt beantwortet ihr die Frage vom Anfang.“ Danach Folie 21.");
   phaseTag(s, 4);
 }
 
-// ============ 19 Abschlussfrage ============
+// ============ 21 Exit-Ticket ============
 {
-  const s = blank("A · Auswerten", "Abschlussaufgabe: Du bist der Dritte Stand", 4, "Dient Ziel 1, 2 und 3 (Abschlussaufgabe, prüft alle Ziele; Sicherung). Ablauf (5 Minuten, nur mündlich, Aufgabe B ist gestrichen): Ansage: „Stifte liegen. Ihr hört nur zu. Schaut noch einmal auf die Karikatur vom Anfang. Ihr seid der Dritte Stand. Klerus und Adel haben gesagt: ‚Ihr habt geschworen. Ihr habt die Bastille gestürmt. Wir kamen euch entgegen. Was wollt ihr noch?‘ Denkt 20 Sekunden nach. Ich rufe euch auf.“ Dann 4 bis 5 Minuten mündlich: Blitzlicht bei 4 bis 6 Personen unterschiedlichen Niveaus, in der Ich-Form: „Ich antworte euch: Wir wollen …, weil Artikel … sagt. Früher …, heute steht im Grundgesetz …“ Mehrere gute Antworten. Geprüft werden Position, ein Artikel mit heutigem Begriff, der Vergleich mit früher, ein Grundgesetz-Bezug. Erwartung (Auswahl, keine Musterlösung): „Wir wollen Gleichheit, weil Artikel 6 sagt, dass das Gesetz für alle gleich ist. Früher hatten Klerus und Adel Vorrechte, heute steht im Grundgesetz, dass alle Menschen vor dem Gesetz gleich sind.“ „Wir wollen frei reden, weil Artikel 11 …, früher kontrollierte der König den Druck, heute steht Meinungsfreiheit im Grundgesetz Artikel 5.“ Vergleich mit der Vermutung vom Anfang: Wer hat umgedacht? Selbst gezeichnete Figuren sind keine historischen Quellen. Unbenotet.");
-  s.addImage({ path: IMG + "karikatur_rueckschau.png", x: 0.6, y: 1.5, w: 5.0, h: 3.789 });
-  box(s, 0.6, 5.4, 5.0, 0.7, WHITE, { line: NAVY, lw: 2 });
-  txt(s, "Klerus · Adel · Dritter Stand", { x: 0.6, y: 5.4, w: 5.0, h: 0.7, fontSize: 27, bold: true, color: NAVY, align: "center", valign: "middle" });
-  bubble(s, 6.4, 1.45, 6.35, 1.9, WHITE, NAVY, "left", 2.4);
-  txt(s, "Klerus und Adel: " + SAGT, { x: 6.7, y: 1.45, w: 5.85, h: 1.9, fontFace: HEAD, fontSize: 27, bold: true, color: NAVY, valign: "middle" });
-  bubble(s, 6.4, 3.5, 6.35, 1.9, "FDF1D8", GOLD, "left", 4.45);
-  txt(s, "Du, Dritter Stand:  „Wir wollen …, weil Artikel … sagt. Früher …, heute …“", { x: 6.7, y: 3.5, w: 5.85, h: 1.9, fontFace: HEAD, fontSize: 27, bold: true, color: NAVY, valign: "middle" });
-  bar(s, [{ text: "Zeit: ", options: { bold: true } }, { text: "5 Min. · erst denken, dann mündlich      ", options: {} }, { text: "Alle denken mit.", options: { italic: true, color: ICE } }]);
+  const s = blank("A · Auswerten", "Exit-Ticket: Die Ausgangsfrage", 4, "Dient Ziel 1, 2 und 3 (Abschlussaufgabe, prüft alle Ziele; Sicherung). Ablauf (5 Minuten). Ansage: „Stifte liegen. Ihr hört nur zu. Das ist die letzte Aufgabe. Schaut noch einmal auf die Karikatur vom Anfang. Klerus und Adel haben gefragt: ‚Was wollt ihr noch?‘ Ihr seid der Dritte Stand. Ihr bekommt einen Zettel. Jetzt arbeitet ihr allein. Antwortet mit den Satzanfängen. Den Zettel gebt ihr beim Hinausgehen ab.“ Die Zettel liegen bis dahin umgedreht (6 pro A4, ausgeschnitten, 26 Stück). 4 Minuten schreiben, Heft-Stichprobe beim Durchgehen. Danach 1 Minute: 2 bis 3 Personen lesen ihre Antwort vor (freiwillig, kein Kommentar). Wer hat umgedacht? Vergleich mit der Vermutung vom Anfang. Erwartung (Auswahl, keine Musterlösung): „Wir wollen Gleichheit, weil Artikel 6 sagt, dass das Gesetz für alle gleich ist. Früher hatten Klerus und Adel Vorrechte, heute steht im Grundgesetz, dass alle Menschen vor dem Gesetz gleich sind.“ „Wir wollen mitbestimmen, weil Artikel 3 sagt, dass die Herrschaft vom Volk ausgeht. Früher bestimmte der König allein, heute steht im Grundgesetz, dass alle Staatsgewalt vom Volke ausgeht.“ „Wir wollen unser Eigentum behalten, weil Artikel 17 es schützt. Früher gaben Bauern einen Teil der Ernte ab, heute gewährleistet das Grundgesetz das Eigentum.“ Rückmeldung zu den Zielen: Sie lesen die Zettel nach der Stunde und geben Stufe 1, 2 oder 3 (Ziele). Die freiwillige Zeile „Das war mir unklar“ ist die Rückmeldung der Klasse (ein Satz). Selbst gezeichnete Figuren sind keine historischen Quellen. Unbenotet.");
+  s.addImage({ path: IMG + "karikatur_rueckschau.png", x: 0.6, y: 1.5, w: 4.2, h: 3.183 });
+  bubble(s, 5.4, 1.45, 7.35, 1.95, WHITE, NAVY, "left", 2.4);
+  txt(s, "Klerus und Adel: " + SAGT, { x: 5.7, y: 1.45, w: 6.85, h: 1.95, fontFace: HEAD, fontSize: 27, bold: true, color: NAVY, valign: "middle" });
+  [["Wir wollen …", 1], ["Artikel … sagt …", 2], ["Früher …, heute im Grundgesetz …", 3]].forEach(([x, n], i) => {
+    const y = 3.6 + i * 0.85;
+    box(s, 5.4, y, 7.35, 0.75, i % 2 ? LIGHT : LIGHT2);
+    numCircle(s, n, 5.55, y + 0.15, 0.45, NAVY);
+    txt(s, x, { x: 6.2, y, w: 6.4, h: 0.75, fontFace: HEAD, fontSize: 27, bold: true, valign: "middle" });
+  });
+  bar(s, [{ text: "Zeit: ", options: { bold: true } }, { text: "4 Min. · allein · leise      ", options: {} }, { text: "Zettel beim Hinausgehen abgeben.", options: { italic: true, color: ICE } }]);
 }
 
-// ============ 20 Ziele prüfen ============
+// ============ 22 Ziele prüfen ============
 {
-  const s = blank("A · Auswerten", "Haben wir die Ziele erreicht?", 4, "Dient Ziel 1 bis 3 (Zielprüfung). Die Klasse prüft still: Kann ich das? Keine Antworten ins Plenum, keine Abfrage von Selbsteinschätzungen (1 Minute). Wenn Ziel 3 (*) nicht mehr geschafft wurde, kommt es in Stunde 5 als Wiederholung. Wer das Blatt abgeben möchte, legt es vorn ab. Danach Folie 22.");
+  const s = blank("A · Auswerten", "Haben wir die Ziele erreicht?", 4, "Dient Ziel 1 bis 3 (Zielprüfung). Die Klasse prüft still: Kann ich das? Keine Antworten ins Plenum, keine Abfrage von Selbsteinschätzungen (1 Minute). Wenn Ziel 3 (*) nicht mehr geschafft wurde, kommt es in Stunde 5 als Wiederholung. Danach Folie 23.");
   [["Ich kann erklären, was sich durch den Verzicht auf die Vorrechte und die Menschenrechte für den Dritten Stand verbessert hat."], ["Ich kann Artikel von 1789 in heutige Begriffe übersetzen (zum Beispiel Eigentumsrecht)."], ["Ich kann an einem Grundgesetz-Artikel zeigen, dass die Erklärung bis heute nachwirkt.*"]].forEach(([x], i) => {
     const y = 1.6 + i * 1.45;
     box(s, 0.6, y, 12.15, 1.25, i % 2 ? LIGHT : LIGHT2);
     s.addShape(pres.shapes.OVAL, { x: 0.9, y: y + 0.35, w: 0.55, h: 0.55, fill: { color: WHITE }, line: { color: NAVY, width: 2 } });
     txt(s, x, { x: 1.75, y, w: 10.8, h: 1.25, fontFace: HEAD, fontSize: 27, valign: "middle" });
   });
-  bar(s, [{ text: "Jetzt: ", options: { bold: true } }, { text: "Schau auf die Ziele. Blatt freiwillig abgeben.", options: {} }]);
+  bar(s, [{ text: "Jetzt: ", options: { bold: true } }, { text: "Schau auf die Ziele. Exit-Ticket abgeben.", options: {} }]);
 }
 
-// ============ 21 Ausblick ============
+// ============ 23 Ausblick ============
 {
   const s = blank("A · Auswerten · Brücke zu Stunde 5", "Wie geht es weiter?", 4, "Brücke zur Reihe (kein Ziel der Stunde). Folie nur lesen (30 Sekunden). Ausblick: In Artikel 1 steht „die Menschen“, in Artikel 6 „alle Bürger“. Heute gilt das für alle. Galt es 1789 auch für alle: für Frauen, für Arme, für Sklaven in den Kolonien? Das sehen wir in der nächsten Stunde bei der Verfassung von 1791 (Wahlrecht, Aktivbürger und Passivbürger). Vormerken für Stunde 5: Der König weigerte sich zunächst, die Erklärung zu unterschreiben. Erst nach dem Marsch der Frauen nach Versailles im Oktober 1789 unterschrieb er (zum Beispiel als Einstieg in Stunde 5). Danach folgt der erste Test (Stunden 1 bis 5 am 9.12.).");
   box(s, 0.6, 1.8, 12.15, 2.0, NAVY);
