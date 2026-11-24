@@ -26,22 +26,22 @@ const druck = [
 ];
 const prep = [
   ["Tafelskript ausdrucken oder auf dem Tablet bereithalten", "Tafelskript_Stunde4_Menschenrechte_8D.pdf, 8 Seiten"],
-  ["Folien öffnen und einmal durchklicken", "Praesentation_Stunde4_Menschenrechte_8D.pptx, 23 Folien (27 Punkt); Folie 1 (Karikatur mit Sprechblase und zwei Bildern an der Wand) steht beim Betreten da"],
-  ["Arbeitsblätter auf die Tische legen (umgedreht)", "Pro Person ein Blatt, nach unten. Erst bei Folie 11 umdrehen lassen. Exit-Ticket-Zettel zurückhalten bis Folie 21"],
-  ["Wortlaut der Artikel und des Grundgesetzes (Art. 3, 5, 14, 20) abgleichen", "Gekürzte, vereinfachte Fassung (Blatt: Artikel 1, 3, 6, 11, 17; Folie 14 zusätzlich 2, 4, 10), Artikel 6 wie im Original, neu: Eigentumsrecht; Wortlaut für den Test einheitlich halten"],
+  ["Folien öffnen und einmal durchklicken", "Praesentation_Stunde4_Menschenrechte_8D.pptx, 17 Folien (27 Punkt); Folie 1 (Karikatur mit Sprechblase und zwei Bildern an der Wand) steht beim Betreten da"],
+  ["Arbeitsblätter auf die Tische legen (umgedreht)", "Pro Person ein Blatt, nach unten. Erst bei Folie 8 umdrehen lassen. Exit-Ticket-Zettel zurückhalten bis Folie 16"],
+  ["Wortlaut der Artikel und des Grundgesetzes (Art. 3, 5, 14, 20) abgleichen", "Gekürzte, vereinfachte Fassung (Blatt: Artikel 1, 3, 6, 11, 17; Folie 11 zusätzlich 2, 4, 10), Artikel 6 wie im Original, neu: Eigentumsrecht; Wortlaut für den Test einheitlich halten"],
   ["Hintergrund zum 4. August im Lehrbuch lesen (abgeschaffte Vorrechte, Ablösung)", "abgeschaffte Vorrechte, Ablösung der Abgaben, Bauernaufstände"],
   ["Rückmeldung der Hospitation absprechen", "Schwerpunkt: Aktivierung mit Fokus auf Kompetenzerwerb (Quelle ins Heute übersetzen), lehrergesteuert mit Einzelarbeit, Sicherung, Transfer; Punkte folgen später"],
   ["Kreide, Grün zum Verbessern, Uhr oder Timer", "Die Übungsphase endet 9 Minuten vor Schluss, „Auswerten“ bleibt immer"],
 ];
 const tafel = [
-  ["Seitentafel", "Stundenfrage („Was will der Dritte Stand noch? Was ändern die Abschaffung der Vorrechte und die Menschenrechte?“), Ziele („Ich kann …“, 3 Sätze, Satz 3 mit *) und Ablauf: A Karikatur · V Rückschau · I Vorrechte, Modell · V Blatt, Aha · A Merksatz, Antwort"],
+  ["Seitentafel", "Ziele („Ich kann …“, 3 Sätze, Satz 3 mit *) und Ablauf (keine eigene Folie): A Karikatur · V Rückschau, Stundenfrage · I Vorrechte, Modell · V Blatt, Aha · A Exit-Ticket"],
   ["Mitte", "leer lassen"],
 ];
 
 const d = [];
 d.push(p(t("GESCHICHTE · KLASSE 8D · MITTWOCH 25.11.2026 · HOSPITATION", { size: 18, bold: true, color: MUTED }), { after: 20 }));
 d.push(p(t("Materialliste: Menschenrechte", { font: "Cambria", size: 44, bold: true, color: NAVY }), { after: 40 }));
-d.push(p(t("Zum Abhaken. Alle Dateien liegen in Geschichte_8D/Stunde4_Menschenrechte/. Ablauf (45 Minuten): 4 Karikatur · 4 Rückschau · 10 Vorrechte und Modell · 18 Arbeitsblatt, Aha · 9 Merksatz und Abschlussaufgabe.", { size: 20, color: MUTED }), { after: 80 }));
+d.push(p(t("Zum Abhaken. Alle Dateien liegen in Geschichte_8D/Stunde4_Menschenrechte/. Ablauf (45 Minuten): 3 Karikatur · 7 Rückschau und Stundenfrage · 8 Vorrechte und Modell · 19 Arbeitsblatt, Aha · 6 Exit-Ticket und Ausblick · 2 Reserve.", { size: 20, color: MUTED }), { after: 80 }));
 
 d.push(h2("1 Drucken"));
 d.push(table(DW, [hdr(["", "Was", "Menge", "Datei und Hinweis"], DW), ...druck.map(([a, b, c]) => row([cell(box(), { w: DW[0] }), cell(p(t(a, { bold: true, size: 20 }), { after: 0 }), { w: DW[1] }), cell(p(t(b, { size: 20 }), { after: 0 }), { w: DW[2] }), cell(p(t(c, { size: 19 }), { after: 0 }), { w: DW[3] })], 560))]));
