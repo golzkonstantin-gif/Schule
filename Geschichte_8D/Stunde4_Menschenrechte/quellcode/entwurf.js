@@ -1,249 +1,188 @@
+// Schriftlicher Unterrichtsentwurf nach der Vorlage des Studienseminars (Titelblatt, Inhaltsverzeichnis, 1, 2.1, 2.2, 2.3, 3)
 const fs = require("fs");
-const { Document, Packer, Paragraph, TextRun, Table, TableRow, TableCell, WidthType, BorderStyle, ShadingType, AlignmentType, VerticalAlign, Footer, PageNumber, PageBreak, PageOrientation } = require("docx");
-const NAVY = "1E2761", MUTED = "5B6B8C", LIGHT = "F4F7FD", LIGHT2 = "EAF0FA", RED = "D9534F", GOLD = "FFF6E0";
-const t = (text, o = {}) => new TextRun({ text, font: o.font || "Calibri", size: o.size || 21, bold: o.bold, italics: o.italics, color: o.color || "000000" });
-const p = (runs, o = {}) => new Paragraph({ children: Array.isArray(runs) ? runs : [runs], alignment: o.align, spacing: { before: o.before ?? 0, after: o.after ?? 80, line: o.line }, keepNext: o.keepNext, indent: o.indent });
-const solid = (c, s = 6) => ({ style: BorderStyle.SINGLE, size: s, color: c });
+const { Document, Packer, Paragraph, TextRun, Table, TableRow, TableCell, WidthType, BorderStyle, ShadingType, AlignmentType, VerticalAlign, Footer, PageNumber, PageOrientation, ImageRun, TabStopType, LeaderType, SectionType } = require("docx");
+const FONT = "Arial";
+const RED = "C00000";
+let PAGES = {};
+try { PAGES = JSON.parse(fs.readFileSync("./entwurf_pages.json", "utf8")); } catch (e) {}
+const t = (text, o = {}) => new TextRun({ text, font: FONT, size: o.size || 22, bold: o.bold, italics: o.italics, color: o.color });
+const ph = (text, o = {}) => t(text, Object.assign({ color: RED, italics: true }, o)); // Platzhalter
+const p = (runs, o = {}) => new Paragraph({ children: Array.isArray(runs) ? runs : [runs], alignment: o.align ?? AlignmentType.JUSTIFIED, spacing: { before: o.before ?? 0, after: o.after ?? 120, line: o.line ?? 340 }, keepNext: o.keepNext, indent: o.indent, tabStops: o.tabs, pageBreakBefore: o.pb });
+const rich = (s, o = {}) => s.split(/(\*\*[^*]+\*\*|\[\[[^\]]+\]\])/).filter(Boolean).map((x) => x.startsWith("**") ? t(x.slice(2, -2), { bold: true, size: o.size }) : x.startsWith("[[") ? ph("[" + x.slice(2, -2) + "]", { size: o.size }) : t(x, { size: o.size, italics: o.italics }));
+const P = (s, o = {}) => p(rich(s, o), o);
+const H1 = (s, o = {}) => p(t(s, { size: 28, bold: true }), { align: AlignmentType.LEFT, before: 120, after: 160, keepNext: true, line: 300, pb: o.pb });
+const H2 = (s) => p(t(s, { size: 24, bold: true }), { align: AlignmentType.LEFT, before: 100, after: 120, keepNext: true, line: 300 });
+const bd = (c = "000000", s = 4) => ({ style: BorderStyle.SINGLE, size: s, color: c });
 const all = (b) => ({ top: b, bottom: b, left: b, right: b });
-const cell = (children, o = {}) => new TableCell({ children: Array.isArray(children) ? children : [children], width: { size: o.w, type: WidthType.DXA }, shading: o.fill ? { fill: o.fill, type: ShadingType.CLEAR, color: "auto" } : undefined, borders: o.borders || all(solid("B9C6E8", 6)), margins: { top: 60, bottom: 60, left: 100, right: 100 }, verticalAlign: o.valign || VerticalAlign.TOP, columnSpan: o.span });
+const none = { style: BorderStyle.NONE, size: 0, color: "FFFFFF" };
+const cell = (children, o = {}) => new TableCell({ children: Array.isArray(children) ? children : [children], width: { size: o.w, type: WidthType.DXA }, shading: o.fill ? { fill: o.fill, type: ShadingType.CLEAR, color: "auto" } : undefined, borders: o.borders || all(bd()), margins: { top: 50, bottom: 50, left: 90, right: 90 }, verticalAlign: o.valign || VerticalAlign.TOP, columnSpan: o.span, rowSpan: o.rowSpan });
+const cp = (txt, o = {}) => new Paragraph({ children: Array.isArray(txt) ? txt : [t(txt, { size: o.size || 18, bold: o.bold })], alignment: AlignmentType.LEFT, spacing: { after: o.after ?? 40, line: 240 } });
+const cpr = (s, o = {}) => cp(rich(s, { size: o.size || 18 }), o);
 const table = (widths, rows) => new Table({ width: { size: widths.reduce((a, b) => a + b, 0), type: WidthType.DXA }, columnWidths: widths, rows });
-const row = (cells, o = {}) => new TableRow({ children: cells, cantSplit: true, tableHeader: o.header });
-const H1 = (s) => p(t(s, { font: "Cambria", size: 30, bold: true, color: NAVY }), { before: 240, after: 100, keepNext: true });
-const H2 = (s) => p(t(s, { font: "Cambria", size: 24, bold: true, color: NAVY }), { before: 160, after: 70, keepNext: true });
-const rich = (s, o = {}) => s.split(/(\*\*[^*]+\*\*)/).filter(Boolean).map((x) => x.startsWith("**") ? t(x.slice(2, -2), { size: o.size || 21, bold: true, italics: o.italics, color: o.color }) : t(x, { size: o.size || 21, italics: o.italics, color: o.color }));
-const P = (s, o = {}) => p(rich(s, o), { after: o.after ?? 90, align: AlignmentType.LEFT });
-const B = (arr, size = 21) => arr.map((x) => p([t("•  ", { size }), ...rich(x, { size })], { after: 50, indent: { left: 280, hanging: 0 } }));
-const kv = (rows, w0 = 2500, w1 = 7700) => table([w0, w1], rows.map(([a, b]) => row([cell(p(t(a, { bold: true, size: 20 }), { after: 0 }), { w: w0, fill: LIGHT }), cell(Array.isArray(b) ? b : p(t(b, { size: 20 }), { after: 0 }), { w: w1 })])));
-const hdr = (cols, widths) => row(cols.map((c, i) => cell(p(t(c, { bold: true, size: 19, color: "FFFFFF" }), { after: 0 }), { w: widths[i], fill: NAVY, borders: all(solid(NAVY, 8)), valign: VerticalAlign.CENTER })), { header: true });
-const tc = (txt, w, o = {}) => cell(Array.isArray(txt) ? txt : p(t(txt, { size: o.size || 18, bold: o.bold }), { after: 0 }), { w, fill: o.fill });
-const footer = (txt) => new Footer({ children: [new Paragraph({ alignment: AlignmentType.RIGHT, children: [new TextRun({ font: "Calibri", size: 16, color: MUTED, children: [txt + " · Seite ", PageNumber.CURRENT] })] })] });
-const PH = (s) => t(s, { size: 20, color: RED, italics: true });
+const row = (cells, o = {}) => new TableRow({ children: cells, cantSplit: o.cant ?? true, tableHeader: o.header });
+const footer = new Footer({ children: [new Paragraph({ alignment: AlignmentType.CENTER, children: [new TextRun({ font: FONT, size: 18, children: [PageNumber.CURRENT] })] })] });
+const portrait = { size: { width: 11906, height: 16838 }, margin: { top: 1300, bottom: 1100, left: 1400, right: 1400 } };
+const landscape = { size: { width: 11906, height: 16838, orientation: PageOrientation.LANDSCAPE }, margin: { top: 1000, bottom: 900, left: 900, right: 900 } };
+const img = (file, w, h) => new Paragraph({ alignment: AlignmentType.CENTER, spacing: { after: 100 }, children: [new ImageRun({ type: "png", data: fs.readFileSync("../material/entwurf_anlagen/" + file), transformation: { width: w, height: h } })] });
 
-// ---------- Seite 1: Kopf ----------
+// ================= Titelblatt =================
+const title = [];
+title.push(p([ph("[Studienseminar, Anschrift (wie in der Vorlage)]")], { align: AlignmentType.LEFT, line: 276, after: 400 }));
+title.push(p(t("Schriftlicher Unterrichtsentwurf im Fach Geschichte", { size: 22 }), { align: AlignmentType.CENTER, after: 120 }));
+title.push(p(t("Thema der Unterrichtsstunde:", { size: 22 }), { align: AlignmentType.CENTER, after: 120 }));
+title.push(p(t("„Vorrechte weg, Menschenrechte da“: Die Erklärung der Menschen- und Bürgerrechte als Quelle ins Heute übersetzen", { size: 30, bold: true }), { align: AlignmentType.CENTER, after: 200, line: 320 }));
+title.push(p(t("Ziel der Unterrichtsstunde:", { size: 22 }), { align: AlignmentType.CENTER, after: 120 }));
+title.push(p(t("„Die SuS können erklären, was sich durch den Verzicht auf die Vorrechte und die Erklärung der Menschen- und Bürgerrechte von 1789 für den Dritten Stand verbessert hat, und an einem Grundgesetz-Artikel zeigen, dass die Erklärung bis heute nachwirkt.“", { size: 24 }), { align: AlignmentType.CENTER, after: 500, line: 320 }));
+const kv = [
+  ["Lehramtskandidat/in:", ph("[Name]")], ["Ausbildungscoach:", ph("[Name]")], ["Fachseminarleiter/in:", ph("[Name]")], ["Ausbildungslehrer/in:", ph("[Name, falls zutreffend]")], ["Ausbildungsschule:", ph("[Schule, Ort]")], ["Schulleiter/in:", ph("[Name]")],
+  ["Lerngruppe:", t("8D")], ["Schülerzahl:", t("24")], ["Datum:", t("Mittwoch, 25.11.2026")], ["Ort:", ph("[Raum]")], ["Zeit:", ph("[Beginn] – [Ende] Uhr (45 Minuten)")],
+];
+title.push(table([3000, 5700], kv.map(([a, b]) => row([cell(p(t(a, { size: 22 }), { align: AlignmentType.LEFT, after: 0, line: 300 }), { w: 3000, borders: all(none) }), cell(p([b], { align: AlignmentType.LEFT, after: 0, line: 300 }), { w: 5700, borders: all(none) })]))));
+
+// ================= Inhaltsverzeichnis =================
+const toc = [];
+const TOCI = [["1.", "Allgemeine und spezielle Lehr- und Lernbedingungen", 0], ["2.", "Darstellung und Begründung didaktisch-methodischer Entscheidungen", 0], ["2.1", "Sequenzplanung", 1], ["2.2", "Didaktisch-methodisches Konzept der Unterrichtsstunde", 1], ["2.3", "Verlaufsplanung", 1], ["3.", "Anhang", 0]];
+toc.push(p(t("Inhaltsverzeichnis", { size: 30, bold: true }), { align: AlignmentType.LEFT, after: 160 }));
+TOCI.forEach(([n, s, lvl]) => toc.push(p([t(n + "  " + s, { bold: true, size: 22 }), t("\t" + (PAGES[n] ?? ""), { bold: true, size: 22 })], { align: AlignmentType.LEFT, after: 90, line: 300, indent: { left: lvl * 300 }, tabs: [{ type: TabStopType.RIGHT, position: 9100, leader: LeaderType.DOT }] })));
+toc.push(p([ph("Hinweis: Rote Angaben in eckigen Klammern sind vor der Abgabe zu ergänzen (Namen, Raum, Uhrzeit, Rückmeldung zu Stunde 3).")], { align: AlignmentType.LEFT, before: 400, line: 280 }));
+
+// ================= 1 Lehr- und Lernbedingungen =================
 const s1 = [];
-s1.push(p(t("UNTERRICHTSENTWURF", { size: 20, bold: true, color: MUTED }), { after: 30 }));
-s1.push(p(t("Vorrechte weg, Menschenrechte da: Die Erklärung der Menschen- und Bürgerrechte als Quelle ins Heute übersetzen", { font: "Cambria", size: 36, bold: true, color: NAVY }), { after: 120 }));
-s1.push(kv([
-  ["Fach / Klasse", "Geschichte · Klasse 8D (24 Schülerinnen und Schüler)"],
-  ["Datum, Zeit, Raum", [p([PH("Mittwoch, 25.11.2026, [Stunde, Uhrzeit], [Raum]  (bitte ergänzen)"), t("  · 45 Minuten, Hospitation", { size: 20 })], { after: 0 })]],
-  ["Lehrkraft / Hospitation", [p([PH("[Name der Lehrkraft, Hospitierende (bitte ergänzen)]")], { after: 0 })]],
-  ["Reihe", "Französische Revolution (SchiC Klasse 8, Modul 2), Stunde 4 von 11"],
-  ["Leitfrage der Reihe", "Wie kam es zur Französischen Revolution, und war sie ein Erfolg?"],
-  ["Thema der Stunde", "Verzicht auf die Vorrechte (4. August 1789) und Erklärung der Menschen- und Bürgerrechte (26. August 1789): Was hat sich für den Dritten Stand (Bauern und Bürger) verbessert, und was davon gilt noch heute?"],
-  ["Stundenfrage für die Klasse", "Was will der Dritte Stand noch? Was ändern die Abschaffung der Vorrechte und die Menschenrechte?"],
-  ["Hospitationsschwerpunkt", "Aktivierung mit Fokus auf dem Kompetenzerwerb (Quelle auswerten); lehrergesteuerte Stunde mit Einzelarbeit nach dem Partnerpuzzle der Vorwoche; Sicherung am Ende"],
-  ["Planungsmodell", "AVIVA (Ankommen, Vorwissen aktivieren, Informieren, Verarbeiten, Auswerten); direktes Vorgehen in Informieren und im Üben, offene Antwort in der Auswertung"],
-  ["Unterlagen im Anhang", "Folien (23), Arbeitsblatt mit Lösung, Exit-Ticket, Tafelskript, Materialliste (siehe Abschnitt 10)"],
-]));
-s1.push(H1("1  Lehr- und Lernbedingungen"));
-s1.push(H2("1.1  Lerngruppe"));
-s1.push(...B([
-  "24 Schülerinnen und Schüler, alle Leistungssportlerinnen und Leistungssportler (Sportschule); Beispiele aus Training, Wettkampf und Mannschaft sind anschlussfähig, werden aber nur eingesetzt, wo sie passen.",
-  "Die Klasse ist laut und lebhaft. Ruhe entsteht, wenn alle beim Ankommen und in Einzel- und Partnerphasen einen Auftrag haben. Bewährt sind feste, wörtliche Ansagen („Stifte liegen. Ihr hört nur zu.“, „Flüsterstufe. Nur dein Partner hört dich.“), feste Zeiten, wenig Bewegung und wenig freies Unterrichtsgespräch. Die Lehrkraft arbeitet mit Neuer Autorität (Präsenz, Beziehung, Wir-Form).",
-  "Mündliche Beiträge werden über gezielte Stichproben (3 bis 6 Personen unterschiedlichen Niveaus, unbenotet, getrennt von den mündlichen Noten) und Heft-Stichproben gesichert, nicht über freiwillige Meldungen allein.",
-]));
-s1.push(H2("1.2  Lernstand und Vorerfahrungen"));
-s1.push(...B([
-  "Stunde 1 (04.11.): Generalstände, Ständeordnung, Abstimmung nach Ständen. Die Klasse arbeitete sehr gut mit (Schüler als Presenter beim Buchstabenrätsel), die Abstimmung wurde nicht mehr geschafft und in Stunde 2 aufgegriffen.",
-  "Stunde 2 (11.11., Kurzstunde): Abstimmungsspiel (Stimmen nach Ständen und nach Köpfen), Nationalversammlung, Ballhausschwur, Soldaten um Paris. Die Klasse kennt Vorrechte und die Benachteiligung des Dritten Standes (Bauern und Bürger).",
-  "Stunde 3 (18.11.): Ballhausschwur und Sturm auf die Bastille als Wege des Widerstands (Partnerpuzzle in 2er-Gruppen, fünf Kriterien, Zeitstrahl, Bilanz „wirksam heißt nicht gerechtfertigt“). Ergebnis und Rückmeldung zur Stunde: ",
-]));
-s1.push(p([PH("[Rückmeldung zu Stunde 3 ergänzen: Zeit, Aktivierung, Lautstärke, Abgaben]")], { after: 80, indent: { left: 280 } }));
-s1.push(...B([
-  "Methodenkompetenz: Die Klasse hat Karikatur als Impuls, Texterschließung im Partnerpuzzle, Zeitstrahl und Stichproben kennengelernt. Quellenarbeit mit einer Textquelle (Erklärung der Menschenrechte) ist **neu** und wird in dieser Stunde modelliert (Vormachen, angeleitet, selbstständig).",
-  "Schreiben: Die Klasse schreibt kurze Sätze mit Satzanfängen sicher, längere freie Texte fallen schwerer. Deshalb gibt es Satzanfänge statt fertiger Sätze, Wortspeicher mit Erklärungen und einen Vorher-Speicher.",
-]));
-s1.push(H2("1.3  Rahmenbedingungen"));
-s1.push(...B([
-  "Beamer und Dokumentenkamera nicht nötig; Folien mit Schrift ab 27 Punkt, Phasenanzeige A V I V A. Tafel (Seitentafel) mit Stundenfrage, Zielen und Ablauf vor Stundenbeginn beschriftet, Mitte frei.",
-  "Material liegt vorab umgedreht auf den Tischen (Arbeitsblatt), das Exit-Ticket wird erst in der Auswertung ausgegeben, damit kein Austeilen Zeit kostet.",
-  "Unbenotete Stunde: Das Arbeitsblatt ist freiwillig abzugeben, der Zettel (Exit-Ticket) wird abgegeben. Punkte oder Noten gibt es nicht (später möglich).",
-]));
-s1.push(H1("2  Sachanalyse"));
-s1.push(P("Nach dem Sturm auf die Bastille (14. Juli 1789) greifen im Sommer 1789 Bauern im ganzen Land Schlösser an; die Nationalversammlung beschließt in der Nacht zum 4. August die Abschaffung der Vorrechte (unter anderem Steuerfreiheit von Klerus und Adel, Abgaben und Dienste der Bauern an den Adel, Vorrechte bei Ämtern und Jagd). Die Aufhebung ist für die Bauern teils mit Ablösezahlungen verbunden; sie führt nicht sofort zu gleichen Lebensverhältnissen. Klerus und Adel geben nicht freiwillig nach, sondern unter dem Druck der Aufstände. Am 26. August 1789 beschließt die Nationalversammlung die Erklärung der Menschen- und Bürgerrechte (Vorbild: amerikanische Unabhängigkeitserklärung von 1776)."));
-s1.push(P("Für die Stunde sind acht Artikel der Erklärung ausgewählt (gekürzte und vereinfachte Fassung, Nummerierung wie im Original): Artikel 1 (frei und gleich an Rechten), 2 (Grundrechte: Freiheit, Eigentum, Sicherheit, Widerstand gegen Unterdrückung), 3 (Ursprung der Herrschaft beim Volk, Volkssouveränität), 4 (Freiheit endet, wo sie anderen schadet), 6 (Gesetz für alle gleich, Ämter nach Fähigkeiten), 10 (Religionsfreiheit), 11 (Meinungsfreiheit), 17 (Eigentum). Auf dem Arbeitsblatt arbeiten die Schüler an den Artikeln 1, 3, 6, 11 und 17; die Artikel 2, 4 und 10 werden kurz im Plenum besprochen."));
-s1.push(P("Die Erklärung gilt 1789 in der Praxis nicht für alle (Frauen, Besitzlose, Sklaven in den Kolonien); das ist Thema der Verfassung von 1791 (Aktiv- und Passivbürger) in Stunde 5 und wird in der Stunde nur als Ausblick angesprochen. Der Transfer in die Gegenwart erfolgt über drei Artikel des Grundgesetzes (Art. 3 Abs. 1: „Alle Menschen sind vor dem Gesetz gleich.“, Art. 14 Abs. 1: Eigentum und Erbrecht werden gewährleistet, Art. 20 Abs. 2: „Alle Staatsgewalt geht vom Volke aus.“); zum Kreuzen auf dem Exit-Ticket kommt Art. 5 (Meinungsfreiheit) hinzu. Die Formulierungen des Grundgesetzes sind auf den Folien leicht gekürzt und vor Gebrauch mit dem Original abzugleichen."));
-s1.push(P("Vereinfachungen und Deutungen, die im Unterricht offen benannt werden: (1) Die Zuordnung „Vorher“ (Zensur, Abgaben, Steuerfreiheit) ist verkürzt. (2) Die Karikatur ist selbst gezeichnet und keine historische Quelle; die Aussage der Figuren („Wir kamen euch entgegen“) ist eine bewusst überspitzte Selbstdarstellung, historisch war der Verzicht nicht freiwillig.", { italics: true }));
+s1.push(H1("1. Allgemeine und spezielle Lehr- und Lernbedingungen"));
+s1.push(P("Die geplante Unterrichtsstunde findet am Mittwoch, dem 25. November 2026, in der Klasse 8D im Fach Geschichte statt [[Beginn der Stunde, Raum]]. Ich unterrichte die Lerngruppe im Fach Geschichte in einer Wochenstunde (45 Minuten) und begleite sie [[ggf. in weiteren Fächern]]. Die 8D besteht aus 24 Schülerinnen und Schülern. Alle Lernenden sind Leistungssportlerinnen und Leistungssportler: Training, Wettkampf und Anreisen bestimmen ihren Tag, und die Klasse ist es gewohnt, Leistung, Regeln und Mannschaftsentscheidungen im Alltag zu erleben. Das ist für den Geschichtsunterricht ein Anknüpfungspunkt, den ich anbiete, aber nicht erzwinge. Für die Folien steht ein Beamer zur Verfügung [[Ausstattung des Raumes bitte prüfen]], die Tafel nutze ich für Stundenfrage, Ziele und Ablauf (Seitentafel)."));
+s1.push(P("Die Reihe „Französische Revolution“ hat nach den Herbstferien am 4. November begonnen; die geplante Stunde ist die vierte von elf Stunden. Die Klasse kennt die Ständeordnung, die Benachteiligung des Dritten Standes (Bauern und Bürger) und die Abstimmung nach Ständen (Stunde 1 und 2), sie hat den Ballhausschwur und den Sturm auf die Bastille als Wege des Widerstands erarbeitet (Stunde 3, Partnerpuzzle am 18.11.). [[Rückmeldung zu Stunde 3 ergänzen: Zeit, Aktivierung, Lautstärke, Ergebnisse]]. Fachbegriffe wie Vorrechte, Nationalversammlung oder Volkssouveränität sind teils neu und werden eingeführt, bevor sie verwendet werden. Die Arbeit mit einer Textquelle, die in eigenen Worten wiedergegeben und mit der Zeit davor verglichen wird, ist für die Klasse neu. Das Lernniveau der Gruppe ist heterogen; kurze Schreibaufgaben mit Satzanfängen gelingen sicher, längere freie Texte fallen vielen schwer."));
+s1.push(P("Die Klasse ist lebhaft und laut. Ruhig und konzentriert arbeitet sie, wenn alle beim Ankommen und in Einzel- und Partnerphasen einen eigenen Auftrag haben, wenn die Wechsel mit festen, wörtlichen Ansagen („Stifte liegen. Ihr hört nur zu.“, „Jetzt arbeitet ihr allein. Die Aufgabe steht rechts.“, „Flüsterstufe. Nur dein Partner hört dich.“) gesteuert werden und wenn Gespräche kurz bleiben. Beiträge sichere ich deshalb über gezielte Stichproben (drei bis sechs Lernende unterschiedlichen Niveaus, unbenotet und getrennt von den mündlichen Noten) und Heft-Stichproben, nicht allein über freiwillige Meldungen. Besonders gut hat in Stunde 1 funktioniert, wenn Lernende selbst Ergebnisse am Presenter erklärten."));
+s1.push(P("Aus diesen Lernvoraussetzungen ziehe ich folgende Schlussfolgerungen für die Unterrichtsplanung: kleinschrittiges, direktes Vorgehen in der Informations- und Übungsphase mit Modell und Prüffragen; Wortspeicher mit Erklärungen und ein Vorher-Speicher auf dem Arbeitsblatt statt reiner Wortzuordnung; Einzelarbeit mit Stichproben und kurze Plenumsphasen; Satzanfänge statt fertiger Sätze; übersichtliche Arbeitsblätter ohne Tabellenform mit genügend Schreibplatz. Das Verhältnis zwischen mir und der Lerngruppe schätze ich als [[Einschätzung ergänzen, zum Beispiel: kooperativ, auf Beziehung und klare Absprachen aufgebaut]] ein."));
 
-// ---------- 3 Didaktische Analyse ----------
-s1.push(H1("3  Didaktische Analyse"));
-s1.push(H2("3.1  Bedeutung und Relevanz"));
-s1.push(...B([
-  "**Gegenwartsbezug:** Die Rechte, die die Klasse als selbstverständlich erlebt (Gleichheit vor dem Gesetz, Meinungsfreiheit, Eigentum), sind historisch erkämpft. Der Aha-Moment („1789 oder Grundgesetz?“) zeigt die Kontinuität und die Vorbildwirkung der Erklärung für das Grundgesetz.",
-  "**Zukunftsbezug:** Die Kompetenz, eine Quelle in eigenen Worten wiederzugeben, in heutige Begriffe zu übersetzen und mit der Zeit davor zu vergleichen, trägt die Reihe (Verfassungsschaubild, Urteil) und den Test.",
-  "**Lebenswelt:** Gleiche Regeln für alle und Leistung statt Herkunft sind für Leistungssportlerinnen und -sportler nachvollziehbar (Artikel 6: Ämter nach Fähigkeiten); der Bezug wird angeboten, nicht erzwungen.",
-]));
-s1.push(H2("3.2  Exemplarität und Zugänglichkeit"));
-s1.push(...B([
-  "Die Erklärung ist die zentrale Quelle zur Bedeutung der Revolution und im SchiC als Inhalt des Moduls „Französische Revolution“ verankert (Bürger- und Menschenrechtserklärung). Die Quellenauswertung ergänzt die im SchiC genannten Methoden (Karikatur, Verfassungsschaubild).",
-  "Zugänglichkeit: Die Quelle ist gekürzt und vereinfacht, die Begriffe werden mit kurzen Erklärungen angeboten (Wortspeicher), das Vorwissen zur Zeit vor 1789 steht als Vorher-Speicher auf dem Blatt, weil die Zensur nicht behandelt wurde. Die Klasse muss nicht raten, sie wählt aus.",
-  "Das Einstiegsbild (Karikatur mit zwei Wandbildern von Ballhaus und Bastille) knüpft an Stunde 3 an und macht die Frage „Was wollt ihr noch?“ zur Stundenfrage.",
-]));
-s1.push(H2("3.3  Kompetenzen (SchiC Klasse 8, Modul 2)"));
-s1.push(table([2400, 7800], [
-  hdr(["Kompetenzbereich", "Beitrag dieser Stunde"], [2400, 7800]),
-  row([tc("Methodenkompetenz", 2400, { bold: true, fill: LIGHT }), tc("Eine Textquelle in drei Schritten auswerten: in eigenen Worten wiedergeben, den heutigen Begriff zuordnen, das Vorher benennen (Vormachen, angeleitet mit Hilfe, selbstständig).", 7800)]),
-  row([tc("Rekonstruktionskompetenz", 2400, { bold: true, fill: LIGHT }), tc("Zusammenhänge zwischen Ereignissen (Ballhausschwur, Bastille, Aufstände, 4. August, 26. August) herstellen; Ursache und Folge des Entgegenkommens.", 7800)]),
-  row([tc("Urteilskompetenz (anbahnend)", 2400, { bold: true, fill: LIGHT }), tc("Die Bedeutung der Erklärung erkennen („Was hat sich verbessert?“, „Was bedeutet 1789 für unser Grundgesetz?“) als Vorstufe zum Sach- und Werturteil; eine ausgebaute Urteilsaufgabe folgt ab Stunde 8.", 7800)]),
-]));
-
-// ---------- 4 Sequenz ----------
-s1.push(H1("4  Einordnung in die Reihe (angepasste Sequenz)"));
-s1.push(P("Die Reihe umfasst für die 8D elf wöchentliche Stunden (Mittwoch) bis zum Halbjahresende, ohne Reserve, mit zwei Tests. Die Sequenz wurde am 17.11. angepasst (Hospitation in Stunde 4, Test 1 verschoben, Napoleon und Ende der Revolution zusammengelegt)."));
-const SQ = [
-  ["1", "04.11.", "Generalstände, Abstimmung nach Ständen", "gelaufen"],
-  ["2", "11.11.", "Dritter Stand handelt: Nationalversammlung, Ballhausschwur, Abstimmungsspiel (Kurzstunde)", "gelaufen"],
-  ["3", "18.11.", "Wege des Widerstands: Ballhausschwur und Bastille (Partnerpuzzle, Urteil)", "gelaufen"],
-  ["4", "25.11.", "Vorrechte weg, Menschenrechte da (Quelle ins Heute übersetzen), HOSPITATION", "diese Stunde"],
-  ["5", "02.12.", "Verfassung 1791: konstitutionelle Monarchie, Aktiv- und Passivbürger (Einstieg: Der König unterschreibt die Erklärung erst nach dem Marsch der Frauen im Oktober 1789)", "geplant"],
-  ["6", "09.12.", "Test 1 (Stunden 1 bis 5)", "geplant"],
-  ["7", "16.12.", "Vom König zur Republik: Flucht, Krieg, Hinrichtung", "geplant"],
-  ["8", "06.01.", "Jakobinerherrschaft und Terror; Sach- und Werturteil (Modell)", "geplant"],
-  ["9", "13.01.", "Ende der Revolution und Napoleon; Urteil angeleitet", "geplant"],
-  ["10", "20.01.", "Test 2 (Stunden 7 bis 9) mit Urteilsaufgabe", "geplant"],
-  ["11", "27.01.", "Gesamturteil zur Revolution (Vergleich mit der Eingangsdiagnose); Wiener Kongress nur als Zusatz", "geplant"],
-];
-s1.push(table([700, 1100, 6900, 1500], [hdr(["Nr.", "Datum", "Thema", "Stand"], [700, 1100, 6900, 1500]), ...SQ.map((r, i) => row(r.map((v, j) => tc(v, [700, 1100, 6900, 1500][j], { bold: i === 3, fill: i === 3 ? GOLD : undefined })))) ]));
-s1.push(P(""));
-s1.push(...B([
-  "**Vorstunde (3):** Widerstand von Ballhausschwur und Bastille; die Rückschau an den zwei Bildern greift sie auf. **Folgestunde (5):** Wem gelten die Rechte 1789 wirklich? (Verfassung 1791). Die Frage am Ende der Stunde 4 („Für wen galten diese Rechte 1789 wirklich?“) ist das Gelenk.",
-  "**Methodenaufbau:** Karikatur (Stunde 2), Quellenauswertung (Stunde 4: Modell, angeleitet, selbstständig), Verfassungsschaubild (Stunde 5), Ursache-Folge-Kette (6, 7), Sach- und Werturteil (8, 9), Test (10), Gesamturteil (11).",
-  "**Parallelklasse 8C:** Die 8C hat die Menschenrechte bereits am 13.11. behandelt (Epochenjahr 1789 wiederholt, Arbeitsblatt zu den Artikeln 1, 2, 3, 4, 6, 10, 11); Artikel und Begriffe sind abgestimmt (Vergleichbarkeit für den Test), ergänzt um das Eigentumsrecht (Artikel 17).",
-]));
-const sec1 = { properties: { page: { size: { width: 11906, height: 16838 }, margin: { top: 900, bottom: 800, left: 850, right: 850 } } }, footers: { default: footer("Unterrichtsentwurf Geschichte 8D · 25.11.2026") }, children: s1 };
-
-// ---------- 5 bis 7 ----------
+// ================= 2 und 2.1 Sequenzplanung =================
 const s2 = [];
-s2.push(H1("5  Lernziele und Prüfaufgabe"));
-s2.push(table([1300, 4300, 4600], [
-  hdr(["Ziel", "Ich kann …", "Woran erkenne ich es?"], [1300, 4300, 4600]),
-  row([tc("1 (Mindest)", 1300, { bold: true, fill: LIGHT }), tc("erklären, was sich durch den Verzicht auf die Vorrechte und die Menschenrechte für den Dritten Stand verbessert hat.", 4300), tc("Bilanz „Was hat sich verbessert?“ (Folie 15); Exit-Ticket: Satz „Wir wollen Menschenrechte, damit wir endlich …“.", 4600)]),
-  row([tc("2 (Mindest)", 1300, { bold: true, fill: LIGHT }), tc("Artikel von 1789 in heutige Begriffe übersetzen (zum Beispiel Eigentumsrecht).", 4300), tc("Arbeitsblatt: Artikel 6, 11 und 17 in den drei Schritten (in meinen Worten, Begriff ankreuzen, vorher), Stichprobe im Heft.", 4600)]),
-  row([tc("3 (*)", 1300, { bold: true, fill: LIGHT }), tc("an einem Grundgesetz-Artikel zeigen, dass die Erklärung bis heute nachwirkt.", 4300), tc("„1789 oder Grundgesetz?“ (Heft, Folien 16 bis 19); Exit-Ticket: Kreuz beim passenden Grundgesetz-Artikel.", 4600)]),
-]));
-s2.push(P(""));
-s2.push(P("Die Stundenziele stehen als „Ich kann …“-Sätze zu Beginn an der Seitentafel und auf Folie 3. Das Mindestziel sind Ziel 1 und 2; Ziel 3 trägt den Stern und wird bei Zeitnot verkürzt. Die Phase „Auswerten“ wird nie gestrichen. Die Rückmeldung an die Klasse erfolgt nach drei Stufen, die den Zielen entsprechen (Stufe 1 bis 3); es gibt keine Selbsteinschätzung der Schülerinnen und Schüler."));
+s2.push(H1("2. Darstellung und Begründung didaktisch-methodischer Entscheidungen", { pb: true }));
+s2.push(H2("2.1 Sequenzplanung"));
+s2.push(P("Die geplante Unterrichtsstunde hat das Stundenthema „Vorrechte weg, Menschenrechte da“, umfasst die 4. Geschichtsstunde der Sequenz „Die Französische Revolution: Wie kam es zur Revolution, und war sie ein Erfolg?“ und ist in der folgenden Sequenzplanungstabelle hellblau hinterlegt. Die Sequenz wurde am 17.11. angepasst (Hospitation in Stunde 4, Test 1 nach hinten verschoben, Ende der Revolution und Napoleon in einer Stunde zusammengelegt)."));
+const sec1 = { properties: { page: portrait, type: SectionType.NEXT_PAGE }, footers: { default: footer }, children: [].concat(s1, s2) };
 
-s2.push(H1("6  Didaktisch-methodisches Konzept"));
-s2.push(H2("6.1  Struktur nach AVIVA"));
-s2.push(table([1700, 1100, 7400], [
-  hdr(["Phase", "Zeit", "Didaktische Funktion und Begründung"], [1700, 1100, 7400]),
-  row([tc("Ankommen", 1700, { bold: true, fill: LIGHT }), tc("4 Min.", 1100), tc("Die Karikatur (Klerus und Adel: „Ihr habt geschworen. Ihr habt die Bastille gestürmt. Wir kamen euch entgegen. Was wollt ihr noch?“) wird zur Stundenfrage. Die Vermutung im Heft („Was will der Dritte Stand noch? Ich vermute …“) ist die Eingangsdiagnose und wird am Ende mit der Antwort verglichen (Vorher-Nachher). Alle haben einen Auftrag; Ziel und Ablauf werden transparent gemacht (indirekt/offen für die Vermutung, direkt für Ziel und Ablauf).", 7400)]),
-  row([tc("Vorwissen aktivieren", 1700, { bold: true, fill: LIGHT }), tc("4 Min.", 1100), tc("Rückschau an zwei unbeschrifteten Bildern (Ballhaus, Bastille): Was geschah, was bewirkte es? Allein, dann kurzes Plenum mit Stichproben. Die Klasse entschlüsselt „geschworen“ und „gestürmt“ selbst und verbindet die Ereignisse mit dem Entgegenkommen (Ursache-Folge). Echte Wiederholung statt Anriss; Voraussetzung für „vorher, nachher“.", 7400)]),
-  row([tc("Informieren", 1700, { bold: true, fill: LIGHT }), tc("10 Min.", 1100), tc("Direktes Vorgehen, weil das Vorwissen zur Quellenarbeit gering ist. Portion 1: Verzicht auf die Vorrechte (4. August, vorher und nachher, nicht freiwillig). Portion 2: Erklärung vom 26. August und die drei Schritte; die Lehrkraft denkt an Artikel 1 laut. Prüffrage mit Stichproben (4 bis 6 Personen), 2 Minuten Reserve zum erneuten Erklären. Es wird nicht weitergegangen, wenn etwas nicht verstanden ist.", 7400)]),
-  row([tc("Verarbeiten", 1700, { bold: true, fill: LIGHT }), tc("18 Min.", 1100), tc("Progression der direkten Instruktion in Einzelarbeit: erste Anwendung mit Hilfe (Artikel 3), selbstständiges Üben (Artikel 6, 11, 17), Kontrolle und Bilanz „Was hat sich verbessert?“. Dann der Aha-Moment: Grundgesetz kurz erklärt, drei Sätze „1789 oder Grundgesetz?“ (Denkphase), Auflösung als Paare, Frage nach der Bedeutung von 1789 für das Grundgesetz. Der Transfer läuft nur auf den Folien, nicht auf dem Blatt.", 7400)]),
-  row([tc("Auswerten", 1700, { bold: true, fill: LIGHT }), tc("9 Min.", 1100), tc("Sicherung: Merksatz (abschreiben, rot umrahmen), Exit-Ticket mit der Ausgangsfrage (alle schreiben: „Wir wollen Menschenrechte, damit wir endlich …“, dazu Kreuz beim passenden Grundgesetz-Artikel), Zielprüfung, Ausblick (Brücke zu Stunde 5). Das Exit-Ticket enthält eine freiwillige Zeile „Das war mir unklar“ als Rückmeldung der Klasse.", 7400)]),
-]));
-s2.push(H2("6.2  Entscheidungen zur Methodenwahl"));
-s2.push(...B([
-  "**Lehrergesteuert mit Einzelarbeit:** Nach dem Partnerpuzzle der Vorwoche soll die Klasse nicht auf ständigen Sozialformwechsel konditioniert werden. Partnerarbeit entfällt weitgehend; Einzelarbeit mit Stichproben und kurzen Plenumsphasen trägt die Stunde.",
-  "**Höchstens drei Methoden:** (1) Quellenauswertung in drei Schritten (Vormachen, angeleitet, selbstständig), (2) Aha-Moment „1789 oder Grundgesetz?“, (3) Exit-Ticket. Karikatur und Rückschau sind Impuls beziehungsweise Routine.",
-  "**Quellenauswertung ohne Tabelle:** Das Arbeitsblatt arbeitet mit Artikel-Blöcken (Wortlaut, drei Schritte, Schreiblinien); Wortspeicher mit Erklärungen und Vorher-Speicher geben die Wissensbasis, statt reine Wortzuordnung zu verlangen.",
-  "**Sprache:** Satzanfänge statt fertiger Sätze, ausschließlich Fachbegriffe der Reihe (Vorrechte, Volkssouveränität, Eigentumsrecht), keine kindlichen Metaphern.",
-  "**Offene Auswertung:** Das Exit-Ticket lässt mehrere gute Antworten zu (Gleichheit, Mitbestimmung, Meinungsfreiheit, Eigentum). Geprüft werden eine Verbesserung für den Dritten Stand und ein passender Grundgesetz-Artikel.",
-]));
-s2.push(H2("6.3  Differenzierung und Unterstützung"));
-s2.push(...B([
-  "Gestufte Hilfen auf dem Blatt: Artikel 1 als gelbes Beispiel, Artikel 3 mit Hilfe, Artikel 6, 11 und 17 ohne Hilfe; Wortspeicher mit Erklärungen; Vorher-Speicher; Satzanfang auf dem Exit-Ticket.",
-  "Zusätzliche Wege: Wer unsicher ist, beginnt mit dem kurzen Artikel 17 und schreibt nur einen Satzteil; wer früh fertig ist, erklärt seinem Nachbarn einen Artikel oder begründet beim Raten, woran er das Jahr erkannt hat.",
-  "Alle Aufgaben mit Stichproben unterschiedlichen Niveaus; keine Selbsteinschätzung; Rückmeldung an die Lehrkraft über das Exit-Ticket.",
-]));
-s2.push(H2("6.4  Transparenz, Klassenführung, Fehlerkultur"));
-s2.push(...B([
-  "Ziel, Ablauf (A V I V A, mit Minuten) und Stern bei verkürzbarem Teil stehen zu Beginn an der Tafel und auf den Folien 3 und 4.",
-  "Feste, wörtliche Ansagen bei jedem Wechsel; Übungen im immer gleichen Format (Nummer und Titel, nummerierte Schritte mit Verb am Anfang, Zeit, Arbeitsform, „Fertig? Stift hinlegen“).",
-  "Fehlerkultur: Verbessern mit Grün; neutrale Reaktion bei Stichproben, erst danach Kommentar; Diagnosefragen sind unbenotet.",
-]));
-s2.push(H2("6.5  Medien"));
-s2.push(P("Präsentation mit 23 Folien (Cambria/Calibri, mindestens 27 Punkt), selbst gezeichnete Karikatur mit zwei Wandbildern (keine historische Quelle), Arbeitsblatt (einseitig, Tricolore-Kopf mit kleinen Bildern), Exit-Ticket (6 pro A4), Tafel."));
-
-// ---------- 7 Verlauf (Querformat) ----------
-const s3 = [];
-s3.push(H1("7  Verlaufsplanung"));
-const VW = [800, 1300, 3700, 3000, 1700, 1500, 2400];
-const VH = ["Min.", "Phase", "Inhalt und Lehrerimpuls (wörtlich, wo wichtig)", "Erwartetes Schülerverhalten", "Sozialform, Methode", "Medien", "Ziel, Begründung, Reserve"];
-const VR = [
-  ["4", "Ankommen", "Folie 1 beim Betreten. Ansage: „Stifte liegen. Ihr hört nur zu. Lest, was Klerus und Adel sagen. Schreibt ins Heft: Was will der Dritte Stand noch? Ich vermute …“ Danach Folie 2 bis 4 (Stundenfrage, Begriff Quelle, Ziele als „Ich kann …“, Ablauf), je 30 bis 45 Sekunden.", "Heft raus, Datum und Überschrift; schreiben ein bis zwei Sätze Vermutung. Hören zu.", "Einzelarbeit, still; Lehrervortrag", "Folien 1 bis 4, Seitentafel, Heft", "Rahmen; Vermutung als Vorher-Nachher für Ziel 1 bis 3. Folie „Das ist mir wichtig“ entfällt (eingeführt)."],
-  ["4", "Vorwissen aktivieren", "Folie 5: „Schaut auf die zwei Bilder. Schreibt zu jedem: Was geschah? Was bewirkte es?“ (2 Min. allein), Stichproben bei 3 bis 4 Personen (1 Min.). Folie 6: Kette Ballhausschwur, Bastille, Aufstände; Zeilen 4. und 26. August nur nennen. „Vergleicht und verbessert mit Grün.“", "Erkennen Ballhaus und Bastille, schreiben Stichworte; nennen Ursache-Folge (Angst von Klerus und Adel). Verbessern mit Grün.", "Einzelarbeit, kurzes Plenum", "Folien 5 und 6, Heft", "Ziel 1 (Voraussetzung). Kein Partnercheck wegen lehrergesteuerter Stunde. Plenum auf 30 Sekunden kürzbar."],
-  ["10", "Informieren", "Folie 7 (3 Min.): Verzicht auf die Vorrechte (4. August), nicht freiwillig, vorher und nachher; Warnung: abgeschafft heißt nicht sofort gleich; Prüffrage „Warum geben Klerus und Adel nach?“. Folie 8 (1 Min.): 26. August, drei Schritte (Meine Worte, Begriff heute, Vorher). Folie 9 (3 Min.): Modell Artikel 1, Lehrkraft denkt laut. Folie 10 (1 Min.): Prüffragen („Was machst du im Schritt 2?“, „Warum schreibst du nicht ab?“). Reserve 2 Min.", "Hören zu, geben kurze Antworten (aus Angst vor den Aufständen; ich suche den Begriff im Wortspeicher; ich fasse es in eigene Worte).", "Lehrervortrag in Portionen, Modell, Stichproben (4 bis 6)", "Folien 7 bis 10, Arbeitsblatt (noch umgedreht)", "Direktes Vorgehen; Ziel 1 und 2. Nicht weitergehen, wenn die Prüffrage nicht sitzt (Reserve nutzen)."],
-  ["3", "Verarbeiten 1", "Folie 11: „Jetzt nehmt ihr das Arbeitsblatt. Jetzt arbeitet ihr allein.“ Artikel 3: in meinen Worten (mit Hilfe), Begriff ist angekreuzt, Vorher mit Hilfe. Folie 12 (30 Sek.): Lösung, „Vergleicht und verbessert mit Grün.“", "Schreiben in eigenen Worten, nutzen die Hilfe; vergleichen mit Grün.", "Einzelarbeit, leise", "Folien 11 und 12, Arbeitsblatt", "Ziel 1 und 2 (erste Anwendung mit Hilfe). Heft-Stichprobe."],
-  ["6", "Verarbeiten 2", "Folie 13: Artikel 6, 11 und 17 allein in den drei Schritten (in meinen Worten, Begriff ankreuzen, Vorher mit dem Vorher-Speicher). Lehrkraft geht durch die Reihen, Stichprobe bei 4 bis 6 Personen, kein Kommentar.", "Schreiben in eigenen Worten, kreuzen Begriffe an, wählen Vorher aus dem Speicher.", "Einzelarbeit, leise", "Folie 13, Arbeitsblatt", "Ziel 1 und 2 (selbstständig). Differenzierung: kurzer Artikel 17 zuerst. Sollbruchstelle: nur Artikel 6 und 11."],
-  ["3", "Verarbeiten 3", "Folie 14 (1,5 Min.): Begriffe zu allen Artikeln, auch 2, 4, 10 mündlich; Hinweis: Artikel 2 nennt Widerstand, nicht Gewalt (Stunde 3). Folie 15 (1,5 Min.): Bilanz „Was hat sich verbessert?“ (Artikel 3, 6, 11, 17: vorher, seitdem).", "Vergleichen mit Grün, nennen Verbesserungen (Gleichheit vor dem Gesetz, freie Rede, Eigentum, Macht beim Volk).", "Plenum kurz, Stichproben", "Folien 14, 15", "Ziel 1 (Bedeutung). Kontrolle der Übersetzung (Ziel 2)."],
-  ["4", "Verarbeiten 4 (Aha)", "Folie 16 (30 Sek.): Grundgesetz kurz erklärt. Folie 17 (1 Min. allein): drei Sätze A, B, C, „1789 oder Grundgesetz?“, ins Heft. Folie 18 (1,5 Min.): Auflösung als Paare. Folie 19 (1 Min.): „Was bedeutet 1789 für unser Grundgesetz?“, Antwort: Vorbild.", "Notieren A, B, C; raten und begründen kurz; erkennen die Ähnlichkeit; formulieren: 1789 war ein Vorbild.", "Einzelarbeit (Denkphase), Lehrervortrag, Stichproben", "Folien 16 bis 19, Heft", "Ziel 3 (Transfer, Aha). Sollbruchstelle: nur Folie 17 und 18, Folie 19 in einem Satz."],
-  ["2", "Auswerten 1", "Folie 20: „Jetzt schreibt ihr von der Folie ab: Merksatz 1. Rahmt ihn rot ein.“ (4. August, 26. August, Gleichheit vor dem Gesetz, Freiheit, Eigentumsrecht, Volkssouveränität, Echo im Grundgesetz; Test: Recht gilt für alle, Vorrecht nur für wenige).", "Schreiben ab, rahmen rot.", "Einzelarbeit", "Folie 20, Heft", "Ergebnissicherung für den Test, Ziel 1 bis 3."],
-  ["5", "Auswerten 2", "Folie 21: „Schaut auf die Karikatur. Ihr bekommt einen Zettel. Beendet den Satz ‚Wir wollen Menschenrechte, damit wir endlich …‘ und kreuzt den passenden Grundgesetz-Artikel an.“ 4 Min. schreiben, danach 2 bis 3 freiwillige Vorleser. Vergleich mit der Vermutung vom Anfang.", "Beenden den Satz (zum Beispiel „… alle vor dem Gesetz gleich sind“) und kreuzen Art. 3, 5, 14 oder 20 an.", "Einzelarbeit, leise; kurzes Vorlesen", "Folie 21, Exit-Ticket", "Abschlussaufgabe, prüft Ziel 1 und 3 bei allen. Zettel werden abgegeben."],
-  ["2", "Auswerten 3", "Folie 22 (1 Min., still): „Haben wir die Ziele erreicht?“ Folie 23 (Ausblick, 1 Min.): „Für wen galten diese Rechte 1789 wirklich?“ Hinweis auf Stunde 5.", "Prüfen still die Ziele; hören den Ausblick.", "still, Lehrervortrag", "Folien 22, 23", "Zielprüfung (ohne Selbsteinschätzung); Brücke zu Stunde 5."],
+const lt = [];
+const LH = (label, text) => p([t(label + " ", { size: 20, bold: false }), t(text, { size: 20 })], { align: AlignmentType.LEFT, after: 70, line: 280 });
+lt.push(LH("Titel:", "„Die Französische Revolution: Wie kam es zur Revolution, und war sie ein Erfolg?“"));
+lt.push(LH("Thema:", "Revolution und Menschenrechte (Schulinternes Curriculum Geschichte Klasse 8, Modul 2)"));
+lt.push(LH("Kompetenzen:", "Methodenkompetenz (Karikatur, Textquelle, Verfassungsschaubild), Rekonstruktionskompetenz (Zusammenhänge zwischen Ereignissen und Strukturen), Urteilskompetenz (Sach- und Werturteile)"));
+lt.push(LH("Geschichtsdidaktische Prinzipien:", "Problemorientierung, Gegenwartsorientierung, Quellenorientierung"));
+lt.push(LH("Lernziel:", "Die SuS können Ursachen und Verlauf der Französischen Revolution rekonstruieren und die Revolution am Ende der Sequenz mit Sach- und Werturteil beurteilen (Vergleich mit der Eingangsmeinung aus Stunde 2)."));
+const SQ = [
+  ["04.11.2026 (1. Std.)", "„Der Weg zu den Generalständen“", "Absolutismus, Finanzkrise, Ständeordnung, Abstimmung nach Ständen", "Die SuS können den Weg bis zu den Generalständen erklären und begründen, warum die Abstimmung nach Ständen den Dritten Stand benachteiligte."],
+  ["11.11.2026 (2. Std., Kurzstunde)", "„Der Dritte Stand handelt“", "Abstimmungsspiel (nach Ständen und nach Köpfen), Nationalversammlung, Ballhausschwur, Soldaten um Paris", "Die SuS können erklären, warum sich der Dritte Stand 1789 zur Nationalversammlung erklärte, und die Abstimmung nach Ständen und nach Köpfen vergleichen."],
+  ["18.11.2026 (3. Std.)", "„Wege des Widerstands“", "Ballhausschwur und Sturm auf die Bastille (Partnerpuzzle, fünf Kriterien, Zeitstrahl, Urteil)", "Die SuS können Ballhausschwur und Bastille als Formen des Widerstands vergleichen und beurteilen, welcher Weg berechtigt war."],
+  ["25.11.2026 (4. Std.)", "„Vorrechte weg, Menschenrechte da“", "Verzicht auf die Vorrechte (4. August), Erklärung der Menschen- und Bürgerrechte (26. August), Quellenauswertung, Echo im Grundgesetz", "Die SuS können erklären, was sich durch den Verzicht auf die Vorrechte und die Erklärung der Menschenrechte für den Dritten Stand verbessert hat, und an einem Grundgesetz-Artikel zeigen, dass die Erklärung bis heute nachwirkt."],
+  ["02.12.2026 (5. Std.)", "„Für wen galten die Rechte?“", "Verfassung von 1791, konstitutionelle Monarchie, Aktiv- und Passivbürger, Verfassungsschaubild", "Die SuS können am Schaubild erklären, wer 1791 welche Macht hatte und wer wählen durfte."],
+  ["09.12.2026 (6. Std.)", "Test 1", "Stunden 1 bis 5", "Die SuS können Wissen und Methoden der Stunden 1 bis 5 anwenden."],
+  ["16.12.2026 (7. Std.)", "„Vom König zur Republik“", "Flucht, Krieg, Hinrichtung des Königs (Ursache-Folge-Kette)", "Die SuS können den Weg von der Monarchie zur Republik als Ursache-Folge-Kette erklären."],
+  ["06.01.2027 (8. Std.)", "„Jakobinerherrschaft und Terror“", "Terror, Gewalt als normales Mittel; Sach- und Werturteil (Modell)", "Die SuS können die Jakobinerherrschaft darstellen und ein Sach- und Werturteil am Modell nachvollziehen."],
+  ["13.01.2027 (9. Std.)", "„Ende der Revolution und Napoleon“", "Direktorium, Aufstieg und Fall Napoleons; Urteil angeleitet", "Die SuS können das Ende der Revolution und Napoleons Aufstieg erklären und ein Urteil angeleitet formulieren."],
+  ["20.01.2027 (10. Std.)", "Test 2", "Stunden 7 bis 9 mit Urteilsaufgabe", "Die SuS können ein Sach- und Werturteil selbstständig formulieren."],
+  ["27.01.2027 (11. Std.)", "„War die Revolution ein Erfolg?“", "Gesamturteil, Vergleich mit der Eingangsmeinung; Wiener Kongress nur als Zusatz", "Die SuS können die Französische Revolution insgesamt beurteilen und ihr Urteil mit der Eingangsmeinung vergleichen."],
 ];
-s3.push(table(VW, [hdr(VH, VW), ...VR.map((r) => row(r.map((v, j) => tc(v, VW[j], { bold: j === 1, fill: j === 1 ? LIGHT : undefined, size: 17 }))))]));
-s3.push(P("Gesamt: 4 + 4 + 10 + 3 + 6 + 3 + 4 + 2 + 5 + 2 = 43 Minuten plus 2 Minuten Reserve (45 Minuten).", { size: 19, after: 60 }));
-s3.push(H2("7.1  Gelenkstellen"));
-s3.push(...B([
-  "Ankommen → Vorwissen: „Was haben Ballhaus und Bastille mit dem Entgegenkommen zu tun?“",
-  "Vorwissen → Informieren: „Klerus und Adel kamen entgegen, weil sie Angst hatten. Was genau haben sie aufgegeben?“",
-  "Informieren → Verarbeiten: „Entgegenkommen ist Gnade von oben. Was ist der Gegenpol? Das lest ihr jetzt in der Quelle. Jetzt macht ihr es selbst.“",
-  "Verarbeiten → Aha: „Das war vor 237 Jahren. Was davon gilt noch heute?“",
-  "Aha → Auswerten: „Jetzt beantwortet ihr die Frage vom Anfang.“ Auswerten → nächste Stunde: „Gilt das für alle? Das sehen wir nächste Woche.“",
-], 20));
-s3.push(H2("7.2  Didaktische Reserve und Sollbruchstellen"));
-s3.push(...B([
-  "Zeit hat Vorrang; die Stunde ist dicht. Reserve: 2 Minuten in „Informieren“ (erneutes Erklären).",
-  "Kürzung in dieser Reihenfolge: Plenum der Rückschau (auf 30 Sekunden), Artikel 11 und 17 (nur Artikel 6 und 11), Aha (nur Folie 17 und 18), Vorlesen der Exit-Tickets. „Auswerten“ wird nicht gestrichen; die Übungsphase endet 9 Minuten vor Schluss.",
-], 20));
-const sec3 = { properties: { page: { size: { width: 11906, height: 16838, orientation: PageOrientation.LANDSCAPE }, margin: { top: 800, bottom: 700, left: 700, right: 700 } } }, footers: { default: footer("Unterrichtsentwurf Geschichte 8D · 25.11.2026") }, children: s3 };
+const SW = [2300, 3400, 8800];
+const sqRows = [row([cell(cp("Datum\n(Stunde)", { bold: true, size: 20 }), { w: SW[0], fill: "D9DEE8" }), cell(cp("Thema", { bold: true, size: 20 }), { w: SW[1], fill: "D9DEE8" }), cell(cp("Lernziele", { bold: true, size: 20 }), { w: SW[2], fill: "D9DEE8", rowSpan: 2 })]),
+  row([cell(cp("", { size: 6 }), { w: SW[0], fill: "D9DEE8" }), cell(cp("Inhalt", { bold: true, size: 20 }), { w: SW[1], fill: "D9DEE8" })])];
+// Kopfzeile in zwei Zeilen: Datum über zwei Zeilen
+SQ.forEach(([d, th, inh, z], i) => {
+  const fill = i === 3 ? "BDD7EE" : undefined, b = i === 3;
+  sqRows.push(row([cell(cp(d, { size: 19, bold: b }), { w: SW[0], fill, rowSpan: 2 }), cell(cp(th, { size: 19, bold: b }), { w: SW[1], fill }), cell(cp(z, { size: 19, bold: b }), { w: SW[2], fill, rowSpan: 2 })]));
+  sqRows.push(row([cell(cp(inh, { size: 18, bold: b }), { w: SW[1], fill })]));
+});
+// Kopf vereinfachen (kein rowSpan über die Kopfzeilen, damit LibreOffice sauber rendert)
+const sqHead = row([cell(cp("Datum (Stunde)", { bold: true, size: 20 }), { w: SW[0], fill: "D9DEE8" }), cell(cp("Thema / Inhalt", { bold: true, size: 20 }), { w: SW[1], fill: "D9DEE8" }), cell(cp("Lernziele", { bold: true, size: 20 }), { w: SW[2], fill: "D9DEE8" })]);
+const sqSimple = SQ.map(([d, th, inh, z], i) => { const fill = i === 3 ? "BDD7EE" : undefined, b = i === 3; return row([cell(cp(d, { size: 19, bold: b }), { w: SW[0], fill }), cell([cp(th, { size: 19, bold: true }), cp(inh, { size: 18, bold: b })], { w: SW[1], fill }), cell(cp(z, { size: 19, bold: b }), { w: SW[2], fill })]); });
+lt.push(table(SW, [sqHead, ...sqSimple]));
+const sec2 = { properties: { page: landscape, type: SectionType.NEXT_PAGE }, footers: { default: footer }, children: lt };
 
-// ---------- 8-11 ----------
-const s4 = [];
-s4.push(H1("8  Erwartungshorizont"));
-s4.push(table([2300, 7900], [
-  hdr(["Aufgabe", "Erwartete Lösung (Stichworte, andere richtige Formulierungen zählen)"], [2300, 7900]),
-  row([tc("Rückschau (Folie 5)", 2300, { bold: true, fill: LIGHT }), tc("Links: Eid im Ballhaus am 20. Juni, die Abgeordneten wollen nicht auseinandergehen (gewaltlos), die Versammlung bleibt. Rechts: Sturm auf die Bastille am 14. Juli (Gewalt), der König zieht die Soldaten ab, Aufstände im Land. Zusammenhang: Das Entgegenkommen von Klerus und Adel war nicht freiwillig, sie hatten Angst vor weiteren Aufständen.", 7900)]),
-  row([tc("Prüffrage Folie 7", 2300, { bold: true, fill: LIGHT }), tc("Aus Angst vor den Aufständen der Bauern (und weil die Nationalversammlung es beschloss).", 7900)]),
-  row([tc("Artikel 1 (Modell)", 2300, { bold: true, fill: LIGHT }), tc("In meinen Worten: Alle Menschen haben von Geburt an dieselben Rechte. Begriff: Gleichheit. Vorher: Die Geburt entschied über Stand und Vorrechte.", 7900)]),
-  row([tc("Artikel 3 (Hilfe)", 2300, { bold: true, fill: LIGHT }), tc("Die Herrschaft geht vom Volk aus, nicht vom König allein. Volkssouveränität. Vorher: Der König bestimmte allein.", 7900)]),
-  row([tc("Artikel 6, 11, 17 (selbst)", 2300, { bold: true, fill: LIGHT }), tc("6: Für alle gilt dasselbe Gesetz, Ämter nach Fähigkeit. Gleichheit (vor dem Gesetz). Vorher: Klerus und Adel zahlten keine Steuern, Ämter bekamen vor allem Adlige. 11: Jeder darf frei sagen, schreiben, drucken. Meinungsfreiheit. Vorher: Der König kontrollierte, was gedruckt wurde (Zensur). 17: Was jemandem gehört, darf ihm niemand wegnehmen. Eigentumsrecht. Vorher: Bauern gaben einen Teil der Ernte und Dienste an Adel und Kirche ab, ihr Eigentum war nicht gesichert.", 7900)]),
-  row([tc("Bilanz (Folie 15)", 2300, { bold: true, fill: LIGHT }), tc("Gleiche Rechte statt Vorrechte nach Geburt, Schutz statt Willkür des Königs, Macht beim Volk.", 7900)]),
-  row([tc("1789 oder Grundgesetz? (Folie 17)", 2300, { bold: true, fill: LIGHT }), tc("A „Das Gesetz muss für alle gleich sein.“ = 1789 (Artikel 6). B „Alle Staatsgewalt geht vom Volke aus.“ = Grundgesetz (Art. 20 Abs. 2). C „Das Eigentum und das Erbrecht werden gewährleistet.“ = Grundgesetz (Art. 14 Abs. 1). Paare: Art. 6 und GG Art. 3 (1); Art. 3 und GG Art. 20 (2); Art. 17 und GG Art. 14 (1). Bedeutung: 1789 war ein Vorbild, Rechte aus der Erklärung stehen noch heute im Grundgesetz.", 7900)]),
-  row([tc("Exit-Ticket (Folie 21)", 2300, { bold: true, fill: LIGHT }), tc("Beispiele: „Wir wollen Menschenrechte, damit wir endlich alle vor dem Gesetz gleich sind“ (Kreuz: Art. 3); „… mitbestimmen dürfen“ (Art. 20); „… frei reden und schreiben dürfen“ (Art. 5); „… unser Eigentum behalten“ (Art. 14). Mehrere gute Antworten; Stufe 1: nennt eine Verbesserung; Stufe 3: Kreuz passt zum Satz.", 7900)]),
-]));
-s4.push(H1("9  Mögliche Schwierigkeiten und Reaktionen"));
-s4.push(table([3400, 6800], [
-  hdr(["Mögliche Schwierigkeit", "Reaktion"], [3400, 6800]),
-  row([tc("Die Klasse versteht „Quelle ins Heute übersetzen“ nicht.", 3400), tc("Modell an Artikel 1 wiederholen (Reserve), Wortspeicher mit Erklärungen zeigen; Stichproben, bis die Prüffrage sitzt.", 6800)]),
-  row([tc("Es wird laut, weil alle gleichzeitig schreiben oder raten.", 3400), tc("„Es ist zu laut. Ab jetzt arbeitet ihr allein und schreibt.“ Kein Gespräch; Aufträge bleiben schriftlich.", 6800)]),
-  row([tc("Zeit reicht nicht (Übungsphase dauert länger).", 3400), tc("Sollbruchstellen (Abschnitt 7.2); Auswerten bleibt, Vorlesen der Zettel entfällt.", 6800)]),
-  row([tc("Schülerinnen und Schüler halten „abgeschafft“ für „sofort umgesetzt“.", 3400), tc("Warnung vor dem Fehler (Folie 7): Abgaben mussten teils abgelöst werden; die Nationalversammlung beschloss, nicht der König.", 6800)]),
-  row([tc("Die Klasse hat die Zensur nicht im Wissen.", 3400), tc("Der Vorher-Speicher auf dem Blatt nennt sie; die Schüler wählen aus.", 6800)]),
-  row([tc("Aha bleibt aus (die Sätze werden erkannt).", 3400), tc("Aussage: Genau das zeigt die Vorbildwirkung; Folie 19 knüpft die Bedeutung an. Notfalls vierten Satz ergänzen (Meinungsfreiheit).", 6800)]),
-]));
-s4.push(H1("10  Anhang: Unterlagen"));
-s4.push(...B([
-  "Präsentation_Stunde4_Menschenrechte_8D (23 Folien; Notizen mit Ansagen, Zielbezug und Lösungen)",
-  "Arbeitsblatt_Menschenrechte_Quelle_8D (einseitig, 26-mal) und Loesung_Arbeitsblatt_Menschenrechte_8D",
-  "Exit-Ticket_Menschenrechte_8D (6 Zettel pro A4, 5-mal drucken und schneiden)",
-  "Tafelskript_Stunde4_Menschenrechte_8D (wörtliche Ansagen, Warnungen vor Fehlern, Erwartungen, Heftbild) und Materialliste_Stunde4_Menschenrechte_8D",
-]));
-s4.push(H2("Heftbild am Ende der Stunde"));
-s4.push(P("Überschrift mit Datum und Stundenfrage; Vermutung („Was will der Dritte Stand noch? Ich vermute …“); Rückschau zu den zwei Bildern (verbessert mit Grün); Notiz zu Folie 17 (A, B, C: 1789 oder Grundgesetz); Merksatz 1 (abgeschrieben, rot umrahmt). Arbeitsblatt eingeklebt, Exit-Ticket abgegeben."));
-s4.push(H1("11  Quellen und Grundlagen"));
-s4.push(...B([
-  "Erklärung der Menschen- und Bürgerrechte vom 26. August 1789 (gekürzte und vereinfachte Fassung für die Klasse, Nummerierung nach dem Original); Grundgesetz für die Bundesrepublik Deutschland, Art. 3, 5, 14, 20.",
-  "Schulinternes Curriculum (SchiC) Geschichte Klasse 8, Modul 2 „Französische Revolution“; Rahmenlehrplan Teil C.",
-  "Lehrbuch (nur als Inspiration, keine Seiten im Unterricht); Material und Planungsmodell AVIVA aus dem Studienseminar; Hospitationskriterien (kognitive Aktivierung, konstruktive Unterstützung, Klassenführung); Literatur zur Direkten Instruktion, zu Kompetenzrastern und zur Überprüfbarkeit des Lernzuwachses (siehe Methoden/Literatur_Unterrichtsqualitaet.md im Planungsordner).",
-]));
-s4.push(H2("Offene Punkte vor der Hospitation"));
-s4.push(...B([
-  "Kopfdaten ergänzen (Uhrzeit, Raum, Namen); Rückmeldung zu Stunde 3 in Abschnitt 1.2 eintragen.",
-  "Wortlaut der Artikel und des Grundgesetzes mit den Originalen abgleichen; Angaben zum 4. August (abgeschaffte Vorrechte, Ablösung der Abgaben) im Lehrbuch prüfen.",
-  "Der Wortspeicher der Parallelklasse enthält das Eigentumsrecht nicht; Absprache zur Vergleichbarkeit im Test.",
-], 20));
-const sec4 = { properties: { page: { size: { width: 11906, height: 16838 }, margin: { top: 900, bottom: 800, left: 850, right: 850 } } }, footers: { default: footer("Unterrichtsentwurf Geschichte 8D · 25.11.2026") }, children: s2.concat(s4) };
-// s2 (5 bis 6) und s4 (8 bis 11) liegen im Hochformat; der Verlauf (7) liegt im Querformat dazwischen.
-const secA = { properties: sec4.properties, footers: sec4.footers, children: s2 };
-const secB = sec3;
-const secC = { properties: sec4.properties, footers: sec4.footers, children: s4 };
+// ================= 2.2 Konzept =================
+const k = [];
+k.push(H2("2.2 Didaktisch-methodisches Konzept der Unterrichtsstunde"));
+k.push(P("Nach dem Sturm auf die Bastille am 14. Juli 1789 greifen im Sommer Bauern im ganzen Land Schlösser an. Unter diesem Druck beschließt die Nationalversammlung in der Nacht zum 4. August die Abschaffung der Vorrechte, am 26. August folgt die Erklärung der Menschen- und Bürgerrechte, die der amerikanischen Unabhängigkeitserklärung von 1776 folgt. Klerus und Adel geben nicht freiwillig nach; der Verzicht ist zugleich ein Zugeständnis unter Angst. Die Erklärung ist eine der zentralen Quellen der Revolution und im schulinternen Curriculum (Modul 2, „Bürger- und Menschenrechtserklärung“) verankert. Sie bietet einen gegenwarts- und problemorientierten Zugang, weil vieles von dem, was die Lernenden als selbstverständlich erleben (Gleichheit vor dem Gesetz, Meinungsfreiheit, Eigentumsrecht, Macht des Volkes), fast wörtlich im Grundgesetz steht. Die Stunde fragt deshalb: Was verändern der Verzicht auf die Vorrechte und die Erklärung der Menschenrechte für den Dritten Stand, und was davon gilt noch heute? Als Stundenziel gilt: Die SuS können erklären, was sich für den Dritten Stand verbessert hat, und an einem Grundgesetz-Artikel zeigen, dass die Erklärung nachwirkt. Teilziele sind (1) das „Vorher und Nachher“ zu erklären, (2) Artikel von 1789 in heutige Begriffe zu übersetzen und (3) das Echo im Grundgesetz zu erkennen (Mindestziel: 1 und 2; 3 mit Stern). Die Methodenkompetenz, eine Textquelle in eigenen Worten wiederzugeben, einem heutigen Begriff zuzuordnen und mit der Zeit davor zu vergleichen, wird in dieser Stunde erstmals systematisch aufgebaut und trägt Stunde 5 (Schaubild), die Tests und die späteren Urteilsaufgaben."));
+k.push(P("Eröffnet wird die Stunde mit einer selbst gezeichneten Karikatur (keine historische Quelle): Klerus und Adel stehen vor zwei Wandbildern (Eid im Ballhaus, Sturm auf die Bastille) und sagen: „Ihr habt geschworen. Ihr habt die Bastille gestürmt. Wir kamen euch entgegen. Was wollt ihr noch?“ Der Dritte Stand hört zu. Die Karikatur knüpft an Stunde 3 an, macht die Frage „Was will der Dritte Stand noch?“ zur Stundenfrage und stellt Entgegenkommen als Gnade von oben dar, der später Rechte für alle gegenüberstehen. Die Lernenden schreiben ihre Vermutung ins Heft; sie dient als Eingangsdiagnose und wird am Ende mit der Antwort verglichen (Vorher-Nachher). Stundenziel und Ablauf (A V I V A mit Minuten, Stern bei verkürzbarem Teil) stelle ich zu Beginn vor, damit die Struktur transparent ist."));
+k.push(P("In der Wiederholungsphase entschlüsseln die Lernenden die beiden unbeschrifteten Bilder („geschworen“, „gestürmt“) allein und nennen in Stichproben, was geschah und was es bewirkte. Anschließend zeigt eine Kette (Ballhausschwur, Bastille, Aufstände, 4. August, 26. August) den Zusammenhang. Ich habe bewusst keine reine Abfrage gewählt, sondern eine Rückschau an Bildern, weil sie das Vorwissen aktiviert und die Voraussetzung für das spätere „Vorher und Nachher“ legt. Einen Partnercheck plane ich hier nicht ein, weil die Stunde lehrergesteuert angelegt ist."));
+k.push(P("In der Informationsphase wähle ich ein direktes Vorgehen, weil das Vorwissen zur Quellenarbeit gering ist. In zwei Portionen erkläre ich zunächst den Verzicht auf die Vorrechte (vorher und nachher, nicht freiwillig, Warnung: abgeschafft heißt nicht sofort gleich) und die Erklärung vom 26. August. Dann zeige ich an Artikel 1 in drei Schritten, wie man eine Quelle auswertet („Meine Worte“, „Begriff heute“, „Vorher“), und denke laut. Eine Prüffrage mit Stichproben bei vier bis sechs Lernenden sichert vor dem Üben, dass das Vorgehen verstanden ist; zwei Minuten Reserve dienen dem erneuten Erklären. Es wird nicht weitergegangen, wenn etwas nicht verstanden ist."));
+k.push(P("Die Erarbeitung folgt der Progression der Direkten Instruktion in Einzelarbeit: erste Anwendung mit Hilfe (Artikel 3), selbstständiges Üben (Artikel 6, 11 und 17), Kontrolle und Bilanz „Was hat sich verbessert?“. Ich habe mich nach dem Partnerpuzzle der Vorwoche bewusst für eine lehrergesteuerte Stunde mit Einzelarbeit entschieden, damit die Klasse nicht auf einen ständigen Wechsel der Sozialformen konditioniert wird. Eine Gruppenarbeit an einzelnen Artikeln habe ich verworfen, weil die Methode zuerst modelliert werden muss und die Lautstärke und der Zeitbedarf bei 24 Lernenden hoch wären; ein reiner Lehrervortrag schied wegen zu geringer Aktivierung aus. Das Arbeitsblatt ist übersichtlich in Artikel-Blöcke gegliedert (kein Tabellengitter, großzügige Schreiblinien). Zu jedem Artikel schreiben die Lernenden zuerst in eigenen Worten, was dort steht, kreuzen dann den heutigen Begriff an und ergänzen, was vorher anders war. Ein Wortspeicher erklärt jeden Begriff in einem Satz (Gleichheit, Meinungsfreiheit, Eigentumsrecht, Volkssouveränität), ein Vorher-Speicher nennt fünf Dinge über die Zeit vor 1789, weil die Zensur nicht behandelt wurde; die Lernenden wählen aus, statt zu raten. Das trägt der Heterogenität Rechnung (gelbes Beispiel bei Artikel 1, Hilfe bei Artikel 3, kurzer Artikel 17 für Unsichere, Nachbar erklären für Schnelle). Die Artikel 2, 4 und 10 werden in der Kontrolle mündlich ergänzt, damit Begriffe und Artikel mit der Parallelklasse vergleichbar bleiben."));
+k.push(P("Den Transfer in die Gegenwart gestalte ich als Aha-Moment ausschließlich auf den Folien: Ich erkläre kurz das Grundgesetz (Verfassung seit 1949, Grundrechte am Anfang). Die Lernenden sehen drei Sätze ohne Jahr („Das Gesetz muss für alle gleich sein.“, „Alle Staatsgewalt geht vom Volke aus.“, „Das Eigentum und das Erbrecht werden gewährleistet.“) und notieren allein, ob sie aus der Erklärung von 1789 oder aus dem Grundgesetz stammen. In der Auflösung zeigen die Paare (Artikel 6 und Grundgesetz Artikel 3, Artikel 3 und Artikel 20, Artikel 17 und Artikel 14), dass die Sätze kaum zu unterscheiden sind. Die Frage „Was bedeutet 1789 für unser Grundgesetz?“ führt zur Bedeutung der Erklärung (Vorbild). Ich habe hier keinen Suchauftrag („Findet Artikel im Grundgesetz“) gewählt, damit der Erkenntnisgewinn die Lernenden überrascht und nicht in der Aufgabe steckt. Wenn es sich anbietet, knüpfe ich an die Frage eines Schülers an, wofür man Geschichte braucht."));
+k.push(P("Gesichert wird in der Auswertungsphase: Die Lernenden schreiben den Merksatz ab und rahmen ihn rot (Daten, heutige Begriffe, Recht statt Vorrecht, Echo im Grundgesetz). Dann beantwortet jede Person auf einem Zettel (Exit-Ticket) die Ausgangsfrage der Karikatur: „Wir wollen Menschenrechte, damit wir endlich …“ und kreuzt den passenden Grundgesetz-Artikel an (Art. 3, 5, 14 oder 20). Das prüft Ziel 1 und 3 bei allen Lernenden und lässt mehrere gute Antworten zu (Gleichheit, Mitbestimmung, Meinungsfreiheit, Eigentum). Der Vergleich mit der Vermutung vom Anfang macht den Lernzuwachs sichtbar. Eine freiwillige Zeile „Das war mir unklar“ gibt mir eine Rückmeldung der Klasse. Es gibt keine Selbsteinschätzung der Lernenden; ich lese die Zettel und gebe Rückmeldung nach drei Stufen („Ich kann …“), die den Zielen entsprechen. Die Stunde ist unbenotet. Zum Schluss prüft die Klasse still, ob die Ziele erreicht sind, und ein Ausblick verweist auf Stunde 5 („Für wen galten diese Rechte 1789 wirklich?“)."));
+k.push(P("Das Zeitmanagement hat Vorrang. Die Stunde ist dicht geplant (4, 4, 10, 18 und 9 Minuten); Gelenke verbinden die Phasen inhaltlich, nicht nur organisatorisch. Als didaktische Reserve dienen zwei Minuten in der Informationsphase und die Sollbruchstellen: Plenum der Rückschau kürzen, nur Artikel 6 und 11 bearbeiten, im Aha nur die Folien 17 und 18 zeigen, das Vorlesen der Zettel streichen. Die Phase „Auswerten“ wird nie gestrichen, die Übungsphase endet neun Minuten vor Schluss. Mediale Gestaltung: Folien mit Schrift ab 27 Punkt und Phasenanzeige, selbst gezeichnete Karikatur und Icons, Arbeitsblatt mit Tricolore-Band und kleinen Bildern im Kopf (Wiedererkennungswert der Reihe), Exit-Ticket. Vereinfachungen benenne ich im Unterricht offen: Die Karikatur ist keine historische Quelle, die Quellen sind gekürzt und vereinfacht (Nummerierung wie im Original), Angaben zu den Vorrechten sind Stichworte."));
+const sec3 = { properties: { page: portrait, type: SectionType.NEXT_PAGE }, footers: { default: footer }, children: k };
+
+// ================= 2.3 Verlaufsplanung =================
+const v = [];
+v.push(H2("2.3 Verlaufsplanung"));
+const VW = [1700, 2150, 3500, 2900, 1700, 2050];
+const VH = ["Phase/ Zeit", "Inhalt", "Aufgaben/Impulse", "Schülerverhalten", "Organisationsform", "Medien/ Material"];
+const hd = row(VH.map((h, i) => cell(cp(h, { bold: true, size: 20 }), { w: VW[i], fill: "D9DEE8" })), { header: true });
+const R = (c) => row(c.map((x, i) => cell(Array.isArray(x) ? x : cpr(x, { size: 17 }), { w: VW[i] })));
+const L = (...lines) => lines.map((s) => cpr(s, { size: 17, after: 60 }));
+const rows = [
+  R(["v. d. Unterricht", "Tafel und Material vorbereiten", "Seitentafel: Stundenfrage, Ziele („Ich kann …“), Ablauf mit Stern. Arbeitsblätter umgedreht auf den Tischen, Folie 1 steht beim Betreten.", "", "", "Tafel, Arbeitsblätter, Exit-Tickets (zurückgehalten), Beamer"]),
+  R([L("**Einstieg**", "Min. 0 bis 4"), "Ankommen, Karikatur, Vermutung, Stundenfrage, Ziele, Ablauf", L("Ansage: „Stifte liegen. Ihr hört nur zu. Lest, was Klerus und Adel sagen. Schreibt ins Heft: Was will der Dritte Stand noch? Ich vermute …“", "Folien 2 bis 4: Stundenfrage und Begriff „Quelle“ (bei jeder Quelle und im Test), Lernziele als „Ich kann …“, Ablauf."), L("SuS lesen die Sprechblase, betrachten die zwei Bilder.", "SuS schreiben ein bis zwei Sätze Vermutung ins Heft.", "SuS hören zu."), "Einzelarbeit, still; lehrerzentriert", "Folien 1 bis 4, Seitentafel, Heft"]),
+  R([L("**Wiederholung** (Vorwissen)", "Min. 4 bis 8"), "Rückschau an den Bildern: Was geschah? Was bewirkte es?", L("Folie 5. Ansage: „Jetzt arbeitet ihr allein. Schreibt zu jedem Bild: Was geschah? Was bewirkte es?“ (2 Min.)", "Stichproben bei 3 bis 4 SuS.", "Folie 6: Kette Ballhausschwur, Bastille, Aufstände (1 Min.). „Vergleicht und verbessert mit Grün.“"), L("SuS erkennen Ballhaus (20. Juni) und Bastille (14. Juli), schreiben Stichworte.", "SuS nennen: gewaltlos / gewaltsam, König zieht Soldaten ab, Aufstände im Land.", "SuS verbessern mit Grün."), "Einzelarbeit, Plenum (Stichproben)", "Folien 5 und 6, Heft"]),
+  R([L("**Stundengelenk**", "Min. 8"), "Überleitung zum Verzicht", "„Klerus und Adel kamen euch entgegen, weil sie Angst hatten. Was genau haben sie aufgegeben? Hört zu.“", "SuS hören zu.", "lehrerzentriert", "Folie 7"]),
+  R([L("**Informationsphase**", "Min. 8 bis 18"), "Verzicht auf die Vorrechte; Erklärung vom 26. August; drei Schritte; Modell Artikel 1; Prüffrage", L("Portion 1 (Folie 7, 3 Min.): Nacht zum 4. August, Vorrechte (Steuerfreiheit, Abgaben, Ämter), nicht freiwillig. Warnung: Abgeschafft heißt nicht sofort gleich. Prüffrage: „Warum geben Klerus und Adel nach?“", "Portion 2 (Folie 8, 1 Min.): 26. August; „Meine Worte, Begriff heute, Vorher“.", "Modell (Folie 9, 3 Min.): „Ich mache es vor, ihr schaut zu.“ Lehrkraft denkt laut an Artikel 1.", "Prüffragen (Folie 10, 1 Min.): „Was machst du im Schritt 2?“ „Warum schreibst du nicht einfach ab?“ Reserve 2 Min."), L("SuS hören zu, nennen aus Angst vor den Aufständen.", "SuS beantworten die Prüffragen: Ich suche im Wortspeicher den Begriff, der zu meinen Worten passt; ich fasse in eigene Worte.", "SuS zeigen, ob das Vorgehen verstanden ist."), "lehrerzentriert, Stichproben (4 bis 6 SuS)", "Folien 7 bis 10, Wortspeicher"]),
+  R([L("**Stundengelenk**", "Min. 18"), "Überleitung zur Übung", "„Entgegenkommen ist Gnade von oben. Was ist der Gegenpol? Das lest ihr jetzt in der Quelle. Jetzt macht ihr es selbst, zuerst mit Hilfe.“ Arbeitsblatt umdrehen lassen.", "SuS drehen das Arbeitsblatt um.", "lehrerzentriert", "Arbeitsblatt"]),
+  R([L("**Erarbeitung I**", "Min. 18 bis 21"), "Artikel 3 mit Hilfe", L("Folie 11. Ansage: „Jetzt arbeitet ihr allein. Die Aufgabe steht rechts.“ Artikel 3: ① in meinen Worten (Hilfe), ② Begriff ist angekreuzt, ③ Vorher mit Hilfe.", "Folie 12: Lösung, „Vergleicht und verbessert mit Grün.“"), L("SuS schreiben „Die Herrschaft geht vom Volk aus, nicht vom König allein.“ und „Vorher bestimmte der König allein.“", "SuS verbessern mit Grün."), "Einzelarbeit, leise; Rolle des Lernbegleiters (Heft-Stichprobe)", "Folien 11, 12, Arbeitsblatt, Vorher-Speicher"]),
+  R([L("**Erarbeitung II**", "Min. 21 bis 27"), "Artikel 6, 11 und 17 selbstständig", L("Folie 13. Ansage: „Jetzt arbeitet ihr allein.“ Aufgaben: ① in eigenen Worten, ② Begriff ankreuzen, ③ Vorher (Vorher-Speicher).", "Lehrkraft geht durch die Reihen, Stichprobe bei 4 bis 6 SuS, kein Kommentar."), L("SuS schreiben in eigenen Worten, kreuzen Gleichheit, Meinungsfreiheit, Eigentumsrecht an, wählen Vorher aus dem Speicher.", "Unsichere beginnen mit Artikel 17; Schnelle erklären dem Nachbarn."), "Einzelarbeit, leise", "Folie 13, Arbeitsblatt, Wortspeicher, Vorher-Speicher"]),
+  R([L("**Sicherung I**", "Min. 27 bis 30"), "Kontrolle der Übersetzung; Bilanz", L("Folie 14 (1,5 Min.): Begriffe zu allen Artikeln, auch 2, 4, 10 mündlich (Artikel 2 nennt Widerstand, nicht Gewalt; Artikel 4 begrenzt die Freiheit). „Vergleicht und verbessert mit Grün.“", "Folie 15 (1,5 Min.): „Was hat sich verbessert?“ Vorher und Seitdem bei Artikel 3, 6, 11, 17."), L("SuS vergleichen mit Grün und nennen: gleiche Rechte statt Vorrechte, freie Rede, Eigentum geschützt, Macht beim Volk."), "Plenum kurz, Stichproben", "Folien 14, 15"]),
+  R([L("**Stundengelenk**", "Min. 30"), "Überleitung zum Transfer", "„Das war vor 237 Jahren. Was davon gilt noch heute? Das Grundgesetz kennt ihr alle.“", "SuS hören zu.", "lehrerzentriert", "Folie 16"]),
+  R([L("**Transfer (Aha)**", "Min. 30 bis 34"), "Grundgesetz; „1789 oder Grundgesetz?“; Echo; Bedeutung", L("Folie 16 (0,5 Min.): Das Grundgesetz ist die Verfassung der Bundesrepublik seit 1949, am Anfang stehen die Grundrechte.", "Folie 17 (1 Min.): „Überlegt allein: Aus welchem Jahr stammen die Sätze A, B, C? Notiert ins Heft. Raten ist erlaubt.“ Stichprobe bei 2 bis 3 SuS, nichts auflösen.", "Folie 18 (1,5 Min.): Auflösung als Paare, links 1789, rechts Grundgesetz.", "Folie 19 (1 Min.): „Was fällt euch auf? Was bedeutet 1789 für unser Grundgesetz?“"), L("SuS notieren A, B, C: 1789 oder Grundgesetz, begründen kurz, woran sie es erkannt haben.", "SuS erkennen die Ähnlichkeit: Die Sätze sind kaum zu unterscheiden.", "SuS formulieren: 1789 war ein Vorbild."), "Einzelarbeit (Denkphase), Lehrervortrag, Stichproben", "Folien 16 bis 19, Heft"]),
+  R([L("**Sicherung II**", "Min. 34 bis 36"), "Merksatz", "Folie 20. Ansage: „Jetzt schreibt ihr von der Folie ab: Merksatz 1. Rahmt ihn rot ein.“ Gelenk: „Jetzt beantwortet ihr die Frage vom Anfang.“", "SuS schreiben den Merksatz ab und rahmen ihn rot.", "Einzelarbeit", "Folie 20, Heft"]),
+  R([L("**Abschlussaufgabe**", "Min. 36 bis 41"), "Exit-Ticket mit der Ausgangsfrage", L("Folie 21. Ansage: „Schaut auf die Karikatur. Ihr bekommt einen Zettel. Beendet den Satz ‚Wir wollen Menschenrechte, damit wir endlich …‘ und kreuzt unten den passenden Grundgesetz-Artikel an. Den Zettel gebt ihr beim Hinausgehen ab.“ (4 Min.)", "Danach 2 bis 3 freiwillige Vorleser (1 Min.), Vergleich mit der Vermutung vom Anfang."), L("SuS schreiben zum Beispiel „… alle vor dem Gesetz gleich sind“ und kreuzen Art. 3 an; „… mitbestimmen dürfen“ (Art. 20); „… frei reden dürfen“ (Art. 5); „… unser Eigentum behalten“ (Art. 14).", "SuS lesen vor."), "Einzelarbeit, leise; kurzes Plenum", "Folie 21, Exit-Ticket"]),
+  R([L("**Zielprüfung, Ausblick**", "Min. 41 bis 43"), "Haben wir die Ziele erreicht? Brücke zu Stunde 5", "Folie 22 (1 Min., still): „Schau auf die Ziele.“ Folie 23: „Für wen galten diese Rechte 1789 wirklich? Das sehen wir in der nächsten Stunde.“", "SuS prüfen still die Ziele (keine Selbsteinschätzung).", "lehrerzentriert", "Folien 22, 23"]),
+  R([L("**Didaktische Reserve**", "Min. 43 bis 45"), "erneutes Erklären, Vorlesen weiterer Zettel", "Reserve für die Informationsphase (2 Min.). Sollbruchstellen: Plenum Rückschau kürzen, nur Artikel 6 und 11, im Aha nur Folien 17 und 18, Vorlesen streichen. „Auswerten“ bleibt immer.", "SuS erhalten bei Bedarf eine erneute Erklärung des Schritts 2.", "lehrerzentriert", "Folien 8 bis 10"]),
+  R([L("**Verabschiedung**", "Min. 45"), "", "„Vielen Dank für die gute Mitarbeit. Bis nächste Woche.“", "", "lehrerzentriert", ""]),
+];
+v.push(table(VW, [hd, ...rows]));
+v.push(p([t("Die Zeiten sind als Minuten ab Stundenbeginn angegeben (", { size: 18 }), ph("Uhrzeiten nach Stundenbeginn einsetzen", { size: 18 }), t("). Phasenmodell: AVIVA (Ankommen, Vorwissen aktivieren, Informieren, Verarbeiten, Auswerten).", { size: 18 })], { align: AlignmentType.LEFT, before: 100, line: 260 }));
+const sec4 = { properties: { page: landscape, type: SectionType.NEXT_PAGE }, footers: { default: footer }, children: v };
+
+// ================= 3 Anhang =================
+const a = [];
+a.push(H1("3. Anhang"));
+a.push(P("Anlage 1: Arbeitsblatt „Die Erklärung der Menschenrechte ins Heute übersetzen“ (einseitig, 26-mal); Anlage 2: Lösung zum Arbeitsblatt; Anlage 3: Exit-Ticket (6 Zettel pro A4); Anlage 4 bis 6: Folien 1 bis 23; Anlage 7: Erwartungshorizont; Anlage 8: Heftbild; Anlage 9: Abgleich mit den Planungsindikatoren des Hospitationsbogens.", { align: AlignmentType.LEFT }));
+a.push(p(t("Anlage 1: Arbeitsblatt", { bold: true }), { align: AlignmentType.LEFT, pb: true, after: 80 }));
+a.push(img("ab-1.png", 560, 792));
+a.push(p(t("Anlage 2: Lösung zum Arbeitsblatt", { bold: true }), { align: AlignmentType.LEFT, pb: true, after: 80 }));
+a.push(img("loesung-1.png", 560, 792));
+a.push(p(t("Anlage 3: Exit-Ticket (Ausgangsfrage)", { bold: true }), { align: AlignmentType.LEFT, pb: true, after: 80 }));
+a.push(img("exit-1.png", 560, 792));
+[1, 2, 3].forEach((n) => { a.push(p(t("Anlage " + (3 + n) + ": Folien " + ((n - 1) * 8 + 1) + " bis " + Math.min(n * 8, 23), { bold: true }), { align: AlignmentType.LEFT, pb: true, after: 80 })); a.push(img("folien_" + n + ".png", 600, 712)); });
+a.push(p(t("Anlage 7: Erwartungshorizont", { bold: true }), { align: AlignmentType.LEFT, pb: true, after: 100 }));
+const EW = [2600, 6100];
+const ER = [
+  ["Rückschau (Folie 5)", "Links: Eid im Ballhaus am 20. Juni, die Abgeordneten wollen nicht auseinandergehen (gewaltlos). Rechts: Sturm auf die Bastille am 14. Juli (Gewalt), der König zieht die Soldaten ab, Aufstände im Land. Zusammenhang: Das Entgegenkommen war nicht freiwillig, Klerus und Adel hatten Angst vor weiteren Aufständen."],
+  ["Prüffrage (Folie 7)", "Aus Angst vor den Aufständen der Bauern."],
+  ["Artikel 1 (Modell)", "Meine Worte: Alle Menschen haben von Geburt an dieselben Rechte. Begriff: Gleichheit. Vorher: Die Geburt entschied über Stand und Vorrechte."],
+  ["Artikel 3 (Hilfe)", "Die Herrschaft geht vom Volk aus, nicht vom König allein. Volkssouveränität. Vorher: Der König bestimmte allein."],
+  ["Artikel 6, 11, 17", "6: Für alle gilt dasselbe Gesetz, Ämter nach Fähigkeit; Gleichheit (vor dem Gesetz); vorher: Klerus und Adel zahlten keine Steuern, Ämter bekamen vor allem Adlige. 11: Jeder darf frei sagen, schreiben und drucken; Meinungsfreiheit; vorher: Zensur durch den König. 17: Was jemandem gehört, darf ihm niemand wegnehmen; Eigentumsrecht; vorher: Bauern gaben einen Teil der Ernte und Dienste an Adel und Kirche ab."],
+  ["Bilanz (Folie 15)", "Gleiche Rechte statt Vorrechte nach Geburt, Schutz statt Willkür des Königs, Macht beim Volk."],
+  ["1789 oder Grundgesetz? (Folie 17)", "A 1789 (Art. 6), B Grundgesetz (Art. 20 Abs. 2), C Grundgesetz (Art. 14 Abs. 1). Paare: Art. 6 und GG Art. 3 (1), Art. 3 und GG Art. 20 (2), Art. 17 und GG Art. 14 (1). Bedeutung: 1789 war ein Vorbild; Rechte aus der Erklärung stehen noch heute im Grundgesetz."],
+  ["Exit-Ticket (Folie 21)", "Beispiele: „… alle vor dem Gesetz gleich sind“ (Art. 3); „… mitbestimmen dürfen“ (Art. 20); „… frei reden und schreiben dürfen“ (Art. 5); „… unser Eigentum behalten“ (Art. 14). Mehrere gute Antworten; Stufe 1: nennt eine Verbesserung; Stufe 3: das Kreuz passt zum Satz."],
+];
+a.push(table(EW, [row([cell(cp("Aufgabe", { bold: true, size: 20 }), { w: EW[0], fill: "D9DEE8" }), cell(cp("Erwartung (Stichworte, andere richtige Formulierungen zählen)", { bold: true, size: 20 }), { w: EW[1], fill: "D9DEE8" })]), ...ER.map(([x, y]) => row([cell(cp(x, { size: 19, bold: true }), { w: EW[0] }), cell(cp(y, { size: 19 }), { w: EW[1] })]))]));
+a.push(p(t("Anlage 8: Heftbild am Ende der Stunde", { bold: true }), { align: AlignmentType.LEFT, before: 300, after: 80 }));
+a.push(P("Datum und Überschrift zur Stundenfrage; Vermutung („Was will der Dritte Stand noch? Ich vermute …“); Rückschau zu den zwei Bildern (mit Grün verbessert); Notiz zu Folie 17 (A, B, C: 1789 oder Grundgesetz); Merksatz 1 (abgeschrieben, rot umrahmt). Arbeitsblatt eingeklebt; Exit-Ticket abgegeben.", { align: AlignmentType.LEFT }));
+a.push(p(t("Anlage 9: Planungsindikatoren des Hospitationsbogens und ihre Verortung im Entwurf", { bold: true }), { align: AlignmentType.LEFT, pb: true, after: 100 }));
+const HW = [3000, 5700];
+const HR = [
+  ["Lernklima, Reflexion der Lernvoraussetzungen und Schlussfolgerungen", "Abschnitt 1 (Lerngruppe, Lernstand, Schlussfolgerungen); Klassenführung über feste Ansagen, Stichproben, Rückmeldekultur (Exit-Ticket, Verbessern mit Grün)"],
+  ["Fachliche Fundierung, Orientierung an curricularen Vorgaben und fachdidaktischen Konzepten", "Abschnitt 2.2 (Sachlage 4. und 26. August, Erklärung, Grundgesetz) und 2.1 (SchiC Modul 2, Kompetenzen, Prinzipien)"],
+  ["Didaktische Fundierung: Schwerpunktsetzung, Beitrag zur Kompetenzentwicklung der Sequenz, lerngruppenadäquate Ziele", "Abschnitt 2.1 (Sequenztabelle, Lernziele je Stunde), 2.2 (Stundenziel, Teilziele, Mindestziel, Methodenaufbau)"],
+  ["Strukturierung: begründete Phasierung, Phasenübergänge, Zeitmanagement", "Abschnitt 2.2 (AVIVA, Gelenke, Zeit), 2.3 (Zeiten, Stundengelenke, Reserve und Sollbruchstellen)"],
+  ["Initiierung von Lernprozessen: Relation Ziele, Inhalte, Methoden; Alternativen; Differenzierung; mediale Gestaltung", "Abschnitt 2.2 (verworfene Alternativen, Direkte Instruktion in Einzelarbeit, gestufte Hilfen, Wort- und Vorher-Speicher, Medien)"],
+  ["Anteil echter Lernzeit, Qualität der Arbeitsaufträge", "Abschnitt 2.3 (Einzelarbeit in jeder Phase, wörtliche Ansagen, Aufträge im Format Nummer, Titel, Schritte, Zeit, Arbeitsform)"],
+];
+a.push(table(HW, [row([cell(cp("Indikator (Planung)", { bold: true, size: 20 }), { w: HW[0], fill: "D9DEE8" }), cell(cp("Wo im Entwurf", { bold: true, size: 20 }), { w: HW[1], fill: "D9DEE8" })]), ...HR.map(([x, y]) => row([cell(cp(x, { size: 19 }), { w: HW[0] }), cell(cp(y, { size: 19 }), { w: HW[1] })]))]));
+const sec5 = { properties: { page: portrait, type: SectionType.NEXT_PAGE }, footers: { default: footer }, children: a };
 
 (async () => {
-  const doc = new Document({ styles: { default: { document: { run: { font: "Calibri", size: 21 } } } }, sections: [sec1, secA, secB, secC] });
+  const doc = new Document({ styles: { default: { document: { run: { font: FONT, size: 22 } } } }, sections: [
+    { properties: { page: portrait }, footers: { default: footer }, children: title },
+    { properties: { page: portrait, type: SectionType.NEXT_PAGE }, footers: { default: footer }, children: toc },
+    sec1, sec2, sec3, sec4, sec5] });
   fs.writeFileSync("../Unterrichtsentwurf_Menschenrechte_8D.docx", await Packer.toBuffer(doc));
   console.log("ok");
 })();
