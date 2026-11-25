@@ -1,0 +1,12 @@
+[
+  ["Der Rundgang durch die dunklen Räume dauert neunzig Minuten.", true, "Z. 2–3", "„Ihr werdet euch neunzig Minuten nur in dunklen Räumen bewegen.“", ""],
+  ["Der Guide, der die Gruppe führt, kann gut sehen.", false, "Z. 3–5", "„Ein blinder oder stark sehbehinderter Guide wird euch durch die Räume führen“", "Der Guide ist blind oder stark sehbehindert."],
+  ["Die Reporterin freut sich ohne jede Sorge auf den Tag im Dunkeln.", false, "Z. 19–21", "„Ich fragte mich etwas ängstlich, wie es wohl klappen würde“", "Sie ist vorher etwas ängstlich."],
+  ["Blinde Menschen finden den Ampelmast mithilfe eines Tackerns.", true, "Z. 51–54", "„gibt der Kasten eine Art Tackern von sich … und können so den Ampelmast finden“", ""],
+  ["Ein schnelles Piepen bedeutet, dass die Ampel gleich auf Rot springt.", false, "Z. 55–60", "„ein schnelles piep – piep – piep ertönt, das Freigabesignal, springt die Ampel auf Grün“", "Das Piepen ist das Freigabesignal: Die Ampel springt auf Grün."],
+  ["Die Blindenschrift liest man mit den Fingerkuppen.", true, "Z. 86–87", "„Man liest die Schrift mit den Fingerkuppen“", ""],
+  ["Die Braille-Schrift wurde vor etwa 50 Jahren in Deutschland erfunden.", false, "Z. 93–95", "„Sie wurde Anfang des 19. Jahrhunderts von dem Franzosen Louis Braille entwickelt.“", "Sie wurde Anfang des 19. Jahrhunderts von dem Franzosen Louis Braille entwickelt."],
+  ["Ein Zeichen der Braille-Schrift besteht aus höchstens sechs Punkten.", true, "Z. 97–98", "„Buchstaben und Zahlen bestehen aus höchstens sechs Punkten“", ""],
+  ["Der Guide findet, dass schon überall an die Bedürfnisse blinder Menschen gedacht wird.", false, "Z. 114–116", "„Ich wünschte, es wäre überall in der Öffentlichkeit selbstverständlich, auch an unsere Bedürfnisse zu denken“", "Er wünscht sich, dass mehr an blinde Menschen gedacht wird – das ist noch nicht überall so."],
+  ["Die Gruppe sieht ihren Guide erst am Ende der Führung.", true, "Z. 120–122", "„bekommen erst jetzt unseren Guide zu sehen“", ""]
+]
