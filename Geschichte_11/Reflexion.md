@@ -101,6 +101,12 @@
 - **Schaubild Peisistratos** (`Schaubild_Peisistratos`, PNG/PDF A4 quer, tintensparend, bewusst einfach): ① Entstehung der Herrschaft in drei Schritten (nach Solon – Bürgerkrieg – 546 Söldner/Akropolis), ② Sicherung (er gibt → Gruppen unterstützen ihn; Ämter an Anhänger, Gegner verbannt, Söldner im Hintergrund), ③ Themenfrage: Belege aus M1 für Fürsorge und Machtsicherung mit Zeilen, Merksatz „Vieles ist beides“, Hinweis zur Glaubwürdigkeit (200 Jahre später, Gewalt nicht erwähnt).
 - Rückmeldung der Lehrkraft: *(steht noch aus)*
 
+### Sparta – ein Staat von Kriegern? (Einzelstunde, geplant nach der Klausur)
+- Vorgabe der Lehrkraft (25.11.): kein „Bürgeramt Sparta“, allgemeine Fakten (Gesellschaft, Wirtschaft, Verfassung …); Input 5 Min. – Einzelarbeit 25 Min. – Auswertung 15 Min. Grundlage: Infoblätter Kl. 6 (Upload), für die 11 eigener Text.
+- Material: `Stunde_Sparta/` – Text_Sparta (40 Zeilen, Blocksatz, Zeilennummern), Fragen_Sparta (vorne 8 Fragen als Tabelle Frage | Zeilen | Antwort, hinten stummes Schaubild Gesellschaft + Verfassung quer), Hilfen_Lehrkraft_Sparta, Antworten_Sparta, Schaubild_Sparta_Loesung, 12 Folien ≥ 27 pt, Handreichung mit Tafelskizze.
+- Planungsentscheidungen: Einstieg „Das ist aber spartanisch!“; Begriffe Spartiaten/Periöken/Heloten vor dem Lesen (Warnung: Spartaner ≠ Spartiaten); Schaubild gemeinsam an der Tafel; Abschluss „Warum sind die Spartaner nur Soldaten?“ (Kern: Heloten in der Überzahl); Ausblick: Quellen fast nur von Nicht-Spartanern → Doppelstunde Athen–Sparta (Gruppenpuzzle, komplexer, quellengestützt – noch zu planen).
+- Rückmeldung der Lehrkraft: *(steht noch aus)*
+
 ## Hospitationsfeedback (gesammelt)
 
 *(noch keine Einträge)*
