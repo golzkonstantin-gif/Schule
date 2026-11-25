@@ -12,6 +12,7 @@
 - **Mo:** Einzelstunde Kleisthenes (Inhalt).
 - **Mi:** erst Test, dann Doppelstunde Methode: Quellenanalyse, gemeinsam einen Schreibplan aufstellen.
 - **25.11.:** Klausur, 90 Min. (Peisistratos – Kleisthenes – Perikles); Aufgaben: Einleitung mit Themenfrage und TATTEA, Position des Verfassers, Urteil.
+- **25.11.: Klausur geschrieben** (Thema Solon, Stand 17.11.). Weiteres Vorgehen offen (Ideen 25.11. im Chat).
 - Lehrbuch: Zu Kleisthenes steht im Buch wenig (Doppelseite „Die antike Welt“ S. 16/17, M6a/b nicht gescannt) – Sachinformationen werden ergänzt.
 
 ## Lernstand (aktueller Stand)
