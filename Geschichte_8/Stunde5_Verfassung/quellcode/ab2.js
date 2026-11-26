@@ -30,9 +30,9 @@ const gap = () => p(t("", { size: 2 }), { after: 10 });
 const d = [];
 d.push(table([W], [[cell(p(t("", { size: 2 })), W, { fill: ACC, b: NB })]]));
 d.push(p([t("GESCHICHTE 8C · FRANZÖSISCHE REVOLUTION   ", { size: 16, bold: true, color: MUTED }), t(loesung ? "Lösung (Lehrkraft)" : "Name: ______________________________", { size: 18, color: MUTED }), t("\tPunkte: ___ / 15", { size: 18, color: MUTED })], { before: 40, after: 10, tabs: [{ type: TabStopType.RIGHT, position: W }] }));
-d.push(p([t("Das Verfassungsschaubild von 1791", { font: "Cambria", size: 32, bold: true, color: ACC }), t("   AB 2 · Schaubild lesen und abhaken", { size: 19, color: MUTED })], { after: 50 }));
+d.push(p([t("Das Verfassungsschaubild von 1791", { font: "Cambria", size: 32, bold: true, color: ACC }), t("", { size: 2 })], { after: 50 }));
 d.push(p(IMG, { align: AlignmentType.CENTER, after: 50 }));
-d.push(p(t("Schaubild nach dem Schulbuch S. 115 (vereinfacht). Tipp: Lies in drei Schritten: Thema, Beschreibung, Beurteilung (S. 86). Kreuze an: ☐ = nicht gewählt, ☒ = gewählt.", { size: 17, italics: true, color: MUTED }), { after: 50 }));
+d.push(p(t("Schaubild nach dem Schulbuch S. 115 (vereinfacht).", { size: 17, italics: true, color: MUTED }), { after: 50 }));
 d.push(block("1", "Thema", 3, "Kreuze an.", [opt("a) Die Verfassung gilt für", ["Frankreich", "England", "Preußen"], 0), opt("b) Beschlossen hat sie", ["der König", "die Nationalversammlung", "die Generalstände"], 1), opt("c) Regierungsform", ["absolute Monarchie", "konstitutionelle Monarchie", "Republik"], 1)]), gap());
 d.push(block("2", "Wahlrecht", 3, "Wer durfte wählen, wer nicht? Sieh unten im Schaubild nach.", [
   multi("a) Das Wahlrecht hing ab von (3 Kreuze):", ["Geschlecht", "Alter", "Einkommen (Steuern)", "Religion"], [0, 1, 2]),
