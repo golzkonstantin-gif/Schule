@@ -158,7 +158,10 @@ const s = (x, o = {}) => t(x, Object.assign({ size: 21 }, o));
 const gapL = (n) => s("_".repeat(n), { color: gray });
 const bd = allBorders(solid("C9D3EA", 6));
 const NW = 650, KW = 1900, AW = PW - NW - KW;
-function blatt(sol) {
+const PLC = "5B4A8A";
+const WORT = [["die Finsternis (Z. 1)", "ciemność"], ["blind · sehbehindert (Z. 3–4)", "niewidomy · niedowidzący"], ["der Guide (Z. 4)", "przewodnik"], ["bewältigen (Z. 7)", "poradzić sobie z czymś"], ["ängstlich (Z. 19)", "trochę przestraszony"], ["der Blindenstock (Z. 32)", "biała laska"], ["die Ampel · der Ampelmast", "sygnalizacja świetlna · słup"], ["das Auffindesignal (Z. 52)", "sygnał do odnalezienia słupa"], ["das Freigabesignal (Z. 58)", "sygnał: można przejść"], ["die Fingerkuppe (Z. 86–87)", "opuszek palca"], ["ertasten (Z. 90)", "wyczuć dotykiem"], ["die Punktschrift (Z. 96)", "pismo punktowe (Braille)"], ["die Bedürfnisse (Z. 116)", "potrzeby"], ["die Öffentlichkeit (Z. 114–115)", "przestrzeń publiczna"]];
+function blatt(sol, PLm) {
+  const plp = (x) => p(t(x, { size: 18, italics: true, color: PLC }), { after: 60 });
   const item = (i, [a, ok, z, zit, r]) => {
     const star = i === 9;
     const kreuz = (lab, on) => s(`${sol && on ? "☒" : "☐"} ${lab}`, { size: 20, bold: sol && on, color: sol && on ? SOLC : "000000" });
@@ -180,16 +183,22 @@ function blatt(sol) {
   return [
     p([t("Sehen mit den Fingerkuppen – Aussagen prüfen", { font: "Cambria", bold: true, size: 30, color: NAVY }), t(sol ? "      LÖSUNG" : "      Name: ____________________", { size: 18, color: sol ? SOLC : MUTED, bold: sol })], { after: 30 }),
     p(s("Reportage von Hilda Bermech, LB S. 183–184", { size: 19, italics: true, color: MUTED }), { after: 60 }),
-    p([s("1  ", { bold: true, color: GRN }), s("Prüfe jede Aussage allein: Kreuze an.   "), s("2  ", { bold: true, color: GRN }), s("Belege mit Zeile und Zitat.   "), s("3  ", { bold: true, color: GRN }), s("Ist die Aussage falsch? Schreibe auf, was richtig ist.")], { after: 80 }),
+    p([s("1  ", { bold: true, color: GRN }), s("Prüfe jede Aussage allein: Kreuze an.   "), s("2  ", { bold: true, color: GRN }), s("Belege mit Zeile und Zitat.   "), s("3  ", { bold: true, color: GRN }), s("Ist die Aussage falsch? Schreibe auf, was richtig ist.")], { after: PLm ? 20 : 80 }),
+    ...(PLm ? [plp("PL: 1 Sprawdź każde zdanie sama: zaznacz richtig (prawda) albo falsch (fałsz). 2 Udowodnij: numer linijki (Z.) i dokładny cytat z tekstu w cudzysłowie „…“. 3 Jeśli zdanie jest fałszywe, napisz po niemiecku, jak jest naprawdę (Richtig ist: …). Zdanie 10 z gwiazdką (*) – jeśli skończysz wcześniej.")] : []),
     box([p([s("So belegst du: ", { bold: true, color: C.hv, size: 19 }), s("Zeile (Z.)", { bold: true, size: 19 }), s(" = am Rand gezählt (5, 10, 15 …) · ", { size: 19 }), s("Beleg", { bold: true, size: 19 }), s(" = Z. + Zitat in Anführungszeichen „…“", { size: 19 })], { after: 30 }),
          p([s("Beispiel: ", { bold: true, color: GRN, size: 19 }), s("„Die Ausstellung ist hell beleuchtet.“  ", { size: 19, italics: true }), s("☒ falsch", { size: 19, bold: true }), s("  ·  Beleg: Z. 1, „Herzlich willkommen in der Finsternis!“  ·  Richtig ist: Die Räume sind völlig dunkel.", { size: 19 })], { after: 0 })]),
     p(t(""), { after: 60 }),
     table([NW, AW, KW], AUS.flatMap((x, i) => item(i, x))),
     p([s("Zeit: ", { bold: true, size: 18 }), s("12 Minuten · allein · Nr. 10 mit *      ", { size: 18 }), s("Fertig? Stift hinlegen.", { size: 18, italics: true, color: MUTED })], { before: 80, after: 0 }),
+    ...(PLm ? [
+      p([t("Wörter im Text", { font: "Cambria", bold: true, size: 22, color: NAVY }), t("   trudne słowa (Z. = linijka)", { size: 18, italics: true, color: PLC })], { before: 160, after: 40 }),
+      table([2600, PW / 2 - 2600, 2600, PW / 2 - 2600], Array.from({ length: Math.ceil(WORT.length / 2) }, (_, k) => row([WORT[2 * k], WORT[2 * k + 1]].flatMap((w) => w ? [cell(p(s(w[0], { bold: true, size: 18, color: NAVY }), { after: 0 }), { w: 2600, borders: bd, m: 20, ml: 60 }), cell(p(t(w[1], { size: 18, color: "333333" }), { after: 0 }), { w: PW / 2 - 2600, borders: bd, m: 20, ml: 60 })] : [cell(p(t("")), { w: 2600, borders: bd }), cell(p(t("")), { w: PW / 2 - 2600, borders: bd })])))),
+    ] : []),
   ];
 }
 const props = { page: { size: { width: 11906, height: 16838 }, margin: { top: 420, bottom: 320, left: 550, right: 550 } } };
 const styles = { default: { document: { run: { font: "Calibri", size: 21 } } } };
-const save = (name, sol) => Packer.toBuffer(new Document({ styles, sections: [{ properties: props, children: blatt(sol) }] })).then((buf) => fs.writeFileSync(__dirname + "/../" + name + ".docx", buf));
+const save = (name, sol, PLm) => Packer.toBuffer(new Document({ styles, sections: [{ properties: props, children: blatt(sol, PLm) }] })).then((buf) => fs.writeFileSync(__dirname + "/../" + name + ".docx", buf));
 save("AB_Reportage_Aussagen_pruefen", false);
 save("AB_Reportage_Aussagen_pruefen_Loesung", true);
+save("AB_Reportage_Aussagen_pruefen_Polnisch", false, true);
