@@ -164,11 +164,13 @@ function blatt(sol, PLm) {
   const plp = (x) => p(t(x, { size: 18, italics: true, color: PLC }), { after: 60 });
   const item = (i, [a, ok, z, zit, r]) => {
     const star = i === 9;
+    const sol0 = sol; sol = sol0 || (PLm && i === 0); // S-PL: Nr. 1 als gelöstes Beispiel
+    try {
     const kreuz = (lab, on) => s(`${sol && on ? "☒" : "☐"} ${lab}`, { size: 20, bold: sol && on, color: sol && on ? SOLC : "000000" });
     return [
       row([
         cell(p(s((star ? "* " : "") + (i + 1), { bold: true, color: GRN, size: 24 }), { after: 0, align: AlignmentType.CENTER }), { w: NW, borders: bd, valign: VerticalAlign.CENTER }),
-        cell(p(s("„" + a + "“", { bold: true }), { after: 0 }), { w: AW, borders: bd, m: 60, ml: 100 }),
+        cell(p([s("„" + a + "“", { bold: true }), ...(PLm && i === 0 ? [t("   ← Beispiel / przykład", { size: 17, italics: true, color: PLC, bold: true })] : [])], { after: 0 }), { w: AW, borders: bd, m: 60, ml: 100 }),
         cell(p([kreuz("richtig", ok), s("   "), kreuz("falsch", !ok)], { after: 0, align: AlignmentType.CENTER }), { w: KW, borders: bd, valign: VerticalAlign.CENTER }),
       ]),
       row([cell(sol ? [
@@ -179,6 +181,7 @@ function blatt(sol, PLm) {
         p([s("Richtig ist: ", { bold: true, size: 19, color: MUTED }), gapL(86)], { after: 0, line: 380 }),
       ], { w: PW, borders: bd, m: 50, ml: 130, span: 3 })]),
     ];
+    } finally { sol = sol0; }
   };
   return [
     p([t("Sehen mit den Fingerkuppen – Aussagen prüfen", { font: "Cambria", bold: true, size: 30, color: NAVY }), t(sol ? "      LÖSUNG" : "      Name: ____________________", { size: 18, color: sol ? SOLC : MUTED, bold: sol })], { after: 30 }),
