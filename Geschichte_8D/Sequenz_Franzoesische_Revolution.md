@@ -27,7 +27,7 @@ Status: geplant · gelaufen · Rückmeldung (R) im Reflexionslog.
 | 2 | 11.11. | 06.11. | Dritter Stand handelt: Nationalversammlung, Ballhausschwur; Karikatur analysieren (8D: Kurzstunde, ohne Karikatur) | Epochenjahr 1789; **Karikatur** (8C) | gelaufen („mäßig“, zu viele Methoden) | geplant als Kurzstunde, 25 Min. (`Geschichte_8D/Stunde2_Nationalversammlung/`) |
 | 3 | 18.11. | 20.11. (nach Stunde 4) | Wege des Widerstands: Ballhausschwur und Bastille (Partnerpuzzle, Urteil) | Zusammenhänge rekonstruieren; **Urteil mit Maßstab** | Menschenrechte von der Kollegin behandelt (Details offen) | geplant (`Geschichte_8D/Stunde3_Widerstand/`) |
 | 4 | 25.11. | 13.11. (gehalten, vor Stunde 3) | Ende der Vorrechte (4. August) und Menschenrechte (26. August; Artikel 2 Widerstand); Hospitation; Schwerpunkt Quelle auswerten (Kompetenz) | Menschenrechtserklärung | gehalten (8D, 25.11., hospitiert, sehr gut angekommen; Exit-Ticket nicht geschafft); 8C hat die Menschenrechte am 13.11. gehabt (Epochenjahr 1789 wiederholt, Arbeitsblatt zu Artikel 1, 2, 3, 4, 6, 10, 11) | Exit-Ticket-Frage (Ausgangsfrage der Karikatur) in Stunde 5 kurz aufgreifen? |
-| 5 | 02.12. | 27.11. | Verfassung 1791: konstitutionelle Monarchie | **Verfassungsschaubild** | offen | offen |
+| 5 | 02.12. | 27.11. | Verfassung 1791: konstitutionelle Monarchie; Einstieg: Übersicht Vorgeschichte (Schnipsel ordnen, 8 Min., `Geschichte_8D/Uebersicht_Vorgeschichte/`) | **Verfassungsschaubild** | offen | Übersicht-Baustein fertig, Stunde 5 noch zu planen |
 | 6 | 09.12. | 04.12. | **Test 1** (Stunden 1 bis 5) | | offen | offen |
 | 7 | 16.12. | 11.12. | Vom König zur Republik: Flucht, Krieg, Hinrichtung | Zusammenhänge rekonstruieren | offen | offen |
 | – | | | Weihnachtsferien | | | |
