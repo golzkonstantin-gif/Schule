@@ -92,9 +92,13 @@ function dots(s, upto, from) { for (let i = 1; i <= 14; i++) { const x = 0.6 + (
   box(s, 0.6, 1.7, 12.15, 4.2, LIGHT2); txt(s, "Ich hätte (nicht) zugestimmt, weil …", { x: 0.9, y: 1.95, w: 11.6, h: 1.1, fontSize: 34, fontFace: HEAD, bold: true });
   txt(s, [{ text: "Nenne eine Entscheidung.", options: { breakLine: true } }, { text: "Nenne einen Beleg aus dem Schaubild.", options: { breakLine: true } }, { text: "Wurden alle gleich behandelt?", options: {} }], { x: 0.9, y: 3.4, w: 11.6, h: 2.3, fontSize: 27 });
   bar(s, [{ text: "Zeit: ", options: { bold: true } }, { text: "4 Min. · mündlich · Blitzlicht", options: {} }]); }
-// 15 Ziele prüfen + Ausblick
-{ const s = slide("Auswerten · Ziele und Ausblick", "Haben wir die Ziele erreicht?", 4, "Ansage: „Stifte liegen. Ihr hört nur zu.“ Ziele der Seitentafel durchgehen, Stern erwähnen. Ausblick: Test 1 am 4.12. Lernübersicht kommt. Danach: Der König flieht (Juni 1791), die Republik. Brücke zu Stunde 7.");
-  box(s, 0.6, 1.7, 12.15, 2.4, LIGHT2); txt(s, "Ich kann ordnen · erklären · beurteilen", { x: 0.9, y: 1.8, w: 11.6, h: 2.2, fontSize: 34, fontFace: HEAD, bold: true, valign: "middle" });
-  box(s, 0.6, 4.3, 12.15, 1.7, ACCL, { line: ACC }); txt(s, [{ text: "Nächste Stunde: ", options: { bold: true, color: ACC } }, { text: "Test 1 am 4.12.", options: {} }], { x: 0.9, y: 4.4, w: 11.6, h: 1.5, fontSize: 30, valign: "middle" });
-  bar(s, [{ text: "Danach: ", options: { bold: true } }, { text: "Der König flieht, die Republik kommt.", options: {} }]); }
+// 15 Ziele prüfen
+{ const s = slide("Auswerten · Ziele", "Haben wir die Ziele erreicht?", 4, "Ansage: „Stifte liegen. Ihr hört nur zu.“ Ziele der Seitentafel durchgehen (30 Sekunden), Stern erwähnen. Karikatur vom Anfang: Wer hat seine Vermutung geändert?");
+  box(s, 0.6, 1.7, 12.15, 3.2, LIGHT2); txt(s, "Ich kann ordnen · erklären · beurteilen", { x: 0.9, y: 1.8, w: 11.6, h: 3.0, fontSize: 34, fontFace: HEAD, bold: true, valign: "middle" });
+  bar(s, [{ text: "Danach: ", options: { bold: true } }, { text: "Ankündigung des Tests.", options: {} }]); }
+// 16 Test
+{ const s = slide("Ausblick · Test", "Test nächste Woche: Freitag, 4.12.", 4, "Ansage: „Stifte liegen. Ihr hört nur zu.“ (2 Minuten) Der Test dauert 30 Minuten und besteht aus Zeitleiste ordnen (Daten sind vorgegeben), Wahr oder falsch mit Begründung, einem Artikel der Menschenrechte, dem Merksatz zur Verfassung und einem Urteil zu Bastille oder Ballhausschwur. Absolutismus und Stände sind nicht dabei. Lernhilfen: die Übersicht (Zeitleiste) und das Heft mit dem Merksatz; eine Lernübersicht kommt in der nächsten Woche. Hinweis für die Lehrkraft: AB 2 wird bei freiwilliger Abgabe eingesammelt; die Schüler haben dann das Schaubild nicht mehr. Deshalb kommt in den Test eine Aufgabe zum Merksatz statt zum Schaubild. Alternativ AB 2 kopieren oder mit der Rückmeldung zurückgeben.");
+  box(s, 0.6, 1.55, 12.15, 4.5, LIGHT2);
+  ["Vorgeschichte der Revolution", "Ballhausschwur und Bastille", "Verzicht auf die Vorrechte (4. August)", "Erklärung der Menschenrechte (26. August)", "Verfassung von 1791 (Merksatz)"].forEach((st, i) => { circ(s, i + 1, 0.85, 1.75 + i * 0.85, 0.5, i === 4 ? RED : NAVY); txt(s, st, { x: 1.65, y: 1.68 + i * 0.85, w: 10.8, h: 0.75, fontSize: 27, bold: true, valign: "middle" }); });
+  bar(s, [{ text: "Test: ", options: { bold: true } }, { text: "30 Minuten · Lernhilfen: Übersicht und Heft.", options: {} }]); }
 pres.writeFile({ fileName: "../Praesentation_Stunde5_Verfassung_8C.pptx" }).then(() => console.log("ok"));
