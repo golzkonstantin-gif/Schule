@@ -113,3 +113,9 @@
 - Anpassungen: 12 statt 24 Personen (6 Paare, Texte 7-mal drucken, Tabelle 14 Blatt), Datum, Folie 20 (Ausblick: Die Menschenrechte geben dem Widerstand ein Recht, Wie wird es gesichert? Verfassung 1791), Hinweis zur Abschlussantwort (Bezug auf Artikel 2 und 3 möglich). Sonst unverändert.
 - Reihenfolge danach: 27.11. Verfassung 1791, 04.12. Test 1.
 - Zu beobachten: Austausch und Lautstärke im Paar-Puzzle, Aha-Moment, Urteile (wirksam gegen verantwortbar), Zahl der Abgaben; Wissen aus den Menschenrechten in der Abschlussantwort.
+
+### Planung 8C Stunde 5 (Fr 27.11., 45 Min., 12 Schülerinnen und Schüler): Die Verfassung von 1791
+- Material: `Geschichte_8/Stunde5_Verfassung/` (Folien 15, Tafelskript, Arbeitsblatt Schaubild mit Q1 und Wortspeicher, Lösung, Übersicht-Blatt, Schnipsel und Lösung, selbst gezeichnetes vereinfachtes Schaubild nach Schulbuch S. 115 in `material/`).
+- Wunsch der Lehrkraft (26.11.): Teil 1 ist das Sortieren der Ereignisse (Übersicht Vorgeschichte, Schnipsel ordnen und aufkleben, gemeinsame Kontrolle). Teil 2: Schaubild erklären, dann allein analysieren und freiwillig abgeben, **Auftrag mit 15 Punkten** (fünf Aufgaben je 3 Punkte, Rückmeldung nach drei Stufen).
+- Ablauf: Ankommen 2 · Vorwissen (Übersicht) 10 · Informieren (Schaubild: Gesamtbild, Wahlrecht, Macht, Modell) 9 · Verarbeiten (Auftrag allein 12, Kontrolle 4) 16 · Auswerten (mündliche Abschlussfrage „Hättest du 1791 zugestimmt?“) 8.
+- Zu beobachten: Zeit zum Ordnen und für den Auftrag, Lesen des Schaubilds (Wahlrecht, Gewaltenteilung), Zahl der Abgaben und Stufen, Urteile (Aufgabe 5), Gelingen des Übergangs Bastille zu 4. August. Rückmeldung für die 8D-Planung (2.12.) nutzen.

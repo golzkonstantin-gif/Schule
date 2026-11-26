@@ -1,0 +1,75 @@
+const fs = require("fs");
+const { Document, Packer, Paragraph, TextRun, Table, TableRow, TableCell, WidthType, BorderStyle, ShadingType, AlignmentType, VerticalAlign, Footer, PageNumber } = require("docx");
+const E = require("./daten.js");
+const NAVY = "1E2761", MUTED = "5B6B8C", LIGHT = "F4F7FD", RED = "D9534F", GREEN = "1B5E3A", W = 10206;
+const t = (x, o = {}) => new TextRun({ text: x, font: o.font || "Calibri", size: o.size || 21, bold: o.bold, italics: o.italics, color: o.color || "000000" });
+const p = (r, o = {}) => new Paragraph({ children: Array.isArray(r) ? r : [r], spacing: { before: o.before ?? 0, after: o.after ?? 80 }, keepNext: o.keepNext, indent: o.indent });
+const sd = (c) => ({ style: BorderStyle.SINGLE, size: 6, color: c });
+const bx = (c) => ({ top: sd(c), bottom: sd(c), left: sd(c), right: sd(c) });
+const cell = (ch, w, fill) => new TableCell({ children: Array.isArray(ch) ? ch : [ch], width: { size: w, type: WidthType.DXA }, shading: fill ? { fill, type: ShadingType.CLEAR, color: "auto" } : undefined, borders: bx("B8C2DB"), margins: { top: 60, bottom: 60, left: 100, right: 100 }, verticalAlign: VerticalAlign.TOP });
+const table = (ws, rows) => new Table({ width: { size: ws.reduce((a, b) => a + b, 0), type: WidthType.DXA }, columnWidths: ws, rows: rows.map((r) => new TableRow({ children: r.map((x, i) => { const [c, f] = Array.isArray(x) ? x : [x]; return cell(typeof c === "string" ? p(t(c, { size: 20, bold: f === "h" }), { after: 0 }) : c, ws[i], f === "h" ? "EAF0FA" : f); }), cantSplit: true })) });
+const h1 = (s) => p(t(s, { font: "Cambria", size: 36, bold: true, color: NAVY }), { after: 60 });
+const h3 = (s) => p(t(s, { font: "Cambria", size: 24, bold: true, color: NAVY }), { before: 160, after: 60, keepNext: true });
+const kv = (k, v) => p([t(k + " ", { bold: true, color: NAVY }), t(v)], { after: 50 });
+const say = (s) => p([t("Ansage: ", { bold: true, color: RED, size: 20 }), t("„" + s + "“", { italics: true })], { after: 50 });
+const dient = (s) => p([t("Dient Ziel: ", { bold: true, color: GREEN, size: 19 }), t(s, { color: GREEN, size: 19 })], { after: 50 });
+const li = (s) => p(t("•  " + s, { size: 21 }), { indent: { left: 280 }, after: 40 });
+const footer = new Footer({ children: [new Paragraph({ alignment: AlignmentType.RIGHT, children: [new TextRun({ font: "Calibri", size: 16, color: MUTED, children: ["Tafelskript Stunde 5 Verfassung · 8C · Seite ", PageNumber.CURRENT] })] })] });
+const d = [];
+const phase = (nr, titel, min, tag) => p([t(nr + "  ", { font: "Cambria", size: 28, bold: true, color: RED }), t(titel, { font: "Cambria", size: 28, bold: true, color: NAVY }), t("   " + min + " Min.   " + tag, { size: 18, color: MUTED })], { before: 140, after: 60, keepNext: true });
+const warum = (s) => p([t("Warum: ", { bold: true, size: 19, color: MUTED }), t(s, { size: 19, color: MUTED })], { after: 60 });
+d.push(p(t("GESCHICHTE · KLASSE 8C · FRANZÖSISCHE REVOLUTION · STUNDE 5 (Fr 27.11.)", { size: 18, bold: true, color: MUTED }), { after: 20 }), h1("Die Verfassung von 1791: Schaubild analysieren"));
+d.push(p(t("Teil 1: Übersicht der Vorgeschichte ordnen (Schnipsel). Teil 2: Schaubild erklären, dann allein analysieren (15 Punkte, Abgabe freiwillig). Die Klasse kennt: Generalstände, Nationalversammlung, Ballhausschwur, Bastille, Menschenrechte (13.11.), Widerstand (20.11.).", { size: 21 }), { after: 100 }));
+d.push(table([2600, 7606], [
+  [["Ziel (Ich kann …)", "h"], "1 … die Ereignisse bis zur Menschenrechtserklärung ordnen und mit „deshalb“ verbinden.  2 … am Schaubild erklären, wer 1791 wählen durfte und wer welche Macht hatte.  3* … beurteilen, wer die größere Macht hatte."],
+  [["Prüfaufgabe: Woran erkenne ich es?", "h"], "Ziel 1: Reihenfolge am Blatt und zwei Sätze mit „weil“ und „deshalb“. Ziel 2 und 3: Arbeitsblatt Seite 2 (Aufgabe 1 bis 5, 15 Punkte) und mündliche Abschlussfrage „Hättest du 1791 zugestimmt?“."],
+  [["Beitrag zur Reihe", "h"], "Die Verfassung beantwortet „Für wen galten die Rechte?“; das Schaubild ist Methodenbaustein (Modell, dann selbstständig) und Stoff für Test 1 am 4.12."],
+  [["Mindestziel", "h"], "Ziel 1 und 2. Ziel 3 mit Stern: bei Zeitnot mündlich. „Auswerten“ bleibt immer."],
+  [["Vorgehen", "h"], "Direktes Vorgehen für das Schaubild, weil das Vorwissen zu Verfassungsschaubildern gering ist: zwei Portionen, Modell, Prüffrage, dann allein. Rückmeldung nach drei Stufen („Ich kann …“) und Punkten, nur bei freiwilliger Abgabe."],
+]));
+d.push(h3("Bezug zu den Rückmeldungen"));
+d.push(li("8C Stunde 3 (Widerstand) lief gut. Rückmeldung der 8D zur Menschenrechtsstunde (25.11.): Der Übergang Bastille zu 4. August soll als Ursache und Folge deutlich werden: deshalb die Übersicht mit „deshalb“-Pfeilen."));
+d.push(li("Höchstens drei Methoden: Ordnen, Schaubild erklären, Auftrag allein. Auswerten mündlich."));
+d.push(h3("Zeitplan (45 Minuten, AVIVA)"));
+d.push(table([900, 2300, 4900, 2106], [[["Min.", "h"], ["Phase", "h"], ["Inhalt", "h"], ["Arbeitsform", "h"]], ["2", "Ankommen", "Ziele und Ablauf (Folie 1 und 2, Seitentafel)", "hört zu"], ["10", "Vorwissen", "Schnipsel ordnen (3), Kontrolle (2,5), kleben (1), „deshalb“-Pfeile (2), zwei Sätze mündlich (1,5)", "zu zweit, Plenum"], ["9", "Informieren", "Schaubild: Gesamtbild (1), Portion 1 Wahlrecht (3), Portion 2 Macht (3), Modell Aufgabe 1 (2)", "hört zu, Stichproben"], ["16", "Verarbeiten", "Aufgaben 1 bis 5 allein (12), Kontrolle (4)", "allein, Plenum"], ["8", "Auswerten", "Abschlussfrage mündlich (5), Ziele prüfen (1), Ausblick Test (2)", "Blitzlicht"]]));
+d.push(p(t("Sollbruchstellen: Pfeile nur 11 zu 13; Aufgabe 4 (rechnen) zur Zusatzaufgabe; Kontrolle nur Aufgabe 2 und 3; Abschlussfrage nur 3 Personen. Die Übungsphase endet um Minute 37.", { size: 20, color: MUTED }), { before: 60 }));
+d.push(h3("Ablauf mit Ansagen"));
+d.push(phase("A", "Ankommen", 2, "AVIVA: Ankommen"), warum("Die Klasse weiß, was sie erwartet (Ziele, Ablauf); Stern für das Urteil."));
+d.push(say("Stifte liegen. Ihr hört nur zu."), dient("alle Ziele (Transparenz)."), li("Folie 1 (Ziele) und Folie 2 (Ablauf); die Ziele stehen auch an der Seitentafel. Blatt und Schnipsel liegen umgedreht auf den Tischen (Schnipsel in Umschlägen)."));
+d.push(phase("V", "Vorwissen: Übersicht ordnen", 10, "AVIVA: Vorwissen aktivieren"), warum("Wiederholung der Stunden 1 bis 4 als eigene Übersicht (Test 1); Ursache und Folge werden sichtbar, besonders Bastille zu 4. August."));
+d.push(say("Jetzt arbeitet ihr zu zweit. Flüsterstufe. Nur dein Partner hört dich. Die Aufgabe steht an der Tafel."), dient("Ziel 1."), li("Folie 3 (3 Minuten): 14 Schnipsel legen, noch nicht kleben. Durch die Reihen gehen, nichts verraten. Warnung vor dem Fehler: 1787 nach 1778; 17. vor 20. Juni."), li("Folien 4 bis 6 (2,5 Minuten): Kontrolle, Stichproben 2 bis 3 pro Folie. „Vergleicht und verbessert mit Grün.“ Dann kleben (1 Minute)."), li("Folie 7 (2 Minuten): drei „deshalb“-Pfeile gemeinsam (3 zu 5, 8 zu 9, 11 zu 13). Danach (1,5 Minuten) zwei Sätze mündlich: „Klerus und Adel gaben nach, weil …“ Stichprobe 2 Personen."), li("Falls der 4. August in der 8C nicht behandelt wurde: kurz sagen (Nacht zum 4. August: Vorrechte abgeschafft, aus Angst vor den Aufständen)."));
+d.push(phase("I", "Informieren: Schaubild", 9, "AVIVA: Informieren"), warum("Direktes Vorgehen, weil das Vorwissen zu Verfassungsschaubildern gering ist. Zwei Portionen, ein Modell, eine Prüffrage."));
+d.push(say("Stifte liegen. Ihr hört nur zu."), dient("Ziel 2."), li("Folie 8 (1 Minute): Gelenk: „Die Menschenrechte stehen. Jetzt schreibt die Nationalversammlung auf, wer im Staat entscheiden darf: die Verfassung.“ Ganzes Schaubild zeigen, drei Schritte (Thema, Beschreibung, Beurteilung, Schulbuch S. 86)."), li("Portion 1, Folie 9 (3 Minuten): von unten lesen: Aktivbürger (ca. 4,3 Mio.: Männer über 25, Steuern) wählen Wahlmänner, Beamte, Gerichte; Wahlmänner (etwa 50 000) wählen die Nationalversammlung; Passivbürger (ca. 22 Mio.) haben Rechte, aber kein Wahlrecht. Warnung vor dem Fehler: Passivbürger heißt nicht rechtlos. Prüffrage (2 Personen): „Wer darf wählen, wer nicht?“"), li("Portion 2, Folie 10 (3 Minuten): drei Gewalten; der König ernennt die Regierung und hat ein aufschiebendes Einspruchsrecht; die Nationalversammlung kontrolliert ihn; konstitutionelle Monarchie. Warnung vor dem Fehler: Einspruch heißt nur aufschieben. Prüffrage (2 Personen): „Welcher Pfeil zeigt die Kontrolle des Königs?“"), li("Modell, Folie 11 (2 Minuten): Sie denken laut an Aufgabe 1 (Frankreich, Nationalversammlung, September 1791, konstitutionelle Monarchie). „Jetzt macht ihr es selbst.“"));
+d.push(phase("V", "Verarbeiten: Auftrag allein", 16, "AVIVA: Verarbeiten"), warum("Progression der direkten Instruktion: Modell (Aufgabe 1), dann selbstständig (Aufgabe 2 bis 5). Satzanfänge als Hilfe, Hilfekarte (Fragen S. 86) für Unsichere."));
+d.push(say("Stifte liegen. Ihr hört nur zu. … Jetzt arbeitet ihr allein. Die Aufgabe steht auf dem Blatt, Seite 2."), dient("Ziel 2 und 3."), li("Folie 12: Rückmeldung nach drei Stufen (Stufe 1 nennt die Fakten, Stufe 2 erklärt Zusammenhänge, Stufe 3 begründet das Urteil mit Beleg und Maßstab) und Punkte; Abgabe freiwillig. 12 Minuten. Durch die Reihen gehen (Heft-Stichprobe 4 bis 6 Personen), nicht kommentieren."), li("Differenzierung: Wer unsicher ist, beginnt mit Aufgabe 2 und nutzt die Satzanfänge; die Hilfekarte (Fragen von S. 86) liegt auf dem Pult, nicht für alle. Wer früh fertig ist, überarbeitet Aufgabe 5."), li("Folie 13 (4 Minuten): „Vergleicht und verbessert mit Grün.“ Stichprobe bei 3 Personen zum Urteil (Aufgabe 5)."));
+d.push(phase("A", "Auswerten", 8, "AVIVA: Auswerten"), warum("Die Abschlussfrage verbindet Schaubild und Ausgangsfrage („Für wen galten die Rechte?“); mehrere gute Antworten, geprüft wird die Begründung."));
+d.push(say("Stifte liegen. Jetzt antwortet ihr mündlich."), dient("Ziel 3, Rückgriff auf alle Ziele."), li("Folie 14 (5 Minuten): „Ich hätte (nicht) zugestimmt, weil …“ Blitzlicht bei 4 bis 6 Personen unterschiedlichen Niveaus. Erwartung (Auswahl): zugestimmt, weil der König nicht mehr allein regiert; nicht zugestimmt, weil die meisten nicht wählen dürfen (Frauen, Arme); Haltung: beschreiben, abwägen."), li("Folie 15: Ziele prüfen (30 Sekunden), Ausblick: Test 1 am 4.12.; Lernübersicht kommt (Absolutismus und Stände liegen schon vor)."));
+d.push(h3("Erwartung zum Arbeitsblatt (Seite 2)"));
+d.push(table([1500, 8706], [[["Aufgabe", "h"], ["Erwartung (3 Punkte je Aufgabe: 3 vollständig mit Beleg, 2 richtig, aber unvollständig, 1 Ansatz)", "h"]],
+  ["1 Thema", "Frankreich; Nationalversammlung; September 1791; konstitutionelle Monarchie: Der König bleibt, seine Macht wird durch die Verfassung begrenzt."],
+  ["2 Wahlrecht", "Aktivbürger: Männer, über 25, Steuern (mindestens drei Arbeitstage), ca. 4,3 Mio.; Passivbürger: Frauen, arme Männer, ca. 22 Mio., Rechte, aber kein Wahlrecht."],
+  ["3 Gewalten", "Vollziehende (König, Regierung), gesetzgebende (Nationalversammlung), richterliche Gewalt (Gerichte); Einspruch und Kontrolle als Pfeile."],
+  ["4 Anteil", "4,3 von 26,3 Mio.: etwa 16 von 100. Urteil offen, begründet (zum Beispiel reicht nicht, weil über 80 von 100 nicht wählen dürfen)."],
+  ["5 Urteil", "Mehrere gute Antworten. Sachurteil mit Beleg (Schaubild oder Q1), Werturteil mit Maßstab (zum Beispiel Gerechtigkeit)."]]));
+d.push(h3("Zum Prüfen (Vereinfachungen)"));
+d.push(li("Das Schaubild ist selbst nachgezeichnet und vereinfacht (nach Schulbuch S. 115); Pfeile und Beschriftungen gekürzt. Zahlen: 4,3 Mio. Aktivbürger, 22 Mio. Passivbürger, 745 Abgeordnete, etwa 50 000 Wahlmänner (nach dem Buch)."));
+d.push(li("Q1: Artikel 1 bis 3 sind gekürzt und in einfache Sprache übertragen. Die Verfassung wurde im September 1791 beschlossen (Bitte mit dem Buch abgleichen)."));
+d.push(li("Übersicht: 1715 ist als Start gewählt. Ist er in der 8C behandelt? Sonst Feld 1 streichen und bei 1778 beginnen. Der Satz zum Ballhausschwur steht bei den Schnipseln."));
+d.push(h3("Material und Vorbereitung (Materialliste)"));
+d.push(table([4700, 5506], [[["Material", "h"], ["Menge und Hinweis", "h"]],
+  ["Uebersicht_Blatt_Vorgeschichte_8C", "14-mal, A4 quer, einseitig (12 Personen plus Reserve)"],
+  ["Uebersicht_Schnipsel_Vorgeschichte_8C", "14-mal, A4 quer; Stapel schneiden (6 Schnitte quer, 1 längs), 14 Streifen pro Person in einen Umschlag"],
+  ["Arbeitsblatt_Verfassung_Schaubild_8C", "14-mal, zweiseitig (Seite 1 Schaubild, Q1, Wortspeicher; Seite 2 Aufgaben)"],
+  ["Hilfekarte: Fragen zum Verfassungsschema (S. 86)", "2 bis 3 Stück auf dem Pult (Kopie oder Buch aufgeschlagen)"],
+  ["Praesentation_Stunde5_Verfassung_8C", "15 Folien (27 Punkt), Notizen mit Ansagen und Lösung"],
+  ["Loesung_Arbeitsblatt_Verfassung_8C, Loesung_Uebersicht_Vorgeschichte_8C", "für die Lehrkraft"],
+  ["Kleber, grüne Stifte", "pro Person"]]));
+d.push(h3("So sieht das Blatt am Ende aus"));
+d.push(p(t("Übersicht: 14 Felder beklebt, drei „deshalb“-Pfeile. Arbeitsblatt: Aufgabe 1 bis 5 bearbeitet, Verbesserungen grün; freiwillig abgegeben mit Rückmeldung (Stufen und Punkte). Heft: zwei Sätze „weil“ und „deshalb“.", { size: 21 })));
+d.push(h3("Nach der Stunde festhalten (Reflexionslog)"));
+d.push(li("Wie lange brauchte die Klasse zum Ordnen? Wie lief der Übergang Bastille zu 4. August? Reichte die Zeit für die Aufgaben (Punkte, Abgaben)? Wie viele haben freiwillig abgegeben?"));
+d.push(li("Konnte die Klasse das Schaubild lesen (Wahlrecht, Gewaltenteilung)? Wo hakte es? Was stand in den Urteilen (Aufgabe 5)? Hat die 8D-Fassung etwas daraus zu lernen?"));
+(async () => {
+  const doc = new Document({ styles: { default: { document: { run: { font: "Calibri", size: 21 } } } }, sections: [{ properties: { page: { size: { width: 11906, height: 16838 }, margin: { top: 1000, bottom: 850, left: 850, right: 850 } } }, footers: { default: footer }, children: d }] });
+  fs.writeFileSync("../Tafelskript_Stunde5_Verfassung_8C.docx", await Packer.toBuffer(doc)); console.log("ok");
+})();
