@@ -47,7 +47,7 @@ d.push(say("Stifte liegen. Jetzt antwortet ihr mündlich."), dient("Ziel 3, Rüc
 d.push(h3("Erwartung zu AB 2 (je Teilaufgabe 1 Punkt, 3 Punkte je Aufgabe)"));
 d.push(table([1900, 8306], [[["Aufgabe", "h"], ["Erwartung", "h"]],
   ["1 Thema", "a) Frankreich · b) die Nationalversammlung · c) konstitutionelle Monarchie"],
-  ["2 Wahlrecht", "a) nur Männer, über 25 Jahre, Steuern gezahlt (alle drei richtig) · b) Frauen, Männer unter 25, arme Männer (alle drei) · c) Passivbürger"],
+  ["2 Wahlrecht", "a) Geschlecht (nur Männer), Alter (über 25 Jahre), Einkommen (Steuern) (alle drei richtig) · b) Frauen, Männer unter 25, arme Männer (alle drei) · c) Passivbürger"],
   ["3 Gewalten", "a) Nationalversammlung (macht die Gesetze) · b) König und Regierung (führen sie aus, regieren) · c) Gerichte (urteilen)"],
   ["4 Macht und Kontrolle", "a) wahr · b) Gesetz nur aufgeschoben (Einspruch = Der König sagt Nein; die Nationalversammlung kann es später durchsetzen; vereinfacht: das Einspruchsrecht wirkte aufschiebend) · c) falsch (die Gesetze macht die Nationalversammlung). Die Frage „Wer hatte mehr Macht?“ wird mündlich in der Abschlussfrage geklärt."],
   ["5 Menschenrechte und Verfassung", "a) für alle Menschen · b) „Wurden alle Menschen gleich behandelt?“ Kreuz „nur teilweise“ (oder „nein“) 1 P; Begründung am Wahlrecht 1 P: Artikel 1 sagt alle Menschen, das Wahlrecht hing aber von Geschlecht (nur Männer) und Einkommen (Steuern, Besitz) ab. Mehrere gute Formulierungen; ein „ja“ ohne Beleg zählt nicht. Die Abschlussfrage knüpft daran an (universal, aber nicht für alle umgesetzt)."]]));

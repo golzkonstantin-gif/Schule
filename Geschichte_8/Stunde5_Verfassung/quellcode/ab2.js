@@ -35,7 +35,7 @@ d.push(p(IMG, { align: AlignmentType.CENTER, after: 50 }));
 d.push(p(t("Schaubild nach dem Schulbuch S. 115 (vereinfacht). Tipp: Lies in drei Schritten: Thema, Beschreibung, Beurteilung (S. 86). Kreuze an: ☐ = nicht gewählt, ☒ = gewählt.", { size: 17, italics: true, color: MUTED }), { after: 50 }));
 d.push(block("1", "Thema", 3, "Kreuze an.", [opt("a) Die Verfassung gilt für", ["Frankreich", "England", "Preußen"], 0), opt("b) Beschlossen hat sie", ["der König", "die Nationalversammlung", "die Generalstände"], 1), opt("c) Regierungsform", ["absolute Monarchie", "konstitutionelle Monarchie", "Republik"], 1)]), gap());
 d.push(block("2", "Wahlrecht", 3, "Wer durfte wählen, wer nicht? Sieh unten im Schaubild nach.", [
-  multi("a) Das Wahlrecht hing ab von (3 Kreuze):", ["nur Männer", "über 25 Jahre", "Steuern gezahlt", "Religion"], [0, 1, 2]),
+  multi("a) Das Wahlrecht hing ab von (3 Kreuze):", ["Geschlecht", "Alter", "Einkommen (Steuern)", "Religion"], [0, 1, 2]),
   multi("b) Wer durfte nicht wählen? (3 Kreuze)", ["Frauen", "Männer unter 25", "arme Männer", "reiche Männer über 25"], [0, 1, 2]),
   opt("c) Die ca. 22 Millionen ohne Wahlrecht heißen:", ["Aktivbürger", "Passivbürger"], 1)]), gap());
 d.push(block("3", "Gewalten", 3, "Wer macht was? Die Überschriften im Schaubild helfen.", [
