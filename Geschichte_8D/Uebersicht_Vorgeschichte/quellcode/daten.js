@@ -18,5 +18,5 @@ module.exports = [
 // Mischung für das Schnipselblatt (Position im Blatt -> Nummer der Lösung)
 module.exports.MIX = [9, 3, 13, 6, 1, 11, 4, 14, 7, 2, 12, 8, 5, 10];
 
-// Buchstabe je Ereignis (Position im gemischten Schnipselblatt, zeilenweise A bis N)
-module.exports.LETTER = module.exports.MIX.reduce((o, k, i) => { o[k] = "ABCDEFGHIJKLMN"[2 * (i % 7) + (i < 7 ? 0 : 1)]; return o; }, {});
+// Buchstabe je Ereignis (Position im gemischten Schnipselblatt, von oben nach unten A bis N)
+module.exports.LETTER = module.exports.MIX.reduce((o, k, i) => { o[k] = "ABCDEFGHIJKLMN"[i]; return o; }, {});

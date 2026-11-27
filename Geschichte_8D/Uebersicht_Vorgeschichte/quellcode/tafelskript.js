@@ -49,8 +49,8 @@ d.push(li("Vereinfachung: Die Ereignisse stehen als einfache Reihe. In Wirklichk
 d.push(h3("Material und Vorbereitung (Materialliste)"));
 d.push(table([4400, 5806], [
   [["Material", "h"], ["Menge und Hinweis", "h"]],
-  ["Uebersicht_Blatt_Vorgeschichte_8D", "26-mal, A4 quer, einseitig (24 Schüler plus Reserve)"],
-  ["Uebersicht_Schnipsel_Vorgeschichte_8D", "26-mal, A4 quer, ungeschnitten. Die Schüler schneiden die Streifen selbst aus (Schere pro Person); die Lehrkraft schneidet nichts vor."],
+  ["Uebersicht_Blatt_Vorgeschichte_8D", "26-mal, A4 hoch, einseitig (24 Schüler plus Reserve)"],
+  ["Uebersicht_Schnipsel_Vorgeschichte_8D", "26-mal, A4 hoch, ungeschnitten. Die Schüler schneiden die Streifen selbst aus (Schere pro Person); die Lehrkraft schneidet nichts vor."],
   ["Praesentation_Uebersicht_Vorgeschichte_8D", "6 Folien (27 Punkt), Notizen mit Ansagen und Lösung; die Folien kommen an den Anfang von Stunde 5"],
   ["Kleber, grüne Stifte", "pro Person; Kleber auf dem Pult als Reserve"],
   ["Loesung_Uebersicht_Vorgeschichte_8D", "für die Lehrkraft"],
