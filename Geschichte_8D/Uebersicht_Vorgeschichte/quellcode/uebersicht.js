@@ -41,7 +41,7 @@ function schnipsel() {
     rows.push(new TableRow({ height: { value: SH, rule: "exact" }, children: [mk(r), mk(r + 7)] }));
   }
   const tb = new Table({ width: { size: SW * 2, type: WidthType.DXA }, columnWidths: [SW, SW], rows, alignment: AlignmentType.CENTER });
-  return [...kopf("Schnipsel", "Ausschneiden an den gestrichelten Linien (Lehrkraft: Stapel schneiden, 14 Streifen pro Person)"), tb];
+  return [...kopf("Schnipsel", ""), tb];
 }
 async function save(name, children) {
   const doc = new Document({ styles: { default: { document: { run: { font: "Calibri", size: 20 } } } }, sections: [page(children)] });

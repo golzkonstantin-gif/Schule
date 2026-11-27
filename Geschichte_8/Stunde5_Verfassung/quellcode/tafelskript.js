@@ -59,7 +59,7 @@ d.push(li("Übersicht: 1715 ist als Start gewählt. Ist er in der 8C behandelt? 
 d.push(h3("Material und Vorbereitung (Materialliste)"));
 d.push(table([4700, 5506], [[["Material", "h"], ["Menge und Hinweis", "h"]],
   ["Uebersicht_Blatt_Vorgeschichte_8C", "14-mal, A4 quer, einseitig (12 Personen plus Reserve)"],
-  ["Uebersicht_Schnipsel_Vorgeschichte_8C", "14-mal, A4 quer; Stapel schneiden (6 Schnitte quer, 1 längs), 14 Streifen pro Person in einen Umschlag"],
+  ["Uebersicht_Schnipsel_Vorgeschichte_8C", "14-mal, A4 quer, ungeschnitten. Die Schüler schneiden die Streifen selbst aus (Schere pro Person); die Lehrkraft schneidet nichts vor."],
   ["AB2_Verfassungsschaubild_8C", "14-mal, einseitig (Schaubild oben, Aufgaben zum Abhaken darunter)"],
   ["Hilfekarte: Fragen zum Verfassungsschema (S. 86)", "2 bis 3 Stück auf dem Pult (Kopie oder Buch aufgeschlagen)"],
   ["Praesentation_Stunde5_Verfassung_8C", "18 Folien (27 Punkt), Notizen mit Ansagen und Lösung"],
