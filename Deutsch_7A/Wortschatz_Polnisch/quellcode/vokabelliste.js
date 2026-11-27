@@ -272,6 +272,8 @@ const rows = [
   r("sachlich · die Meinung", "die Meinungen", "**rzeczowy** · **opinia**", "keine Meinung, kein „ich“"),
   r("die Funktion · die Absicht", "die Funktionen · die Absichten", "**funkcja** · **cel, zamiar**", "informieren, auffordern, überzeugen"),
   r("der Imperativ", "die Imperative", "**tryb rozkazujący**", "Nimm! Lies! Gebt ab!"),
+  r("die Einleitung", "die Einleitungen", "**wstęp** (początek tekstu)", "Die Einleitung nennt das Thema."),
+  r("der Überblick", "die Überblicke", "**przegląd**, ogólny obraz", "einen Überblick geben"),
 ];
 
 const doc = [
