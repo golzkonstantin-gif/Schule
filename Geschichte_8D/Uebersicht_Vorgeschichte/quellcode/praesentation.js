@@ -19,6 +19,7 @@ function slide(kicker, title, notes) {
   return s;
 }
 const bar = (s, runs) => { box(s, 0.6, 6.25, 12.15, 0.8, NAVY); s.addText(runs, { isTextBox: true, x: 0.9, y: 6.25, w: 11.6, h: 0.8, fontFace: BODY, fontSize: 27, color: WHITE, valign: "middle", margin: 0 }); };
+const LET = require("./daten.js").LETTER;
 const SHORT = [["1715", "Ludwig XIV. stirbt, hohe Schulden"], ["1778 bis 1783", "Krieg in Amerika, noch mehr Schulden"], ["1787", "Steuerplan scheitert"], ["1788", "Missernte, Staatsbankrott droht"], ["August 1788", "König kündigt Generalstände an"], ["Frühjahr 1789", "Wahl, Beschwerdehefte"], ["5. Mai 1789", "Generalstände werden eröffnet"], ["17. Juni 1789", "Nationalversammlung"], ["20. Juni 1789", "Ballhausschwur"], ["Anfang Juli 1789", "Soldaten um Paris"], ["14. Juli 1789", "Sturm auf die Bastille"], ["Sommer 1789", "Bauern greifen Schlösser an"], ["4. August 1789", "Vorrechte abgeschafft"], ["26. August 1789", "Erklärung der Menschenrechte"]];
 // Fortschrittsleiste: 14 Punkte, bis "upto" gefüllt
 function dots(s, upto, from) { for (let i = 1; i <= 14; i++) { const x = 0.6 + (i - 1) * 0.87; s.addShape(pres.shapes.OVAL, { x, y: 1.62, w: 0.3, h: 0.3, fill: { color: i >= from && i <= upto ? RED : i < from ? NAVY : LIGHT2 }, line: { type: "none" } }); } s.addShape(pres.shapes.LINE, { x: 0.75, y: 1.77, w: 11.3, h: 0, line: { color: ICE, width: 1 } }); }
@@ -42,7 +43,7 @@ groups.forEach(([a, b, title, note]) => {
     box(s, 0.6, y, 12.15, rh - 0.1, i % 2 ? WHITE : LIGHT, { line: LIGHT2 });
     circ(s, k + 1, 0.75, y + 0.12, 0.5, NAVY);
     txt(s, SHORT[k][0], { x: 1.5, y, w: 3.6, h: rh - 0.1, fontSize: 27, bold: true, color: RED, valign: "middle" });
-    txt(s, SHORT[k][1], { x: 5.2, y, w: 7.4, h: rh - 0.1, fontSize: 27, fontFace: HEAD, valign: "middle" });
+    circ(s, LET[k + 1], 12.1, y + 0.09, 0.5, RED); txt(s, SHORT[k][1], { x: 5.2, y, w: 6.8, h: rh - 0.1, fontSize: 27, fontFace: HEAD, valign: "middle" });
   }
   bar(s, [{ text: "Jetzt: ", options: { bold: true } }, { text: "Vergleiche und verbessere mit Grün.", options: {} }]);
 });

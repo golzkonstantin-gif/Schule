@@ -1,6 +1,6 @@
 const fs = require("fs");
 const { Document, Packer, Paragraph, TextRun, Table, TableRow, TableCell, WidthType, BorderStyle, ShadingType, AlignmentType, VerticalAlign, PageOrientation } = require("docx");
-const E = require("./daten.js"); const MIX = E.MIX;
+const E = require("./daten.js"); const MIX = E.MIX; const LET = E.LETTER;
 const NAVY = "1E2761", MUTED = "5B6B8C", LIGHT2 = "EAF0FA", GOLD = "E8A33D", GOLDL = "FFF6E0", GREEN = "1B5E3A", RED = "D9534F";
 const t = (text, o = {}) => new TextRun({ text, font: o.font || "Calibri", size: o.size || 20, bold: o.bold, italics: o.italics, color: o.color || "000000" });
 const p = (runs, o = {}) => new Paragraph({ children: Array.isArray(runs) ? runs : [runs], alignment: o.align, spacing: { before: o.before ?? 0, after: o.after ?? 0 }, tabStops: o.tabs });
@@ -23,7 +23,7 @@ function blatt(loesung) {
   const rows = [];
   for (let r = 0; r < 7; r++) {
     const a = r + 1, b = r + 8;
-    const box = (n) => cell(loesung ? p([t(E[n - 1][0] + ": ", { bold: true, size: 20, color: GREEN }), t(E[n - 1][1], { size: 20, color: GREEN, italics: true })]) : p(t(r === 0 && n === 1 ? "" : "", { size: 10 })), { w: BOXW, b: { top: bd("8A97B8", 6, BorderStyle.DASHED), bottom: bd("8A97B8", 6, BorderStyle.DASHED), left: bd("8A97B8", 6, BorderStyle.DASHED), right: bd("8A97B8", 6, BorderStyle.DASHED) }, fill: "FFFFFF" });
+    const box = (n) => cell(loesung ? p([t("(" + LET[n] + ")  " + E[n - 1][0] + ": ", { bold: true, size: 20, color: GREEN }), t(E[n - 1][1], { size: 20, color: GREEN, italics: true })]) : p(t(r === 0 && n === 1 ? "" : "", { size: 10 })), { w: BOXW, b: { top: bd("8A97B8", 6, BorderStyle.DASHED), bottom: bd("8A97B8", 6, BorderStyle.DASHED), left: bd("8A97B8", 6, BorderStyle.DASHED), right: bd("8A97B8", 6, BorderStyle.DASHED) }, fill: "FFFFFF" });
     rows.push(new TableRow({ height: { value: RH, rule: "exact" }, children: [numCell(a, NUM), box(a), cell(p(t("")), { w: GAP }), numCell(b, NUM), box(b)] }));
   }
   const tb = new Table({ width: { size: NUM * 2 + BOXW * 2 + GAP, type: WidthType.DXA }, columnWidths: [NUM, BOXW, GAP, NUM, BOXW], rows });
@@ -37,7 +37,7 @@ function schnipsel() {
   const SW = 7000, SH = 1240;
   const rows = [];
   for (let r = 0; r < 7; r++) {
-    const mk = (i) => { const e = E[MIX[i] - 1]; return cell(p([t(e[0] + ": ", { bold: true, size: 23, color: NAVY }), t(e[1], { size: 23 })]), { w: SW, b: { top: bd("5B6B8C", 6, BorderStyle.DASHED), bottom: bd("5B6B8C", 6, BorderStyle.DASHED), left: bd("5B6B8C", 6, BorderStyle.DASHED), right: bd("5B6B8C", 6, BorderStyle.DASHED) }, fill: "FFFFFF" }); };
+    const mk = (i) => { const e = E[MIX[i] - 1]; return cell(p([t(LET[MIX[i]] + "   ", { font: "Cambria", bold: true, size: 34, color: "D9534F" }), t(e[0] + ": ", { bold: true, size: 23, color: NAVY }), t(e[1], { size: 23 })]), { w: SW, b: { top: bd("5B6B8C", 6, BorderStyle.DASHED), bottom: bd("5B6B8C", 6, BorderStyle.DASHED), left: bd("5B6B8C", 6, BorderStyle.DASHED), right: bd("5B6B8C", 6, BorderStyle.DASHED) }, fill: "FFFFFF" }); };
     rows.push(new TableRow({ height: { value: SH, rule: "exact" }, children: [mk(r), mk(r + 7)] }));
   }
   const tb = new Table({ width: { size: SW * 2, type: WidthType.DXA }, columnWidths: [SW, SW], rows, alignment: AlignmentType.CENTER });
